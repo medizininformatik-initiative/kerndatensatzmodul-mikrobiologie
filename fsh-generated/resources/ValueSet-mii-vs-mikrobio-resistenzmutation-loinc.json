@@ -1,0 +1,191 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Resistenzmutation_LOINC",
+  "id": "mii-vs-mikrobio-resistenzmutation-loinc",
+  "title": "MII VS Mikrobio Resistenzmutation [LOINC]",
+  "version": "2025.0.2",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmutation-loinc",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "92243-5",
+            "display": "Microorganism resistance mutation tested for by Molecular method"
+          },
+          {
+            "code": "89371-9",
+            "display": "MTB complex DNA and rpoB RIF resistance mutation panel [Presence]"
+          },
+          {
+            "code": "94057-7",
+            "display": "Bacterial ahpC gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "94064-3",
+            "display": "Bacterial eis gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "94058-5",
+            "display": "Bacterial embB gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "94056-9",
+            "display": "Bacterial fabG1 gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "94061-9",
+            "display": "Bacterial gidB gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "94060-1",
+            "display": "Bacterial gyrA gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "101576-7",
+            "display": "Bacterial gyrB gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "94055-1",
+            "display": "Bacterial inhA gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "94054-4",
+            "display": "Arzneimittel-Resistenzmutation im bakteriellen katG-Gen [Nachweis oder Identität] mittels Molekulargenetik"
+          },
+          {
+            "code": "94059-3",
+            "display": "Bacterial pncA gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "94065-0",
+            "display": "Bacterial rpoB gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "94063-5",
+            "display": "Bacterial rpsL gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "94062-7",
+            "display": "Bacterial rrs gene drug resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "92248-4",
+            "display": "Microorganism resistance mutation amino acid change by Molecular method"
+          },
+          {
+            "code": "92246-8",
+            "display": "Microorganism resistance mutation detected [Presence] by Molecular method"
+          },
+          {
+            "code": "92245-0",
+            "display": "Microorganism resistance mutation nucleic acid change by Molecular method"
+          },
+          {
+            "code": "92247-6",
+            "display": "Microorganism resistance mutation amino acid change type by Molecular method"
+          },
+          {
+            "code": "92244-3",
+            "display": "Microorganism resistance mutation nucleic acid change type by Molecular method"
+          },
+          {
+            "code": "72864-2",
+            "display": "Mycobacterium tuberculosis rpsL+rrs genes aminoglycoside resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "88509-5",
+            "display": "Helicobacter pylori 23S rRNA clarithromycin resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "89314-9",
+            "display": "Bacterial 23S rRNA gene azithromycin resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "72868-3",
+            "display": "Mycobacterium leprae folP1 gene dapsone resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "72869-1",
+            "display": "Mycobacterium leprae gyrA gene fluoroquinolone resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "72863-4",
+            "display": "Mycobacterium leprae gyrB gene fluoroquinolone resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "72870-9",
+            "display": "Mycobacterium leprae rpoB gene rifAMPin resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "46247-3",
+            "display": "Mycobacterium tuberculosis embB gene ethambutol resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "72866-7",
+            "display": "Mycobacterium tuberculosis ethA gene ethionamide resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "72865-9",
+            "display": "Mycobacterium tuberculosis ethB gene ethionamide resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "72276-9",
+            "display": "Mycobacterium tuberculosis gyrA gene fluoroquinolone resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "72867-5",
+            "display": "Mycobacterium tuberculosis gyrB gene fluoroquinolone resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "46245-7",
+            "display": "Mycobacterium tuberculosis pncA gene pyrazinamide resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "89372-7",
+            "display": "Mycobacterium tuberculosis complex rpoB gene rifAMPin resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "46244-0",
+            "display": "Mycobacterium tuberculosis complex rpoB gene rifAMPin resistance mutation identified by Molecular method"
+          },
+          {
+            "code": "63072-3",
+            "display": "Mycobacterium tuberculosis inhA gene isoniazid low level resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "46246-5",
+            "display": "Mycobacterium tuberculosis katG gene isoniazid high level resistance mutation [Identifier] by Molecular method"
+          },
+          {
+            "code": "48175-4",
+            "display": "Mycobacterium tuberculosis katG + inhA gene isoniazid resistance mutation [Presence] by Molecular method"
+          },
+          {
+            "code": "74004-3",
+            "display": "ABCB1 gene mutations found [Identifier] in Blood or Tissue by Molecular genetics method Nominal"
+          },
+          {
+            "code": "72506-9",
+            "display": "ABCB1 gene c.3435C>T [Presence] in Blood or Tissue by Molecular genetics method"
+          }
+        ]
+      }
+    ]
+  }
+}

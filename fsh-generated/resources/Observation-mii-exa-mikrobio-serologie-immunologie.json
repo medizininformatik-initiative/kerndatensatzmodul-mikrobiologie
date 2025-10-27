@@ -1,0 +1,81 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-mikrobio-serologie-immunologie",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-serologie-immunologie"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "50697-2",
+        "system": "http://loinc.org",
+        "display": "Influenza-Virus A Antigen [Nachweis oder Identität] in Isolat"
+      },
+      {
+        "code": "252318005",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "OBI"
+          }
+        ]
+      },
+      "system": "https://example.org/fhir/sid/test-lab-results",
+      "value": "59826-8_1234567890",
+      "assigner": {
+        "identifier": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
+          "value": "DIZ-ID"
+        }
+      }
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "26436-6",
+          "system": "http://loinc.org",
+          "display": "Laboruntersuchungen"
+        },
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Laboratory"
+        },
+        {
+          "code": "18725-2",
+          "system": "http://loinc.org",
+          "display": "Mikrobiologie"
+        }
+      ]
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2018-11-20T11:05:00+00:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "10828004",
+        "system": "http://snomed.info/sct",
+        "display": "Positive"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/isolate",
+    "display": "Microbial isolate specimen 2"
+  }
+}

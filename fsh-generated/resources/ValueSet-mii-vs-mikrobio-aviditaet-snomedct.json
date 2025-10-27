@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Aviditaet_SNOMEDCT",
+  "id": "mii-vs-mikrobio-aviditaet-snomedct",
+  "title": "MII VS Mikrobio Aviditaet [SNOMED CT]",
+  "version": "2025.0.2",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-snomedct",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "62482003",
+            "display": "Low"
+          },
+          {
+            "code": "75540009",
+            "display": "High"
+          }
+        ]
+      }
+    ]
+  }
+}

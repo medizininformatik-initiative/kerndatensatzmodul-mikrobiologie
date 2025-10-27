@@ -1,0 +1,86 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-mikrobio-empfindlichkeit",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "OBI"
+          }
+        ]
+      },
+      "system": "https://example.org/fhir/sid/test-lab-results",
+      "value": "59826-8_1234567890",
+      "assigner": {
+        "identifier": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
+          "value": "DIZ-ID"
+        }
+      }
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "26436-6",
+          "system": "http://loinc.org",
+          "display": "Laboruntersuchungen"
+        },
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Laboratory"
+        },
+        {
+          "code": "18725-2",
+          "system": "http://loinc.org",
+          "display": "Mikrobiologie"
+        }
+      ]
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "18868-0",
+        "system": "http://loinc.org",
+        "display": "Aztreonam [Empfindlichkeit]"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2018-11-20T11:05:00+00:00",
+  "valueQuantity": {
+    "value": 32,
+    "code": "mg/L",
+    "system": "http://unitsofmeasure.org",
+    "unit": "mg/L"
+  },
+  "interpretation": [
+    {
+      "coding": [
+        {
+          "code": "R",
+          "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-vs-mikrobio-eucast-eucast",
+          "display": "Resistant: A microorganism is categorised as Resistant when there is a high likelihood of therapeutic failure even when there is increased exposure.",
+          "version": "2019"
+        }
+      ]
+    }
+  ],
+  "specimen": {
+    "reference": "Specimen/isolate",
+    "display": "Microbial isolate specimen (specimen)"
+  }
+}

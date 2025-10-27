@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit_SNOMEDCT",
+  "id": "mii-vs-mikrobio-voraussichtliche-empfindlichkeit-snomedct",
+  "title": "MII VS Mikrobio Voraussichtliche Empfindlichkeit [SNOMED CT]",
+  "version": "2025.0.2",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit-snomedct",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "131196009",
+            "display": "Susceptible (qualifier value)"
+          },
+          {
+            "code": "30714006",
+            "display": "Resistant (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

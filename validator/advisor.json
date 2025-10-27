@@ -1,0 +1,13 @@
+{
+  "suppress" : [
+    //All filters containing: `#dom-6` - resources do not contain a narrative.
+    // Ignore this best practice warning for now.
+    "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
+    //In FHIR R5 "pattern" discriminator has been deprecated and is being
+    //  consolidated with the "value" discriminator. To avoid unintended side effects in R4, we will keep
+    //  the current slicing.
+    "SD_PATH_SLICING_DEPRECATED",
+    // filter eld-20 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+    "http://hl7.org/fhir/StructureDefinition/ElementDefinition#eld-20"
+  ]
+}

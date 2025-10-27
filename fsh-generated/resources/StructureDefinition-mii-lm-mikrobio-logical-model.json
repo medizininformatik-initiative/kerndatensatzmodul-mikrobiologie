@@ -1,0 +1,506 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-lm-mikrobio-logical-model",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de",
+  "version": "2025.0.2",
+  "name": "MII_LM_Mikrobio_Logical_Model",
+  "title": "MII LM Mikrobio Logical Model",
+  "status": "active",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Logical Model für die grafische Darstellung des jeweiligen Art-Decor-Modells [DE]",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "mii-lm-mikrobio-logical-model",
+        "path": "mii-lm-mikrobio-logical-model",
+        "short": "mii lm mikrobio logical model",
+        "definition": "Logical Model für die grafische Darstellung des jeweiligen Art-Decor-Modells [DE]"
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.KulturDiagnostik",
+        "path": "mii-lm-mikrobio-logical-model.KulturDiagnostik",
+        "short": "Kultur Diagnostik",
+        "definition": "Kultur Diagnostik",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.KulturDiagnostik.Nachweis",
+        "path": "mii-lm-mikrobio-logical-model.KulturDiagnostik.Nachweis",
+        "short": "Erreger Nachweis",
+        "definition": "Erreger Nachweis",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.KulturDiagnostik.Erregername",
+        "path": "mii-lm-mikrobio-logical-model.KulturDiagnostik.Erregername",
+        "short": "Erregername",
+        "definition": "Erregername",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.KulturDiagnostik.KulturMethode",
+        "path": "mii-lm-mikrobio-logical-model.KulturDiagnostik.KulturMethode",
+        "short": "Kultur Methode",
+        "definition": "Kultur Methode",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.KulturDiagnostik.MRGN",
+        "path": "mii-lm-mikrobio-logical-model.KulturDiagnostik.MRGN",
+        "short": "Multiresistente gramnegative Bakterien Klassifikation",
+        "definition": "Multiresistente gramnegative Bakterien Klassifikation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.KulturDiagnostik.Keimzahl",
+        "path": "mii-lm-mikrobio-logical-model.KulturDiagnostik.Keimzahl",
+        "short": "Keimzahl",
+        "definition": "Keimzahl",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.KulturDiagnostik.Resistenz",
+        "path": "mii-lm-mikrobio-logical-model.KulturDiagnostik.Resistenz",
+        "short": "Bestimmung der Resistenz",
+        "definition": "Bestimmung der Resistenz",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Mikroskopie",
+        "path": "mii-lm-mikrobio-logical-model.Mikroskopie",
+        "short": "Mikroskopische Untersuchung",
+        "definition": "Mikroskopische Untersuchung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Mikroskopie.Nachweis",
+        "path": "mii-lm-mikrobio-logical-model.Mikroskopie.Nachweis",
+        "short": "Erreger Nachweis",
+        "definition": "Erreger Nachweis",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Mikroskopie.Erregername",
+        "path": "mii-lm-mikrobio-logical-model.Mikroskopie.Erregername",
+        "short": "Erregername",
+        "definition": "Erregername",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Mikroskopie.SemiquantitativesErgebnis",
+        "path": "mii-lm-mikrobio-logical-model.Mikroskopie.SemiquantitativesErgebnis",
+        "short": "SemiquantitativesErgebnis",
+        "definition": "SemiquantitativesErgebnis",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Mikroskopie.QuantitativesErgebnis",
+        "path": "mii-lm-mikrobio-logical-model.Mikroskopie.QuantitativesErgebnis",
+        "short": "Quantitatives Ergebnis",
+        "definition": "Quantitatives Ergebnis",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Mikroskopie.Methode",
+        "path": "mii-lm-mikrobio-logical-model.Mikroskopie.Methode",
+        "short": "Mikroskopische Methode",
+        "definition": "Mikroskopische Methode",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Mikroskopie.Morphologie",
+        "path": "mii-lm-mikrobio-logical-model.Mikroskopie.Morphologie",
+        "short": "Morphologie",
+        "definition": "Morphologie",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Mikroskopie.BarlettScore",
+        "path": "mii-lm-mikrobio-logical-model.Mikroskopie.BarlettScore",
+        "short": "Barlett score",
+        "definition": "Barlett score",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Mikroskopie.NugentScore",
+        "path": "mii-lm-mikrobio-logical-model.Mikroskopie.NugentScore",
+        "short": "Nugent score",
+        "definition": "Nugent score",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.MolekularDiagnostik",
+        "path": "mii-lm-mikrobio-logical-model.MolekularDiagnostik",
+        "short": "Molekulare Diagnostik",
+        "definition": "Molekulare Diagnostik",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.MolekularDiagnostik.Nachweis",
+        "path": "mii-lm-mikrobio-logical-model.MolekularDiagnostik.Nachweis",
+        "short": "Erregernachweis",
+        "definition": "Erregernachweis",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.MolekularDiagnostik.Erregername",
+        "path": "mii-lm-mikrobio-logical-model.MolekularDiagnostik.Erregername",
+        "short": "Erregername",
+        "definition": "Erregername",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.MolekularDiagnostik.PCRQuantitativesErgebnis",
+        "path": "mii-lm-mikrobio-logical-model.MolekularDiagnostik.PCRQuantitativesErgebnis",
+        "short": "PCR Quantitatives Ergebnis",
+        "definition": "PCR Quantitatives Ergebnis",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.MolekularDiagnostik.CycleThreshold",
+        "path": "mii-lm-mikrobio-logical-model.MolekularDiagnostik.CycleThreshold",
+        "short": "Cycle threshold",
+        "definition": "Cycle threshold",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.SerologieImmunologie",
+        "path": "mii-lm-mikrobio-logical-model.SerologieImmunologie",
+        "short": "Serologie und Immunologie",
+        "definition": "Serologie und Immunologie",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.SerologieImmunologie.QuantitativesErgebnisAntigenTest",
+        "path": "mii-lm-mikrobio-logical-model.SerologieImmunologie.QuantitativesErgebnisAntigenTest",
+        "short": "Quantitatives Ergebnis (Antigen Test)",
+        "definition": "Quantitatives Ergebnis (Antigen Test)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.SerologieImmunologie.QualitativesErgebnisAntigenTest",
+        "path": "mii-lm-mikrobio-logical-model.SerologieImmunologie.QualitativesErgebnisAntigenTest",
+        "short": "Qualitatives Ergebnis (Antigen Test)",
+        "definition": "Qualitatives Ergebnis (Antigen Test)",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.SerologieImmunologie.QuantitativesErgebnisSerologie",
+        "path": "mii-lm-mikrobio-logical-model.SerologieImmunologie.QuantitativesErgebnisSerologie",
+        "short": "Quantitatives Ergebnis des serologischen Tests",
+        "definition": "Quantitatives Ergebnis des serologischen Tests",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.SerologieImmunologie.QualitativesErgebnisSerologie",
+        "path": "mii-lm-mikrobio-logical-model.SerologieImmunologie.QualitativesErgebnisSerologie",
+        "short": "Qualitatives Ergebnis des serologischen Tests",
+        "definition": "Qualitatives Ergebnis des serologischen Tests",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.SerologieImmunologie.Aviditaet",
+        "path": "mii-lm-mikrobio-logical-model.SerologieImmunologie.Aviditaet",
+        "short": "Avidität",
+        "definition": "Avidität",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus",
+        "short": "Weitere Eigenschaften des Organismus",
+        "definition": "Weitere Eigenschaften des Organismus",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.MREKlasse",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.MREKlasse",
+        "short": "Multiresistente Erreger Klasse",
+        "definition": "Multiresistente Erreger Klasse",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.MRGNKlasse",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.MRGNKlasse",
+        "short": "MRGN Klasse",
+        "definition": "MRGN Klasse",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.Virulenzfaktor",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.Virulenzfaktor",
+        "short": "Virulenzfaktor",
+        "definition": "Virulenzfaktor",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.Resistanzmechanism",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.Resistanzmechanism",
+        "short": "Resistanzmechanism",
+        "definition": "Resistanzmechanism",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.Resistanzmechanism.ResistenzGene",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.Resistanzmechanism.ResistenzGene",
+        "short": "Resistenz Gene",
+        "definition": "Resistenz Gene",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.Resistanzmechanism.ResistenzMutation",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.Resistanzmechanism.ResistenzMutation",
+        "short": "Resistenz Mutation",
+        "definition": "Resistenz Mutation",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.VoraussichtlicheEmpfindlichkeit",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaftenOrganismus.VoraussichtlicheEmpfindlichkeit",
+        "short": "Voraussichtliche Empfindlichkeit",
+        "definition": "Voraussichtliche Empfindlichkeit",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.MikrobiologieBericht",
+        "path": "mii-lm-mikrobio-logical-model.MikrobiologieBericht",
+        "short": "Mikrobiologie Bericht",
+        "definition": "Mikrobiologie Bericht",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      }
+    ]
+  }
+}

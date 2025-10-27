@@ -1,0 +1,112 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-mikrobio-molekulare-diagnostik",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-diagnostik"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "92253-4",
+        "system": "http://loinc.org",
+        "display": "Mikroorganismus identifiziert in Isolat oder Probenmaterial mittels Molekulargenetik"
+      }
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "OBI"
+          }
+        ]
+      },
+      "system": "https://example.org/fhir/sid/test-lab-results",
+      "value": "59826-8_1234567890",
+      "assigner": {
+        "identifier": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
+          "value": "DIZ-ID"
+        }
+      }
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "26436-6",
+          "system": "http://loinc.org",
+          "display": "Laboruntersuchungen"
+        },
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Laboratory"
+        },
+        {
+          "code": "18725-2",
+          "system": "http://loinc.org",
+          "display": "Mikrobiologie"
+        }
+      ]
+    }
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2018-11-20T11:05:00+00:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "10828004",
+        "system": "http://snomed.info/sct",
+        "display": "Positive"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/pooled-serum",
+    "display": "30 serum"
+  },
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "89248-9",
+            "system": "http://loinc.org"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "840533007",
+            "system": "http://snomed.info/sct",
+            "display": "Severe acute respiratory syndrome coronavirus 2 (organism)"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "1268647006",
+            "system": "http://snomed.info/sct"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 30,
+        "unit": "{Ct_value}"
+      }
+    }
+  ]
+}

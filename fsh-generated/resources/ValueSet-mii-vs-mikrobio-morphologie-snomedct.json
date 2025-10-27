@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Morphologie_SNOMEDCT",
+  "id": "mii-vs-mikrobio-morphologie-snomedct",
+  "title": "MII VS Mikrobio Morphologie [SNOMED CT]",
+  "version": "2025.0.2",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-snomedct",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "723529006",
+            "display": "Extracellular Gram-negative diplococcus (finding)"
+          },
+          {
+            "code": "404509004",
+            "display": "Large gram-negative coccobacilli (finding)"
+          },
+          {
+            "code": "404510009",
+            "display": "Large gram-negative rods (finding)"
+          },
+          {
+            "code": "427824002",
+            "display": "Small Gram-negative rods (finding)"
+          },
+          {
+            "code": "61609004",
+            "display": "Gram-positive cocci in chains (finding)"
+          },
+          {
+            "code": "70003006",
+            "display": "Gram-positive cocci in clusters (finding)"
+          },
+          {
+            "code": "734444009",
+            "display": "Gram-positive cocci in chains, clusters, and pairs (finding)"
+          },
+          {
+            "code": "734447002",
+            "display": "Intracellular Gram-negative diplococcus (finding)"
+          }
+        ]
+      }
+    ]
+  }
+}

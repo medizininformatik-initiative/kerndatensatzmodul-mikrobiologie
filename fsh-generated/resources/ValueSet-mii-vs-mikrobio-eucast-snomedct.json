@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_EUCAST_SNOMED_CT",
+  "id": "mii-vs-mikrobio-eucast-snomedct",
+  "title": "MII VS Mikrobio EUCAST [SNOMED CT]",
+  "version": "2025.0.2",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-eucast-snomedct",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "1306577009",
+            "display": "European Committee on Antimicrobial Susceptibility Testing category 2019 Susceptible, standard dosing regimen"
+          },
+          {
+            "code": "1306583007",
+            "display": "European Committee on Antimicrobial Susceptibility Testing category 2019 Susceptible, increased exposure"
+          },
+          {
+            "code": "1306581009",
+            "display": "European Committee on Antimicrobial Susceptibility Testing category 2019 Resistant"
+          }
+        ]
+      }
+    ]
+  }
+}

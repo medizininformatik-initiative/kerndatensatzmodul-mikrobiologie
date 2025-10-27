@@ -1,0 +1,82 @@
+Profile: MII_PR_Mikrobio_Empfindlichkeit
+Parent: Observation
+Id: mii-pr-mikrobio-empfindlichkeit
+Title: "MII PR Mikrobio Empfindlichkeit"
+Description: "This profile describes a susceptibility test in microbiology"
+* insert PR_CS_VS_Version
+* insert Publisher
+* ^purpose = "Dieses Profil beschreibt ein Empfindlichkeit Test der Medizininformatik-Initiative."
+* obeys mii-lab-2
+* id MS
+* meta MS
+  * source MS
+  * profile MS
+* identifier MS
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "type"
+  * ^slicing.rules = #open
+* identifier contains analyseBefundCode 1..1 MS
+* identifier[analyseBefundCode]
+  * type 1.. MS
+  * type = $v2-0203#OBI
+    * coding MS
+      * ^slicing.discriminator.type = #value
+      * ^slicing.discriminator.path = "system"
+      * ^slicing.rules = #open
+    * coding contains observationInstanceV2 1..1 MS
+    * coding[observationInstanceV2]
+      * system 1.. MS
+      * system = "http://terminology.hl7.org/CodeSystem/v2-0203" (exactly)
+      * code 1.. MS
+      * code = #OBI (exactly)
+  * system 1.. MS
+  * value 1.. MS
+  * assigner 1.. MS
+
+* status MS
+* category 1.. MS
+  * coding MS
+    * ^slicing.discriminator.type = #pattern
+    * ^slicing.discriminator.path = "$this"
+    * ^slicing.rules = #open
+  * coding contains
+      loinc-observation 1..1 MS and
+      observation-category 1..1 MS and
+      loinc-microbiology-studies 1..1 MS
+  * coding[loinc-observation] = $loinc#26436-6
+  * coding[observation-category] = $observation-category#laboratory
+  * coding[loinc-microbiology-studies] = $loinc#18725-2
+* code MS
+* code from MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC (required)
+* subject 1.. MS
+* encounter MS
+* effective[x] 1.. MS
+* effective[x] only dateTime
+  * obeys mii-lab-1
+  * extension contains MII_EX_Labor_Quelle_Klinisches_Bezugsdatum named QuelleKlinischesBezugsdatum 0..1 MS
+* issued MS
+* value[x] only Quantity
+* value[x] MS
+  * code from MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM (required)
+* dataAbsentReason MS
+* interpretation ..1 MS
+  * ^slicing.discriminator.type = #pattern
+  * ^slicing.discriminator.path = "$this"
+  * ^slicing.rules = #open
+* interpretation contains
+    EUCAST 0..1 and
+    CLSI 0..1
+* interpretation[EUCAST] from $mii-vs-mikrobio-eucast-snomedct (required)
+  * coding.version 1..
+* interpretation[CLSI] from MII_VS_Mikrobio_CLSI_HL7 (required)
+  * ^label = "CLSI"
+  * coding.version 1..
+* note MS
+* bodySite ..0
+* method MS
+* specimen 1.. MS
+  * reference MS
+  * identifier MS
+* device MS
+* referenceRange MS
+* component.value[x] only CodeableConcept
