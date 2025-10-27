@@ -1,4 +1,4 @@
-Instance: mii-exa-mikrobio--kultur-nachweis
+Instance: mii-exa-mikrobio-kultur-nachweis
 InstanceOf: MII_PR_Mikrobio_Kultur_Nachweis
 Usage: #example
 * identifier[analyseBefundCode]
