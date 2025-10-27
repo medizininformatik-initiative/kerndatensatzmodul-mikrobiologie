@@ -16,7 +16,7 @@ Usage: #example
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2018-11-20T11:05:00+00:00"
 * valueQuantity = 32 'mg/L' "mg/L"
-* interpretation.coding = $mii-vs-mikrobio-eucast-eucast#R "Resistant: A microorganism is categorised as Resistant when there is a high likelihood of therapeutic failure even when there is increased exposure."
+* interpretation.coding = $v3-ObservationInterpretation#R "Resistant"
   * version = "2019"
 * specimen
   * reference = "Specimen/isolate"

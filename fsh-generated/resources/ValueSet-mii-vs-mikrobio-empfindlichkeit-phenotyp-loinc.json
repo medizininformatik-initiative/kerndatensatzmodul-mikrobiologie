@@ -40,21 +40,9 @@
             "value": "ACTIVE"
           },
           {
-            "property": "ORDER_OBS",
-            "op": "=",
-            "value": "Observation"
-          }
-        ]
-      }
-    ],
-    "exclude": [
-      {
-        "system": "http://loinc.org",
-        "filter": [
-          {
             "property": "METHOD_TYP",
-            "op": "=",
-            "value": "LP28723-2"
+            "op": "exists",
+            "value": "false"
           }
         ]
       }
