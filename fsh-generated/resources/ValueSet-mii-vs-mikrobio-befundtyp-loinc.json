@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Befundtyp_LOINC",
+  "id": "mii-vs-mikrobio-befundtyp-loinc",
+  "title": "MII VS Mikrobio Befundtyp [LOINC]",
+  "description": "Sepzalisierte Kodierung von mikrobiologischen Befunden",
+  "version": "2025.0.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-befundtyp-loinc",
+  "immutable": false,
+  "copyright": "This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "92894-5",
+            "display": "Microbiology - bacterial studies"
+          },
+          {
+            "code": "92893-7",
+            "display": "Microbiology - viral studies"
+          },
+          {
+            "code": "96397-5",
+            "display": "Microbiology - mycobacteriology studies"
+          },
+          {
+            "code": "96398-3",
+            "display": "Microbiology - mycology studies"
+          },
+          {
+            "code": "92892-9",
+            "display": "Microbiology - parasitic studies"
+          }
+        ]
+      }
+    ]
+  }
+}

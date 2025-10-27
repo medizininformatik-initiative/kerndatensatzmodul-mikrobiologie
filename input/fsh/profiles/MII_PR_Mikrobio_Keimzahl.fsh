@@ -59,7 +59,6 @@ Description: "This profile describes a colony count test in miobiology."
 * value[x] MS
 * valueQuantity only Quantity
 * valueQuantity MS
-  * ^sliceName = "valueQuantity"
   * ^short = "Quantiatives Ergebnis"
   * value 1.. MS
   * unit 1.. MS
@@ -71,7 +70,6 @@ Description: "This profile describes a colony count test in miobiology."
 * valueCodeableConcept only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept from MII_VS_Labor_Laborergbenis_Semiquantitativ (required)
-  * ^sliceName = "valueCodeableConcept"
   * ^binding.description = "Häufigkeit"
 * dataAbsentReason MS
 * interpretation ..1 MS

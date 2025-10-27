@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Serologischer_Test_Einheiten_UCUM",
+  "id": "mii-vs-mikrobio-serologischer-test-einheiten-ucum",
+  "title": "MII VS Mikrobio Serologischer Test Einheiten [UCUM]",
+  "version": "2025.0.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-serologischer-test-einheiten-ucum",
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "%"
+          },
+          {
+            "code": "[IU]/mL"
+          },
+          {
+            "code": "[arb'U]/L"
+          },
+          {
+            "code": "[arb'U]/mL"
+          },
+          {
+            "code": "mg/L"
+          },
+          {
+            "code": "mg/mL"
+          },
+          {
+            "code": "ug/mL"
+          },
+          {
+            "code": "ng/mL"
+          },
+          {
+            "code": "{titer}"
+          }
+        ]
+      }
+    ]
+  }
+}

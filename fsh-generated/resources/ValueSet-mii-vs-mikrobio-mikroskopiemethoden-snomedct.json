@@ -1,0 +1,61 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Mikroskopiemethoden_SNOMEDCT",
+  "id": "mii-vs-mikrobio-mikroskopiemethoden-snomedct",
+  "title": "MII VS Mikrobio Mikroskopiemethoden [SNOMED CT]",
+  "version": "2025.0.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopiemethoden-snomedct",
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "58586006",
+            "display": "Microbial ova-parasite examination (procedure)"
+          },
+          {
+            "code": "117023006",
+            "display": "Thick film peripheral blood smear (procedure)"
+          },
+          {
+            "code": "408195004",
+            "display": "Thick film for malarial parasites (procedure)"
+          },
+          {
+            "code": "117024000",
+            "display": "Thin film peripheral blood smear method (procedure)"
+          },
+          {
+            "code": "67047002",
+            "display": "Microbial wet smear (procedure)"
+          },
+          {
+            "code": "27318003",
+            "display": "Potassium hydroxide preparation (procedure)"
+          },
+          {
+            "code": "104157003",
+            "display": "Light microscopy (procedure)"
+          },
+          {
+            "code": "73512001",
+            "display": "Electron microscopic study (procedure)"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "37926009"
+          }
+        ]
+      }
+    ]
+  }
+}

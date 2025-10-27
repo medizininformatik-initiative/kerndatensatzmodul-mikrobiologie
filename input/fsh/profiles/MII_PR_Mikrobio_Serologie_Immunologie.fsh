@@ -45,7 +45,7 @@ Description: "This profile describes the serological and immunological examinati
       loinc-microbiology-studies 1..1 MS
   * coding[loinc-observation] = $loinc#26436-6
   * coding[observation-category] = $observation-category#laboratory
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
 * code = $sct#252318005
 * code MS
 * code from MII_VS_Mikrobio_Serologie_Immunologie_LOINC (extensible)
@@ -61,7 +61,6 @@ Description: "This profile describes the serological and immunological examinati
 * valueCodeableConcept 1.. MS
 * valueCodeableConcept only CodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Positiv_Negativ_SNOMEDCT (required)
-  * ^sliceName = "valueCodeableConcept"
 * dataAbsentReason MS
 * interpretation MS
 * note MS

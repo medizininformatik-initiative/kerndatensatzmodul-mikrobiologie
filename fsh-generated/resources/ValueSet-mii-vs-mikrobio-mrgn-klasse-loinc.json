@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_MRGN_Klasse_LOINC",
+  "id": "mii-vs-mikrobio-mrgn-klasse-loinc",
+  "title": "MII VS Mikrobio MRGN Klasse [LOINC]",
+  "version": "2025.0.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc",
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA33214-0",
+            "display": "2MRGN"
+          },
+          {
+            "code": "LA33215-7",
+            "display": "3MRGN"
+          },
+          {
+            "code": "LA33216-5",
+            "display": "4MRGN"
+          }
+        ]
+      }
+    ]
+  }
+}

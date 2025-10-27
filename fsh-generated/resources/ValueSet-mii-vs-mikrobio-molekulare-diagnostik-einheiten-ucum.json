@@ -1,0 +1,37 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM",
+  "id": "mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum",
+  "title": "MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]",
+  "version": "2025.0.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-molekulare-diagnostik-einheiten-ucum",
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "ng/mL"
+          },
+          {
+            "code": "{Copies}/mL"
+          },
+          {
+            "code": "[IU]/mL"
+          },
+          {
+            "code": "%"
+          },
+          {
+            "code": "/g"
+          },
+          {
+            "code": "pg/mL"
+          }
+        ]
+      }
+    ]
+  }
+}

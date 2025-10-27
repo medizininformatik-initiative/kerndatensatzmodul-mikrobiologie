@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Antigen_Assay_Einheiten_UCUM",
+  "id": "mii-vs-mikrobio-antigen-assay-einheiten-ucum",
+  "title": "MII VS Mikrobio Antigen Assay Einheiten [UCUM]",
+  "version": "2025.0.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-assay-einheiten-ucum",
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "ng/mL"
+          },
+          {
+            "code": "[arb'U]/mL"
+          },
+          {
+            "code": "{titer}"
+          },
+          {
+            "code": "%"
+          },
+          {
+            "code": "/10*5{PMN}"
+          },
+          {
+            "code": "/{slide}"
+          },
+          {
+            "code": "[IU]/L"
+          },
+          {
+            "code": "[arb'U]"
+          }
+        ]
+      }
+    ]
+  }
+}

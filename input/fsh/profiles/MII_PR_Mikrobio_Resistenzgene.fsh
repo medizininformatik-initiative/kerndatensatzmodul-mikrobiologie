@@ -45,7 +45,7 @@ Description: "This profile describes the identification of the presence or absen
       loinc-microbiology-studies 1..1 MS
   * coding[loinc-observation] = $loinc#26436-6
   * coding[observation-category] = $observation-category#laboratory
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
 * code MS
 * code from MII_VS_Mikrobio_Resistenzgene_LOINC (extensible)
   * ^short = "Resitenzgene"
@@ -62,7 +62,6 @@ Description: "This profile describes the identification of the presence or absen
 * valueCodeableConcept 1.. MS
 * valueCodeableConcept only CodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Qualitative_Labor_Ergebnisse_SNOMEDCT (required)
-  * ^sliceName = "valueCodeableConcept"
 * dataAbsentReason MS
 * interpretation MS
 * note MS

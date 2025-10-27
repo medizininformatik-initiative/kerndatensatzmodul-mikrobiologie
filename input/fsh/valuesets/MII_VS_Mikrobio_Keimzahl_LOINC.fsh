@@ -4,7 +4,7 @@ Title: "MII VS Mikrobio Keimzahl [LOINC]"
 * ^status = #active
 * ^version = "2025.0.0"
 * ^date = "2023-03-02T00:00:00Z"
-* LOINC#49223-1 "Colony count [#/volume] in Unspecified specimen by Visual count"
+* LOINC#49223-1 "Colony count [#/volume] in Specimen by Visual count"
 * LOINC#564-5 "Colony count [#] in Unspecified specimen by Visual count"
 * LOINC#38436-2 "Colony count [#/mass] in Unspecified specimen by Visual count"
 * LOINC#20774-6 "Colony count [Units/volume] in Unspecified specimen by Visual count"

@@ -1,0 +1,31 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Qualitative_Labor_Ergebnisse_SNOMEDCT",
+  "id": "mii-vs-mikrobio-qualitative-labor-ergebnisse-snomedct",
+  "title": "MII VS Mikrobio Qualitative Labor Ergebnisse [SNOMED CT]",
+  "version": "2025.0.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-qualitative-labor-ergebnisse-snomedct",
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "260373001",
+            "display": "Detected (qualifier value)"
+          },
+          {
+            "code": "260415000",
+            "display": "Not detected (qualifier value)"
+          },
+          {
+            "code": "419984006",
+            "display": "Inconclusive (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

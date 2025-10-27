@@ -1,8 +1,7 @@
 Instance: mii-exa-mikrobio--kultur-nachweis
 InstanceOf: MII_PR_Mikrobio_Kultur_Nachweis
 Usage: #example
-* identifier
-  * type = $v2-0203#OBI
+* identifier[analyseBefundCode]
   * system = "https://example.org/fhir/sid/test-lab-results"
   * value = "59826-8_1234567890"
   * assigner.identifier
@@ -10,13 +9,13 @@ Usage: #example
     * value = "DIZ-ID"
 * status = #final
 * category
-  * coding[0] = $loinc#26436-6 "Laboratory studies (set)"
-  * coding[+] = $observation-category#laboratory "Laboratory"
-  * coding[+] = $loinc#18725-2 "Microbiology studies"
+  * coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
+  * coding[observation-category] = $observation-category#laboratory "Laboratory"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
 * code = $loinc#11475-1 "Microorganism identified in Specimen by Culture"
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2018-11-20T11:05:00+00:00"
-* valueCodeableConcept = #260373001 "Detected (qualifier value)"
+* valueCodeableConcept = $sct#260373001 "Detected (qualifier value)"
 * specimen
   * reference = "Specimen/blood-specimen"
   * display = "blood specimen in aerobic blood culture bottle"

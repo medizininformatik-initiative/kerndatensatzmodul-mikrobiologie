@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_EUCAST_SNOMED_CT
 Id: mii-vs-mikrobio-eucast-snomedt
 Title: "MII VS Mikrobio EUCAST [SNOMED CT]"
-* ^name = "MII_VS_Mikrobio_EUCAST_SNOMED CT"
+* ^name = "MII_VS_Mikrobio_EUCAST_SNOMED_CT"
 * ^url = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-eucast-snomedct"
 * ^status = #active
 * ^version = "2025.0.0"

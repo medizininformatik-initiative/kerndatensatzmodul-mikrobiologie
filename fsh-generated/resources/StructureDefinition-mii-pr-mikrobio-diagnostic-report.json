@@ -1,0 +1,69 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-mikrobio-diagnostic-report",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report",
+  "version": "2025.0.0",
+  "name": "MII_PR_Mikrobio_Diagnostic_Report",
+  "title": "MII PR Mikrobio Diagnostic Report",
+  "status": "active",
+  "publisher": "https://www.Medizininformatik-Initiative.de",
+  "description": "This profile describes a diagnostic report in microbiology",
+  "purpose": "Dieses Profil beschreibt einen diagnostischer Bericht in Mikrobiologie",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport.basedOn",
+        "path": "DiagnosticReport.basedOn",
+        "max": "1"
+      },
+      {
+        "id": "DiagnosticReport.category.coding",
+        "path": "DiagnosticReport.category.coding",
+        "min": 3
+      },
+      {
+        "id": "DiagnosticReport.category.coding:snomed-microbiology-studies",
+        "path": "DiagnosticReport.category.coding",
+        "sliceName": "snomed-microbiology-studies",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "4341000179107",
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DiagnosticReport.category.coding:loinc-microbiology-specialization",
+        "path": "DiagnosticReport.category.coding",
+        "sliceName": "loinc-microbiology-specialization",
+        "min": 0,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "dia-ic-highmed-1",
+            "human": "Microbiology LOINC Spezialisierungen dürfen nur ausgewählt werden, falls der Report als Microbiology studies kodiert wurde",
+            "source": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report",
+            "severity": "error",
+            "expression": "%resource.category.where(coding.where(code = '18725-2' and system = 'http://loinc.org').exists()).exists()"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-befundtyp-loinc"
+        }
+      },
+      {
+        "id": "DiagnosticReport.resultsInterpreter",
+        "path": "DiagnosticReport.resultsInterpreter",
+        "mustSupport": true
+      }
+    ]
+  }
+}

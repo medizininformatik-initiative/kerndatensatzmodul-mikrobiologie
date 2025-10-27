@@ -45,7 +45,7 @@ Description: "This profile describes a molecular diagnostic test in microbiology
       loinc-microbiology-studies 1..1 MS
   * coding[loinc-observation] = $loinc#26436-6
   * coding[observation-category] = $observation-category#laboratory
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
 * code = $loinc#92253-4
 * code MS
 * code from MII_VS_Mikrobio_Molekulare_Diagnostik_LOINC (extensible)
@@ -61,7 +61,6 @@ Description: "This profile describes a molecular diagnostic test in microbiology
 * valueCodeableConcept 1.. MS
 * valueCodeableConcept only CodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Positiv_Negativ_SNOMEDCT (required)
-  * ^sliceName = "valueCodeableConcept"
 * dataAbsentReason MS
 * interpretation ..1 MS
 * note MS

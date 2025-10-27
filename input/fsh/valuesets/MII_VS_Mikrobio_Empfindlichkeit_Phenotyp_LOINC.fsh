@@ -5,7 +5,7 @@ Title: "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]"
 * ^version = "2025.0.0"
 * ^date = "2023-03-02T00:00:00Z"
 * include codes from system LOINC
-    where CLASS = "ABXBACT" and
+    where CLASS = "LP7755-4" and
     PROPERTY = "LP6870-2" and
     STATUS = "ACTIVE" and
     ORDER_OBS = "Observation"

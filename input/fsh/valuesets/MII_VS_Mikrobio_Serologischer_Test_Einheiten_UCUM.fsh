@@ -5,12 +5,11 @@ Title: "MII VS Mikrobio Serologischer Test Einheiten [UCUM]"
 * ^version = "2025.0.0"
 * ^date = "2023-03-02T00:00:00Z"
 * UCUM#%
-* UCUM#IU/mL
+* UCUM#[IU]/mL
 * UCUM#[arb'U]/L
 * UCUM#[arb'U]/mL
 * UCUM#mg/L
 * UCUM#mg/mL
-* UCUM##
 * UCUM#ug/mL
 * UCUM#ng/mL
 * UCUM#{titer}

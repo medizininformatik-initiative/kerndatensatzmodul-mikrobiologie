@@ -45,7 +45,7 @@ Description: "This profile describes the type of multidrug-resistant Gram-negati
       loinc-microbiology-studies 1..1 MS
   * coding[loinc-observation] = $loinc#26436-6
   * coding[observation-category] = $observation-category#laboratory
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
 * code = $loinc#99780-9
 * code MS
   * ^label = "MRE Klasse"
@@ -62,7 +62,6 @@ Description: "This profile describes the type of multidrug-resistant Gram-negati
 * valueCodeableConcept 1.. MS
 * valueCodeableConcept only CodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_MRGN_Klasse_LOINC (required)
-  * ^sliceName = "valueCodeableConcept"
 * dataAbsentReason MS
 * interpretation MS
 * note MS

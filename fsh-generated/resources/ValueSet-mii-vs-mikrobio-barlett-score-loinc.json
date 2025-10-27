@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Barlett_Score_LOINC",
+  "id": "mii-vs-mikrobio-barlett-score-loinc",
+  "title": "MII VS Mikrobio Barlett Score [LOINC]",
+  "version": "2025.0.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-barlett-score-loinc",
+  "date": "2023-03-02T00:00:00Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA21392-8",
+            "display": "+3 Active inflammation"
+          },
+          {
+            "code": "LA21391-0",
+            "display": "+2 Active inflammation"
+          },
+          {
+            "code": "LA21390-2",
+            "display": "+1 Active inflammation"
+          },
+          {
+            "code": "LA21389-4",
+            "display": "0 Lack of inflammation and possible contamination with saliva"
+          },
+          {
+            "code": "LA21388-6",
+            "display": "-1 Lack of inflammation and possible contamination with saliva"
+          },
+          {
+            "code": "LA21387-8",
+            "display": "-2 Lack of inflammation and possible contamination with saliva"
+          }
+        ]
+      }
+    ]
+  }
+}
