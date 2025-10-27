@@ -9,5 +9,4 @@ Title: "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]"
     where CLASS = "LP7755-4" and
     PROPERTY = "LP6870-2" and
     STATUS = "ACTIVE" and
-    ORDER_OBS = "Observation"
-* exclude codes from system LOINC where METHOD_TYP = "LP28723-2"
+    METHOD_TYP exists false
