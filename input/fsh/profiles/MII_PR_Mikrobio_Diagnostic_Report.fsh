@@ -3,7 +3,8 @@ Parent: MII_PR_Labor_Laborbefund
 Id: mii-pr-mikrobio-diagnostic-report
 Title: "MII PR Mikrobio Diagnostic Report"
 Description: "This profile describes a diagnostic report in microbiology"
-* ^publisher = "https://www.Medizininformatik-Initiative.de"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^purpose = "Dieses Profil beschreibt einen diagnostischer Bericht in Mikrobiologie"
 * basedOn ..1
 * category

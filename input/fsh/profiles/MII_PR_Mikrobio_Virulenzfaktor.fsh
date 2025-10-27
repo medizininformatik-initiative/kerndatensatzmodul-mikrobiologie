@@ -3,9 +3,8 @@ Parent: Observation
 Id: mii-pr-mikrobio-virulenzfaktor
 Title: "MII PR Mikrobio Virulenzfaktor"
 Description: "This profile describes the investigation of a virulence factor in microbiology."
-* ^version = "2025.0.0"
-* ^experimental = false
-* ^publisher = "https://www.Medizininformatik-Initiative.de"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^purpose = "Dieses Profil beschreibt  die Untersuchung eines Virulenzfaktorsin der Medizininformatik-Initiative Modul Mikrobiologie."
 * obeys mii-lab-2
 * id MS

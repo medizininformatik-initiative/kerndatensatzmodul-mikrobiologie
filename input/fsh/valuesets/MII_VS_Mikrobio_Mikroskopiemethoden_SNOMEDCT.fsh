@@ -1,8 +1,9 @@
 ValueSet: MII_VS_Mikrobio_Mikroskopiemethoden_SNOMEDCT
 Id: mii-vs-mikrobio-mikroskopiemethoden-snomedct
 Title: "MII VS Mikrobio Mikroskopiemethoden [SNOMED CT]"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^status = #active
-* ^version = "2025.0.0"
 * ^date = "2023-03-02T00:00:00Z"
 * SNOMED_CT#58586006 "Microbial ova-parasite examination (procedure)"
 * SNOMED_CT#117023006 "Thick film peripheral blood smear (procedure)"

@@ -1,8 +1,9 @@
 ValueSet: MII_VS_Mikrobio_Serologie_Immunologie_LOINC
 Id: mii-vs-mikrobio-serologie-immunologie-loinc
 Title: "MII VS Mikrobio Serologie Immunologie [LOINC]"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^status = #active
-* ^version = "2025.0.0"
 * LOINC#63564-9 "Giardia lamblia Ag and Cryptosporidium parvum Ag and Entamoeba histolytica/dispar Ag [Identifier] in Stool"
 * LOINC#51865-4 "Plasmodium sp Ag [Identifier] in Blood"
 * LOINC#50697-2 "Influenza-Virus A Antigen [Nachweis oder Identität] in Isolat"

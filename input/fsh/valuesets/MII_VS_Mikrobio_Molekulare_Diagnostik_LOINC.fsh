@@ -1,11 +1,9 @@
 ValueSet: MII_VS_Mikrobio_Molekulare_Diagnostik_LOINC
 Id: mii-vs-mikrobio-molekulare-diagnostik-loinc
 Title: "MII VS Mikrobio Molekulare Diagnostik [LOINC]"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobiologie/ValueSet/mii-vs-mikrobio-molekulare-diagnostik-loinc"
-* ^identifier.value = "mii-vs-mikrobio-molekulare-diagnostik-loinc"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^status = #active
-* ^version = "2025.0.0"
-* ^contact.telecom.system = #email
 * LOINC#94310-0 "SARS-related coronavirus N gene [Presence] in Specimen by Nucleic acid amplification using CDC primer-probe set N3"
 * LOINC#94756-4 "SARS-CoV-2 (COVID-19) N gene [Presence] in Respiratory system specimen by Nucleic acid amplification using CDC primer-probe set N1"
 * LOINC#94757-2 "SARS-CoV-2 (COVID-19) N gene [Presence] in Respiratory system specimen by Nucleic acid amplification using CDC primer-probe set N2"

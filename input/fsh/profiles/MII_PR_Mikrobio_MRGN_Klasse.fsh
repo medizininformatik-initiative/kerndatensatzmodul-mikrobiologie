@@ -3,9 +3,8 @@ Parent: Observation
 Id: mii-pr-mikrobio-mrgn-klasse
 Title: "MII PR Mikrobio MRGN Klasse"
 Description: "This profile describes the type of multidrug-resistant Gram-negative bacteria according to the Robert Koch Institute classification"
-* ^version = "2025.0.0"
-* ^experimental = false
-* ^publisher = "https://www.Medizininformatik-Initiative.de"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^purpose = "Dieses Profil beschreibt die MRGN Klasse in der Medizininformatik-Initiative."
 * obeys mii-lab-2
 * id MS

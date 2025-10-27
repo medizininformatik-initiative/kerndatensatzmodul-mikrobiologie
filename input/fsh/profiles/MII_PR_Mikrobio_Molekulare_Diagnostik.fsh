@@ -3,9 +3,8 @@ Parent: Observation
 Id: mii-pr-mikrobio-molekulare-diagnostik
 Title: "MII PR Mikrobio Molekulare Diagnostik"
 Description: "This profile describes a molecular diagnostic test in microbiology"
-* ^version = "2025.0.0"
-* ^experimental = false
-* ^publisher = "https://www.Medizininformatik-Initiative.de"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^purpose = "Dieses Profil beschreibt ein Molekular Diagnostik Test in der Medizininformatik-Initiative Modul Mikrobiologie."
 * obeys mii-lab-2
 * id MS

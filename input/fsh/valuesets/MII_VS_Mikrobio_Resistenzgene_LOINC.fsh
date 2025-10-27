@@ -1,8 +1,9 @@
 ValueSet: MII_VS_Mikrobio_Resistenzgene_LOINC
 Id: mii-vs-mikrobio-resistenzgene-loinc
 Title: "MII VS Mikrobio Resistenzgene [LOINC]"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^status = #active
-* ^version = "2025.0.0"
 * ^date = "2023-03-02T00:00:00Z"
 * LOINC#92251-8 "Microorganism gene detected [Presence] by Molecular method"
 * LOINC#93700-3 "Beta-lactam resistance AmpC blaDHA gene [Presence] by Molecular method"

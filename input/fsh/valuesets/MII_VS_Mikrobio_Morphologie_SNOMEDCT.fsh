@@ -1,8 +1,9 @@
 ValueSet: MII_VS_Mikrobio_Morphologie_SNOMEDCT
 Id: mii-vs-mikrobio-morphologie-snomedct
 Title: "MII VS Mikrobio Morphologie [SNOMED CT]"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^status = #active
-* ^version = "2025.0.0"
 * ^date = "2023-03-02T00:00:00Z"
 * SNOMED_CT#723529006 "Extracellular Gram-negative diplococcus (finding)"
 * SNOMED_CT#404509004 "Large gram-negative coccobacilli (finding)"

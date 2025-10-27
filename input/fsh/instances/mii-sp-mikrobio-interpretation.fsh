@@ -1,12 +1,9 @@
 Instance: mii-sp-mikrobio-interpretation
 InstanceOf: SearchParameter
 Usage: #definition
+* insert Version
+* insert SP_Publisher
 * url = "https://www.medizininformatik-initiative.de/fhir/core/modul-mikrobio/SearchParameter/Observation-interpretation"
-* version = "2025.0.0"
-* publisher = "Medizininformatik Initiative"
-* contact.telecom
-  * system = #url
-  * value = "https://www.medizininformatik-initiative.de"
 * name = "MII_SP_Mikrobio_Interpretation"
 * status = #active
 * experimental = false

@@ -1,8 +1,9 @@
 ValueSet: MII_VS_Mikrobio_Virulenz_LOINC
 Id: mii-vs-mikrobio-virulenz-loinc
 Title: "MII VS Mikrobio Virulenz [LOINC]"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^status = #active
-* ^version = "2025.0.0"
 * ^date = "2023-03-02T00:00:00Z"
 * LOINC#87402-4 "Escherichia coli aidA-I gene [Presence] in Isolate by NAA with probe detection"
 * LOINC#87318-2 "Escherichia coli eaeA gene [Presence] in Isolate by NAA with probe detection"

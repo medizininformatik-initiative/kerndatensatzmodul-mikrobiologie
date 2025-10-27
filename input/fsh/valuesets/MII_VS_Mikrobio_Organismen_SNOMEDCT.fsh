@@ -1,8 +1,9 @@
 ValueSet: MII_VS_Mikrobio_Organismen_SNOMEDCT
 Id: mii-vs-mikrobio-organismen-snomedct
 Title: "MII VS Mikrobio Organismen [SNOMED CT]"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^status = #active
-* ^version = "2025.0.0"
 * ^date = "2023-03-02T00:00:00Z"
 * include codes from system SNOMED_CT where concept is-a #409822003
 * include codes from system SNOMED_CT where concept is-a #414561005

@@ -3,8 +3,9 @@ Parent: Element
 Id: mii-lm-mikrobio-logical-model
 Title: "MII LM Mikrobio Logical Model"
 Description: "Logical Model für die grafische Darstellung des jeweiligen Art-Decor-Modells [DE]"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^url = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de"
-* ^version = "2025.0.0"
 * ^type = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model"
 * . ^short = "mii lm mikrobio logical model"
 * KulturDiagnostik 0..* BackboneElement "Kultur Diagnostik" "Kultur Diagnostik"

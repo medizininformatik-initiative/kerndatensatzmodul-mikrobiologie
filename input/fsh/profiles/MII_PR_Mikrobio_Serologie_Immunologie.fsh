@@ -3,9 +3,8 @@ Parent: Observation
 Id: mii-pr-mikrobio-serologie-immunologie
 Title: "MII PR Mikrobio Serologie Immunologie"
 Description: "This profile describes the serological and immunological examination in microbiology."
-* ^version = "2025.0.0"
-* ^experimental = false
-* ^publisher = "https://www.Medizininformatik-Initiative.de"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^purpose = "Dieses Profil beschreibt   die serologische und immunologische Untersuchung  in der Medizininformatik-Initiative"
 * obeys mii-lab-2
 * id MS

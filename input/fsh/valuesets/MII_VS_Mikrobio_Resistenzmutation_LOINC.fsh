@@ -1,8 +1,9 @@
 ValueSet: MII_VS_Mikrobio_Resistenzmutation_LOINC
 Id: mii-vs-mikrobio-resistenzmutation-loinc
 Title: "MII VS Mikrobio Resistenzmutation [LOINC]"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^status = #active
-* ^version = "2025.0.0"
 * ^date = "2023-03-02T00:00:00Z"
 * LOINC#92243-5 "Microorganism resistance mutation tested for by Molecular method"
 * LOINC#89371-9 "MTB complex DNA and rpoB RIF resistance mutation panel [Presence]"

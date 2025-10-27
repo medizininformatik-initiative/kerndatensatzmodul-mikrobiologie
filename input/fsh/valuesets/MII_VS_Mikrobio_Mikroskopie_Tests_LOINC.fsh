@@ -1,10 +1,9 @@
 ValueSet: MII_VS_Mikrobio_Mikroskopie_Tests_LOINC
 Id: mii-vs-mikrobio-mikroskopie-tests-loinc
 Title: "MII VS Mikrobio Mikroskopie Tests [LOINC]"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobiologie/ValueSet/mii-vs-mikrobio-mikroskopie-tests-loinc"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^status = #active
-* ^version = "2025.0.0"
-* ^contact.telecom.system = #email
 * LOINC#10680-7 "Herpes simplex virus identified in Cerebral spinal fluid by Electron microscopy"
 * LOINC#10681-5 "Herpes simplex virus identified in Tissue by Electron microscopy"
 * LOINC#10649-2 "Calicivirus [Identifier] in Stool by Electron microscopy"

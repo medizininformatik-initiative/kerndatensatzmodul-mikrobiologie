@@ -3,9 +3,8 @@ Parent: Observation
 Id: mii-pr-mikrobio-mikroskopie
 Title: "MII PR Mikrobio Mikroskopie"
 Description: "This profile describes a microscopy test in microbiology"
-* ^version = "2025.0.0"
-* ^experimental = false
-* ^publisher = "https://www.Medizininformatik-Initiative.de"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^purpose = "Dieses Profil beschreibt ein Mikroskopie Test der Medizininformatik-Initiative."
 * obeys mii-lab-2
 * id MS

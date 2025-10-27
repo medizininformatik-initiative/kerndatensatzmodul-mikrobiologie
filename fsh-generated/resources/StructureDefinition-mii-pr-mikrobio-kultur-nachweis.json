@@ -2,12 +2,22 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-mikrobio-kultur-nachweis",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-kultur-nachweis",
-  "version": "2025.0.0",
+  "version": "2025.0.2",
   "name": "MII_PR_Mikrobio_Kultur_Nachweis",
   "title": "MII PR Mikrobio Kultur Nachweis",
   "status": "active",
   "experimental": false,
-  "publisher": "https://www.Medizininformatik-Initiative.de",
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "description": "This profile describes whether a microorganism is detected by culture method.",
   "purpose": "Dieses Profil beschreibt ob ein Mikroorganismus mittels Kultur nachgewiesen wird in der Medizininformatik-Initiative.",
   "fhirVersion": "4.0.1",
@@ -220,7 +230,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobiologie/ValueSet/mii-vs-mikrobio-kulturtests-loinc"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-kulturtests-loinc"
         }
       },
       {

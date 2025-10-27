@@ -3,9 +3,8 @@ Parent: Observation
 Id: mii-pr-mikrobio-empfindlichkeit
 Title: "MII PR Mikrobio Empfindlichkeit"
 Description: "This profile describes a susceptibility test in microbiology"
-* ^version = "2025.0.0"
-* ^experimental = false
-* ^publisher = "https://www.Medizininformatik-Initiative.de"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^purpose = "Dieses Profil beschreibt ein Empfindlichkeit Test der Medizininformatik-Initiative."
 * obeys mii-lab-2
 * id MS

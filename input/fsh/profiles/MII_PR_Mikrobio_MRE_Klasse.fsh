@@ -3,9 +3,8 @@ Parent: Observation
 Id: mii-pr-mikrobio-mre-klasse
 Title: "MII PR Mikrobio MRE Klasse"
 Description: "This profile describes the type of multi-resistant organism"
-* ^version = "2025.0.0"
-* ^experimental = false
-* ^publisher = "https://www.Medizininformatik-Initiative.de"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^purpose = "Dieses Profil beschreibt die MRE Klasse in der Medizininformatik-Initiative."
 * obeys mii-lab-2
 * id MS

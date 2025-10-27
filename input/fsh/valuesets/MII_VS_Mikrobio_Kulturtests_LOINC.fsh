@@ -1,9 +1,9 @@
 ValueSet: MII_VS_Mikrobio_Kulturtests_LOINC
 Id: mii-vs-mikrobio-kulturtests-loinc
 Title: "MII VS Mikrobio Kulturtests [LOINC]"
-* ^url = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobiologie/ValueSet/mii-vs-mikrobio-kulturtests-loinc"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^status = #active
-* ^version = "2025.0.0"
 * ^contact.telecom.system = #email
 * LOINC#19127-0 "Bacteria identified in Sputum by Acute Respiratoy Distress (ARDS) culture"
 * LOINC#636-1 "Bacteria identified in Specimen by Sterile body fluid culture"

@@ -3,9 +3,8 @@ Parent: Observation
 Id: mii-pr-mikrobio-resistenzgene
 Title: "MII PR Mikrobio Resistenzgene"
 Description: "This profile describes the identification of the presence or absence of a resistance gene in microbiology"
-* ^version = "2025.0.0"
-* ^experimental = false
-* ^publisher = "https://www.Medizininformatik-Initiative.de"
+* insert PR_CS_VS_Version
+* insert Publisher
 * ^purpose = "Dieses Profil beschreibt  die Identifizierung des Vorhandenseins oder Nichtvorhandenseins eines Resistenzgens  in der Medizininformatik-Initiative Modul Mikrobiologie."
 * obeys mii-lab-2
 * id MS
