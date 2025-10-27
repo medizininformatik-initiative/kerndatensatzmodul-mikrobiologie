@@ -45,16 +45,9 @@ Description: "This profile describes a molecular diagnostic test in microbiology
   * coding[loinc-observation] = $loinc#26436-6
   * coding[observation-category] = $observation-category#laboratory
   * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+* code = $loinc#92253-4
 * code MS
-  * coding 2.. MS
-    * ^slicing.discriminator.type = #pattern
-    * ^slicing.discriminator.path = "$this"
-    * ^slicing.rules = #open
-  * coding contains
-    generic-loinc 1..1 MS and
-    specific-loinc 0..1 MS
-  * coding[generic-loinc] = $loinc#92253-4
-  * coding[specific-loinc] from MII_VS_Mikrobio_Molekulare_Diagnostik_LOINC (required)
+* code from MII_VS_Mikrobio_Molekulare_Diagnostik_LOINC (extensible)
 * subject 1.. MS
 * encounter MS
 * effective[x] 1.. MS
