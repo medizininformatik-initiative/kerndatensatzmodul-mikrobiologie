@@ -6,6 +6,20 @@
       "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-diagnostik"
     ]
   },
+  "code": {
+    "coding": [
+      {
+        "code": "92253-4",
+        "system": "http://loinc.org",
+        "display": "Mikroorganismus identifiziert in Isolat oder Probenmaterial mittels Molekulargenetik"
+      },
+      {
+        "code": "96958-4",
+        "system": "http://loinc.org",
+        "display": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Speichel mittels Nukleinsäureamplifikation mit Sondendetektion mit CDC-Primer-Sondenset N2"
+      }
+    ]
+  },
   "identifier": [
     {
       "type": {
@@ -47,20 +61,6 @@
       ]
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "code": "92253-4",
-        "system": "http://loinc.org",
-        "display": "Mikroorganismus identifiziert in Isolat oder Probenmaterial mittels Molekulargenetik"
-      },
-      {
-        "code": "96958-4",
-        "system": "http://loinc.org",
-        "display": "SARS-CoV-2 (COVID-19) N-Gen [Nachweis] in Speichel mittels Nukleinsäureamplifikation mit Sondendetektion mit CDC-Primer-Sondenset N2"
-      }
-    ]
-  },
   "status": "final",
   "subject": {
     "reference": "Patient/example"
