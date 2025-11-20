@@ -1,4 +1,4 @@
-Profile: MII_PR_Mikrobio_Kultur_Nachweis
+Profile: MII_PR_Mikrobio_KulturNachweis
 Parent: Observation
 Id: mii-pr-mikrobio-kultur-nachweis
 Title: "MII PR Mikrobio Kultur Nachweis"
