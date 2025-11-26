@@ -17,7 +17,7 @@ Usage: #example
 * effectiveDateTime = "2018-11-20T11:05:00+00:00"
 * valueQuantity = 32 'mg/L' "mg/L"
 * interpretation.coding = $v3-ObservationInterpretation#R "Resistant"
-  * version = "2019"
+  * version = "3.0.0"
 * specimen
   * reference = "Specimen/isolate"
   * display = "Microbial isolate specimen (specimen)"

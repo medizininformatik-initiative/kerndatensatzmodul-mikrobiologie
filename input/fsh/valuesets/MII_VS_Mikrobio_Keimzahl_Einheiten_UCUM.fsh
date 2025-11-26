@@ -5,8 +5,8 @@ Title: "MII VS Mikrobio Keimzahl Einheiten [UCUM]"
 * insert Publisher
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
-* UCUM#[CFU]/mL
-* UCUM#[arb'U]/mL
-* UCUM#/g
-* UCUM#/mL
-* UCUM#{#}
+* $ucum#[CFU]/mL
+* $ucum#[arb'U]/mL
+* $ucum#/g
+* $ucum#/mL
+* $ucum#{#}

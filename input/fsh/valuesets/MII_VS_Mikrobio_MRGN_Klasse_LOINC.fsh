@@ -5,6 +5,6 @@ Title: "MII VS Mikrobio MRGN Klasse [LOINC]"
 * insert Publisher
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
-* LOINC#LA33214-0 "2MRGN"
-* LOINC#LA33215-7 "3MRGN"
-* LOINC#LA33216-5 "4MRGN"
+* $loinc#LA33214-0 "2MRGN"
+* $loinc#LA33215-7 "3MRGN"
+* $loinc#LA33216-5 "4MRGN"

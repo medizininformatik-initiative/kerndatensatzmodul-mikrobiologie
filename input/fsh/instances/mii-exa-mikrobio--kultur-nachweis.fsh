@@ -1,5 +1,5 @@
 Instance: mii-exa-mikrobio-kultur-nachweis
-InstanceOf: MII_PR_Mikrobio_Kultur_Nachweis
+InstanceOf: MII_PR_Mikrobio_KulturNachweis
 Usage: #example
 * identifier[analyseBefundCode]
   * system = "https://example.org/fhir/sid/test-lab-results"

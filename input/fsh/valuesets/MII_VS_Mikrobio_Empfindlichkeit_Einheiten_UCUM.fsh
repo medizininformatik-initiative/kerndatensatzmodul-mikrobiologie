@@ -5,8 +5,8 @@ Title: "MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]"
 * insert Publisher
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
-* UCUM#ug/mL
-* UCUM#mg/L
-* UCUM#[arb'U]/mL
-* UCUM#{CFU}/mL
-* UCUM#mm
+* $ucum#ug/mL
+* $ucum#mg/L
+* $ucum#[arb'U]/mL
+* $ucum#{CFU}/mL
+* $ucum#mm
