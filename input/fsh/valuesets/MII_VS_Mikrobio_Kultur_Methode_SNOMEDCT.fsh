@@ -6,3 +6,4 @@ Title: "MII VS Mikrobio Kultur Methode[SNOMED CT]"
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
 * include codes from system SNOMED_CT where concept is-a #61594008
+* include codes from system SNOMED_CT where concept is-a #702658000
