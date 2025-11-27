@@ -10,6 +10,7 @@
     // filter eld-20 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
     "http://hl7.org/fhir/StructureDefinition/ElementDefinition#eld-20",
     // filter wrong AT display proposal from the validator
-    "NO_VALID_DISPLAY_FOUND_LANG_NONE@Observation.code.coding[0].display"  
+    //"NO_VALID_DISPLAY_FOUND_LANG_NONE@Observation.code.coding[0].display"
+    "Display_Name_for__should_be_one_of__instead_of@Observation.code.coding[0].display"
   ]
 }
