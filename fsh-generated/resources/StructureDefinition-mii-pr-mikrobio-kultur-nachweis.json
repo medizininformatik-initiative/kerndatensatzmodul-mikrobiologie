@@ -2,8 +2,8 @@
   "resourceType": "StructureDefinition",
   "id": "mii-pr-mikrobio-kultur-nachweis",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-kultur-nachweis",
-  "version": "2025.0.2",
-  "name": "MII_PR_Mikrobio_Kultur_Nachweis",
+  "version": "2026.0.0",
+  "name": "MII_PR_Mikrobio_KulturNachweis",
   "title": "MII PR Mikrobio Kultur Nachweis",
   "status": "active",
   "experimental": false,
@@ -211,8 +211,7 @@
         "max": "1",
         "patternCoding": {
           "code": "18725-2",
-          "system": "http://loinc.org",
-          "display": "Mikrobiologie"
+          "system": "http://loinc.org"
         },
         "mustSupport": true
       },

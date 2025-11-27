@@ -1,5 +1,5 @@
 Instance: mii-exa-mikrobio-molekulare-diagnostik
-InstanceOf: MII_PR_Mikrobio_Molekulare_Diagnostik
+InstanceOf: MII_PR_Mikrobio_MolekulareDiagnostik
 Usage: #example
 * identifier[analyseBefundCode]
   * system = "https://example.org/fhir/sid/test-lab-results"

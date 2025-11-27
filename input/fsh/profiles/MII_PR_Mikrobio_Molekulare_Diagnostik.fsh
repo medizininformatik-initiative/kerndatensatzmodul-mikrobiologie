@@ -1,4 +1,4 @@
-Profile: MII_PR_Mikrobio_Molekulare_Diagnostik
+Profile: MII_PR_Mikrobio_MolekulareDiagnostik
 Parent: Observation
 Id: mii-pr-mikrobio-molekulare-diagnostik
 Title: "MII PR Mikrobio Molekulare Diagnostik"
