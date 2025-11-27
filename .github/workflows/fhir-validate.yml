@@ -71,7 +71,6 @@ jobs:
           include: warnings
           filters: |
             # Struktur: fileName|messageId|detailsWildcard|location
-            Observation-mii-exa-mikrobio-kultur-nachweis.json|NO_VALID_DISPLAY_FOUND_LANG_NONE||
 
       - name: Validate Resource Status
         uses: patrick-werner/fhir-resource-status-check@1.2.0
