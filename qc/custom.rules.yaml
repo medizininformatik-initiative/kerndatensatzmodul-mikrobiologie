@@ -72,7 +72,7 @@
 - name: naming-convention-url
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   status: "Checking if all resource urls follow the naming convention"
-  predicate: url.exists() implies url.matches('^https://www.medizininformatik-initiative.de/fhir/core/modul-labor/')
+  predicate: url.exists() implies url.matches('^https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/')
   error-message: "resource url naming convention mismatch"
   files:
     - /**/*.xml
