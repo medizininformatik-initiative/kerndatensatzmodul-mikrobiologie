@@ -1,5 +1,5 @@
 ValueSet: MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM
-Id: mii-vs-keimzahl-einheiten-ucum
+Id: mii-vs-mikrobio-keimzahl-einheiten-ucum
 Title: "MII VS Mikrobio Keimzahl Einheiten [UCUM]"
 * insert PR_CS_VS_Version
 * insert Publisher

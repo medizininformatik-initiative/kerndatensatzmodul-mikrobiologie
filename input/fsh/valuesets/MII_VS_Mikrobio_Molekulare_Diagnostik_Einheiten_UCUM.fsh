@@ -1,5 +1,5 @@
 ValueSet: MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM
-Id: mii-vs-molekulare-diagnostik-einheiten-ucum
+Id: mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum
 Title: "MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]"
 * insert PR_CS_VS_Version
 * insert Publisher

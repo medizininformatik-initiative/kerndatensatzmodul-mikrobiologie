@@ -1,5 +1,5 @@
 ValueSet: MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM
-Id: mii-vs-empfindlichkeit-einheiten-ucum
+Id: mii-vs-mikrobio-empfindlichkeit-einheiten-ucum
 Title: "MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]"
 * insert PR_CS_VS_Version
 * insert Publisher

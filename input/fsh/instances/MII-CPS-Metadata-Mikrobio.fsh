@@ -3,13 +3,14 @@ InstanceOf: CapabilityStatement
 Usage: #definition
 * insert SP_Publisher
 * insert Version
+* id = "mii-cps-mikrobio-metadata"
 * url = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata"
 * status = #active
 * experimental = false
 * date = "2023-06-12"
 * implementationGuide = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|1.0.0"
-* name = "MII CPS Metadata Mikrobio"
-* title = "MII CPS Metadata Mikrobio"
+* name = "MII_CPS_Mikrobio_Metadata"
+* title = "MII CPS Mikrobio Metadata"
 * description = "Das vorliegende CapabilityStatement beschreibt alle verpflichtenden Interaktionen die ein konformes System unterstützen muss um das Modul Mikrobio der Medizininformatik Initiative zu implementieren."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements

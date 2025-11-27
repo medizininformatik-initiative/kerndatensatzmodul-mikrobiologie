@@ -3,7 +3,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 * insert Version
 * insert SP_Publisher
-* url = "https://www.medizininformatik-initiative.de/fhir/core/modul-mikrobio/SearchParameter/Observation-interpretation"
+* url = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation"
 * name = "MII_SP_Mikrobio_Interpretation"
 * status = #active
 * experimental = false
