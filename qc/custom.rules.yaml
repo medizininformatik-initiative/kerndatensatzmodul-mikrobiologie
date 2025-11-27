@@ -50,7 +50,7 @@
 - name: naming-convention-name
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   status: "Checking if all resource names follow the naming convention"
-  predicate: name.exists() implies name.matches('^MII_(PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA)_Labor')
+  predicate: name.exists() implies name.matches('^MII_(PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA)_Mikrobio')
   error-message: "resource name naming convention mismatch"
   files:
     - /**/*.xml
@@ -61,7 +61,7 @@
 - name: naming-convention-title
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or NamingSystem or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
   status: "Checking if all resource titles follow the naming convention"
-  predicate: title.exists() implies title.matches('^MII (PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA) Labor')
+  predicate: title.exists() implies title.matches('^MII (PR|EX|LM|VS|CS|CM|SM|NS|SP|CPS|OD|IG|EXA) Mikrobio')
   error-message: "resource name naming convention mismatch"
   files:
     - /**/*.xml
