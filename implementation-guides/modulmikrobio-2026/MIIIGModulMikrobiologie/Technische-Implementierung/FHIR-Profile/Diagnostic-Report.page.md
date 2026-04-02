@@ -1,66 +1,60 @@
-## Befund - DiagnosticReport
-
--------------
-
-### Bestehende Profile Kerndatensatz Medizininformatik-Initiative
-
-**Modul Labor**
-
-Durch den Kerndatensatz der Medizininformatik Initative wird bereits das Konzept des "Laborbefunds" im Modul Labor definiert. Diese Spezifikation wird im Rahmen dieses Moduls wiederverwendet. In diesem Modul enthält das Element DiagnosticReport.category.coding jedoch zwei zusätzliche mikrobiologiespezifische Slices.
-
-Siehe Profil ["MI-Initiative - Laborprofile - DiagnosticReport"](https://simplifier.net/medizininformatikinitiative-modullabor/diagnosticreportlab).
-
-Canonical URL: ``https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab``
-
-Es ist zu beachten, dass alle weiteren Vorgaben und Pflichtfelder des Kerndatensatz Moduls einzuhalten sind. Weitere Informationen finden sich im Abschnitt des [ImplementationGuides - Modul Labor](https://simplifier.net/MedizininformatikInitiative-modullabor/~guides).
-
--------------
-
-
-
--------------
-
-**Beschreibung**
-
-Das vorliegende abgeleitete Profil beschreibt einen Befund (DiagnosticReport) im Modul Mikrobiologie. 
-@```
-from StructureDefinition where url = 'https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report' select Name: name, Canonical: url
-```
-
 ---
-
-**Differential**
-
-{{tree:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report, diff}}
-
+canonical: https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report
+capability: https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata
+resType: DiagnosticReport
+expand: 1
 ---
+## {{link}}
 
+Dieses Profil bildet den mikrobiologischen Befundbericht als DiagnosticReport ab.
 
----
+### Metadaten
 
-
--------------
-
-**Terminology Bindings**
-
-@```
-from StructureDefinition
-where url in ('https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report' )
-for differential.element
+<fql output="table" headers="true">
+from
+	StructureDefinition
+where
+	url = %canonical
 select
-Path: path,
-join binding.where(valueSet.exists())
-{
-  Name: valueSet.substring((12 + valueSet.indexOf('ValueSet/'))),
-  Strength: strength,
-  URL: valueSet
-}
-```
+	Canonical: url, Status: status, Version: version, Basis: baseDefinition
+</fql>
 
----
+### Inhalt
 
-**Snapshot**
+<tabs>
+  <tab title="Darstellung">{{tree, buttons}}</tab>
+  <tab title="Beschreibung">{{page:FQL-Beschreibung}}</tab>
+  <tab title="XML">{{xml}}</tab>
+  <tab title="JSON">{{json}}</tab>
+  <tab title="Link">{{link}}</tab>
+</tabs>
 
-{{tree:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report, snapshot}}
+</br>
 
--------------
+### Constraints/Invarianten
+<fql headers="true">
+from StructureDefinition where url = %canonical for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
+</fql>
+
+### RestFul API
+
+<tabs>
+    <tab title="Interaktionen">
+        {{page:FQL-Capability-REST}}
+    </tab>
+    <tab title="Suchparameter">
+        {{page:FQL-Capability-Search}}
+    </tab>
+    <tab title="Operationen">
+        {{page:FQL-Capability-Operations}}
+    </tab>
+    <tab title="Link">
+        {{link:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata}}
+    </tab>
+</tabs>
+
+### Beispiele
+
+Beispiel (minimal):
+
+{{json:mii-exa-mikrobio-diagnostic-report}}
