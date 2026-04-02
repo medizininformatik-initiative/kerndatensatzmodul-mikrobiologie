@@ -9,3 +9,4 @@ Title: "MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]"
     where CLASS = "LP7755-4" and
     PROPERTY = "LP6870-2" and
     METHOD_TYP = "LP28723-2"
+* $loinc#89489-9 "rifAMPin [Susceptibility] by Genotype method"

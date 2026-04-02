@@ -14,7 +14,7 @@ Usage: #example
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 100000
 * valueQuantity.system = "http://unitsofmeasure.org"
-* valueQuantity.code = #1/mL
-* valueQuantity.unit = "1/mL"
+* valueQuantity.code = #/mL
+* valueQuantity.unit = "/mL"
 * method = $sct#410681005
 * specimen.reference = "Specimen/example"

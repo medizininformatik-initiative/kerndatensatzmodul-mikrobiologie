@@ -10,3 +10,4 @@ Title: "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]"
     PROPERTY = "LP6870-2" and
     STATUS = "ACTIVE" and
     METHOD_TYP exists false
+* $loinc#18906-8

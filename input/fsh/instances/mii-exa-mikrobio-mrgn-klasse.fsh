@@ -9,8 +9,8 @@ Usage: #example
 * category.coding[loinc-observation] = $loinc#26436-6
 * category.coding[observation-category] = $observation-category#laboratory
 * category.coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
-* code = $loinc#89456-8
+* code = $loinc#LA33214-0
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
-* valueCodeableConcept = $loinc#LA9628-2
+* valueCodeableConcept = $loinc#LA33214-0
 * specimen.reference = "Specimen/example"
