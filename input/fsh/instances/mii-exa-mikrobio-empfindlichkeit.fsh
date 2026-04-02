@@ -9,7 +9,7 @@ Usage: #example
 * category.coding[loinc-observation] = $loinc#26436-6
 * category.coding[observation-category] = $observation-category#laboratory
 * category.coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
-* code = $loinc#18906-8
+* code = $loinc#100044-7	//Cefcapene [Susceptibility]
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 1
