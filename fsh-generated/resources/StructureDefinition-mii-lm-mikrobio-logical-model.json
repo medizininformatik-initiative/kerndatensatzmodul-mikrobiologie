@@ -34,275 +34,403 @@
         "definition": "Logical Model für die grafische Darstellung des Mikrobiologie-Datenmodells 2026 [DE]"
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.AllgemeineKultur",
-        "path": "mii-lm-mikrobio-logical-model.AllgemeineKultur",
-        "short": "Allgemeine Kultur",
-        "definition": "Allgemeine Kultur",
+        "id": "mii-lm-mikrobio-logical-model.Kultur",
+        "path": "mii-lm-mikrobio-logical-model.Kultur",
+        "short": "Kultur",
+        "definition": "Kultur",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "BackboneElement"
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.SpezifischeKultur",
-        "path": "mii-lm-mikrobio-logical-model.SpezifischeKultur",
-        "short": "Spezifische Kultur",
-        "definition": "Spezifische Kultur",
+        "id": "mii-lm-mikrobio-logical-model.Kultur.AllgemeineKultur",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.AllgemeineKultur",
+        "short": "Allgemeine Kultur (NEW)",
+        "definition": "MII PR Mikrobio Allgemeine Kultur",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.Keimzahl",
-        "path": "mii-lm-mikrobio-logical-model.Keimzahl",
+        "id": "mii-lm-mikrobio-logical-model.Kultur.SpezifischeKultur",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.SpezifischeKultur",
+        "short": "Spezifische Kultur (NEW)",
+        "definition": "MII PR Mikrobio Spezifische Kultur",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Kultur.Keimzahl",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.Keimzahl",
         "short": "Keimzahl",
-        "definition": "Keimzahl",
+        "definition": "MII PR Mikrobio Keimzahl",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.Mikroskopie",
-        "path": "mii-lm-mikrobio-logical-model.Mikroskopie",
+        "id": "mii-lm-mikrobio-logical-model.Kultur.Mikroskopie",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.Mikroskopie",
         "short": "Mikroskopie",
-        "definition": "Mikroskopie",
+        "definition": "MII PR Mikrobio Mikroskopie",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.Empfindlichkeit",
-        "path": "mii-lm-mikrobio-logical-model.Empfindlichkeit",
+        "id": "mii-lm-mikrobio-logical-model.Kultur.Empfindlichkeit",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.Empfindlichkeit",
         "short": "Empfindlichkeit",
-        "definition": "Empfindlichkeit",
+        "definition": "MII PR Mikrobio Empfindlichkeit",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.NugentScore",
-        "path": "mii-lm-mikrobio-logical-model.NugentScore",
-        "short": "Nugent Score",
-        "definition": "Nugent Score",
+        "id": "mii-lm-mikrobio-logical-model.Kultur.NugentScore",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.NugentScore",
+        "short": "Nugent Score (ex component)",
+        "definition": "MII PR Mikrobio Nugent Score",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.BarlettScore",
-        "path": "mii-lm-mikrobio-logical-model.BarlettScore",
-        "short": "Barlett Score",
-        "definition": "Barlett Score",
+        "id": "mii-lm-mikrobio-logical-model.Kultur.BarlettScore",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.BarlettScore",
+        "short": "Barlett Score (ex component)",
+        "definition": "MII PR Mikrobio Barlett Score",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.AllgemeineBestimmung",
-        "path": "mii-lm-mikrobio-logical-model.AllgemeineBestimmung",
-        "short": "Allgemeine Bestimmung",
-        "definition": "Allgemeine Bestimmung",
+        "id": "mii-lm-mikrobio-logical-model.Determination",
+        "path": "mii-lm-mikrobio-logical-model.Determination",
+        "short": "Determination",
+        "definition": "Determination",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "BackboneElement"
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.SpezifischeBestimmung",
-        "path": "mii-lm-mikrobio-logical-model.SpezifischeBestimmung",
-        "short": "Spezifische Bestimmung",
-        "definition": "Spezifische Bestimmung",
+        "id": "mii-lm-mikrobio-logical-model.Determination.AllgemeineBestimmung",
+        "path": "mii-lm-mikrobio-logical-model.Determination.AllgemeineBestimmung",
+        "short": "General Determination (NEW)",
+        "definition": "MII PR Mikrobio Allgemeine Bestimmung",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.CtWert",
-        "path": "mii-lm-mikrobio-logical-model.CtWert",
-        "short": "CT-Wert",
-        "definition": "CT-Wert",
+        "id": "mii-lm-mikrobio-logical-model.Determination.SpezifischeBestimmung",
+        "path": "mii-lm-mikrobio-logical-model.Determination.SpezifischeBestimmung",
+        "short": "Specific Determination (NEW)",
+        "definition": "MII PR Mikrobio Spezifische Bestimmung",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.MolekularePathogenlast",
-        "path": "mii-lm-mikrobio-logical-model.MolekularePathogenlast",
+        "id": "mii-lm-mikrobio-logical-model.Determination.CtWert",
+        "path": "mii-lm-mikrobio-logical-model.Determination.CtWert",
+        "short": "CT-Wert (ex component)",
+        "definition": "MII PR Mikrobio CT Wert",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Determination.MolekularePathogenlast",
+        "path": "mii-lm-mikrobio-logical-model.Determination.MolekularePathogenlast",
         "short": "Molekulare Pathogenlast",
-        "definition": "Molekulare Pathogenlast",
+        "definition": "MII PR Mikrobio Molekulare Pathogenlast",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.VoraussichtlicheEmpfindlichkeit",
-        "path": "mii-lm-mikrobio-logical-model.VoraussichtlicheEmpfindlichkeit",
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften",
+        "short": "Weitere Eigenschaften",
+        "definition": "Weitere Eigenschaften",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
         "short": "Voraussichtliche Empfindlichkeit",
-        "definition": "Voraussichtliche Empfindlichkeit",
+        "definition": "MII PR Mikrobio Voraussichtliche Empfindlichkeit",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.Virulenzfaktor",
-        "path": "mii-lm-mikrobio-logical-model.Virulenzfaktor",
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.Virulenzfaktor",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.Virulenzfaktor",
         "short": "Virulenzfaktor",
-        "definition": "Virulenzfaktor",
+        "definition": "MII PR Mikrobio Virulenzfaktor",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.ResistenzmechanismenDeterminanten",
-        "path": "mii-lm-mikrobio-logical-model.ResistenzmechanismenDeterminanten",
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.ResistenzmechanismenDeterminanten",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.ResistenzmechanismenDeterminanten",
         "short": "Resistenzmechanismen/Determinanten",
-        "definition": "Resistenzmechanismen/Determinanten",
+        "definition": "MII PR Mikrobio Resistenzmechanismen Determinanten",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.MRGNKlasse",
-        "path": "mii-lm-mikrobio-logical-model.MRGNKlasse",
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.MRGNKlasse",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.MRGNKlasse",
         "short": "MRGN Klasse",
-        "definition": "MRGN Klasse",
+        "definition": "MII PR Mikrobio MRGN Klasse",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.MREKlasse",
-        "path": "mii-lm-mikrobio-logical-model.MREKlasse",
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.MREKlasse",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.MREKlasse",
         "short": "MRE Klasse",
-        "definition": "MRE Klasse",
+        "definition": "MII PR Mikrobio MRE Klasse",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.SerologieImmunologie",
-        "path": "mii-lm-mikrobio-logical-model.SerologieImmunologie",
-        "short": "Serologie/Immunologie",
-        "definition": "Serologie/Immunologie",
+        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology",
+        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology",
+        "short": "Serology Immunology",
+        "definition": "Serology Immunology",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "BackboneElement"
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.AntigenAntikoerperQuantitativ",
-        "path": "mii-lm-mikrobio-logical-model.AntigenAntikoerperQuantitativ",
-        "short": "Antigen/Antikörper quantitativ",
-        "definition": "Antigen/Antikörper quantitativ",
+        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.SerologieImmunologie",
+        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.SerologieImmunologie",
+        "short": "Serologie Immunologie",
+        "definition": "MII PR Mikrobio Serologie Immunologie",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-serologie-immunologie"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.Aviditaet",
-        "path": "mii-lm-mikrobio-logical-model.Aviditaet",
-        "short": "Avidität",
-        "definition": "Avidität",
+        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.AntigenAntikoerperQuantitativ",
+        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.AntigenAntikoerperQuantitativ",
+        "short": "Antigen antibody quantitative tests",
+        "definition": "MII PR Mikrobio Antigen Antikoerper Quantitativ",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.Titer",
-        "path": "mii-lm-mikrobio-logical-model.Titer",
-        "short": "Titer",
-        "definition": "Titer",
+        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.Aviditaet",
+        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.Aviditaet",
+        "short": "Avidity (ex component)",
+        "definition": "MII PR Mikrobio Aviditaet",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "Observation"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet"
+            ]
           }
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.MikrobiologieBericht",
-        "path": "mii-lm-mikrobio-logical-model.MikrobiologieBericht",
-        "short": "Mikrobiologie Bericht",
-        "definition": "Mikrobiologie Bericht",
+        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.Titer",
+        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.Titer",
+        "short": "Titer (ex component)",
+        "definition": "MII PR Mikrobio Titer",
         "min": 0,
         "max": "*",
         "type": [
           {
-            "code": "DiagnosticReport"
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie",
+        "path": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie",
+        "short": "Diagnostic Report",
+        "definition": "Diagnostic Report",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie.MikrobiologieBericht",
+        "path": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie.MikrobiologieBericht",
+        "short": "MII PR Mikrobio Diagnostic Report",
+        "definition": "MII PR Mikrobio Diagnostic Report",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "DiagnosticReport",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"
+            ]
           }
         ]
       }
