@@ -20,18 +20,6 @@
   "name": "MII_PR_Mikrobio_Spezifische_Bestimmung",
   "title": "MII PR Mikrobio Spezifische Bestimmung",
   "status": "active",
-  "experimental": false,
-  "publisher": "Medizininformatik Initiative",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "https://www.medizininformatik-initiative.de"
-        }
-      ]
-    }
-  ],
   "description": "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels (z. B. Nukleinsäure, Antigen, Antikörper oder biochemischer Marker) in einer Probe.",
   "purpose": "Dieses Profil beschreibt die spezifische Bestimmung eines vordefinierten Targets.",
   "fhirVersion": "4.0.1",
@@ -94,14 +82,8 @@
         }
       },
       {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "max": "0"
-      },
-      {
         "id": "Observation.method",
         "path": "Observation.method",
-        "min": 1,
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed"
@@ -111,16 +93,6 @@
         "id": "Observation.specimen",
         "path": "Observation.specimen",
         "min": 1
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "max": "0"
       }
     ]
   }

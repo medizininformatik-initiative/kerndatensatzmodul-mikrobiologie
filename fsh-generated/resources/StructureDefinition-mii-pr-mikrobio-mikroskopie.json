@@ -20,18 +20,6 @@
   "name": "MII_PR_Mikrobio_Mikroskopie",
   "title": "MII PR Mikrobio Mikroskopie",
   "status": "active",
-  "experimental": false,
-  "publisher": "Medizininformatik Initiative",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "https://www.medizininformatik-initiative.de"
-        }
-      ]
-    }
-  ],
   "description": "Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung), ohne taxonomische Identifikation.",
   "purpose": "Dieses Profil beschreibt mikroskopische Beobachtungen der Morphologie.",
   "fhirVersion": "4.0.1",
@@ -98,14 +86,8 @@
         }
       },
       {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "max": "0"
-      },
-      {
         "id": "Observation.method",
         "path": "Observation.method",
-        "min": 1,
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"
@@ -115,11 +97,6 @@
         "id": "Observation.specimen",
         "path": "Observation.specimen",
         "min": 1
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "max": "0"
       }
     ]
   }

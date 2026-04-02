@@ -7,8 +7,7 @@ Description: "Spezifische Kultur beschreibt das Ergebnis einer zielgerichteten m
 * ^purpose = "Dieses Profil beschreibt die spezifische Kulturdiagnostik eines vordefinierten Organismus." 
 * code from MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC (extensible)
 * value[x] only CodeableConcept
-* valueCodeableConcept 1.. MS
+* valueCodeableConcept 1..
 * valueCodeableConcept from MII_VS_Mikrobio_Spezifische_Kultur_Ergebnis_SNOMED (extensible)
-* interpretation ..0
-* method 1.. MS
+* method MS
 * method = $sct#703752003 // Mikroorganismusspezifische Kulturtechnik

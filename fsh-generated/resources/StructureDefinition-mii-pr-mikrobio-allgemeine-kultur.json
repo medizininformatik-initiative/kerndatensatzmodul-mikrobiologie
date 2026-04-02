@@ -20,18 +20,6 @@
   "name": "MII_PR_Mikrobio_Allgemeine_Kultur",
   "title": "MII PR Mikrobio Allgemeine Kultur",
   "status": "active",
-  "experimental": false,
-  "publisher": "Medizininformatik Initiative",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "https://www.medizininformatik-initiative.de"
-        }
-      ]
-    }
-  ],
   "description": "Allgemeine Kultur beschreibt das Ergebnis einer nicht zielgerichteten mikrobiologischen Kultur, die prüft, ob in der Probe irgendein Mikroorganismus wächst, ohne die Analyse auf einen vordefinierten Erreger zu beschränken.",
   "purpose": "Dieses Profil beschreibt die allgemeine Kulturdiagnostik ohne vordefiniertes Ziel.",
   "fhirVersion": "4.0.1",
@@ -98,14 +86,8 @@
         }
       },
       {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "max": "0"
-      },
-      {
         "id": "Observation.method",
         "path": "Observation.method",
-        "min": 1,
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed"
@@ -115,30 +97,6 @@
         "id": "Observation.specimen",
         "path": "Observation.specimen",
         "min": 1
-      },
-      {
-        "id": "Observation.hasMember",
-        "path": "Observation.hasMember",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit",
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse",
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse",
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "max": "0"
       }
     ]
   }

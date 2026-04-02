@@ -8,12 +8,12 @@ Description: "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resist
 * code from MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC (required)
 * value[x] only Quantity
 * valueQuantity
-  * value 1.. MS
-  * unit 1.. MS
-  * system 1.. MS
+  * value 1..
+  * unit 1..
+  * system 1..
   * system = "http://unitsofmeasure.org" (exactly)
-  * code 1.. MS
+  * code 1..
   * code from MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM (required)
-* interpretation 1.. MS
+* interpretation 1..
 * interpretation from MII_VS_Mikrobio_Susceptibility (extensible)
 * interpretation.extension contains MII_EX_Mikrobio_Empfindlichkeit_Norm named Norm 1..1 MS

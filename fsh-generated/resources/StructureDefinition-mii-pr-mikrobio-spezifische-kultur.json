@@ -20,18 +20,6 @@
   "name": "MII_PR_Mikrobio_Spezifische_Kultur",
   "title": "MII PR Mikrobio Spezifische Kultur",
   "status": "active",
-  "experimental": false,
-  "publisher": "Medizininformatik Initiative",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "https://www.medizininformatik-initiative.de"
-        }
-      ]
-    }
-  ],
   "description": "Spezifische Kultur beschreibt das Ergebnis einer zielgerichteten mikrobiologischen Kultur zum Nachweis eines vordefinierten Organismus oder einer Organismengruppe in einer Probe.",
   "purpose": "Dieses Profil beschreibt die spezifische Kulturdiagnostik eines vordefinierten Organismus.",
   "fhirVersion": "4.0.1",
@@ -94,14 +82,8 @@
         }
       },
       {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "max": "0"
-      },
-      {
         "id": "Observation.method",
         "path": "Observation.method",
-        "min": 1,
         "patternCodeableConcept": {
           "coding": [
             {
@@ -115,11 +97,6 @@
         "id": "Observation.specimen",
         "path": "Observation.specimen",
         "min": 1
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "max": "0"
       }
     ]
   }

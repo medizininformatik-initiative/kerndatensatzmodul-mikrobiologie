@@ -20,18 +20,6 @@
   "name": "MII_PR_Mikrobio_Titer",
   "title": "MII PR Mikrobio Titer",
   "status": "active",
-  "experimental": false,
-  "publisher": "Medizininformatik Initiative",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "https://www.medizininformatik-initiative.de"
-        }
-      ]
-    }
-  ],
   "description": "Titer beschreibt eine semiquantitative Messung aus seriellen Verdünnungsreihen, berichtet als Verhältnis (z. B. 1:160).",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -77,14 +65,8 @@
         ]
       },
       {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "max": "0"
-      },
-      {
         "id": "Observation.method",
         "path": "Observation.method",
-        "min": 1,
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-methode-snomed"
@@ -94,11 +76,6 @@
         "id": "Observation.specimen",
         "path": "Observation.specimen",
         "min": 1
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "max": "0"
       }
     ]
   }

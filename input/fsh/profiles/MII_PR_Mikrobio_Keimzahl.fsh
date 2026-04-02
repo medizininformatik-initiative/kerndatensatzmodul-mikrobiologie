@@ -7,13 +7,12 @@ Description: "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mik
 * ^purpose = "Dieses Profil beschreibt die Keimzahlbestimmung." 
 * code from MII_VS_Mikrobio_Keimzahl_LOINC (required)
 * value[x] only Quantity
-* valueQuantity MS
-  * value 1.. MS
-  * unit 1.. MS
-  * system 1.. MS
+* valueQuantity
+  * value 1..
+  * unit 1..
+  * system 1..
   * system = "http://unitsofmeasure.org" (exactly)
-  * code 1.. MS
+  * code 1..
   * code from MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM (required)
-* interpretation ..0
-* method 1.. MS
+* method MS
 * method = $sct#410681005 // Count of entities (property) (qualifier value)

@@ -7,12 +7,11 @@ Description: "Quantitative Antigen-/Antikörperantwort beschreibt die quantitati
 * code from MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC (extensible)
 * value[x] only Quantity
 * valueQuantity
-  * value 1.. MS
-  * unit 1.. MS
-  * system 1.. MS
+  * value 1..
+  * unit 1..
+  * system 1..
   * system = "http://unitsofmeasure.org" (exactly)
-  * code 1.. MS
+  * code 1..
   * code from MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM (extensible)
-* interpretation ..0
-* method 1.. MS
+* method MS
 * method from MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED (extensible)

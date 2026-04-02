@@ -7,8 +7,7 @@ Description: "Mikroskopie beschreibt die morphologische Beobachtung von Mikroorg
 * ^purpose = "Dieses Profil beschreibt mikroskopische Beobachtungen der Morphologie." 
 * code = $loinc#105059-0
 * value[x] only CodeableConcept
-* valueCodeableConcept 1.. MS
+* valueCodeableConcept 1..
 * valueCodeableConcept from MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED (required)
-* interpretation ..0
-* method 1.. MS
+* method MS
 * method from MII_VS_Mikrobio_Morphologie_Methode_SNOMED (required)

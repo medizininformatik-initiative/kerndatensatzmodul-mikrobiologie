@@ -20,18 +20,6 @@
   "name": "MII_PR_Mikrobio_MRE_Klasse",
   "title": "MII PR Mikrobio MRE Klasse",
   "status": "active",
-  "experimental": false,
-  "publisher": "Medizininformatik Initiative",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "url",
-          "value": "https://www.medizininformatik-initiative.de"
-        }
-      ]
-    }
-  ],
   "description": "MRE-Klasse beschreibt die Klassifikation multiresistenter Erreger in mikrobiologischen Befunden.",
   "purpose": "Dieses Profil beschreibt die MRE-Klasse.",
   "fhirVersion": "4.0.1",
@@ -98,19 +86,9 @@
         }
       },
       {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "max": "0"
-      },
-      {
         "id": "Observation.specimen",
         "path": "Observation.specimen",
         "min": 1
-      },
-      {
-        "id": "Observation.component",
-        "path": "Observation.component",
-        "max": "0"
       }
     ]
   }

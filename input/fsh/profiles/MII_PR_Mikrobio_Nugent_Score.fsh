@@ -6,14 +6,13 @@ Description: "Nugent-Score beschreibt ein Gramfärbungs-basiertes semiquantitati
 * insert MIKRO_OBSERVATION_COMMON
 * code = $loinc#101433-1
 * value[x] only Quantity
-* valueQuantity 1.. MS
-  * value 1.. MS
-  * unit 1.. MS
+* valueQuantity 1..
+  * value 1..
+  * unit 1..
   * unit = "1"
-  * system 1.. MS
+  * system 1..
   * system = "http://unitsofmeasure.org" (exactly)
-  * code 1.. MS
+  * code 1..
   * code = #1
-* interpretation ..0
-* method 1.. MS
+* method MS
 * method = $sct#702661004

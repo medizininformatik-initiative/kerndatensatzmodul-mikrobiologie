@@ -7,6 +7,5 @@ Description: "MRGN-Klasse beschreibt die Einstufung multiresistenter gramnegativ
 * ^purpose = "Dieses Profil beschreibt die MRGN-Klasse." 
 * code from MII_VS_Mikrobio_MRGN_Klasse_LOINC (required)
 * value[x] only CodeableConcept
-* valueCodeableConcept 1.. MS
+* valueCodeableConcept 1..
 * valueCodeableConcept from MII_VS_Mikrobio_MRGN_Klasse_LOINC (required)
-* interpretation ..0

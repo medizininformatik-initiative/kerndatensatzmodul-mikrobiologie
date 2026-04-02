@@ -6,8 +6,7 @@ Description: "Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorg
 * insert MIKRO_OBSERVATION_COMMON
 * code = $loinc#41852-5
 * value[x] only CodeableConcept
-* valueCodeableConcept 1.. MS
+* valueCodeableConcept 1..
 * valueCodeableConcept from MII_VS_Mikrobio_Organismen_SNOMEDCT (extensible)
-* interpretation ..0
-* method 1.. MS
+* method MS
 * method from MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED (extensible)
