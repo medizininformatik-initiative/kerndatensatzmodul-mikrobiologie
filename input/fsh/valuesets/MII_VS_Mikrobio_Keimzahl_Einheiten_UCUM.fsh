@@ -9,4 +9,4 @@ Title: "MII VS Mikrobio Keimzahl Einheiten [UCUM]"
 * $ucum#[arb'U]/mL
 * $ucum#/g
 * $ucum#/mL
-* $ucum#{#}
+* $ucum#1

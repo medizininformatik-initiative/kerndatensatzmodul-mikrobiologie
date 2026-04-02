@@ -8,5 +8,5 @@ Title: "MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]"
 * $ucum#ug/mL
 * $ucum#mg/L
 * $ucum#[arb'U]/mL
-* $ucum#{CFU}/mL
+* $ucum#1/mL
 * $ucum#mm

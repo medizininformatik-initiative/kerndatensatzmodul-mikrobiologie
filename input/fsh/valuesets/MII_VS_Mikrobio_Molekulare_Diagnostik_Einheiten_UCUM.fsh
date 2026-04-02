@@ -6,7 +6,7 @@ Title: "MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]"
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
 * $ucum#ng/mL
-* $ucum#{Copies}/mL
+* $ucum#1/mL
 * $ucum#[IU]/mL
 * $ucum#%
 * $ucum#/g
