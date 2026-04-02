@@ -1,8 +1,8 @@
 # Erweiterungsmodul Mikrobiologie (2026)
 
-| Hinweis | Warnung! |
-|---------|---------------------|
-| {{render:Warning.jpg}}  | Aufgrund eines Harmonisierungsprozesses zwischen dem RKI, MIO42 und MII ist für das Jahr 2026 eine neue Version des Mikrobiologie-Datenmodells mit grundlegenden Änderungen vorgesehen.|
+| Hinweis | Warnung!                                                                                                                                                                                                                                                                                                                                                                                               |
+|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| {{render:Warning.jpg}}  | Im Rahmen eines Harmonisierungsprozesses zwischen dem RKI, MIO42 und der MII wurde das Mikrobiologie-Datenmodell grundlegend überarbeitet. Die Abstimmungen wurden zusätzlich auf den europäischen Kontext (EHDS) ausgeweitet. Der vorliegende Alpha-Release bildet den aktuellen Stand der erzielten Abstimmungsergebnisse ab. Ein offiziell ballotiertes Release ist für Ende des Jahres vorgesehen. |
 
 Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz Moduls 'Mikrobiologie' der Medizininformatik-Initiative.
 Im Folgenden werden die Use-Case des Moduls sowie die dazuhegörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
