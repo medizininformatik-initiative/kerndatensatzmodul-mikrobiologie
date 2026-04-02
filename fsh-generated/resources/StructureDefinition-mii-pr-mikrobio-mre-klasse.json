@@ -43,19 +43,6 @@
   "differential": {
     "element": [
       {
-        "id": "Observation",
-        "path": "Observation",
-        "constraint": [
-          {
-            "key": "mii-lab-2",
-            "human": "Falls kein Laborwert verfügbar ist, muss eine dataAbsentReason angegeben werden",
-            "source": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse",
-            "severity": "error",
-            "expression": "value.exists().not() implies dataAbsentReason.exists()"
-          }
-        ]
-      },
-      {
         "id": "Observation.category.coding",
         "path": "Observation.category.coding",
         "min": 3
@@ -84,19 +71,6 @@
             }
           ]
         }
-      },
-      {
-        "id": "Observation.effective[x]",
-        "path": "Observation.effective[x]",
-        "constraint": [
-          {
-            "key": "mii-lab-1",
-            "human": "Datetime must be at least to day",
-            "source": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse",
-            "severity": "error",
-            "expression": "($this as dateTime).hasValue() implies ($this as dateTime).toString().length() >= 8"
-          }
-        ]
       },
       {
         "id": "Observation.value[x]",
