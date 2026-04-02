@@ -7,7 +7,6 @@ Description: "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines 
 * ^purpose = "Dieses Profil beschreibt die spezifische Bestimmung eines vordefinierten Targets." 
 * code from MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC (extensible)
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..
+* valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Detected_Not_Detected_SNOMED (required)
-* method MS
 * method from MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED (extensible)

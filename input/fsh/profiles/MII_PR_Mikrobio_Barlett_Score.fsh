@@ -6,7 +6,6 @@ Description: "Barlett-Score beschreibt die qualitative mikroskopische Beurteilun
 * insert MIKRO_OBSERVATION_COMMON
 * code = $loinc#75371-5
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..
+* valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Barlett_Score_LOINC (extensible)
-* method MS
 * method = $sct#702661004

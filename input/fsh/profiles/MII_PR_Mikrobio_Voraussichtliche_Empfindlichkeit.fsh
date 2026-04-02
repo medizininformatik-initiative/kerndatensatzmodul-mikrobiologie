@@ -7,5 +7,5 @@ Description: "Voraussichtliche Empfindlichkeit beschreibt eine aus genotypischen
 * ^purpose = "Dieses Profil beschreibt die voraussichtliche Empfindlichkeit." 
 * code from MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC (required)
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..
+* valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit_SNOMEDCT (required)

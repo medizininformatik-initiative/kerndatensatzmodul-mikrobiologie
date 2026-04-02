@@ -70,7 +70,6 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "min": 1,
         "type": [
           {
             "code": "Quantity"
@@ -81,7 +80,6 @@
         "id": "Observation.value[x]:valueQuantity",
         "path": "Observation.value[x]",
         "sliceName": "valueQuantity",
-        "min": 1,
         "type": [
           {
             "code": "Quantity"
@@ -101,7 +99,6 @@
       {
         "id": "Observation.interpretation",
         "path": "Observation.interpretation",
-        "min": 1,
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-ergebnis-snomed"

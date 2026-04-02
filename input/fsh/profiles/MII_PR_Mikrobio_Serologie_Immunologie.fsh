@@ -7,7 +7,6 @@ Description: "Serologie/Immunologie beschreibt den qualitativen Nachweis erreger
 * ^purpose = "Dieses Profil beschreibt qualitative serologische und immunologische Nachweise." 
 * code from MII_VS_Mikrobio_Antigen_Antikoerper_Tests_LOINC (extensible)
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..
+* valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Positiv_Negativ_SNOMED (required)
-* method MS
 * method from MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED (extensible)

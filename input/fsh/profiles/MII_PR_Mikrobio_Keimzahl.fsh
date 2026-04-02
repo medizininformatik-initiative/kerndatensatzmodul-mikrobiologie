@@ -8,11 +8,5 @@ Description: "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mik
 * code from MII_VS_Mikrobio_Keimzahl_LOINC (required)
 * value[x] only Quantity
 * valueQuantity
-  * value 1..
-  * unit 1..
-  * system 1..
-  * system = $ucum (exactly)
-  * code 1..
   * code from MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM (required)
-* method MS
 * method = $sct#410681005 // Count of entities (property) (qualifier value)
