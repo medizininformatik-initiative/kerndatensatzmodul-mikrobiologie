@@ -6,15 +6,6 @@
       "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
     ]
   },
-  "code": {
-    "coding": [
-      {
-        "code": "99780-9",
-        "system": "http://loinc.org",
-        "display": "Multidrug resistant gram-negative organism classification [Type]"
-      }
-    ]
-  },
   "identifier": [
     {
       "type": {
@@ -26,7 +17,7 @@
         ]
       },
       "system": "https://example.org/fhir/sid/test-lab-results",
-      "value": "59826-8_1234567890",
+      "value": "mrgn-1",
       "assigner": {
         "identifier": {
           "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
@@ -39,14 +30,12 @@
     {
       "coding": [
         {
-          "code": "26436-6",
           "system": "http://loinc.org",
-          "display": "Laboruntersuchungen"
+          "code": "26436-6"
         },
         {
-          "code": "laboratory",
           "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "display": "Laboratory"
+          "code": "laboratory"
         },
         {
           "code": "18725-2",
@@ -57,21 +46,27 @@
     }
   ],
   "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "89456-8",
+        "system": "http://loinc.org"
+      }
+    ]
+  },
   "subject": {
     "reference": "Patient/example"
   },
-  "effectiveDateTime": "2018-11-20T11:05:00+00:00",
+  "effectiveDateTime": "2026-04-02T10:00:00+01:00",
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "LA33215-7",
-        "system": "http://loinc.org",
-        "display": "3MRGN"
+        "code": "LA9628-2",
+        "system": "http://loinc.org"
       }
     ]
   },
   "specimen": {
-    "reference": "Specimen/isolate",
-    "display": "Microbial isolate specimen 2"
+    "reference": "Specimen/example"
   }
 }

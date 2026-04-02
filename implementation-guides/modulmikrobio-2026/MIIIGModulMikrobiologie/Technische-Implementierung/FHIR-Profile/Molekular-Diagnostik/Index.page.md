@@ -1,3 +1,3 @@
 ## {{page-title}}
 
-In diesem Abschnitt wird der Nachweis eines Mikroorganismus mittels einer molekularen Methode beschrieben.
+In diesem Abschnitt werden molekulare Beobachtungen (spezifische Bestimmung, CT-Wert, Pathogenlast) beschrieben.

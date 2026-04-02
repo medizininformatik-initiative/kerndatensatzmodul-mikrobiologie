@@ -1,0 +1,149 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "mii-pr-mikrobio-antigen-antikoerper-quantitativ",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/spdx-license",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ",
+  "version": "2026.0.0-alpha.1",
+  "name": "MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ",
+  "title": "MII PR Mikrobio Antigen Antikoerper Quantitativ",
+  "status": "active",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "description": "Quantitative Antigen-/Antikörperantwort beschreibt die quantitative Messung erregerspezifischer Antigene oder Antikörper in einer Probe, bestimmt mittels immunologischer Verfahren.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "constraint": [
+          {
+            "key": "mii-lab-2",
+            "human": "Falls kein Laborwert verfügbar ist, muss eine dataAbsentReason angegeben werden",
+            "source": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ",
+            "severity": "error",
+            "expression": "value.exists().not() implies dataAbsentReason.exists()"
+          }
+        ]
+      },
+      {
+        "id": "Observation.category.coding",
+        "path": "Observation.category.coding",
+        "min": 3
+      },
+      {
+        "id": "Observation.category.coding:loinc-microbiology-studies",
+        "path": "Observation.category.coding",
+        "sliceName": "loinc-microbiology-studies",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "18725-2",
+          "system": "http://loinc.org",
+          "display": "Mikrobiologie"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"
+        }
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "constraint": [
+          {
+            "key": "mii-lab-1",
+            "human": "Datetime must be at least to day",
+            "source": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ",
+            "severity": "error",
+            "expression": "($this as dateTime).hasValue() implies ($this as dateTime).toString().length() >= 8"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity",
+        "path": "Observation.value[x]",
+        "sliceName": "valueQuantity",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity.code",
+        "path": "Observation.value[x].code",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"
+        }
+      },
+      {
+        "id": "Observation.interpretation",
+        "path": "Observation.interpretation",
+        "max": "0"
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "min": 1,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-methode-snomed"
+        }
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 1
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "max": "0"
+      }
+    ]
+  }
+}

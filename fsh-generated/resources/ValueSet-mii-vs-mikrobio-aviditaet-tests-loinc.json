@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Aviditaet_Tests_LOINC",
+  "id": "mii-vs-mikrobio-aviditaet-tests-loinc",
+  "title": "MII VS Mikrobio Aviditaet Tests [LOINC]",
+  "version": "2026.0.0-alpha.1",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "52984-2",
+            "display": "Cytomegalovirus Ab.IgG avidity"
+          },
+          {
+            "code": "81119-0",
+            "display": "Epstein Barr virus capsid Ab.IgG avidity"
+          },
+          {
+            "code": "104428-8",
+            "display": "Measles virus Ab.IgG avidity"
+          },
+          {
+            "code": "52986-7",
+            "display": "Rubella virus Ab.IgG avidity"
+          },
+          {
+            "code": "56990-5",
+            "display": "Toxoplasma gondii Ab.IgG avidity"
+          }
+        ]
+      }
+    ]
+  }
+}

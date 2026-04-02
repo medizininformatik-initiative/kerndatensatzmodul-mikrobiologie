@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED",
+  "id": "mii-vs-mikrobio-antigen-antikoerper-methode-snomed",
+  "title": "MII VS Mikrobio Antigen Antikoerper Methode [SNOMED]",
+  "version": "2026.0.0-alpha.1",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-methode-snomed",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "708104000",
+            "display": "Agglutination technique (qualifier value)"
+          },
+          {
+            "code": "726449005",
+            "display": "Immunoassay technique (qualifier value)"
+          },
+          {
+            "code": "703444002",
+            "display": "Fluorescent immunoassay (qualifier value)"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-mikrobio-resistenzmechanismen-determinanten",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "OBI"
+          }
+        ]
+      },
+      "system": "https://example.org/fhir/sid/test-lab-results",
+      "value": "res-mech-1",
+      "assigner": {
+        "identifier": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
+          "value": "DIZ-ID"
+        }
+      }
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "26436-6"
+        },
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory"
+        },
+        {
+          "code": "18725-2",
+          "system": "http://loinc.org",
+          "display": "Mikrobiologie"
+        }
+      ]
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "92249-2",
+        "system": "http://loinc.org"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2026-04-02T10:00:00+01:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "260373001",
+        "system": "http://snomed.info/sct",
+        "display": "Detected (qualifier value)"
+      }
+    ]
+  },
+  "method": {
+    "coding": [
+      {
+        "code": "258066000",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/example"
+  }
+}

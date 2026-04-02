@@ -17,7 +17,7 @@
         ]
       },
       "system": "https://example.org/fhir/sid/test-lab-results",
-      "value": "59826-8_1234567890",
+      "value": "v-empf-1",
       "assigner": {
         "identifier": {
           "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
@@ -30,14 +30,12 @@
     {
       "coding": [
         {
-          "code": "26436-6",
           "system": "http://loinc.org",
-          "display": "Laboruntersuchungen"
+          "code": "26436-6"
         },
         {
-          "code": "laboratory",
           "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "display": "Laboratory"
+          "code": "laboratory"
         },
         {
           "code": "18725-2",
@@ -51,27 +49,25 @@
   "code": {
     "coding": [
       {
-        "code": "73574-6",
-        "system": "http://loinc.org",
-        "display": "Acyclovir [Susceptibility] by Genotype method"
+        "code": "98853-2",
+        "system": "http://loinc.org"
       }
     ]
   },
   "subject": {
     "reference": "Patient/example"
   },
-  "effectiveDateTime": "2018-11-20T11:05:00+00:00",
+  "effectiveDateTime": "2026-04-02T10:00:00+01:00",
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "131196009",
+        "code": "703853009",
         "system": "http://snomed.info/sct",
-        "display": "Susceptible (qualifier value)"
+        "display": "Susceptible"
       }
     ]
   },
   "specimen": {
-    "reference": "Specimen/isolate",
-    "display": "Microbial isolate specimen 2"
+    "reference": "Specimen/example"
   }
 }

@@ -4,7 +4,7 @@
   "name": "MII_VS_Mikrobio_Keimzahl_LOINC",
   "id": "mii-vs-mikrobio-keimzahl-loinc",
   "title": "MII VS Mikrobio Keimzahl [LOINC]",
-  "version": "2026.0.0",
+  "version": "2026.0.0-alpha.1",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-loinc",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -18,7 +18,6 @@
       ]
     }
   ],
-  "date": "2023-03-02T00:00:00Z",
   "compose": {
     "include": [
       {
@@ -30,19 +29,11 @@
           },
           {
             "code": "564-5",
-            "display": "Colony count [#] in Unspecified specimen by Visual count"
+            "display": "Colony count [#] in Specimen by Visual count"
           },
           {
             "code": "38436-2",
-            "display": "Colony count [#/mass] in Unspecified specimen by Visual count"
-          },
-          {
-            "code": "20774-6",
-            "display": "Colony count [Units/volume] in Unspecified specimen by Visual count"
-          },
-          {
-            "code": "699-9",
-            "display": "Organism count /volume in Specimen by Microscopic count"
+            "display": "Colony count [#/mass] in Specimen by Visual count"
           }
         ]
       }

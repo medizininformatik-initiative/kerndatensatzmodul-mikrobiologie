@@ -1,0 +1,175 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC",
+  "id": "mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc",
+  "title": "MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]",
+  "version": "2026.0.0-alpha.1",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7753-9"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7735-6"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6464-4"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7753-9"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7735-6"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6404-0"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7753-9"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7735-6"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6462-8"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7753-9"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7735-6"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6463-6"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7753-9"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7735-6"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP208998-7"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      }
+    ]
+  }
+}

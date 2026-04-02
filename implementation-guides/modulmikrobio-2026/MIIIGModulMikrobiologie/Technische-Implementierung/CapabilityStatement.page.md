@@ -6,6 +6,6 @@ Nachfolgend wird aufgelistet weleche Inhalte verpflichtend im CapabilityStatemen
 
 Canonical: ```https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata```
 
-[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.mikrobiologie@1.0.0-ballot)
+[Link Simplifier Profil Übersicht](https://simplifier.net/resolve?canonical=https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata&fhirVersion=R4&scope=de.medizininformatikinitiative.kerndatensatz.mikrobiologie@2026.0.0-alpha.1)
 
 {{render:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata}}

@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC",
+  "id": "mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc",
+  "title": "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]",
+  "version": "2026.0.0-alpha.1",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "PROPERTY",
+            "op": "=",
+            "value": "LP217195-9"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "ABXBACT"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      }
+    ]
+  }
+}

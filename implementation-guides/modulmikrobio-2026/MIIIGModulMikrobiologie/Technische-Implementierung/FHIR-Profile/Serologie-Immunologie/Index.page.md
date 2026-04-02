@@ -1,3 +1,3 @@
 ## {{page-title}}
 
-In diesem Abschnitt wird der Nachweis eines Mikroorganismus durch serologische oder immunologische Untersuchungen beschrieben
+In diesem Abschnitt werden qualitative und quantitative serologische/immunologische Beobachtungen beschrieben.

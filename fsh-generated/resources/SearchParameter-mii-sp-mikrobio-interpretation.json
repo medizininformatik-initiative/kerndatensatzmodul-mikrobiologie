@@ -1,8 +1,8 @@
 {
   "resourceType": "SearchParameter",
   "id": "mii-sp-mikrobio-interpretation",
-  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation",
-  "version": "2026.0.0",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-norm-kategorie",
+  "version": "2026.0.0-alpha.1",
   "publisher": "Medizininformatik Initiative",
   "contact": [
     {
@@ -14,15 +14,15 @@
       ]
     }
   ],
-  "name": "MII_SP_Mikrobio_Interpretation",
+  "name": "MII_SP_Mikrobio_NormKategorie",
   "status": "active",
   "experimental": false,
-  "date": "2022-02-21",
-  "description": "Suchparameter für Observation.interpretation",
-  "code": "interpretation",
+  "date": "2026-04-02",
+  "description": "Suchparameter für die Normkategorie der Empfindlichkeitsextension",
+  "code": "norm-kategorie",
   "base": [
     "Observation"
   ],
   "type": "token",
-  "expression": "Observation.interpretation"
+  "expression": "Observation.interpretation.extension('https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm').value.ofType(CodeableConcept)"
 }

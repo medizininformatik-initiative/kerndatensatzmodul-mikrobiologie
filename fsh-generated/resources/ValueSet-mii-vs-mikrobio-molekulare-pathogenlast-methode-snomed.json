@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED",
+  "id": "mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed",
+  "title": "MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]",
+  "version": "2026.0.0-alpha.1",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "70601000052104",
+            "display": "Real-time polymerase chain reaction technique"
+          },
+          {
+            "code": "1303992007",
+            "display": "Digital polymerase chain reaction technique"
+          },
+          {
+            "code": "1304048000",
+            "display": "Transcription mediated amplification technique"
+          }
+        ]
+      }
+    ]
+  }
+}

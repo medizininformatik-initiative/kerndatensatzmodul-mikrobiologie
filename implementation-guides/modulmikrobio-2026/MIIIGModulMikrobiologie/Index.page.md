@@ -9,8 +9,8 @@ Im Folgenden werden die Use-Case des Moduls sowie die dazuhegörigen FHIR-Profil
 
 | Veröffentlichung   |   |
 |---------|--------------|
-| Datum   | 09.12.2025   |
-| Version | 2026.0.0     |
+| Datum   | 02.04.2026   |
+| Version | 2026.0.0-alpha.1 |
 | Status  | active       |
 | Realm   | DE           | 
 
@@ -61,4 +61,3 @@ Einige verwendete Codesysteme werden von anderen Organisationen herausgegeben un
 * Obwohl diese Publikation mit größter Sorgfalt erstellt wurde, können die Autoren keinerlei Haftung für direkten oder indirekten Schaden übernehmen, der durch den Inhalt dieser Spezifikation entstehen könnte.
 
 <br><br>
-

@@ -1,8 +1,22 @@
 {
   "resourceType": "StructureDefinition",
   "id": "mii-pr-mikrobio-keimzahl",
+  "extension": [
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/spdx-license",
+            "code": "CC-BY-4.0",
+            "display": "Creative Commons Attribution 4.0 International"
+          }
+        ]
+      }
+    }
+  ],
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",
-  "version": "2026.0.0",
+  "version": "2026.0.0-alpha.1",
   "name": "MII_PR_Mikrobio_Keimzahl",
   "title": "MII PR Mikrobio Keimzahl",
   "status": "active",
@@ -18,13 +32,13 @@
       ]
     }
   ],
-  "description": "This profile describes a colony count test in miobiology.",
-  "purpose": "Dieses Profil beschreibt ein Keimzahl Test der Medizininformatik-Initiative.",
+  "description": "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten pro Volumen oder Masse.",
+  "purpose": "Dieses Profil beschreibt die Keimzahlbestimmung.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "baseDefinition": "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -42,166 +56,9 @@
         ]
       },
       {
-        "id": "Observation.id",
-        "path": "Observation.id",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.meta",
-        "path": "Observation.meta",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.meta.source",
-        "path": "Observation.meta.source",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.meta.profile",
-        "path": "Observation.meta.profile",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.identifier",
-        "path": "Observation.identifier",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "type"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.identifier:analyseBefundCode",
-        "path": "Observation.identifier",
-        "sliceName": "analyseBefundCode",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.identifier:analyseBefundCode.type",
-        "path": "Observation.identifier.type",
-        "min": 1,
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "OBI",
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-            }
-          ]
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.identifier:analyseBefundCode.type.coding",
-        "path": "Observation.identifier.type.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "system"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.identifier:analyseBefundCode.type.coding:observationInstanceV2",
-        "path": "Observation.identifier.type.coding",
-        "sliceName": "observationInstanceV2",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.identifier:analyseBefundCode.type.coding:observationInstanceV2.system",
-        "path": "Observation.identifier.type.coding.system",
-        "min": 1,
-        "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0203",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.identifier:analyseBefundCode.type.coding:observationInstanceV2.code",
-        "path": "Observation.identifier.type.coding.code",
-        "min": 1,
-        "fixedCode": "OBI",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.identifier:analyseBefundCode.system",
-        "path": "Observation.identifier.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.identifier:analyseBefundCode.value",
-        "path": "Observation.identifier.value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.identifier:analyseBefundCode.assigner",
-        "path": "Observation.identifier.assigner",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.status",
-        "path": "Observation.status",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category",
-        "path": "Observation.category",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "Observation.category.coding",
         "path": "Observation.category.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "min": 3,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category.coding:loinc-observation",
-        "path": "Observation.category.coding",
-        "sliceName": "loinc-observation",
-        "min": 1,
-        "max": "1",
-        "patternCoding": {
-          "code": "26436-6",
-          "system": "http://loinc.org"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.category.coding:observation-category",
-        "path": "Observation.category.coding",
-        "sliceName": "observation-category",
-        "min": 1,
-        "max": "1",
-        "patternCoding": {
-          "code": "laboratory",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
-        },
-        "mustSupport": true
+        "min": 3
       },
       {
         "id": "Observation.category.coding:loinc-microbiology-studies",
@@ -211,39 +68,22 @@
         "max": "1",
         "patternCoding": {
           "code": "18725-2",
-          "system": "http://loinc.org"
+          "system": "http://loinc.org",
+          "display": "Mikrobiologie"
         },
         "mustSupport": true
       },
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-loinc"
         }
       },
       {
-        "id": "Observation.subject",
-        "path": "Observation.subject",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.encounter",
-        "path": "Observation.encounter",
-        "mustSupport": true
-      },
-      {
         "id": "Observation.effective[x]",
         "path": "Observation.effective[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
         "constraint": [
           {
             "key": "mii-lab-1",
@@ -252,175 +92,62 @@
             "severity": "error",
             "expression": "($this as dateTime).hasValue() implies ($this as dateTime).toString().length() >= 8"
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.effective[x].extension:QuelleKlinischesBezugsdatum",
-        "path": "Observation.effective[x].extension",
-        "sliceName": "QuelleKlinischesBezugsdatum",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.issued",
-        "path": "Observation.issued",
-        "mustSupport": true
+        ]
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "type": [
           {
             "code": "Quantity"
-          },
-          {
-            "code": "CodeableConcept"
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Observation.value[x]:valueQuantity",
         "path": "Observation.value[x]",
         "sliceName": "valueQuantity",
-        "short": "Quantiatives Ergebnis",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Quantity"
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x]:valueQuantity.value",
-        "path": "Observation.value[x].value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x]:valueQuantity.unit",
-        "path": "Observation.value[x].unit",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.value[x]:valueQuantity.system",
-        "path": "Observation.value[x].system",
-        "min": 1,
-        "fixedUri": "http://unitsofmeasure.org",
-        "mustSupport": true
+        ]
       },
       {
         "id": "Observation.value[x]:valueQuantity.code",
         "path": "Observation.value[x].code",
-        "comment": "The mandatory system is UCUM.",
-        "min": 1,
-        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"
         }
       },
       {
-        "id": "Observation.value[x]:valueCodeableConcept",
-        "path": "Observation.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Laborergebnis-semiquantitativ",
-          "description": "Häufigkeit"
-        }
-      },
-      {
-        "id": "Observation.dataAbsentReason",
-        "path": "Observation.dataAbsentReason",
-        "mustSupport": true
-      },
-      {
         "id": "Observation.interpretation",
         "path": "Observation.interpretation",
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.note",
-        "path": "Observation.note",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.bodySite",
-        "path": "Observation.bodySite",
         "max": "0"
       },
       {
         "id": "Observation.method",
         "path": "Observation.method",
-        "mustSupport": true
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "410681005",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
       },
       {
         "id": "Observation.specimen",
         "path": "Observation.specimen",
-        "min": 1,
-        "mustSupport": true
+        "min": 1
       },
       {
-        "id": "Observation.specimen.reference",
-        "path": "Observation.specimen.reference",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.specimen.identifier",
-        "path": "Observation.specimen.identifier",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.device",
-        "path": "Observation.device",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.referenceRange",
-        "path": "Observation.referenceRange",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component.value[x]",
-        "path": "Observation.component.value[x]",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "max": "0"
       }
     ]
   }

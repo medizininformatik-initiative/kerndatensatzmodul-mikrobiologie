@@ -1,0 +1,250 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Antigen_Antikoerper_Tests_LOINC",
+  "id": "mii-vs-mikrobio-antigen-antikoerper-tests-loinc",
+  "title": "MII VS Mikrobio Antigen Antikoerper Tests [LOINC]",
+  "version": "2026.0.0-alpha.1",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-tests-loinc",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP217197-5"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6106-1"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6274-7"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP28800-8"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6304-2"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6320-8"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6323-2"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6360-4"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6416-4"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "MICRO"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      }
+    ]
+  }
+}
