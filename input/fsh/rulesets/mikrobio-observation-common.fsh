@@ -1,7 +1,6 @@
 RuleSet: MIKRO_OBSERVATION_COMMON
 * insert PR_CS_VS_Version
 * insert Publisher
-* obeys mii-lab-2
 * id MS
 * meta MS
   * source MS
@@ -17,7 +16,6 @@ RuleSet: MIKRO_OBSERVATION_COMMON
 * encounter MS
 * effective[x] 1.. MS
 * effective[x] only dateTime
-  * obeys mii-lab-1
 * issued MS
 * value[x] MS
 * dataAbsentReason MS
