@@ -6,7 +6,7 @@ expand: 1
 ---
 ## {{link}}
 
-Dieses Profil bildet das Ergebnis einer einzelnen mikrobiologischen Untersuchung als Observation ab.
+Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung eines Erregers gegenüber antimikrobiellen Substanzen unter Bezug auf ein Normsystem.
 
 ### Metadaten
 

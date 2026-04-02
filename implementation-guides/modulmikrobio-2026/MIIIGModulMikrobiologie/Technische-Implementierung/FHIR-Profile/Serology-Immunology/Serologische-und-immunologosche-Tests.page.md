@@ -6,7 +6,7 @@ expand: 1
 ---
 ## {{link}}
 
-Dieses Profil bildet das Ergebnis einer einzelnen mikrobiologischen Untersuchung als Observation ab.
+Serologie/Immunologie beschreibt den qualitativen Nachweis erregerspezifischer Antigene oder Antikörper in einer Probe.
 
 ### Metadaten
 

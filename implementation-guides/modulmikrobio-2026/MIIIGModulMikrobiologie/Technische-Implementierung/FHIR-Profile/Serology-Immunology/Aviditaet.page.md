@@ -6,7 +6,7 @@ expand: 1
 ---
 ## {{link}}
 
-Dieses Profil bildet das Ergebnis einer einzelnen mikrobiologischen Untersuchung als Observation ab.
+Avidität beschreibt die qualitative Beurteilung der Bindungsstärke von Antikörpern an ein spezifisches Antigen, typischerweise zur Unterscheidung frischer von zurückliegenden Infektionen.
 
 ### Metadaten
 

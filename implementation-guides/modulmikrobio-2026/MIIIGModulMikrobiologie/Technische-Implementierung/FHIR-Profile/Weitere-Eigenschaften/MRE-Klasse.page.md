@@ -6,7 +6,7 @@ expand: 1
 ---
 ## {{link}}
 
-Dieses Profil bildet das Ergebnis einer einzelnen mikrobiologischen Untersuchung als Observation ab.
+MRE-Klasse beschreibt die Klassifikation multiresistenter Erreger in mikrobiologischen Befunden.
 
 ### Metadaten
 

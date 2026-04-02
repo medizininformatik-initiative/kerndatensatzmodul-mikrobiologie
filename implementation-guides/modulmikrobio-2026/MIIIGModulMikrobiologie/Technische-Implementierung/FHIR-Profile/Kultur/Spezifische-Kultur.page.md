@@ -6,7 +6,7 @@ expand: 1
 ---
 ## {{link}}
 
-Dieses Profil bildet das Ergebnis einer einzelnen mikrobiologischen Untersuchung als Observation ab.
+Spezifische Kultur beschreibt das Ergebnis einer zielgerichteten mikrobiologischen Kultur zum Nachweis eines vordefinierten Organismus oder einer Organismengruppe in einer Probe.
 
 ### Metadaten
 
