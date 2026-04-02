@@ -60,58 +60,6 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.AllgemeineBestimmung",
-        "path": "mii-lm-mikrobio-logical-model.AllgemeineBestimmung",
-        "short": "Allgemeine Bestimmung",
-        "definition": "Allgemeine Bestimmung",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation"
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.SpezifischeBestimmung",
-        "path": "mii-lm-mikrobio-logical-model.SpezifischeBestimmung",
-        "short": "Spezifische Bestimmung",
-        "definition": "Spezifische Bestimmung",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation"
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.MolekularePathogenlast",
-        "path": "mii-lm-mikrobio-logical-model.MolekularePathogenlast",
-        "short": "Molekulare Pathogenlast",
-        "definition": "Molekulare Pathogenlast",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation"
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.CtWert",
-        "path": "mii-lm-mikrobio-logical-model.CtWert",
-        "short": "CT-Wert",
-        "definition": "CT-Wert",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation"
-          }
-        ]
-      },
-      {
         "id": "mii-lm-mikrobio-logical-model.Keimzahl",
         "path": "mii-lm-mikrobio-logical-model.Keimzahl",
         "short": "Keimzahl",
@@ -125,10 +73,10 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.Empfindlichkeit",
-        "path": "mii-lm-mikrobio-logical-model.Empfindlichkeit",
-        "short": "Empfindlichkeit",
-        "definition": "Empfindlichkeit",
+        "id": "mii-lm-mikrobio-logical-model.Mikroskopie",
+        "path": "mii-lm-mikrobio-logical-model.Mikroskopie",
+        "short": "Mikroskopie",
+        "definition": "Mikroskopie",
         "min": 0,
         "max": "*",
         "type": [
@@ -138,10 +86,10 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-logical-model.Mikroskopie",
-        "path": "mii-lm-mikrobio-logical-model.Mikroskopie",
-        "short": "Mikroskopie",
-        "definition": "Mikroskopie",
+        "id": "mii-lm-mikrobio-logical-model.Empfindlichkeit",
+        "path": "mii-lm-mikrobio-logical-model.Empfindlichkeit",
+        "short": "Empfindlichkeit",
+        "definition": "Empfindlichkeit",
         "min": 0,
         "max": "*",
         "type": [
@@ -168,6 +116,123 @@
         "path": "mii-lm-mikrobio-logical-model.BarlettScore",
         "short": "Barlett Score",
         "definition": "Barlett Score",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.AllgemeineBestimmung",
+        "path": "mii-lm-mikrobio-logical-model.AllgemeineBestimmung",
+        "short": "Allgemeine Bestimmung",
+        "definition": "Allgemeine Bestimmung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.SpezifischeBestimmung",
+        "path": "mii-lm-mikrobio-logical-model.SpezifischeBestimmung",
+        "short": "Spezifische Bestimmung",
+        "definition": "Spezifische Bestimmung",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.CtWert",
+        "path": "mii-lm-mikrobio-logical-model.CtWert",
+        "short": "CT-Wert",
+        "definition": "CT-Wert",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.MolekularePathogenlast",
+        "path": "mii-lm-mikrobio-logical-model.MolekularePathogenlast",
+        "short": "Molekulare Pathogenlast",
+        "definition": "Molekulare Pathogenlast",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.VoraussichtlicheEmpfindlichkeit",
+        "path": "mii-lm-mikrobio-logical-model.VoraussichtlicheEmpfindlichkeit",
+        "short": "Voraussichtliche Empfindlichkeit",
+        "definition": "Voraussichtliche Empfindlichkeit",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Virulenzfaktor",
+        "path": "mii-lm-mikrobio-logical-model.Virulenzfaktor",
+        "short": "Virulenzfaktor",
+        "definition": "Virulenzfaktor",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.ResistenzmechanismenDeterminanten",
+        "path": "mii-lm-mikrobio-logical-model.ResistenzmechanismenDeterminanten",
+        "short": "Resistenzmechanismen/Determinanten",
+        "definition": "Resistenzmechanismen/Determinanten",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.MRGNKlasse",
+        "path": "mii-lm-mikrobio-logical-model.MRGNKlasse",
+        "short": "MRGN Klasse",
+        "definition": "MRGN Klasse",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.MREKlasse",
+        "path": "mii-lm-mikrobio-logical-model.MREKlasse",
+        "short": "MRE Klasse",
+        "definition": "MRE Klasse",
         "min": 0,
         "max": "*",
         "type": [
@@ -220,71 +285,6 @@
         "path": "mii-lm-mikrobio-logical-model.Titer",
         "short": "Titer",
         "definition": "Titer",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation"
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.ResistenzmechanismenDeterminanten",
-        "path": "mii-lm-mikrobio-logical-model.ResistenzmechanismenDeterminanten",
-        "short": "Resistenzmechanismen/Determinanten",
-        "definition": "Resistenzmechanismen/Determinanten",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation"
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.Virulenzfaktor",
-        "path": "mii-lm-mikrobio-logical-model.Virulenzfaktor",
-        "short": "Virulenzfaktor",
-        "definition": "Virulenzfaktor",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation"
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.VoraussichtlicheEmpfindlichkeit",
-        "path": "mii-lm-mikrobio-logical-model.VoraussichtlicheEmpfindlichkeit",
-        "short": "Voraussichtliche Empfindlichkeit",
-        "definition": "Voraussichtliche Empfindlichkeit",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation"
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.MREKlasse",
-        "path": "mii-lm-mikrobio-logical-model.MREKlasse",
-        "short": "MRE Klasse",
-        "definition": "MRE Klasse",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation"
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.MRGNKlasse",
-        "path": "mii-lm-mikrobio-logical-model.MRGNKlasse",
-        "short": "MRGN Klasse",
-        "definition": "MRGN Klasse",
         "min": 0,
         "max": "*",
         "type": [
