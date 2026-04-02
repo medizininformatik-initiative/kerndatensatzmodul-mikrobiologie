@@ -31,28 +31,6 @@ select
 
 </br>
 
-### Constraints/Invarianten
-<fql headers="true">
-from StructureDefinition where url = %canonical for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
-</fql>
-
-### RestFul API
-
-<tabs>
-    <tab title="Interaktionen">
-        {{page:FQL-Capability-REST}}
-    </tab>
-    <tab title="Suchparameter">
-        {{page:FQL-Capability-Search}}
-    </tab>
-    <tab title="Operationen">
-        {{page:FQL-Capability-Operations}}
-    </tab>
-    <tab title="Link">
-        {{link:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata}}
-    </tab>
-</tabs>
-
 ### Beispiele
 
 Beispiel (minimal):
