@@ -12,6 +12,6 @@ Usage: #example
 * code = $loinc#11475-1
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
-* valueCodeableConcept = $sct#10828004 "Positive"
+* valueCodeableConcept = $sct#10828004 "Positive (qualifier value)"
 * method = $sct#703750006
 * specimen.reference = "Specimen/example"

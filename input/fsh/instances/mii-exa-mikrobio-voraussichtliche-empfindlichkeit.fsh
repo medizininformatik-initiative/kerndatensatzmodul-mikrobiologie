@@ -12,5 +12,5 @@ Usage: #example
 * code = $loinc#89489-9
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
-* valueCodeableConcept = $sct#131196009 "Susceptible"
+* valueCodeableConcept = $sct#131196009 "Susceptible (qualifier value)"
 * specimen.reference = "Specimen/example"

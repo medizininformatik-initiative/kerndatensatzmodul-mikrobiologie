@@ -12,6 +12,6 @@ Usage: #example
 * code = $loinc#105059-0
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
-* valueCodeableConcept = $sct#70003006 "Gram-positive cocci in clusters"
+* valueCodeableConcept = $sct#70003006 "Gram-positive cocci in clusters (finding)"
 * method = $sct#278289002
 * specimen.reference = "Specimen/example"

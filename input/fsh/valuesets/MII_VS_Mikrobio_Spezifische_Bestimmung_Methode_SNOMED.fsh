@@ -4,7 +4,7 @@ Title: "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
-* $sct#258066000 "Polymerase chain reaction technique (qualifier value) "
+* $sct#258066000 "Polymerase chain reaction technique (qualifier value)"
 * $sct#1303992007 "Digital polymerase chain reaction technique (qualifier value)"
 * $sct#70601000052104 "Real-time polymerase chain reaction technique (qualifier value)"
 * $sct#1303998006 "Multiplex polymerase chain reaction technique (qualifier value)"
