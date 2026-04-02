@@ -13,7 +13,7 @@ Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
 * ^compose.include[=].filter[1].value = "LP217197-5"
 * ^compose.include[=].filter[2].property = #CLASS
 * ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "MICRO"
+* ^compose.include[=].filter[2].value = "LP7819-8"
 * ^compose.include[=].filter[3].property = #STATUS
 * ^compose.include[=].filter[3].op = #=
 * ^compose.include[=].filter[3].value = "ACTIVE"
@@ -26,7 +26,7 @@ Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
 * ^compose.include[=].filter[1].value = "LP6106-1"
 * ^compose.include[=].filter[2].property = #CLASS
 * ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "MICRO"
+* ^compose.include[=].filter[2].value = "LP7819-8"
 * ^compose.include[=].filter[3].property = #STATUS
 * ^compose.include[=].filter[3].op = #=
 * ^compose.include[=].filter[3].value = "ACTIVE"
@@ -39,7 +39,7 @@ Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
 * ^compose.include[=].filter[1].value = "LP6274-7"
 * ^compose.include[=].filter[2].property = #CLASS
 * ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "MICRO"
+* ^compose.include[=].filter[2].value = "LP7819-8"
 * ^compose.include[=].filter[3].property = #STATUS
 * ^compose.include[=].filter[3].op = #=
 * ^compose.include[=].filter[3].value = "ACTIVE"
@@ -52,7 +52,7 @@ Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
 * ^compose.include[=].filter[1].value = "LP28800-8"
 * ^compose.include[=].filter[2].property = #CLASS
 * ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "MICRO"
+* ^compose.include[=].filter[2].value = "LP7819-8"
 * ^compose.include[=].filter[3].property = #STATUS
 * ^compose.include[=].filter[3].op = #=
 * ^compose.include[=].filter[3].value = "ACTIVE"
@@ -65,7 +65,7 @@ Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
 * ^compose.include[=].filter[1].value = "LP6304-2"
 * ^compose.include[=].filter[2].property = #CLASS
 * ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "MICRO"
+* ^compose.include[=].filter[2].value = "LP7819-8"
 * ^compose.include[=].filter[3].property = #STATUS
 * ^compose.include[=].filter[3].op = #=
 * ^compose.include[=].filter[3].value = "ACTIVE"
@@ -78,7 +78,7 @@ Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
 * ^compose.include[=].filter[1].value = "LP6320-8"
 * ^compose.include[=].filter[2].property = #CLASS
 * ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "MICRO"
+* ^compose.include[=].filter[2].value = "LP7819-8"
 * ^compose.include[=].filter[3].property = #STATUS
 * ^compose.include[=].filter[3].op = #=
 * ^compose.include[=].filter[3].value = "ACTIVE"
@@ -91,7 +91,7 @@ Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
 * ^compose.include[=].filter[1].value = "LP6323-2"
 * ^compose.include[=].filter[2].property = #CLASS
 * ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "MICRO"
+* ^compose.include[=].filter[2].value = "LP7819-8"
 * ^compose.include[=].filter[3].property = #STATUS
 * ^compose.include[=].filter[3].op = #=
 * ^compose.include[=].filter[3].value = "ACTIVE"
@@ -104,7 +104,7 @@ Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
 * ^compose.include[=].filter[1].value = "LP6360-4"
 * ^compose.include[=].filter[2].property = #CLASS
 * ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "MICRO"
+* ^compose.include[=].filter[2].value = "LP7819-8"
 * ^compose.include[=].filter[3].property = #STATUS
 * ^compose.include[=].filter[3].op = #=
 * ^compose.include[=].filter[3].value = "ACTIVE"
@@ -117,7 +117,7 @@ Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
 * ^compose.include[=].filter[1].value = "LP6416-4"
 * ^compose.include[=].filter[2].property = #CLASS
 * ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "MICRO"
+* ^compose.include[=].filter[2].value = "LP7819-8"
 * ^compose.include[=].filter[3].property = #STATUS
 * ^compose.include[=].filter[3].op = #=
 * ^compose.include[=].filter[3].value = "ACTIVE"

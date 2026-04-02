@@ -10,7 +10,7 @@ Title: "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]"
 * ^compose.include[=].filter[0].value = "LP217195-9"
 * ^compose.include[=].filter[1].property = #CLASS
 * ^compose.include[=].filter[1].op = #=
-* ^compose.include[=].filter[1].value = "ABXBACT"
+* ^compose.include[=].filter[1].value = "LP7755-4"
 * ^compose.include[=].filter[2].property = #STATUS
 * ^compose.include[=].filter[2].op = #=
 * ^compose.include[=].filter[2].value = "ACTIVE"

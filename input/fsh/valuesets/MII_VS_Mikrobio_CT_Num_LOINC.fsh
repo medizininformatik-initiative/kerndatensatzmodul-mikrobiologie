@@ -13,7 +13,7 @@ Title: "MII VS Mikrobio Ct Num [LOINC]"
 * ^compose.include[=].filter[1].value = "LP7735-6"
 * ^compose.include[=].filter[2].property = #CLASS
 * ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "MICRO"
+* ^compose.include[=].filter[2].value = "LP7819-8"
 * ^compose.include[=].filter[3].property = #STATUS
 * ^compose.include[=].filter[3].op = #=
 * ^compose.include[=].filter[3].value = "ACTIVE"

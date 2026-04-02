@@ -16,7 +16,7 @@ Title: "MII VS Mikrobio Spezifische Kultur Tests [LOINC]"
 * ^compose.include[=].filter[2].value = "LP6429-7"
 * ^compose.include[=].filter[3].property = #CLASS
 * ^compose.include[=].filter[3].op = #=
-* ^compose.include[=].filter[3].value = "MICRO"
+* ^compose.include[=].filter[3].value = "LP7819-8"
 * ^compose.include[=].filter[4].property = #STATUS
 * ^compose.include[=].filter[4].op = #=
 * ^compose.include[=].filter[4].value = "ACTIVE"
