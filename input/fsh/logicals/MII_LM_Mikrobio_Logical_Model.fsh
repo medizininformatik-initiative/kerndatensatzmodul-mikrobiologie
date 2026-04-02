@@ -10,32 +10,37 @@ Description: "Logical Model für die grafische Darstellung des Mikrobiologie-Dat
 * . ^short = "mii lm mikrobio logical model"
 
 // Kultur
-* AllgemeineKultur 0..* http://hl7.org/fhir/StructureDefinition/Observation "Allgemeine Kultur" "Allgemeine Kultur"
-* SpezifischeKultur 0..* http://hl7.org/fhir/StructureDefinition/Observation "Spezifische Kultur" "Spezifische Kultur"
-* Keimzahl 0..* http://hl7.org/fhir/StructureDefinition/Observation "Keimzahl" "Keimzahl"
-* Mikroskopie 0..* http://hl7.org/fhir/StructureDefinition/Observation "Mikroskopie" "Mikroskopie"
-* Empfindlichkeit 0..* http://hl7.org/fhir/StructureDefinition/Observation "Empfindlichkeit" "Empfindlichkeit"
-* NugentScore 0..* http://hl7.org/fhir/StructureDefinition/Observation "Nugent Score" "Nugent Score"
-* BarlettScore 0..* http://hl7.org/fhir/StructureDefinition/Observation "Barlett Score" "Barlett Score"
+* Kultur 0..* BackboneElement "Kultur" "Kultur"
+  * AllgemeineKultur 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur "Allgemeine Kultur (NEW)" "MII PR Mikrobio Allgemeine Kultur"
+  * SpezifischeKultur 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur "Spezifische Kultur (NEW)" "MII PR Mikrobio Spezifische Kultur"
+  * Keimzahl 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl "Keimzahl" "MII PR Mikrobio Keimzahl"
+  * Mikroskopie 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie "Mikroskopie" "MII PR Mikrobio Mikroskopie"
+  * Empfindlichkeit 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit "Empfindlichkeit" "MII PR Mikrobio Empfindlichkeit"
+  * NugentScore 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score "Nugent Score (ex component)" "MII PR Mikrobio Nugent Score"
+  * BarlettScore 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score "Barlett Score (ex component)" "MII PR Mikrobio Barlett Score"
 
 // Determination
-* AllgemeineBestimmung 0..* http://hl7.org/fhir/StructureDefinition/Observation "Allgemeine Bestimmung" "Allgemeine Bestimmung"
-* SpezifischeBestimmung 0..* http://hl7.org/fhir/StructureDefinition/Observation "Spezifische Bestimmung" "Spezifische Bestimmung"
-* CtWert 0..* http://hl7.org/fhir/StructureDefinition/Observation "CT-Wert" "CT-Wert"
-* MolekularePathogenlast 0..* http://hl7.org/fhir/StructureDefinition/Observation "Molekulare Pathogenlast" "Molekulare Pathogenlast"
+* Determination 0..* BackboneElement "Determination" "Determination"
+  * AllgemeineBestimmung 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung "General Determination (NEW)" "MII PR Mikrobio Allgemeine Bestimmung"
+  * SpezifischeBestimmung 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung "Specific Determination (NEW)" "MII PR Mikrobio Spezifische Bestimmung"
+  * CtWert 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert "CT-Wert (ex component)" "MII PR Mikrobio CT Wert"
+  * MolekularePathogenlast 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast "Molekulare Pathogenlast" "MII PR Mikrobio Molekulare Pathogenlast"
 
 // Weitere Eigenschaften
-* VoraussichtlicheEmpfindlichkeit 0..* http://hl7.org/fhir/StructureDefinition/Observation "Voraussichtliche Empfindlichkeit" "Voraussichtliche Empfindlichkeit"
-* Virulenzfaktor 0..* http://hl7.org/fhir/StructureDefinition/Observation "Virulenzfaktor" "Virulenzfaktor"
-* ResistenzmechanismenDeterminanten 0..* http://hl7.org/fhir/StructureDefinition/Observation "Resistenzmechanismen/Determinanten" "Resistenzmechanismen/Determinanten"
-* MRGNKlasse 0..* http://hl7.org/fhir/StructureDefinition/Observation "MRGN Klasse" "MRGN Klasse"
-* MREKlasse 0..* http://hl7.org/fhir/StructureDefinition/Observation "MRE Klasse" "MRE Klasse"
+* WeitereEigenschaften 0..* BackboneElement "Weitere Eigenschaften" "Weitere Eigenschaften"
+  * VoraussichtlicheEmpfindlichkeit 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit "Voraussichtliche Empfindlichkeit" "MII PR Mikrobio Voraussichtliche Empfindlichkeit"
+  * Virulenzfaktor 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor "Virulenzfaktor" "MII PR Mikrobio Virulenzfaktor"
+  * ResistenzmechanismenDeterminanten 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten "Resistenzmechanismen/Determinanten" "MII PR Mikrobio Resistenzmechanismen Determinanten"
+  * MRGNKlasse 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse "MRGN Klasse" "MII PR Mikrobio MRGN Klasse"
+  * MREKlasse 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse "MRE Klasse" "MII PR Mikrobio MRE Klasse"
 
 // Serology Immunology
-* SerologieImmunologie 0..* http://hl7.org/fhir/StructureDefinition/Observation "Serologie/Immunologie" "Serologie/Immunologie"
-* AntigenAntikoerperQuantitativ 0..* http://hl7.org/fhir/StructureDefinition/Observation "Antigen/Antikörper quantitativ" "Antigen/Antikörper quantitativ"
-* Aviditaet 0..* http://hl7.org/fhir/StructureDefinition/Observation "Avidität" "Avidität"
-* Titer 0..* http://hl7.org/fhir/StructureDefinition/Observation "Titer" "Titer"
+* SerologyImmunology 0..* BackboneElement "Serology Immunology" "Serology Immunology"
+  * SerologieImmunologie 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-serologie-immunologie "Serologie Immunologie" "MII PR Mikrobio Serologie Immunologie"
+  * AntigenAntikoerperQuantitativ 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ "Antigen antibody quantitative tests" "MII PR Mikrobio Antigen Antikoerper Quantitativ"
+  * Aviditaet 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet "Avidity (ex component)" "MII PR Mikrobio Aviditaet"
+  * Titer 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer "Titer (ex component)" "MII PR Mikrobio Titer"
 
 // Diagnostic Report
-* MikrobiologieBericht 0..* http://hl7.org/fhir/StructureDefinition/DiagnosticReport "Mikrobiologie Bericht" "Mikrobiologie Bericht"
+* DiagnosticReportKategorie 0..* BackboneElement "Diagnostic Report" "Diagnostic Report"
+  * MikrobiologieBericht 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report "MII PR Mikrobio Diagnostic Report" "MII PR Mikrobio Diagnostic Report"
