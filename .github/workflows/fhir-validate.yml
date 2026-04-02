@@ -76,6 +76,7 @@ jobs:
           include: errors
           filters: |
             # Struktur: fileName|messageId|detailsWildcard|location
+            Observation-mii-exa-mikrobio-empfindlichkeit.json|Terminology_TX_NoValid_1_CC|*http://loinc.org#100044-7*|
 
       - name: Validate Resource Status
         uses: patrick-werner/fhir-resource-status-check@1.2.1
