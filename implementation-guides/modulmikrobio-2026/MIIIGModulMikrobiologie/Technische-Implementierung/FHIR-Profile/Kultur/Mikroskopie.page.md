@@ -23,7 +23,6 @@ select
 
 <tabs>
   <tab title="Darstellung">{{tree, buttons}}</tab>
-  <tab title="Beschreibung">{{page:FQL-Beschreibung}}</tab>
   <tab title="XML">{{xml}}</tab>
   <tab title="JSON">{{json}}</tab>
   <tab title="Link">{{link}}</tab>
