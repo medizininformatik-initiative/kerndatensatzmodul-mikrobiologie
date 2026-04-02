@@ -13,7 +13,7 @@ Usage: #example
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 1
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #mg/L
 * valueQuantity.unit = "mg/L"
 * interpretation = $v3-ObservationInterpretation#S "Susceptible"

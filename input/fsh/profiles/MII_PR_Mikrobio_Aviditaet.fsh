@@ -11,7 +11,7 @@ Description: "Avidität beschreibt die qualitative Beurteilung der Bindungsstär
   * unit 1..
   * unit = "%"
   * system 1..
-  * system = "http://unitsofmeasure.org" (exactly)
+  * system = $ucum (exactly)
   * code 1..
   * code = #%
 * interpretation 1..

@@ -14,7 +14,7 @@ Usage: #example
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 35
 * valueQuantity.unit = "%"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #%
 * interpretation = $sct#62482003 "Low"
 * method = $sct#726449005

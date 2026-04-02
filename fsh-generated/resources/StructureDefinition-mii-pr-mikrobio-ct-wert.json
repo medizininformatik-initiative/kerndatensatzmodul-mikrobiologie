@@ -20,6 +20,18 @@
   "name": "MII_PR_Mikrobio_Ct_Wert",
   "title": "MII PR Mikrobio CT Wert",
   "status": "active",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
   "description": "CT-Wert beschreibt die Quantifizierung des Zyklusschwellenwerts bei Nukleinsäurenachweisen (z. B. Echtzeit-PCR) in einer Probe.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -52,7 +64,7 @@
         "path": "Observation.code",
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-ct-num-loinc"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-ct-wert-loinc"
         }
       },
       {

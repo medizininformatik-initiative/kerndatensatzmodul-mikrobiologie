@@ -4,13 +4,13 @@ Id: mii-pr-mikrobio-ct-wert
 Title: "MII PR Mikrobio CT Wert"
 Description: "CT-Wert beschreibt die Quantifizierung des Zyklusschwellenwerts bei Nukleinsäurenachweisen (z. B. Echtzeit-PCR) in einer Probe."
 * insert MIKRO_OBSERVATION_COMMON
-* code from MII_VS_Mikrobio_CT_Num_LOINC (extensible)
+* code from MII_VS_Mikrobio_CT_Wert_LOINC (extensible)
 * value[x] only Quantity
 * valueQuantity 1..
   * value 1..
   * unit 1..
   * system 1..
-  * system = "http://unitsofmeasure.org" (exactly)
+  * system = $ucum (exactly)
   * code 1..
   * code = #1
 * method MS

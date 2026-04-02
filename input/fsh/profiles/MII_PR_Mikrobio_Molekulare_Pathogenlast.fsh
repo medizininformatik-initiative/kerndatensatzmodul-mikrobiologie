@@ -10,7 +10,7 @@ Description: "Molekulare Pathogenlast beschreibt die quantitative Messung der Nu
   * value 1..
   * unit 1..
   * system 1..
-  * system = "http://unitsofmeasure.org" (exactly)
+  * system = $ucum (exactly)
   * code 1..
   * code from MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM (required)
 * method MS

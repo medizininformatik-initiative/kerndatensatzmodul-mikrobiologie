@@ -13,7 +13,7 @@ Usage: #example
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 100000
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #/mL
 * valueQuantity.unit = "/mL"
 * method = $sct#410681005

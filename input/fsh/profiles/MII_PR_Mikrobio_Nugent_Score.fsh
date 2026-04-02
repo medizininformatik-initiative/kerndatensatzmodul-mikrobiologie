@@ -11,7 +11,7 @@ Description: "Nugent-Score beschreibt ein Gramfärbungs-basiertes semiquantitati
   * unit 1..
   * unit = "1"
   * system 1..
-  * system = "http://unitsofmeasure.org" (exactly)
+  * system = $ucum (exactly)
   * code 1..
   * code = #1
 * method MS

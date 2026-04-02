@@ -1,6 +1,6 @@
-ValueSet: MII_VS_Mikrobio_CT_Num_LOINC
-Id: mii-vs-mikrobio-ct-num-loinc
-Title: "MII VS Mikrobio Ct Num [LOINC]"
+ValueSet: MII_VS_Mikrobio_CT_Wert_LOINC
+Id: mii-vs-mikrobio-ct-wert-loinc
+Title: "MII VS Mikrobio CT Wert [LOINC]"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

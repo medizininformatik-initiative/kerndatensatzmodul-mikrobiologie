@@ -6,10 +6,10 @@ Description: "Titer beschreibt eine semiquantitative Messung aus seriellen Verd√
 * insert MIKRO_OBSERVATION_COMMON
 * code from MII_VS_Mikrobio_Titer_Tests_LOINC (extensible)
 * value[x] only Ratio
-* valueRatio 1..
-  * numerator 1..
+* valueRatio 1.. MS
+  * numerator 1.. MS
     * value = 1
-  * denominator 1..
+  * denominator 1.. MS
     * value 1.. MS
 * method MS
 * method from MII_VS_Mikrobio_Titer_Methode_SNOMED (extensible)

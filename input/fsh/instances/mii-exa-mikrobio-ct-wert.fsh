@@ -14,7 +14,7 @@ Usage: #example
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 21.3
 * valueQuantity.unit = "1"
-* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.system = $ucum
 * valueQuantity.code = #1
 * method = $sct#70601000052104
 * derivedFrom = Reference(mii-exa-mikrobio-spezifische-bestimmung)

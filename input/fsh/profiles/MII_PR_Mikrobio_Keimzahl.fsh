@@ -11,7 +11,7 @@ Description: "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mik
   * value 1..
   * unit 1..
   * system 1..
-  * system = "http://unitsofmeasure.org" (exactly)
+  * system = $ucum (exactly)
   * code 1..
   * code from MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM (required)
 * method MS

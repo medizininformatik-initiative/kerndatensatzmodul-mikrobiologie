@@ -11,7 +11,7 @@ Description: "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resist
   * value 1..
   * unit 1..
   * system 1..
-  * system = "http://unitsofmeasure.org" (exactly)
+  * system = $ucum (exactly)
   * code 1..
   * code from MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM (required)
 * interpretation 1..

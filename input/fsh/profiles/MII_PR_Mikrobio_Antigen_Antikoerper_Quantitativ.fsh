@@ -10,7 +10,7 @@ Description: "Quantitative Antigen-/Antikörperantwort beschreibt die quantitati
   * value 1..
   * unit 1..
   * system 1..
-  * system = "http://unitsofmeasure.org" (exactly)
+  * system = $ucum (exactly)
   * code 1..
   * code from MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM (extensible)
 * method MS
