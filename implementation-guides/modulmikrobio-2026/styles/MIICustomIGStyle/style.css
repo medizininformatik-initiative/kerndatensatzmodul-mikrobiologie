@@ -64,10 +64,6 @@ html, body {
               display: block; }
             #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .preview-panel .preview-bar {
               overflow: auto; }
-            #ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .preview-panel.full-width {
-              width: auto;
-              overflow: hidden;
-              float: none; }
   #ig-viewer .ig-view-footer {
     background-color: #808080;
     color: #eee;
@@ -128,7 +124,13 @@ html, body {
   flex: 1 1 auto;             /* fill remainder */
   min-width: 360px;
   padding: 16px 20px !important;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#ig-viewer .ig-view-content #ig-view-treetable .container-fluid #guide-panel .preview-panel.full-width{
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
 }
 
 /* 5) Make tables behave better inside the preview */
