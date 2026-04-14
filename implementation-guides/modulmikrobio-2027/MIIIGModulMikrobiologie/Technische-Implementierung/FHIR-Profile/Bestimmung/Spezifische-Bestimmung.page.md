@@ -8,6 +8,10 @@ expand: 1
 
 Spezifische Bestimmung beschreibt den gezielten qualitativen Nachweis eines vordefinierten mikrobiellen Ziels (z. B. Mikroorganismus, Nukleinsäure, Antigen, Antikörper oder biochemischer Marker) in einer Probe mittels kulturbasierter oder anderer zielgerichteter Nachweismethoden.
 
+Bei zielgerichteten Einzeluntersuchungen werden die Ergebnisse in der Regel als positiv, kein Nachweis oder unklar angegeben. Wird dabei ein unerwarteter Erreger nachgewiesen, wird dieser konkret benannt.
+
+Bei Mehrzieluntersuchungen oder auf Organismengruppen ausgerichteten Verfahren erfolgt die Ergebnisdarstellung durch die Nennung des identifizierten Erregers.
+
 ### Metadaten
 
 <fql output="table" headers="true">
