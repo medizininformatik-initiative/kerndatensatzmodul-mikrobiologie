@@ -8,4 +8,4 @@ Description: "Voraussichtliche Empfindlichkeit beschreibt eine aus genotypischen
 * code from MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC (required)
 * value[x] only CodeableConcept
 * valueCodeableConcept
-* valueCodeableConcept from MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit_SNOMEDCT (required)
+* valueCodeableConcept from MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit (required)

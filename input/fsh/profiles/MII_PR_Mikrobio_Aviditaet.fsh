@@ -9,5 +9,5 @@ Description: "Avidität beschreibt die qualitative Beurteilung der Bindungsstär
 * valueQuantity
   * unit = "%"
   * code = #%
-* interpretation from MII_VS_Mikrobio_Aviditaet_Ergebnis_SNOMED (required)
+* interpretation from MII_VS_Mikrobio_Aviditaet_Ergebnis (required)
 * method from MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED (extensible)
