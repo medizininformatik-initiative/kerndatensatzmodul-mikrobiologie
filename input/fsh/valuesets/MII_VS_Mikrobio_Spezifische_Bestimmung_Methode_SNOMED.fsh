@@ -12,6 +12,7 @@ Title: "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]"
 * $sct#708104000 "Agglutination technique (qualifier value)"
 * $sct#726449005  "Immunoassay technique (qualifier value)"
 * $sct#703444002 "Fluorescent immunoassay (qualifier value)"
+* $sct#703752003 "Mikroorganismusspezifische Kulturtechnik"
 
 // TODO: For manual biochemical identification (rapid test), the corresponding SNOMED CT concept is missing and may need to be requested:
 //Targeted rapid biochemical microbial detection technique (qualifier value)

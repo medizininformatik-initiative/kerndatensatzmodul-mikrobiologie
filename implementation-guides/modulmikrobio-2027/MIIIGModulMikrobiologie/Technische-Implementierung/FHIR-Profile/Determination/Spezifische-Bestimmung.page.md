@@ -6,7 +6,7 @@ expand: 1
 ---
 ## {{link}}
 
-Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels (z. B. Nukleinsäure, Antigen, Antikörper oder biochemischer Marker) in einer Probe.
+Spezifische Bestimmung beschreibt den gezielten qualitativen Nachweis eines vordefinierten mikrobiellen Ziels (z. B. Mikroorganismus, Nukleinsäure, Antigen, Antikörper oder biochemischer Marker) in einer Probe mittels kulturbasierter oder anderer zielgerichteter Nachweismethoden.
 
 ### Metadaten
 

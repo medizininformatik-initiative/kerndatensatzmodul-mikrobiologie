@@ -1,5 +1,5 @@
 Instance: mii-exa-mikrobio-spezifische-kultur
-InstanceOf: MII_PR_Mikrobio_Spezifische_Kultur
+InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-kultur-1"

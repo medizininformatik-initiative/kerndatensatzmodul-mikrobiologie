@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC
 Id: mii-vs-mikrobio-spezifische-bestimmung-tests-loinc
 Title: "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]"
+Description: "Tests-ValueSet fuer die spezifische Bestimmung."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
@@ -56,5 +57,11 @@ Title: "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]"
     where PROPERTY = "LP217195-9" and
       SYSTEM = "LP7735-6" and
       METHOD_TYP = "LP6106-1" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where PROPERTY = "LP6850-4" and
+      SYSTEM = "LP7735-6" and
+      METHOD_TYP = "LP6429-7" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"

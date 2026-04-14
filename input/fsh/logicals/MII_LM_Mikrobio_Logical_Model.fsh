@@ -12,7 +12,7 @@ Description: "Logical Model für die grafische Darstellung des Mikrobiologie-Dat
 // Kultur
 * Kultur 0..* BackboneElement "Kultur" "Kultur"
   * AllgemeineKultur 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur "Allgemeine Kultur (NEW)" "MII PR Mikrobio Allgemeine Kultur"
-  * SpezifischeKultur 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur "Spezifische Kultur (NEW)" "MII PR Mikrobio Spezifische Kultur"
+  * SpezifischeKultur 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung "Spezifische Kultur (ueber Spezifische Bestimmung)" "MII PR Mikrobio Spezifische Bestimmung"
   * Keimzahl 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl "Keimzahl" "MII PR Mikrobio Keimzahl"
   * Mikroskopie 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie "Mikroskopie" "MII PR Mikrobio Mikroskopie"
   * Empfindlichkeit 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit "Empfindlichkeit" "MII PR Mikrobio Empfindlichkeit"

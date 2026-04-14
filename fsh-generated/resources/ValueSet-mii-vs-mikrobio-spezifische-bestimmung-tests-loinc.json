@@ -4,6 +4,7 @@
   "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC",
   "id": "mii-vs-mikrobio-spezifische-bestimmung-tests-loinc",
   "title": "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]",
+  "description": "Tests-ValueSet fuer die spezifische Bestimmung.",
   "version": "2027.0.0-alpha.1",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc",
   "experimental": false,
@@ -277,6 +278,36 @@
             "property": "METHOD_TYP",
             "op": "=",
             "value": "LP6106-1"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "LP7819-8"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "PROPERTY",
+            "op": "=",
+            "value": "LP6850-4"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7735-6"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6429-7"
           },
           {
             "property": "CLASS",

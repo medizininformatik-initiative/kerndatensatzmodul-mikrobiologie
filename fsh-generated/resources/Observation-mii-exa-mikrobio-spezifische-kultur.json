@@ -3,7 +3,7 @@
   "id": "mii-exa-mikrobio-spezifische-kultur",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
     ]
   },
   "identifier": [
@@ -45,14 +45,6 @@
       ]
     }
   ],
-  "method": {
-    "coding": [
-      {
-        "code": "703752003",
-        "system": "http://snomed.info/sct"
-      }
-    ]
-  },
   "status": "final",
   "code": {
     "coding": [
@@ -72,6 +64,14 @@
         "code": "10828004",
         "system": "http://snomed.info/sct",
         "display": "Positive (qualifier value)"
+      }
+    ]
+  },
+  "method": {
+    "coding": [
+      {
+        "code": "703752003",
+        "system": "http://snomed.info/sct"
       }
     ]
   },

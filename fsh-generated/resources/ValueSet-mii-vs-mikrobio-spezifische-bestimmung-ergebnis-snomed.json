@@ -1,11 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "MII_VS_Mikrobio_Spezifische_Kultur_Ergebnis_SNOMED",
-  "id": "mii-vs-mikrobio-spezifische-kultur-ergebnis-snomed",
-  "title": "MII VS Mikrobio Spezifische Kultur Ergebnis [SNOMED]",
+  "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED",
+  "id": "mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed",
+  "title": "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
+  "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung.",
   "version": "2027.0.0-alpha.1",
-  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-ergebnis-snomed",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -20,6 +21,11 @@
   ],
   "compose": {
     "include": [
+      {
+        "valueSet": [
+          "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"
+        ]
+      },
       {
         "system": "http://snomed.info/sct",
         "concept": [

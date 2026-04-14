@@ -22,7 +22,6 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
 * specimen ^min = 0
 * result only Reference(
     MII_PR_Mikrobio_Allgemeine_Kultur or
-    MII_PR_Mikrobio_Spezifische_Kultur or
     MII_PR_Mikrobio_Allgemeine_Bestimmung or
     MII_PR_Mikrobio_Spezifische_Bestimmung or
     MII_PR_Mikrobio_Keimzahl or
