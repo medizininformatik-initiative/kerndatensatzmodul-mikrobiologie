@@ -4,10 +4,9 @@ Das Erweiterungsmodul Mikrobiologie 2027 modelliert mikrobiologische Befunde als
 
 Die wichtigsten Domänen sind:
 
-- Kulturdiagnostik (allgemein/spezifisch, inkl. Keimzahl, Mikroskopie und phänotypische Empfindlichkeit)
-- Bestimmung (allgemein/spezifisch)
-- Molekulare Zusatzbeobachtungen (CT-Wert, Pathogenlast)
-- Serologie/Immunologie (qualitativ/quantitativ, Avidität, Titer)
-- Weitere Eigenschaften des Organismus (Resistenzmechanismen, Virulenz, MRE/MRGN, voraussichtliche Empfindlichkeit)
+- Kultur (allgemein, Mikroskopie inkl. Barlett-/Nugent-Score, Keimzahl, Empfindlichkeit)
+- Bestimmung (allgemein/spezifisch, Ct-Wert)
+- Quantitative tests (Antigen/Antikoerper, Titer, molekulare Pathogenlast)
+- Weitere Eigenschaften (Virulenz, Resistenzmechanismus, MRGN, voraussichtliche Empfindlichkeit, MRE Klasse, Aviditaet)
 
 Komponenten aus Observationen wurden in dieser Version fachlich in separate Profile überführt.
