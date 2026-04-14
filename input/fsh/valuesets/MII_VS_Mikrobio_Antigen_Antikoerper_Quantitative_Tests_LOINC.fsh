@@ -4,120 +4,48 @@ Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
-* ^compose.include[+].system = "http://loinc.org"
-* ^compose.include[=].filter[0].property = #SCALE_TYP
-* ^compose.include[=].filter[0].op = #=
-* ^compose.include[=].filter[0].value = "LP7753-9"
-* ^compose.include[=].filter[1].property = #METHOD_TYP
-* ^compose.include[=].filter[1].op = #=
-* ^compose.include[=].filter[1].value = "LP217197-5"
-* ^compose.include[=].filter[2].property = #CLASS
-* ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "LP7819-8"
-* ^compose.include[=].filter[3].property = #STATUS
-* ^compose.include[=].filter[3].op = #=
-* ^compose.include[=].filter[3].value = "ACTIVE"
-* ^compose.include[+].system = "http://loinc.org"
-* ^compose.include[=].filter[0].property = #SCALE_TYP
-* ^compose.include[=].filter[0].op = #=
-* ^compose.include[=].filter[0].value = "LP7753-9"
-* ^compose.include[=].filter[1].property = #METHOD_TYP
-* ^compose.include[=].filter[1].op = #=
-* ^compose.include[=].filter[1].value = "LP6106-1"
-* ^compose.include[=].filter[2].property = #CLASS
-* ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "LP7819-8"
-* ^compose.include[=].filter[3].property = #STATUS
-* ^compose.include[=].filter[3].op = #=
-* ^compose.include[=].filter[3].value = "ACTIVE"
-* ^compose.include[+].system = "http://loinc.org"
-* ^compose.include[=].filter[0].property = #SCALE_TYP
-* ^compose.include[=].filter[0].op = #=
-* ^compose.include[=].filter[0].value = "LP7753-9"
-* ^compose.include[=].filter[1].property = #METHOD_TYP
-* ^compose.include[=].filter[1].op = #=
-* ^compose.include[=].filter[1].value = "LP6274-7"
-* ^compose.include[=].filter[2].property = #CLASS
-* ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "LP7819-8"
-* ^compose.include[=].filter[3].property = #STATUS
-* ^compose.include[=].filter[3].op = #=
-* ^compose.include[=].filter[3].value = "ACTIVE"
-* ^compose.include[+].system = "http://loinc.org"
-* ^compose.include[=].filter[0].property = #SCALE_TYP
-* ^compose.include[=].filter[0].op = #=
-* ^compose.include[=].filter[0].value = "LP7753-9"
-* ^compose.include[=].filter[1].property = #METHOD_TYP
-* ^compose.include[=].filter[1].op = #=
-* ^compose.include[=].filter[1].value = "LP28800-8"
-* ^compose.include[=].filter[2].property = #CLASS
-* ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "LP7819-8"
-* ^compose.include[=].filter[3].property = #STATUS
-* ^compose.include[=].filter[3].op = #=
-* ^compose.include[=].filter[3].value = "ACTIVE"
-* ^compose.include[+].system = "http://loinc.org"
-* ^compose.include[=].filter[0].property = #SCALE_TYP
-* ^compose.include[=].filter[0].op = #=
-* ^compose.include[=].filter[0].value = "LP7753-9"
-* ^compose.include[=].filter[1].property = #METHOD_TYP
-* ^compose.include[=].filter[1].op = #=
-* ^compose.include[=].filter[1].value = "LP6304-2"
-* ^compose.include[=].filter[2].property = #CLASS
-* ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "LP7819-8"
-* ^compose.include[=].filter[3].property = #STATUS
-* ^compose.include[=].filter[3].op = #=
-* ^compose.include[=].filter[3].value = "ACTIVE"
-* ^compose.include[+].system = "http://loinc.org"
-* ^compose.include[=].filter[0].property = #SCALE_TYP
-* ^compose.include[=].filter[0].op = #=
-* ^compose.include[=].filter[0].value = "LP7753-9"
-* ^compose.include[=].filter[1].property = #METHOD_TYP
-* ^compose.include[=].filter[1].op = #=
-* ^compose.include[=].filter[1].value = "LP6320-8"
-* ^compose.include[=].filter[2].property = #CLASS
-* ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "LP7819-8"
-* ^compose.include[=].filter[3].property = #STATUS
-* ^compose.include[=].filter[3].op = #=
-* ^compose.include[=].filter[3].value = "ACTIVE"
-* ^compose.include[+].system = "http://loinc.org"
-* ^compose.include[=].filter[0].property = #SCALE_TYP
-* ^compose.include[=].filter[0].op = #=
-* ^compose.include[=].filter[0].value = "LP7753-9"
-* ^compose.include[=].filter[1].property = #METHOD_TYP
-* ^compose.include[=].filter[1].op = #=
-* ^compose.include[=].filter[1].value = "LP6323-2"
-* ^compose.include[=].filter[2].property = #CLASS
-* ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "LP7819-8"
-* ^compose.include[=].filter[3].property = #STATUS
-* ^compose.include[=].filter[3].op = #=
-* ^compose.include[=].filter[3].value = "ACTIVE"
-* ^compose.include[+].system = "http://loinc.org"
-* ^compose.include[=].filter[0].property = #SCALE_TYP
-* ^compose.include[=].filter[0].op = #=
-* ^compose.include[=].filter[0].value = "LP7753-9"
-* ^compose.include[=].filter[1].property = #METHOD_TYP
-* ^compose.include[=].filter[1].op = #=
-* ^compose.include[=].filter[1].value = "LP6360-4"
-* ^compose.include[=].filter[2].property = #CLASS
-* ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "LP7819-8"
-* ^compose.include[=].filter[3].property = #STATUS
-* ^compose.include[=].filter[3].op = #=
-* ^compose.include[=].filter[3].value = "ACTIVE"
-* ^compose.include[+].system = "http://loinc.org"
-* ^compose.include[=].filter[0].property = #SCALE_TYP
-* ^compose.include[=].filter[0].op = #=
-* ^compose.include[=].filter[0].value = "LP7753-9"
-* ^compose.include[=].filter[1].property = #METHOD_TYP
-* ^compose.include[=].filter[1].op = #=
-* ^compose.include[=].filter[1].value = "LP6416-4"
-* ^compose.include[=].filter[2].property = #CLASS
-* ^compose.include[=].filter[2].op = #=
-* ^compose.include[=].filter[2].value = "LP7819-8"
-* ^compose.include[=].filter[3].property = #STATUS
-* ^compose.include[=].filter[3].op = #=
-* ^compose.include[=].filter[3].value = "ACTIVE"
+* include codes from system $loinc
+    where SCALE_TYP = "LP7753-9" and
+      METHOD_TYP = "LP217197-5" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where SCALE_TYP = "LP7753-9" and
+      METHOD_TYP = "LP6106-1" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where SCALE_TYP = "LP7753-9" and
+      METHOD_TYP = "LP6274-7" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where SCALE_TYP = "LP7753-9" and
+      METHOD_TYP = "LP28800-8" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where SCALE_TYP = "LP7753-9" and
+      METHOD_TYP = "LP6304-2" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where SCALE_TYP = "LP7753-9" and
+      METHOD_TYP = "LP6320-8" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where SCALE_TYP = "LP7753-9" and
+      METHOD_TYP = "LP6323-2" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where SCALE_TYP = "LP7753-9" and
+      METHOD_TYP = "LP6360-4" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where SCALE_TYP = "LP7753-9" and
+      METHOD_TYP = "LP6416-4" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
