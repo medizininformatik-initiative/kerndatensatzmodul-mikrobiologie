@@ -5,7 +5,7 @@ Title: "MII PR Mikrobio MRGN Klasse"
 Description: "MRGN-Klasse beschreibt die Einstufung multiresistenter gramnegativer Erreger entsprechend der RKI-Kategorisierung."
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "Dieses Profil beschreibt die MRGN-Klasse." 
-* code from MII_VS_Mikrobio_MRGN_Klasse_LOINC (required)
+* code = $loinc#99780-9
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_MRGN_Klasse_LOINC (required)

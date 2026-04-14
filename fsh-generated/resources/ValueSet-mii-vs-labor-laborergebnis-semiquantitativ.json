@@ -1,0 +1,67 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Labor_Laborergebnis_Semiquantitativ",
+  "id": "mii-vs-labor-laborergebnis-semiquantitativ",
+  "title": "MII VS Labor Laborergebnis Semiquantitativ",
+  "description": "Kodierung für semi-quantitative Laborergebnisse",
+  "version": "2027.0.0-alpha.1",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-labor-laborergebnis-semiquantitativ",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "260347006",
+            "display": "Present + out of ++++ (qualifier value)"
+          },
+          {
+            "code": "260348001",
+            "display": "Present ++ out of ++++ (qualifier value)"
+          },
+          {
+            "code": "260349009",
+            "display": "Present +++ out of ++++ (qualifier value)"
+          },
+          {
+            "code": "260350009",
+            "display": "Present ++++ out of ++++ (qualifier value)"
+          },
+          {
+            "code": "410594000",
+            "display": "Definitely NOT present (qualifier value)"
+          },
+          {
+            "code": "260405006",
+            "display": "Trace (qualifier value)"
+          },
+          {
+            "code": "441614007",
+            "display": "Present one plus out of three plus"
+          },
+          {
+            "code": "441517005",
+            "display": "Present two plus out of three plus"
+          },
+          {
+            "code": "441521003",
+            "display": "Present three plus out of three plus"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -4,9 +4,9 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 | Version | Datum | Typ | Inhalt |
 |---------|-------|-----|--------|
-| 2026.0.0-alpha.1 | 02.04.2026 | Breaking (Preview) | National und europäisch abgestimmte Neuausrichtung der Mikrobiologie-Modellierung mit neuen/ersetzten Profil-IDs, Observation-orientierter Struktur ohne `Observation.component`, aktualisierten Terminologiebindungen sowie überarbeiteter IG-Navigation. |
+| 2027.0.0-alpha.1 | 14.04.2026 | Breaking (Preview) | National und europäisch abgestimmte Neuausrichtung der Mikrobiologie-Modellierung mit neuen/ersetzten Profil-IDs, Observation-orientierter Struktur ohne `Observation.component`, aktualisierten Terminologiebindungen sowie überarbeiteter IG-Navigation. |
 
-### 2026.0.0-alpha.1
+### 2027.0.0-alpha.1
 
 #### Herkunft und Abstimmung
 
@@ -17,13 +17,13 @@ Die Änderungen in diesem Release basieren auf:
 
 #### High-Level (Was hat sich fachlich geändert?)
 
-- Mehrere frühere Profile wurden durch neue 2026-Profile ersetzt (Breaking Change).
+- Mehrere frühere Profile wurden durch neue 2027-Profile ersetzt (Breaking Change).
 - Die Mikrobiologie-Modellierung ist durchgängig Observation-orientiert; frühere `Observation.component`-Semantik wurde in eigenständige Observation-Profile überführt. Dies ermöglicht eine volle Kompatibilität mit dem Labor Modul.
 - Kultur- und Bestimmungslogik wurde in allgemeine und spezifische Pfade aufgeteilt.
 - Quantitative Teilbefunde (z. B. Ct-Wert, Nugent-Score, Barlett-Score, Titer, Avidität, Pathogenlast) sind als eigene Profile modelliert.
 - Die Abbildung der Empfindlichkeit erfolgt nun über ein kombiniertes Modell aus interpretation (mit Susceptibility-Bindung) und einer Norm-Extension zur Angabe des verwendeten Interpretationsstandards.
 - Observation-Profile leiten aus `ObservationLab` (Labor-Modul 2026.0.0), der DiagnosticReport aus `DiagnosticReportLab` ab.
-- Terminologiebindungen wurden auf die 2026er Struktur konsolidiert (LOINC/SNOMED/UCUM), inklusive Filter- und Benennungsbereinigung.
+- Terminologiebindungen wurden konsolidiert (LOINC/SNOMED/UCUM), inklusive Filter- und Benennungsbereinigung.
 - Die IG-Navigation unter `FHIR-Profile` spiegelt die neue fachliche Gliederung wider: Kultur, Determination, Weitere Eigenschaften, Serology Immunology, Diagnostic Report.
 
 #### Detaillierte Änderungen für Implementierer (pro Artefakt-ID)
@@ -34,20 +34,17 @@ Die Änderungen in diesem Release basieren auf:
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
 | `mii-pr-mikrobio-allgemeine-kultur` | ersetzt | `mii-pr-mikrobio-kultur-nachweis` | Allgemeine Kultur als eigenes Profil mit expliziten Bindings für Test/Ergebnis/Methode | Referenzen und Profile-Mappings müssen auf neue Profil-ID umgestellt werden | Instanzen von Alt-Profil auf neue ID migrieren; Ergebnis-Codierung prüfen |
 | `mii-pr-mikrobio-spezifische-kultur` | neu | - | Neues Profil für zielgerichtete Kulturbefunde | Neue Profil-ID in Erzeugung, Mapping und Validierung aufnehmen | Bei bisherigen Spezialfällen aus Kultur-Nachweis auf dieses Profil trennen |
-| `mii-pr-mikrobio-keimzahl` | inhaltlich aktualisiert | gleich | Quantity-orientierte Modellierung ohne Component-Fokus, UCUM-Bindungen präzisiert | Validierung kann bei Einheiten/Value-Typ strikter greifen | Beispiele und Schnittstellen auf aktualisierte Value-Constraints prüfen |
-| `mii-pr-mikrobio-mikroskopie` | inhaltlich aktualisiert | gleich | Ergebnis-/Methodenbindung auf Morphologie-spezifische ValueSets | Terminologieprüfung ändert sich | Kodierungen gegen neue Ergebnis-/Methoden-ValueSets prüfen |
+| `mii-pr-mikrobio-keimzahl` | inhaltlich aktualisiert | gleich | value[x] wurde auf Quantity eingeschränkt, VS für semi-quantitative Ergebnisse wurde auf .interpretation gebunden , UCUM-Bindungen präzisiert | Validierung kann bei Einheiten/Value-Typ strikter greifen | Beispiele und Schnittstellen auf aktualisierte Value-Constraints prüfen |
+| `mii-pr-mikrobio-mikroskopie` | inhaltlich aktualisiert | gleich | Components wurden entfernt und in eigenständige Observation-Profile überführt; `value[x]` sowie die Methodenbindung wurden auf Morphologie-spezifische ValueSets umgestellt | Struktur der Ressourcen und Terminologieprüfung ändern sich; bisherige Component-basierte Inhalte müssen nun als separate referenzierbare Observationen übermittelt werden | Vorhandene `Observation.component`-Abbildungen in eigenständige Observation-Ressourcen überführen und Kodierungen gegen die neuen Ergebnis-/Methoden-ValueSets prüfen |
 | `mii-pr-mikrobio-empfindlichkeit` | inhaltlich aktualisiert | gleich | Empfindlichkeitsmodell mit Susceptibility-Interpretation + Norm-Extension | Semantikwechsel bei Interpretation/Normabbildung | Norminformationen über Extension transportieren; Interpretation-Binding beachten |
 | `mii-pr-mikrobio-nugent-score` | neu | - | Ehemalige Component-Information als eigenständige Observation | Neues Profil in Ergebnisübermittlung und Referenzen berücksichtigen | Bei früherer Component-Abbildung auf eigenes Observation-Resource umstellen |
 | `mii-pr-mikrobio-barlett-score` | neu | - | Ehemalige Component-Information als eigenständige Observation | Neues Profil in Ergebnisübermittlung und Referenzen berücksichtigen | Bei früherer Component-Abbildung auf eigenes Observation-Resource umstellen |
 | `mii-pr-mikrobio-allgemeine-bestimmung` | neu | - | Neues Profil für allgemeine Bestimmung/Identifikation | Neues Profil in Profilrouting und Mapping ergänzen | Für allgemeine Bestimmung keine Alt-ID vorhanden; direkt neu anbinden |
-| `mii-pr-mikrobio-spezifische-bestimmung` | ersetzt | `mii-pr-mikrobio-molekulare-diagnostik` | Spezifische Bestimmung als eigenes Profil mit dedizierten Test-/Methodenbindings | Profil-ID-Wechsel und Terminologieanpassung nötig | Alt-Instanzen auf neue Profil-ID und neue ValueSets migrieren |
+| `mii-pr-mikrobio-spezifische-bestimmung` | ersetzt/erweitert | `mii-pr-mikrobio-molekulare-diagnostik` | Spezifische Bestimmung als eigenes, fachlich breiteres Profil mit dedizierten Test-/Methodenbindings; nicht mehr auf molekulare Diagnostik beschränkt | Profil-ID-Wechsel, fachliche Erweiterung und Terminologieanpassung nötig; bestehende Annahmen, dass nur molekulardiagnostische Befunde abgebildet werden, sind nicht mehr gültig | Alt-Instanzen auf neue Profil-Url und neue ValueSets migrieren und Mappinglogik darauf prüfen, ob bisher implizit nur molekulare Diagnostik unterstützt wurde |
 | `mii-pr-mikrobio-ct-wert` | neu | - | Ct-Wert als eigenständige quantitative Observation | Neues Profil und neue Tests/Beispiele in Pipelines ergänzen | Früherer Component-Inhalt separat als Observation bereitstellen |
-| `mii-pr-mikrobio-voraussichtliche-empfindlichkeit` | inhaltlich aktualisiert | gleich | Bindings für genotypisch abgeleitete Empfindlichkeit aktualisiert | Terminologie-Validierung kann sich ändern | Bestehende Codes gegen aktuelle ValueSets revalidieren |
 | `mii-pr-mikrobio-virulenzfaktor` | inhaltlich aktualisiert | gleich | Harmonisierung auf konsistente Detected/Not-detected-Semantik | Ergebnis-Codes müssen zu aktualisierten Bindings passen | SNOMED-Codierung inkl. Display/Code gegen ValueSet prüfen |
 | `mii-pr-mikrobio-resistenzmechanismen-determinanten` | ersetzt | `mii-pr-mikrobio-resistenzgene` + `mii-pr-mikrobio-resistenzmutation` | Zusammengeführtes Profil für Determinanten/Mechanismen | Zwei alte Profile werden funktional in einem neuen Profil konsolidiert | Altpfade zusammenführen; Referenzen und Mappingtabellen konsolidieren |
-| `mii-pr-mikrobio-mrgn-klasse` | inhaltlich aktualisiert | gleich | Observation-Hauptwert und Terminologie konsolidiert | Value-Bindings und Beispielcodes können abweichen | Mapping und Testdaten auf neue Terminologie abstimmen |
-| `mii-pr-mikrobio-mre-klasse` | inhaltlich aktualisiert | gleich | Observation-Hauptwert und Terminologie konsolidiert | Value-Bindings und Beispielcodes können abweichen | Mapping und Testdaten auf neue Terminologie abstimmen |
-| `mii-pr-mikrobio-serologie-immunologie` | inhaltlich aktualisiert | gleich | Qualitative Serologie/Immunologie mit aktualisierten Bindings | Kodierungsvorgaben geändert | Vorhandene Serologie-Codes gegen neue Bindings prüfen |
+| `mii-pr-mikrobio-mre-klasse` | inhaltlich aktualisiert | gleich | Component  "Infectious agent genotype identification (procedure)" wurde entfernt | - | Abbildung des Pathogens über Allgemeine oder Spezifische Bestimmung |
 | `mii-pr-mikrobio-antigen-antikoerper-quantitativ` | neu | - | Eigenständiges Profil für quantitative Antigen/Antikörper-Befunde | Neues Profil in Routing, ETL und Validierung integrieren | Einheitensystem und Methodenbindung explizit mitliefern |
 | `mii-pr-mikrobio-aviditaet` | neu | - | Eigenständiges Aviditätsprofil inkl. Ergebnissemantik | Neues Profil in Routing, ETL und Validierung integrieren | Aviditätswerte/-interpretation auf neue Bindings umstellen |
 | `mii-pr-mikrobio-titer` | neu | - | Eigenständiges Titer-Profil (Ratio-orientiert) | Neues Profil in Routing, ETL und Validierung integrieren | Titerbefunde nicht mehr als Component modellieren |
@@ -58,11 +55,11 @@ Die Änderungen in diesem Release basieren auf:
 
 | Artefakt-ID | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
-| `mii-pr-mikrobio-kultur-nachweis` | entfernt/ersetzt | aktiv bis Vorgängerversion | ersetzt durch neues 2026-Profil für allgemeine Kultur | Alt-ID wird im 2026-Modell nicht mehr veröffentlicht | Auf neue 2026-Kulturstruktur umstellen |
-| `mii-pr-mikrobio-molekulare-diagnostik` | entfernt/ersetzt | aktiv bis Vorgängerversion | ersetzt durch neues 2026-Profil für spezifische Bestimmung | Alt-ID wird im 2026-Modell nicht mehr veröffentlicht | Auf neue 2026-Bestimmungsstruktur umstellen |
-| `mii-pr-mikrobio-resistenzgene` | entfernt/ersetzt | aktiv bis Vorgängerversion | in zusammengeführtes 2026-Profil für Resistenzmechanismen/Determinanten aufgegangen | Alt-ID wird im 2026-Modell nicht mehr veröffentlicht | Mapping in zusammengeführtes 2026-Profil überführen |
-| `mii-pr-mikrobio-resistenzmutation` | entfernt/ersetzt | aktiv bis Vorgängerversion | in zusammengeführtes 2026-Profil für Resistenzmechanismen/Determinanten aufgegangen | Alt-ID wird im 2026-Modell nicht mehr veröffentlicht | Mapping in zusammengeführtes 2026-Profil überführen |
-
+| `mii-pr-mikrobio-kultur-nachweis` | entfernt/ersetzt | aktiv bis Vorgängerversion | ersetzt durch neues 2027-Profil für allgemeine Kultur | Profil wird im 2027-Modell nicht mehr veröffentlicht | Auf neue 2027-Kulturstruktur umstellen |
+| `mii-pr-mikrobio-molekulare-diagnostik` | entfernt/ersetzt | aktiv bis Vorgängerversion | ersetzt durch neues 2027-Profil für spezifische Bestimmung | Profil wird im 2027-Modell nicht mehr veröffentlicht | Auf neue 2027-Bestimmungsstruktur umstellen |
+| `mii-pr-mikrobio-resistenzgene` | entfernt/ersetzt | aktiv bis Vorgängerversion | in zusammengeführtes 2027-Profil für Resistenzmechanismen/Determinanten aufgegangen | Profil wird im 2027-Modell nicht mehr veröffentlicht | Mapping in zusammengeführtes 2027-Profil überführen |
+| `mii-pr-mikrobio-resistenzmutation` | entfernt/ersetzt | aktiv bis Vorgängerversion | in zusammengeführtes 2027-Profil für Resistenzmechanismen/Determinanten aufgegangen | Profil wird im 2027-Modell nicht mehr veröffentlicht | Mapping in zusammengeführtes 2027-Profil überführen |
+| `mii-pr-mikrobio-serologie-immunologie` | entfernt/ersetzt | aktiv bis Vorgängerversion | in  2027-Profil Spezfische Bestimmung überführt, Komponenten wurden in eigene Profile überführt | Profil wird im 2027-Modell nicht mehr veröffentlicht | Mapping in  2027-Profile überführen |
 ##### Terminologien (ValueSets)
 
 ###### Neue/umbenannte ValueSet-IDs
@@ -98,14 +95,9 @@ Die Änderungen in diesem Release basieren auf:
 
 | Artefakt-ID | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
-| `mii-vs-mikrobio-barlett-score-loinc` | inhaltlich aktualisiert | gleich | Filter-/Inhaltsabgleich auf 2026-Struktur | Validator-Ergebnisse können sich ändern | Barlett-Testcodes gegen aktualisierten Umfang prüfen |
-| `mii-vs-mikrobio-befundtyp-loinc` | inhaltlich aktualisiert | gleich | 2026-konforme Befundtyp-Bindung | Änderungen in Profil-Bindings möglich | Lokale Mappingtabellen neu validieren |
 | `mii-vs-mikrobio-empfindlichkeit-einheiten-ucum` | inhaltlich aktualisiert | gleich | UCUM-Definitionen bereinigt (`{}`-freie Semantik) | Einheitencodes werden strikter geprüft | UCUM-Codes gemäß neuem ValueSet liefern |
-| `mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc` | inhaltlich aktualisiert | gleich | LOINC-Filterlogik an aktuelle Klassifikation angepasst | Testcode-Validierung kann sich ändern | Phenotyp-Codes gegen neues Filterergebnis revalidieren |
-| `mii-vs-mikrobio-empfindlichkeit-genotyp-loinc` | inhaltlich aktualisiert | gleich | LOINC-Filterlogik und Benennung harmonisiert | Testcode-Validierung kann sich ändern | Genotyp-Codes gegen neues Filterergebnis revalidieren |
 | `mii-vs-mikrobio-keimzahl-einheiten-ucum` | inhaltlich aktualisiert | gleich | UCUM-Semantik bereinigt (`1` statt `{}`-Ausdrücke) | Einheitencodes/Parserverhalten kann sich ändern | Einheitenmapping und Beispielwerte prüfen |
-| `mii-vs-mikrobio-keimzahl-loinc` | inhaltlich aktualisiert | gleich | 2026-konforme Testauswahl | Testvalidierung kann sich ändern | Keimzahl-Codes gegen aktualisierten Umfang prüfen |
-| `mii-vs-mikrobio-mrgn-klasse-loinc` | inhaltlich aktualisiert | gleich | Klassenbindung aktualisiert | Validierung für Klassenbefunde kann sich ändern | MRGN-Codes gegen aktualisierten Umfang prüfen |
+| `mii-vs-mikrobio-keimzahl-loinc` | inhaltlich aktualisiert | gleich | 2027-konforme Testauswahl | Testvalidierung kann sich ändern | Keimzahl-Codes gegen aktualisierten Umfang prüfen |
 | `mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum` | inhaltlich aktualisiert | gleich | UCUM-Semantik bereinigt (`{}`-freie Modellierung) | Einheitencodes werden strikter geprüft | Einheitenmapping in Pathogenlast-/Molekularbefunden prüfen |
 | `mii-vs-mikrobio-virulenz-loinc` | inhaltlich aktualisiert | gleich | Virulenz-Testumfang aktualisiert | Testvalidierung kann sich ändern | Virulenzcodes gegen aktualisierten Umfang prüfen |
 
@@ -134,8 +126,8 @@ Die Änderungen in diesem Release basieren auf:
 | Artefakt-ID | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
 | `mii-ex-mikrobio-empfindlichkeit-norm` | neu | - | Lokale Extension zur Normabbildung (z. B. System/Version/Kategorie) im Empfindlichkeitskontext | Neue Extension muss bei Normbezug unterstützt werden | Empfindlichkeits-Pipelines um Extension-Mapping ergänzen |
-| `mii-lm-mikrobio-logical-model` | inhaltlich aktualisiert | flachere/ältere Struktur | Kategorieorientierte Neustruktur: Kultur, Determination, Weitere Eigenschaften, Serology Immunology, Diagnostic Report | Mappingdokumente und Implementierungsleitfäden müssen neu zugeordnet werden | Logische Mappings auf neue Knotenstruktur umstellen |
-| `mii-cps-mikrobio-metadata` | inhaltlich aktualisiert | älteres SupportedProfile-Set und IG-Referenz | SupportedProfile auf 2026-Profilset und `ImplementationGuide|2026.0.0-alpha.1` aktualisiert | Capability-basierte Clients prüfen ggf. anderes Profilset | Profil-Discovery/Conformance-Tests gegen neues Set revalidieren |
+| `mii-lm-mikrobio-logical-model` | inhaltlich aktualisiert | flachere/ältere Struktur | Kategorieorientierte Neustruktur: Kultur, Determination, Weitere Eigenschaften, Diagnostic Report | Mappingdokumente und Implementierungsleitfäden müssen neu zugeordnet werden | Logische Mappings auf neue Knotenstruktur umstellen |
+| `mii-cps-mikrobio-metadata` | inhaltlich aktualisiert | älteres SupportedProfile-Set und IG-Referenz | SupportedProfile auf 2027-Profilset und `ImplementationGuide|2027.0.0-alpha.1` aktualisiert | Capability-basierte Clients prüfen ggf. anderes Profilset | Profil-Discovery/Conformance-Tests gegen neues Set revalidieren |
 
 ##### Beispiele & IG-Seitenstruktur
 
@@ -153,7 +145,7 @@ Die Änderungen in diesem Release basieren auf:
 | `mii-exa-mikrobio-nugent-score` | neu | - | Minimalbeispiel für neues Profil | Neues Referenzbeispiel für Implementierer | In Testdatenkatalog aufnehmen |
 | `mii-exa-mikrobio-barlett-score` | neu | - | Minimalbeispiel für neues Profil | Neues Referenzbeispiel für Implementierer | In Testdatenkatalog aufnehmen |
 | `mii-exa-mikrobio-molekulare-pathogenlast` | neu | - | Minimalbeispiel für neues Profil | Neues Referenzbeispiel für Implementierer | In Testdatenkatalog aufnehmen |
-| `mii-exa-mikrobio-kultur-nachweis` | entfernt/abgekündigt | Altbeispiel vorhanden | entfällt zugunsten neuer Kultur-Beispiele | Altbeispiel nicht mehr passend zum 2026-Modell | Abgekündigt; nicht weiter verwenden |
-| `mii-exa-mikrobio-molekulare-diagnostik` | entfernt/abgekündigt | Altbeispiel vorhanden | entfällt zugunsten spezifischer Bestimmung | Altbeispiel nicht mehr passend zum 2026-Modell | Abgekündigt; nicht weiter verwenden |
-| `mii-exa-mikrobio-resistenzgene` | entfernt/abgekündigt | Altbeispiel vorhanden | entfällt zugunsten Determinanten-Profil | Altbeispiel nicht mehr passend zum 2026-Modell | Abgekündigt; nicht weiter verwenden |
-| `mii-exa-mikrobio-resistenzmutation` | entfernt/abgekündigt | Altbeispiel vorhanden | entfällt zugunsten Determinanten-Profil | Altbeispiel nicht mehr passend zum 2026-Modell | Abgekündigt; nicht weiter verwenden |
+| `mii-exa-mikrobio-kultur-nachweis` | entfernt/abgekündigt | Altbeispiel vorhanden | entfällt zugunsten neuer Kultur-Beispiele | Altbeispiel nicht mehr passend zum 2027-Modell | Abgekündigt; nicht weiter verwenden |
+| `mii-exa-mikrobio-molekulare-diagnostik` | entfernt/abgekündigt | Altbeispiel vorhanden | entfällt zugunsten spezifischer Bestimmung | Altbeispiel nicht mehr passend zum 2027-Modell | Abgekündigt; nicht weiter verwenden |
+| `mii-exa-mikrobio-resistenzgene` | entfernt/abgekündigt | Altbeispiel vorhanden | entfällt zugunsten Determinanten-Profil | Altbeispiel nicht mehr passend zum 2027-Modell | Abgekündigt; nicht weiter verwenden |
+| `mii-exa-mikrobio-resistenzmutation` | entfernt/abgekündigt | Altbeispiel vorhanden | entfällt zugunsten Determinanten-Profil | Altbeispiel nicht mehr passend zum 2027-Modell | Abgekündigt; nicht weiter verwenden |

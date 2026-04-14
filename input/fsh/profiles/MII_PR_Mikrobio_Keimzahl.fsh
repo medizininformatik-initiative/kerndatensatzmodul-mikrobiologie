@@ -10,3 +10,4 @@ Description: "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mik
 * valueQuantity
   * code from MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM (required)
 * method = $sct#410681005 // Count of entities (property) (qualifier value)
+* interpretation from MII_VS_Labor_Laborergebnis_Semiquantitativ (required)

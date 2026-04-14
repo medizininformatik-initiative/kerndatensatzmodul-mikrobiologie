@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "mii-lm-mikrobio-logical-model",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de",
-  "version": "2026.0.0-alpha.1",
+  "version": "2027.0.0-alpha.1",
   "name": "MII_LM_Mikrobio_Logical_Model",
   "title": "MII LM Mikrobio Logical Model",
   "status": "active",
@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Logical Model für die grafische Darstellung des Mikrobiologie-Datenmodells 2026 [DE]",
+  "description": "Logical Model für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE]",
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "abstract": false,
@@ -31,7 +31,7 @@
         "id": "mii-lm-mikrobio-logical-model",
         "path": "mii-lm-mikrobio-logical-model",
         "short": "mii lm mikrobio logical model",
-        "definition": "Logical Model für die grafische Darstellung des Mikrobiologie-Datenmodells 2026 [DE]"
+        "definition": "Logical Model für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE]"
       },
       {
         "id": "mii-lm-mikrobio-logical-model.Kultur",
@@ -324,83 +324,6 @@
             "code": "Observation",
             "profile": [
               "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology",
-        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology",
-        "short": "Serology Immunology",
-        "definition": "Serology Immunology",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.SerologieImmunologie",
-        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.SerologieImmunologie",
-        "short": "Serologie Immunologie",
-        "definition": "MII PR Mikrobio Serologie Immunologie",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-serologie-immunologie"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.AntigenAntikoerperQuantitativ",
-        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.AntigenAntikoerperQuantitativ",
-        "short": "Antigen antibody quantitative tests",
-        "definition": "MII PR Mikrobio Antigen Antikoerper Quantitativ",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.Aviditaet",
-        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.Aviditaet",
-        "short": "Avidity (ex component)",
-        "definition": "MII PR Mikrobio Aviditaet",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.Titer",
-        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.Titer",
-        "short": "Titer (ex component)",
-        "definition": "MII PR Mikrobio Titer",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Observation",
-            "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer"
             ]
           }
         ]

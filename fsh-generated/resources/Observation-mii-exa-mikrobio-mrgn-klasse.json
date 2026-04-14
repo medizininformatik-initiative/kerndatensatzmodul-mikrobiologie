@@ -6,6 +6,15 @@
       "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
     ]
   },
+  "code": {
+    "coding": [
+      {
+        "code": "99780-9",
+        "system": "http://loinc.org",
+        "display": "Multidrug resistant gram-negative organism classification [Type]"
+      }
+    ]
+  },
   "identifier": [
     {
       "type": {
@@ -17,7 +26,7 @@
         ]
       },
       "system": "https://example.org/fhir/sid/test-lab-results",
-      "value": "mrgn-1",
+      "value": "59826-8_1234567890",
       "assigner": {
         "identifier": {
           "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
@@ -46,14 +55,6 @@
     }
   ],
   "status": "final",
-  "code": {
-    "coding": [
-      {
-        "code": "LA33214-0",
-        "system": "http://loinc.org"
-      }
-    ]
-  },
   "subject": {
     "reference": "Patient/example"
   },
@@ -62,7 +63,8 @@
     "coding": [
       {
         "code": "LA33214-0",
-        "system": "http://loinc.org"
+        "system": "http://loinc.org",
+        "display": "2MRGN"
       }
     ]
   },

@@ -7,11 +7,11 @@ Usage: #definition
 * url = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata"
 * status = #active
 * experimental = false
-* date = "2026-04-02"
-* implementationGuide = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2026.0.0-alpha.1"
+* date = "2027-04-02"
+* implementationGuide = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.1"
 * name = "MII_CPS_Mikrobio_Metadata"
 * title = "MII CPS Mikrobio Metadata"
-* description = "CapabilityStatement für das MII Mikrobiologie Modul 2026."
+* description = "CapabilityStatement für das MII Mikrobiologie Modul 2027."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
 * fhirVersion = #4.0.1

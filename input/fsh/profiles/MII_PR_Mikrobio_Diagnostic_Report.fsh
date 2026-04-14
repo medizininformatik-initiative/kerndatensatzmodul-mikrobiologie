@@ -28,7 +28,6 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
     MII_PR_Mikrobio_Keimzahl or
     MII_PR_Mikrobio_Empfindlichkeit or
     MII_PR_Mikrobio_Mikroskopie or
-    MII_PR_Mikrobio_Serologie_Immunologie or
     MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ or
     MII_PR_Mikrobio_Aviditaet or
     MII_PR_Mikrobio_Ct_Wert or

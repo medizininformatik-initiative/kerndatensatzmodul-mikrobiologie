@@ -5,7 +5,7 @@ Title: "MII PR Mikrobio MRE Klasse"
 Description: "MRE-Klasse beschreibt die Klassifikation multiresistenter Erreger in mikrobiologischen Befunden."
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "Dieses Profil beschreibt die MRE-Klasse." 
-* code = $loinc#94745-7
+* code = $sct#1285113001
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_MRE_Klasse_SNOMEDCT (required)

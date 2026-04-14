@@ -1,10 +1,10 @@
 ## Beschreibung des Informationsmodells für das KDS-Modul Mikrobiologie
 
-Das Erweiterungsmodul Mikrobiologie 2026 modelliert mikrobiologische Befunde als eigenständige Observationen.
+Das Erweiterungsmodul Mikrobiologie 2027 modelliert mikrobiologische Befunde als eigenständige Observationen.
 
 Die wichtigsten Domänen sind:
 
-- Kulturdiagnostik (allgemein/spezifisch)
+- Kulturdiagnostik (allgemein/spezifisch, inkl. Keimzahl, Mikroskopie und phänotypische Empfindlichkeit)
 - Bestimmung (allgemein/spezifisch)
 - Molekulare Zusatzbeobachtungen (CT-Wert, Pathogenlast)
 - Serologie/Immunologie (qualitativ/quantitativ, Avidität, Titer)

@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse",
-  "version": "2026.0.0-alpha.1",
+  "version": "2027.0.0-alpha.1",
   "name": "MII_PR_Mikrobio_MRGN_Klasse",
   "title": "MII PR Mikrobio MRGN Klasse",
   "status": "active",
@@ -63,9 +63,13 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc"
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "99780-9",
+              "system": "http://loinc.org"
+            }
+          ]
         }
       },
       {
