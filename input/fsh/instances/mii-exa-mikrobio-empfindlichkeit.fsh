@@ -17,5 +17,5 @@ Usage: #example
 * valueQuantity.code = #mg/L
 * valueQuantity.unit = "mg/L"
 * interpretation = $v3-ObservationInterpretation#S "Susceptible"
-* interpretation.extension[Norm].valueCodeableConcept = $v3-ObservationInterpretation#S "Susceptible"
+* interpretation.extension[Norm].valueCodeableConcept = MII_CS_Mikrobio_Susceptibility_NORM#EUCAST "EUCAST"
 * specimen.reference = "Specimen/example"

@@ -9,4 +9,4 @@ Description: "Normative susceptibility interpretation metadata (system, version,
 * ^context[0].expression = "Observation.interpretation"
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
-* valueCodeableConcept from MII_VS_Mikrobio_Susceptibility (extensible)
+* valueCodeableConcept from MII_VS_Mikrobio_Susceptibility_NORM (required)

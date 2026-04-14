@@ -329,6 +329,67 @@
         ]
       },
       {
+        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology",
+        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology",
+        "short": "Serology Immunology",
+        "definition": "Serology Immunology",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.AntigenAntikoerperQuantitativ",
+        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.AntigenAntikoerperQuantitativ",
+        "short": "Antigen antibody quantitative tests",
+        "definition": "MII PR Mikrobio Antigen Antikoerper Quantitativ",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.Aviditaet",
+        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.Aviditaet",
+        "short": "Avidity (ex component)",
+        "definition": "MII PR Mikrobio Aviditaet",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.SerologyImmunology.Titer",
+        "path": "mii-lm-mikrobio-logical-model.SerologyImmunology.Titer",
+        "short": "Titer (ex component)",
+        "definition": "MII PR Mikrobio Titer",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer"
+            ]
+          }
+        ]
+      },
+      {
         "id": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie",
         "path": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie",
         "short": "Diagnostic Report",

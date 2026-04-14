@@ -34,6 +34,12 @@ Description: "Logical Model für die grafische Darstellung des Mikrobiologie-Dat
   * MRGNKlasse 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse "MRGN Klasse" "MII PR Mikrobio MRGN Klasse"
   * MREKlasse 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse "MRE Klasse" "MII PR Mikrobio MRE Klasse"
 
+// Serology Immunology
+* SerologyImmunology 0..* BackboneElement "Serology Immunology" "Serology Immunology"
+  * AntigenAntikoerperQuantitativ 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ "Antigen antibody quantitative tests" "MII PR Mikrobio Antigen Antikoerper Quantitativ"
+  * Aviditaet 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet "Avidity (ex component)" "MII PR Mikrobio Aviditaet"
+  * Titer 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer "Titer (ex component)" "MII PR Mikrobio Titer"
+
 // Diagnostic Report
 * DiagnosticReportKategorie 0..* BackboneElement "Diagnostic Report" "Diagnostic Report"
   * MikrobiologieBericht 0..* https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report "MII PR Mikrobio Diagnostic Report" "MII PR Mikrobio Diagnostic Report"
