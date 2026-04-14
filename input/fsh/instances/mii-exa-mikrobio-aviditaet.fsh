@@ -16,6 +16,6 @@ Usage: #example
 * valueQuantity.unit = "%"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #%
-* interpretation = $sct#62482003 "Low"
+* interpretation = $v3-ObservationInterpretation#L "Low"
 * method = $sct#726449005
 * specimen.reference = "Specimen/example"
