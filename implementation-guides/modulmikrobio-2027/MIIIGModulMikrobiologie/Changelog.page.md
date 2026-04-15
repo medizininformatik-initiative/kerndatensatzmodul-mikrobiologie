@@ -23,7 +23,7 @@ Die Änderungen in diesem Release basieren auf:
 - Quantitative Teilbefunde (z. B. Ct-Wert, Nugent-Score, Barlett-Score, Titer, Avidität, Pathogenlast) sind als eigene Profile modelliert.
 - Die Abbildung der Empfindlichkeit erfolgt nun über ein kombiniertes Modell aus interpretation (mit Susceptibility-Bindung) und einer Norm-Extension zur Angabe des verwendeten Interpretationsstandards.
 - Observation-Profile leiten aus `ObservationLab` (Labor-Modul 2026.0.0), der DiagnosticReport aus `DiagnosticReportLab` ab.
-- Für Observationen wird nun die `triggeredBy`-Semantik über die R5-Extension `extension-Observation.triggeredBy` unterstützt; die Art der Auslösung wird über `triggeredBy.type` abgebildet (insbesondere `reflex` für durch vorherige Untersuchungsergebnisse ausgelöste Folgediagnostik).
+- Für Observationen wird nun die `triggeredBy`-Semantik über die R5-Extension `extension-Observation.triggeredBy` unterstützt, um diagnostische Ketten zwischen aufeinander aufbauenden Untersuchungen abzubilden; die Art der Auslösung wird über `triggeredBy.type` modelliert (insbesondere `reflex` für durch vorherige Untersuchungsergebnisse ausgelöste Folgediagnostik).
 - Terminologiebindungen wurden konsolidiert (LOINC/SNOMED/UCUM), inklusive Filter- und Benennungsbereinigung.
 - Die IG-Navigation unter `FHIR-Profile` spiegelt die neue fachliche Gliederung wider: Kultur, Bestimmung, Quantitative tests, Weitere Eigenschaften, Diagnostic Report.
 
