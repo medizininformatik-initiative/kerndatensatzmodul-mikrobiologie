@@ -23,6 +23,7 @@ Die Änderungen in diesem Release basieren auf:
 - Quantitative Teilbefunde (z. B. Ct-Wert, Nugent-Score, Barlett-Score, Titer, Avidität, Pathogenlast) sind als eigene Profile modelliert.
 - Die Abbildung der Empfindlichkeit erfolgt nun über ein kombiniertes Modell aus interpretation (mit Susceptibility-Bindung) und einer Norm-Extension zur Angabe des verwendeten Interpretationsstandards.
 - Observation-Profile leiten aus `ObservationLab` (Labor-Modul 2026.0.0), der DiagnosticReport aus `DiagnosticReportLab` ab.
+- Für Observationen wird nun die `triggeredBy`-Semantik über die R5-Extension `extension-Observation.triggeredBy` unterstützt; die Art der Auslösung wird über `triggeredBy.type` abgebildet (insbesondere `reflex` für durch vorherige Untersuchungsergebnisse ausgelöste Folgediagnostik).
 - Terminologiebindungen wurden konsolidiert (LOINC/SNOMED/UCUM), inklusive Filter- und Benennungsbereinigung.
 - Die IG-Navigation unter `FHIR-Profile` spiegelt die neue fachliche Gliederung wider: Kultur, Bestimmung, Quantitative tests, Weitere Eigenschaften, Diagnostic Report.
 
@@ -124,6 +125,7 @@ Die Änderungen in diesem Release basieren auf:
 | Artefakt-ID | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
 | `mii-ex-mikrobio-empfindlichkeit-norm` | neu | - | Lokale Extension zur Normabbildung (z. B. System/Version/Kategorie) im Empfindlichkeitskontext | Neue Extension muss bei Normbezug unterstützt werden | Empfindlichkeits-Pipelines um Extension-Mapping ergänzen |
+| `extension-Observation.triggeredBy` | neu verwendet | bislang nicht im IG genutzt | R5-Extension zur Abbildung auslösender vorheriger Untersuchungsergebnisse in Observationen; die Auslöseart wird über `triggeredBy.type` modelliert (u. a. `reflex`) | Systeme müssen Triggerbeziehungen und die fachliche Auslöseart (`type`) verarbeiten können | Vorhandene Trigger-Informationen inkl. Auslöseart auf `triggeredBy`/`triggeredBy.type` mappen |
 | `mii-lm-mikrobio-logical-model` | inhaltlich aktualisiert | flachere/ältere Struktur | Kategorieorientierte Neustruktur: Kultur, Bestimmung, Quantitative tests, Weitere Eigenschaften, Diagnostic Report | Mappingdokumente und Implementierungsleitfäden müssen neu zugeordnet werden | Logische Mappings auf neue Knotenstruktur umstellen |
 | `mii-cps-mikrobio-metadata` | inhaltlich aktualisiert | älteres SupportedProfile-Set und IG-Referenz | SupportedProfile auf 2027-Profilset und `ImplementationGuide|2027.0.0-alpha.1` aktualisiert | Capability-basierte Clients prüfen ggf. anderes Profilset | Profil-Discovery/Conformance-Tests gegen neues Set revalidieren |
 
