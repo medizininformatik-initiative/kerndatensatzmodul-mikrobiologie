@@ -9,8 +9,8 @@ Usage: #example
 * category.coding[loinc-observation] = $loinc#26436-6
 * category.coding[observation-category] = $observation-category#laboratory
 * category.coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
-* code = $v3-ObservationInterpretation#S "Susceptible"
+* code = $loinc#89489-9 "Antimicrobial susceptibility predicted from genotype"
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
-* valueCodeableConcept = $sct#131196009 "Susceptible (qualifier value)"
+* valueCodeableConcept = $v3-ObservationInterpretation#S "Susceptible"
 * specimen.reference = "Specimen/example"
