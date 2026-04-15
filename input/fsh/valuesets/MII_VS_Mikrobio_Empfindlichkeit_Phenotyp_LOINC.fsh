@@ -9,4 +9,3 @@ Title: "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]"
     where CLASS = "LP7755-4" and
     PROPERTY = "LP6870-2" and
     STATUS = "ACTIVE" 
-    // TODO: Hinweis im Profil: Codes ohne Method bevorzugt (METHOD_TYP exists false)

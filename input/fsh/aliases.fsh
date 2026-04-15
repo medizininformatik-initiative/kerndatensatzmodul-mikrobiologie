@@ -6,3 +6,4 @@ Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation
 Alias: $sct = http://snomed.info/sct
 Alias: $refgene = https://www.ncbi.nlm.nih.gov/pathogens/refgene/
 Alias: $microbigge = https://www.ncbi.nlm.nih.gov/pathogens/microbigge/
+Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy

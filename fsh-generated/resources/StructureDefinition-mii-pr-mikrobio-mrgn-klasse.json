@@ -43,6 +43,48 @@
   "differential": {
     "element": [
       {
+        "id": "Observation.extension",
+        "path": "Observation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.extension:triggeredBy-r5",
+        "path": "Observation.extension",
+        "sliceName": "triggeredBy-r5",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.extension:triggeredBy-r5.extension:observation",
+        "path": "Observation.extension.extension",
+        "sliceName": "observation",
+        "short": "Triggering observation."
+      },
+      {
+        "id": "Observation.extension:triggeredBy-r5.extension:type",
+        "path": "Observation.extension.extension",
+        "sliceName": "type",
+        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+      },
+      {
         "id": "Observation.category.coding",
         "path": "Observation.category.coding",
         "min": 3

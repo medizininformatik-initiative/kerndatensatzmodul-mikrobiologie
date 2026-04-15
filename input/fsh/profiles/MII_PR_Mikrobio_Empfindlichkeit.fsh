@@ -6,6 +6,7 @@ Description: "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resist
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung." 
 * code from MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC (required)
+* code ^short = "Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert."
 * value[x] only Quantity
 * valueQuantity
   * code from MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM (required)

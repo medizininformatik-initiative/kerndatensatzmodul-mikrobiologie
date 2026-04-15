@@ -5,6 +5,7 @@ Title: "MII PR Mikrobio CT Wert"
 Description: "CT-Wert beschreibt die Quantifizierung des Zyklusschwellenwerts bei Nukleinsäurenachweisen (z. B. Echtzeit-PCR) in einer Probe."
 * insert MIKRO_OBSERVATION_COMMON
 * code from MII_VS_Mikrobio_CT_Wert_LOINC (extensible)
+* code ^short = "Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert."
 * value[x] only Quantity
 * valueQuantity
   * code = #1

@@ -6,6 +6,5 @@ Title: "MII VS Mikrobio CT Wert [LOINC]"
 * ^status = #active
 * include codes from system $loinc
     where PROPERTY = "LP188772-0" and
-      SYSTEM = "LP7735-6" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"

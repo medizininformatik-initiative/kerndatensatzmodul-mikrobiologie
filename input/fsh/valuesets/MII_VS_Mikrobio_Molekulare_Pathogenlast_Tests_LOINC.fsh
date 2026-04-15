@@ -6,31 +6,26 @@ Title: "MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]"
 * ^status = #active
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
-      SYSTEM = "LP7735-6" and
       METHOD_TYP = "LP6464-4" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
-      SYSTEM = "LP7735-6" and
       METHOD_TYP = "LP6404-0" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
-      SYSTEM = "LP7735-6" and
       METHOD_TYP = "LP6462-8" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
-      SYSTEM = "LP7735-6" and
       METHOD_TYP = "LP6463-6" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
-      SYSTEM = "LP7735-6" and
       METHOD_TYP = "LP208998-7" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
