@@ -8,4 +8,4 @@ Description: "MRE-Klasse beschreibt die Klassifikation multiresistenter Erreger 
 * code = $sct#1285113001
 * value[x] only CodeableConcept
 * valueCodeableConcept
-* valueCodeableConcept from MII_VS_Mikrobio_MRE_Klasse_SNOMEDCT (required)
+* valueCodeableConcept from MII_VS_Mikrobio_MRE_Klasse_SNOMEDCT (extensible)

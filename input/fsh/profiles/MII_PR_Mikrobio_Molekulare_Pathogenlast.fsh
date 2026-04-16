@@ -8,5 +8,5 @@ Description: "Molekulare Pathogenlast beschreibt die quantitative Messung der Nu
 * code ^short = "Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert."
 * value[x] only Quantity
 * valueQuantity
-  * code from MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM (required)
+  * code from MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM (extensible)
 * method from MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED (extensible)

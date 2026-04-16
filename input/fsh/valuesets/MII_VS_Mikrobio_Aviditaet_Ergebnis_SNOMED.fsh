@@ -5,4 +5,5 @@ Title: "MII VS Mikrobio Aviditaet Ergebnis"
 * insert Publisher
 * ^status = #active
 * $v3-ObservationInterpretation#L "Low"
+* $v3-ObservationInterpretation#I "Intermediate"
 * $v3-ObservationInterpretation#H "High"

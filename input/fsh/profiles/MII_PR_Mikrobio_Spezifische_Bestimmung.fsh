@@ -8,5 +8,5 @@ Description: "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines 
 * code ^short = "Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert."
 * value[x] only CodeableConcept
 * valueCodeableConcept
-* valueCodeableConcept from MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED (required)
+* valueCodeableConcept from MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED (extensible)
 * method from MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED (extensible)

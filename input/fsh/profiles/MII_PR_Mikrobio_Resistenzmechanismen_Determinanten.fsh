@@ -9,4 +9,4 @@ Description: "Resistenzmechanismen/Determinanten beschreibt den Nachweis von Res
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Detected_Not_Detected_SNOMED (required)
-* method from MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED (extensible)
+* method from MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED (extensible)

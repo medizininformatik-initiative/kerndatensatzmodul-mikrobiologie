@@ -8,5 +8,5 @@ Description: "Mikroskopie beschreibt die morphologische Beobachtung von Mikroorg
 * code = $loinc#105059-0
 * value[x] only CodeableConcept
 * valueCodeableConcept
-* valueCodeableConcept from MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED (required)
-* method from MII_VS_Mikrobio_Morphologie_Methode_SNOMED (required)
+* valueCodeableConcept from MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED (extensible)
+* method from MII_VS_Mikrobio_Morphologie_Methode_SNOMED (extensible)
