@@ -1,8 +1,8 @@
 ## {{page-title}}
 
-Die Arbeiten der Kerndatensatzspezifikationen basieren, wo möglich, auf internationalen Standards und Terminologien. Insbesondere sei hier die [International Patient Summary](http://hl7.org/fhir/uv/ips/history.html) hervorgehoben. Eine Anpassung an die allgemeinen Gegebenheiten des deutschen Gesundheitswesens erfolgt durch die Verwendung der [Deutschen Basisprofile](https://simplifier.net/guide/basisprofil-de-r4/home) von HL7 Deutschland.
+Das Modell basiert auf fachlich abgestimmten Konventionen mit dem RKI, MIO42 und HL7 Europe und berücksichtigt Entwicklungen im europäischen Kontext, insbesondere im Rahmen des European Health Data Space (EHDS).
 
-Alle Elemente des Kerndatensatzes, angepasst an die Details und Anforderungen für die Use Cases der Medizininformatik-Initative, werden nachfolgend in Form von FHIR StructureDefinitions beschrieben. Die Notwendigkeit der Anpassung der FHIR-Profile wird in textueller Form unterhalb der jeweiligen Profile erläutert.
+Die Abbildung diagnostischer Ketten erfolgt in Abstimmung mit HL7 Europe (im Kontext des EHDS) über die R5-Backport-Extension `extension-Observation.triggeredBy`. Diese Modellierung ist fachlich geeigneter als `derivedFrom`, da sie eine auslösende bzw. prozessuale Beziehung zwischen Untersuchungen beschreibt (z. B. Reflexdiagnostik nach einem vorherigen Untersuchungsergebnis). `derivedFrom` impliziert semantisch eine direkte Ableitung eines Ergebnisses aus einer anderen Observation; dies ist für viele mikrobiologische Anwendungsfälle nicht korrekt.
 
 | Hinweis | Verpflichtende / must-support Elemente |
 |---------|---------------------|
