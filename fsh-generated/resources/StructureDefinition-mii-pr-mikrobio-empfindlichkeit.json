@@ -107,7 +107,7 @@
         "path": "Observation.code",
         "short": "Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert.",
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"
         }
       },
@@ -134,7 +134,7 @@
         "id": "Observation.value[x]:valueQuantity.code",
         "path": "Observation.value[x].code",
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum"
         }
       },
