@@ -16,7 +16,7 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
       snomed-microbiology-studies 1..1 MS and
       loinc-microbiology-specialization 0..1
   * coding[snomed-microbiology-studies] = $sct#4341000179107
-  * coding[loinc-microbiology-specialization] from MII_VS_Mikrobio_Befundtyp_LOINC (extensible)
+  * coding[loinc-microbiology-specialization] from MII_VS_Mikrobio_Befundtyp_LOINC (required)
     * obeys dia-ic-highmed-1
 * resultsInterpreter MS
 * specimen ^min = 0
