@@ -4,7 +4,41 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 | Version | Datum | Typ | Inhalt |
 |---------|-------|-----|--------|
+| 2027.0.0-alpha.2 | 16.04.2026 | Inhaltliche Aktualisierung (Preview) | Bindings in mehreren Profilen von `required` auf `extensible` gelockert, Methodenbindung für Resistenzmechanismen auf neues ValueSet umgestellt sowie Terminologieinhalte für Avidität/Morphologie erweitert. |
 | 2027.0.0-alpha.1 | 14.04.2026 | Breaking (Preview) | National und europäisch abgestimmte Neuausrichtung der Mikrobiologie-Modellierung mit neuen/ersetzten Profil-URLs (Canonicals), Observation-orientierter Struktur ohne `Observation.component`, aktualisierten Terminologiebindungen sowie überarbeiteter IG-Navigation. |
+
+### 2027.0.0-alpha.2
+
+#### High-Level (Was hat sich fachlich geändert?)
+
+- Mehrere bislang als `required` definierte Terminologie-Bindings wurden auf `extensible` umgestellt, um fachlich valide lokale Kodierungen weiterhin regelkonform zuzulassen.
+- Für `mii-pr-mikrobio-resistenzmechanismen-determinanten` wurde die Methodenbindung auf ein eigenes Methoden-ValueSet für Resistenzmechanismen umgestellt.
+- Das Ergebnis-ValueSet für Avidität wurde um `Intermediate` ergänzt.
+- Das Morphologie-Ergebnis-ValueSet wurde um zusätzliche Pilzhyphen-Befunde erweitert.
+
+#### Detaillierte Änderungen für Implementierer (pro Artefakt-URL / Canonical)
+
+##### Profile (StructureDefinitions)
+
+| Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
+|-------------|--------------|--------------------------|---------|----------------------------|-------------------|
+| `mii-pr-mikrobio-diagnostic-report` | inhaltlich aktualisiert | Binding auf `MII_VS_Mikrobio_Befundtyp_LOINC` war `required` | Binding auf `MII_VS_Mikrobio_Befundtyp_LOINC` ist `extensible` | Befundtyp-Kodierungen außerhalb des ValueSets können im Ausnahmefall regelkonform abgebildet werden | Lokale Kodierungen weiterhin bevorzugt auf ValueSet-Codes mappen, bei Abweichungen dokumentieren |
+| `mii-pr-mikrobio-empfindlichkeit` | inhaltlich aktualisiert | `code` und `valueQuantity.code` waren `required` gebunden | beide Bindings sind `extensible` | Größere Flexibilität bei Testcode- und Einheitencodierung | Primär ValueSet-Codes verwenden; lokale Codes nur bei fachlicher Notwendigkeit |
+| `mii-pr-mikrobio-keimzahl` | inhaltlich aktualisiert | `code`, `valueQuantity.code`, `interpretation` waren `required` gebunden | diese Bindings sind `extensible` | Reduzierte Ablehnungsrate bei terminologischen Randfällen | Bestehende Mappings beibehalten, Abweichungen auf Konformität prüfen |
+| `mii-pr-mikrobio-mre-klasse` | inhaltlich aktualisiert | `valueCodeableConcept` war `required` gebunden | `valueCodeableConcept` ist `extensible` | Flexiblere Abbildung von Klassifikationskodierungen | Lokale Abweichungen mit Mapping auf Ziel-ValueSet absichern |
+| `mii-pr-mikrobio-mikroskopie` | inhaltlich aktualisiert | Ergebnis- und Methodenbindung waren `required` | Ergebnis- und Methodenbindung sind `extensible` | Höhere Interoperabilität bei heterogenen Methodenkatalogen | Vorrangig ValueSet-Codes liefern; lokale Ergänzungen sauber kennzeichnen |
+| `mii-pr-mikrobio-molekulare-pathogenlast` | inhaltlich aktualisiert | Einheitenbindung (`valueQuantity.code`) war `required` | Einheitenbindung ist `extensible` | Mehr Spielraum bei spezialisierten Einheitencodes | UCUM-Standardcodes weiter bevorzugen |
+| `mii-pr-mikrobio-spezifische-bestimmung` | inhaltlich aktualisiert | Ergebnisbindung war `required` | Ergebnisbindung ist `extensible` | Qualitative Ergebniscodierung wird weniger restriktiv validiert | Mapping auf Ziel-ValueSet weiterhin als Primärpfad nutzen |
+| `mii-pr-mikrobio-voraussichtliche-empfindlichkeit` | inhaltlich aktualisiert | Testcode-Binding war `required` | Testcode-Binding ist `extensible` | Bessere Abdeckung lokaler genotypischer Testkodierungen | Lokale Testcodes gegen Ziel-ValueSet prüfen und dokumentieren |
+| `mii-pr-mikrobio-resistenzmechanismen-determinanten` | inhaltlich aktualisiert | Methodenbindung auf `MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED` | Methodenbindung auf `MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED` | Fachlich präzisere Methodenvalidierung für Resistenzmechanismen | Methodencodes auf neues ValueSet umstellen |
+
+##### Terminologien (ValueSets)
+
+| Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
+|-------------|--------------|--------------------------|---------|----------------------------|-------------------|
+| `mii-vs-mikrobio-resistenzmechanismen-methode-snomed` | neu | - | Eigenes Methoden-ValueSet für den Nachweis von Resistenzgenen/-mutationen (molekulare Verfahren) | Neue Terminologiereferenz im Profil `mii-pr-mikrobio-resistenzmechanismen-determinanten` | Methodencodes auf dieses ValueSet mappen |
+| `mii-vs-mikrobio-aviditaet-ergebnis` | inhaltlich aktualisiert | nur `Low`/`High` | `Intermediate` ergänzt | Ergebnisvalidierung erlaubt nun dreistufige Interpretation | Falls vorhanden, `Intermediate`-Befunde auf das ValueSet mappen |
+| `mii-vs-mikrobio-morphologie-ergebnis-snomed` | inhaltlich aktualisiert | keine expliziten Pilzhyphen-Subtypen | zusätzliche SNOMED-Codes für Hyphenmorphologien ergänzt (u. a. septiert/nicht-septiert, branching/non-branching) | Feinere morphologische Ergebniscodierung möglich | Lokale Mykologie-Kodierungen auf die neuen Konzepte prüfen |
 
 ### 2027.0.0-alpha.1
 
