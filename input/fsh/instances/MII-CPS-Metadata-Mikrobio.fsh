@@ -8,7 +8,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2027-04-02"
-* implementationGuide = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.1"
+* implementationGuide = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.2"
 * name = "MII_CPS_Mikrobio_Metadata"
 * title = "MII CPS Mikrobio Metadata"
 * description = "CapabilityStatement für das MII Mikrobiologie Modul 2027."
