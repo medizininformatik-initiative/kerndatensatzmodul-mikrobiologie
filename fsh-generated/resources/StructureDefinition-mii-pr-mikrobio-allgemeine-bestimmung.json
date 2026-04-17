@@ -84,20 +84,50 @@
         "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
       },
       {
-        "id": "Observation.category.coding",
+        "id": "Observation.category",
+        "path": "Observation.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.category:mibi-category",
+        "path": "Observation.category",
+        "sliceName": "mibi-category",
+        "short": "Mikrobiologie-Kategorie",
+        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "MB",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.category:mibi-category.coding",
         "path": "Observation.category.coding",
         "min": 3
       },
       {
-        "id": "Observation.category.coding:loinc-microbiology-studies",
+        "id": "Observation.category:mibi-category.coding:loinc-microbiology-studies",
         "path": "Observation.category.coding",
         "sliceName": "loinc-microbiology-studies",
         "min": 1,
         "max": "1",
         "patternCoding": {
           "code": "18725-2",
-          "system": "http://loinc.org",
-          "display": "Mikrobiologie"
+          "system": "http://loinc.org"
         },
         "mustSupport": true
       },
