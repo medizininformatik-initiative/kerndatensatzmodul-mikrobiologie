@@ -4,7 +4,7 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 | Version | Datum | Typ | Inhalt |
 |---------|-------|-----|--------|
-| 2027.0.0-alpha.2 | 16.04.2026 | Inhaltliche Aktualisierung (Preview) | Bindings in mehreren Profilen von `required` auf `extensible` gelockert, Methodenbindung für Resistenzmechanismen auf neues ValueSet umgestellt, DiagnosticReport-Kategorie auf MB + optionalen LOINC-Befundtyp ausgerichtet sowie Terminologieinhalte für Avidität/Morphologie erweitert. |
+| 2027.0.0-alpha.2 | 16.04.2026 | Inhaltliche Aktualisierung (Preview) | Bindings in mehreren Profilen von `required` auf `extensible` gelockert, Methodenbindung für Resistenzmechanismen auf neues ValueSet umgestellt, DiagnosticReport-Kategorie auf MB inkl. Coding-Slice und optionalen LOINC-Befundtyp (`mibi-sub-category`) ausgerichtet sowie Terminologieinhalte für Avidität/Morphologie erweitert. |
 | 2027.0.0-alpha.1 | 14.04.2026 | Breaking (Preview) | National und europäisch abgestimmte Neuausrichtung der Mikrobiologie-Modellierung mit neuen/ersetzten Profil-URLs (Canonicals), Observation-orientierter Struktur ohne `Observation.component`, aktualisierten Terminologiebindungen sowie überarbeiteter IG-Navigation. |
 
 ### 2027.0.0-alpha.2
@@ -13,7 +13,7 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 - Mehrere bislang als `required` definierte Terminologie-Bindings wurden auf `extensible` umgestellt, um fachlich valide lokale Kodierungen weiterhin regelkonform zuzulassen.
 - Für `mii-pr-mikrobio-resistenzmechanismen-determinanten` wurde die Methodenbindung auf ein eigenes Methoden-ValueSet für Resistenzmechanismen umgestellt.
-- Für `mii-pr-mikrobio-diagnostic-report` wurde die Kategoriebelegung auf `v2-0074#MB` (Microbiology) plus optionalen LOINC-Befundtyp geändert; ein SNOMED-Category-Code ist hierfür nicht mehr erforderlich.
+- Für `mii-pr-mikrobio-diagnostic-report` wurde die Kategoriebelegung auf `v2-0074#MB` (Microbiology) plus optionalen LOINC-Befundtyp geändert; dabei wird `MB` zusätzlich als Coding-Slice (`v2-microbiology`) geführt und der Befundtyp über `mibi-sub-category` abgebildet. Ein SNOMED-Category-Code ist hierfür nicht mehr erforderlich.
 - Die gemeinsamen `category`-Regeln der mikrobiologischen Observation-Profile wurden so angepasst, dass Mikrobiologie explizit über einen eigenen `mibi-category`-Slice modelliert wird; aufgrund der aktuellen Vererbung aus dem Labor-Parent verbleiben die Labor-Kodes dabei vorerst im selben Slice.
 - Das Ergebnis-ValueSet für Avidität wurde um `Intermediate` ergänzt.
 - Das Morphologie-Ergebnis-ValueSet wurde um zusätzliche Pilzhyphen-Befunde erweitert.
@@ -23,7 +23,7 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 ##### Profile (StructureDefinitions)
 
 Gemeinsame Anpassung für mikrobiologische Observation-Profile:
-Die `category`-Abbildung wurde vereinheitlicht. Mikrobiologie wird nun über einen eigenen `mibi-category`-Slice modelliert. Aufgrund der aktuellen Constraints aus `ObservationLab` verbleiben die geerbten Labor-Kodes (`loinc-observation`, `observation-category`) vorerst in diesem Slice; eine weitere Trennung ist für ein Folge-Release vorgesehen, sobald der Labor-Parent entsprechend angepasst ist.
+Die `category`-Abbildung wurde vereinheitlicht. Mikrobiologie wird nun über einen eigenen `mibi-category`-Slice modelliert, inkl. Coding-Slice `v2-microbiology` (`v2-0074#MB`, `1..1`) sowie optional `loinc-microbiology-studies` (`loinc#18725-2`, `0..1`). Aufgrund der aktuellen Constraints aus `ObservationLab` verbleiben die geerbten Labor-Kodes (`loinc-observation`, `observation-category`) vorerst im selben Slice; eine weitere Trennung ist für ein Folge-Release vorgesehen, sobald der Labor-Parent entsprechend angepasst ist. Diese zukünftige Anpassung wird voll kompatibel sein, es wird nur die Darstellung des Profils verbessert.
 
 | Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
@@ -35,7 +35,7 @@ Die `category`-Abbildung wurde vereinheitlicht. Mikrobiologie wird nun über ein
 | `mii-pr-mikrobio-spezifische-bestimmung` | inhaltlich aktualisiert | Ergebnisbindung war `required` | Ergebnisbindung ist `extensible` | Qualitative Ergebniscodierung wird weniger restriktiv validiert | Mapping auf Ziel-ValueSet weiterhin als Primärpfad nutzen |
 | `mii-pr-mikrobio-voraussichtliche-empfindlichkeit` | inhaltlich aktualisiert | Testcode-Binding war `required` | Testcode-Binding ist `extensible` | Bessere Abdeckung lokaler genotypischer Testkodierungen | Lokale Testcodes gegen Ziel-ValueSet prüfen und dokumentieren |
 | `mii-pr-mikrobio-resistenzmechanismen-determinanten` | inhaltlich aktualisiert | Methodenbindung auf `MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED` | Methodenbindung auf `MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED` | Fachlich präzisere Methodenvalidierung für Resistenzmechanismen | Methodencodes auf neues ValueSet umstellen |
-| `mii-pr-mikrobio-diagnostic-report` | inhaltlich aktualisiert | mikrobiologische Kategorie über SCT-Code im Category-Coding und zusätzliche Invariante abgesichert | mikrobiologische Kategorie über `mibi-category` (`v2-0074#MB`) sowie optional `mibi-category-loinc` (`mii-vs-mikrobio-befundtyp-loinc`) modelliert | Category-Befüllung ist konsistenter zum Parent-Profil; keine zusätzliche SCT-Category-Kodierung erforderlich; LOINC-Slice ist optional und dient der feineren Kategorisierung des Befundes | Producer/Mapper auf verpflichtend `mibi-category` umstellen; `mibi-category-loinc` nur bei Bedarf befüllen |
+| `mii-pr-mikrobio-diagnostic-report` | inhaltlich aktualisiert | mikrobiologische Kategorie über SCT-Code im Category-Coding und zusätzliche Invariante abgesichert | mikrobiologische Kategorie über `mibi-category` (`v2-0074#MB`) mit Coding-Slice `v2-microbiology` (`1..1`) sowie optionalem Coding-Slice `loinc-microbiology-studies` (`loinc#18725-2`, `0..1`) modelliert; zusätzlicher optionaler Kategorie-Slice `mibi-sub-category` (`mii-vs-mikrobio-befundtyp-loinc`) | Category-Befüllung ist konsistenter zum Parent-Profil; keine zusätzliche SCT-Category-Kodierung erforderlich; optionale LOINC-Abbildung ist sowohl auf Coding-Ebene als auch über Sub-Category möglich | Producer/Mapper auf verpflichtend `mibi-category` inkl. `v2-microbiology` umstellen; `loinc-microbiology-studies` und `mibi-sub-category` nur bei Bedarf befüllen |
 
 ##### Terminologien (ValueSets)
 
