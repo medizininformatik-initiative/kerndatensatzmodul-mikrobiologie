@@ -7,17 +7,13 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
 * insert Publisher
 * ^purpose = "Dieses Profil beschreibt den mikrobiologischen DiagnosticReport."
 * basedOn ..1
-* category
-  * coding MS
-    * ^slicing.discriminator.type = #pattern
-    * ^slicing.discriminator.path = "$this"
-    * ^slicing.rules = #open
-  * coding contains
-      snomed-microbiology-studies 1..1 MS and
-      loinc-microbiology-specialization 0..1
-  * coding[snomed-microbiology-studies] = $sct#4341000179107
-  * coding[loinc-microbiology-specialization] from MII_VS_Mikrobio_Befundtyp_LOINC (required)
-    * obeys dia-ic-highmed-1
+* category contains mibi-category 1..1 MS and mibi-category-loinc 0..1 MS
+* category[mibi-category] ^short = "Mikrobiologie-Kategorie"
+* category[mibi-category] ^definition = "Kategorie-Slice für mikrobiologische Befunde"
+* category[mibi-category] ^patternCodeableConcept.coding[+] = $v2-0074#MB //Microbiology
+* category[mibi-category-loinc] ^short = "Mikrobiologie-Kategorie LOINC"
+* category[mibi-category-loinc] ^definition = "Kategorie-Slice für die LOINC-Kodierung von mikrobiologischen Befunden"
+* category[mibi-category-loinc] from MII_VS_Mikrobio_Befundtyp_LOINC (required)
 * resultsInterpreter MS
 * specimen ^min = 0
 * result only Reference(

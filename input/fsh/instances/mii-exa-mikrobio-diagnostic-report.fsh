@@ -8,8 +8,9 @@ Usage: #example
 * identifier[befund].assigner.identifier.value = "DIZ-ID"
 * status = #final
 * category[lab-category].coding[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
-* category[lab-category].coding[1] = $loinc#26436-6 "Laboruntersuchungen"
-* category[lab-category].coding[snomed-microbiology-studies] = $sct#4341000179107
+* category[lab-category].coding[+] = $loinc#26436-6 "Laboruntersuchungen"
+* category[mibi-category] = $v2-0074#MB "Microbiology"
+* category[mibi-category-loinc] = $loinc#92894-5 "Microbiology - bacterial studies"
 * code.coding[loinc-labReport] = $loinc#11502-2 "Laborbericht"
 * basedOn[0].reference = "ServiceRequest/111"
 * subject.reference = "Patient/111"
