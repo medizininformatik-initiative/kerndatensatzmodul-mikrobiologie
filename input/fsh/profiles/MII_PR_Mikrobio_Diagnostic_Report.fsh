@@ -7,13 +7,19 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
 * insert Publisher
 * ^purpose = "Dieses Profil beschreibt den mikrobiologischen DiagnosticReport."
 * basedOn ..1
-* category contains mibi-category 1..1 MS and mibi-category-loinc 0..1 MS
+* category contains mibi-category 1..1 MS and mibi-sub-category 0..1 MS
 * category[mibi-category] ^short = "Mikrobiologie-Kategorie"
 * category[mibi-category] ^definition = "Kategorie-Slice für mikrobiologische Befunde"
 * category[mibi-category] ^patternCodeableConcept.coding[+] = $v2-0074#MB //Microbiology
-* category[mibi-category-loinc] ^short = "Mikrobiologie-Kategorie LOINC"
-* category[mibi-category-loinc] ^definition = "Kategorie-Slice für die LOINC-Kodierung von mikrobiologischen Befunden"
-* category[mibi-category-loinc] from MII_VS_Mikrobio_Befundtyp_LOINC (required)
+* category[mibi-category].coding ^slicing.discriminator.type = #pattern
+* category[mibi-category].coding ^slicing.discriminator.path = "$this"
+* category[mibi-category].coding ^slicing.rules = #open
+* category[mibi-category].coding contains v2-microbiology 1..1 MS and loinc-microbiology-studies 0..1 MS
+* category[mibi-category].coding[v2-microbiology] = $v2-0074#MB // "Microbiology"
+* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 // "Mikrobiologie"
+* category[mibi-sub-category] ^short = "Mikrobiologie-Kategorie LOINC"
+* category[mibi-sub-category] ^definition = "Kategorie-Slice für die LOINC-Kodierung von mikrobiologischen Befunden"
+* category[mibi-sub-category] from MII_VS_Mikrobio_Befundtyp_LOINC (required)
 * resultsInterpreter MS
 * specimen ^min = 0
 * result only Reference(
