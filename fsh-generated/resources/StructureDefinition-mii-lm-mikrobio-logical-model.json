@@ -20,11 +20,877 @@
   ],
   "description": "Logical Model für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE]",
   "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
   "kind": "logical",
   "abstract": false,
   "type": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "mii-lm-mikrobio-logical-model",
+        "path": "mii-lm-mikrobio-logical-model",
+        "short": "mii lm mikrobio logical model",
+        "definition": "Logical Model für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE]",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model",
+          "min": 0,
+          "max": "*"
+        },
+        "condition": [
+          "ele-1"
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div"
+          }
+        ],
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.id",
+        "path": "mii-lm-mikrobio-logical-model.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhirpath/System.String",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.extension",
+        "path": "mii-lm-mikrobio-logical-model.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Kultur",
+        "path": "mii-lm-mikrobio-logical-model.Kultur",
+        "short": "Kultur",
+        "definition": "Kultur",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Kultur",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Kultur.AllgemeineKultur",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.AllgemeineKultur",
+        "short": "Allgemeine Kultur",
+        "definition": "MII PR Mikrobio Allgemeine Kultur",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Kultur.AllgemeineKultur",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Kultur.Mikroskopie",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.Mikroskopie",
+        "short": "Mikroskopie",
+        "definition": "MII PR Mikrobio Mikroskopie",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Kultur.Mikroskopie",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Kultur.BarlettScore",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.BarlettScore",
+        "short": "Barlett Score",
+        "definition": "MII PR Mikrobio Barlett Score",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Kultur.BarlettScore",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Kultur.NugentScore",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.NugentScore",
+        "short": "Nugent Score",
+        "definition": "MII PR Mikrobio Nugent Score",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Kultur.NugentScore",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Kultur.Keimzahl",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.Keimzahl",
+        "short": "Keimzahl",
+        "definition": "MII PR Mikrobio Keimzahl",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Kultur.Keimzahl",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Kultur.Empfindlichkeit",
+        "path": "mii-lm-mikrobio-logical-model.Kultur.Empfindlichkeit",
+        "short": "Empfindlichkeit",
+        "definition": "MII PR Mikrobio Empfindlichkeit",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Kultur.Empfindlichkeit",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Bestimmung",
+        "path": "mii-lm-mikrobio-logical-model.Bestimmung",
+        "short": "Bestimmung",
+        "definition": "Bestimmung",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Bestimmung",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Bestimmung.AllgemeineBestimmung",
+        "path": "mii-lm-mikrobio-logical-model.Bestimmung.AllgemeineBestimmung",
+        "short": "Allgemeine Bestimmung",
+        "definition": "MII PR Mikrobio Allgemeine Bestimmung",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Bestimmung.AllgemeineBestimmung",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Bestimmung.SpezifischeBestimmung",
+        "path": "mii-lm-mikrobio-logical-model.Bestimmung.SpezifischeBestimmung",
+        "short": "Spezifische Bestimmung",
+        "definition": "MII PR Mikrobio Spezifische Bestimmung",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Bestimmung.SpezifischeBestimmung",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.Bestimmung.CtWert",
+        "path": "mii-lm-mikrobio-logical-model.Bestimmung.CtWert",
+        "short": "Ct-Wert",
+        "definition": "MII PR Mikrobio CT Wert",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.Bestimmung.CtWert",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften",
+        "short": "Weitere Eigenschaften",
+        "definition": "Weitere Eigenschaften",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.Virulenzfaktor",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.Virulenzfaktor",
+        "short": "Virulenz",
+        "definition": "MII PR Mikrobio Virulenzfaktor",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.Virulenzfaktor",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.ResistenzmechanismenDeterminanten",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.ResistenzmechanismenDeterminanten",
+        "short": "Resistenzmechanismus",
+        "definition": "MII PR Mikrobio Resistenzmechanismen Determinanten",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.ResistenzmechanismenDeterminanten",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.MRGNKlasse",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.MRGNKlasse",
+        "short": "MRGN Klasse",
+        "definition": "MII PR Mikrobio MRGN Klasse",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.MRGNKlasse",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
+        "short": "Voraussichtliche Empfindlichkeit",
+        "definition": "MII PR Mikrobio Voraussichtliche Empfindlichkeit",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.MREKlasse",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.MREKlasse",
+        "short": "MRE Klasse",
+        "definition": "MII PR Mikrobio MRE Klasse",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.MREKlasse",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.Aviditaet",
+        "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.Aviditaet",
+        "short": "Aviditaet",
+        "definition": "MII PR Mikrobio Aviditaet",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.WeitereEigenschaften.Aviditaet",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.QuantitativeTests",
+        "path": "mii-lm-mikrobio-logical-model.QuantitativeTests",
+        "short": "Quantitative tests",
+        "definition": "Quantitative tests",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.QuantitativeTests",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.QuantitativeTests.AntigenAntikoerperQuantitativ",
+        "path": "mii-lm-mikrobio-logical-model.QuantitativeTests.AntigenAntikoerperQuantitativ",
+        "short": "Antigen Antikoerper Tests",
+        "definition": "MII PR Mikrobio Antigen Antikoerper Quantitativ",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.QuantitativeTests.AntigenAntikoerperQuantitativ",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.QuantitativeTests.Titer",
+        "path": "mii-lm-mikrobio-logical-model.QuantitativeTests.Titer",
+        "short": "Titer",
+        "definition": "MII PR Mikrobio Titer",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.QuantitativeTests.Titer",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.QuantitativeTests.MolekularePathogenlast",
+        "path": "mii-lm-mikrobio-logical-model.QuantitativeTests.MolekularePathogenlast",
+        "short": "Molekulare Pathogenlast",
+        "definition": "MII PR Mikrobio Molekulare Pathogenlast",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.QuantitativeTests.MolekularePathogenlast",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Observation",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie",
+        "path": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie",
+        "short": "Diagnostic Report",
+        "definition": "Diagnostic Report",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie.MikrobiologieBericht",
+        "path": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie.MikrobiologieBericht",
+        "short": "MII PR Mikrobio Diagnostic Report",
+        "definition": "MII PR Mikrobio Diagnostic Report",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "mii-lm-mikrobio-logical-model.DiagnosticReportKategorie.MikrobiologieBericht",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "DiagnosticReport",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      }
+    ]
+  },
   "differential": {
     "element": [
       {

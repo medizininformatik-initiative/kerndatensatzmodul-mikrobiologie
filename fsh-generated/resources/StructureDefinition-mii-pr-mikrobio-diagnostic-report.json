@@ -49,50 +49,36 @@
       },
       {
         "id": "DiagnosticReport.category",
-        "path": "DiagnosticReport.category"
+        "path": "DiagnosticReport.category",
+        "min": 3
       },
       {
-        "id": "DiagnosticReport.category.coding",
-        "path": "DiagnosticReport.category.coding",
-        "slicing": {
-          "discriminator": [
+        "id": "DiagnosticReport.category:mibi-category",
+        "path": "DiagnosticReport.category",
+        "sliceName": "mibi-category",
+        "short": "Mikrobiologie-Kategorie",
+        "definition": "Kategorie-Slice für mikrobiologische Befunde",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
             {
-              "type": "pattern",
-              "path": "$this"
+              "code": "MB",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
             }
-          ],
-          "rules": "open"
-        },
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "DiagnosticReport.category.coding:snomed-microbiology-studies",
-        "path": "DiagnosticReport.category.coding",
-        "sliceName": "snomed-microbiology-studies",
-        "min": 1,
-        "max": "1",
-        "patternCoding": {
-          "code": "4341000179107",
-          "system": "http://snomed.info/sct"
+          ]
         },
         "mustSupport": true
       },
       {
-        "id": "DiagnosticReport.category.coding:loinc-microbiology-specialization",
-        "path": "DiagnosticReport.category.coding",
-        "sliceName": "loinc-microbiology-specialization",
-        "min": 0,
+        "id": "DiagnosticReport.category:mibi-category-loinc",
+        "path": "DiagnosticReport.category",
+        "sliceName": "mibi-category-loinc",
+        "short": "Mikrobiologie-Kategorie LOINC",
+        "definition": "Kategorie-Slice für die LOINC-Kodierung von mikrobiologischen Befunden",
+        "min": 1,
         "max": "1",
-        "constraint": [
-          {
-            "key": "dia-ic-highmed-1",
-            "human": "Microbiology LOINC Spezialisierungen dürfen nur ausgewählt werden, falls der Report als Microbiology studies kodiert wurde",
-            "source": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report",
-            "severity": "error",
-            "expression": "%resource.category.where(coding.where(code = '18725-2' and system = 'http://loinc.org').exists()).exists()"
-          }
-        ],
+        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-befundtyp-loinc"
