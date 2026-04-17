@@ -14,12 +14,16 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 - Mehrere bislang als `required` definierte Terminologie-Bindings wurden auf `extensible` umgestellt, um fachlich valide lokale Kodierungen weiterhin regelkonform zuzulassen.
 - Für `mii-pr-mikrobio-resistenzmechanismen-determinanten` wurde die Methodenbindung auf ein eigenes Methoden-ValueSet für Resistenzmechanismen umgestellt.
 - Für `mii-pr-mikrobio-diagnostic-report` wurde die Kategoriebelegung auf `v2-0074#MB` (Microbiology) plus optionalen LOINC-Befundtyp geändert; ein SNOMED-Category-Code ist hierfür nicht mehr erforderlich.
+- Die gemeinsamen `category`-Regeln der mikrobiologischen Observation-Profile wurden so angepasst, dass Mikrobiologie explizit über einen eigenen `mibi-category`-Slice modelliert wird; aufgrund der aktuellen Vererbung aus dem Labor-Parent verbleiben die Labor-Kodes dabei vorerst im selben Slice.
 - Das Ergebnis-ValueSet für Avidität wurde um `Intermediate` ergänzt.
 - Das Morphologie-Ergebnis-ValueSet wurde um zusätzliche Pilzhyphen-Befunde erweitert.
 
 #### Detaillierte Änderungen für Implementierer (pro Artefakt-URL / Canonical)
 
 ##### Profile (StructureDefinitions)
+
+Gemeinsame Anpassung für mikrobiologische Observation-Profile:
+Die `category`-Abbildung wurde vereinheitlicht. Mikrobiologie wird nun über einen eigenen `mibi-category`-Slice modelliert. Aufgrund der aktuellen Constraints aus `ObservationLab` verbleiben die geerbten Labor-Kodes (`loinc-observation`, `observation-category`) vorerst in diesem Slice; eine weitere Trennung ist für ein Folge-Release vorgesehen, sobald der Labor-Parent entsprechend angepasst ist.
 
 | Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
