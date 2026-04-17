@@ -15,6 +15,7 @@ RuleSet: MIKRO_OBSERVATION_COMMON
 // TODO: after: https://github.com/medizininformatik-initiative/kerndatensatzmodul-labor/issues/66 is applied, the loinc codings will be removed
 * category[mibi-category].coding[loinc-observation] = $loinc#26436-6
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory
-* category[mibi-category].coding contains loinc-microbiology-studies 1..1 MS
+* category[mibi-category].coding contains v2-microbiology 1..1 MS and loinc-microbiology-studies 0..1 MS
+* category[mibi-category].coding[v2-microbiology] = $v2-0074#MB // "Microbiology"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 // "Mikrobiologie"
 * specimen 1.. MS
