@@ -3,10 +3,11 @@ fhirVersion: 4.0.1
 FSHOnly: true
 applyExtensionMetadataToRoot: false
 status: active
-version: 2027.0.0-alpha.2
+version: 2027.0.0-alpha.3
 dependencies:
   de.medizininformatikinitiative.kerndatensatz.laborbefund: 2026.0.0
-  hl7.fhir.uv.xver-r5.r4: 0.1.0
+# TODO: re-add the dependency on the xver package once Simplifier supports it. For now, this is not possible as it causes problems in Snapshot generation.
+#  hl7.fhir.uv.xver-r5.r4: 0.1.0
 
 
 
