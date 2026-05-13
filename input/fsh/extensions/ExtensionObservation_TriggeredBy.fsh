@@ -7,28 +7,6 @@ Id: ext-R5-Observation.triggeredBy
 Title: "R5: Triggering observation(s) (new)"
 Description: "R5: `Observation.triggeredBy` (new:BackboneElement)"
 Context: Observation
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-* ^extension[=].valueCode = #fhir
-* ^extension[+].extension[0].url = "packageId"
-* ^extension[=].extension[=].valueId = "hl7.fhir.uv.xver-r5.r4"
-* ^extension[=].extension[+].url = "version"
-* ^extension[=].extension[=].valueString = "0.1.0"
-* ^extension[=].extension[+].url = "uri"
-* ^extension[=].extension[=].valueUri = "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
-* ^extension[=].url = "http://hl7.org/fhir/StructureDefinition/package-source"
-* ^extension[+].extension[0].url = "startFhirVersion"
-* ^extension[=].extension[=].valueCode = #4.0
-* ^extension[=].extension[+].url = "endFhirVersion"
-* ^extension[=].extension[=].valueCode = #4.0
-* ^extension[=].url = "http://hl7.org/fhir/StructureDefinition/version-specific-use"
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 0
-* ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueInteger.extension.valueCanonical = "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #trial-use
-* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
-* ^extension[=].valueCode.extension.valueCanonical = "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
 * ^url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy"
 * ^version = "0.1.0"
 * ^experimental = false

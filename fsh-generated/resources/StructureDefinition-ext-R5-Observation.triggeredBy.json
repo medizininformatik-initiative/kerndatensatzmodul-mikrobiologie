@@ -1,66 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ext-R5-Observation.triggeredBy",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-      "valueCode": "fhir"
-    },
-    {
-      "extension": [
-        {
-          "url": "packageId",
-          "valueId": "hl7.fhir.uv.xver-r5.r4"
-        },
-        {
-          "url": "version",
-          "valueString": "0.1.0"
-        },
-        {
-          "url": "uri",
-          "valueUri": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
-        }
-      ],
-      "url": "http://hl7.org/fhir/StructureDefinition/package-source"
-    },
-    {
-      "extension": [
-        {
-          "url": "startFhirVersion",
-          "valueCode": "4.0"
-        },
-        {
-          "url": "endFhirVersion",
-          "valueCode": "4.0"
-        }
-      ],
-      "url": "http://hl7.org/fhir/StructureDefinition/version-specific-use"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
-      "valueInteger": 0,
-      "_valueInteger": {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-            "valueCanonical": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
-          }
-        ]
-      }
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-      "valueCode": "trial-use",
-      "_valueCode": {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
-            "valueCanonical": "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"
-          }
-        ]
-      }
-    }
-  ],
   "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy",
   "version": "0.1.0",
   "name": "ExtensionObservation_TriggeredBy",
