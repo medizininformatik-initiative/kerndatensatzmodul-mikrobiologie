@@ -57,6 +57,23 @@
       }
     }
   ],
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "observation",
+          "valueReference": {
+            "reference": "Observation/mii-exa-mikrobio-allgemeine-kultur"
+          }
+        },
+        {
+          "url": "type",
+          "valueCode": "reflex"
+        }
+      ],
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy"
+    }
+  ],
   "status": "final",
   "subject": {
     "reference": "Patient/example"

@@ -12,6 +12,8 @@ Usage: #example
 * code = $loinc#41852-5
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
+* extension[triggeredBy-r5].extension[observation].valueReference = Reference(mii-exa-mikrobio-allgemeine-kultur)
+* extension[triggeredBy-r5].extension[type].valueCode = #reflex
 * valueCodeableConcept = $sct#52499004
 * method = $sct#278289002
 * specimen.reference = "Specimen/example"

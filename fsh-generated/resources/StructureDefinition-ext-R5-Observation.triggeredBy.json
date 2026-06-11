@@ -1,0 +1,179 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ext-R5-Observation.triggeredBy",
+  "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy",
+  "version": "0.1.0",
+  "name": "ExtensionObservation_TriggeredBy",
+  "title": "R5: Triggering observation(s) (new)",
+  "status": "active",
+  "experimental": false,
+  "publisher": "FHIR Infrastructure",
+  "contact": [
+    {
+      "name": "FHIR Infrastructure",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/fiwg"
+        }
+      ]
+    }
+  ],
+  "description": "R5: `Observation.triggeredBy` (new:BackboneElement)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "001",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "purpose": "This extension is part of the cross-version definitions generated to enable use of the\r\nelement `Observation.triggeredBy` as defined in FHIR R5\r\nin FHIR R4.\r\n\r\nThe source element is defined as:\r\n`Observation.triggeredBy` 0..* `BackboneElement`\r\n\r\nAcross FHIR versions, the element set has been mapped as:\r\n*  R5: `Observation.triggeredBy` 0..* `BackboneElement`\r\n\r\nFollowing are the generation technical comments:\r\nElement `Observation.triggeredBy` has a context of Observation based on following the parent source element upwards and mapping to `Observation`.\nElement `Observation.triggeredBy` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Observation",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "R5: Triggering observation(s) (new)",
+        "definition": "R5: `Observation.triggeredBy` (new:BackboneElement)",
+        "comment": "Element `Observation.triggeredBy` has a context of Observation based on following the parent source element upwards and mapping to `Observation`.\nElement `Observation.triggeredBy` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element)."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "min": 2
+      },
+      {
+        "id": "Extension.extension:observation",
+        "path": "Extension.extension",
+        "sliceName": "observation",
+        "short": "R5: Triggering observation (new)",
+        "definition": "R5: `Observation.triggeredBy.observation` (new:Reference(Observation))",
+        "comment": "Element `Observation.triggeredBy.observation` is part of an existing definition because parent element `Observation.triggeredBy` requires a cross-version extension.\nElement `Observation.triggeredBy.observation` has a context of Observation based on following the parent source element upwards and mapping to `Observation`.\nElement `Observation.triggeredBy.observation` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `Observation.triggeredBy.observation` is part of an existing definition because parent element `Observation.triggeredBy` requires a cross-version extension.\nElement `Observation.triggeredBy.observation` has a context of Observation based on following the parent source element upwards and mapping to `Observation`.\nElement `Observation.triggeredBy.observation` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:observation.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:observation.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "observation"
+      },
+      {
+        "id": "Extension.extension:observation.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Triggering observation",
+        "definition": "Reference to the triggering observation.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Observation"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:type",
+        "path": "Extension.extension",
+        "sliceName": "type",
+        "short": "R5: reflex | repeat | re-run (new)",
+        "definition": "R5: `Observation.triggeredBy.type` (new:code)",
+        "comment": "Element `Observation.triggeredBy.type` is part of an existing definition because parent element `Observation.triggeredBy` requires a cross-version extension.\nElement `Observation.triggeredBy.type` has a context of Observation based on following the parent source element upwards and mapping to `Observation`.\nElement `Observation.triggeredBy.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `Observation.triggeredBy.type` is part of an existing definition because parent element `Observation.triggeredBy` requires a cross-version extension.\nElement `Observation.triggeredBy.type` has a context of Observation based on following the parent source element upwards and mapping to `Observation`.\nElement `Observation.triggeredBy.type` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:type.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:type.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "type"
+      },
+      {
+        "id": "Extension.extension:type.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "reflex | repeat | re-run",
+        "definition": "The type of trigger.\nReflex | Repeat | Re-run.",
+        "min": 1,
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/uv/xver/ValueSet/R5-observation-triggeredbytype-for-R4|0.1.0",
+          "description": "The type of TriggeredBy Observation."
+        }
+      },
+      {
+        "id": "Extension.extension:reason",
+        "path": "Extension.extension",
+        "sliceName": "reason",
+        "short": "R5: Reason that the observation was triggered (new)",
+        "definition": "R5: `Observation.triggeredBy.reason` (new:string)",
+        "comment": "Element `Observation.triggeredBy.reason` is part of an existing definition because parent element `Observation.triggeredBy` requires a cross-version extension.\nElement `Observation.triggeredBy.reason` has a context of Observation based on following the parent source element upwards and mapping to `Observation`.\nElement `Observation.triggeredBy.reason` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "requirements": "Element `Observation.triggeredBy.reason` is part of an existing definition because parent element `Observation.triggeredBy` requires a cross-version extension.\nElement `Observation.triggeredBy.reason` has a context of Observation based on following the parent source element upwards and mapping to `Observation`.\nElement `Observation.triggeredBy.reason` has no mapping targets in FHIR R4. Typically, this is because the element has been added (is a new element).",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:reason.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:reason.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "reason"
+      },
+      {
+        "id": "Extension.extension:reason.value[x]",
+        "path": "Extension.extension.value[x]",
+        "short": "Reason that the observation was triggered",
+        "definition": "Provides the reason why this observation was performed as a result of the observation(s) referenced.",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}
