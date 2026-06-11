@@ -4,10 +4,23 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 | Version | Datum | Typ | Inhalt |
 |---------|-------|-----|--------|
-| 2027.0.0-alpha.3 | 11.06.2026 | Inhaltliche Aktualisierung (Preview) | Dependency auf `hl7.fhir.uv.extensions` im Labor-Modul-Release `2026.0.2` auf `hl7.fhir.uv.extensions.r4` korrigiert, damit die verwendeten R4-Extensions korrekt aufgelöst werden. |
+| 2027.0.0-alpha.4 | 11.06.2026 | Technischer Hotfix (Preview) | Dependency auf `hl7.fhir.uv.extensions` im Labor-Modul-Release `2026.0.2` auf `hl7.fhir.uv.extensions.r4` korrigiert, damit die verwendeten R4-Extensions korrekt aufgelöst werden. |
 | 2027.0.0-alpha.3 | 13.05.2026 | Technischer Hotfix (Preview) | Backport der R5-Extension `extension-Observation.triggeredBy` als lokales Artefakt zur Stabilisierung der Snapshot-Generierung, solange Simplifier die `xver`-Packages noch nicht unterstützt. |
 | 2027.0.0-alpha.2 | 16.04.2026 | Inhaltliche Aktualisierung (Preview) | Bindings in mehreren Profilen von `required` auf `extensible` gelockert, Methodenbindung für Resistenzmechanismen auf neues ValueSet umgestellt, DiagnosticReport-Kategorie auf MB inkl. Coding-Slice und optionalen LOINC-Befundtyp (`mibi-sub-category`) ausgerichtet sowie Terminologieinhalte für Avidität/Morphologie erweitert. |
 | 2027.0.0-alpha.1 | 14.04.2026 | Breaking (Preview) | National und europäisch abgestimmte Neuausrichtung der Mikrobiologie-Modellierung mit neuen/ersetzten Profil-URLs (Canonicals), Observation-orientierter Struktur ohne `Observation.component`, aktualisierten Terminologiebindungen sowie überarbeiteter IG-Navigation. |
+
+### 2027.0.0-alpha.4
+
+#### High-Level (Was hat sich fachlich geändert?)
+
+- Update der Dependency auf das Labor-Modul `2026.0.2`, um die dort korrigierte Extension-Dependency zu übernehmen.
+
+#### Detaillierte Änderungen für Implementierer (pro Artefakt-URL / Canonical)
+
+##### Generell
+
+- Die im Labor-Modul vorgenommene Korrektur der Dependency von `hl7.fhir.uv.extensions` auf `hl7.fhir.uv.extensions.r4` wird mit diesem Release übernommen, damit die verwendeten R4-Extensions korrekt aufgelöst werden.
+
 
 ### 2027.0.0-alpha.3
 
@@ -24,18 +37,6 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 | Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
 | `extension-Observation.triggeredBy` | technisch aktualisiert (Backport) | Referenz auf externe R5/XVer-Definition; Snapshot-Generierung auf Simplifier teilweise fehleranfällig | Lokale Backport-Definition als Workaround ergänzt, bis Simplifier `xver` unterstützt | Stabilere Snapshot-Generierung im aktuellen Tooling | Nach verfügbarer `xver`-Unterstützung lokalen Backport entfernen und Dependency wieder direkt nutzen |
-
-### 2027.0.0-alpha.3
-
-#### High-Level (Was hat sich fachlich geändert?)
-
-- Update der Dependency auf das Labor-Modul `2026.0.2`, um die dort korrigierte Extension-Dependency zu übernehmen.
-
-#### Detaillierte Änderungen für Implementierer (pro Artefakt-URL / Canonical)
-
-##### Generell
-
-- Die im Labor-Modul vorgenommene Korrektur der Dependency von `hl7.fhir.uv.extensions` auf `hl7.fhir.uv.extensions.r4` wird mit diesem Release übernommen, damit die verwendeten R4-Extensions korrekt aufgelöst werden.
 
 ### 2027.0.0-alpha.2
 
