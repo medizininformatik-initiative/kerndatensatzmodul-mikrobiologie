@@ -4,8 +4,21 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 | Version | Datum | Typ | Inhalt |
 |---------|-------|-----|--------|
+| 2027.0.0-alpha.3 | 11.06.2026 | Inhaltliche Aktualisierung (Preview) | Dependency auf `hl7.fhir.uv.extensions` im Labor-Modul-Release `2026.0.2` auf `hl7.fhir.uv.extensions.r4` korrigiert, damit die verwendeten R4-Extensions korrekt aufgelöst werden. |
 | 2027.0.0-alpha.2 | 16.04.2026 | Inhaltliche Aktualisierung (Preview) | Bindings in mehreren Profilen von `required` auf `extensible` gelockert, Methodenbindung für Resistenzmechanismen auf neues ValueSet umgestellt, DiagnosticReport-Kategorie auf MB inkl. Coding-Slice und optionalen LOINC-Befundtyp (`mibi-sub-category`) ausgerichtet sowie Terminologieinhalte für Avidität/Morphologie erweitert. |
 | 2027.0.0-alpha.1 | 14.04.2026 | Breaking (Preview) | National und europäisch abgestimmte Neuausrichtung der Mikrobiologie-Modellierung mit neuen/ersetzten Profil-URLs (Canonicals), Observation-orientierter Struktur ohne `Observation.component`, aktualisierten Terminologiebindungen sowie überarbeiteter IG-Navigation. |
+
+### 2027.0.0-alpha.3
+
+#### High-Level (Was hat sich fachlich geändert?)
+
+- Update der Dependency auf das Labor-Modul `2026.0.2`, um die dort korrigierte Extension-Dependency zu übernehmen.
+
+#### Detaillierte Änderungen für Implementierer (pro Artefakt-URL / Canonical)
+
+##### Generell
+
+- Die im Labor-Modul vorgenommene Korrektur der Dependency von `hl7.fhir.uv.extensions` auf `hl7.fhir.uv.extensions.r4` wird mit diesem Release übernommen, damit die verwendeten R4-Extensions korrekt aufgelöst werden.
 
 ### 2027.0.0-alpha.2
 
