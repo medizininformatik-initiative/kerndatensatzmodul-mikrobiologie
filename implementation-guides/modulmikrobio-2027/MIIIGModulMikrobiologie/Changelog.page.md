@@ -4,7 +4,7 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 | Version | Datum | Typ | Inhalt |
 |---------|-------|-----|--------|
-| 2027.0.0-alpha.5 | 18.06.2026 | Inhaltliche/technische Aktualisierung (Preview) | CapabilityStatement erweitert: `DiagnosticReport` mit Mikrobio-Profil aufgenommen, unterstützte Suchparameter für `Observation` und `DiagnosticReport` vervollständigt und  SearchParameter für `Observation.interpretation` sowie `triggeredBy` ergänzt. |
+| 2027.0.0-alpha.5 | 18.06.2026 | Inhaltliche/technische Aktualisierung (Preview) | CapabilityStatement erweitert: `DiagnosticReport` mit Mikrobio-Profil aufgenommen, unterstützte Suchparameter für `Observation` und `DiagnosticReport` vervollständigt, an die SearchParameter des Labor-Moduls angeglichen sowie lokale SearchParameter für `Observation.interpretation` und `triggeredBy` ergänzt. |
 | 2027.0.0-alpha.4 | 11.06.2026 | Technische Korrektur (Preview) | Technische Korrekturen ohne inhaltliche Änderungen am IG; insbesondere Vereinheitlichung der Versionskennzeichnung in den Packages. |
 | 2027.0.0-alpha.3 | 13.05.2026 | Technische Korrektur (Preview) | Re-Release von Packages mit technischen Korrekturen; keine inhaltlichen Änderungen am IG. |
 | 2027.0.0-alpha.2 | 16.04.2026 | Inhaltliche Aktualisierung (Preview) | Bindings in mehreren Profilen von `required` auf `extensible` gelockert, Methodenbindung für Resistenzmechanismen auf neues ValueSet umgestellt, DiagnosticReport-Kategorie auf MB inkl. Coding-Slice und optionalen LOINC-Befundtyp (`mibi-sub-category`) ausgerichtet sowie Terminologieinhalte für Avidität/Morphologie erweitert. |
@@ -16,7 +16,7 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 - Das CapabilityStatement der Metadaten-Schnittstelle wurde vervollständigt, damit Server ihre Unterstützung für mikrobiologische `Observation`- und `DiagnosticReport`-Ressourcen präziser deklarieren können.
 - `DiagnosticReport` wird nun im CapabilityStatement als eigener Resource-Block mit dem Profil `mii-pr-mikrobio-diagnostic-report` ausgewiesen.
-- Die verpflichtend zu unterstützenden Suchparameter wurden für `Observation` und `DiagnosticReport` erweitert und an die genutzten Profilinhalte angepasst.
+- Die verpflichtend zu unterstützenden Suchparameter wurden für `Observation` und `DiagnosticReport` erweitert, an die genutzten Profilinhalte angepasst und mit den SearchParametern des Labor-Moduls abgeglichen.
 - Für die Mikrobio-spezifische Suche auf `Observation.interpretation` und die R5-Extension `Observation.triggeredBy` wurden lokale SearchParameter ergänzt.
 
 #### Detaillierte Änderungen für Implementierer (pro Artefakt-URL / Canonical)
@@ -25,7 +25,7 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 | Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
-| `mii-cps-mikrobio-metadata` | inhaltlich aktualisiert | CapabilityStatement deklarierte ausschließlich `Observation`; Suchparameterliste war unvollständig | zusätzlicher Resource-Block für `DiagnosticReport` mit `mii-pr-mikrobio-diagnostic-report`; erweiterte Suchparameter für `Observation` und `DiagnosticReport` | Server müssen die deklarierte Suche für beide Ressourcentypen entsprechend unterstützen | `/metadata`-Ausgabe und Conformance-Tests gegen die aktualisierte SearchParam-Liste prüfen |
+| `mii-cps-mikrobio-metadata` | inhaltlich aktualisiert | CapabilityStatement deklarierte ausschließlich `Observation`; Suchparameterliste war unvollständig | zusätzlicher Resource-Block für `DiagnosticReport` mit `mii-pr-mikrobio-diagnostic-report`; erweiterte und am Labor-Modul ausgerichtete Suchparameter für `Observation` und `DiagnosticReport` | Server müssen die deklarierte Suche für beide Ressourcentypen entsprechend unterstützen | `/metadata`-Ausgabe und Conformance-Tests gegen die aktualisierte SearchParam-Liste prüfen |
 
 ##### SearchParameter
 
@@ -38,6 +38,7 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 - `Observation`: Neu hinzugekommen sind `_lastUpdated`, `based-on`, `data-absent-reason`, `device`, `derived-from`, `encounter`, `identifier`, `interpretation`, `method`, `specimen`, `status`, `triggered-by`, `value-concept` und `value-quantity`.
 - `DiagnosticReport`: Der Resource-Block ist neu hinzugekommen und deklariert die Suchparameter `_id`, `_profile`, `_lastUpdated`, `status`, `based-on`, `category`, `code`, `subject`, `encounter`, `date`, `issued`, `performer`, `specimen`, `result` und `conclusion`.
+- Die Auswahl der Standard-SearchParameter wurde dabei bewusst an das CapabilityStatement des Labor-Moduls angeglichen; Mikrobio-spezifisch ergänzt wurden die lokalen SearchParameter `interpretation` und `triggered-by`.
 
 ### 2027.0.0-alpha.4
 
