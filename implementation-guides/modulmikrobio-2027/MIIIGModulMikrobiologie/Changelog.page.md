@@ -4,10 +4,40 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 | Version | Datum | Typ | Inhalt |
 |---------|-------|-----|--------|
+| 2027.0.0-alpha.5 | 18.06.2026 | Inhaltliche/technische Aktualisierung (Preview) | CapabilityStatement erweitert: `DiagnosticReport` mit Mikrobio-Profil aufgenommen, unterstützte Suchparameter für `Observation` und `DiagnosticReport` vervollständigt und  SearchParameter für `Observation.interpretation` sowie `triggeredBy` ergänzt. |
 | 2027.0.0-alpha.4 | 11.06.2026 | Technische Korrektur (Preview) | Technische Korrekturen ohne inhaltliche Änderungen am IG; insbesondere Vereinheitlichung der Versionskennzeichnung in den Packages. |
 | 2027.0.0-alpha.3 | 13.05.2026 | Technische Korrektur (Preview) | Re-Release von Packages mit technischen Korrekturen; keine inhaltlichen Änderungen am IG. |
 | 2027.0.0-alpha.2 | 16.04.2026 | Inhaltliche Aktualisierung (Preview) | Bindings in mehreren Profilen von `required` auf `extensible` gelockert, Methodenbindung für Resistenzmechanismen auf neues ValueSet umgestellt, DiagnosticReport-Kategorie auf MB inkl. Coding-Slice und optionalen LOINC-Befundtyp (`mibi-sub-category`) ausgerichtet sowie Terminologieinhalte für Avidität/Morphologie erweitert. |
 | 2027.0.0-alpha.1 | 14.04.2026 | Breaking (Preview) | National und europäisch abgestimmte Neuausrichtung der Mikrobiologie-Modellierung mit neuen/ersetzten Profil-URLs (Canonicals), Observation-orientierter Struktur ohne `Observation.component`, aktualisierten Terminologiebindungen sowie überarbeiteter IG-Navigation. |
+
+### 2027.0.0-alpha.5
+
+#### High-Level (Was hat sich fachlich geändert?)
+
+- Das CapabilityStatement der Metadaten-Schnittstelle wurde vervollständigt, damit Server ihre Unterstützung für mikrobiologische `Observation`- und `DiagnosticReport`-Ressourcen präziser deklarieren können.
+- `DiagnosticReport` wird nun im CapabilityStatement als eigener Resource-Block mit dem Profil `mii-pr-mikrobio-diagnostic-report` ausgewiesen.
+- Die verpflichtend zu unterstützenden Suchparameter wurden für `Observation` und `DiagnosticReport` erweitert und an die genutzten Profilinhalte angepasst.
+- Für die Mikrobio-spezifische Suche auf `Observation.interpretation` und die R5-Extension `Observation.triggeredBy` wurden lokale SearchParameter ergänzt.
+
+#### Detaillierte Änderungen für Implementierer (pro Artefakt-URL / Canonical)
+
+##### CapabilityStatement
+
+| Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
+|-------------|--------------|--------------------------|---------|----------------------------|-------------------|
+| `mii-cps-mikrobio-metadata` | inhaltlich aktualisiert | CapabilityStatement deklarierte ausschließlich `Observation`; Suchparameterliste war unvollständig | zusätzlicher Resource-Block für `DiagnosticReport` mit `mii-pr-mikrobio-diagnostic-report`; erweiterte Suchparameter für `Observation` und `DiagnosticReport` | Server müssen die deklarierte Suche für beide Ressourcentypen entsprechend unterstützen | `/metadata`-Ausgabe und Conformance-Tests gegen die aktualisierte SearchParam-Liste prüfen |
+
+##### SearchParameter
+
+| Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
+|-------------|--------------|--------------------------|---------|----------------------------|-------------------|
+| `Observation-interpretation` | neu | keine lokale Deklaration im CPS | lokaler SearchParameter für `Observation.interpretation` (`token`) und Aufnahme in das CapabilityStatement | Suche nach Interpretation, z. B. Susceptibility-/Aviditätsinterpretationen, kann capability-basiert deklariert werden | Serverindexierung für `Observation.interpretation` prüfen |
+| `Observation-triggered-by` | neu | `triggeredBy` wurde profiliert, aber nicht als Suchparameter deklariert | lokaler SearchParameter für die auslösende Observation innerhalb der R5-Cross-Version-Extension `Observation.triggeredBy` (`reference`) und Aufnahme in das CapabilityStatement | Triggerbeziehungen zwischen mikrobiologischen Observationen können gezielt gesucht werden | Serverindexierung für `extension-Observation.triggeredBy.extension('observation').valueReference` ergänzen |
+
+##### Unterstützte Suchparameter
+
+- `Observation`: Neu hinzugekommen sind `_lastUpdated`, `based-on`, `data-absent-reason`, `device`, `derived-from`, `encounter`, `identifier`, `interpretation`, `method`, `specimen`, `status`, `triggered-by`, `value-concept` und `value-quantity`.
+- `DiagnosticReport`: Der Resource-Block ist neu hinzugekommen und deklariert die Suchparameter `_id`, `_profile`, `_lastUpdated`, `status`, `based-on`, `category`, `code`, `subject`, `encounter`, `date`, `issued`, `performer`, `specimen`, `result` und `conclusion`.
 
 ### 2027.0.0-alpha.4
 
