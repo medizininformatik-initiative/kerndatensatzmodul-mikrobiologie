@@ -13,12 +13,12 @@
       ]
     }
   ],
-  "version": "2027.0.0-alpha.4",
+  "version": "2027.0.0-alpha.5",
   "status": "active",
   "experimental": false,
   "date": "2027-04-02",
   "implementationGuide": [
-    "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.4"
+    "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5"
   ],
   "name": "MII_CPS_Mikrobio_Metadata",
   "title": "MII CPS Mikrobio Metadata",
@@ -92,6 +92,11 @@
               "type": "uri"
             },
             {
+              "name": "_lastUpdated",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+              "type": "date"
+            },
+            {
               "name": "patient",
               "definition": "http://hl7.org/fhir/SearchParameter/clinical-patient",
               "type": "reference"
@@ -99,6 +104,11 @@
             {
               "name": "subject",
               "definition": "http://hl7.org/fhir/SearchParameter/Observation-subject",
+              "type": "reference"
+            },
+            {
+              "name": "based-on",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-based-on",
               "type": "reference"
             },
             {
@@ -122,9 +132,166 @@
               "type": "composite"
             },
             {
+              "name": "data-absent-reason",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason",
+              "type": "token"
+            },
+            {
               "name": "date",
               "definition": "http://hl7.org/fhir/SearchParameter/clinical-date",
               "type": "date"
+            },
+            {
+              "name": "device",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-device",
+              "type": "reference"
+            },
+            {
+              "name": "derived-from",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-derived-from",
+              "type": "reference"
+            },
+            {
+              "name": "encounter",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-encounter",
+              "type": "reference"
+            },
+            {
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+              "type": "token"
+            },
+            {
+              "name": "interpretation",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation",
+              "type": "token"
+            },
+            {
+              "name": "method",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-method",
+              "type": "token"
+            },
+            {
+              "name": "specimen",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-specimen",
+              "type": "reference"
+            },
+            {
+              "name": "status",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-status",
+              "type": "token"
+            },
+            {
+              "name": "triggered-by",
+              "definition": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-triggered-by",
+              "type": "reference"
+            },
+            {
+              "name": "value-concept",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-value-concept",
+              "type": "token"
+            },
+            {
+              "name": "value-quantity",
+              "definition": "http://hl7.org/fhir/SearchParameter/Observation-value-quantity",
+              "type": "quantity"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "type": "DiagnosticReport",
+          "supportedProfile": [
+            "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"
+          ],
+          "interaction": [
+            {
+              "code": "read"
+            },
+            {
+              "code": "search-type"
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "_id",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
+              "type": "token"
+            },
+            {
+              "name": "_profile",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-profile",
+              "type": "uri"
+            },
+            {
+              "name": "_lastUpdated",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+              "type": "date"
+            },
+            {
+              "name": "status",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status",
+              "type": "token"
+            },
+            {
+              "name": "based-on",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-based-on",
+              "type": "reference"
+            },
+            {
+              "name": "category",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-category",
+              "type": "token"
+            },
+            {
+              "name": "code",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-code",
+              "type": "token"
+            },
+            {
+              "name": "subject",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject",
+              "type": "reference"
+            },
+            {
+              "name": "encounter",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-encounter",
+              "type": "reference"
+            },
+            {
+              "name": "date",
+              "definition": "http://hl7.org/fhir/SearchParameter/clinical-date",
+              "type": "date"
+            },
+            {
+              "name": "issued",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-issued",
+              "type": "date"
+            },
+            {
+              "name": "performer",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-performer",
+              "type": "reference"
+            },
+            {
+              "name": "specimen",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen",
+              "type": "reference"
+            },
+            {
+              "name": "result",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-result",
+              "type": "reference"
+            },
+            {
+              "name": "conclusion",
+              "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion",
+              "type": "token"
             }
           ]
         }
