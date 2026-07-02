@@ -28,7 +28,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Validate Resource Status
         uses: patrick-werner/fhir-resource-status-check@1.2.1
