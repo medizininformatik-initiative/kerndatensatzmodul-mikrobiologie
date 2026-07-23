@@ -83,7 +83,7 @@ Description: "This profile describes a microscopy test in microbiology"
     BarlettScore 0..* and
     NameMikroorganismus 0..1
 * component[Morphologie] ^label = "Morphologie"
-  * code = $sct#723198002 "Morphology"
+  * code = $sct#723198002
   * value[x] only CodeableConcept
   * value[x] from MII_VS_Mikrobio_Morphologie_SNOMEDCT (required)
 * component[NugentScore]
