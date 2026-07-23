@@ -5,12 +5,12 @@ Title: "MII VS Mikrobio Serologischer Test Einheiten [UCUM]"
 * insert Publisher
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
-* UCUM#%
-* UCUM#[IU]/mL
-* UCUM#[arb'U]/L
-* UCUM#[arb'U]/mL
-* UCUM#mg/L
-* UCUM#mg/mL
-* UCUM#ug/mL
-* UCUM#ng/mL
-* UCUM#{titer}
+* $ucum#%
+* $ucum#[IU]/mL
+* $ucum#[arb'U]/L
+* $ucum#[arb'U]/mL
+* $ucum#mg/L
+* $ucum#mg/mL
+* $ucum#ug/mL
+* $ucum#ng/mL
+* $ucum#{titer}

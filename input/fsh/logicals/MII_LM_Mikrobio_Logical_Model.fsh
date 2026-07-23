@@ -2,11 +2,11 @@ Logical: MII_LM_Mikrobio_Logical_Model
 Parent: Element
 Id: mii-lm-mikrobio-logical-model
 Title: "MII LM Mikrobio Logical Model"
-Description: "Logical Model für die grafische Darstellung des jeweiligen Art-Decor-Modells [DE]"
+Description: "Logical Model for the graphical reprensentation of the respective Art-Decor Model"
 * insert PR_CS_VS_Version
 * insert Publisher
-* ^url = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de"
-* ^type = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model"
+* ^url = "https://www.medizininformatik-initiative.de/fhir/ext/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model"
+* ^type = "https://www.medizininformatik-initiative.de/fhir/ext/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model"
 * . ^short = "mii lm mikrobio logical model"
 * KulturDiagnostik 0..* BackboneElement "Kultur Diagnostik" "Kultur Diagnostik"
   * Nachweis 0..* http://hl7.org/fhir/StructureDefinition/CodeableConcept "Erreger Nachweis" "Erreger Nachweis"

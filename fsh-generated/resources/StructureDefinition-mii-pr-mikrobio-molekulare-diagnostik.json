@@ -212,7 +212,7 @@
         "patternCoding": {
           "code": "18725-2",
           "system": "http://loinc.org",
-          "display": "Mikrobiologie"
+          "display": "Microbiology studies (set)"
         },
         "mustSupport": true
       },
@@ -230,7 +230,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-diagnostik-loinc"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobiologie/ValueSet/mii-vs-mikrobio-molekulare-diagnostik-loinc"
         }
       },
       {
@@ -263,6 +263,20 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x].extension",
+        "path": "Observation.effective[x].extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
       },
       {
         "id": "Observation.effective[x].extension:QuelleKlinischesBezugsdatum",

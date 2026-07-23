@@ -9,9 +9,9 @@ Usage: #example
     * value = "DIZ-ID"
 * status = #final
 * category
-  * coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
+  * coding[loinc-observation] = $loinc#26436-6 "Laboratory studies (set)"
   * coding[observation-category] = $observation-category#laboratory "Laboratory"
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $sct#117259009 "Microscopy (procedure)"
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2018-11-20T11:05:00+00:00"

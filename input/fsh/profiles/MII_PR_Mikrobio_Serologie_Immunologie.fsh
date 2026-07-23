@@ -44,7 +44,7 @@ Description: "This profile describes the serological and immunological examinati
       loinc-microbiology-studies 1..1 MS
   * coding[loinc-observation] = $loinc#26436-6
   * coding[observation-category] = $observation-category#laboratory
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $sct#252318005
 * code MS
 * code from MII_VS_Mikrobio_Serologie_Immunologie_LOINC (extensible)

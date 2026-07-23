@@ -5,7 +5,7 @@ Title: "MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]"
 * insert Publisher
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
-* include codes from system LOINC
+* include codes from system $loinc
     where CLASS = "LP7755-4" and
     PROPERTY = "LP6870-2" and
     METHOD_TYP = "LP28723-2"

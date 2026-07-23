@@ -9,11 +9,11 @@ Usage: #example
     * value = "DIZ-ID"
 * status = #final
 * category
-  * coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
+  * coding[loinc-observation] = $loinc#26436-6 "Laboratory studies (set)"
   * coding[observation-category] = $observation-category#laboratory "Laboratory"
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code
-  * coding[0] = $loinc#50697-2 "Influenza-Virus A Antigen [Nachweis oder Identität] in Isolat"
+  * coding[0] = $loinc#50697-2 "Influenza virus A Ag [Identifier] in Isolate"
   * coding[+] = $sct#252318005
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2018-11-20T11:05:00+00:00"

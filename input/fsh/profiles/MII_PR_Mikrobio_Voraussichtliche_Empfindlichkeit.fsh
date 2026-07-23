@@ -44,7 +44,7 @@ Description: "This profile describes the expected susceptibility test in microbi
       loinc-microbiology-studies 1..1 MS
   * coding[loinc-observation] = $loinc#26436-6
   * coding[observation-category] = $observation-category#laboratory
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code MS
 * code from $mii-vs-mikrobio-empfindlichkeit-genotyp-loinc (required)
 * subject 1.. MS

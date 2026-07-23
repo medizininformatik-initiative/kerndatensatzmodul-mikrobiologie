@@ -5,9 +5,9 @@ Title: "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]"
 * insert Publisher
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
-* include codes from system LOINC
+* include codes from system $loinc
     where CLASS = "LP7755-4" and
     PROPERTY = "LP6870-2" and
     STATUS = "ACTIVE" and
     ORDER_OBS = "Observation"
-* exclude codes from system LOINC where METHOD_TYP = "LP28723-2"
+* exclude codes from system $loinc where METHOD_TYP = "LP28723-2"

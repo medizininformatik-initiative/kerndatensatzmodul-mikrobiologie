@@ -44,7 +44,7 @@ Description: "This profile describes a molecular diagnostic test in microbiology
       loinc-microbiology-studies 1..1 MS
   * coding[loinc-observation] = $loinc#26436-6
   * coding[observation-category] = $observation-category#laboratory
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#92253-4
 * code MS
 * code from MII_VS_Mikrobio_Molekulare_Diagnostik_LOINC (extensible)

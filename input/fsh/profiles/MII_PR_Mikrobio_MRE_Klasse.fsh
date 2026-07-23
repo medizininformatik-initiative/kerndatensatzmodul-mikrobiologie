@@ -44,7 +44,7 @@ Description: "This profile describes the type of multi-resistant organism"
       loinc-microbiology-studies 1..1 MS
   * coding[loinc-observation] = $loinc#26436-6
   * coding[observation-category] = $observation-category#laboratory
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $sct#1285113001
   * ^label = "MRE Klasse"
 * subject 1.. MS
@@ -57,7 +57,6 @@ Description: "This profile describes the type of multi-resistant organism"
 * value[x] only CodeableConcept
 * value[x] MS
 * valueCodeableConcept 1.. MS
-* valueCodeableConcept only CodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_MRE_Klasse_SNOMEDCT (required)
 * dataAbsentReason MS
 * interpretation MS

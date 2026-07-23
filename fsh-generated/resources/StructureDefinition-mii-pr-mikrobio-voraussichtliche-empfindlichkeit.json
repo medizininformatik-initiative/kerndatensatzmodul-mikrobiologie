@@ -212,7 +212,7 @@
         "patternCoding": {
           "code": "18725-2",
           "system": "http://loinc.org",
-          "display": "Mikrobiologie"
+          "display": "Microbiology studies (set)"
         },
         "mustSupport": true
       },
@@ -255,6 +255,20 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Observation.effective[x].extension",
+        "path": "Observation.effective[x].extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
       },
       {
         "id": "Observation.effective[x].extension:QuelleKlinischesBezugsdatum",

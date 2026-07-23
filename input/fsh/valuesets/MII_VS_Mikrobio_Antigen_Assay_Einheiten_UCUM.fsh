@@ -5,11 +5,11 @@ Title: "MII VS Mikrobio Antigen Assay Einheiten [UCUM]"
 * insert Publisher
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
-* UCUM#ng/mL
-* UCUM#[arb'U]/mL
-* UCUM#{titer}
-* UCUM#%
-* UCUM#/10*5{PMN}
-* UCUM#/{slide}
-* UCUM#[IU]/L
-* UCUM#[arb'U]
+* $ucum#ng/mL
+* $ucum#[arb'U]/mL
+* $ucum#{titer}
+* $ucum#%
+* $ucum#/10*5{PMN}
+* $ucum#/{slide}
+* $ucum#[IU]/L
+* $ucum#[arb'U]

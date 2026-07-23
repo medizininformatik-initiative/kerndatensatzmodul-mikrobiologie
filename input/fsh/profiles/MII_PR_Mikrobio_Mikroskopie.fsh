@@ -44,7 +44,7 @@ Description: "This profile describes a microscopy test in microbiology"
       loinc-microbiology-studies 1..1 MS
   * coding[loinc-observation] = $loinc#26436-6
   * coding[observation-category] = $observation-category#laboratory
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $sct#117259009
 * code MS
 * code from MII_VS_Mikrobio_Mikroskopie_Tests_LOINC (extensible)
@@ -59,7 +59,6 @@ Description: "This profile describes a microscopy test in microbiology"
 * value[x] only CodeableConcept
 * value[x] MS
 * valueCodeableConcept 1.. MS
-* valueCodeableConcept only CodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Qualitative_Labor_Ergebnisse_SNOMEDCT (required)
 * dataAbsentReason MS
 * interpretation ..1 MS
@@ -84,8 +83,7 @@ Description: "This profile describes a microscopy test in microbiology"
     BarlettScore 0..* and
     NameMikroorganismus 0..1
 * component[Morphologie] ^label = "Morphologie"
-//TODO: passt so?
-  * code = $loinc#664-3 //	Microscopic observation [Identifier] in Specimen by Gram stain
+  * code = $sct#723198002 "Morphology"
   * value[x] only CodeableConcept
   * value[x] from MII_VS_Mikrobio_Morphologie_SNOMEDCT (required)
 * component[NugentScore]

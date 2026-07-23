@@ -9,10 +9,10 @@ Usage: #example
     * value = "DIZ-ID"
 * status = #final
 * category
-  * coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
+  * coding[loinc-observation] = $loinc#26436-6 "Laboratory studies (set)"
   * coding[observation-category] = $observation-category#laboratory "Laboratory"
-  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
-* code = $loinc#87380-2 "Escherichia coli Stx2e-Toxin stx2e-Gen [Nachweis] in Isolat mittels Nukleinsäureamplifikation mit Sondendetektion"
+  * coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#87380-2 "Escherichia coli Stx2e toxin stx2e gene [Presence] in Isolate by NAA with probe detection"
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2018-11-20T11:05:00+00:00"
 * valueCodeableConcept = $sct#260373001 "Detected (qualifier value)"
