@@ -66,7 +66,7 @@ Description: "This profile describes a susceptibility test in microbiology"
 * interpretation contains
     EUCAST 0..1 and
     CLSI 0..1
-* interpretation[EUCAST] from $mii-vs-mikrobio-eucast-snomedct (required)
+* interpretation[EUCAST] from MII_VS_Mikrobio_EUCAST_SNOMED_CT (required)
   * coding.version 1..
 * interpretation[CLSI] from MII_VS_Mikrobio_CLSI_HL7 (required)
   * ^label = "CLSI"

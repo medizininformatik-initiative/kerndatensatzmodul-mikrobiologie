@@ -16,8 +16,8 @@ Usage: #example
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2018-11-20T11:05:00+00:00"
 * valueQuantity = 32 'mg/L' "mg/L"
-* interpretation.coding = $mii-vs-mikrobio-eucast-eucast#R "Resistant: A microorganism is categorised as Resistant when there is a high likelihood of therapeutic failure even when there is increased exposure."
-  * version = "2019"
+* interpretation.coding = SNOMED_CT#1306581009 "European Committee on Antimicrobial Susceptibility Testing category 2019 Resistant"
+  * version = "http://snomed.info/sct/11000274103/version/20231115"
 * specimen
   * reference = "Specimen/isolate"
   * display = "Microbial isolate specimen (specimen)"
