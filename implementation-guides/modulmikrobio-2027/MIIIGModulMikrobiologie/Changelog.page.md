@@ -2,13 +2,72 @@
 
 Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
-| Version | Datum | Typ | Inhalt |
-|---------|-------|-----|--------|
-| 2027.0.0-alpha.5 | 18.06.2026 | Inhaltliche/technische Aktualisierung (Preview) | CapabilityStatement erweitert: `DiagnosticReport` mit Mikrobio-Profil aufgenommen, unterstützte Suchparameter für `Observation` und `DiagnosticReport` vervollständigt, an die SearchParameter des Labor-Moduls angeglichen sowie lokale SearchParameter für `Observation.interpretation` und `triggeredBy` ergänzt. |
-| 2027.0.0-alpha.4 | 11.06.2026 | Technische Korrektur (Preview) | Technische Korrekturen ohne inhaltliche Änderungen am IG; insbesondere Vereinheitlichung der Versionskennzeichnung in den Packages. |
-| 2027.0.0-alpha.3 | 13.05.2026 | Technische Korrektur (Preview) | Re-Release von Packages mit technischen Korrekturen; keine inhaltlichen Änderungen am IG. |
+| Version | Datum | Typ | Inhalt                                                                                                                                                                                                                                                                                                                                |
+|---------|-------|-----|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2027.0.0 | tbd | Inhaltliche Aktualisierung | Das Informationsmodell wurde verbessert und verwendet FHIR-Datentypen statt Verweisen auf Profil-Canonicals. Es ist auf drei Logical Models aufgeteilt: Befund, abstrakte Untersuchung und Untersuchungsarten. Neues Profil für die spezifische Kultur, das aus der spezifischen Bestimmung herausgelöst wurde; Kulturergebnisse einheitlich als Wachstum / kein Wachstum, unbestimmbare Ergebnisse über `dataAbsentReason`.                    |
+| 2027.0.0-alpha.5 | 18.06.2026 | Inhaltliche/technische Aktualisierung (Preview) | CapabilityStatement erweitert: `DiagnosticReport` mit Mikrobio-Profil aufgenommen, unterstützte Suchparameter für `Observation` und `DiagnosticReport` vervollständigt, an die SearchParameter des Labor-Moduls angeglichen sowie lokale SearchParameter für `Observation.interpretation` und `triggeredBy` ergänzt.                  |
+| 2027.0.0-alpha.4 | 11.06.2026 | Technische Korrektur (Preview) | Technische Korrekturen ohne inhaltliche Änderungen am IG; insbesondere Vereinheitlichung der Versionskennzeichnung in den Packages.                                                                                                                                                                                                   |
+| 2027.0.0-alpha.3 | 13.05.2026 | Technische Korrektur (Preview) | Re-Release von Packages mit technischen Korrekturen; keine inhaltlichen Änderungen am IG.                                                                                                                                                                                                                                             |
 | 2027.0.0-alpha.2 | 16.04.2026 | Inhaltliche Aktualisierung (Preview) | Bindings in mehreren Profilen von `required` auf `extensible` gelockert, Methodenbindung für Resistenzmechanismen auf neues ValueSet umgestellt, DiagnosticReport-Kategorie auf MB inkl. Coding-Slice und optionalen LOINC-Befundtyp (`mibi-sub-category`) ausgerichtet sowie Terminologieinhalte für Avidität/Morphologie erweitert. |
-| 2027.0.0-alpha.1 | 14.04.2026 | Breaking (Preview) | National und europäisch abgestimmte Neuausrichtung der Mikrobiologie-Modellierung mit neuen/ersetzten Profil-URLs (Canonicals), Observation-orientierter Struktur ohne `Observation.component`, aktualisierten Terminologiebindungen sowie überarbeiteter IG-Navigation. |
+| 2027.0.0-alpha.1 | 14.04.2026 | Breaking (Preview) | National und europäisch abgestimmte Neuausrichtung der Mikrobiologie-Modellierung mit neuen/ersetzten Profil-URLs (Canonicals), Observation-orientierter Struktur ohne `Observation.component`, aktualisierten Terminologiebindungen sowie überarbeiteter IG-Navigation.                                                              |
+
+### 2027.0.0
+
+Datum: tbd
+
+#### High-Level (Was hat sich fachlich geändert?)
+
+- Das Logical Model war bisher ein Verzeichnis der FHIR-Profile: seine Blattelemente waren mit den Canonical-URLs der Profile typisiert und enthielten keine fachlichen Datenelemente. Das Informationsmodell beschreibt jetzt die Datenelemente mit FHIR-Datentypen (`CodeableConcept`, `Quantity`, `Ratio`, `dateTime`, `Coding`, `Reference`).
+- Das Modell ist auf drei Logical Models aufgeteilt. Dadurch lassen sich Bezüge zwischen den Klassen als `Reference` ausdrücken, und die für jede Untersuchung geltenden Angaben werden einmal an einer abstrakten Basisklasse definiert und vererbt, statt bei jeder Untersuchungsart wiederholt zu werden.
+- Rein FHIR-technische Angaben ohne fachlichen Inhalt sind nicht Teil des Informationsmodells; dazu zählen die Kategorie-Slices sowie die Extensions zur alternativen Einheitendarstellung und zur Zahlengenauigkeit.
+- Der zielgerichtete kulturbasierte Nachweis hat ein eigenes Profil erhalten und ist nicht mehr Teil der spezifischen Bestimmung. Abgegrenzt wird über die Methode: erregerspezifische Kultur (LOINC `METHOD_TYP` `LP6429-7`, SNOMED `703752003`) gehört zur spezifischen Kultur, die direkten molekularen, immunologischen und biochemischen Verfahren zur spezifischen Bestimmung.
+- Damit verlaufen die beiden Achsen sauber getrennt: die Kultur beantwortet, ob etwas wächst, die Bestimmung, um welchen Erreger es sich handelt. Kulturergebnisse sind einheitlich Wachstum oder kein Wachstum, Bestimmungsergebnisse Nachweis oder Ausschluss.
+- Ein unbestimmbares Ergebnis wird nicht mehr über `value[x]` kodiert, sondern über `Observation.dataAbsentReason`.
+
+#### Detaillierte Änderungen für Implementierer (pro Artefakt-URL / Canonical)
+
+##### Profile (StructureDefinitions)
+
+| Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
+|-------------|--------------|--------------------------|---------|----------------------------|-------------------|
+| `mii-pr-mikrobio-spezifische-kultur` | neu | zielgerichtete Kulturnachweise wurden über `mii-pr-mikrobio-spezifische-bestimmung` abgebildet | Eigenes Profil für den erregerspezifischen Kulturnachweis; `code` aus `mii-vs-mikrobio-spezifische-kultur-tests-loinc` (extensible), `value[x]` als `CodeableConcept` aus `mii-vs-mikrobio-kultur-ergebnis-snomed` (required), `method` aus `mii-vs-mikrobio-spezifische-kultur-methode-snomed` (extensible) | Kulturbasierte zielgerichtete Nachweise müssen auf das neue Profil umgestellt werden | Bestehende Ressourcen mit Methode `703752003` bzw. LOINC-Kulturcodes auf das neue Profil umhängen und das Ergebnis von `Positive` auf `365698005 Organism growth` umstellen |
+| `mii-pr-mikrobio-spezifische-bestimmung` | inhaltlich aktualisiert | deckte laut Description auch kulturbasierte Verfahren ab; Ergebnis-ValueSet enthielt zusätzlich `Positive`, `No growth` und das vollständige Organismen-ValueSet | Beschränkt auf direkte molekulare, immunologische und biochemische Nachweisverfahren; Ergebnis nur noch Nachweis oder Ausschluss | Kulturbasierte Instanzen und Ergebnisse mit Organismus- oder Wachstumscodes sind nicht mehr konform | Kulturfälle auf `mii-pr-mikrobio-spezifische-kultur` umstellen; Organismusangaben über `mii-pr-mikrobio-allgemeine-bestimmung` abbilden |
+| `mii-pr-mikrobio-allgemeine-kultur` | inhaltlich aktualisiert | `value[x]` gebunden an `mii-vs-mikrobio-allgemeine-kultur-ergebnis-snomed` | `value[x]` gebunden an das für beide Kulturen gemeinsame `mii-vs-mikrobio-kultur-ergebnis-snomed` (required); der nachgewiesene Organismus wird nicht mehr hier, sondern über die Bestimmung abgebildet | Ergebniscodes `Positive` und `Indeterminate` sind nicht mehr gültig | Ergebnisse auf `365698005` bzw. `264868006` umstellen, Unbestimmbarkeit über `dataAbsentReason` |
+| `mii-pr-mikrobio-diagnostic-report` | inhaltlich aktualisiert | `result` verwies auf 18 Untersuchungsprofile | `mii-pr-mikrobio-spezifische-kultur` als zulässiges Ziel ergänzt | Befunde können auf spezifische Kulturen verweisen | keine Migration nötig |
+| alle Observation-Profile des Moduls | inhaltlich aktualisiert | `dataAbsentReason` ungebunden aus der Labor-Basis geerbt | über den gemeinsamen RuleSet an `mii-vs-mikrobio-data-absent-reason` gebunden (extensible) | Unbestimmbare Ergebnisse werden hier statt über `value[x]` abgebildet | Vorkommen von `82334004` in `value[x]` nach `dataAbsentReason` verschieben |
+
+##### Terminologien (ValueSets)
+
+| Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
+|-------------|--------------|--------------------------|---------|----------------------------|-------------------|
+| `mii-vs-mikrobio-kultur-ergebnis-snomed` | neu | - | Gemeinsames Ergebnis-ValueSet für allgemeine und spezifische Kultur mit `365698005 Organism growth` und `264868006 No growth` | Einheitliche Ergebniscodierung beider Kulturprofile | siehe `mii-vs-mikrobio-allgemeine-kultur-ergebnis-snomed` |
+| `mii-vs-mikrobio-allgemeine-kultur-ergebnis-snomed` | entfernt/abgekündigt | `Positive`, `No growth`, `Indeterminate`; nur für die allgemeine Kultur | durch `mii-vs-mikrobio-kultur-ergebnis-snomed` ersetzt | Alt-Referenz ungültig | Auf das neue Canonical umstellen; `Positive` auf `365698005`, `Indeterminate` nach `dataAbsentReason` |
+| `mii-vs-mikrobio-spezifische-kultur-tests-loinc` | neu | Kulturcodes waren Teil von `mii-vs-mikrobio-spezifische-bestimmung-tests-loinc` | LOINC-Codes mit `METHOD_TYP` `LP6429-7` (erregerspezifische Kultur) | Testcodes der Kultur werden separat gebunden | keine Migration nötig, sofern das Profil gewechselt wird |
+| `mii-vs-mikrobio-spezifische-kultur-methode-snomed` | neu | - | `703752003 Mikroorganismusspezifische Kulturtechnik` | Methodencodierung der spezifischen Kultur | keine Migration nötig |
+| `mii-vs-mikrobio-data-absent-reason` | neu | - | FHIR-Basiscodes für fehlende Daten, ergänzt um `82334004 Indeterminate` | Zielterminologie für unbestimmbare Ergebnisse | Unbestimmbare Ergebnisse aus `value[x]` hierher überführen |
+| `mii-vs-mikrobio-spezifische-bestimmung-tests-loinc` | inhaltlich aktualisiert | zehn LOINC-Methodentypen inkl. `LP6429-7` | neun Methodentypen; `LP6429-7` ausgelagert | Kulturcodes sind hier nicht mehr enthalten | Kulturfälle auf das neue Profil und Test-ValueSet umstellen |
+| `mii-vs-mikrobio-spezifische-bestimmung-methode-snomed` | inhaltlich aktualisiert | enthielt `703752003` | ohne Kulturmethode | Methode `703752003` ist hier nicht mehr gültig | siehe oben |
+| `mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed` | inhaltlich aktualisiert | `Detected`/`Not detected` plus `Positive`, `No growth`, `Indeterminate` und das vollständige Organismen-ValueSet | nur noch `Detected` / `Not detected` | Organismus- und Wachstumscodes sowie `Indeterminate` sind nicht mehr gültig | Organismusangaben über die allgemeine Bestimmung, Wachstum über die Kultur, Unbestimmbarkeit über `dataAbsentReason` |
+| `mii-vs-mikrobio-detected-not-detected-snomed` | inhaltlich aktualisiert | `Detected`, `Not detected`, `Indeterminate` | ohne `Indeterminate` | Betrifft Virulenzfaktor und Resistenzmechanismen | `82334004` nach `dataAbsentReason` verschieben |
+
+##### Logical Model
+
+| Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
+|-------------|--------------|--------------------------|---------|----------------------------|-------------------|
+| `mii-lm-mikrobio-logical-model` | inhaltlich aktualisiert | Sammelmodell, dessen Blattelemente mit den Profil-Canonicals typisiert waren | Beschreibt nur noch den mikrobiologischen Befund und verweist über `Untersuchung` auf `mii-lm-mikrobio-untersuchung`; Canonical und Id bleiben unverändert | Mappings auf das bisherige Sammelmodell greifen nicht mehr | Mappings auf die drei Knotenstrukturen aufteilen |
+| `mii-lm-mikrobio-untersuchung` | neu | - | Abstrakte Basisklasse aller mikrobiologischen Untersuchungen; Ziel der modellinternen Referenzen | Neues Artefakt im Informationsmodell | Die für jede Untersuchung geltenden Angaben hiergegen mappen |
+| `mii-lm-mikrobio-untersuchungsarten` | neu | - | Die fachlichen Ausprägungen inklusive der spezifischen Kultur, abgeleitet von `mii-lm-mikrobio-untersuchung` | Neues Artefakt im Informationsmodell | Ausprägungsspezifische Elemente hiergegen mappen |
+
+##### CapabilityStatement
+
+| Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
+|-------------|--------------|--------------------------|---------|----------------------------|-------------------|
+| `mii-cps-mikrobio-metadata` | inhaltlich aktualisiert | 18 unterstützte Observation-Profile | `mii-pr-mikrobio-spezifische-kultur` in `supportedProfile` ergänzt | Server deklarieren das neue Profil mit | `/metadata`-Ausgabe und Conformance-Tests gegen das erweiterte Profilset prüfen |
+
+##### Beispiele & IG-Seitenstruktur
+
+- `mii-exa-mikrobio-spezifische-kultur` liegt jetzt auf `mii-pr-mikrobio-spezifische-kultur` statt auf `mii-pr-mikrobio-spezifische-bestimmung`; Code und Ergebnis wurden auf einen erregerspezifischen Kulturcode und `365698005 Organism growth` umgestellt.
+- Die Seite *Anwendungsfälle / Informationsmodell → Datensätze inkl. Beschreibungen* zeigt alle drei Logical Models mit eigenem Strukturbaum und eigener Elementtabelle.
 
 ### 2027.0.0-alpha.5
 
