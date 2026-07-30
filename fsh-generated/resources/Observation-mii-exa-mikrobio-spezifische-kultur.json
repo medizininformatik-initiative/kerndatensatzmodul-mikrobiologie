@@ -3,7 +3,7 @@
   "id": "mii-exa-mikrobio-spezifische-kultur",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"
     ]
   },
   "category": [
@@ -53,8 +53,9 @@
   "code": {
     "coding": [
       {
-        "code": "600-7",
-        "system": "http://loinc.org"
+        "code": "6547-4",
+        "system": "http://loinc.org",
+        "display": "Rotavirus identified in Specimen by Organism specific culture"
       }
     ]
   },
@@ -65,9 +66,9 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "10828004",
+        "code": "365698005",
         "system": "http://snomed.info/sct",
-        "display": "Positive (qualifier value)"
+        "display": "Organism growth"
       }
     ]
   },

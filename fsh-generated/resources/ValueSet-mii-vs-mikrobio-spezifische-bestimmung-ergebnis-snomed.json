@@ -4,7 +4,7 @@
   "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED",
   "id": "mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed",
   "title": "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
-  "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung.",
+  "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist.",
   "version": "2027.0.0-alpha.5",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed",
   "experimental": false,
@@ -24,28 +24,6 @@
       {
         "valueSet": [
           "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"
-        ]
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "concept": [
-          {
-            "code": "10828004",
-            "display": "Positive (qualifier value)"
-          },
-          {
-            "code": "264868006",
-            "display": "No growth (qualifier value)"
-          },
-          {
-            "code": "82334004",
-            "display": "Indeterminate (qualifier value)"
-          }
-        ]
-      },
-      {
-        "valueSet": [
-          "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-organismen-snomedct"
         ]
       }
     ]

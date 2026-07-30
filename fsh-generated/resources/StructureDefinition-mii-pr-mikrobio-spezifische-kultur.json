@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-mikrobio-mre-klasse",
+  "id": "mii-pr-mikrobio-spezifische-kultur",
   "extension": [
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
@@ -15,10 +15,10 @@
       }
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
   "version": "2027.0.0-alpha.5",
-  "name": "MII_PR_Mikrobio_MRE_Klasse",
-  "title": "MII PR Mikrobio MRE Klasse",
+  "name": "MII_PR_Mikrobio_Spezifische_Kultur",
+  "title": "MII PR Mikrobio Spezifische Kultur",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -32,8 +32,8 @@
       ]
     }
   ],
-  "description": "MRE-Klasse beschreibt die Klassifikation multiresistenter Erreger in mikrobiologischen Befunden.",
-  "purpose": "Dieses Profil beschreibt die MRE-Klasse.",
+  "description": "Spezifische Kultur beschreibt das Ergebnis einer zielgerichteten kulturbasierten Untersuchung, die prüft, ob ein vordefinierter Mikroorganismus in der Probe wächst. Das gesuchte Ziel ist bereits im Untersuchungscode benannt; das Ergebnis ist die Aussage über Wachstum.",
+  "purpose": "Dieses Profil beschreibt die zielgerichtete Kulturdiagnostik.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -133,13 +133,10 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "1285113001",
-              "system": "http://snomed.info/sct"
-            }
-          ]
+        "short": "Erregerspezifischer Kulturnachweis. Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert.",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc"
         }
       },
       {
@@ -155,14 +152,15 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
+        "short": "Wachstum oder kein Wachstum des im Code benannten Mikroorganismus. Ein unbestimmbares Ergebnis wird über dataAbsentReason abgebildet.",
         "type": [
           {
             "code": "CodeableConcept"
           }
         ],
         "binding": {
-          "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mre-klasse-snomedct"
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed"
         }
       },
       {
@@ -171,6 +169,14 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-data-absent-reason"
+        }
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed"
         }
       },
       {

@@ -1,11 +1,12 @@
 {
   "resourceType": "ValueSet",
   "status": "active",
-  "name": "MII_VS_Mikrobio_Allgemeine_Kultur_Ergebnis_SNOMED",
-  "id": "mii-vs-mikrobio-allgemeine-kultur-ergebnis-snomed",
-  "title": "MII VS Mikrobio Allgemeine Kultur Ergebnis [SNOMED]",
+  "name": "MII_VS_Mikrobio_Data_Absent_Reason",
+  "id": "mii-vs-mikrobio-data-absent-reason",
+  "title": "MII VS Mikrobio Data Absent Reason",
+  "description": "Gruende fuer ein fehlendes Untersuchungsergebnis. Ergaenzt die FHIR-Basiscodes um das unbestimmbare Ergebnis, das zuvor ueber value[x] kodiert wurde.",
   "version": "2027.0.0-alpha.5",
-  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-ergebnis-snomed",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-data-absent-reason",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -21,16 +22,13 @@
   "compose": {
     "include": [
       {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/data-absent-reason"
+        ]
+      },
+      {
         "system": "http://snomed.info/sct",
         "concept": [
-          {
-            "code": "10828004",
-            "display": "Positive (qualifier value)"
-          },
-          {
-            "code": "264868006",
-            "display": "No growth (qualifier value)"
-          },
           {
             "code": "82334004",
             "display": "Indeterminate (qualifier value)"
