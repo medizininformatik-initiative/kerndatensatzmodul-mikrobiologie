@@ -8,5 +8,5 @@ Description: "Allgemeine Kultur beschreibt das Ergebnis einer nicht zielgerichte
 * code = $loinc#11475-1 // Microorganism identified in Specimen by Culture
 * value[x] only CodeableConcept
 * valueCodeableConcept
-* valueCodeableConcept from MII_VS_Mikrobio_Allgemeine_Kultur_Ergebnis_SNOMED (required)
+* valueCodeableConcept from MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED (required)
 * method from MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED (extensible)

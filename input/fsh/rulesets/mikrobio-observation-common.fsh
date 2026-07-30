@@ -19,3 +19,5 @@ RuleSet: MIKRO_OBSERVATION_COMMON
 * category[mibi-category].coding[v2-microbiology] = $v2-0074#MB // "Microbiology"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 // "Mikrobiologie"
 * specimen 1.. MS
+// Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern hier abgebildet
+* dataAbsentReason from MII_VS_Mikrobio_Data_Absent_Reason (extensible)

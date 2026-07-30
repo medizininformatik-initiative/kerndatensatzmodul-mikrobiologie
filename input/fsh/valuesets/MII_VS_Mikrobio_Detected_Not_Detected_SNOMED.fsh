@@ -6,4 +6,3 @@ Title: "MII VS Mikrobio Detected Not Detected [SNOMED]"
 * ^status = #active
 * $sct#260373001 "Detected (qualifier value)"
 * $sct#260415000 "Not detected (qualifier value)"
-* $sct#82334004 "Indeterminate (qualifier value)"

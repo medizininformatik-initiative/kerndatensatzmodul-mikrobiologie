@@ -50,8 +50,5 @@ Description: "Tests-ValueSet fuer die spezifische Bestimmung."
       METHOD_TYP = "LP6106-1" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
-* include codes from system $loinc
-    where PROPERTY = "LP6850-4" and
-      METHOD_TYP = "LP6429-7" and
-      CLASS = "LP7819-8" and
-      STATUS = "ACTIVE"
+// METHOD_TYP LP6429-7 (erregerspezifische Kultur) ist nach
+// MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC ausgelagert
