@@ -2,7 +2,7 @@ Profile: MII_PR_Mikrobio_Resistenzmechanismen_Determinanten
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-resistenzmechanismen-determinanten
 Title: "MII PR Mikrobio Resistenzmechanismen Determinanten"
-Description: "Resistenzmechanismen/Determinanten beschreibt den Nachweis von Resistenzgenen oder Resistenzmutationen in einer Probe als Hinweis auf spezifische Resistenzmechanismen."
+Description: "Resistenzmechanismen/Determinanten beschreibt den Nachweis von Resistenzgenen, Resistenzmutationen, Proteinen oder funktionalen Test (z.B. CIM-Test) in einer Probe oder Isolat als Hinweis auf spezifische Resistenzmechanismen."
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "Dieses Profil beschreibt den Nachweis von Resistenzmechanismen und Determinanten." 
 * code from MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC (extensible)
