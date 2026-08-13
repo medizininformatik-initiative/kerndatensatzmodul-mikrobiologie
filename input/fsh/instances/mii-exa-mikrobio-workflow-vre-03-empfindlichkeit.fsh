@@ -9,8 +9,7 @@ Title: "MII EXA Mikrobio Workflow VRE 3 Empfindlichkeit"
 Description: "Workflow-Kette VRE, Schritt 3: Vancomycin-Empfindlichkeitstestung des identifizierten Isolats mit dem Ergebnis resistent."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "wf-vre-3"
-* identifier[analyseBefundCode].assigner.identifier.system = "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier"
-* identifier[analyseBefundCode].assigner.identifier.value = "DIZ-ID"
+* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
 * category[mibi-category].coding[loinc-observation] = $loinc#26436-6
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory

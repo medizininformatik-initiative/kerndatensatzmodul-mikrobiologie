@@ -11,8 +11,7 @@ Title: "MII EXA Mikrobio Resistenzkategorie VRE negativ"
 Description: "Identifizierter Enterococcus ohne Vancomycinresistenz: VRE-Status Negative."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "reskat-vre-neg"
-* identifier[analyseBefundCode].assigner.identifier.system = "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier"
-* identifier[analyseBefundCode].assigner.identifier.value = "DIZ-ID"
+* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
 * category[mibi-category].coding[loinc-observation] = $loinc#26436-6
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory
