@@ -12,7 +12,7 @@ Das Ergebnis ist die Aussage über den Nachweis des im Code benannten Ziels (`De
 
 Die verwendete Methode soll grundsätzlich über `Observation.method` angegeben werden, sofern sie bekannt ist. Enthält der verwendete LOINC-Code bereits eine präkoordinierte Methode, kann `Observation.method` ergänzend befüllt werden. **Enthält der LOINC-Code keine Methodenangabe, MUSS `Observation.method` befüllt werden.** 
 
-Zur Abgrenzung gegenüber Empfindlichkeitstestung und Klassifikation sowie zur Codeauswahl siehe [Nachweis, Empfindlichkeit und Klassifikation](../Nachweis-Empfindlichkeit-Klassifikation.page.md).
+Zur Abgrenzung gegenüber Empfindlichkeitstestung und Klassifikation sowie zur Codeauswahl siehe [Profilauswahl und Abgrenzung](../../Profilauswahl-und-Abgrenzung.page.md).
 
 Untersuchungen ohne vordefiniertes Ziel, bei denen das Ergebnis die Nennung des identifizierten Erregers ist, werden über [Allgemeine Bestimmung](Allgemeine-Bestimmung.page.md) abgebildet.
 
