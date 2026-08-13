@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_MRE_Status_SNOMED",
+  "id": "mii-vs-mikrobio-mre-status-snomed",
+  "title": "MII VS Mikrobio MRE Status [SNOMED]",
+  "description": "Ergebnis-ValueSet fuer den MRE-Status: Ja/Nein-Aussage darueber, ob ein bewertetes Isolat als multiresistenter Erreger einzustufen ist.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mre-status-snomed",
+  "version": "2027.0.0-alpha.6",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "373066001",
+            "display": "Yes"
+          },
+          {
+            "code": "373067005",
+            "display": "No"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -4,8 +4,8 @@
   "name": "MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC",
   "id": "mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc",
   "title": "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]",
-  "version": "2027.0.0-alpha.5",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc",
+  "version": "2027.0.0-alpha.6",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -37,6 +37,17 @@
             "property": "STATUS",
             "op": "=",
             "value": "ACTIVE"
+          }
+        ]
+      }
+    ],
+    "exclude": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "35492-8",
+            "display": "Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] in Specimen by NAA with probe detection"
           }
         ]
       }
