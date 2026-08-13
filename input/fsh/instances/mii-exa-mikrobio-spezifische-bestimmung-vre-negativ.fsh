@@ -2,8 +2,9 @@
 // Methode nicht fest, daher wird sie ueber Observation.method angegeben. Waere die Methode
 // bereits im Code enthalten (z. B. 13316-5, Organism specific culture), gehoerte der Befund
 // nach MII_PR_Mikrobio_Spezifische_Kultur.
-// Es wird bewusst KEINE MRE-Status-Observation erzeugt: Ein negativer Nachweis bedeutet,
-// dass kein Isolat vorliegt. MRE-Status = No setzt dagegen ein bewertbares Isolat voraus.
+// Es wird bewusst KEINE Resistenzkategorie-Status-Observation erzeugt: Ein negativer
+// Nachweis bedeutet, dass kein Erreger vorliegt. VRE-Status = Negative setzt dagegen einen
+// vorliegenden, bewertbaren Erreger voraus.
 Instance: mii-exa-mikrobio-spezifische-bestimmung-vre-negativ
 InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
