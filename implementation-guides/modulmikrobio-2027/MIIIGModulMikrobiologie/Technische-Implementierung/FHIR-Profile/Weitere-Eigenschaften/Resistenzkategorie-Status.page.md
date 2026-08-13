@@ -38,7 +38,7 @@ Die Kategorien schließen sich nicht gegenseitig aus: Ein linezolid- und vancomy
 | Wert | Bedeutung |
 |---|---|
 | `10828004 \|Positive\|` | Der bewertete Erreger erfüllt die Kriterien der in `code` angegebenen Kategorie. |
-| `260385009 \|Negative\|` | Der Erreger wurde hinsichtlich der für diese Kategorie relevanten Befunde ausreichend bewertet und erfüllt die Kriterien nicht. |
+| `260385009 \|Negative\|` | Der Erreger wurde anhand der für diese Kategorie relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. |
 
 `Negative` bedeutet ausdrücklich **nicht**: negativer zielgerichteter Erregernachweis, keine Resistenz vorhanden, Erreger nicht nachgewiesen, oder keine ausreichende Diagnostik durchgeführt.
 
@@ -46,9 +46,9 @@ Kann die Kategorie nicht ausreichend bewertet werden, wird nicht `Negative` ange
 
 ### Ableitung
 
-Die Kategorienbewertung ist eine abgeleitete fachliche Aussage. Die zugrunde liegenden Befunde werden über `Observation.derivedFrom` referenziert. Als Eingangsgrößen kommen infrage: Erregeridentifikation, Empfindlichkeitsbefunde sowie Resistenzmechanismen bzw. Resistenzdeterminanten.
+Die Kategorienbewertung ist eine abgeleitete fachliche Aussage. Die zugrunde liegenden Untersuchungen werden über `Observation.derivedFrom` referenziert. Als Eingangsgrößen kommen infrage: Erregeridentifikation, Empfindlichkeitstestung sowie Resistenzmechanismen bzw. Resistenzdeterminanten.
 
-Diese Befunde **sollten** angegeben werden, damit die Bewertungsgrundlage nachvollziehbar ist.
+Diese Untersuchungen **sollten** angegeben werden, damit die Bewertungsgrundlage nachvollziehbar ist.
 
 `triggeredBy` wird hierfür **nicht** verwendet: Die Bewertung entsteht durch fachliche Ableitung und nicht als ausgelöste Folgeuntersuchung.
 
