@@ -10,7 +10,9 @@ MRGN-Klasse beschreibt die Einstufung multiresistenter gramnegativer Erreger ent
 
 Das Profil klassifiziert ein bereits identifiziertes gramnegatives Isolat und ist kein Nachweistest. Das negative Ergebnis eines zielgerichteten Erregernachweises wird nicht hierüber abgebildet, sondern über Spezifische Bestimmung bzw. Spezifische Kultur. Wurde das Isolat anhand der Empfindlichkeitsbefunde bewertet und ist keiner Klasse zuzuordnen, wird der Wert `keine-mrgn-klasse` verwendet — ein solcher Negativwert ist hier sinnvoll, weil ein konkretes Klassifikationsschema vorliegt.
 
-MRGN bleibt eine eigenständige Klassifikation mit der konkreten Klasse als Wert. Ein MRGN-Ergebnis kann zugleich Eingangsgröße für den abgeleiteten [MRE-Status](MRE-Status.page.md) sein. Siehe [Nachweis, Empfindlichkeit und Klassifikation](../Nachweis-Empfindlichkeit-Klassifikation.page.md).
+MRGN ist eine echte Klassifikation mit eigenem Schema: Der Wert ist die konkrete Klasse.
+
+Der [Resistenzkategorie-Status](Resistenzkategorie-Status.page.md) steht gleichrangig daneben und bewertet grampositive Erreger (MRSA, VRE, LRE, LVRE). Die beiden Profile überschneiden sich nicht: Eine MRGN-Klassifikation geht in keine der derzeit festgelegten Resistenzkategorien ein. Zur Abgrenzung siehe [Nachweis, Empfindlichkeit und Klassifikation](../Nachweis-Empfindlichkeit-Klassifikation.page.md).
 
 ### Metadaten
 
