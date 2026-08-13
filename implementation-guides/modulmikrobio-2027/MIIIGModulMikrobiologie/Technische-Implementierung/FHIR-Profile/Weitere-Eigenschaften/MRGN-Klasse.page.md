@@ -12,7 +12,7 @@ Das Profil klassifiziert ein bereits identifiziertes gramnegatives Isolat und is
 
 MRGN ist eine echte Klassifikation mit eigenem Schema: Der Wert ist die konkrete Klasse.
 
-Der [Resistenzkategorie-Status](Resistenzkategorie-Status.page.md) steht gleichrangig daneben und bewertet grampositive Erreger (MRSA, VRE, LRE, LVRE). Die beiden Profile überschneiden sich nicht: Eine MRGN-Klassifikation geht in keine der derzeit festgelegten Resistenzkategorien ein. Zur Abgrenzung siehe [Nachweis, Empfindlichkeit und Klassifikation](../Nachweis-Empfindlichkeit-Klassifikation.page.md).
+Der [Resistenzkategorie-Status](Resistenzkategorie-Status.page.md) steht gleichrangig daneben und bewertet grampositive Erreger (MRSA, VRE, LRE, LVRE). Die beiden Profile überschneiden sich nicht: Eine MRGN-Klassifikation geht in keine der derzeit festgelegten Resistenzkategorien ein. Zur Abgrenzung siehe [Profilauswahl und Abgrenzung](../../Profilauswahl-und-Abgrenzung.page.md).
 
 ### Metadaten
 

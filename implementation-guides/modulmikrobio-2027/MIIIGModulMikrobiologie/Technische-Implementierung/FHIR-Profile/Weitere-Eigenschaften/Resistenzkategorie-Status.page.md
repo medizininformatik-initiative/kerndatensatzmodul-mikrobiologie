@@ -38,7 +38,7 @@ Die Kategorien schließen sich nicht gegenseitig aus: Ein linezolid- und vancomy
 | `10828004 - Positive` | Der bewertete Erreger erfüllt die Kriterien der in `code` angegebenen Kategorie. |
 | `260385009- Negative` | Der Erreger wurde anhand der für diese Kategorie relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. |
 
-`Negative` bedeutet ausdrücklich **nicht**: negativer zielgerichteter Erregernachweis, keine Resistenz vorhanden, Erreger nicht nachgewiesen, oder keine ausreichende Diagnostik durchgeführt.
+`Negative` bedeutet ausdrücklich **nicht**: negativer zielgerichteter Erregernachweis, keine Resistenz vorhanden, Erreger nicht nachgewiesen, oder keine ausreichende Diagnostik durchgeführt. War die Kategorie nicht ausreichend bewertbar, wird nicht `Negative` angegeben, sondern `dataAbsentReason` gesetzt.
 
 ### Ableitung
 

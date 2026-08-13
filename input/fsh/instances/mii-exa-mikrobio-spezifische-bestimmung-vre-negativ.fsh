@@ -14,8 +14,8 @@ Description: "Negativer VRE-Nachweis: Der Test auf vancomycinresistente Enteroko
 * identifier[analyseBefundCode].value = "spez-best-vre-neg-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory
+* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
+* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
 * code = $loinc#105904-7 "Vancomycin resistant enterococcus [Presence] in Specimen"
 * subject.reference = "Patient/example"

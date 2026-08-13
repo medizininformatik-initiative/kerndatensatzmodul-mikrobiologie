@@ -4,11 +4,6 @@
 [MII_CS_Mikrobio_Susceptibility_NORM]: CodeSystem-mii-cs-mikrobio-susceptibility-norm.html
 [MII_EX_Mikrobio_Empfindlichkeit_Norm]: StructureDefinition-mii-ex-mikrobio-empfindlichkeit-norm.html
 [mii-exa-mikrobio-mrgn-klasse-negativ]: Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html
-[mii-exa-mikrobio-resistenzkategorie-lre-negativ]: Observation-mii-exa-mikrobio-resistenzkategorie-lre-negativ.html
-[mii-exa-mikrobio-resistenzkategorie-lre-positiv]: Observation-mii-exa-mikrobio-resistenzkategorie-lre-positiv.html
-[mii-exa-mikrobio-resistenzkategorie-lvre-positiv]: Observation-mii-exa-mikrobio-resistenzkategorie-lvre-positiv.html
-[mii-exa-mikrobio-resistenzkategorie-mrsa-negativ]: Observation-mii-exa-mikrobio-resistenzkategorie-mrsa-negativ.html
-[mii-exa-mikrobio-resistenzkategorie-mrsa-positiv]: Observation-mii-exa-mikrobio-resistenzkategorie-mrsa-positiv.html
 [mii-exa-mikrobio-resistenzkategorie-vre-negativ]: Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html
 [mii-exa-mikrobio-resistenzkategorie-vre-positiv]: Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html
 [mii-exa-mikrobio-spezifische-bestimmung-vre-negativ]: Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html
