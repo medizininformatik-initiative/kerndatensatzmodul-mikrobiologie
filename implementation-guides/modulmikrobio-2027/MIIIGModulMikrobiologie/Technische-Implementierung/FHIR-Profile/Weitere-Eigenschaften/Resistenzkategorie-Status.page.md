@@ -33,10 +33,10 @@ Die Kategorien schließen sich nicht gegenseitig aus: Ein linezolid- und vancomy
 
 ### Ergebnis
 
-| Wert | Bedeutung |
-|---|---|
-| `10828004 |Positive` | Der bewertete Erreger erfüllt die Kriterien der in `code` angegebenen Kategorie. |
-| `260385009 Negative|` | Der Erreger wurde anhand der für diese Kategorie relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. |
+| Wert                  | Bedeutung |
+|-----------------------|---|
+| `10828004 - Positive` | Der bewertete Erreger erfüllt die Kriterien der in `code` angegebenen Kategorie. |
+| `260385009- Negative` | Der Erreger wurde anhand der für diese Kategorie relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. |
 
 `Negative` bedeutet ausdrücklich **nicht**: negativer zielgerichteter Erregernachweis, keine Resistenz vorhanden, Erreger nicht nachgewiesen, oder keine ausreichende Diagnostik durchgeführt.
 
@@ -84,13 +84,7 @@ select
 
 ### Beispiele
 
-MRSA-Status positiv:
-
-{{json:mii-exa-mikrobio-resistenzkategorie-mrsa-positiv}}
-
-MRSA-Status negativ:
-
-{{json:mii-exa-mikrobio-resistenzkategorie-mrsa-negativ}}
+Die Beispiele zeigen das Muster an der Kategorie VRE. Für die übrigen Kategorien ist es identisch — es ändert sich allein der Code in `Observation.code`.
 
 VRE-Status positiv, mit vollständiger Ableitung über `derivedFrom`:
 
@@ -99,15 +93,3 @@ VRE-Status positiv, mit vollständiger Ableitung über `derivedFrom`:
 VRE-Status negativ:
 
 {{json:mii-exa-mikrobio-resistenzkategorie-vre-negativ}}
-
-LRE-Status positiv:
-
-{{json:mii-exa-mikrobio-resistenzkategorie-lre-positiv}}
-
-LRE-Status negativ:
-
-{{json:mii-exa-mikrobio-resistenzkategorie-lre-negativ}}
-
-LVRE-Status positiv:
-
-{{json:mii-exa-mikrobio-resistenzkategorie-lvre-positiv}}
