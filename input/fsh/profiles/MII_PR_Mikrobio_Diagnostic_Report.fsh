@@ -39,7 +39,7 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
     MII_PR_Mikrobio_Molekulare_Pathogenlast or
     MII_PR_Mikrobio_Resistenzmechanismen_Determinanten or
     MII_PR_Mikrobio_Virulenzfaktor or
-    MII_PR_Mikrobio_MRE_Status or
+    MII_PR_Mikrobio_Resistenzkategorie_Status or
     MII_PR_Mikrobio_MRGN_Klasse or
     MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit
 )

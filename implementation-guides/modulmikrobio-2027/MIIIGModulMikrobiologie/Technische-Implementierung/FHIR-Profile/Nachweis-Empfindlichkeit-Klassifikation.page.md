@@ -2,7 +2,7 @@
 
 Nachweis, Empfindlichkeitstestung und Klassifikation sind unterschiedliche diagnostische Aussagen und werden in diesem Modul über unterschiedliche Profile abgebildet. Diese Seite beschreibt die Abgrenzung, die Darstellung negativer Ergebnisse und die Verknüpfung der Untersuchungen zu einer diagnostischen Kette.
 
-> **Kernsatz:** Ein negatives Ergebnis eines zielgerichteten Erregernachweises wird über Spezifische Bestimmung bzw. Spezifische Kultur abgebildet. MRGN-Klassifikation und MRE-Status setzen dagegen ein bereits identifiziertes Isolat voraus und ersetzen keinen Nachweistest.
+> **Kernsatz:** Ein negatives Ergebnis eines zielgerichteten Erregernachweises wird über Spezifische Bestimmung bzw. Spezifische Kultur abgebildet. MRGN-Klassifikation und Resistenzkategorie-Status setzen dagegen einen bereits nachgewiesenen Erreger voraus und ersetzen keinen Nachweistest.
 
 ### Abgrenzung der drei Aussagetypen
 
@@ -13,13 +13,13 @@ Nachweis, Empfindlichkeitstestung und Klassifikation sind unterschiedliche diagn
 | Ist ein Resistenzgen nachweisbar? | Resistenzmechanismen / Determinanten | LOINC-Determinante, z. B. `48813-0` | `Detected` / `Not detected` |
 | Wie empfindlich ist ein identifiziertes Isolat gegen eine Substanz? | Empfindlichkeit | LOINC `[Susceptibility]`, z. B. `29258-1` | MHK als `Quantity`, Bewertung in `interpretation` (S / I / R) |
 | Welcher MRGN-Klasse ist ein identifiziertes gramnegatives Isolat zuzuordnen? | MRGN-Klasse | `99780-9` | Klassifikationswert, z. B. `3MRGN`, oder `keine-mrgn-klasse` |
-| Ist ein identifiziertes Isolat als MRE einzustufen? | MRE-Status | `mre-status` (MII) | `Yes` / `No` |
+| Erfüllt ein nachgewiesener Erreger die Kriterien einer definierten Resistenzkategorie? | Resistenzkategorie-Status | `mrsa-status`, `vre-status`, `lre-status`, `lvre-status` (MII) | `Positive` / `Negative` |
 
 ### Negative Ergebnisse
 
 #### Negativer zielgerichteter Erregernachweis
 
-Der Befund ist das negative Ergebnis des konkret durchgeführten Nachweistests.
+Die Untersuchung liefert das negative Ergebnis des konkret durchgeführten Nachweistests.
 
 VRE-Nachweis mittels Kultur, negativ:
 
@@ -32,51 +32,42 @@ VRE-Nachweis molekular bzw. methodenneutral kodiert, negativ:
 
 #### Keine MRGN-Klasse
 
-Davon zu unterscheiden ist der Fall, dass ein gramnegatives Isolat identifiziert und dessen Empfindlichkeitsbefunde bewertet wurden, es aber keiner MRGN-Klasse zuzuordnen ist. Dies ist eine **negative Klassifikation** und wird über den Wert `keine-mrgn-klasse` des CodeSystems `mii-cs-mikrobio-mrgn-ergebnis` abgebildet:
+Davon zu unterscheiden ist der Fall, dass ein gramnegatives Isolat identifiziert und dessen Empfindlichkeitstestung bewertet wurde, es aber keiner MRGN-Klasse zuzuordnen ist. Dies ist eine **negative Klassifikation** und wird über den Wert `keine-mrgn-klasse` des CodeSystems `mii-cs-mikrobio-mrgn-ergebnis` abgebildet:
 
 {{json:mii-exa-mikrobio-mrgn-klasse-negativ}}
 
 Die LOINC-AnswerList zu `99780-9` enthält ausschließlich 2MRGN, 3MRGN und 4MRGN und damit keinen Negativwert; der MII-eigene Code schließt diese Lücke.
 
-#### MRE-Status 
+#### Resistenzkategorie-Status = Negative
 
-{{json:mii-exa-mikrobio-mre-status}}
+Wieder anders gelagert ist die Bewertung eines vorliegenden Erregers hinsichtlich einer Resistenzkategorie:
 
-`MRE-Status = No` bedeutet: Ein vorhandenes, bewertbares Isolat erfüllt nach Bewertung der relevanten Resistenzbefunde keine definierte MRE-Kategorie.
+{{json:mii-exa-mikrobio-resistenzkategorie-vre-negativ}}
 
-Ein negatives Ergebnis eines zielgerichteten Erregernachweises wird dagegen über das Profil Spezifische Bestimmung oder Spezifische Kultur abgebildet. Es ist nicht mit `MRE-Status = No` gleichzusetzen: Dort liegt kein bewertbares Isolat vor, und eine MRE-Status-Observation entfällt.
+`Negative` bedeutet: Ein nachgewiesener Erreger wurde anhand der für die in `code` genannte Kategorie relevanten Untersuchungen ausreichend bewertet und erfüllt deren Kriterien nicht. Es bedeutet ausdrücklich **nicht**, dass kein Erreger nachgewiesen wurde, dass keine Resistenz vorliegt oder dass keine ausreichende Diagnostik erfolgte.
 
-### Kriterien für den MRE-Status
+Kann die Kategorie nicht ausreichend bewertet werden, wird nicht `Negative` angegeben, sondern `dataAbsentReason` gesetzt oder gar keine Status-Observation erzeugt.
 
-Ob der MRE-Status `Yes` oder `No` lautet, ergibt sich ausschließlich aus der folgenden Festlegung. Sie wird weder aus dem SNOMED-Unterbaum „antimicrobial resistant organism" abgeleitet noch folgt sie allein aus dem Vorhandensein irgendeiner antimikrobiellen Resistenz.
+Die drei Fälle im direkten Vergleich, jeweils für VRE:
 
-MRE bezeichnet in diesem Implementierungsleitfaden ein Isolat, das anhand der vorliegenden mikrobiologischen Befunde einer der hier aufgeführten Kategorien zugeordnet wurde — multiresistent oder aufgrund besonderer antimikrobieller Resistenzen als MRE definiert. Die Aussage ist nicht auf Bakterien beschränkt; multiresistente Pilze und antiviral resistente Viren können als weitere Kategorien aufgenommen werden. Die derzeit festgelegten Kategorien sind bakteriell.
+| Aussage | Profil | `code` | `value` |
+|---|---|---|---|
+| VRE wurde gesucht und nicht gefunden | Spezifische Kultur | `13316-5` | `No growth` |
+| VRE wurde gesucht und nicht gefunden (molekular) | Spezifische Bestimmung | `105904-7` | `Not detected` |
+| Ein vorliegender *Enterococcus* ist kein VRE | Resistenzkategorie-Status | `vre-status` | `Negative` |
 
-| Kategorie | Bewertungsgrundlage |
-|---|---|
-| MRSA | Identifikation als *Staphylococcus aureus* und Nachweis der Methicillinresistenz (phänotypisch oder über `mecA`/`mecC`) |
-| VRE | Identifikation als *Enterococcus* und Nachweis der Vancomycinresistenz (phänotypisch oder über `vanA`/`vanB`) |
-| 3MRGN | MRGN-Klassifikation mit dem Wert `3MRGN` |
-| 4MRGN | MRGN-Klassifikation mit dem Wert `4MRGN` |
+### Resistenzkategorien
 
-Die Bewertung nimmt das **sendende System** vor; der MRE-Status ist dessen Aussage und keine Regel, die ein Empfänger nachrechnet. Konkret:
+Der Resistenzkategorie-Status bewertet immer **eine** benannte Kategorie. Die Aufnahme einer Kategorie ist fachlich zu begründen; nicht jede einzelne antimikrobielle Resistenz ist eine Resistenzkategorie. Insbesondere erfolgt keine implizite Ableitung aus dem SNOMED-Unterbaum „antimicrobial resistant organism".
 
-- Trifft mindestens eine Kategorie der Tabelle zu, wird eine MRE-Status-Observation mit `value = Yes` erzeugt.
-- Trifft keine zu und liegen die für die Bewertung erforderlichen Befunde vor, wird sie mit `value = No` erzeugt.
-- Fehlen Befunde für eine belastbare Bewertung, wird `value` weggelassen und `dataAbsentReason` gesetzt.
+| Code | Kategorie | Bewertungsgrundlage |
+|---|---|---|
+| `mrsa-status` | MRSA | *Staphylococcus aureus* + Methicillin-/Oxacillinresistenz (phänotypisch oder `mecA`/`mecC`) |
+| `vre-status` | VRE | *Enterococcus* + Vancomycinresistenz (phänotypisch oder `vanA`/`vanB`) |
+| `lre-status` | LRE | *Enterococcus* + Linezolidresistenz |
+| `lvre-status` | LVRE | *Enterococcus* + Linezolid- **und** Vancomycinresistenz |
 
-In allen drei Fällen verweist `derivedFrom` auf die herangezogenen Befunde.
-
-Isolate, die ausschließlich einem der folgenden Fälle entsprechen, erhalten nach aktuellem Stand `MRE-Status = No`:
-
-| Fall | Stand |
-|---|---|
-| 2MRGN | Ein Isolat mit MRGN-Klassifikation `2MRGN` und ohne weitere zutreffende Kategorie erhält `value = No`. Zu bestätigen. |
-| Linezolid-resistant Enterococcus (LRE) | Ein *Enterococcus* mit Linezolidresistenz und ohne Vancomycinresistenz erhält `value = No`. `838510005 \|Linezolid resistant Enterococcus\|` beschreibt eine Einzelsubstanzresistenz und nicht automatisch Multiresistenz. Ob LRE in diesem IG als MRE gilt, ist **zu entscheiden und zu dokumentieren**. |
-| Multiresistente Pilze, z. B. *Candida auris* | Keine Kategorie festgelegt, daher `value = No`. Bei Bedarf zu ergänzen. |
-| Antiviral resistente Viren | Keine Kategorie festgelegt, daher `value = No`. Bei Bedarf zu ergänzen. |
-
-Die letzten beiden Zeilen sind fachlich unbefriedigend: `No` bedeutet dort nicht „nicht multiresistent", sondern „von diesem IG nicht als Kategorie erfasst". Solange keine Kategorien festgelegt sind, ist für diese Fälle im Zweifel `dataAbsentReason` die ehrlichere Angabe.
+Für gramnegative Erreger mit einer MRGN-Klassifikation erfolgt die Abbildung über die [MRGN-Klasse](Weitere-Eigenschaften/MRGN-Klasse.page.md). Dort wird das Ergebnis der MRGN-Bewertung als `2MRGN`, `3MRGN`, `4MRGN` oder `keine-mrgn-klasse` angegeben.
 
 ### Diagnostische Kette bei positivem Nachweis
 
@@ -96,17 +87,16 @@ Empfindlichkeit
         │
         ├── ggf. Resistenzmechanismen / Determinanten
         │
-        ├── ggf. MRGN-Klassifikation
-        │
         │ derivedFrom
         ▼
-    MRE-Status
-     Yes / No
+Resistenzkategorie-Status
+  z. B. VRE-Status
+  Positive / Negative
 ```
 
-Bei einem bereits erregerspezifischen Nachweis ist das Ziel im Testcode definiert. Nach `MRSA detected` oder `VRE detected` muss keine separate Identifikation folgen. Entfällt sie, verweist die Empfindlichkeit direkt auf den Nachweis und der MRE-Status führt sie nicht in `derivedFrom`.
+Bei einem bereits erregerspezifischen Nachweis ist das Ziel im Testcode definiert. Nach `MRSA detected` oder `VRE detected` muss keine separate Identifikation folgen. Entfällt sie, verweist die Empfindlichkeit direkt auf den Nachweis und der Resistenzkategorie-Status führt sie nicht in `derivedFrom`.
 
-Für die auslösende Beziehung wird die R5-Backport-Extension `extension-Observation.triggeredBy` mit `type = reflex` verwendet, wie unter [FHIR-Profile](Index.page.md) beschrieben. Der letzte Schritt bildet die dort genannte Ausnahme: Der MRE-Status wird aus mehreren Befunden **abgeleitet** und ist keine ausgelöste Folgeuntersuchung — hier trifft `derivedFrom` die Semantik. Mindestens ein Eingangsbefund ist verpflichtend, damit die Bewertungsgrundlage nachvollziehbar bleibt.
+Für die auslösende Beziehung wird die R5-Backport-Extension `extension-Observation.triggeredBy` mit `type = reflex` verwendet, wie unter [FHIR-Profile](Index.page.md) beschrieben. Der letzte Schritt bildet die dort genannte Ausnahme: Der Resistenzkategorie-Status wird aus mehreren Untersuchungen **abgeleitet** und ist keine ausgelöste Folgeuntersuchung — hier trifft `derivedFrom` die Semantik. Diese Untersuchungen SOLLTEN angegeben werden, damit die Bewertungsgrundlage nachvollziehbar bleibt.
 
 Vollständiges Beispiel einer Kette:
 
@@ -122,14 +112,6 @@ Schritt 3 — Empfindlichkeitstestung:
 
 {{json:mii-exa-mikrobio-workflow-vre-03-empfindlichkeit}}
 
-Schritt 4 — abgeleiteter MRE-Status:
+Schritt 4 — abgeleiteter Resistenzkategorie-Status:
 
-{{json:mii-exa-mikrobio-workflow-vre-04-mre-status}}
-
-### Bekannte Lücken
-
-| Thema | Stand |
-|---|---|
-| Zielgerichteter Nachweis linezolidresistenter Enterokokken | Es existiert kein LOINC-Presence-Code für die Fragestellung „Linezolid-resistant Enterococcus present?". Bis zur Ergänzung ist nur der Weg über die Empfindlichkeitstestung eines identifizierten Isolats möglich (`29258-1` mit `interpretation` R bzw. S). Ein SNOMED-Organism-Code ist kein Ersatz. |
-| Umfang der MRE-Kategorien | Festgelegt sind MRSA, VRE, 3MRGN und 4MRGN. Offen: 2MRGN, LRE sowie mögliche Kategorien für multiresistente Pilze und antiviral resistente Viren. Siehe Abschnitt „Kriterien für den MRE-Status". |
-| MRGN-Trägerscreening | Für den kulturellen Carbapenemase-Nachweis existieren LOINC-Codes (z. B. `100901-8`), jedoch nur mit präkoordiniertem Specimentype. Ein Code mit `System = XXX` fehlt. |
+{{json:mii-exa-mikrobio-resistenzkategorie-vre-positiv}}
