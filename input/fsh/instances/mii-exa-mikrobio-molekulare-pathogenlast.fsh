@@ -3,8 +3,7 @@ InstanceOf: MII_PR_Mikrobio_Molekulare_Pathogenlast
 Usage: #example
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "pathogenlast-1"
-* identifier[analyseBefundCode].assigner.identifier.system = "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier"
-* identifier[analyseBefundCode].assigner.identifier.value = "DIZ-ID"
+* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
 * category[mibi-category].coding[loinc-observation] = $loinc#26436-6
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory

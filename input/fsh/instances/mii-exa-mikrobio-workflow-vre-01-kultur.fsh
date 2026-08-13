@@ -21,8 +21,7 @@ Title: "MII EXA Mikrobio Workflow VRE 1 Kultur positiv"
 Description: "Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erregerspezifischer Kultur."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "wf-vre-1"
-* identifier[analyseBefundCode].assigner.identifier.system = "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier"
-* identifier[analyseBefundCode].assigner.identifier.value = "DIZ-ID"
+* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
 * category[mibi-category].coding[loinc-observation] = $loinc#26436-6
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory

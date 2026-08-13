@@ -4,8 +4,7 @@ Usage: #example
 * identifier[befund].type.coding[fillerV2] = $v2-0203#FILL
 * identifier[befund].system = "https://example.org/fhir/sid/test-befund"
 * identifier[befund].value = "mikrobio-dr-1"
-* identifier[befund].assigner.identifier.system = "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier"
-* identifier[befund].assigner.identifier.value = "DIZ-ID"
+* identifier[befund].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
 * category[lab-category].coding[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
 * category[lab-category].coding[+] = $loinc#26436-6 "Laboruntersuchungen"
