@@ -8,8 +8,6 @@ expand: 1
 
 Resistenzkategorie-Status bildet die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie ab. Die bewertete Kategorie steht in `Observation.code`, das Ergebnis der Bewertung in `Observation.valueCodeableConcept`.
 
-Eine Observation ist damit ohne zusätzliche Interpretation lesbar:
-
 ```
 MRSA-Status: Positive
 VRE-Status:  Negative
@@ -37,12 +35,10 @@ Die Kategorien schließen sich nicht gegenseitig aus: Ein linezolid- und vancomy
 
 | Wert | Bedeutung |
 |---|---|
-| `10828004 \|Positive\|` | Der bewertete Erreger erfüllt die Kriterien der in `code` angegebenen Kategorie. |
-| `260385009 \|Negative\|` | Der Erreger wurde anhand der für diese Kategorie relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. |
+| `10828004 |Positive` | Der bewertete Erreger erfüllt die Kriterien der in `code` angegebenen Kategorie. |
+| `260385009 Negative|` | Der Erreger wurde anhand der für diese Kategorie relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. |
 
 `Negative` bedeutet ausdrücklich **nicht**: negativer zielgerichteter Erregernachweis, keine Resistenz vorhanden, Erreger nicht nachgewiesen, oder keine ausreichende Diagnostik durchgeführt.
-
-Kann die Kategorie nicht ausreichend bewertet werden, wird nicht `Negative` angegeben. Stattdessen wird `dataAbsentReason` gesetzt oder gar keine Status-Observation erzeugt.
 
 ### Ableitung
 
