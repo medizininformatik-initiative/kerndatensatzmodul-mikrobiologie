@@ -5,12 +5,12 @@ Usage: #example
 * identifier[analyseBefundCode].value = "spez-best-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory
+* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
+* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
-* code = $loinc#92253-4
+* code = $loinc#92253-4 "Microorganism identified in Isolate or Specimen by Molecular genetics method"
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
-* method = $sct#258066000
+* method = $sct#258066000 "Polymerase chain reaction technique"
 * specimen.reference = "Specimen/example"

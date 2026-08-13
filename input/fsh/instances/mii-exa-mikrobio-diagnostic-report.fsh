@@ -1,12 +1,12 @@
 Instance: mii-exa-mikrobio-diagnostic-report
 InstanceOf: MII_PR_Mikrobio_Diagnostic_Report
 Usage: #example
-* identifier[befund].type.coding[fillerV2] = $v2-0203#FILL
+* identifier[befund].type.coding[fillerV2] = $v2-0203#FILL "Filler Identifier"
 * identifier[befund].system = "https://example.org/fhir/sid/test-befund"
 * identifier[befund].value = "mikrobio-dr-1"
 * identifier[befund].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
-* category[lab-category].coding[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB
+* category[lab-category].coding[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
 * category[lab-category].coding[+] = $loinc#26436-6 "Laboruntersuchungen"
 * category[mibi-category] = $v2-0074#MB "Microbiology"
 * category[mibi-sub-category] = $loinc#92894-5 "Microbiology - bacterial studies"

@@ -5,12 +5,12 @@ Usage: #example
 * identifier[analyseBefundCode].value = "allg-kultur-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory
+* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
+* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
-* code = $loinc#11475-1
+* code = $loinc#11475-1 "Microorganism identified in Specimen by Culture"
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $sct#10828004 "Positive (qualifier value)"
-* method = $sct#703750006
+* method = $sct#703750006 "Aerobic culture"
 * specimen.reference = "Specimen/example"
