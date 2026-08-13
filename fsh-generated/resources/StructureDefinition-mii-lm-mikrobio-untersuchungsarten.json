@@ -8,7 +8,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchungsarten",
-  "version": "2027.0.0-alpha.5",
+  "version": "2027.0.0-alpha.6",
   "name": "MII_LM_Mikrobio_Untersuchungsarten",
   "title": "MII LM Mikrobio Untersuchungsarten",
   "status": "active",
@@ -823,10 +823,10 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREKlasse",
-        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREKlasse",
-        "short": "MRE Klasse",
-        "definition": "Klassifikation multiresistenter Erreger.",
+        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus",
+        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus",
+        "short": "MRE Status",
+        "definition": "Aus den vorliegenden mikrobiologischen Befunden abgeleitete Aussage, ob ein Isolat als multiresistenter Erreger einzustufen ist.",
         "min": 0,
         "max": "*",
         "type": [
@@ -836,10 +836,10 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREKlasse.Untersuchungscode",
-        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREKlasse.Untersuchungscode",
+        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Untersuchungscode",
+        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Untersuchungscode",
         "short": "Untersuchungscode",
-        "definition": "Kodierung der Untersuchung; hier fest: MRE-Klassifikation (SNOMED CT).",
+        "definition": "Kodierung der Untersuchung; hier fest: MRE-Status (MII-CodeSystem).",
         "min": 1,
         "max": "1",
         "type": [
@@ -849,15 +849,28 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREKlasse.Ergebnis",
-        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREKlasse.Ergebnis",
+        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Ergebnis",
+        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Ergebnis",
         "short": "Ergebnis",
-        "definition": "MRE-Klasse, z. B. MRSA oder VRE (SNOMED CT).",
+        "definition": "Ja/Nein-Aussage zum MRE-Status (SNOMED CT).",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Grundlage",
+        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Grundlage",
+        "short": "Grundlage",
+        "definition": "Befunde, aus denen der MRE-Status abgeleitet wurde: Identifikation, Empfindlichkeit, Resistenzmechanismen und ggf. MRGN-Klassifikation.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
           }
         ]
       },

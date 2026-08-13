@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-mikrobio-mre-klasse",
+  "id": "mii-pr-mikrobio-mre-status",
   "extension": [
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
@@ -15,10 +15,10 @@
       }
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse",
-  "version": "2027.0.0-alpha.5",
-  "name": "MII_PR_Mikrobio_MRE_Klasse",
-  "title": "MII PR Mikrobio MRE Klasse",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-status",
+  "version": "2027.0.0-alpha.6",
+  "name": "MII_PR_Mikrobio_MRE_Status",
+  "title": "MII PR Mikrobio MRE Status",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -32,8 +32,8 @@
       ]
     }
   ],
-  "description": "MRE-Klasse beschreibt die Klassifikation multiresistenter Erreger in mikrobiologischen Befunden.",
-  "purpose": "Dieses Profil beschreibt die MRE-Klasse.",
+  "description": "MRE-Status gibt an, ob ein untersuchtes Isolat anhand der vorliegenden mikrobiologischen Befunde als multiresistenter Erreger (MRE) einzustufen ist.",
+  "purpose": "Dieses Profil bildet den aus den zugrunde liegenden mikrobiologischen Befunden abgeleiteten MRE-Status eines Isolats ab. Es wiederholt nicht die Erreger- und Resistenzinformationen, die bereits über Identifikation, Empfindlichkeit, Resistenzmechanismen und MRGN-Klassifikation abgebildet sind. Welche Kategorien zu einem positiven MRE-Status führen, legt der Implementierungsleitfaden fest; die Zuordnung wird nicht implizit aus einer Terminologiehierarchie abgeleitet.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -46,6 +46,7 @@
         "id": "Observation.extension:triggeredBy-r5",
         "path": "Observation.extension",
         "sliceName": "triggeredBy-r5",
+        "short": "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung des MRE-Status wird nicht hierüber, sondern über derivedFrom abgebildet.",
         "min": 0,
         "max": "*",
         "type": [
@@ -133,11 +134,12 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
+        "short": "MRE-Status des Isolats. Es existiert kein passender LOINC- oder SNOMED-CT-Code für diese Fragestellung; SNOMED CT 1285113001 fragt nach dem Typ des resistenten Organismus und ist für eine Ja/Nein-Aussage ungeeignet.",
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "1285113001",
-              "system": "http://snomed.info/sct"
+              "code": "mre-status",
+              "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-untersuchungscode"
             }
           ]
         }
@@ -155,14 +157,15 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
+        "short": "Yes: Das Isolat wurde anhand der erforderlichen mikrobiologischen Befunde bewertet und erfüllt die Kriterien mindestens einer im Implementierungsleitfaden festgelegten MRE-Kategorie. No: Das Isolat wurde hinsichtlich der relevanten MRE-Kriterien vollständig bewertet und erfüllt keine dieser Kategorien. Ist keine ausreichende Bewertung möglich, wird nicht 'No' angegeben, sondern dataAbsentReason verwendet.",
         "type": [
           {
             "code": "CodeableConcept"
           }
         ],
         "binding": {
-          "strength": "extensible",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mre-klasse-snomedct"
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mre-status-snomed"
         }
       },
       {
@@ -177,6 +180,13 @@
         "id": "Observation.specimen",
         "path": "Observation.specimen",
         "min": 1
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "short": "Befunde, aus denen der MRE-Status abgeleitet wurde: Erregeridentifikation, Empfindlichkeitsbefunde, Resistenzmechanismen/Determinanten und ggf. eine vorliegende MRGN-Klassifikation.",
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }

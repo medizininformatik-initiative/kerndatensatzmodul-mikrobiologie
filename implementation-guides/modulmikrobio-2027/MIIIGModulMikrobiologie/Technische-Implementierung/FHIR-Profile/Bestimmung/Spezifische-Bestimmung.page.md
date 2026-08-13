@@ -6,11 +6,15 @@ expand: 1
 ---
 ## {{link}}
 
-Spezifische Bestimmung beschreibt den gezielten qualitativen Nachweis eines vordefinierten mikrobiellen Ziels (z. B. Mikroorganismus, Nukleinsäure, Antigen, Antikörper oder biochemischer Marker) in einer Probe mittels kulturbasierter oder anderer zielgerichteter Nachweismethoden.
+Spezifische Bestimmung beschreibt den gezielten qualitativen Nachweis eines vordefinierten mikrobiellen Ziels (z. B. Mikroorganismus, Nukleinsäure, Antigen, Antikörper oder biochemischer Marker) in einer Probe mittels direkter molekularer, immunologischer oder biochemischer Nachweismethoden sowie mittels methodenneutral kodierter Nachweistests. Der kulturbasierte zielgerichtete Nachweis wird über [Spezifische Kultur](../Kultur/Spezifische-Kultur.page.md) abgebildet.
 
-Bei zielgerichteten Einzeluntersuchungen werden die Ergebnisse in der Regel als positiv, kein Nachweis oder unklar angegeben. Wird dabei ein unerwarteter Erreger nachgewiesen, wird dieser konkret benannt.
+Das Ergebnis ist die Aussage über den Nachweis des im Code benannten Ziels (`Detected` bzw. `Not detected`); ein unbestimmbares Ergebnis wird nicht über `value`, sondern über `dataAbsentReason` angegeben. Damit bildet dieses Profil auch das negative Ergebnis eines zielgerichteten Erregernachweises ab, etwa einen negativen VRE-Nachweis.
 
-Bei Mehrzieluntersuchungen oder auf Organismengruppen ausgerichteten Verfahren erfolgt die Ergebnisdarstellung durch die Nennung des identifizierten Erregers.
+Die verwendete Methode soll grundsätzlich über `Observation.method` angegeben werden, sofern sie bekannt ist. Enthält der verwendete LOINC-Code bereits eine präkoordinierte Methode, kann `Observation.method` ergänzend befüllt werden. **Enthält der LOINC-Code keine Methodenangabe, MUSS `Observation.method` befüllt werden.** 
+
+Zur Abgrenzung gegenüber Empfindlichkeitstestung und Klassifikation sowie zur Codeauswahl siehe [Nachweis, Empfindlichkeit und Klassifikation](../Nachweis-Empfindlichkeit-Klassifikation.page.md).
+
+Untersuchungen ohne vordefiniertes Ziel, bei denen das Ergebnis die Nennung des identifizierten Erregers ist, werden über [Allgemeine Bestimmung](Allgemeine-Bestimmung.page.md) abgebildet.
 
 ### Metadaten
 

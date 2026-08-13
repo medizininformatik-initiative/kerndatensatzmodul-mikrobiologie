@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score",
-  "version": "2027.0.0-alpha.5",
+  "version": "2027.0.0-alpha.6",
   "name": "MII_PR_Mikrobio_Nugent_Score",
   "title": "MII PR Mikrobio Nugent Score",
   "status": "active",
@@ -154,16 +154,21 @@
         "id": "Observation.value[x]:valueQuantity",
         "path": "Observation.value[x]",
         "sliceName": "valueQuantity",
+        "comment": "Der Nugent Score ist ein dimensionsloser Score von 0 bis 10. In UCUM wird daher code = \"1\" verwendet. Die menschenlesbare Einheit kann über Quantity.unit, z. B. \"Nugent score\", angegeben werden.",
         "type": [
           {
             "code": "Quantity"
           }
+        ],
+        "constraint": [
+          {
+            "key": "nugent-score-0-to-10",
+            "severity": "error",
+            "human": "Nugent score SHALL be between 0 and 10.",
+            "expression": "value >= 0 and value <= 10",
+            "source": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score"
+          }
         ]
-      },
-      {
-        "id": "Observation.value[x]:valueQuantity.unit",
-        "path": "Observation.value[x].unit",
-        "patternString": "1"
       },
       {
         "id": "Observation.value[x]:valueQuantity.code",

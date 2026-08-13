@@ -1,9 +1,9 @@
 {
   "resourceType": "Observation",
-  "id": "mii-exa-mikrobio-mre-klasse",
+  "id": "mii-exa-mikrobio-mrgn-klasse-negativ",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-klasse"
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
     ]
   },
   "category": [
@@ -32,9 +32,9 @@
   "code": {
     "coding": [
       {
-        "code": "1285113001",
-        "system": "http://snomed.info/sct",
-        "display": "Type of antimicrobial resistant organism (observable entity)"
+        "code": "99780-9",
+        "system": "http://loinc.org",
+        "display": "Multidrug resistant gram-negative organism classification [Type]"
       }
     ]
   },
@@ -49,7 +49,7 @@
         ]
       },
       "system": "https://example.org/fhir/sid/test-lab-results",
-      "value": "59826-8_1234567890",
+      "value": "mrgn-neg-1",
       "assigner": {
         "identifier": {
           "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
@@ -66,11 +66,17 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "409795000",
-        "system": "http://snomed.info/sct"
+        "code": "keine-mrgn-klasse",
+        "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis",
+        "display": "Keine MRGN-Klasse"
       }
     ]
   },
+  "derivedFrom": [
+    {
+      "reference": "Observation/mii-exa-mikrobio-empfindlichkeit"
+    }
+  ],
   "specimen": {
     "reference": "Specimen/example"
   }

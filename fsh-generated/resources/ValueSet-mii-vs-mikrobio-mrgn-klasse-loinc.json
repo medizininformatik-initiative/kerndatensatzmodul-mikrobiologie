@@ -4,8 +4,8 @@
   "name": "MII_VS_Mikrobio_MRGN_Klasse_LOINC",
   "id": "mii-vs-mikrobio-mrgn-klasse-loinc",
   "title": "MII VS Mikrobio MRGN Klasse [LOINC]",
-  "version": "2027.0.0-alpha.5",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc",
+  "version": "2027.0.0-alpha.6",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -35,6 +35,15 @@
           {
             "code": "LA33216-5",
             "display": "4MRGN"
+          }
+        ]
+      },
+      {
+        "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis",
+        "concept": [
+          {
+            "code": "keine-mrgn-klasse",
+            "display": "Keine MRGN-Klasse"
           }
         ]
       }

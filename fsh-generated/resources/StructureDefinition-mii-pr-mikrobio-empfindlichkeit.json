@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit",
-  "version": "2027.0.0-alpha.5",
+  "version": "2027.0.0-alpha.6",
   "name": "MII_PR_Mikrobio_Empfindlichkeit",
   "title": "MII PR Mikrobio Empfindlichkeit",
   "status": "active",
@@ -33,7 +33,7 @@
     }
   ],
   "description": "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung eines Erregers gegenüber antimikrobiellen Substanzen unter Bezug auf ein Normsystem.",
-  "purpose": "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung.",
+  "purpose": "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung. Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, z. B. ein linezolidresistenter Enterococcus über 29258-1 |Linezolid [Susceptibility]| mit interpretation R; der Negativfall ist interpretation S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen nach MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,

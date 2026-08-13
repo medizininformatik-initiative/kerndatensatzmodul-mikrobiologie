@@ -16,7 +16,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse",
-  "version": "2027.0.0-alpha.5",
+  "version": "2027.0.0-alpha.6",
   "name": "MII_PR_Mikrobio_MRGN_Klasse",
   "title": "MII PR Mikrobio MRGN Klasse",
   "status": "active",
@@ -155,6 +155,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
+        "short": "MRGN-Einstufung nach RKI. Wurde das identifizierte Isolat anhand der Empfindlichkeitsbefunde bewertet und ist keiner MRGN-Klasse zuzuordnen, wird 'Keine MRGN-Klasse' verwendet; dies ist vom negativen Ergebnis eines zielgerichteten Erregernachweises zu unterscheiden.",
         "type": [
           {
             "code": "CodeableConcept"

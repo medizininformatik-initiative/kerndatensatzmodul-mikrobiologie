@@ -1,9 +1,9 @@
 canonical: https://www.medizininformatik-initiative.de/fhir/modul-mikrobio
 fhirVersion: 4.0.1
-FSHOnly: true
+FSHOnly: false
 applyExtensionMetadataToRoot: false
 status: active
-version: 2027.0.0-alpha.5
+version: 2027.0.0-alpha.6
 dependencies:
   de.medizininformatikinitiative.kerndatensatz.laborbefund: 2026.0.3
 # TODO: re-add the dependency on the xver package once Simplifier supports it. For now, this is not possible as it causes problems in Snapshot generation.
@@ -12,9 +12,9 @@ dependencies:
 
 
 
-#id: kerndatensatzmodul-mikrobiologie
-#name: Kerndatensatzmodul Mikrobiologie
-#releaseLabel: 2026.0.0-alpha.1
-#copyrightYear: 2026
-#menu:
-#  Artifacts: artifacts.html
+id: kerndatensatzmodul-mikrobiologie
+name: Kerndatensatzmodul Mikrobiologie
+releaseLabel: 2026.0.0-alpha.6
+copyrightYear: 2026
+menu:
+ Artifacts: artifacts.html
