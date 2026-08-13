@@ -823,10 +823,10 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus",
-        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus",
-        "short": "MRE Status",
-        "definition": "Aus den vorliegenden mikrobiologischen Befunden abgeleitete Aussage, ob ein Isolat als multiresistenter Erreger einzustufen ist.",
+        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus",
+        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus",
+        "short": "Resistenzkategorie Status",
+        "definition": "Aus den vorliegenden mikrobiologischen Untersuchungen abgeleitete Bewertung eines Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE.",
         "min": 0,
         "max": "*",
         "type": [
@@ -836,10 +836,10 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Untersuchungscode",
-        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Untersuchungscode",
+        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Untersuchungscode",
+        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Untersuchungscode",
         "short": "Untersuchungscode",
-        "definition": "Kodierung der Untersuchung; hier fest: MRE-Status (MII-CodeSystem).",
+        "definition": "Bewertete Resistenzkategorie (MII-CodeSystem).",
         "min": 1,
         "max": "1",
         "type": [
@@ -849,10 +849,10 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Ergebnis",
-        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Ergebnis",
+        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Ergebnis",
+        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Ergebnis",
         "short": "Ergebnis",
-        "definition": "Ja/Nein-Aussage zum MRE-Status (SNOMED CT).",
+        "definition": "Positive oder Negative bezogen auf die im Untersuchungscode benannte Kategorie (SNOMED CT).",
         "min": 0,
         "max": "1",
         "type": [
@@ -862,10 +862,10 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Grundlage",
-        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MREStatus.Grundlage",
+        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Grundlage",
+        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Grundlage",
         "short": "Grundlage",
-        "definition": "Befunde, aus denen der MRE-Status abgeleitet wurde: Identifikation, Empfindlichkeit, Resistenzmechanismen und ggf. MRGN-Klassifikation.",
+        "definition": "Untersuchungen, aus denen die Bewertung abgeleitet wurde: Identifikation, Empfindlichkeit und Resistenzmechanismen.",
         "min": 0,
         "max": "*",
         "type": [

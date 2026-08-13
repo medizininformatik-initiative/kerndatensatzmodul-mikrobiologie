@@ -1,0 +1,86 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-mikrobio-resistenzkategorie-vre-negativ",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "MB",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+        },
+        {
+          "code": "26436-6",
+          "system": "http://loinc.org"
+        },
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+        },
+        {
+          "code": "18725-2",
+          "system": "http://loinc.org",
+          "display": "Mikrobiologie"
+        }
+      ]
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "OBI"
+          }
+        ]
+      },
+      "system": "https://example.org/fhir/sid/test-lab-results",
+      "value": "reskat-vre-neg",
+      "assigner": {
+        "identifier": {
+          "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
+          "value": "DIZ-ID"
+        }
+      }
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "vre-status",
+        "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-resistenzkategorie",
+        "display": "VRE-Status"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "effectiveDateTime": "2026-04-03T15:00:00+01:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "260385009",
+        "system": "http://snomed.info/sct",
+        "display": "Negative"
+      }
+    ]
+  },
+  "derivedFrom": [
+    {
+      "reference": "Observation/mii-exa-mikrobio-workflow-vre-02-identifikation"
+    },
+    {
+      "reference": "Observation/mii-exa-mikrobio-empfindlichkeit"
+    }
+  ],
+  "specimen": {
+    "reference": "Specimen/example"
+  }
+}

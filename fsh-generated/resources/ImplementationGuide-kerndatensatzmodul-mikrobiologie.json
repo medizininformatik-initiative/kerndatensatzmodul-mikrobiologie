@@ -37,18 +37,18 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-mikrobio-susceptibility-norm"
+          "reference": "CodeSystem/mii-cs-mikrobio-resistenzkategorie"
         },
-        "name": "MII CS Mikrobio Susceptibility Norm",
-        "description": "CodeSystem zur Kodierung von Normen für die Interpretation der Empfindlichkeit von Mikroorganismen gegenüber antimikrobiellen Substanzen.",
+        "name": "MII CS Mikrobio Resistenzkategorie",
+        "description": "Untersuchungscodes (Observation.code) für die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie. Jeder Code benennt die bewertete Kategorie; das Ergebnis der Bewertung steht in Observation.value.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "CodeSystem/mii-cs-mikrobio-untersuchungscode"
+          "reference": "CodeSystem/mii-cs-mikrobio-susceptibility-norm"
         },
-        "name": "MII CS Mikrobio Untersuchungscode",
-        "description": "CodeSystem für Untersuchungscodes (Observation.code), für die in LOINC und SNOMED CT kein passendes Konzept existiert.",
+        "name": "MII CS Mikrobio Susceptibility Norm",
+        "description": "CodeSystem zur Kodierung von Normen für die Interpretation der Empfindlichkeit von Mikroorganismen gegenüber antimikrobiellen Substanzen.",
         "exampleBoolean": false
       },
       {
@@ -61,19 +61,67 @@
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-mikrobio-mre-status"
-        },
-        "name": "MII EXA Mikrobio MRE Status negativ",
-        "description": "Bewertetes Isolat, das keine der im Implementierungsleitfaden festgelegten MRE-Kategorien erfüllt.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-status"
-      },
-      {
-        "reference": {
           "reference": "Observation/mii-exa-mikrobio-mrgn-klasse-negativ"
         },
         "name": "MII EXA Mikrobio MRGN Klasse negativ",
         "description": "Identifiziertes gramnegatives Isolat, dessen Empfindlichkeitsbefunde bewertet wurden und das keiner MRGN-Klasse zuzuordnen ist.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-resistenzkategorie-lre-negativ"
+        },
+        "name": "MII EXA Mikrobio Resistenzkategorie LRE negativ",
+        "description": "Identifizierter Enterococcus ohne Linezolidresistenz: LRE-Status Negative.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-resistenzkategorie-lre-positiv"
+        },
+        "name": "MII EXA Mikrobio Resistenzkategorie LRE positiv",
+        "description": "Identifizierter Enterococcus mit nachgewiesener Linezolidresistenz: LRE-Status Positive.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-resistenzkategorie-lvre-positiv"
+        },
+        "name": "MII EXA Mikrobio Resistenzkategorie LVRE positiv",
+        "description": "Identifizierter Enterococcus mit nachgewiesener Linezolid- und Vancomycinresistenz: LVRE-Status Positive.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-resistenzkategorie-mrsa-negativ"
+        },
+        "name": "MII EXA Mikrobio Resistenzkategorie MRSA negativ",
+        "description": "Identifizierter Staphylococcus aureus ohne Methicillinresistenz: MRSA-Status Negative.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-resistenzkategorie-mrsa-positiv"
+        },
+        "name": "MII EXA Mikrobio Resistenzkategorie MRSA positiv",
+        "description": "Identifizierter Staphylococcus aureus mit nachgewiesener Methicillinresistenz: MRSA-Status Positive.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ"
+        },
+        "name": "MII EXA Mikrobio Resistenzkategorie VRE negativ",
+        "description": "Identifizierter Enterococcus ohne Vancomycinresistenz: VRE-Status Negative.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv"
+        },
+        "name": "MII EXA Mikrobio Resistenzkategorie VRE positiv",
+        "description": "Identifizierter Enterococcus faecium mit nachgewiesener Vancomycinresistenz: VRE-Status Positive, abgeleitet aus Identifikation und Empfindlichkeitstestung.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
       },
       {
         "reference": {
@@ -114,14 +162,6 @@
         "name": "MII EXA Mikrobio Workflow VRE 3 Empfindlichkeit",
         "description": "Workflow-Kette VRE, Schritt 3: Vancomycin-Empfindlichkeitstestung des identifizierten Isolats mit dem Ergebnis resistent.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-workflow-vre-04-mre-status"
-        },
-        "name": "MII EXA Mikrobio Workflow VRE 4 MRE Status",
-        "description": "Workflow-Kette VRE, Schritt 4: aus Identifikation und Empfindlichkeit abgeleiteter positiver MRE-Status.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-status"
       },
       {
         "reference": {
@@ -237,14 +277,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-mre-status"
-        },
-        "name": "MII PR Mikrobio MRE Status",
-        "description": "MRE-Status gibt an, ob ein untersuchtes Isolat anhand der vorliegenden mikrobiologischen Befunde als multiresistenter Erreger (MRE) einzustufen ist.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
         },
         "name": "MII PR Mikrobio MRGN Klasse",
@@ -257,6 +289,14 @@
         },
         "name": "MII PR Mikrobio Nugent Score",
         "description": "Nugent-Score beschreibt ein Gramfärbungs-basiertes semiquantitatives Punktesystem zur Beurteilung vaginaler Mikrobiotamuster bei bakterieller Vaginose.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
+        },
+        "name": "MII PR Mikrobio Resistenzkategorie Status",
+        "description": "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value.",
         "exampleBoolean": false
       },
       {
@@ -481,14 +521,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-mre-status-snomed"
-        },
-        "name": "MII VS Mikrobio MRE Status [SNOMED]",
-        "description": "Ergebnis-ValueSet fuer den MRE-Status: Ja/Nein-Aussage darueber, ob ein bewertetes Isolat als multiresistenter Erreger einzustufen ist.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc"
         },
         "name": "MII VS Mikrobio MRGN Klasse [LOINC]",
@@ -499,6 +531,22 @@
           "reference": "ValueSet/mii-vs-mikrobio-organismen-snomedct"
         },
         "name": "MII VS Mikrobio Organismen [SNOMED CT]",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-resistenzkategorie-status"
+        },
+        "name": "MII VS Mikrobio Resistenzkategorie Status",
+        "description": "Untersuchungscodes fuer die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis"
+        },
+        "name": "MII VS Mikrobio Resistenzkategorie Status Ergebnis",
+        "description": "Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observation.code angegebenen Resistenzkategorie.",
         "exampleBoolean": false
       },
       {
