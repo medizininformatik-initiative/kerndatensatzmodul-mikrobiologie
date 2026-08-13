@@ -16,8 +16,8 @@ Description: "Identifizierter Enterococcus faecium mit nachgewiesener Vancomycin
 * identifier[analyseBefundCode].value = "reskat-vre-pos"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory
+* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
+* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
 * code = MII_CS_Mikrobio_Resistenzkategorie#vre-status "VRE-Status"
 * subject.reference = "Patient/example"
