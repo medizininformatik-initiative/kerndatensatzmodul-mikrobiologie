@@ -85,7 +85,7 @@ Datum: tbd
 ##### Beispiele & IG-Seitenstruktur
 
 - `mii-exa-mikrobio-spezifische-kultur` liegt jetzt auf `mii-pr-mikrobio-spezifische-kultur` statt auf `mii-pr-mikrobio-spezifische-bestimmung`; Code und Ergebnis wurden auf einen erregerspezifischen Kulturcode und `365698005 Organism growth` umgestellt.
-- Neue Seite *FHIR-Profile → Nachweis, Empfindlichkeit und Klassifikation* grenzt zielgerichteten Erregernachweis, Empfindlichkeitstestung, MRGN-Klassifikation und Resistenzkategorie-Status voneinander ab und beschreibt die diagnostische Kette.
+- Neue Seite *Technische Implementierung → Profilauswahl und Abgrenzung* grenzt zielgerichteten Erregernachweis, Empfindlichkeitstestung, MRGN-Klassifikation und Resistenzkategorie-Status voneinander ab und beschreibt die diagnostische Kette.
 - Neue Profilseite *Kultur → Spezifische Kultur*; die Seite *MRE Klasse* wurde durch *Resistenzkategorie Status* ersetzt.
 - `mii-exa-mikrobio-mre-klasse` entfällt. Neu sind sieben Beispiele für den Resistenzkategorie-Status (MRSA/VRE/LRE jeweils positiv und negativ, LVRE positiv), Negativbeispiele für spezifische Bestimmung und spezifische Kultur, ein Beispiel für `keine-mrgn-klasse` sowie eine dreiteilige Beispielkette (Kultur → Identifikation → Empfindlichkeit) als Grundlage der Ableitung.
 - Die Seite *Anwendungsfälle / Informationsmodell → Datensätze inkl. Beschreibungen* zeigt alle drei Logical Models mit eigenem Strukturbaum und eigener Elementtabelle.
