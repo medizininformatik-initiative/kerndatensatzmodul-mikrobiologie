@@ -4,7 +4,7 @@ Id: mii-pr-mikrobio-spezifische-kultur
 Title: "MII PR Mikrobio Spezifische Kultur"
 Description: "Spezifische Kultur beschreibt das Ergebnis einer zielgerichteten kulturbasierten Untersuchung, die prüft, ob ein vordefinierter Mikroorganismus in der Probe wächst. Das gesuchte Ziel ist bereits im Untersuchungscode benannt; das Ergebnis ist die Aussage über Wachstum."
 * insert MIKRO_OBSERVATION_COMMON
-* ^purpose = "Dieses Profil beschreibt die zielgerichtete Kulturdiagnostik."
+* ^purpose = "Dieses Profil beschreibt die zielgerichtete Kulturdiagnostik. Es bildet auch das negative Ergebnis eines kulturell durchgeführten zielgerichteten Erregernachweises ab, z. B. einen negativen VRE- oder MRSA-Nachweis."
 * code from MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC (extensible)
 * code ^short = "Erregerspezifischer Kulturnachweis. Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert."
 * value[x] only CodeableConcept
