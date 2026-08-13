@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-pr-mikrobio-mre-status",
+  "id": "mii-pr-mikrobio-resistenzkategorie-status",
   "extension": [
     {
       "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
@@ -15,10 +15,10 @@
       }
     }
   ],
-  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-status",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status",
   "version": "2027.0.0-alpha.6",
-  "name": "MII_PR_Mikrobio_MRE_Status",
-  "title": "MII PR Mikrobio MRE Status",
+  "name": "MII_PR_Mikrobio_Resistenzkategorie_Status",
+  "title": "MII PR Mikrobio Resistenzkategorie Status",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -32,8 +32,8 @@
       ]
     }
   ],
-  "description": "MRE-Status gibt an, ob ein untersuchtes Isolat anhand der vorliegenden mikrobiologischen Befunde als multiresistenter Erreger (MRE) einzustufen ist.",
-  "purpose": "Dieses Profil bildet den aus den zugrunde liegenden mikrobiologischen Befunden abgeleiteten MRE-Status eines Isolats ab. Es wiederholt nicht die Erreger- und Resistenzinformationen, die bereits über Identifikation, Empfindlichkeit, Resistenzmechanismen und MRGN-Klassifikation abgebildet sind. Welche Kategorien zu einem positiven MRE-Status führen, legt der Implementierungsleitfaden fest; die Zuordnung wird nicht implizit aus einer Terminologiehierarchie abgeleitet.",
+  "description": "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value.",
+  "purpose": "Dieses Profil bildet die aus den zugrunde liegenden mikrobiologischen Untersuchungen abgeleitete Bewertung eines Erregers hinsichtlich einer definierten Resistenzkategorie ab. Es ersetzt keinen zielgerichteten Erregernachweis: Ob ein Erreger überhaupt vorhanden ist, wird über MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur abgebildet.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -46,7 +46,7 @@
         "id": "Observation.extension:triggeredBy-r5",
         "path": "Observation.extension",
         "sliceName": "triggeredBy-r5",
-        "short": "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung des MRE-Status wird nicht hierüber, sondern über derivedFrom abgebildet.",
+        "short": "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung der Kategorienbewertung wird nicht hierüber, sondern über derivedFrom abgebildet.",
         "min": 0,
         "max": "*",
         "type": [
@@ -134,19 +134,16 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "MRE-Status des Isolats. Es existiert kein passender LOINC- oder SNOMED-CT-Code für diese Fragestellung; SNOMED CT 1285113001 fragt nach dem Typ des resistenten Organismus und ist für eine Ja/Nein-Aussage ungeeignet.",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "mre-status",
-              "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-untersuchungscode"
-            }
-          ]
+        "short": "Bewertete Resistenzkategorie, z. B. MRSA-Status. Es werden ausschließlich Kategorien dokumentiert, die für den vorliegenden Erreger fachlich anwendbar sind; für einen Enterococcus wird kein MRSA-Status erzeugt.",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzkategorie-status"
         }
       },
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "min": 1,
         "type": [
           {
             "code": "CodeableConcept"
@@ -157,7 +154,8 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Yes: Das Isolat wurde anhand der erforderlichen mikrobiologischen Befunde bewertet und erfüllt die Kriterien mindestens einer im Implementierungsleitfaden festgelegten MRE-Kategorie. No: Das Isolat wurde hinsichtlich der relevanten MRE-Kriterien vollständig bewertet und erfüllt keine dieser Kategorien. Ist keine ausreichende Bewertung möglich, wird nicht 'No' angegeben, sondern dataAbsentReason verwendet.",
+        "short": "Positive: Der Erreger erfüllt die Kriterien der in code angegebenen Kategorie. Negative: Der Erreger wurde anhand der relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. Kann die Kategorie nicht ausreichend bewertet werden, wird nicht Negative angegeben, sondern dataAbsentReason gesetzt oder keine Status-Observation erzeugt.",
+        "min": 1,
         "type": [
           {
             "code": "CodeableConcept"
@@ -165,7 +163,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mre-status-snomed"
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis"
         }
       },
       {
@@ -184,8 +182,7 @@
       {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
-        "short": "Befunde, aus denen der MRE-Status abgeleitet wurde: Erregeridentifikation, Empfindlichkeitsbefunde, Resistenzmechanismen/Determinanten und ggf. eine vorliegende MRGN-Klassifikation.",
-        "min": 1,
+        "short": "Untersuchungen, aus denen die Bewertung abgeleitet wurde: Erregeridentifikation, Empfindlichkeitstestung und Resistenzmechanismen/Determinanten. Diese Untersuchungen SOLLTEN angegeben werden, damit die Bewertungsgrundlage nachvollziehbar ist. Sie dürfen entfallen, wenn der Status unmittelbar aus einem bereits kategorisierten Laborbefund übernommen wird und die Einzeluntersuchungen nicht als eigene Observations vorliegen.",
         "mustSupport": true
       }
     ]

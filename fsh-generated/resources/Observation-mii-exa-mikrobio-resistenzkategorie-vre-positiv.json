@@ -1,9 +1,9 @@
 {
   "resourceType": "Observation",
-  "id": "mii-exa-mikrobio-workflow-vre-04-mre-status",
+  "id": "mii-exa-mikrobio-resistenzkategorie-vre-positiv",
   "meta": {
     "profile": [
-      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mre-status"
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
     ]
   },
   "category": [
@@ -29,15 +29,6 @@
       ]
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "code": "mre-status",
-        "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-untersuchungscode",
-        "display": "MRE-Status"
-      }
-    ]
-  },
   "identifier": [
     {
       "type": {
@@ -49,7 +40,7 @@
         ]
       },
       "system": "https://example.org/fhir/sid/test-lab-results",
-      "value": "wf-vre-4",
+      "value": "reskat-vre-pos",
       "assigner": {
         "identifier": {
           "system": "https://www.medizininformatik-initiative.de/fhir/core/CodeSystem/core-location-identifier",
@@ -59,6 +50,15 @@
     }
   ],
   "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "vre-status",
+        "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-resistenzkategorie",
+        "display": "VRE-Status"
+      }
+    ]
+  },
   "subject": {
     "reference": "Patient/example"
   },
@@ -66,9 +66,9 @@
   "valueCodeableConcept": {
     "coding": [
       {
-        "code": "373066001",
+        "code": "10828004",
         "system": "http://snomed.info/sct",
-        "display": "Yes"
+        "display": "Positive"
       }
     ]
   },
