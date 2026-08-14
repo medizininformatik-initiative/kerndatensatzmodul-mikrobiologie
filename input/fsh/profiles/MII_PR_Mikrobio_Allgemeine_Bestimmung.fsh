@@ -7,5 +7,6 @@ Description: "Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorg
 * code = $loinc#41852-5 // Microorganism or agent identified in Specimen
 * value[x] only CodeableConcept
 * valueCodeableConcept
-* valueCodeableConcept from MII_VS_Mikrobio_Organismen_SNOMEDCT (extensible)
+* valueCodeableConcept from MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED (extensible)
+* valueCodeableConcept ^short = "Identifizierter Mikroorganismus oder 'Not detected', wenn kein Erreger identifiziert wurde. Ein unbestimmbares Ergebnis wird ueber dataAbsentReason abgebildet."
 * method from MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED (extensible)
