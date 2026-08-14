@@ -80,7 +80,13 @@ Datum: tbd
 
 | Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
-| `mii-cps-mikrobio-metadata` | inhaltlich aktualisiert | 18 unterstützte Observation-Profile | `mii-pr-mikrobio-spezifische-kultur` in `supportedProfile` ergänzt; `mii-pr-mikrobio-mre-klasse` durch `mii-pr-mikrobio-resistenzkategorie-status` ersetzt | Server deklarieren das neue Profil mit; die Canonical der MRE-Klasse wird nicht mehr geführt | `/metadata`-Ausgabe und Conformance-Tests gegen das geänderte Profilset prüfen |
+| `mii-cps-mikrobio-metadata` | inhaltlich aktualisiert | 18 unterstützte Observation-Profile; Suchparameter ohne `titer` | `mii-pr-mikrobio-spezifische-kultur` in `supportedProfile` ergänzt; `mii-pr-mikrobio-mre-klasse` durch `mii-pr-mikrobio-resistenzkategorie-status` ersetzt; Suchparameter `titer` für `Observation` deklariert | Server deklarieren das neue Profil mit; die Canonical der MRE-Klasse wird nicht mehr geführt | `/metadata`-Ausgabe und Conformance-Tests gegen das geänderte Profilset prüfen |
+
+##### SearchParameter
+
+| Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
+|-------------|--------------|--------------------------|---------|----------------------------|-------------------|
+| `Observation-titer` | neu | Titer waren nicht suchbar: `mii-pr-mikrobio-titer` bildet den Wert als `Ratio` ab, der Basisparameter `Observation-value-quantity` deckt aber nur `Quantity` und `SampledData` ab | lokaler SearchParameter `titer` (`quantity`) auf `Observation.value.ofType(Ratio).denominator`, aufgenommen in das CapabilityStatement | Suche nach Verdünnungsstufen wird möglich; da der Zähler fest `1` ist, entspricht ein größerer Nenner einem höheren Titer, z. B. `?titer=gt160` | keine Migration nötig; bestehende Titer-Instanzen bleiben unverändert |
 
 ##### Beispiele & IG-Seitenstruktur
 
