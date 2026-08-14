@@ -63,9 +63,9 @@
         "id": "mii-lm-mikrobio-logical-model-de.Befundtyp",
         "path": "mii-lm-mikrobio-logical-model-de.Befundtyp",
         "short": "Befundtyp",
-        "definition": "Fachliche Einordnung des mikrobiologischen Befunds (LOINC).",
+        "definition": "Fachliche Einordnung des mikrobiologischen Befunds (LOINC). Mehrfachangabe, wenn der Befund mehrere Studientypen umfasst, z. B. bakteriologisch und mykologisch.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"

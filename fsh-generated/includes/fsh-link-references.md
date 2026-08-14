@@ -35,6 +35,7 @@
 [MII_PR_Mikrobio_Virulenzfaktor]: StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html
 [MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit]: StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html
 [MII_VS_Labor_Laborergebnis_Semiquantitativ]: ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html
+[MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED]: ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed.html
 [MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html
 [MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html
 [MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html
@@ -95,6 +96,7 @@
 [mii-exa-mikrobio-virulenzfaktor]: Observation-mii-exa-mikrobio-virulenzfaktor.html
 [mii-exa-mikrobio-voraussichtliche-empfindlichkeit]: Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html
 [mii-sp-mikrobio-interpretation]: SearchParameter-mii-sp-mikrobio-interpretation.html
+[mii-sp-mikrobio-observation-titer]: SearchParameter-mii-sp-mikrobio-observation-titer.html
 [mii-sp-mikrobio-observation-triggered-by]: SearchParameter-mii-sp-mikrobio-observation-triggered-by.html
 [ObservationInterpretation]: SearchParameter-ObservationInterpretation.html
 [ExtensionObservation_TriggeredBy]: StructureDefinition-ext-R5-Observation.triggeredBy.html
