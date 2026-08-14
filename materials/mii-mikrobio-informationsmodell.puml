@@ -1,0 +1,107 @@
+@startuml
+' Informationsmodell Mikrobiologie 2027 - Uebersicht
+' Abgeleitet aus den Logical Models:
+'   mii-lm-mikrobio-logical-model  (Befund)
+'   mii-lm-mikrobio-untersuchung   (abstrakte Basisklasse)
+'
+' Die einzelnen Untersuchungsarten mit ihren Ergebnistypen stehen im
+' zweiten Diagramm: mii-mikrobio-untersuchungsarten.puml
+
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam nodesep 40
+skinparam ranksep 45
+
+skinparam class {
+  BorderColor #666666
+  BackgroundColor #F5F5F5
+  ArrowColor #666666
+  FontStyle bold
+  AttributeFontStyle plain
+}
+
+' ------------------------------------------------------- andere MII KDS-Module
+class Laborbefund <<MII Labor>> #90EE90
+class Laboruntersuchung <<MII Labor>> #90EE90
+
+' ---------------------------------------------------------------- FHIR-Kontext
+class Patient #F5F5F5
+class Probenmaterial <<Specimen>> #F5F5F5
+
+' --------------------------------------------------------------------- Modell
+class Befund {
+  Befund-ID: Identifier[1..*]
+  Status: Code[1]
+  Befundtyp: CodeableConcept[0..*]
+  Klinischer Bezugszeitpunkt: Zeitpunkt[1]
+  Quelle Bezugszeitpunkt: Coding[0..1]
+  Dokumentationszeitpunkt: Zeitpunkt[0..1]
+}
+
+abstract class Untersuchung {
+  Untersuchungs-ID: Identifier[1..*]
+  Status: Code[1]
+  Untersuchungscode: CodeableConcept[1]
+  Untersuchungszeitpunkt: Zeitpunkt[1]
+  Quelle Untersuchungszeitpunkt: Coding[0..1]
+  Dokumentationszeitpunkt: Zeitpunkt[0..1]
+  Untersuchungsmethode: CodeableConcept[0..1]
+  Interpretationsbeeinflussende Eigenschaft: Coding[0..*]
+  Hinweis: Text[0..*]
+}
+
+abstract class Kultur <<Untersuchungsarten>> {
+  Allgemeine Kultur
+  Spezifische Kultur
+  Mikroskopie
+  Barlett Score
+  Nugent Score
+  Keimzahl
+  Empfindlichkeit
+}
+
+abstract class Bestimmung <<Untersuchungsarten>> {
+  Allgemeine Bestimmung
+  Spezifische Bestimmung
+  Ct-Wert
+}
+
+abstract class "Weitere Eigenschaften" as WeitereEigenschaften <<Untersuchungsarten>> {
+  Virulenzfaktor
+  Resistenzmechanismen / Determinanten
+  MRGN-Klasse
+  Resistenzkategorie-Status
+  Voraussichtliche Empfindlichkeit
+  Avidität
+}
+
+abstract class "Quantitative Tests" as QuantitativeTests <<Untersuchungsarten>> {
+  Antigen-/Antikörper-Tests
+  Titer
+  Molekulare Pathogenlast
+}
+
+' ----------------------------------------------------------------- Beziehungen
+Laborbefund <|-- Befund
+Laboruntersuchung <|-- Untersuchung
+
+Befund "1" -- "0..*" Untersuchung
+Befund "0..*" -- "1" Patient
+Befund "0..*" -- "0..*" Probenmaterial
+
+Untersuchung "0..*" -- "1" Patient
+Untersuchung "0..*" -- "1" Probenmaterial
+Untersuchung "0..*" -- "0..*" Untersuchung : ausgelöst durch
+
+Untersuchung <|-- Kultur
+Untersuchung <|-- Bestimmung
+Untersuchung <|-- WeitereEigenschaften
+Untersuchung <|-- QuantitativeTests
+
+legend bottom left
+|= |= Legende |
+|<#F5F5F5>    | abgeleitet aus FHIR-Kernspezifikation |
+|<#90EE90>    | andere MII KDS-Module |
+endlegend
+
+@enduml

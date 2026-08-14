@@ -14,7 +14,7 @@ Description: "Logical Model des mikrobiologischen Befunds für die grafische Dar
 
 * Identifikation 1..* Identifier "Identifikation" "Eindeutiger Identifikator des Befunds."
 * Status 1..1 code "Status" "Status des Befunds (z. B. vorläufig, final, korrigiert)."
-* Befundtyp 0..1 CodeableConcept "Befundtyp" "Fachliche Einordnung des mikrobiologischen Befunds (LOINC)."
+* Befundtyp 0..* CodeableConcept "Befundtyp" "Fachliche Einordnung des mikrobiologischen Befunds (LOINC). Mehrfachangabe, wenn der Befund mehrere Studientypen umfasst, z. B. bakteriologisch und mykologisch."
 * Patient 1..1 Reference(Patient) "Patient" "Patient, auf den sich der Befund bezieht."
 * KlinischerBezugszeitpunkt 1..1 dateTime "Klinischer Bezugszeitpunkt" "Zeitpunkt, auf den sich der Befund inhaltlich bezieht (in der Regel der Zeitpunkt der Probenentnahme)."
 * QuelleKlinischerBezugszeitpunkt 0..1 Coding "Quelle des klinischen Bezugszeitpunkts" "Gibt an, worauf sich der klinische Bezugszeitpunkt bezieht, z. B. Zeitpunkt der Probenentnahme oder Laboreingang."
