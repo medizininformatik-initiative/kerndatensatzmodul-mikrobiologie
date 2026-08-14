@@ -87,7 +87,7 @@ Datum: tbd
 - `mii-exa-mikrobio-spezifische-kultur` liegt jetzt auf `mii-pr-mikrobio-spezifische-kultur` statt auf `mii-pr-mikrobio-spezifische-bestimmung`; Code und Ergebnis wurden auf einen erregerspezifischen Kulturcode und `365698005 Organism growth` umgestellt.
 - Neue Seite *Technische Implementierung → Profilauswahl und Abgrenzung* grenzt zielgerichteten Erregernachweis, Empfindlichkeitstestung, MRGN-Klassifikation und Resistenzkategorie-Status voneinander ab und beschreibt die diagnostische Kette.
 - Neue Profilseite *Kultur → Spezifische Kultur*; die Seite *MRE Klasse* wurde durch *Resistenzkategorie Status* ersetzt.
-- `mii-exa-mikrobio-mre-klasse` entfällt. Neu sind sieben Beispiele für den Resistenzkategorie-Status (MRSA/VRE/LRE jeweils positiv und negativ, LVRE positiv), Negativbeispiele für spezifische Bestimmung und spezifische Kultur, ein Beispiel für `keine-mrgn-klasse` sowie eine dreiteilige Beispielkette (Kultur → Identifikation → Empfindlichkeit) als Grundlage der Ableitung.
+- `mii-exa-mikrobio-mre-klasse` entfällt. Neu sind zwei Beispiele für den Resistenzkategorie-Status (VRE positiv und negativ, stellvertretend für alle Kategorien), Negativbeispiele für spezifische Bestimmung und spezifische Kultur, ein Beispiel für `keine-mrgn-klasse` sowie eine dreiteilige Beispielkette (Kultur → Identifikation → Empfindlichkeit) als Grundlage der Ableitung.
 - Die Seite *Anwendungsfälle / Informationsmodell → Datensätze inkl. Beschreibungen* zeigt alle drei Logical Models mit eigenem Strukturbaum und eigener Elementtabelle.
 
 ### 2027.0.0-alpha.5
@@ -111,8 +111,8 @@ Datum: tbd
 
 | Artefakt (Canonical-URL) | Änderungstyp | Vorher (falls relevant) | Nachher | Implementierungsauswirkung | Migrationshinweis |
 |-------------|--------------|--------------------------|---------|----------------------------|-------------------|
-| `Observation-interpretation` | neu | keine lokale Deklaration im CPS | lokaler SearchParameter für `Observation.interpretation` (`token`) und Aufnahme in das CapabilityStatement | Suche nach Interpretation, z. B. Susceptibility-/Aviditätsinterpretationen, kann capability-basiert deklariert werden | Serverindexierung für `Observation.interpretation` prüfen |
-| `Observation-triggered-by` | neu | `triggeredBy` wurde profiliert, aber nicht als Suchparameter deklariert | lokaler SearchParameter für die auslösende Observation innerhalb der R5-Cross-Version-Extension `Observation.triggeredBy` (`reference`) und Aufnahme in das CapabilityStatement | Triggerbeziehungen zwischen mikrobiologischen Observationen können gezielt gesucht werden | Serverindexierung für `extension-Observation.triggeredBy.extension('observation').valueReference` ergänzen |
+| `Observation-interpretation` | neu | keine lokale Deklaration im CPS | lokaler SearchParameter für `Observation.interpretation` (`token`) und Aufnahme in das CapabilityStatement | Suche nach Interpretation, z. B. Susceptibility-/Aviditätsinterpretationen, kann capability-basiert deklariert werden | keine Migration nötig; bestehende Instanzen bleiben unverändert |
+| `Observation-triggered-by` | neu | `triggeredBy` wurde profiliert, aber nicht als Suchparameter deklariert | lokaler SearchParameter für die auslösende Observation innerhalb der R5-Cross-Version-Extension `Observation.triggeredBy` (`reference`) und Aufnahme in das CapabilityStatement | Triggerbeziehungen zwischen mikrobiologischen Observationen können gezielt gesucht werden | keine Migration nötig; bestehende Instanzen bleiben unverändert |
 
 ##### Unterstützte Suchparameter
 
