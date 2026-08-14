@@ -111,6 +111,9 @@ Usage: #definition
 * rest.resource.searchParam[+].name = "value-quantity"
 * rest.resource.searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Observation-value-quantity"
 * rest.resource.searchParam[=].type = #quantity
+* rest.resource.searchParam[+].name = "titer"
+* rest.resource.searchParam[=].definition = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-titer"
+* rest.resource.searchParam[=].type = #quantity
 * rest.resource[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].extension.valueCode = #SHALL
 * rest.resource[=].type = #DiagnosticReport
