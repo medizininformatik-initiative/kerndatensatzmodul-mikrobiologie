@@ -11,6 +11,6 @@ Usage: #example
 * code = $loinc#11475-1 "Microorganism identified in Specimen by Culture"
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
-* valueCodeableConcept = $sct#10828004 "Positive (qualifier value)"
+* valueCodeableConcept = $sct#365698005 "Organism growth"
 * method = $sct#703750006 "Aerobic culture"
 * specimen.reference = "Specimen/example"
