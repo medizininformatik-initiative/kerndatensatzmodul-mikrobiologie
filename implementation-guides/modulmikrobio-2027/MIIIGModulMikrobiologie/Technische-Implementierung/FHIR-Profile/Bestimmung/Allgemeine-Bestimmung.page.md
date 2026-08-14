@@ -8,6 +8,20 @@ expand: 1
 
 Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorganismus oder infektiösen Agens in einer Probe, ohne Einschränkung auf ein vordefiniertes Ziel.
 
+### Ergebnis
+
+Das Ergebnis ist der identifizierte Mikroorganismus aus `mii-vs-mikrobio-organismen-snomedct`. Wurde untersucht, aber kein Erreger identifiziert, wird `260415000 |Not detected|` angegeben — nicht das Weglassen der Observation.
+
+Abzugrenzen von den benachbarten Negativfällen:
+
+| Aussage | Profil | Wert |
+|---|---|---|
+| Kein Erreger identifiziert | Allgemeine Bestimmung | `260415000 \|Not detected\|` |
+| Kein Wachstum in der Kultur | [Allgemeine Kultur](../Kultur/Allgemeine-Kultur.page.md) | `264868006 \|No growth\|` |
+| Ein bestimmter Erreger wurde gesucht und nicht gefunden | [Spezifische Bestimmung](Spezifische-Bestimmung.page.md) | `260415000 \|Not detected\|` |
+
+`264868006 |No growth|` ist an das Wachstum in der Kultur gebunden und bleibt deshalb den Kulturprofilen vorbehalten. Ein unbestimmbares Ergebnis wird über `dataAbsentReason` abgebildet, nicht über `Not detected`.
+
 ### Metadaten
 
 <fql output="table" headers="true">
