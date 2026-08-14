@@ -113,9 +113,9 @@
         "path": "DiagnosticReport.category",
         "sliceName": "mibi-sub-category",
         "short": "Mikrobiologie-Kategorie LOINC",
-        "definition": "Kategorie-Slice für die LOINC-Kodierung von mikrobiologischen Befunden",
+        "definition": "Kategorie-Slice für die LOINC-Kodierung von mikrobiologischen Befunden. Mehrfachangabe zulaessig, wenn der Befund mehrere Studientypen umfasst, z. B. bakteriologisch und mykologisch. Umfasst der Befund keine benennbaren Studientypen oder soll er nur allgemein eingeordnet werden, entfaellt der Subtyp; die allgemeine Einordnung erfolgt ueber category[mibi-category] mit MB und 18725-2.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "mustSupport": true,
         "binding": {
           "strength": "required",

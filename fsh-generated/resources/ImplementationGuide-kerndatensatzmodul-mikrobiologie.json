@@ -317,6 +317,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed"
+        },
+        "name": "MII VS Mikrobio Allgemeine Bestimmung Ergebnis [SNOMED]",
+        "description": "Ergebnis-ValueSet fuer die allgemeine Bestimmung: der identifizierte Mikroorganismus oder das negative Ergebnis, wenn kein Erreger identifiziert wurde.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed"
         },
         "name": "MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]",
@@ -744,6 +752,14 @@
         },
         "name": "mii-sp-mikrobio-interpretation",
         "description": "Suchparameter für die Normkategorie der Empfindlichkeitsextension",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/mii-sp-mikrobio-observation-titer"
+        },
+        "name": "mii-sp-mikrobio-observation-titer",
+        "description": "Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-Werts von MII_PR_Mikrobio_Titer; der Zaehler ist dort fest 1. Ein groesserer Nenner bedeutet einen hoeheren Titer, z. B. findet ?titer=gt160 alle Titer oberhalb von 1:160.",
         "exampleBoolean": false
       },
       {
