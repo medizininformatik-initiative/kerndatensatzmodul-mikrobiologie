@@ -1,0 +1,2274 @@
+{
+  "schemaVersion": "1.4",
+  "tool": "ig-stats.py",
+  "mode": "static",
+  "analyzed": {
+    "path": "/Users/patrickwerner/IdeaProjects/kerndatensatzmodul-mikrobiologie",
+    "label": "mikrobiologie-migrated-2027.0.0-alpha.6",
+    "project_root_nested": null,
+    "project_root_candidates": null,
+    "git_commit": "fdf3190",
+    "timestamp": "2026-08-25T18:08:18Z",
+    "input": ".",
+    "resolved_from": "lokaler Pfad"
+  },
+  "identity": {
+    "id": "kerndatensatzmodul-mikrobiologie",
+    "canonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio",
+    "packageId": "de.medizininformatikinitiative.kerndatensatz.mikrobiologie",
+    "name": "Kerndatensatzmodul Mikrobiologie",
+    "title": "MII Implementation Guide Microbiology",
+    "version": "2027.0.0-alpha.6",
+    "calver": true,
+    "status": "active",
+    "fhirVersion": "4.0.1",
+    "license": "CC-BY-4.0",
+    "publisher": "NUM-DIZ"
+  },
+  "artifacts": {
+    "profiles": 20,
+    "extensions": 2,
+    "valuesets": 42,
+    "codesystems": 3,
+    "logicals": 3,
+    "capabilitystatements": 1,
+    "questionnaires": 0,
+    "searchparameters": 4,
+    "operations": 0,
+    "examples": 28,
+    "rulesets": 56,
+    "invariants": 1,
+    "mappings": 0,
+    "other": {},
+    "total": 103,
+    "other_total": 0,
+    "_source": "input/fsh (FSH-Deklarationen)",
+    "generated_crosscheck": {
+      "source": "fsh-generated/resources",
+      "counts": {
+        "profiles": 20,
+        "extensions": 2,
+        "valuesets": 42,
+        "codesystems": 3,
+        "logicals": 3,
+        "capabilitystatements": 1,
+        "questionnaires": 0,
+        "searchparameters": 4,
+        "operations": 0,
+        "examples": 27
+      },
+      "other": {},
+      "mismatches": {
+        "examples": {
+          "declared": 28,
+          "generated": 27
+        }
+      }
+    }
+  },
+  "artifacts_detail": [
+    {
+      "type": "CodeSystem",
+      "name": "MII_CS_Mikrobio_MRGN_Ergebnis",
+      "instanceOf": null,
+      "category": "codesystems",
+      "path": "input/fsh/codesystems/MII_CS_Mikrobio_MRGN_Ergebnis.fsh",
+      "line": 1
+    },
+    {
+      "type": "CodeSystem",
+      "name": "MII_CS_Mikrobio_Resistenzkategorie",
+      "instanceOf": null,
+      "category": "codesystems",
+      "path": "input/fsh/codesystems/MII_CS_Mikrobio_Resistenzkategorie.fsh",
+      "line": 1
+    },
+    {
+      "type": "CodeSystem",
+      "name": "MII_CS_Mikrobio_Susceptibility_NORM",
+      "instanceOf": null,
+      "category": "codesystems",
+      "path": "input/fsh/codesystems/MII_CS_Mikrobio_Susceptibility_Norm.fsh",
+      "line": 1
+    },
+    {
+      "type": "Extension",
+      "name": "ExtensionObservation_TriggeredBy",
+      "instanceOf": null,
+      "category": "extensions",
+      "path": "input/fsh/extensions/ExtensionObservation_TriggeredBy.fsh",
+      "line": 5
+    },
+    {
+      "type": "Extension",
+      "name": "MII_EX_Mikrobio_Empfindlichkeit_Norm",
+      "instanceOf": null,
+      "category": "extensions",
+      "path": "input/fsh/extensions/MII_EX_Mikrobio_Empfindlichkeit_Norm.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "MII-CPS-Metadata-Mikrobio",
+      "instanceOf": "CapabilityStatement",
+      "category": "capabilitystatements",
+      "path": "input/fsh/instances/MII-CPS-Metadata-Mikrobio.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-allgemeine-bestimmung",
+      "instanceOf": "MII_PR_Mikrobio_Allgemeine_Bestimmung",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-allgemeine-bestimmung.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-allgemeine-kultur",
+      "instanceOf": "MII_PR_Mikrobio_Allgemeine_Kultur",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-allgemeine-kultur.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-antigen-antikoerper-quantitativ",
+      "instanceOf": "MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-antigen-antikoerper-quantitativ.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-aviditaet",
+      "instanceOf": "MII_PR_Mikrobio_Aviditaet",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-aviditaet.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-barlett-score",
+      "instanceOf": "MII_PR_Mikrobio_Barlett_Score",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-barlett-score.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-ct-wert",
+      "instanceOf": "MII_PR_Mikrobio_Ct_Wert",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-ct-wert.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-patient-inline",
+      "instanceOf": "Patient",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-diagnostic-report.fsh",
+      "line": 22
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-diagnostic-report",
+      "instanceOf": "MII_PR_Mikrobio_Diagnostic_Report",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-diagnostic-report.fsh",
+      "line": 29
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-empfindlichkeit",
+      "instanceOf": "MII_PR_Mikrobio_Empfindlichkeit",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-empfindlichkeit.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-keimzahl",
+      "instanceOf": "MII_PR_Mikrobio_Keimzahl",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-keimzahl.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-mikroskopie",
+      "instanceOf": "MII_PR_Mikrobio_Mikroskopie",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-mikroskopie.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-molekulare-pathogenlast",
+      "instanceOf": "MII_PR_Mikrobio_Molekulare_Pathogenlast",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-molekulare-pathogenlast.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-mrgn-klasse-negativ",
+      "instanceOf": "MII_PR_Mikrobio_MRGN_Klasse",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-mrgn-klasse-negativ.fsh",
+      "line": 7
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-mrgn-klasse",
+      "instanceOf": "MII_PR_Mikrobio_MRGN_Klasse",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-mrgn-klasse.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-nugent-score",
+      "instanceOf": "MII_PR_Mikrobio_Nugent_Score",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-nugent-score.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-resistenzkategorie-vre-negativ",
+      "instanceOf": "MII_PR_Mikrobio_Resistenzkategorie_Status",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-resistenzkategorie-vre-negativ.fsh",
+      "line": 7
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-resistenzkategorie-vre-positiv",
+      "instanceOf": "MII_PR_Mikrobio_Resistenzkategorie_Status",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-resistenzkategorie-vre-positiv.fsh",
+      "line": 10
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-resistenzmechanismen-determinanten",
+      "instanceOf": "MII_PR_Mikrobio_Resistenzmechanismen_Determinanten",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-resistenzmechanismen-determinanten.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-spezifische-bestimmung-vre-negativ",
+      "instanceOf": "MII_PR_Mikrobio_Spezifische_Bestimmung",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.fsh",
+      "line": 8
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-spezifische-bestimmung",
+      "instanceOf": "MII_PR_Mikrobio_Spezifische_Bestimmung",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-spezifische-bestimmung.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-spezifische-kultur-vre-negativ",
+      "instanceOf": "MII_PR_Mikrobio_Spezifische_Kultur",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-spezifische-kultur-vre-negativ.fsh",
+      "line": 4
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-spezifische-kultur",
+      "instanceOf": "MII_PR_Mikrobio_Spezifische_Kultur",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-spezifische-kultur.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-titer",
+      "instanceOf": "MII_PR_Mikrobio_Titer",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-titer.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-virulenzfaktor",
+      "instanceOf": "MII_PR_Mikrobio_Virulenzfaktor",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-virulenzfaktor.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-voraussichtliche-empfindlichkeit",
+      "instanceOf": "MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-voraussichtliche-empfindlichkeit.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-workflow-vre-01-kultur",
+      "instanceOf": "MII_PR_Mikrobio_Spezifische_Kultur",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-workflow-vre-01-kultur.fsh",
+      "line": 17
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-workflow-vre-02-identifikation",
+      "instanceOf": "MII_PR_Mikrobio_Allgemeine_Bestimmung",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-workflow-vre-02-identifikation.fsh",
+      "line": 10
+    },
+    {
+      "type": "Instance",
+      "name": "mii-exa-mikrobio-workflow-vre-03-empfindlichkeit",
+      "instanceOf": "MII_PR_Mikrobio_Empfindlichkeit",
+      "category": "examples",
+      "path": "input/fsh/instances/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.fsh",
+      "line": 5
+    },
+    {
+      "type": "Instance",
+      "name": "mii-sp-mikrobio-interpretation",
+      "instanceOf": "SearchParameter",
+      "category": "searchparameters",
+      "path": "input/fsh/instances/mii-sp-mikrobio-interpretation.fsh",
+      "line": 1
+    },
+    {
+      "type": "Logical",
+      "name": "MII_LM_Mikrobio_Befund",
+      "instanceOf": null,
+      "category": "logicals",
+      "path": "input/fsh/logicals/MII_LM_Mikrobio_Befund.fsh",
+      "line": 3
+    },
+    {
+      "type": "Logical",
+      "name": "MII_LM_Mikrobio_Untersuchung",
+      "instanceOf": null,
+      "category": "logicals",
+      "path": "input/fsh/logicals/MII_LM_Mikrobio_Untersuchung.fsh",
+      "line": 5
+    },
+    {
+      "type": "Logical",
+      "name": "MII_LM_Mikrobio_Untersuchungsarten",
+      "instanceOf": null,
+      "category": "logicals",
+      "path": "input/fsh/logicals/MII_LM_Mikrobio_Untersuchungsarten.fsh",
+      "line": 4
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Allgemeine_Bestimmung",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Allgemeine_Bestimmung.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Allgemeine_Kultur",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Allgemeine_Kultur.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Aviditaet",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Aviditaet.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Barlett_Score",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Barlett_Score.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Ct_Wert",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Ct_Wert.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Diagnostic_Report",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Diagnostic_Report.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Empfindlichkeit",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Empfindlichkeit.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Keimzahl",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Keimzahl.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_MRGN_Klasse",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_MRGN_Klasse.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Mikroskopie",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Mikroskopie.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Molekulare_Pathogenlast",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Molekulare_Pathogenlast.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Nugent_Score",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Nugent_Score.fsh",
+      "line": 1
+    },
+    {
+      "type": "Invariant",
+      "name": "nugent-score-0-to-10",
+      "instanceOf": null,
+      "category": "invariants",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Nugent_Score.fsh",
+      "line": 15
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Resistenzkategorie_Status",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Resistenzkategorie_Status.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Resistenzmechanismen_Determinanten",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Resistenzmechanismen_Determinanten.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Spezifische_Bestimmung",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Spezifische_Bestimmung.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Spezifische_Kultur",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Spezifische_Kultur.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Titer",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Titer.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Virulenzfaktor",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Virulenzfaktor.fsh",
+      "line": 1
+    },
+    {
+      "type": "Profile",
+      "name": "MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit",
+      "instanceOf": null,
+      "category": "profiles",
+      "path": "input/fsh/profiles/MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportResource",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 21
+    },
+    {
+      "type": "RuleSet",
+      "name": "Profile",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 39
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportProfile",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 44
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportInteraction",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 50
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportSearchParam",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 56
+    },
+    {
+      "type": "RuleSet",
+      "name": "SupportSpecialSearchParam",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/cps-rules.fsh",
+      "line": 64
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIVersionPolicyStrict",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 25
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIVersionPolicyStrictInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 29
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMICopyrightLabel",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 39
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMICopyrightLabelInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 43
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIApprovalDate",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 50
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIApprovalDateInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 54
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactTopic",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 64
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactTopicInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 68
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactContributors",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 78
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactContributorsInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 104
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIShareableStructureDefinition",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 130
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPublishableStructureDefinition",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 133
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIKnowledgeCapabilitiesStructureDefinition",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 136
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactUsageLogicalModel",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 142
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactUsageProfile",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 146
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactUsageExtension",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 150
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIShareableCapabilityStatement",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 156
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPublishableCapabilityStatement",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 159
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIKnowledgeCapabilitiesCapabilityStatement",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 162
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIArtifactUsageCapabilityStatement",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 168
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIShareableCodeSystem",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 174
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPublishableCodeSystem",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 177
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIKnowledgeCapabilitiesCodeSystem",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 180
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIKnowledgeCapabilitiesCodeSystemPublishable",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 186
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIShareableValueSet",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 192
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPublishableValueSet",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 195
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIComputableValueSet",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 198
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIKnowledgeCapabilitiesValueSet",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/crmi.fsh",
+      "line": 201
+    },
+    {
+      "type": "RuleSet",
+      "name": "ExtensionContext",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/extension-context.fsh",
+      "line": 10
+    },
+    {
+      "type": "RuleSet",
+      "name": "LicenseCodeableCCBY40",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/license-terms.fsh",
+      "line": 14
+    },
+    {
+      "type": "RuleSet",
+      "name": "LicenseCodeableCCBY40Instance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/license-terms.fsh",
+      "line": 18
+    },
+    {
+      "type": "RuleSet",
+      "name": "LicenseCodeableCC0",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/license-terms.fsh",
+      "line": 22
+    },
+    {
+      "type": "RuleSet",
+      "name": "SnomedLicense",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/license.fsh",
+      "line": 12
+    },
+    {
+      "type": "RuleSet",
+      "name": "MetaProfile",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/meta-profile.fsh",
+      "line": 13
+    },
+    {
+      "type": "RuleSet",
+      "name": "MIKRO_OBSERVATION_COMMON",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/mikrobio-observation-common.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "Publisher",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/publisher.fsh",
+      "line": 1
+    },
+    {
+      "type": "RuleSet",
+      "name": "SP_Publisher",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/publisher.fsh",
+      "line": 6
+    },
+    {
+      "type": "RuleSet",
+      "name": "TestDataLabel",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/test-data-label.fsh",
+      "line": 14
+    },
+    {
+      "type": "RuleSet",
+      "name": "Translation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 27
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddSnomedCodingTranslation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 38
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddIcd10CodingTranslation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 46
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddAlphaIdCodingTranslation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 54
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddOrphaCodingTranslation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 62
+    },
+    {
+      "type": "RuleSet",
+      "name": "AddOpsCodingTranslation",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/translation.fsh",
+      "line": 70
+    },
+    {
+      "type": "RuleSet",
+      "name": "Version",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 2
+    },
+    {
+      "type": "RuleSet",
+      "name": "PR_CS_VS_Version",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 5
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPackageSource",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 15
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIPackageSourceDefinitionalResource",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 24
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIResourceEffectivePeriod",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 38
+    },
+    {
+      "type": "RuleSet",
+      "name": "CRMIResourceEffectivePeriodInstance",
+      "instanceOf": null,
+      "category": "rulesets",
+      "path": "input/fsh/rulesets/version.fsh",
+      "line": 42
+    },
+    {
+      "type": "Instance",
+      "name": "ObservationInterpretation",
+      "instanceOf": "SearchParameter",
+      "category": "searchparameters",
+      "path": "input/fsh/searchparameter/MII_SP_Mikrobio_Observation-interpretation.fsh",
+      "line": 1
+    },
+    {
+      "type": "Instance",
+      "name": "mii-sp-mikrobio-observation-titer",
+      "instanceOf": "SearchParameter",
+      "category": "searchparameters",
+      "path": "input/fsh/searchparameter/MII_SP_Mikrobio_Observation-titer.fsh",
+      "line": 8
+    },
+    {
+      "type": "Instance",
+      "name": "mii-sp-mikrobio-observation-triggered-by",
+      "instanceOf": "SearchParameter",
+      "category": "searchparameters",
+      "path": "input/fsh/searchparameter/MII_SP_Mikrobio_Observation-triggered-by.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Labor_Laborergebnis_Semiquantitativ",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Labor_Laborergbenis_Semiquantitativ_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Aviditaet_Ergebnis",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Aviditaet_Ergebnis_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Aviditaet_Tests_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Aviditaet_Tests_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Barlett_Score_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Barlett_Score_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Befundtyp_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Befundtyp_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_CT_Wert_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_CT_Wert_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Data_Absent_Reason",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Data_Absent_Reason.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Detected_Not_Detected_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Detected_Not_Detected_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Empfänglichkeit_Genotyp_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Keimzahl_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Keimzahl_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_MRGN_Klasse_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_MRGN_Klasse_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Morphologie_Methode_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Morphologie_Methode_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Organismen_SNOMEDCT",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Organismen_SNOMEDCT.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Resistenzkategorie_Status",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Resistenzkategorie_Status.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Susceptibility",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Susceptibility.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Susceptibility_NORM",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Susceptibility_NORM.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Titer_Methode_SNOMED",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Titer_Methode_SNOMED.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Titer_Tests_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Titer_Tests_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Virulenz_LOINC",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Virulenz_LOINC.fsh",
+      "line": 1
+    },
+    {
+      "type": "ValueSet",
+      "name": "MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit",
+      "instanceOf": null,
+      "category": "valuesets",
+      "path": "input/fsh/valuesets/MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit_SNOMEDCT.fsh",
+      "line": 1
+    }
+  ],
+  "preflight": {
+    "licence": {
+      "evidence": [
+        {
+          "source": "sushi-config.yaml/package.json",
+          "value": "CC-BY-4.0"
+        },
+        {
+          "source": "LICENSE",
+          "value": "Attribution 4.0 International"
+        },
+        {
+          "source": "input/pagecontent/metadata.md",
+          "value": "CC-BY-4.0"
+        },
+        {
+          "source": "input/pagecontent/index.md",
+          "value": "Creative Commons"
+        }
+      ],
+      "declared_anywhere": true,
+      "contradictory": true,
+      "distinct_values": [
+        "attribution4.0international",
+        "cc-by-4.0",
+        "creativecommons"
+      ]
+    },
+    "canonical_space": {
+      "canonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio",
+      "package_json_canonical": null,
+      "config_contradiction": false,
+      "out_of_space_count": 1,
+      "out_of_space": [
+        {
+          "type": "StructureDefinition",
+          "id": "ext-R5-Observation.triggeredBy",
+          "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy"
+        }
+      ],
+      "id_url_mismatch": [
+        {
+          "type": "CapabilityStatement",
+          "id": "mii-cps-mikrobio-metadata",
+          "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata"
+        },
+        {
+          "type": "SearchParameter",
+          "id": "ObservationInterpretation",
+          "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation"
+        },
+        {
+          "type": "SearchParameter",
+          "id": "mii-sp-mikrobio-interpretation",
+          "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-norm-kategorie"
+        },
+        {
+          "type": "SearchParameter",
+          "id": "mii-sp-mikrobio-observation-titer",
+          "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-titer"
+        },
+        {
+          "type": "SearchParameter",
+          "id": "mii-sp-mikrobio-observation-triggered-by",
+          "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-triggered-by"
+        },
+        {
+          "type": "StructureDefinition",
+          "id": "mii-lm-mikrobio-logical-model",
+          "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de"
+        }
+      ],
+      "special_url_prediction": 7,
+      "example_org": []
+    },
+    "dependency_health": {
+      "old_style_packages": [],
+      "tho_pinned_directly": false,
+      "extensions_pinned_directly": false,
+      "injection_risk": true,
+      "external_parents": [
+        "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab",
+        "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab"
+      ],
+      "dependency_block_present": true,
+      "dependency_block_unparsed": false
+    },
+    "package_layout": null,
+    "narrative_sources": {
+      "pagecontent": true,
+      "intro_notes": true,
+      "implementation_guides_tree": false,
+      "dual_source": false,
+      "pagecontent_last_commit": null,
+      "implementation_guides_last_commit": null
+    },
+    "qa_baseline": {
+      "source": "output/qa.json",
+      "errs": 109,
+      "warnings": 574,
+      "date": "Tue, 25 Aug, 2026 19:58:22 +0200"
+    },
+    "_comment": "migration Gate-0 aspects; None = not measurable from this tree (obtain it, never assume it)"
+  },
+  "dependencies": {
+    "count": 4,
+    "pinned": 4,
+    "floating": 0,
+    "items": {
+      "de.medizininformatikinitiative.kerndatensatz.laborbefund": "2026.0.3",
+      "hl7.fhir.uv.crmi": "2.0.0",
+      "hl7.fhir.uv.xver-r5.r4": "0.1.0",
+      "hl7.fhir.uv.ips": "1.1.0"
+    },
+    "floating_items": [],
+    "block_present": true,
+    "_source": "sushi-config.yaml: dependencies"
+  },
+  "narrative": {
+    "format": "target",
+    "pages": 24,
+    "pages_all": 24,
+    "translation_pages": 24,
+    "translation_words": 14802,
+    "intro_note_pages": 20,
+    "intro_note_words": 2935,
+    "words": 16817,
+    "words_all_incl_stubs": 34554,
+    "images": 2,
+    "mandatory_present": [
+      "index",
+      "guidance",
+      "implementer-guidance",
+      "uml-diagrams",
+      "profiles",
+      "capability-statements",
+      "logical-models",
+      "examples",
+      "security-and-privacy",
+      "changes",
+      "version-history",
+      "downloads",
+      "translationinfo"
+    ],
+    "mandatory_missing_in_target": [],
+    "files": [
+      {
+        "path": "input/pagecontent/ImplementationGuide-kerndatensatzmodul-mikrobiologie.md",
+        "words": 423,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/anwendungsfaelle-informationsmodell.md",
+        "words": 152,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/capability-statements.md",
+        "words": 162,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/changes.md",
+        "words": 7576,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/code-systems.md",
+        "words": 318,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/downloads.md",
+        "words": 440,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/examples.md",
+        "words": 66,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/extensions.md",
+        "words": 83,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/fhir-profile.md",
+        "words": 253,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/guidance.md",
+        "words": 287,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/implementer-guidance.md",
+        "words": 268,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/index.md",
+        "words": 883,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/logical-models.md",
+        "words": 342,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/metadata.md",
+        "words": 2453,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/probe.md",
+        "words": 157,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/profilauswahl-und-abgrenzung.md",
+        "words": 896,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/profiles.md",
+        "words": 220,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/search-parameters.md",
+        "words": 74,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/security-and-privacy.md",
+        "words": 596,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/technische-implementierung.md",
+        "words": 75,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/translationinfo.md",
+        "words": 99,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/uml-diagrams.md",
+        "words": 227,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/value-sets.md",
+        "words": 171,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/pagecontent/version-history.md",
+        "words": 596,
+        "kind": "target",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung-intro.md",
+        "words": 203,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-allgemeine-kultur-intro.md",
+        "words": 92,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ-intro.md",
+        "words": 84,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-aviditaet-intro.md",
+        "words": 87,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-barlett-score-intro.md",
+        "words": 91,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-ct-wert-intro.md",
+        "words": 84,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-diagnostic-report-intro.md",
+        "words": 257,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-empfindlichkeit-intro.md",
+        "words": 137,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-keimzahl-intro.md",
+        "words": 84,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-mikroskopie-intro.md",
+        "words": 88,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast-intro.md",
+        "words": 89,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-mrgn-klasse-intro.md",
+        "words": 210,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-nugent-score-intro.md",
+        "words": 81,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status-intro.md",
+        "words": 517,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten-intro.md",
+        "words": 88,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung-intro.md",
+        "words": 238,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-spezifische-kultur-intro.md",
+        "words": 165,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-titer-intro.md",
+        "words": 181,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-virulenzfaktor-intro.md",
+        "words": 79,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/intro-notes/StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit-intro.md",
+        "words": 80,
+        "kind": "intro",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/ImplementationGuide-kerndatensatzmodul-mikrobiologie.md",
+        "words": 344,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/anwendungsfaelle-informationsmodell.md",
+        "words": 162,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/capability-statements.md",
+        "words": 161,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/changes.md",
+        "words": 6398,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/code-systems.md",
+        "words": 297,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/downloads.md",
+        "words": 408,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/examples.md",
+        "words": 54,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/extensions.md",
+        "words": 76,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/fhir-profile.md",
+        "words": 253,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/guidance.md",
+        "words": 269,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/implementer-guidance.md",
+        "words": 248,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/index.md",
+        "words": 834,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/logical-models.md",
+        "words": 330,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/metadata.md",
+        "words": 2178,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/probe.md",
+        "words": 168,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/profilauswahl-und-abgrenzung.md",
+        "words": 802,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/profiles.md",
+        "words": 214,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/search-parameters.md",
+        "words": 58,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/security-and-privacy.md",
+        "words": 494,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/technische-implementierung.md",
+        "words": 63,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/translationinfo.md",
+        "words": 92,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/uml-diagrams.md",
+        "words": 213,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/value-sets.md",
+        "words": 140,
+        "kind": "translation",
+        "stub": false
+      },
+      {
+        "path": "input/translations/de/pagecontent/version-history.md",
+        "words": 546,
+        "kind": "translation",
+        "stub": false
+      }
+    ]
+  },
+  "linguistics": {
+    "content_pages": 24,
+    "words_total": 16817,
+    "words_avg": 700.7,
+    "words_median": 260,
+    "words_min": 66,
+    "words_max": 7576,
+    "longest_page": "input/pagecontent/changes.md",
+    "shortest_page": "input/pagecontent/examples.md",
+    "per_page": [
+      {
+        "path": "input/pagecontent/changes.md",
+        "words": 7576
+      },
+      {
+        "path": "input/pagecontent/metadata.md",
+        "words": 2453
+      },
+      {
+        "path": "input/pagecontent/profilauswahl-und-abgrenzung.md",
+        "words": 896
+      },
+      {
+        "path": "input/pagecontent/index.md",
+        "words": 883
+      },
+      {
+        "path": "input/pagecontent/security-and-privacy.md",
+        "words": 596
+      },
+      {
+        "path": "input/pagecontent/version-history.md",
+        "words": 596
+      },
+      {
+        "path": "input/pagecontent/downloads.md",
+        "words": 440
+      },
+      {
+        "path": "input/pagecontent/ImplementationGuide-kerndatensatzmodul-mikrobiologie.md",
+        "words": 423
+      },
+      {
+        "path": "input/pagecontent/logical-models.md",
+        "words": 342
+      },
+      {
+        "path": "input/pagecontent/code-systems.md",
+        "words": 318
+      },
+      {
+        "path": "input/pagecontent/guidance.md",
+        "words": 287
+      },
+      {
+        "path": "input/pagecontent/implementer-guidance.md",
+        "words": 268
+      },
+      {
+        "path": "input/pagecontent/fhir-profile.md",
+        "words": 253
+      },
+      {
+        "path": "input/pagecontent/uml-diagrams.md",
+        "words": 227
+      },
+      {
+        "path": "input/pagecontent/profiles.md",
+        "words": 220
+      },
+      {
+        "path": "input/pagecontent/value-sets.md",
+        "words": 171
+      },
+      {
+        "path": "input/pagecontent/capability-statements.md",
+        "words": 162
+      },
+      {
+        "path": "input/pagecontent/probe.md",
+        "words": 157
+      },
+      {
+        "path": "input/pagecontent/anwendungsfaelle-informationsmodell.md",
+        "words": 152
+      },
+      {
+        "path": "input/pagecontent/translationinfo.md",
+        "words": 99
+      },
+      {
+        "path": "input/pagecontent/extensions.md",
+        "words": 83
+      },
+      {
+        "path": "input/pagecontent/technische-implementierung.md",
+        "words": 75
+      },
+      {
+        "path": "input/pagecontent/search-parameters.md",
+        "words": 74
+      },
+      {
+        "path": "input/pagecontent/examples.md",
+        "words": 66
+      }
+    ]
+  },
+  "duplication": {
+    "duplicate_block_count": 4,
+    "duplicate_blocks": [
+      {
+        "snippet": "written during migration review before release. todo:review this english text is a machine",
+        "locations": [
+          "input/pagecontent/capability-statements.md",
+          "input/pagecontent/code-systems.md",
+          "input/pagecontent/guidance.md",
+          "input/pagecontent/implementer-guidance.md",
+          "input/pagecontent/logical-models.md",
+          "input/pagecontent/profiles.md",
+          "input/pagecontent/uml-diagrams.md"
+        ]
+      },
+      {
+        "snippet": "written during migration review before release. todo:review this english page is a machine",
+        "locations": [
+          "input/pagecontent/anwendungsfaelle-informationsmodell.md",
+          "input/pagecontent/fhir-profile.md",
+          "input/pagecontent/probe.md",
+          "input/pagecontent/profilauswahl-und-abgrenzung.md"
+        ]
+      },
+      {
+        "snippet": "no domain changes. for this release, only packages with technical corrections were republi",
+        "locations": [
+          "input/pagecontent/changes.md",
+          "input/pagecontent/changes.md"
+        ]
+      },
+      {
+        "snippet": "the model is based on conventions agreed with the rki, mio42 and hl7 europe and takes deve",
+        "locations": [
+          "input/pagecontent/fhir-profile.md",
+          "input/pagecontent/implementer-guidance.md"
+        ]
+      }
+    ],
+    "duplicate_file_groups": []
+  },
+  "hygiene": {
+    "images_total": 4,
+    "unreferenced_images": [
+      "input/images-source/mii-mikrobio-informationsmodell.puml",
+      "input/images-source/mii-mikrobio-untersuchungsarten.puml"
+    ],
+    "examples_total": 28,
+    "examples_not_in_narrative": [
+      "mii-exa-mikrobio-patient-inline",
+      "mii-exa-mikrobio-diagnostic-report",
+      "mii-exa-mikrobio-empfindlichkeit",
+      "mii-exa-mikrobio-keimzahl",
+      "mii-exa-mikrobio-mikroskopie",
+      "mii-exa-mikrobio-virulenzfaktor",
+      "mii-exa-mikrobio-voraussichtliche-empfindlichkeit"
+    ],
+    "note": "Heuristik: 'nicht referenziert' = Dateiname/Artefaktname kommt in keiner Erklärseite vor. Kein Beweis für Ungenutztheit (Referenz kann über Konfiguration/Build erfolgen)."
+  },
+  "i18n": {
+    "default_lang": null,
+    "default_lang_source": null,
+    "languages": [
+      "init",
+      "progress",
+      "context",
+      "html",
+      "tx"
+    ],
+    "translation_supplements": 0,
+    "supplement_files": [],
+    "translated_pages": 0,
+    "fsh_translation_ext": true,
+    "fsh_translation_files": [
+      "input/fsh/rulesets/translation.fsh"
+    ]
+  },
+  "directives": {
+    "total": 0,
+    "by_label": {},
+    "unknown": 0,
+    "occurrences": [],
+    "unknown_occurrences": []
+  },
+  "quality": {
+    "qc_rules_defined": 12,
+    "qc_rules": [
+      {
+        "name": "parse-fhir-resources",
+        "action": "parse",
+        "status": "Checking if all FHIR resource files can be parsed",
+        "category": null
+      },
+      {
+        "name": "resource-validation",
+        "action": "validate",
+        "status": "Validating resources against the FHIR standard and their profiles",
+        "category": "Resource"
+      },
+      {
+        "name": "unique-canonicals",
+        "action": "unique",
+        "status": "Checking if all StructureDefinitions have a unique canonical",
+        "category": "StructureDefinition"
+      },
+      {
+        "name": "no-snapshot",
+        "action": null,
+        "status": "Checking that StructureDefinitions carry no pre-generated snapshot",
+        "category": "StructureDefinition"
+      },
+      {
+        "name": "valid-ids",
+        "action": null,
+        "status": "Checking for valid resource ids",
+        "category": null
+      },
+      {
+        "name": "valid-names",
+        "action": null,
+        "status": "Checking that StructureDefinition names contain no spaces",
+        "category": "StructureDefinition"
+      },
+      {
+        "name": "unique-names",
+        "action": null,
+        "status": null,
+        "category": "Conformance"
+      },
+      {
+        "name": "version-filled",
+        "action": null,
+        "status": "Checking that every conformance resource carries the release version",
+        "category": null
+      },
+      {
+        "name": "naming-convention-id",
+        "action": null,
+        "status": "Checking the id naming convention (mii-<prefix>-<module>-…)",
+        "category": null
+      },
+      {
+        "name": "naming-convention-name",
+        "action": null,
+        "status": "Checking the name naming convention (MII_<PREFIX>_<Module>_…)",
+        "category": null
+      },
+      {
+        "name": "naming-convention-title",
+        "action": null,
+        "status": "Checking the title naming convention (MII <PREFIX> <Module> …)",
+        "category": null
+      },
+      {
+        "name": "naming-convention-url",
+        "action": null,
+        "status": "Checking the canonical-URL naming convention",
+        "category": null
+      }
+    ],
+    "qc_source": "qc/custom.rules.yaml",
+    "qc_violations": null,
+    "suppressed_messages": 8,
+    "qa_errors": null,
+    "qa_warnings": null,
+    "qa_hints": null,
+    "broken_links": null,
+    "qa_categories": null
+  },
+  "maturity": {
+    "components": {
+      "Status": "active",
+      "Doku-Vollständigkeit": 100,
+      "Beispiel-Abdeckung": 100,
+      "Governance": 100
+    },
+    "example_coverage": {
+      "profiles_total": 20,
+      "covered": 20,
+      "uncovered": [],
+      "coverage_pct": 100
+    },
+    "governance": {
+      "ci_workflows": 11,
+      "publication_request": true,
+      "ig_ini": true,
+      "devcontainer": true,
+      "governance_score": 100
+    },
+    "doc_health_pct": 100
+  },
+  "portfolio": {
+    "vendor_lockin_score": 0,
+    "vendor_lockin_band": "gering",
+    "directives_per_page": 0.0,
+    "terminology_standard_systems": [
+      "SNOMED CT",
+      "LOINC",
+      "ICD-10",
+      "UCUM"
+    ],
+    "terminology_standard_refs": 699,
+    "local_codesystems": 3,
+    "terminology_standard_share_pct": 100,
+    "canonical_reuse_ratio_pct": 95,
+    "external_parents": 20,
+    "local_parents": 1,
+    "fhir_version_label": "R4",
+    "fhir_version_note": "aktuell verbreitet",
+    "dependency_stale_count": 0,
+    "dependency_stale": [],
+    "dependency_staleness_note": "Heuristik aus CalVer-Jahr; exakt nur via Package-Registry (extern).",
+    "release_cadence_per_year": 55.9,
+    "days_since_last_commit": 0,
+    "tags": 6
+  },
+  "risk": {
+    "terminology_license_flags": [
+      {
+        "system": "SNOMED CT",
+        "license": "lizenzpflichtig (Affiliate/Land)"
+      },
+      {
+        "system": "LOINC",
+        "license": "frei (Registrierung)"
+      },
+      {
+        "system": "ICD-10",
+        "license": "frei"
+      },
+      {
+        "system": "UCUM",
+        "license": "frei"
+      }
+    ],
+    "terminology_license_risk": true,
+    "suppressed_total": 8,
+    "suppressed_broad": 0,
+    "suppressed_warning_risk": "gering",
+    "privacy_page_words": 0,
+    "privacy_page_substantial": false,
+    "examples_contain_pii_like": false,
+    "bus_factor_top_author_pct": 90,
+    "bus_factor_authors": 4,
+    "bus_factor_risk": "hoch",
+    "breaking_change_risk": null,
+    "breaking_change_note": "Erfordert Diff gegen die publizierte Vorversion (Build/extern) — statisch nicht erhoben."
+  },
+  "git": {
+    "commits": 241,
+    "authors": 4,
+    "top_author_share": 90,
+    "days_since_last": 0,
+    "commits_per_year": 55.9,
+    "tags": 6,
+    "first": "2022-05-04",
+    "last": "2026-08-25",
+    "history_complete": true
+  }
+}

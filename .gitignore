@@ -26,3 +26,9 @@ node_modules/
 # --- OS / editor noise ---
 .DS_Store
 *.log
+
+# The migration run's raw per-step tool output. The run log, the measurements,
+# the page map, the verification findings and the report ARE committed - these
+# are the multi-megabyte publisher/SUSHI transcripts they summarise.
+migration-log/ig-publisher.log
+migration-log/*.prev.log
