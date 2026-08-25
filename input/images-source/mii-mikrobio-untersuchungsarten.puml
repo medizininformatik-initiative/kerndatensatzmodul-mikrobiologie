@@ -1,0 +1,189 @@
+@startuml
+' Falls Graphviz die Kaesten weiterhin nicht sauber ausrichtet: naechste Zeile
+' einkommentieren. ELK legt Raster deutlich buendiger, rendert Pakete aber anders.
+'!pragma layout elk
+
+' Informationsmodell Mikrobiologie 2027 - Untersuchungsarten
+' Abgeleitet aus dem Logical Model mii-lm-mikrobio-untersuchungsarten und den
+' Terminologiebindungen der zugehoerigen Profile.
+'
+' Alle Auspraegungen erben die gemeinsamen Angaben von Untersuchung
+' (siehe mii-mikrobio-informationsmodell.puml). Ohne Vererbungskanten gezeichnet,
+' damit die vier Gruppen kompakt in Zeilen umbrechen.
+
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam nodesep 20
+skinparam ranksep 25
+
+skinparam package {
+  BorderColor #999999
+  BackgroundColor #FFFFFF
+  FontStyle bold
+}
+
+skinparam class {
+  BorderColor #666666
+  BackgroundColor #F5F5F5
+  FontStyle bold
+  AttributeFontStyle plain
+}
+
+skinparam note {
+  BorderColor #999999
+  BackgroundColor #FAFAFA
+}
+
+package "Kultur" {
+  class "Allgemeine Kultur" as AllgemeineKultur {
+    Code: LOINC 11475-1
+    Ergebnis: CodeableConcept — Kultur_Ergebnis_SNOMED
+    Methode: Allgemeine_Kultur_Methode_SNOMED
+  }
+  class "Spezifische Kultur" as SpezifischeKultur {
+    Code: Spezifische_Kultur_Tests_LOINC
+    Ergebnis: CodeableConcept — Kultur_Ergebnis_SNOMED
+    Methode: Spezifische_Kultur_Methode_SNOMED
+  }
+  class Mikroskopie {
+    Code: LOINC 105059-0
+    Ergebnis: CodeableConcept — Morphologie_Ergebnis_SNOMED
+    Methode: Morphologie_Methode_SNOMED
+  }
+  class "Barlett Score" as BarlettScore {
+    Code: LOINC 75371-5
+    Ergebnis: CodeableConcept — Barlett_Score_LOINC
+    Methode: SNOMED 702661004 Mikroskopie
+  }
+  class "Nugent Score" as NugentScore {
+    Code: LOINC 101433-1
+    Ergebnis: Messwert — Einheit 1, dimensionslos
+    Methode: SNOMED 702661004 Mikroskopie
+  }
+  class Keimzahl {
+    Code: Keimzahl_LOINC
+    Ergebnis: Messwert — Einheit: Keimzahl_Einheiten_UCUM
+    Bewertung: MII Labor Laborergebnis_Semiquantitativ
+    Methode: SNOMED 410681005 Auszählung
+  }
+  class Empfindlichkeit {
+    Code: Empfindlichkeit_Phenotyp_LOINC
+    Ergebnis: Messwert — Einheit: Empfindlichkeit_Einheiten_UCUM
+    Bewertung: Susceptibility
+    Norm: Susceptibility_NORM
+  }
+  ' Zeilen
+  AllgemeineKultur -[hidden]right- SpezifischeKultur
+  SpezifischeKultur -[hidden]right- Mikroskopie
+  BarlettScore -[hidden]right- NugentScore
+  NugentScore -[hidden]right- Keimzahl
+  ' Spalten: je eine Kante pro Spalte, sonst wird die naechste Zeile zentriert
+  AllgemeineKultur -[hidden]down- BarlettScore
+  SpezifischeKultur -[hidden]down- NugentScore
+  Mikroskopie -[hidden]down- Keimzahl
+  BarlettScore -[hidden]down- Empfindlichkeit
+}
+
+package "Bestimmung" {
+  class "Allgemeine Bestimmung" as AllgemeineBestimmung {
+    Code: LOINC 41852-5
+    Ergebnis: CodeableConcept — Organismen_SNOMEDCT
+    Methode: Allgemeine_Bestimmung_Methode_SNOMED
+  }
+  class "Spezifische Bestimmung" as SpezifischeBestimmung {
+    Code: Spezifische_Bestimmung_Tests_LOINC
+    Ergebnis: CodeableConcept — Spezifische_Bestimmung_Ergebnis_SNOMED
+    Methode: Spezifische_Bestimmung_Methode_SNOMED
+  }
+  class "Ct-Wert" as CtWert {
+    Code: CT_Wert_LOINC
+    Ergebnis: Messwert — Einheit 1, dimensionslos
+    Methode: SNOMED 70601000052104 Echtzeit-PCR
+    Abgeleitet aus: vorherige Untersuchung
+  }
+  AllgemeineBestimmung -[hidden]right- SpezifischeBestimmung
+  SpezifischeBestimmung -[hidden]right- CtWert
+}
+
+package "Weitere Eigenschaften" {
+  class Virulenzfaktor {
+    Code: Virulenz_LOINC
+    Ergebnis: CodeableConcept — Detected_Not_Detected_SNOMED
+  }
+  class "Resistenzmechanismen / Determinanten" as Resistenzmechanismen {
+    Code: Resistenzmechanismen_Determinanten_LOINC
+    Ergebnis: CodeableConcept — Detected_Not_Detected_SNOMED
+    Methode: Resistenzmechanismen_Methode_SNOMED
+  }
+  class "MRGN-Klasse" as MRGNKlasse {
+    Code: LOINC 99780-9
+    Ergebnis: CodeableConcept — MRGN_Klasse_LOINC
+  }
+  class "Resistenzkategorie-Status" as ResistenzkategorieStatus {
+    Code: Resistenzkategorie_Status
+    Ergebnis: CodeableConcept — Resistenzkategorie_Status_Ergebnis
+    Grundlage: Untersuchungen, aus denen die Bewertung abgeleitet wurde
+  }
+  class "Voraussichtliche Empfindlichkeit" as VoraussichtlicheEmpfindlichkeit {
+    Code: Empfaenglichkeit_Genotyp_LOINC
+    Ergebnis: CodeableConcept — Voraussichtliche_Empfindlichkeit
+  }
+  class "Avidität" as Aviditaet {
+    Code: Aviditaet_Tests_LOINC
+    Ergebnis: Messwert — Einheit %
+    Bewertung: Aviditaet_Ergebnis
+    Methode: Antigen_Antikoerper_Methode_SNOMED
+  }
+  ' Zeilen
+  Virulenzfaktor -[hidden]right- Resistenzmechanismen
+  Resistenzmechanismen -[hidden]right- MRGNKlasse
+  ResistenzkategorieStatus -[hidden]right- VoraussichtlicheEmpfindlichkeit
+  VoraussichtlicheEmpfindlichkeit -[hidden]right- Aviditaet
+  ' Spalten
+  Virulenzfaktor -[hidden]down- ResistenzkategorieStatus
+  Resistenzmechanismen -[hidden]down- VoraussichtlicheEmpfindlichkeit
+  MRGNKlasse -[hidden]down- Aviditaet
+}
+
+package "Quantitative Tests" {
+  class "Antigen-/Antikörper-Tests" as AntigenAntikoerper {
+    Code: Antigen_Antikoerper_Quantitative_Tests_LOINC
+    Ergebnis: Messwert — Einheit: Antigen_Antikoerper_Quantitativ_Einheiten_UCUM
+    Methode: Antigen_Antikoerper_Methode_SNOMED
+  }
+  class Titer {
+    Code: Titer_Tests_LOINC
+    Ergebnis: Verhältnis — Zähler fix 1, Nenner = Verdünnungsstufe
+    Methode: Titer_Methode_SNOMED
+  }
+  class "Molekulare Pathogenlast" as MolekularePathogenlast {
+    Code: Molekulare_Pathogenlast_Tests_LOINC
+    Ergebnis: Messwert — Einheit: Molekulare_Diagnostik_Einheiten_UCUM
+    Methode: Molekulare_Pathogenlast_Methode_SNOMED
+  }
+  AntigenAntikoerper -[hidden]right- Titer
+  Titer -[hidden]right- MolekularePathogenlast
+}
+
+' Pakete untereinander stapeln. Ohne diese Kanten stellt Graphviz die vier
+' Pakete nebeneinander, weil sie untereinander keine Verbindung haben.
+' Die Kanten muessen durchgehend an der linken Spalte ansetzen, sonst richtet
+' Graphviz die verbundenen Knoten aneinander aus und die Pakete treppen nach rechts.
+Empfindlichkeit -[hidden]down- AllgemeineBestimmung
+AllgemeineBestimmung -[hidden]down- Virulenzfaktor
+ResistenzkategorieStatus -[hidden]down- AntigenAntikoerper
+
+note as N
+  Alle Untersuchungsarten erben die gemeinsamen Angaben
+  (Identifikation, Status, Zeitpunkte, Probenbezug, auslösende
+  Untersuchung) von **Untersuchung**.
+
+  **ValueSet-Namen ohne das Präfix** //MII_VS_Mikrobio_//
+
+  Ein unbestimmbares Ergebnis wird nicht über das Ergebnis,
+  sondern über //dataAbsentReason// abgebildet.
+end note
+
+AntigenAntikoerper -[hidden]down- N
+
+@enduml
