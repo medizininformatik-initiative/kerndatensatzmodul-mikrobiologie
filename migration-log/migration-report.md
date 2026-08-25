@@ -11,7 +11,9 @@ rendered guide `https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/
 Three queues, and every open item is in exactly one:
 **① decide** (Gate A — someone must choose) · **② review** (Gates B/C — someone must check) ·
 **③ QA triage** (what the build says, and whose problem it is).
-*Applied fixes* lists what was already changed; merging accepts all of them, and each is one revertible commit.
+*Applied fixes* lists what was already changed; merging accepts all of them. Each names the commit
+that carries it — and says honestly where several fixes share one, so a reviewer who reverts to undo
+one thing knows what else goes with it.
 Nothing here is published: Gate D (TF KDS / AG IOP / NSG) is untouched.
 
 ## Summary — read this first
@@ -78,16 +80,22 @@ migration does not install it by itself.
 ## Applied fixes (already changed — a human confirms or reverts)
 
 Accepting these needs no action; merging accepts all. To reject one, revert it on the branch.
-**Revert newest first:** FIX-6 → FIX-1.
+**Revert newest first:** FIX-7 → FIX-1. Only FIX-1 and FIX-7 are independently revertible; FIX-2,
+FIX-3 and FIX-4 share the identity commit, FIX-6 rides with the narrative commit, and FIX-5's two
+removals are one commit.
 
-| # | Fix, in plain words | Also touches | If reverted | Independent? |
-|---|---|---|---|---|
-| FIX-1 | The DiagnosticReport example's `subject` was `Patient/111`, which resolves to nothing. Publisher 2.3.2 throws a NullPointerException on an unresolvable DiagnosticReport subject and **aborts the whole build**. A contained placeholder Patient makes it resolve. | only `input/fsh/instances/mii-exa-mikrobio-diagnostic-report.fsh` | the build aborts again — **required, not optional** | yes |
-| FIX-2 | Declared `special-url` with the 7 canonicals the Gate-0 measurement predicted (1 out-of-space R5 extension + 6 id/url divergences the source has always carried). | `sushi-config.yaml` | 17 publisher errors return | yes |
-| FIX-3 | Removed the template's SNOMED CT `system-version` pin (`…/version/20250701`) from the expansion manifest. The source pinned no SNOMED version at all, and tx.fhir.org does not offer that release. | `input/resources/Parameters-expansion-manifest.json` | 130 errors + 58 warnings return | yes |
-| FIX-4 | Added two dependencies, each chosen by measurement: `hl7.fhir.uv.xver-r5.r4@0.1.0` (−21 errors) and `hl7.fhir.uv.ips@1.1.0` (−6 errors, −120 broken links). | `sushi-config.yaml` | 27 errors and 120 broken links return | yes |
-| FIX-5 | Retired `implementation-guides/modulmikrobio-2027/` — every one of its 43 pages has a row in the reviewed page map. | 61 files deleted | the repository carries two narrative trees again | yes |
-| FIX-6 | Gave the 5 migrated own-pages a top-level menu entry (both languages). | `input/includes/menu.xml`, `input/translations/de/includes/menu.xml` | 5 pages render but are reachable only by typing their URL | yes |
+| # | Fix, in plain words | Commit | Also touches (beyond the headline) | If reverted | Independent? |
+|---|---|---|---|---|---|
+| FIX-1 | The DiagnosticReport example's `subject` was `Patient/111`, which resolves to nothing. Publisher 2.3.2 throws a NullPointerException on an unresolvable DiagnosticReport subject and **aborts the whole build**. A contained placeholder Patient makes it resolve. | `3c7fd56` | nothing else — one file | the build aborts again | **required, not a choice** |
+| FIX-2 | Declared `special-url` with the 7 canonicals the Gate-0 measurement predicted. | `23d5b03` | **the whole identity commit** — `sushi-config.yaml` also carries FIX-3, FIX-4 and every identity decision | 17 publisher errors return | **no** — shares a commit with FIX-3 and FIX-4 |
+| FIX-3 | Removed the template's SNOMED CT `system-version` pin (`…/version/20250701`). The source pinned no SNOMED version, and tx.fhir.org does not offer that release. | `23d5b03` | `input/resources/Parameters-expansion-manifest.json` + the identity commit | 130 errors + 58 warnings return | **no** — see FIX-2 |
+| FIX-4 | Added two dependencies, each chosen by measurement: `hl7.fhir.uv.xver-r5.r4@0.1.0` (−21 errors) and `hl7.fhir.uv.ips@1.1.0` (−6 errors, −120 broken links). | `23d5b03` | the identity commit | 27 errors and 120 broken links return | **no** — see FIX-2 |
+| FIX-5 | Retired `implementation-guides/modulmikrobio-2027/` (61 files) and stopped tracking `fsh-generated/` (105 files). | `c163838` | both removals are in one commit | two narrative trees again, and SUSHI output back under version control | the two removals cannot be reverted apart |
+| FIX-6 | Gave the 5 migrated own-pages a top-level menu entry in both languages. | `c91b086` | **the whole narrative commit** — every migrated page, both languages | 5 pages reachable only by typing their URL | **no** — shares a commit with the narrative |
+| FIX-7 | Anchored the `translations/` ignore rule to the repository root. Unanchored, it also matched `input/translations/`, and the narrative commit had shipped the English pages without their German mirrors. | `c77fb07` | adds the 26 German files the previous commit dropped | the German mirrors leave the repository | yes |
+
+**To revert a middle commit without taking the log with it:**
+`git revert -n <SHA> && git checkout HEAD -- migration-log/ && git revert --continue`
 
 ## ① Decision queue (Gate A — someone must choose)
 
