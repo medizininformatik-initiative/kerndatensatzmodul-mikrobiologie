@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-mikrobio-spezifische-bestimmung-vre-negativ"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-mikrobio-spezifische-bestimmung-vre-negativ</b></p><a name="de-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ"> </a><a name="de-hcmii-exa-mikrobio-spezifische-bestimmung-vre-negativ"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html">MII PR Mikrobio Spezifische Bestimmung</a></p></div><p><b>identifier</b>: Observation Instance Identifier/spez-best-vre-neg-1</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 MB}, {http://loinc.org 26436-6}, {http://terminology.hl7.org/CodeSystem/observation-category laboratory}, {http://loinc.org 18725-2}">Laboruntersuchungen</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 105904-7}">Vancomycin resistant enterococcus [Presence] in Specimen</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&amp;canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Patient/example">Patient/example</a></p><p><b>effective</b>: 2026-04-02 10:00:00+0100</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 260415000}">Not detected (qualifier value)</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 70601000052104}">Real-time polymerase chain reaction technique (qualifier value)</span></p><p><b>specimen</b>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&amp;canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Specimen/example">Specimen/example</a></p></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="OBI"/>
+      </coding>
+    </type>
+    <system value="https://example.org/fhir/sid/test-lab-results"/>
+    <value value="spez-best-vre-neg-1"/>
+    <assigner>
+      <display value="Universitätsklinikum Musterstadt"/>
+    </assigner>
+  </identifier>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="MB"/>
+    </coding>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="26436-6"/>
+      <display value="Laboruntersuchungen"/>
+    </coding>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="18725-2"/>
+      <display value="Mikrobiologie"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="105904-7"/>
+      <display value="Vancomycin resistant enterococcus [Presence] in Specimen"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <effectiveDateTime value="2026-04-02T10:00:00+01:00"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="260415000"/>
+      <display value="Not detected (qualifier value)"/>
+    </coding>
+  </valueCodeableConcept>
+  <method>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="70601000052104"/>
+      <display value="Real-time polymerase chain reaction technique (qualifier value)"/>
+    </coding>
+  </method>
+  <specimen>
+    <reference value="Specimen/example"/>
+  </specimen>
+</Observation>

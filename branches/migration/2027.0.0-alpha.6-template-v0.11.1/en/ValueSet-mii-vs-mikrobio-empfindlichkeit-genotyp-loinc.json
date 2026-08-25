@@ -1,0 +1,51 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-empfindlichkeit-genotyp-loinc",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-empfindlichkeit-genotyp-loinc</b></p><a name=\"mii-vs-mikrobio-empfindlichkeit-genotyp-loinc\"> </a><a name=\"hcmii-vs-mikrobio-empfindlichkeit-genotyp-loinc\"> </a><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where CLASS  = LP7755-4 (ABXBACT), PROPERTY  = LP6870-2 (Susc) and METHOD_TYP  = LP28723-2 (Genotyping)</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC",
+  "title" : "MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-03-02T00:00:00Z",
+  "publisher" : "NUM-DIZ",
+  "contact" : [{
+    "name" : "NUM-DIZ",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7755-4"
+      },
+      {
+        "property" : "PROPERTY",
+        "op" : "=",
+        "value" : "LP6870-2"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP28723-2"
+      }]
+    }]
+  }
+}

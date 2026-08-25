@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-allgemeine-kultur-methode-snomed",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-allgemeine-kultur-methode-snomed</b></p><a name=\"mii-vs-mikrobio-allgemeine-kultur-methode-snomed\"> </a><a name=\"hcmii-vs-mikrobio-allgemeine-kultur-methode-snomed\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/703750006\">703750006</a></td><td>Aerobic culture technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/703751005\">703751005</a></td><td>Anaerobic culture technique (qualifier value)</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED",
+  "title" : "MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-25T18:44:55+00:00",
+  "publisher" : "NUM-DIZ",
+  "contact" : [{
+    "name" : "NUM-DIZ",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "703750006",
+        "display" : "Aerobic culture technique (qualifier value)"
+      },
+      {
+        "code" : "703751005",
+        "display" : "Anaerobic culture technique (qualifier value)"
+      }]
+    }]
+  }
+}

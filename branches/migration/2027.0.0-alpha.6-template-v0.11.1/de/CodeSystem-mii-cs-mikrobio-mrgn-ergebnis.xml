@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="mii-cs-mikrobio-mrgn-ergebnis"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: CodeSystem mii-cs-mikrobio-mrgn-ergebnis</b></p><a name="de-mii-cs-mikrobio-mrgn-ergebnis"> </a><a name="de-hcmii-cs-mikrobio-mrgn-ergebnis"> </a><p>This  code system <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">keine-mrgn-klasse<a name="de-mii-cs-mikrobio-mrgn-ergebnis-keine-mrgn-klasse"> </a></td><td>Keine MRGN-Klasse</td><td>Das identifizierte gramnegative Isolat wurde anhand der vorliegenden Empfindlichkeitsbefunde bewertet und ist keiner MRGN-Klasse (2MRGN, 3MRGN, 4MRGN) zuzuordnen. Abzugrenzen vom negativen Ergebnis eines zielgerichteten Erregernachweises: Dieses wird über MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur abgebildet.</td></tr></table></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_CS_Mikrobio_MRGN_Ergebnis"/>
+  <title value="MII CS Mikrobio MRGN Ergebnis"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-25T18:44:55+00:00"/>
+  <publisher value="NUM-DIZ"/>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem für Ergebnisse der MRGN-Klassifikation, die sich nicht über LOINC abbilden lassen. Die LOINC-AnswerList LL6195-3 zu 99780-9 enthält ausschließlich 2MRGN, 3MRGN und 4MRGN und damit keinen Negativwert."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="keine-mrgn-klasse"/>
+    <display value="Keine MRGN-Klasse"/>
+    <definition value="Das identifizierte gramnegative Isolat wurde anhand der vorliegenden Empfindlichkeitsbefunde bewertet und ist keiner MRGN-Klasse (2MRGN, 3MRGN, 4MRGN) zuzuordnen. Abzugrenzen vom negativen Ergebnis eines zielgerichteten Erregernachweises: Dieses wird über MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur abgebildet."/>
+  </concept>
+</CodeSystem>

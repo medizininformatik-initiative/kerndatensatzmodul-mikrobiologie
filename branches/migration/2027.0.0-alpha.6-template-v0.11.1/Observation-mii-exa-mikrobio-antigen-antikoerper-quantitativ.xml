@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-mikrobio-antigen-antikoerper-quantitativ"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-mikrobio-antigen-antikoerper-quantitativ</b></p><a name="mii-exa-mikrobio-antigen-antikoerper-quantitativ"> </a><a name="hcmii-exa-mikrobio-antigen-antikoerper-quantitativ"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII PR Mikrobio Antigen Antikoerper Quantitativ</a></p></div><p><b>identifier</b>: Observation Instance Identifier/ak-qn-1</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 MB}, {http://loinc.org 26436-6}, {http://terminology.hl7.org/CodeSystem/observation-category laboratory}, {http://loinc.org 18725-2}">Laboruntersuchungen</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 5193-8}">Hepatitis B virus surface Ab [Units/volume] in Serum or Plasma by Immunoassay</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&amp;canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Patient/example">Patient/example</a></p><p><b>effective</b>: 2026-04-02 10:00:00+0100</p><p><b>value</b>: 42 IU/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[IU]/L = '[IU]/L')</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 726449005}">Immunoassay technique</span></p><p><b>specimen</b>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&amp;canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Specimen/example">Specimen/example</a></p></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-mikrobio-antigen-antikoerper-quantitativ</b></p><a name="de-mii-exa-mikrobio-antigen-antikoerper-quantitativ"> </a><a name="de-hcmii-exa-mikrobio-antigen-antikoerper-quantitativ"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII PR Mikrobio Antigen Antikoerper Quantitativ</a></p></div><p><b>identifier</b>: Observation Instance Identifier/ak-qn-1</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 MB}, {http://loinc.org 26436-6}, {http://terminology.hl7.org/CodeSystem/observation-category laboratory}, {http://loinc.org 18725-2}">Laboruntersuchungen</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 5193-8}">Hepatitis B virus surface Ab [Units/volume] in Serum or Plasma by Immunoassay</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&amp;canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Patient/example">Patient/example</a></p><p><b>effective</b>: 2026-04-02 10:00:00+0100</p><p><b>value</b>: 42 IU/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  code[IU]/L = '[IU]/L')</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 726449005}">Immunoassay technique</span></p><p><b>specimen</b>: <a href="https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&amp;canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Specimen/example">Specimen/example</a></p></div></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="OBI"/>
+      </coding>
+    </type>
+    <system value="https://example.org/fhir/sid/test-lab-results"/>
+    <value value="ak-qn-1"/>
+    <assigner>
+      <display value="Universitätsklinikum Musterstadt"/>
+    </assigner>
+  </identifier>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="MB"/>
+    </coding>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="26436-6"/>
+      <display value="Laboruntersuchungen"/>
+    </coding>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="18725-2"/>
+      <display value="Mikrobiologie"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="5193-8"/>
+      <display value="Hepatitis B virus surface Ab [Units/volume] in Serum or Plasma by Immunoassay"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <effectiveDateTime value="2026-04-02T10:00:00+01:00"/>
+  <valueQuantity>
+    <value value="42"/>
+    <unit value="IU/L"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="[IU]/L"/>
+  </valueQuantity>
+  <method>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="726449005"/>
+      <display value="Immunoassay technique"/>
+    </coding>
+  </method>
+  <specimen>
+    <reference value="Specimen/example"/>
+  </specimen>
+</Observation>

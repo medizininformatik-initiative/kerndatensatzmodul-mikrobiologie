@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-keimzahl-einheiten-ucum"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-keimzahl-einheiten-ucum</b></p><a name="de-mii-vs-mikrobio-keimzahl-einheiten-ucum"> </a><a name="de-hcmii-vs-mikrobio-keimzahl-einheiten-ucum"> </a><ul><li>Include these codes as defined in <a href="http://unitsofmeasure.org"><code>http://unitsofmeasure.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>[CFU]/mL</td><td/></tr><tr><td>[arb'U]/mL</td><td/></tr><tr><td>/g</td><td/></tr><tr><td>/mL</td><td/></tr><tr><td>1</td><td/></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM"/>
+  <title value="MII VS Mikrobio Keimzahl Einheiten [UCUM]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-03-02T00:00:00Z"/>
+  <publisher value="NUM-DIZ"/>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://unitsofmeasure.org"/>
+      <concept>
+        <code value="[CFU]/mL"/>
+      </concept>
+      <concept>
+        <code value="[arb'U]/mL"/>
+      </concept>
+      <concept>
+        <code value="/g"/>
+      </concept>
+      <concept>
+        <code value="/mL"/>
+      </concept>
+      <concept>
+        <code value="1"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-allgemeine-kultur-methode-snomed"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-allgemeine-kultur-methode-snomed</b></p><a name="de-mii-vs-mikrobio-allgemeine-kultur-methode-snomed"> </a><a name="de-hcmii-vs-mikrobio-allgemeine-kultur-methode-snomed"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/703750006">703750006</a></td><td>Aerobic culture technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/703751005">703751005</a></td><td>Anaerobic culture technique (qualifier value)</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED"/>
+  <title value="MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-25T18:44:55+00:00"/>
+  <publisher value="NUM-DIZ"/>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="703750006"/>
+        <display value="Aerobic culture technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="703751005"/>
+        <display value="Anaerobic culture technique (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

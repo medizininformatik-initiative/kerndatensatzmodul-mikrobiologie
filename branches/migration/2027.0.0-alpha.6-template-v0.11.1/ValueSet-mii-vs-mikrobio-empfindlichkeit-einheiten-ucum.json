@@ -1,0 +1,63 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-empfindlichkeit-einheiten-ucum",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-empfindlichkeit-einheiten-ucum</b></p><a name=\"mii-vs-mikrobio-empfindlichkeit-einheiten-ucum\"> </a><a name=\"hcmii-vs-mikrobio-empfindlichkeit-einheiten-ucum\"> </a><ul><li>Include these codes as defined in <a href=\"http://unitsofmeasure.org\"><code>http://unitsofmeasure.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>ug/mL</td><td/></tr><tr><td>mg/L</td><td/></tr><tr><td>[arb'U]/mL</td><td/></tr><tr><td>1/mL</td><td/></tr><tr><td>mm</td><td/></tr></table></li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-empfindlichkeit-einheiten-ucum</b></p><a name=\"de-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum\"> </a><a name=\"de-hcmii-vs-mikrobio-empfindlichkeit-einheiten-ucum\"> </a><ul><li>Include these codes as defined in <a href=\"http://unitsofmeasure.org\"><code>http://unitsofmeasure.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>ug/mL</td><td/></tr><tr><td>mg/L</td><td/></tr><tr><td>[arb'U]/mL</td><td/></tr><tr><td>1/mL</td><td/></tr><tr><td>mm</td><td/></tr></table></li></ul></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM",
+  "title" : "MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-03-02T00:00:00Z",
+  "publisher" : "NUM-DIZ",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "NUM-DIZ"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "NUM-DIZ",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "ug/mL"
+      },
+      {
+        "code" : "mg/L"
+      },
+      {
+        "code" : "[arb'U]/mL"
+      },
+      {
+        "code" : "1/mL"
+      },
+      {
+        "code" : "mm"
+      }]
+    }]
+  }
+}

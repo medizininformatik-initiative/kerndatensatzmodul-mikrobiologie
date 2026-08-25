@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-empfindlichkeit-genotyp-loinc</b></p><a name="mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"> </a><a name="hcmii-vs-mikrobio-empfindlichkeit-genotyp-loinc"> </a><ul><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where CLASS  = LP7755-4 (ABXBACT), PROPERTY  = LP6870-2 (Susc) and METHOD_TYP  = LP28723-2 (Genotyping)</li></ul></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-empfindlichkeit-genotyp-loinc</b></p><a name="de-mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"> </a><a name="de-hcmii-vs-mikrobio-empfindlichkeit-genotyp-loinc"> </a><ul><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where CLASS  = LP7755-4 (ABXBACT), PROPERTY  = LP6870-2 (Susc) and METHOD_TYP  = LP28723-2 (Genotyping)</li></ul></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC"/>
+  <title value="MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-03-02T00:00:00Z"/>
+  <publisher value="NUM-DIZ">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="de"/>
+      </extension>
+      <extension url="content">
+        <valueString value="NUM-DIZ"/>
+      </extension>
+    </extension>
+  </publisher>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP7755-4"/>
+      </filter>
+      <filter>
+        <property value="PROPERTY"/>
+        <op value="="/>
+        <value value="LP6870-2"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP28723-2"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed</b></p><a name="mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed"> </a><a name="hcmii-vs-mikrobio-allgemeine-bestimmung-methode-snomed"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/278289002">278289002</a></td><td>Microscopy technique (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/83581000052107">83581000052107</a></td><td>Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED"/>
+  <title value="MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-25T18:44:55+00:00"/>
+  <publisher value="NUM-DIZ"/>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="278289002"/>
+        <display value="Microscopy technique (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="83581000052107"/>
+        <display value="Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

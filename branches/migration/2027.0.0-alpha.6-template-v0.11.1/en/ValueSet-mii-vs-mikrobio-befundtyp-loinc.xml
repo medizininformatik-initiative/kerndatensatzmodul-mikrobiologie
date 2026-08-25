@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-befundtyp-loinc"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-befundtyp-loinc</b></p><a name="mii-vs-mikrobio-befundtyp-loinc"> </a><a name="hcmii-vs-mikrobio-befundtyp-loinc"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/92894-5/">92894-5</a></td><td>Microbiology - bacterial studies</td></tr><tr><td><a href="https://loinc.org/92893-7/">92893-7</a></td><td>Microbiology - viral studies</td></tr><tr><td><a href="https://loinc.org/96397-5/">96397-5</a></td><td>Microbiology - mycobacteriology studies</td></tr><tr><td><a href="https://loinc.org/96398-3/">96398-3</a></td><td>Microbiology - mycology studies</td></tr><tr><td><a href="https://loinc.org/92892-9/">92892-9</a></td><td>Microbiology - parasitic studies</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-befundtyp-loinc"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Mikrobio_Befundtyp_LOINC"/>
+  <title value="MII VS Mikrobio Befundtyp [LOINC]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-25T18:44:55+00:00"/>
+  <publisher value="NUM-DIZ"/>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <description value="Sepzalisierte Kodierung von mikrobiologischen Befunden"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <copyright value="This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="92894-5"/>
+        <display value="Microbiology - bacterial studies"/>
+      </concept>
+      <concept>
+        <code value="92893-7"/>
+        <display value="Microbiology - viral studies"/>
+      </concept>
+      <concept>
+        <code value="96397-5"/>
+        <display value="Microbiology - mycobacteriology studies"/>
+      </concept>
+      <concept>
+        <code value="96398-3"/>
+        <display value="Microbiology - mycology studies"/>
+      </concept>
+      <concept>
+        <code value="92892-9"/>
+        <display value="Microbiology - parasitic studies"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

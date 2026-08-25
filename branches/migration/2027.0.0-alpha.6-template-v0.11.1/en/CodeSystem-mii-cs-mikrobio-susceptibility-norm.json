@@ -1,0 +1,46 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-mikrobio-susceptibility-norm",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-mikrobio-susceptibility-norm</b></p><a name=\"mii-cs-mikrobio-susceptibility-norm\"> </a><a name=\"hcmii-cs-mikrobio-susceptibility-norm\"> </a><p>This  code system <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">EUCAST<a name=\"mii-cs-mikrobio-susceptibility-norm-EUCAST\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CLSI<a name=\"mii-cs-mikrobio-susceptibility-norm-CLSI\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Andere<a name=\"mii-cs-mikrobio-susceptibility-norm-Andere\"> </a></td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_CS_Mikrobio_Susceptibility_NORM",
+  "title" : "MII CS Mikrobio Susceptibility Norm",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-25T18:44:55+00:00",
+  "publisher" : "NUM-DIZ",
+  "contact" : [{
+    "name" : "NUM-DIZ",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+    }]
+  }],
+  "description" : "CodeSystem zur Kodierung von Normen für die Interpretation der Empfindlichkeit von Mikroorganismen gegenüber antimikrobiellen Substanzen.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "EUCAST",
+    "display" : "EUCAST"
+  },
+  {
+    "code" : "CLSI",
+    "display" : "CLSI"
+  },
+  {
+    "code" : "Andere",
+    "display" : "Andere"
+  }]
+}

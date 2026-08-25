@@ -1,0 +1,35 @@
+{
+  "codeSystems" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis",
+    "version" : "2027.0.0-alpha.6",
+    "status" : "active",
+    "name" : "MII_CS_Mikrobio_MRGN_Ergebnis",
+    "title" : "MII CS Mikrobio MRGN Ergebnis",
+    "description" : "CodeSystem für Ergebnisse der MRGN-Klassifikation, die sich nicht über LOINC abbilden lassen. Die LOINC-AnswerList LL6195-3 zu 99780-9 enthält ausschließlich 2MRGN, 3MRGN und 4MRGN und damit keinen Negativwert.",
+    "uses" : {
+    },
+    "ValueSet-mii-vs-mikrobio-mrgn-klasse-loinc.html" : "MII VS Mikrobio MRGN Klasse [LOINC]"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-resistenzkategorie",
+    "version" : "2027.0.0-alpha.6",
+    "status" : "active",
+    "name" : "MII_CS_Mikrobio_Resistenzkategorie",
+    "title" : "MII CS Mikrobio Resistenzkategorie",
+    "description" : "Untersuchungscodes (Observation.code) für die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie. Jeder Code benennt die bewertete Kategorie; das Ergebnis der Bewertung steht in Observation.value.",
+    "uses" : {
+    },
+    "ValueSet-mii-vs-mikrobio-resistenzkategorie-status.html" : "MII VS Mikrobio Resistenzkategorie Status"
+  },
+  {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm",
+    "version" : "2027.0.0-alpha.6",
+    "status" : "active",
+    "name" : "MII_CS_Mikrobio_Susceptibility_NORM",
+    "title" : "MII CS Mikrobio Susceptibility Norm",
+    "description" : "CodeSystem zur Kodierung von Normen für die Interpretation der Empfindlichkeit von Mikroorganismen gegenüber antimikrobiellen Substanzen.",
+    "uses" : {
+    },
+    "ValueSet-mii-vs-mikrobio-susceptibility-norm.html" : "MII VS Mikrobio Susceptibility Norm"
+  }]
+}

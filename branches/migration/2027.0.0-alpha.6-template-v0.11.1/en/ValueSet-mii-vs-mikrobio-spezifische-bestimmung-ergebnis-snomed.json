@@ -1,0 +1,37 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed</b></p><a name=\"mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed\"> </a><a name=\"hcmii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed\"> </a><ul><li>Import all the codes that are contained in <a href=\"ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html\">MII VS Mikrobio Detected Not Detected [SNOMED]</a></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED",
+  "title" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-25T18:44:55+00:00",
+  "publisher" : "NUM-DIZ",
+  "contact" : [{
+    "name" : "NUM-DIZ",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+    }]
+  }],
+  "description" : "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"]
+    }]
+  }
+}

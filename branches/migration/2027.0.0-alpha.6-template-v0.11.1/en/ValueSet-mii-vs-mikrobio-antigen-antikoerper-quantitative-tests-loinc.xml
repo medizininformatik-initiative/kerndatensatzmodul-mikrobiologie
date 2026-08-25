@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc</b></p><a name="mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"> </a><a name="hcmii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP217197-5 (IA), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6106-1 (Aggl), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6274-7 (Flow cytometry), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP28800-8 (HA), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6304-2 (HAI), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6320-8 (IB), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6323-2 (IF), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6360-4 (LA), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6416-4 (Neut), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC"/>
+  <title value="MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-08-25T18:44:55+00:00"/>
+  <publisher value="NUM-DIZ"/>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7753-9"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP217197-5"/>
+      </filter>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP7819-8"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7753-9"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP6106-1"/>
+      </filter>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP7819-8"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7753-9"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP6274-7"/>
+      </filter>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP7819-8"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7753-9"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP28800-8"/>
+      </filter>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP7819-8"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7753-9"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP6304-2"/>
+      </filter>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP7819-8"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7753-9"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP6320-8"/>
+      </filter>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP7819-8"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7753-9"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP6323-2"/>
+      </filter>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP7819-8"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7753-9"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP6360-4"/>
+      </filter>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP7819-8"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7753-9"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP6416-4"/>
+      </filter>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP7819-8"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>
