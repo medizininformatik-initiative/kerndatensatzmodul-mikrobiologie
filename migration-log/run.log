@@ -1532,3 +1532,7 @@
     canonical URL diff against the source's generated resources: EMPTY in both directions (76 = 76).
 2026-08-25T18:41:54Z  INFO   7  fresh-clone-build  clean-checkout proof: a fresh git clone of the branch (403 files, no working-tree leftovers) builds to the SAME numbers -- SUSHI 0 errors, publisher errors=109 broken_links=0. Nothing the build needs is untracked.
     This is what caught the unanchored translations/ ignore rule: without it the clone would have carried the English pages without their German mirrors.
+2026-08-25T18:43:49Z  INFO   9  pull-request  branch PUSHED, PR deliberately NOT opened -- operator decision 2026-08-25
+    branch=migration/2027.0.0-alpha.6-template-v0.11.1 remote=origin commits=11 base_convention=main (the repository default branch; the last 8 merged PRs all target main)
+    PR link offered by the remote: https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/pull/new/migration/2027.0.0-alpha.6-template-v0.11.1
+    GATE D NOTE for whoever opens it: main IS this repository's publication branch, so merging is itself a publication step. Nothing was published by this run -- no release, no registry entry, no package push.

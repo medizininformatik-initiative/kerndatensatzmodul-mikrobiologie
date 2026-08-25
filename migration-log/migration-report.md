@@ -481,7 +481,14 @@ from the ledgers. In addition:
 - [ ] **Gate A** — DEC-1 licence · DEC-2 `packageId`/`version`/`releaseLabel` · DEC-3 the four omitted values · DEC-5 the IPS pin · DEC-6 the SNOMED pin · DEC-7 the example subject · DEC-8 the template pins · DEC-9 the skill lock
 - [ ] **Gate B** — REV-1 the four retired pages · REV-2 the home-page wording · REV-3 the copyright year · REV-4 the `$sct` alias · REV-5 the IG `name` · REV-7 the four replaced files · DEC-4 Security and Privacy
 - [ ] **Gate C** — all 24 English pages and 20 English intro notes are machine translations; each carries a visible box and a `TODO:REVIEW`. `migration-log/derived-table.md` is the worklist.
-- [ ] **Gate D** — release per KDS governance (TF KDS / AG IOP / NSG). **Nothing was published:** no release, no registry entry, no package push. The PR base is `main`, this repository's publication branch — merging is a publication step in itself.
+- [ ] **Gate D** — release per KDS governance (TF KDS / AG IOP / NSG). **Nothing was published:** no release, no registry entry, no package push.
+
+**The pull request was deliberately not opened.** The branch is pushed
+(`origin/migration/2027.0.0-alpha.6-template-v0.11.1`, 11 commits) and the template's CI builds it as
+a preview under `branches/<branch>/`. Whoever opens the PR should note that `main` is this
+repository's **publication branch** — the last eight merged PRs all target it — so merging is itself
+a publication step, and Gate D applies to the merge, not only to a later release.
+GitHub's link: <https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/pull/new/migration/2027.0.0-alpha.6-template-v0.11.1>
 
 **Not done, and deliberately so:** the template's first-run bootstrap step (a) — creating a `dev`
 branch and applying branch protection — was **not** run. It is "Use this template" setup for a *new*
