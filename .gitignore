@@ -27,8 +27,12 @@ node_modules/
 .DS_Store
 *.log
 
-# The migration run's raw per-step tool output. The run log, the measurements,
-# the page map, the verification findings and the report ARE committed - these
-# are the multi-megabyte publisher/SUSHI transcripts they summarise.
-migration-log/ig-publisher.log
+# The migration run's RAW per-step tool output: the multi-megabyte publisher and
+# SUSHI transcripts. Everything that summarises them - run.log, the
+# measurements, the page map, the verification findings, the report - IS
+# committed. The negation below is load-bearing: the `*.log` rule under "OS /
+# editor noise" above would otherwise swallow run.log, which is the audit trail
+# every claim in the migration report traces to.
+migration-log/*.log
+!migration-log/run.log
 migration-log/*.prev.log
