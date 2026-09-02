@@ -1,0 +1,86 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-mikrobio-barlett-score",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score"
+    ]
+  },
+  "identifier": [
+    {
+      "assigner": {
+        "display": "Universitätsklinikum Musterstadt"
+      },
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "OBI"
+          }
+        ]
+      },
+      "system": "https://example.org/fhir/sid/test-lab-results",
+      "value": "barlett-1"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "MB",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+        },
+        {
+          "code": "26436-6",
+          "system": "http://loinc.org",
+          "display": "Laboruntersuchungen"
+        },
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Laboratory"
+        },
+        {
+          "code": "18725-2",
+          "system": "http://loinc.org",
+          "display": "Mikrobiologie"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "specimen": {
+    "reference": "Specimen/example"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "75371-5",
+        "system": "http://loinc.org",
+        "display": "Bartlett score of Sputum Qualitative by Light microscopy"
+      }
+    ]
+  },
+  "method": {
+    "coding": [
+      {
+        "code": "702661004",
+        "system": "http://snomed.info/sct",
+        "display": "Light microscopy"
+      }
+    ]
+  },
+  "status": "final",
+  "effectiveDateTime": "2026-04-02T10:00:00+01:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "LA21390-2",
+        "system": "http://loinc.org",
+        "display": "+1 Active inflammation"
+      }
+    ]
+  }
+}

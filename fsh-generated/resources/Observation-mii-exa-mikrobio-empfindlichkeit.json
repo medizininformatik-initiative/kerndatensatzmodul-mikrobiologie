@@ -1,0 +1,99 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-mikrobio-empfindlichkeit",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+    ]
+  },
+  "identifier": [
+    {
+      "assigner": {
+        "display": "Universitätsklinikum Musterstadt"
+      },
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "OBI"
+          }
+        ]
+      },
+      "system": "https://example.org/fhir/sid/test-lab-results",
+      "value": "empf-1"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "MB",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+        },
+        {
+          "code": "26436-6",
+          "system": "http://loinc.org",
+          "display": "Laboruntersuchungen"
+        },
+        {
+          "code": "laboratory",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Laboratory"
+        },
+        {
+          "code": "18725-2",
+          "system": "http://loinc.org",
+          "display": "Mikrobiologie"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "valueQuantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 1,
+    "code": "mg/L",
+    "unit": "mg/L"
+  },
+  "interpretation": [
+    {
+      "extension": [
+        {
+          "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "EUCAST",
+                "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm",
+                "display": "EUCAST"
+              }
+            ]
+          }
+        }
+      ],
+      "coding": [
+        {
+          "code": "S",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+          "display": "Susceptible"
+        }
+      ]
+    }
+  ],
+  "specimen": {
+    "reference": "Specimen/example"
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "100044-7",
+        "system": "http://loinc.org",
+        "display": "Cefcapene [Susceptibility]"
+      }
+    ]
+  },
+  "effectiveDateTime": "2026-04-02T10:00:00+01:00"
+}
