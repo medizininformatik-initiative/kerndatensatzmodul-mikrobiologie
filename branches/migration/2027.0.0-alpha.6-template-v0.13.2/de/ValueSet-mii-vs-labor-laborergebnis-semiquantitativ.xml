@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-labor-laborergebnis-semiquantitativ"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-labor-laborergebnis-semiquantitativ</b></p><a name="de-mii-vs-labor-laborergebnis-semiquantitativ"> </a><a name="de-hcmii-vs-labor-laborergebnis-semiquantitativ"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/260347006">260347006</a></td><td>Present + out of ++++ (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/260348001">260348001</a></td><td>Present ++ out of ++++ (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/260349009">260349009</a></td><td>Present +++ out of ++++ (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/260350009">260350009</a></td><td>Present ++++ out of ++++ (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/410594000">410594000</a></td><td>Definitely NOT present (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/260405006">260405006</a></td><td>Trace (qualifier value)</td></tr><tr><td><a href="http://snomed.info/id/441614007">441614007</a></td><td>Present one plus out of three plus</td></tr><tr><td><a href="http://snomed.info/id/441517005">441517005</a></td><td>Present two plus out of three plus</td></tr><tr><td><a href="http://snomed.info/id/441521003">441521003</a></td><td>Present three plus out of three plus</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-labor-laborergebnis-semiquantitativ"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Labor_Laborergebnis_Semiquantitativ"/>
+  <title value="MII VS Labor Laborergebnis Semiquantitativ"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-02T09:01:27+00:00"/>
+  <publisher value="NUM-DIZ"/>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <description value="Kodierung für semi-quantitative Laborergebnisse"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="260347006"/>
+        <display value="Present + out of ++++ (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="260348001"/>
+        <display value="Present ++ out of ++++ (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="260349009"/>
+        <display value="Present +++ out of ++++ (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="260350009"/>
+        <display value="Present ++++ out of ++++ (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="410594000"/>
+        <display value="Definitely NOT present (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="260405006"/>
+        <display value="Trace (qualifier value)"/>
+      </concept>
+      <concept>
+        <code value="441614007"/>
+        <display value="Present one plus out of three plus"/>
+      </concept>
+      <concept>
+        <code value="441517005"/>
+        <display value="Present two plus out of three plus"/>
+      </concept>
+      <concept>
+        <code value="441521003"/>
+        <display value="Present three plus out of three plus"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

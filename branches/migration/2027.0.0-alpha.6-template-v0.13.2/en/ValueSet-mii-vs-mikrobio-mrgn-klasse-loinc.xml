@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-mrgn-klasse-loinc"/>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-mrgn-klasse-loinc</b></p><a name="mii-vs-mikrobio-mrgn-klasse-loinc"> </a><a name="hcmii-vs-mikrobio-mrgn-klasse-loinc"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/LA33214-0/">LA33214-0</a></td><td>2MRGN</td></tr><tr><td><a href="https://loinc.org/LA33215-7/">LA33215-7</a></td><td>3MRGN</td></tr><tr><td><a href="https://loinc.org/LA33216-5/">LA33216-5</a></td><td>4MRGN</td></tr></table></li><li>Include these codes as defined in <a href="CodeSystem-mii-cs-mikrobio-mrgn-ergebnis.html"><code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2027.0.0-alpha.6</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-mii-cs-mikrobio-mrgn-ergebnis.html#mii-cs-mikrobio-mrgn-ergebnis-keine-mrgn-klasse">keine-mrgn-klasse</a></td><td>Keine MRGN-Klasse</td><td>Das identifizierte gramnegative Isolat wurde anhand der vorliegenden Empfindlichkeitsbefunde bewertet und ist keiner MRGN-Klasse (2MRGN, 3MRGN, 4MRGN) zuzuordnen. Abzugrenzen vom negativen Ergebnis eines zielgerichteten Erregernachweises: Dieses wird über MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur abgebildet.</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Mikrobio_MRGN_Klasse_LOINC"/>
+  <title value="MII VS Mikrobio MRGN Klasse [LOINC]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-03-02T00:00:00Z"/>
+  <publisher value="NUM-DIZ"/>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <concept>
+        <code value="LA33214-0"/>
+        <display value="2MRGN"/>
+      </concept>
+      <concept>
+        <code value="LA33215-7"/>
+        <display value="3MRGN"/>
+      </concept>
+      <concept>
+        <code value="LA33216-5"/>
+        <display value="4MRGN"/>
+      </concept>
+    </include>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis"/>
+      <concept>
+        <code value="keine-mrgn-klasse"/>
+        <display value="Keine MRGN-Klasse"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

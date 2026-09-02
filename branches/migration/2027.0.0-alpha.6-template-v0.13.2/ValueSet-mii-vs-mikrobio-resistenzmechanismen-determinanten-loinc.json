@@ -1,0 +1,70 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc</b></p><a name=\"mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc\"> </a><a name=\"hcmii-vs-mikrobio-resistenzmechanismen-determinanten-loinc\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where PROPERTY  = LP217195-9 (PrThr), CLASS  = LP7755-4 (ABXBACT) and STATUS  = ACTIVE</li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/35492-8/\">35492-8</a></td><td>Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] in Specimen by NAA with probe detection</td></tr></table></li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc</b></p><a name=\"de-mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc\"> </a><a name=\"de-hcmii-vs-mikrobio-resistenzmechanismen-determinanten-loinc\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where PROPERTY  = LP217195-9 (PrThr), CLASS  = LP7755-4 (ABXBACT) and STATUS  = ACTIVE</li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/35492-8/\">35492-8</a></td><td>Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] in Specimen by NAA with probe detection</td></tr></table></li></ul></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC",
+  "title" : "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-02T09:01:27+00:00",
+  "publisher" : "NUM-DIZ",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "NUM-DIZ"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "NUM-DIZ",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "PROPERTY",
+        "op" : "=",
+        "value" : "LP217195-9"
+      },
+      {
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7755-4"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    }],
+    "exclude" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "35492-8",
+        "display" : "Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] in Specimen by NAA with probe detection"
+      }]
+    }]
+  }
+}

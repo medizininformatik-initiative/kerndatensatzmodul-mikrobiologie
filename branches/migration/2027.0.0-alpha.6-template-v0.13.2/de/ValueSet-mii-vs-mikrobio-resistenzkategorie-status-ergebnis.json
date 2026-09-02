@@ -1,0 +1,45 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-resistenzkategorie-status-ergebnis",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-resistenzkategorie-status-ergebnis</b></p><a name=\"de-mii-vs-mikrobio-resistenzkategorie-status-ergebnis\"> </a><a name=\"de-hcmii-vs-mikrobio-resistenzkategorie-status-ergebnis\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/10828004\">10828004</a></td><td>Positive</td></tr><tr><td><a href=\"http://snomed.info/id/260385009\">260385009</a></td><td>Negative</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis",
+  "title" : "MII VS Mikrobio Resistenzkategorie Status Ergebnis",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-02T09:01:27+00:00",
+  "publisher" : "NUM-DIZ",
+  "contact" : [{
+    "name" : "NUM-DIZ",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+    }]
+  }],
+  "description" : "Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observation.code angegebenen Resistenzkategorie.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "10828004",
+        "display" : "Positive"
+      },
+      {
+        "code" : "260385009",
+        "display" : "Negative"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,1764 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - MII Implementation Guide Microbiology v2027.0.0-alpha.6</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Branding override for the fhir2.base.template CSS placeholder
+     (base ships includes/fragment-css.html as a single comment; it is included
+     in <head> AFTER all base stylesheets, so the linked files win the
+     cascade).
+     Load model (docs/styleguide.md §1/§10): bootstrap-accessibility.css
+     (PayPal Bootstrap Accessibility Plugin v1.0.7, vendored + pinned - §8)
+     patches Bootstrap-3 component styling for accessibility (focus outlines,
+     alert contrast) and loads FIRST so the template's own rules can override;
+     then template-base.css carries the
+     brand-INDEPENDENT rule blocks and always loads; then EXACTLY ONE palette
+     file follows - num-diz.css, the DEFAULT design, unless the consuming IG
+     ships input/data/brand.json with { "design": "mii" } (read as
+     site.data.brand.design via the base's input/data -> _data pre-process),
+     which selects mii.css instead. Only the exact value 'mii' selects the
+     MII design; anything else - including no brand.json at all and unknown
+     values - renders NUM-DIZ. Both palettes declare the same variable set
+     (scripts/brand-switch.test.mjs). -->
+<link href="assets/css/bootstrap-accessibility.css" rel="stylesheet"/>
+<link href="assets/css/template-base.css" rel="stylesheet"/>
+
+<link href="assets/css/num-diz.css" rel="stylesheet"/>
+
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"18"}
+    h3,h4,h5,h6{--heading-prefix:"18.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Branding override for the fhir2.base.template header placeholder
+     (base ships includes/fragment-header.html as a single comment; it is included
+     inside "#segment-header > .container", before the #ig-status block).
+     Language handling: only the asset and its descriptive alt text switch on
+     include.lang (the pattern kerndatensatz-basis uses); no translatable UI
+     strings are hard-coded.
+     Brand handling: the project logo additionally switches on
+     site.data.brand.design (input/data/brand.json in the consuming IG, see
+     docs/styleguide.md §10). Only the exact value 'mii' selects the MII
+     logos - anything else, including no brand.json at all, falls through to
+     the NUM-DIZ default.
+     Two logos, mirroring kerndatensatz-basis: the HL7 FHIR logo (links to the
+     FHIR spec) in #family-nav, and the project logo in #project-nav.
+     fhir-logo-www.png is shipped by fhir2.base.template
+     (content/assets/images/), so it resolves from the inherited assets without
+     shipping it here. -->
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://hl7.org/fhir">
+    <img height="50" alt="HL7 FHIR" src="assets/images/fhir-logo-www.png"/>
+  </a>
+</div>
+<div id="project-nav">
+
+  <a id="project-logo" no-external="true" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+    <img height="50" alt="NUM-DIZ (Network of University Medicine — Data Integration Center)" src="assets/images/logo-num-diz-en.svg"/>
+
+  </a>
+
+</div>
+<!-- Font-size control (A / A+ / A++): three reader-selectable levels; level A
+     is the untouched default. Logic in assets/js/font-size-control.js, the
+     zoom mapping + button styling in template-base.css ("font-size control"
+     block). All three buttons read "A" — the button's own font size shows the level; labels are language-neutral; only the aria texts switch
+     on include.lang. REMOVAL: delete this block, the js file and the CSS
+     block - one commit, styleguide §5a. -->
+
+<div class="ig-fontsize" role="group" aria-label="Font size">
+  <button type="button" data-level="0" aria-pressed="true" aria-label="Font size: default">A</button>
+  <button type="button" data-level="1" aria-pressed="false" aria-label="Font size: larger">A</button>
+  <button type="button" data-level="2" aria-pressed="false" aria-label="Font size: largest">A</button>
+</div>
+
+<script src="assets/js/font-size-control.js" defer></script>
+<!-- PayPal Bootstrap Accessibility Plugin v1.0.7 (vendored + pinned, §8):
+     patches the Bootstrap-3 components the publisher renders - navbar
+     dropdowns gain ARIA menu semantics + arrow-key navigation, tab panels
+     (structure-tabs) the full ARIA tabs pattern, alerts live-region
+     announcements. `defer` guarantees it executes AFTER the parser-inserted
+     bootstrap.min.js at the end of the body. Vendored from
+     paypal/bootstrap-accessibility-plugin @ v1.0.7 (the admin-ch fork was
+     evaluated and rejected: 151 commits behind upstream, its 6 deltas are
+     site-specific tab tweaks). REMOVAL: delete this tag, both vendored
+     assets and the fragment-css link - guard test pins the hashes. -->
+<script src="assets/js/bootstrap-accessibility.min.js" defer></script>
+<!-- Back-to-top button: appears after one viewport of scrolling (logic in
+     assets/js/back-to-top.js, styling in template-base.css "back-to-top"
+     block). Rendered here inside #segment-header, which is OUTSIDE the
+     data-fontsize zoom regions, so the fixed button never scales. REMOVAL:
+     this block, the js file and the CSS block - one commit, styleguide §8. -->
+
+<button type="button" class="ig-back-to-top" aria-label="Back to top">↑</button>
+
+<script src="assets/js/back-to-top.js" defer></script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MII Implementation Guide Microbiology</span>
+            <br/>
+            <span style="display:inline-block;">2027.0.0-alpha.6 - 
+
+
+
+  <img alt="Germany flag" src="assets/images/deu.svg" height="16" title="Germany"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- Menu in the IG's DEFAULT language (English).
+     The IG Publisher renders the navigation from this file. To translate it,
+     ship a per-language copy at input/translations/<lang>/includes/menu.xml —
+     this is the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and
+     the ONLY way to get a TRANSLATED menu: the `menu:` property in
+     sushi-config.yaml generates a single menu.xml that cannot be translated.
+     Rules: keep the href targets identical across languages; dropdown parents
+     must link to a REAL page (href="#" is rejected by the template's menu QA);
+     only one sub-menu level is supported.
+
+     STRUCTURE: this menu implements the TF-KDS-agreed module menu (see
+     docs/page-structure.md for the full structure with cardinalities).
+     Entries marked OPTIONAL (0..1) below may be removed per module — the
+     removal procedure per entry is in docs/optional-pages.md in this
+     repository. Entries without a marker are mandatory (1..1).
+
+     LINK-ONLY ENTRIES (no page of their own):
+     - "Datasets and Descriptions" points at the Logical Models page
+       (logical-models.html) — the module's datasets ARE its logical models.
+       NEITHER Artifacts-Summary anchor is usable for the TF-KDS "Sec.
+       15.0.2" target: the numeric #2 is POSITIONAL (grouping index — wrong
+       section whenever the artifact mix differs from the full standard set),
+       and the browser-generated NAMED AnchorJS anchor
+       (#structures-logical-models) is invisible to the IG Publisher's link
+       validator — it injects a marker anchor into the menu (rendered as an
+       EMPTY menu entry) and logs a broken-link ERROR on every page's QA.
+       Full analysis: docs/page-structure.md, "Datasets and Descriptions".
+     - The four Conformance entries point at the KDS-wide conformance rules of
+       the Meta module (kerndatensatz-meta). INTERIM: the Meta module has no
+       published IG rendering yet (only a CI build with no conformance pages),
+       so these link to the authoritative meta-wiki sections; switch them to
+       the Meta IG's menu entries once a stable rendering exists (Gate item in
+       docs/page-structure.md). -->
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="guidance.html">Guidance</a></li>
+      <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
+      <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
+      <li><a href="logical-models.html">Datasets and Descriptions</a></li>
+      <li><a href="uml-diagrams.html">UML Diagrams</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- The parent and the first four entries link to the KDS-wide conformance
+         rules of the Meta module (INTERIM: meta-wiki; see header note). -->
+    <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">Conformance<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Conformance</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">General Requirements</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must Support</a></li>
+      <li><a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Handling Missing Data</a></li>
+      <li><a href="security-and-privacy.html">Security and Privacy</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="artifacts.html" class="dropdown-toggle">Artifacts<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="artifacts.html">Artifacts Summary</a></li>
+      <li><a href="profiles.html">Profiles</a></li>
+      <li><a href="extensions.html">Extensions</a></li>
+      <li><a href="capability-statements.html">Capability Statements</a></li>
+      <li><a href="search-parameters.html">Search Parameters</a></li>
+      <li><a href="logical-models.html">Logical Models</a></li>
+      <li><a href="value-sets.html">Value Sets</a></li>
+      <li><a href="code-systems.html">Code Systems</a></li>
+      <li><a href="examples.html">Examples</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <!-- MIGRATED narrative that no agreed page owns (spec §9e branch 4). The
+         page-routing advice run nested these under index/technical-implementation
+         because no existing dropdown had room at depth <= 2; a new TOP-LEVEL
+         dropdown is the option it named ("buy the host a top-level entry"), and
+         it fits the budget: 8 top-level (limit 8), 6 children (limit 10),
+         depth 2 (limit 2), 33 entries total (limit 33). -->
+    <a data-toggle="dropdown" href="technische-implementierung.html" class="dropdown-toggle">Technical Implementation<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="technische-implementierung.html">Technical Implementation</a></li>
+      <li><a href="anwendungsfaelle-informationsmodell.html">Use Cases and Information Model</a></li>
+      <li><a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a></li>
+      <li><a href="fhir-profile.html">FHIR Profiles - Modelling Notes</a></li>
+      <li><a href="probe.html">Specimen</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Changelog</a></li>
+  <li class="dropdown">
+    <!-- The parent deliberately links the MANDATORY child (Versioning): the
+         Metadata Overview page is optional, and a parent pointing at it would
+         have to be re-targeted when that page is removed. -->
+    <a data-toggle="dropdown" href="version-history.html" class="dropdown-toggle">Metadata<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="metadata.html">Metadata Overview</a></li>
+      <li><a href="version-history.html">Versioning</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="flag en" src="assets/images/lang-en.png"/>English</div>
+
+    <div><a href="../de/artifacts.html"><img class="flag" src="assets/images/lang-de.png" alt="flag de"/>Deutsch</a></div>
+
+  </div>
+</div>
+
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">MII Implementation Guide Microbiology - Local Development build (v2027.0.0-alpha.6) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Behavior: Capability Statements</a>
+      </li>
+      <li>
+         <a href="#2">Behavior: Search Parameters</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Logical Models</a>
+      </li>
+      <li>
+         <a href="#4">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#5">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#7">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#8">Example: Example Instances</a>
+      </li>
+      <li>
+         <a href="#9">Other</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-mii-cps-mikrobio-metadata.html"
+                  title="CapabilityStatement/mii-cps-mikrobio-metadata">
+                  <span title="CapabilityStatement/mii-cps-mikrobio-metadata">MII CPS Mikrobio Metadata
+</span>
+               </a>
+            </td>
+            <td>
+<p>CapabilityStatement für das MII Mikrobiologie Modul 2027.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Behavior: Search Parameters </h3>
+    <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-ObservationInterpretation.html"
+                  title="SearchParameter/ObservationInterpretation">
+                  <span title="SearchParameter/ObservationInterpretation">ObservationInterpretation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Suche nach der Interpretation einer mikrobiologischen Observation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-mii-sp-mikrobio-interpretation.html"
+                  title="SearchParameter/mii-sp-mikrobio-interpretation">
+                  <span title="SearchParameter/mii-sp-mikrobio-interpretation">mii-sp-mikrobio-interpretation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Suchparameter für die Normkategorie der Empfindlichkeitsextension</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-mii-sp-mikrobio-observation-titer.html"
+                  title="SearchParameter/mii-sp-mikrobio-observation-titer">
+                  <span title="SearchParameter/mii-sp-mikrobio-observation-titer">mii-sp-mikrobio-observation-titer
+</span>
+               </a>
+            </td>
+            <td>
+<p>Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-Werts von MII_PR_Mikrobio_Titer; der Zaehler ist dort fest 1. Ein groesserer Nenner bedeutet einen hoeheren Titer, z. B. findet ?titer=gt160 alle Titer oberhalb von 1:160.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-mii-sp-mikrobio-observation-triggered-by.html"
+                  title="SearchParameter/mii-sp-mikrobio-observation-triggered-by">
+                  <span title="SearchParameter/mii-sp-mikrobio-observation-triggered-by">mii-sp-mikrobio-observation-triggered-by
+</span>
+               </a>
+            </td>
+            <td>
+<p>Suche nach der Observation, die eine mikrobiologische Observation ausgelöst hat.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Logical Models </h3>
+    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-lm-mikrobio-logical-model.html"
+                  title="StructureDefinition/mii-lm-mikrobio-logical-model">
+                  <span title="StructureDefinition/mii-lm-mikrobio-logical-model">MII LM Mikrobio Befund
+</span>
+               </a>
+            </td>
+            <td>
+<p>Logical Model des mikrobiologischen Befunds für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-lm-mikrobio-untersuchung.html"
+                  title="StructureDefinition/mii-lm-mikrobio-untersuchung">
+                  <span title="StructureDefinition/mii-lm-mikrobio-untersuchung">MII LM Mikrobio Untersuchung
+</span>
+               </a>
+            </td>
+            <td>
+<p>Gemeinsame Angaben aller mikrobiologischen Untersuchungen [DE]</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-lm-mikrobio-untersuchungsarten.html"
+                  title="StructureDefinition/mii-lm-mikrobio-untersuchungsarten">
+                  <span title="StructureDefinition/mii-lm-mikrobio-untersuchungsarten">MII LM Mikrobio Untersuchungsarten
+</span>
+               </a>
+            </td>
+            <td>
+<p>Fachliche Ausprägungen der mikrobiologischen Untersuchung für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE]</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html"
+                  title="StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung">
+                  <span title="StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung">MII PR Mikrobio Allgemeine Bestimmung
+</span>
+               </a>
+            </td>
+            <td>
+<p>Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorganismus oder infektiösen Agens in einer Probe, ohne Einschränkung auf ein vordefiniertes Ziel.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html"
+                  title="StructureDefinition/mii-pr-mikrobio-allgemeine-kultur">
+                  <span title="StructureDefinition/mii-pr-mikrobio-allgemeine-kultur">MII PR Mikrobio Allgemeine Kultur
+</span>
+               </a>
+            </td>
+            <td>
+<p>Allgemeine Kultur beschreibt das Ergebnis einer nicht zielgerichteten mikrobiologischen Kultur, die prüft, ob in der Probe irgendein Mikroorganismus wächst, ohne die Analyse auf einen vordefinierten Erreger zu beschränken.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html"
+                  title="StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ">
+                  <span title="StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ">MII PR Mikrobio Antigen Antikoerper Quantitativ
+</span>
+               </a>
+            </td>
+            <td>
+<p>Quantitative Antigen-/Antikörperantwort beschreibt die quantitative Messung erregerspezifischer Antigene oder Antikörper in einer Probe, bestimmt mittels immunologischer Verfahren.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html"
+                  title="StructureDefinition/mii-pr-mikrobio-aviditaet">
+                  <span title="StructureDefinition/mii-pr-mikrobio-aviditaet">MII PR Mikrobio Aviditaet
+</span>
+               </a>
+            </td>
+            <td>
+<p>Avidität beschreibt die qualitative Beurteilung der Bindungsstärke von Antikörpern an ein spezifisches Antigen, typischerweise zur Unterscheidung frischer von zurückliegenden Infektionen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-barlett-score.html"
+                  title="StructureDefinition/mii-pr-mikrobio-barlett-score">
+                  <span title="StructureDefinition/mii-pr-mikrobio-barlett-score">MII PR Mikrobio Barlett Score
+</span>
+               </a>
+            </td>
+            <td>
+<p>Barlett-Score beschreibt die qualitative mikroskopische Beurteilung der Eignung von Sputumproben für die mikrobiologische Kultur anhand des Verhältnisses von Entzündungs- zu Epithelzellen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html"
+                  title="StructureDefinition/mii-pr-mikrobio-ct-wert">
+                  <span title="StructureDefinition/mii-pr-mikrobio-ct-wert">MII PR Mikrobio CT Wert
+</span>
+               </a>
+            </td>
+            <td>
+<p>CT-Wert beschreibt die Quantifizierung des Zyklusschwellenwerts bei Nukleinsäurenachweisen (z. B. Echtzeit-PCR) in einer Probe.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-diagnostic-report.html"
+                  title="StructureDefinition/mii-pr-mikrobio-diagnostic-report">
+                  <span title="StructureDefinition/mii-pr-mikrobio-diagnostic-report">MII PR Mikrobio Diagnostic Report
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextualisierung zugehöriger mikrobiologischer Untersuchungsergebnisse.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html"
+                  title="StructureDefinition/mii-pr-mikrobio-empfindlichkeit">
+                  <span title="StructureDefinition/mii-pr-mikrobio-empfindlichkeit">MII PR Mikrobio Empfindlichkeit
+</span>
+               </a>
+            </td>
+            <td>
+<p>Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung eines Erregers gegenüber antimikrobiellen Substanzen unter Bezug auf ein Normsystem.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html"
+                  title="StructureDefinition/mii-pr-mikrobio-keimzahl">
+                  <span title="StructureDefinition/mii-pr-mikrobio-keimzahl">MII PR Mikrobio Keimzahl
+</span>
+               </a>
+            </td>
+            <td>
+<p>Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten pro Volumen oder Masse.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html"
+                  title="StructureDefinition/mii-pr-mikrobio-mrgn-klasse">
+                  <span title="StructureDefinition/mii-pr-mikrobio-mrgn-klasse">MII PR Mikrobio MRGN Klasse
+</span>
+               </a>
+            </td>
+            <td>
+<p>MRGN-Klasse beschreibt die Einstufung multiresistenter gramnegativer Erreger entsprechend der RKI-Kategorisierung.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html"
+                  title="StructureDefinition/mii-pr-mikrobio-mikroskopie">
+                  <span title="StructureDefinition/mii-pr-mikrobio-mikroskopie">MII PR Mikrobio Mikroskopie
+</span>
+               </a>
+            </td>
+            <td>
+<p>Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung), ohne taxonomische Identifikation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html"
+                  title="StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast">
+                  <span title="StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast">MII PR Mikrobio Molekulare Pathogenlast
+</span>
+               </a>
+            </td>
+            <td>
+<p>Molekulare Pathogenlast beschreibt die quantitative Messung der Nukleinsäurekonzentration eines Erregers in einer Probe, typischerweise als Konzentration pro Volumen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html"
+                  title="StructureDefinition/mii-pr-mikrobio-nugent-score">
+                  <span title="StructureDefinition/mii-pr-mikrobio-nugent-score">MII PR Mikrobio Nugent Score
+</span>
+               </a>
+            </td>
+            <td>
+<p>Nugent-Score beschreibt ein Gramfärbungs-basiertes semiquantitatives Punktesystem zur Beurteilung vaginaler Mikrobiotamuster bei bakterieller Vaginose.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html"
+                  title="StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status">
+                  <span title="StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status">MII PR Mikrobio Resistenzkategorie Status
+</span>
+               </a>
+            </td>
+            <td>
+<p>Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html"
+                  title="StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten">
+                  <span title="StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten">MII PR Mikrobio Resistenzmechanismen Determinanten
+</span>
+               </a>
+            </td>
+            <td>
+<p>Resistenzmechanismen/Determinanten beschreibt den Nachweis von Resistenzgenen, Resistenzmutationen, Proteinen oder funktionalen Test (z.B. CIM-Test) in einer Probe oder Isolat als Hinweis auf spezifische Resistenzmechanismen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html"
+                  title="StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung">
+                  <span title="StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung">MII PR Mikrobio Spezifische Bestimmung
+</span>
+               </a>
+            </td>
+            <td>
+<p>Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis wird über MII_PR_Mikrobio_Spezifische_Kultur abgebildet.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html"
+                  title="StructureDefinition/mii-pr-mikrobio-spezifische-kultur">
+                  <span title="StructureDefinition/mii-pr-mikrobio-spezifische-kultur">MII PR Mikrobio Spezifische Kultur
+</span>
+               </a>
+            </td>
+            <td>
+<p>Spezifische Kultur beschreibt das Ergebnis einer zielgerichteten kulturbasierten Untersuchung, die prüft, ob ein vordefinierter Mikroorganismus in der Probe wächst. Das gesuchte Ziel ist bereits im Untersuchungscode benannt; das Ergebnis ist die Aussage über Wachstum.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-titer.html"
+                  title="StructureDefinition/mii-pr-mikrobio-titer">
+                  <span title="StructureDefinition/mii-pr-mikrobio-titer">MII PR Mikrobio Titer
+</span>
+               </a>
+            </td>
+            <td>
+<p>Titer beschreibt eine semiquantitative Messung aus seriellen Verdünnungsreihen, berichtet als Verhältnis (z. B. 1:160).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html"
+                  title="StructureDefinition/mii-pr-mikrobio-virulenzfaktor">
+                  <span title="StructureDefinition/mii-pr-mikrobio-virulenzfaktor">MII PR Mikrobio Virulenzfaktor
+</span>
+               </a>
+            </td>
+            <td>
+<p>Virulenzfaktor beschreibt den qualitativen Nachweis oder Ausschluss von Virulenzdeterminanten in einer Probe oder einem Isolat.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html"
+                  title="StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit">
+                  <span title="StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit">MII PR Mikrobio Voraussichtliche Empfindlichkeit
+</span>
+               </a>
+            </td>
+            <td>
+<p>Voraussichtliche Empfindlichkeit beschreibt die aus dem Nachweis von Resistenzmechanismen/Genen/Proteinen abgeleitete erwartete Suszeptibilität oder Resistenz gegenüber antimikrobiellen Substanzen.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-ex-mikrobio-empfindlichkeit-norm.html"
+                  title="StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm">
+                  <span title="StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm">MII EX Mikrobio Empfindlichkeit Norm
+</span>
+               </a>
+            </td>
+            <td>
+<p>Normative susceptibility interpretation metadata (system, version, category).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-ext-R5-Observation.triggeredBy.html"
+                  title="StructureDefinition/ext-R5-Observation.triggeredBy">
+                  <span title="StructureDefinition/ext-R5-Observation.triggeredBy">R5: Triggering observation(s) (new)
+</span>
+               </a>
+            </td>
+            <td>
+<p>R5: <code class="language-plaintext highlighter-rouge">Observation.triggeredBy</code> (new:BackboneElement)</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html"
+                  title="ValueSet/mii-vs-labor-laborergebnis-semiquantitativ">
+                  <span title="ValueSet/mii-vs-labor-laborergebnis-semiquantitativ">MII VS Labor Laborergebnis Semiquantitativ
+</span>
+               </a>
+            </td>
+            <td>
+<p>Kodierung für semi-quantitative Laborergebnisse</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed">MII VS Mikrobio Allgemeine Bestimmung Ergebnis [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ergebnis-ValueSet fuer die allgemeine Bestimmung: der identifizierte Mikroorganismus oder das negative Ergebnis, wenn kein Erreger identifiziert wurde.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed">MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed">MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-antigen-antikoerper-methode-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-antigen-antikoerper-methode-snomed">MII VS Mikrobio Antigen Antikoerper Methode [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum.html"
+                  title="ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum">
+                  <span title="ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum">MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc">MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-aviditaet-ergebnis.html"
+                  title="ValueSet/mii-vs-mikrobio-aviditaet-ergebnis">
+                  <span title="ValueSet/mii-vs-mikrobio-aviditaet-ergebnis">MII VS Mikrobio Aviditaet Ergebnis
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-aviditaet-tests-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc">MII VS Mikrobio Aviditaet Tests [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-barlett-score-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-barlett-score-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-barlett-score-loinc">MII VS Mikrobio Barlett Score [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-befundtyp-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-befundtyp-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-befundtyp-loinc">MII VS Mikrobio Befundtyp [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+<p>Sepzalisierte Kodierung von mikrobiologischen Befunden</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-ct-wert-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-ct-wert-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-ct-wert-loinc">MII VS Mikrobio CT Wert [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-data-absent-reason.html"
+                  title="ValueSet/mii-vs-mikrobio-data-absent-reason">
+                  <span title="ValueSet/mii-vs-mikrobio-data-absent-reason">MII VS Mikrobio Data Absent Reason
+</span>
+               </a>
+            </td>
+            <td>
+<p>Gruende fuer ein fehlendes Untersuchungsergebnis. Ergaenzt die FHIR-Basiscodes um das unbestimmbare Ergebnis, das zuvor ueber value[x] kodiert wurde.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-detected-not-detected-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-detected-not-detected-snomed">MII VS Mikrobio Detected Not Detected [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum.html"
+                  title="ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum">
+                  <span title="ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum">MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc">MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-genotyp-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc">MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html"
+                  title="ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum">
+                  <span title="ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum">MII VS Mikrobio Keimzahl Einheiten [UCUM]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-keimzahl-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-keimzahl-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-keimzahl-loinc">MII VS Mikrobio Keimzahl [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed">MII VS Mikrobio Kultur Ergebnis [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder kein Wachstum. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-mrgn-klasse-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc">MII VS Mikrobio MRGN Klasse [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html"
+                  title="ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum">
+                  <span title="ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum">MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed">MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc">MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed">MII VS Mikrobio Morphologie Ergebnis [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-morphologie-methode-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-morphologie-methode-snomed">MII VS Mikrobio Morphologie Methode [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-organismen-snomedct.html"
+                  title="ValueSet/mii-vs-mikrobio-organismen-snomedct">
+                  <span title="ValueSet/mii-vs-mikrobio-organismen-snomedct">MII VS Mikrobio Organismen [SNOMED CT]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status.html"
+                  title="ValueSet/mii-vs-mikrobio-resistenzkategorie-status">
+                  <span title="ValueSet/mii-vs-mikrobio-resistenzkategorie-status">MII VS Mikrobio Resistenzkategorie Status
+</span>
+               </a>
+            </td>
+            <td>
+<p>Untersuchungscodes fuer die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html"
+                  title="ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis">
+                  <span title="ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis">MII VS Mikrobio Resistenzkategorie Status Ergebnis
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observation.code angegebenen Resistenzkategorie.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc">MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-resistenzmechanismen-methode-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-resistenzmechanismen-methode-snomed">MII VS Mikrobio Resistenzmechanismen Methode [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+<p>Methoden für den Nachweis von Resistenzgenen oder Resistenzmutationen (molekulare Verfahren).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed">MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+<p>Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed">MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-tests-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc">MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+<p>Tests-ValueSet fuer die spezifische Bestimmung.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed">MII VS Mikrobio Spezifische Kultur Methode [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+<p>Methoden-ValueSet fuer die spezifische Kultur. Extensible gebunden, damit staerker spezialisierte Kulturverfahren ergaenzt werden koennen.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc">MII VS Mikrobio Spezifische Kultur Tests [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+<p>Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, bei denen das gesuchte Ziel bereits im LOINC-Code benannt ist.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-susceptibility.html"
+                  title="ValueSet/mii-vs-mikrobio-susceptibility">
+                  <span title="ValueSet/mii-vs-mikrobio-susceptibility">MII VS Mikrobio Susceptibility
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-susceptibility-norm.html"
+                  title="ValueSet/mii-vs-mikrobio-susceptibility-norm">
+                  <span title="ValueSet/mii-vs-mikrobio-susceptibility-norm">MII VS Mikrobio Susceptibility Norm
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-titer-methode-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-titer-methode-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-titer-methode-snomed">MII VS Mikrobio Titer Methode [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-titer-tests-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-titer-tests-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-titer-tests-loinc">MII VS Mikrobio Titer Tests [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-virulenz-loinc.html"
+                  title="ValueSet/mii-vs-mikrobio-virulenz-loinc">
+                  <span title="ValueSet/mii-vs-mikrobio-virulenz-loinc">MII VS Mikrobio Virulenz [LOINC]
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-voraussichtliche-empfindlichkeit.html"
+                  title="ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit">
+                  <span title="ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit">MII VS Mikrobio Voraussichtliche Empfindlichkeit
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mii-cs-mikrobio-mrgn-ergebnis.html"
+                  title="CodeSystem/mii-cs-mikrobio-mrgn-ergebnis">
+                  <span title="CodeSystem/mii-cs-mikrobio-mrgn-ergebnis">MII CS Mikrobio MRGN Ergebnis
+</span>
+               </a>
+            </td>
+            <td>
+<p>CodeSystem für Ergebnisse der MRGN-Klassifikation, die sich nicht über LOINC abbilden lassen. Die LOINC-AnswerList LL6195-3 zu 99780-9 enthält ausschließlich 2MRGN, 3MRGN und 4MRGN und damit keinen Negativwert.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mii-cs-mikrobio-resistenzkategorie.html"
+                  title="CodeSystem/mii-cs-mikrobio-resistenzkategorie">
+                  <span title="CodeSystem/mii-cs-mikrobio-resistenzkategorie">MII CS Mikrobio Resistenzkategorie
+</span>
+               </a>
+            </td>
+            <td>
+<p>Untersuchungscodes (Observation.code) für die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie. Jeder Code benennt die bewertete Kategorie; das Ergebnis der Bewertung steht in Observation.value.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-mii-cs-mikrobio-susceptibility-norm.html"
+                  title="CodeSystem/mii-cs-mikrobio-susceptibility-norm">
+                  <span title="CodeSystem/mii-cs-mikrobio-susceptibility-norm">MII CS Mikrobio Susceptibility Norm
+</span>
+               </a>
+            </td>
+            <td>
+<p>CodeSystem zur Kodierung von Normen für die Interpretation der Empfindlichkeit von Mikroorganismen gegenüber antimikrobiellen Substanzen.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="8"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html"
+                  title="Observation/mii-exa-mikrobio-mrgn-klasse-negativ">
+                  <span title="Observation/mii-exa-mikrobio-mrgn-klasse-negativ">MII EXA Mikrobio MRGN Klasse negativ
+</span>
+               </a>
+            </td>
+            <td>
+<p>Identifiziertes gramnegatives Isolat, dessen Empfindlichkeitsbefunde bewertet wurden und das keiner MRGN-Klasse zuzuordnen ist.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html"
+                  title="Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ">
+                  <span title="Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ">MII EXA Mikrobio Resistenzkategorie VRE negativ
+</span>
+               </a>
+            </td>
+            <td>
+<p>Identifizierter Enterococcus ohne Vancomycinresistenz: VRE-Status Negative.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html"
+                  title="Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv">
+                  <span title="Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv">MII EXA Mikrobio Resistenzkategorie VRE positiv
+</span>
+               </a>
+            </td>
+            <td>
+<p>Identifizierter Enterococcus faecium mit nachgewiesener Vancomycinresistenz: VRE-Status Positive, abgeleitet aus Identifikation und Empfindlichkeitstestung.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html"
+                  title="Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ">
+                  <span title="Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ">MII EXA Mikrobio Spezifische Bestimmung VRE negativ
+</span>
+               </a>
+            </td>
+            <td>
+<p>Negativer VRE-Nachweis: Der Test auf vancomycinresistente Enterokokken ist negativ.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.html"
+                  title="Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ">
+                  <span title="Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ">MII EXA Mikrobio Spezifische Kultur VRE negativ
+</span>
+               </a>
+            </td>
+            <td>
+<p>Negativer VRE-Nachweis mittels erregerspezifischer Kultur: kein Wachstum vancomycinresistenter Enterokokken.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html"
+                  title="Observation/mii-exa-mikrobio-workflow-vre-01-kultur">
+                  <span title="Observation/mii-exa-mikrobio-workflow-vre-01-kultur">MII EXA Mikrobio Workflow VRE 1 Kultur positiv
+</span>
+               </a>
+            </td>
+            <td>
+<p>Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erregerspezifischer Kultur.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html"
+                  title="Observation/mii-exa-mikrobio-workflow-vre-02-identifikation">
+                  <span title="Observation/mii-exa-mikrobio-workflow-vre-02-identifikation">MII EXA Mikrobio Workflow VRE 2 Identifikation
+</span>
+               </a>
+            </td>
+            <td>
+<p>Workflow-Kette VRE, Schritt 2: weiterführende Identifikation des Isolats als Enterococcus faecium, ausgelöst durch den positiven Nachweis.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html"
+                  title="Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit">
+                  <span title="Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit">MII EXA Mikrobio Workflow VRE 3 Empfindlichkeit
+</span>
+               </a>
+            </td>
+            <td>
+<p>Workflow-Kette VRE, Schritt 3: Vancomycin-Empfindlichkeitstestung des identifizierten Isolats mit dem Ergebnis resistent.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-allgemeine-bestimmung.html"
+                  title="Observation/mii-exa-mikrobio-allgemeine-bestimmung">
+                  <span title="Observation/mii-exa-mikrobio-allgemeine-bestimmung">mii-exa-mikrobio-allgemeine-bestimmung
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-allgemeine-kultur.html"
+                  title="Observation/mii-exa-mikrobio-allgemeine-kultur">
+                  <span title="Observation/mii-exa-mikrobio-allgemeine-kultur">mii-exa-mikrobio-allgemeine-kultur
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.html"
+                  title="Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ">
+                  <span title="Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ">mii-exa-mikrobio-antigen-antikoerper-quantitativ
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-aviditaet.html"
+                  title="Observation/mii-exa-mikrobio-aviditaet">
+                  <span title="Observation/mii-exa-mikrobio-aviditaet">mii-exa-mikrobio-aviditaet
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-barlett-score.html"
+                  title="Observation/mii-exa-mikrobio-barlett-score">
+                  <span title="Observation/mii-exa-mikrobio-barlett-score">mii-exa-mikrobio-barlett-score
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-ct-wert.html"
+                  title="Observation/mii-exa-mikrobio-ct-wert">
+                  <span title="Observation/mii-exa-mikrobio-ct-wert">mii-exa-mikrobio-ct-wert
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DiagnosticReport-mii-exa-mikrobio-diagnostic-report.html"
+                  title="DiagnosticReport/mii-exa-mikrobio-diagnostic-report">
+                  <span title="DiagnosticReport/mii-exa-mikrobio-diagnostic-report">mii-exa-mikrobio-diagnostic-report
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-empfindlichkeit.html"
+                  title="Observation/mii-exa-mikrobio-empfindlichkeit">
+                  <span title="Observation/mii-exa-mikrobio-empfindlichkeit">mii-exa-mikrobio-empfindlichkeit
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-keimzahl.html"
+                  title="Observation/mii-exa-mikrobio-keimzahl">
+                  <span title="Observation/mii-exa-mikrobio-keimzahl">mii-exa-mikrobio-keimzahl
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-mikroskopie.html"
+                  title="Observation/mii-exa-mikrobio-mikroskopie">
+                  <span title="Observation/mii-exa-mikrobio-mikroskopie">mii-exa-mikrobio-mikroskopie
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-molekulare-pathogenlast.html"
+                  title="Observation/mii-exa-mikrobio-molekulare-pathogenlast">
+                  <span title="Observation/mii-exa-mikrobio-molekulare-pathogenlast">mii-exa-mikrobio-molekulare-pathogenlast
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-mrgn-klasse.html"
+                  title="Observation/mii-exa-mikrobio-mrgn-klasse">
+                  <span title="Observation/mii-exa-mikrobio-mrgn-klasse">mii-exa-mikrobio-mrgn-klasse
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-nugent-score.html"
+                  title="Observation/mii-exa-mikrobio-nugent-score">
+                  <span title="Observation/mii-exa-mikrobio-nugent-score">mii-exa-mikrobio-nugent-score
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html"
+                  title="Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten">
+                  <span title="Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten">mii-exa-mikrobio-resistenzmechanismen-determinanten
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung.html"
+                  title="Observation/mii-exa-mikrobio-spezifische-bestimmung">
+                  <span title="Observation/mii-exa-mikrobio-spezifische-bestimmung">mii-exa-mikrobio-spezifische-bestimmung
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-spezifische-kultur.html"
+                  title="Observation/mii-exa-mikrobio-spezifische-kultur">
+                  <span title="Observation/mii-exa-mikrobio-spezifische-kultur">mii-exa-mikrobio-spezifische-kultur
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-titer.html"
+                  title="Observation/mii-exa-mikrobio-titer">
+                  <span title="Observation/mii-exa-mikrobio-titer">mii-exa-mikrobio-titer
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-virulenzfaktor.html"
+                  title="Observation/mii-exa-mikrobio-virulenzfaktor">
+                  <span title="Observation/mii-exa-mikrobio-virulenzfaktor">mii-exa-mikrobio-virulenzfaktor
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html"
+                  title="Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit">
+                  <span title="Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit">mii-exa-mikrobio-voraussichtliche-empfindlichkeit
+</span>
+               </a>
+            </td>
+            <td>
+
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="9"> </a>
+   <h3>Other </h3>
+    <p>These are resources that are used within this implementation guide that do not fit into one of the other categories.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Parameters-mii-param-mikrobio-manifest.html"
+                  title="Parameters/mii-param-mikrobio-manifest">
+                  <span title="Parameters/mii-param-mikrobio-manifest">mii-param-mikrobio-manifest
+</span>
+               </a>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
+          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Wed, Sep 2, 2026 09:01+0000">2026-09-02</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice">Legal notice</a>
+                 <br/>
+                 <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7®, FHIR® and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

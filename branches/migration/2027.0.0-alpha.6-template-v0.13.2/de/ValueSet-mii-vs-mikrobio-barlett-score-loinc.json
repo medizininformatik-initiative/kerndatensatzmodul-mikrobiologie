@@ -1,0 +1,60 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-barlett-score-loinc",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-barlett-score-loinc</b></p><a name=\"de-mii-vs-mikrobio-barlett-score-loinc\"> </a><a name=\"de-hcmii-vs-mikrobio-barlett-score-loinc\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/LA21392-8/\">LA21392-8</a></td><td>+3 Active inflammation</td></tr><tr><td><a href=\"https://loinc.org/LA21391-0/\">LA21391-0</a></td><td>+2 Active inflammation</td></tr><tr><td><a href=\"https://loinc.org/LA21390-2/\">LA21390-2</a></td><td>+1 Active inflammation</td></tr><tr><td><a href=\"https://loinc.org/LA21389-4/\">LA21389-4</a></td><td>0 Lack of inflammation and possible contamination with saliva</td></tr><tr><td><a href=\"https://loinc.org/LA21388-6/\">LA21388-6</a></td><td>-1 Lack of inflammation and possible contamination with saliva</td></tr><tr><td><a href=\"https://loinc.org/LA21387-8/\">LA21387-8</a></td><td>-2 Lack of inflammation and possible contamination with saliva</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-barlett-score-loinc",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Barlett_Score_LOINC",
+  "title" : "MII VS Mikrobio Barlett Score [LOINC]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-03-02T00:00:00Z",
+  "publisher" : "NUM-DIZ",
+  "contact" : [{
+    "name" : "NUM-DIZ",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA21392-8",
+        "display" : "+3 Active inflammation"
+      },
+      {
+        "code" : "LA21391-0",
+        "display" : "+2 Active inflammation"
+      },
+      {
+        "code" : "LA21390-2",
+        "display" : "+1 Active inflammation"
+      },
+      {
+        "code" : "LA21389-4",
+        "display" : "0 Lack of inflammation and possible contamination with saliva"
+      },
+      {
+        "code" : "LA21388-6",
+        "display" : "-1 Lack of inflammation and possible contamination with saliva"
+      },
+      {
+        "code" : "LA21387-8",
+        "display" : "-2 Lack of inflammation and possible contamination with saliva"
+      }]
+    }]
+  }
+}

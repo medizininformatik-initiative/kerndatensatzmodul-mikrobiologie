@@ -1,0 +1,74 @@
+{
+  "resourceType" : "Observation",
+  "id" : "mii-exa-mikrobio-keimzahl",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"]
+  },
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Observation mii-exa-mikrobio-keimzahl</b></p><a name=\"mii-exa-mikrobio-keimzahl\"> </a><a name=\"hcmii-exa-mikrobio-keimzahl\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-mii-pr-mikrobio-keimzahl.html\">MII PR Mikrobio Keimzahl</a></p></div><p><b>identifier</b>: Observation Instance Identifier/keimzahl-1</p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 MB}, {http://loinc.org 26436-6}, {http://terminology.hl7.org/CodeSystem/observation-category laboratory}, {http://loinc.org 18725-2}\">Laboruntersuchungen</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 49223-1}\">Colony count [#/volume] in Specimen by Visual count</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&amp;canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Patient/example\">Patient/example</a></p><p><b>effective</b>: 2026-04-02 10:00:00+0100</p><p><b>value</b>: 100000 /mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/mL = '/mL')</span></p><p><b>method</b>: <span title=\"Codes:{http://snomed.info/sct 410681005}\">Count of entities</span></p><p><b>specimen</b>: <a href=\"https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&amp;canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Specimen/example\">Specimen/example</a></p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "OBI"
+      }]
+    },
+    "system" : "https://example.org/fhir/sid/test-lab-results",
+    "value" : "keimzahl-1",
+    "assigner" : {
+      "display" : "Universitätsklinikum Musterstadt"
+    }
+  }],
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code" : "MB"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "26436-6",
+      "display" : "Laboruntersuchungen"
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "code" : "laboratory",
+      "display" : "Laboratory"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "18725-2",
+      "display" : "Mikrobiologie"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "49223-1",
+      "display" : "Colony count [#/volume] in Specimen by Visual count"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example"
+  },
+  "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "valueQuantity" : {
+    "value" : 100000,
+    "unit" : "/mL",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "/mL"
+  },
+  "method" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "410681005",
+      "display" : "Count of entities"
+    }]
+  },
+  "specimen" : {
+    "reference" : "Specimen/example"
+  }
+}

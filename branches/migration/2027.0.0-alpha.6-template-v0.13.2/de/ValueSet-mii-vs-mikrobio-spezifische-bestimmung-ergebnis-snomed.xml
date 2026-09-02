@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed</b></p><a name="de-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed"> </a><a name="de-hcmii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed"> </a><ul><li>Import all the codes that are contained in <a href="ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html">MII VS Mikrobio Detected Not Detected [SNOMED]</a></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED"/>
+  <title value="MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-02T09:01:27+00:00"/>
+  <publisher value="NUM-DIZ"/>
+  <contact>
+    <name value="NUM-DIZ"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.netzwerk-universitaetsmedizin.de"/>
+    </telecom>
+  </contact>
+  <description value="Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <valueSet value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"/>
+    </include>
+  </compose>
+</ValueSet>
