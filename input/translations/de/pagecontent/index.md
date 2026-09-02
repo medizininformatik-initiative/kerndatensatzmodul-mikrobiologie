@@ -24,7 +24,10 @@ Im Folgenden werden die Use-Case des Moduls sowie die dazuhegörigen FHIR-Profil
 
 Das Modul beschreibt die Untersuchungen, die in Laboratorien zum Nachweis, zur
 Identifizierung und zur Charakterisierung von Mikroorganismen und deren
-Eigenschaften durchgeführt werden.
+Eigenschaften durchgeführt werden. Es ist von entscheidender Bedeutung, da es die
+Grundlage für eine gemeinsame Untersuchung von Infektionskrankheiten und
+Antibiotikaresistenzen bildet, die zu globalen Gesundheitsnotfällen führen und zu
+den Hauptprioritäten der [WHO](http://www.who.int "WHO") gehören.
 
 <div class="ig-highlight ig-highlight-orange" markdown="1">
 **Hinweis.** Im Rahmen eines Harmonisierungsprozesses zwischen dem RKI, MIO42 und

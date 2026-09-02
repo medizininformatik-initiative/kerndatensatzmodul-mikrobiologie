@@ -363,20 +363,6 @@ dependencies:
 pages:
   index.md:
     title: Home
-    # ── MIGRATED pages (spec §9e branch 4): cross-cutting narrative from the
-    #    Simplifier guide that no agreed page owns. pages:-nested rather than
-    #    given a menu entry — the menu budget has no room at depth <= 2
-    #    (migration-log/page-structure-advice.md, report queue ①).
-    anwendungsfaelle-informationsmodell.md:
-      title: Use Cases and Information Model
-    technische-implementierung.md:
-      title: Technical Implementation
-      profilauswahl-und-abgrenzung.md:
-        title: Profile Selection and Delimitation
-      fhir-profile.md:
-        title: FHIR Profiles - Modelling Notes
-        probe.md:
-          title: Specimen
 
   guidance.md:
     title: Guidance
@@ -384,6 +370,19 @@ pages:
       title: Guidance for Implementers
     uml-diagrams.md:
       title: UML Diagrams
+    # ── MIGRATED narrative, re-homed 2026-09-02. These three came from the
+    #    Simplifier section "Technische Implementierung", whose index page carried
+    #    no content of its own ("Diese Seite wurde absichtlich leer gelassen.") — a
+    #    navigation level, not a page. They are guidance about the profiles rather
+    #    than artefact listings, so they hang off Guidance, which is also where
+    #    kerndatensatzmodul-labor puts its Specimen page. The guide loses a level of
+    #    depth and index.md stops having children.
+    profilauswahl-und-abgrenzung.md:
+      title: Profile Selection and Delimitation
+    fhir-profile.md:
+      title: FHIR Profiles - Modelling Notes
+    probe.md:
+      title: Specimen
 
   # The only Conformance-cluster PAGE of this guide; the MII-wide conformance
   # topics are menu links to the Meta module (see input/includes/menu.xml).

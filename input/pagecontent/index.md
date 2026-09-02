@@ -18,7 +18,9 @@ terminology resources in their normative form. The MII Core Dataset enables the
 standardized secondary use of routine clinical data for medical research.
 
 The module describes the investigations carried out in laboratories to detect, identify and
-characterise microorganisms and their properties.
+characterise microorganisms and their properties. It is of decisive importance because it forms the
+basis for a common investigation of infectious diseases and antibiotic resistance, which lead to
+global health emergencies and are among the main priorities of the [WHO](http://www.who.int "WHO").
 
 <div class="ig-highlight ig-highlight-orange" markdown="1">
 **Note.** In the course of a harmonisation process between the RKI, MIO42 and the MII, the
