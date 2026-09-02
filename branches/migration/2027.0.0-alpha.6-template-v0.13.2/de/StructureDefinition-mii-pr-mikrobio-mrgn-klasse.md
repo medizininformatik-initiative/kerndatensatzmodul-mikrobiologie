@@ -144,7 +144,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio MRGN Klasse",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T09:01:27+00:00",
+  "date" : "2026-09-02T09:13:42+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{
