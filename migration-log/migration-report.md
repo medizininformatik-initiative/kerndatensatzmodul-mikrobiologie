@@ -161,6 +161,25 @@ have: *Guidance for Researchers* and *Operations* are absent (M9 optional-page d
 `none undecided`), the `(optional)` tags are resolved because the module actually ships those
 artefact classes, and *Examples* and *Technical Implementation* are the module's own entries.
 
+## Gate A — decisions taken on 2026-09-02
+
+Six items stood open. All six are now decided; none is waiting on anyone.
+
+| Item | Decision |
+|---|---|
+| `id` / `name` diverge from the source | **Aligned to the MII convention** — `mii-ig-mikrobiologie` / `MII_IG_Mikrobiologie`, matching `mii-ig-base` and `mii-ig-labor`. Own section above. |
+| `packageId` and `title` "diverge" | **Measurement artefact, now removed.** The verifier read the root `package.json`, which still carried the Simplifier-era `"name": "project"` and `"description": "Put a description here"`. That file is aligned with the real identity, so the contradiction is gone rather than merely explained. |
+| `license` asserted without evidence | **CC-BY-4.0 confirmed by the operator.** The source declares none anywhere; `license-align` reconciles the LICENSE file against the declared id and exits 0. |
+| `publisher` had no source value | **Medizininformatik Initiative**, `medizininformatik-initiative.de`. The URL moved with it — it still pointed at `netzwerk-universitaetsmedizin.de`, which would have linked a publisher to another organisation's site. NUM-DIZ takes over on 2027-01-01 per `SECURITY.md`; until then the MII is the publisher. |
+| `hl7.fhir.uv.crmi`, `hl7.fhir.uv.xver-r5.r4` added | **Confirmed as machinery, not identity.** CRMI is required by the template's `meta.profile` claims; the xver package was measured at 21 errors without it and 0 with it. |
+| `hl7.fhir.uv.ips` pinned to an obsolete 1.1.0 | **Moved to the current 2.0.1.** The old pin was a rendering workaround for a stale binding in the parent. The parent bump to `2027.0.0-ballot.rc3` fixes that binding, so the choice between an obsolete IPS and 120 unresolvable links no longer exists. |
+
+**One item is deliberately left as it is.** `package.json` remains in the tree
+although nothing in the toolchain reads it — SUSHI reads `sushi-config.yaml`,
+and `convention-check`, `check-updates` and `meta-pin-drift` all read
+`package/package.json`, a different file inside a FHIR package tarball. Deleting
+it was proposed and rejected; aligning its contents was the right fix.
+
 ## Publication path — released via Simplifier for now (2026-09-02)
 
 **Operator decision:** the module is released through **Simplifier** for the time being. The
