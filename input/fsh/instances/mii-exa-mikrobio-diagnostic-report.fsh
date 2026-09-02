@@ -35,10 +35,10 @@ Usage: #example
 * identifier[befund].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
 * category[lab-category].coding[0] = http://terminology.hl7.org/CodeSystem/v2-0074#LAB "Laboratory"
-* category[lab-category].coding[+] = $loinc#26436-6 "Laboruntersuchungen"
+* category[lab-category].coding[+] = $loinc#26436-6 "Laboratory studies (set)"
 * category[mibi-category] = $v2-0074#MB "Microbiology"
 * category[mibi-sub-category] = $loinc#92894-5 "Microbiology - bacterial studies"
-* code.coding[loinc-labReport] = $loinc#11502-2 "Laborbericht"
+* code.coding[loinc-labReport] = $loinc#11502-2 "Laboratory report"
 * basedOn[0].reference = "ServiceRequest/111"
 * contained[0] = mii-exa-mikrobio-patient-inline
 * subject = Reference(mii-exa-mikrobio-patient-inline) // MIGRATION: was "Patient/111" — see the note above

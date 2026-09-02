@@ -5,9 +5,9 @@ Usage: #example
 * identifier[analyseBefundCode].value = "spez-kultur-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
+* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboratory studies (set)"
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#6547-4 "Rotavirus identified in Specimen by Organism specific culture"
 * subject.reference = "Patient/example"
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"

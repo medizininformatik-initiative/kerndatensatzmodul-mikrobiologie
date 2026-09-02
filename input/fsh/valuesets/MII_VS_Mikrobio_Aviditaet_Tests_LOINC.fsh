@@ -4,7 +4,7 @@ Title: "MII VS Mikrobio Aviditaet Tests [LOINC]"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
-* $loinc#52984-2 "Cytomegalovirus Ab.IgG avidity"
+* $loinc#52984-2 "Cytomegalovirus IgG Ab avidity [Ratio] in Serum or Plasma by Immunoassay"
 * $loinc#81119-0 "Epstein Barr virus capsid Ab.IgG avidity"
 * $loinc#104428-8 "Measles virus Ab.IgG avidity"
 * $loinc#52986-7 "Rubella virus Ab.IgG avidity"

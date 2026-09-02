@@ -16,7 +16,7 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
 * category[mibi-category].coding ^slicing.rules = #open
 * category[mibi-category].coding contains v2-microbiology 1..1 MS and loinc-microbiology-studies 0..1 MS
 * category[mibi-category].coding[v2-microbiology] = $v2-0074#MB // "Microbiology"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 // "Mikrobiologie"
+* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 // "Microbiology studies (set)"
 * category[mibi-sub-category] ^short = "Mikrobiologie-Kategorie LOINC"
 * category[mibi-sub-category] ^definition = "Kategorie-Slice für die LOINC-Kodierung von mikrobiologischen Befunden. Mehrfachangabe zulaessig, wenn der Befund mehrere Studientypen umfasst, z. B. bakteriologisch und mykologisch. Umfasst der Befund keine benennbaren Studientypen oder soll er nur allgemein eingeordnet werden, entfaellt der Subtyp; die allgemeine Einordnung erfolgt ueber category[mibi-category] mit MB und 18725-2."
 * category[mibi-sub-category] from MII_VS_Mikrobio_Befundtyp_LOINC (required)
