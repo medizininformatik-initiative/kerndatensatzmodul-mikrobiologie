@@ -185,6 +185,15 @@
       <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
       <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
       <li><a href="uml-diagrams.html">UML-Diagramme</a></li>
+      <!-- MIGRIERTES Narrativ, am 2026-09-02 umgehängt. Die drei Seiten hingen zuvor
+           unter einem eigenen Top-Level-Dropdown "Technische Implementierung", das den
+           Simplifier-Sektionsbaum nachbildete. Dessen Indexseite trug keinen eigenen
+           Inhalt, war also eine Navigationsebene und keine Seite. Inhaltlich sind es
+           Anleitungen zu den Profilen, keine Artefaktlisten — deshalb hier, und
+           "Artefakte" bleibt ein reines Artefaktverzeichnis. -->
+      <li><a href="profilauswahl-und-abgrenzung.html">Profilauswahl und Abgrenzung</a></li>
+      <li><a href="fhir-profile.html">FHIR-Profile – Modellierungshinweise</a></li>
+      <li><a href="probe.html">Probe</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -212,16 +221,6 @@
       <li><a href="value-sets.html">ValueSets</a></li>
       <li><a href="code-systems.html">CodeSystems</a></li>
       <li><a href="examples.html">Beispiele</a></li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="technische-implementierung.html" class="dropdown-toggle">Technische Implementierung<b class="caret"> </b></a>
-    <ul class="dropdown-menu">
-      <li><a href="technische-implementierung.html">Technische Implementierung</a></li>
-      <li><a href="anwendungsfaelle-informationsmodell.html">Anwendungsfälle und Informationsmodell</a></li>
-      <li><a href="profilauswahl-und-abgrenzung.html">Profilauswahl und Abgrenzung</a></li>
-      <li><a href="fhir-profile.html">FHIR-Profile – Modellierungshinweise</a></li>
-      <li><a href="probe.html">Probe</a></li>
     </ul>
   </li>
   <li><a href="downloads.html">Downloads</a></li>
@@ -477,7 +476,7 @@ Element ID:     <code>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Value of extension</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-mii-vs-mikrobio-susceptibility-norm.html" title="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility-norm" class="binding">MII VS Mikrobio Susceptibility Norm</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6542dea7-3eb8-4fac-875b-16f5da9a0a48
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b5882b0e-04ea-4daa-9592-7cd0d2feaaff
 document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-ex-mikrobio-empfindlichkeit-normD'), 'binding', document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normD-binding').checked, document.getElementById('ppmii-ex-mikrobio-empfindlichkeit-normD'));
 document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -565,7 +564,7 @@ filterDesc(document.getElementById('mii-ex-mikrobio-empfindlichkeit-normD'), 'ob
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value of extension<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-mii-vs-mikrobio-susceptibility-norm.html" title="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility-norm" class="binding">MII VS Mikrobio Susceptibility Norm</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6542dea7-3eb8-4fac-875b-16f5da9a0a48
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b5882b0e-04ea-4daa-9592-7cd0d2feaaff
 document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-ex-mikrobio-empfindlichkeit-normS'), 'binding', document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normS-binding').checked, document.getElementById('ppmii-ex-mikrobio-empfindlichkeit-normS'));
 document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -743,7 +742,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Value of extension</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-mii-vs-mikrobio-susceptibility-norm.html" title="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility-norm" class="binding">MII VS Mikrobio Susceptibility Norm</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6542dea7-3eb8-4fac-875b-16f5da9a0a48
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b5882b0e-04ea-4daa-9592-7cd0d2feaaff
 document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-ex-mikrobio-empfindlichkeit-normDA'), 'binding', document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normDA-binding').checked, document.getElementById('ppmii-ex-mikrobio-empfindlichkeit-normDA'));
 document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -827,7 +826,7 @@ filterDesc(document.getElementById('mii-ex-mikrobio-empfindlichkeit-normDA'), 'o
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value of extension<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-mii-vs-mikrobio-susceptibility-norm.html" title="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility-norm" class="binding">MII VS Mikrobio Susceptibility Norm</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6542dea7-3eb8-4fac-875b-16f5da9a0a48
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b5882b0e-04ea-4daa-9592-7cd0d2feaaff
 document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-ex-mikrobio-empfindlichkeit-normSA'), 'binding', document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normSA-binding').checked, document.getElementById('ppmii-ex-mikrobio-empfindlichkeit-normSA'));
 document.getElementById('cbmii-ex-mikrobio-empfindlichkeit-normSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1004,7 +1003,7 @@ Summary
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 12:13+0000">2026-09-02</span>
+          Erstellt <span title="Wed, Sep 2, 2026 12:45+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -214,6 +214,16 @@
       <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
       <li><a href="logical-models.html">Datasets and Descriptions</a></li>
       <li><a href="uml-diagrams.html">UML Diagrams</a></li>
+      <!-- MIGRATED narrative, re-homed 2026-09-02. These three used to hang under a
+           top-level "Technical Implementation" dropdown that mirrored the Simplifier
+           section tree. That section's index page carried no content of its own, so
+           the level was navigation rather than a page. They are guidance about the
+           profiles, not artefact listings, so Artifacts stays a pure artefact index
+           and these live here. Budget after the change: 7 top-level (limit 8),
+           7 children here (limit 10), depth 2 (limit 2), 26 entries (limit 33). -->
+      <li><a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a></li>
+      <li><a href="fhir-profile.html">FHIR Profiles - Modelling Notes</a></li>
+      <li><a href="probe.html">Specimen</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -240,22 +250,6 @@
       <li><a href="value-sets.html">Value Sets</a></li>
       <li><a href="code-systems.html">Code Systems</a></li>
       <li><a href="examples.html">Examples</a></li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <!-- MIGRATED narrative that no agreed page owns (spec §9e branch 4). The
-         page-routing advice run nested these under index/technical-implementation
-         because no existing dropdown had room at depth <= 2; a new TOP-LEVEL
-         dropdown is the option it named ("buy the host a top-level entry"), and
-         it fits the budget: 8 top-level (limit 8), 6 children (limit 10),
-         depth 2 (limit 2), 33 entries total (limit 33). -->
-    <a data-toggle="dropdown" href="technische-implementierung.html" class="dropdown-toggle">Technical Implementation<b class="caret"> </b></a>
-    <ul class="dropdown-menu">
-      <li><a href="technische-implementierung.html">Technical Implementation</a></li>
-      <li><a href="anwendungsfaelle-informationsmodell.html">Use Cases and Information Model</a></li>
-      <li><a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a></li>
-      <li><a href="fhir-profile.html">FHIR Profiles - Modelling Notes</a></li>
-      <li><a href="probe.html">Specimen</a></li>
     </ul>
   </li>
   <li><a href="downloads.html">Downloads</a></li>
@@ -1417,7 +1411,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity" title="Quantity">SimpleQuantity</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">High Range, if relevant<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="If a code for the unit is present, the system SHALL also be present" class="constraint">qty-3</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="The comparator is not used on a SimpleQuantity" class="constraint">sqty-1</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6542dea7-3eb8-4fac-875b-16f5da9a0a48
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b5882b0e-04ea-4daa-9592-7cd0d2feaaff
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-barlett-scoreK'), 'binding', document.getElementById('cbmii-pr-mikrobio-barlett-scoreK-binding').checked, document.getElementById('ppmii-pr-mikrobio-barlett-scoreK'));
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1957,7 +1951,7 @@ filterDesc(document.getElementById('mii-pr-mikrobio-barlett-scoreK'), 'obligatio
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Probenmaterial</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6542dea7-3eb8-4fac-875b-16f5da9a0a48
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b5882b0e-04ea-4daa-9592-7cd0d2feaaff
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-barlett-scoreD'), 'binding', document.getElementById('cbmii-pr-mikrobio-barlett-scoreD-binding').checked, document.getElementById('ppmii-pr-mikrobio-barlett-scoreD'));
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3405,7 +3399,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6542dea7-3eb8-4fac-875b-16f5da9a0a48
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b5882b0e-04ea-4daa-9592-7cd0d2feaaff
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-barlett-scoreS'), 'binding', document.getElementById('cbmii-pr-mikrobio-barlett-scoreS-binding').checked, document.getElementById('ppmii-pr-mikrobio-barlett-scoreS'));
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -5166,7 +5160,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity" title="Quantity">SimpleQuantity</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">High Range, if relevant<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="If a code for the unit is present, the system SHALL also be present" class="constraint">qty-3</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="The comparator is not used on a SimpleQuantity" class="constraint">sqty-1</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6542dea7-3eb8-4fac-875b-16f5da9a0a48
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b5882b0e-04ea-4daa-9592-7cd0d2feaaff
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-barlett-scoreKA'), 'binding', document.getElementById('cbmii-pr-mikrobio-barlett-scoreKA-binding').checked, document.getElementById('ppmii-pr-mikrobio-barlett-scoreKA'));
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -5705,7 +5699,7 @@ filterDesc(document.getElementById('mii-pr-mikrobio-barlett-scoreKA'), 'obligati
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Probenmaterial</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6542dea7-3eb8-4fac-875b-16f5da9a0a48
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b5882b0e-04ea-4daa-9592-7cd0d2feaaff
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-barlett-scoreDA'), 'binding', document.getElementById('cbmii-pr-mikrobio-barlett-scoreDA-binding').checked, document.getElementById('ppmii-pr-mikrobio-barlett-scoreDA'));
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -7150,7 +7144,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 6542dea7-3eb8-4fac-875b-16f5da9a0a48
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b5882b0e-04ea-4daa-9592-7cd0d2feaaff
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-barlett-scoreSA'), 'binding', document.getElementById('cbmii-pr-mikrobio-barlett-scoreSA-binding').checked, document.getElementById('ppmii-pr-mikrobio-barlett-scoreSA'));
 document.getElementById('cbmii-pr-mikrobio-barlett-scoreSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -8036,7 +8030,7 @@ Summary
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 12:13+0000">2026-09-02</span>
+          Generated <span title="Wed, Sep 2, 2026 12:45+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

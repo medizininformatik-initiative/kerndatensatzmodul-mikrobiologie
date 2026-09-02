@@ -16,7 +16,7 @@ Diese Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz-(KDS-)
 
 Die vorliegende Spezifikation beschreibt die FHIR-Repräsentation des Kerndatensatz Moduls 'Mikrobiologie' der Medizininformatik-Initiative. Im Folgenden werden die Use-Case des Moduls sowie die dazuhegörigen FHIR-Profile und Terminologie-Ressourcen in ihrer verbindlichen Form beschrieben.
 
-Das Modul beschreibt die Untersuchungen, die in Laboratorien zum Nachweis, zur Identifizierung und zur Charakterisierung von Mikroorganismen und deren Eigenschaften durchgeführt werden.
+Das Modul beschreibt die Untersuchungen, die in Laboratorien zum Nachweis, zur Identifizierung und zur Charakterisierung von Mikroorganismen und deren Eigenschaften durchgeführt werden. Es ist von entscheidender Bedeutung, da es die Grundlage für eine gemeinsame Untersuchung von Infektionskrankheiten und Antibiotikaresistenzen bildet, die zu globalen Gesundheitsnotfällen führen und zu den Hauptprioritäten der [WHO](http://www.who.int) gehören.
 
 **Hinweis.** Im Rahmen eines Harmonisierungsprozesses zwischen dem RKI, MIO42 und der MII wurde das Mikrobiologie-Datenmodell grundlegend überarbeitet. Die Abstimmungen wurden zusätzlich auf den europäischen Kontext (EHDS) ausgeweitet. Der vorliegende Alpha-Release bildet den aktuellen Stand der erzielten Abstimmungsergebnisse ab. Ein offiziell ballotiertes Release ist für Ende des Jahres vorgesehen.
 

@@ -1,9 +1,7 @@
 # Specimen - MII Implementation Guide Microbiology v2027.0.0-alpha.6
 
 * [**Table of Contents**](toc.md)
-* [**Home**](index.md)
-* [**Technical Implementation**](technische-implementierung.md)
-* [**FHIR Profiles - Modelling Notes**](fhir-profile.md)
+* [**Guidance**](guidance.md)
 * **Specimen**
 
 ## Specimen

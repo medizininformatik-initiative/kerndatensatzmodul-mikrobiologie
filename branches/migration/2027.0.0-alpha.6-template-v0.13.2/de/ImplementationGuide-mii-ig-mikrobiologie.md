@@ -197,7 +197,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
   "title" : "MII Implementation Guide Microbiology",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T12:13:25+00:00",
+  "date" : "2026-09-02T12:45:31+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{
@@ -3078,117 +3078,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
             "url" : "http://hl7.org/fhir/StructureDefinition/translation"
           }]
         },
-        "generation" : "markdown",
-        "page" : [{
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "anwendungsfaelle-informationsmodell.html"
-          }],
-          "nameUrl" : "anwendungsfaelle-informationsmodell.html",
-          "title" : "Use Cases and Information Model",
-          "_title" : {
-            "extension" : [{
-              "extension" : [{
-                "url" : "lang",
-                "valueCode" : "de"
-              },
-              {
-                "url" : "content",
-                "valueString" : "Anwendungsfälle und Informationsmodell"
-              }],
-              "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-            }]
-          },
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "technische-implementierung.html"
-          }],
-          "nameUrl" : "technische-implementierung.html",
-          "title" : "Technical Implementation",
-          "_title" : {
-            "extension" : [{
-              "extension" : [{
-                "url" : "lang",
-                "valueCode" : "de"
-              },
-              {
-                "url" : "content",
-                "valueString" : "Technische Implementierung"
-              }],
-              "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-            }]
-          },
-          "generation" : "markdown",
-          "page" : [{
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "profilauswahl-und-abgrenzung.html"
-            }],
-            "nameUrl" : "profilauswahl-und-abgrenzung.html",
-            "title" : "Profile Selection and Delimitation",
-            "_title" : {
-              "extension" : [{
-                "extension" : [{
-                  "url" : "lang",
-                  "valueCode" : "de"
-                },
-                {
-                  "url" : "content",
-                  "valueString" : "Profilauswahl und Abgrenzung"
-                }],
-                "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-              }]
-            },
-            "generation" : "markdown"
-          },
-          {
-            "extension" : [{
-              "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl" : "fhir-profile.html"
-            }],
-            "nameUrl" : "fhir-profile.html",
-            "title" : "FHIR Profiles - Modelling Notes",
-            "_title" : {
-              "extension" : [{
-                "extension" : [{
-                  "url" : "lang",
-                  "valueCode" : "de"
-                },
-                {
-                  "url" : "content",
-                  "valueString" : "FHIR-Profile – Modellierungshinweise"
-                }],
-                "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-              }]
-            },
-            "generation" : "markdown",
-            "page" : [{
-              "extension" : [{
-                "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-                "valueUrl" : "probe.html"
-              }],
-              "nameUrl" : "probe.html",
-              "title" : "Specimen",
-              "_title" : {
-                "extension" : [{
-                  "extension" : [{
-                    "url" : "lang",
-                    "valueCode" : "de"
-                  },
-                  {
-                    "url" : "content",
-                    "valueString" : "Probe"
-                  }],
-                  "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-                }]
-              },
-              "generation" : "markdown"
-            }]
-          }]
-        }]
+        "generation" : "markdown"
       },
       {
         "extension" : [{
@@ -3249,6 +3139,72 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
               {
                 "url" : "content",
                 "valueString" : "UML-Diagramme"
+              }],
+              "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+            }]
+          },
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "profilauswahl-und-abgrenzung.html"
+          }],
+          "nameUrl" : "profilauswahl-und-abgrenzung.html",
+          "title" : "Profile Selection and Delimitation",
+          "_title" : {
+            "extension" : [{
+              "extension" : [{
+                "url" : "lang",
+                "valueCode" : "de"
+              },
+              {
+                "url" : "content",
+                "valueString" : "Profilauswahl und Abgrenzung"
+              }],
+              "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+            }]
+          },
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "fhir-profile.html"
+          }],
+          "nameUrl" : "fhir-profile.html",
+          "title" : "FHIR Profiles - Modelling Notes",
+          "_title" : {
+            "extension" : [{
+              "extension" : [{
+                "url" : "lang",
+                "valueCode" : "de"
+              },
+              {
+                "url" : "content",
+                "valueString" : "FHIR-Profile – Modellierungshinweise"
+              }],
+              "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+            }]
+          },
+          "generation" : "markdown"
+        },
+        {
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "probe.html"
+          }],
+          "nameUrl" : "probe.html",
+          "title" : "Specimen",
+          "_title" : {
+            "extension" : [{
+              "extension" : [{
+                "url" : "lang",
+                "valueCode" : "de"
+              },
+              {
+                "url" : "content",
+                "valueString" : "Probe"
               }],
               "url" : "http://hl7.org/fhir/StructureDefinition/translation"
             }]

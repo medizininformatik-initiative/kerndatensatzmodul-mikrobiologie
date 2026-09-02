@@ -216,6 +216,16 @@
       <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
       <li><a href="logical-models.html">Datasets and Descriptions</a></li>
       <li><a href="uml-diagrams.html">UML Diagrams</a></li>
+      <!-- MIGRATED narrative, re-homed 2026-09-02. These three used to hang under a
+           top-level "Technical Implementation" dropdown that mirrored the Simplifier
+           section tree. That section's index page carried no content of its own, so
+           the level was navigation rather than a page. They are guidance about the
+           profiles, not artefact listings, so Artifacts stays a pure artefact index
+           and these live here. Budget after the change: 7 top-level (limit 8),
+           7 children here (limit 10), depth 2 (limit 2), 26 entries (limit 33). -->
+      <li><a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a></li>
+      <li><a href="fhir-profile.html">FHIR Profiles - Modelling Notes</a></li>
+      <li><a href="probe.html">Specimen</a></li>
     </ul>
   </li>
   <li class="dropdown">
@@ -242,22 +252,6 @@
       <li><a href="value-sets.html">Value Sets</a></li>
       <li><a href="code-systems.html">Code Systems</a></li>
       <li><a href="examples.html">Examples</a></li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <!-- MIGRATED narrative that no agreed page owns (spec §9e branch 4). The
-         page-routing advice run nested these under index/technical-implementation
-         because no existing dropdown had room at depth <= 2; a new TOP-LEVEL
-         dropdown is the option it named ("buy the host a top-level entry"), and
-         it fits the budget: 8 top-level (limit 8), 6 children (limit 10),
-         depth 2 (limit 2), 33 entries total (limit 33). -->
-    <a data-toggle="dropdown" href="technische-implementierung.html" class="dropdown-toggle">Technical Implementation<b class="caret"> </b></a>
-    <ul class="dropdown-menu">
-      <li><a href="technische-implementierung.html">Technical Implementation</a></li>
-      <li><a href="anwendungsfaelle-informationsmodell.html">Use Cases and Information Model</a></li>
-      <li><a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a></li>
-      <li><a href="fhir-profile.html">FHIR Profiles - Modelling Notes</a></li>
-      <li><a href="probe.html">Specimen</a></li>
     </ul>
   </li>
   <li><a href="downloads.html">Downloads</a></li>
@@ -404,7 +398,7 @@
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "active",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">experimental</a>" : false,
-  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2026-09-02T12:13:25+00:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2026-09-02T12:45:31+00:00",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "NUM-DIZ",
   "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
     {
@@ -687,7 +681,7 @@
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 12:13+0000">2026-09-02</span>
+          Generated <span title="Wed, Sep 2, 2026 12:45+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

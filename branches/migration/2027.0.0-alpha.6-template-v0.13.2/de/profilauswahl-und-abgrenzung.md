@@ -1,8 +1,7 @@
 # Profilauswahl und Abgrenzung - MII Implementation Guide Microbiology v2027.0.0-alpha.6
 
 * [**Inhaltsverzeichnis**](toc.md)
-* [**Startseite**](index.md)
-* [**Technische Implementierung**](technische-implementierung.md)
+* [**Anleitung**](guidance.md)
 * **Profilauswahl und Abgrenzung**
 
 ## Profilauswahl und Abgrenzung

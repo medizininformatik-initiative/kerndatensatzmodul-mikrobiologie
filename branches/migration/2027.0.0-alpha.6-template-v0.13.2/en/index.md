@@ -14,7 +14,7 @@
 
 This specification describes the FHIR representation of the Core Dataset (CDS) module **Microbiology** of the Medical Informatics Initiative (MII). It covers the module's use cases and the associated FHIR profiles, extensions and terminology resources in their normative form. The MII Core Dataset enables the standardized secondary use of routine clinical data for medical research.
 
-The module describes the investigations carried out in laboratories to detect, identify and characterise microorganisms and their properties.
+The module describes the investigations carried out in laboratories to detect, identify and characterise microorganisms and their properties. It is of decisive importance because it forms the basis for a common investigation of infectious diseases and antibiotic resistance, which lead to global health emergencies and are among the main priorities of the [WHO](http://www.who.int).
 
 **Note.** In the course of a harmonisation process between the RKI, MIO42 and the MII, the microbiology data model was fundamentally revised. The agreements were additionally extended to the European context (EHDS). This alpha release reflects the current state of the agreements reached. An officially balloted release is planned for the end of the year.
 

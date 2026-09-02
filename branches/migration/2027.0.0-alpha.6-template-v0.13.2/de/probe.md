@@ -1,9 +1,7 @@
 # Probe - MII Implementation Guide Microbiology v2027.0.0-alpha.6
 
 * [**Inhaltsverzeichnis**](toc.md)
-* [**Startseite**](index.md)
-* [**Technische Implementierung**](technische-implementierung.md)
-* [**FHIR-Profile – Modellierungshinweise**](fhir-profile.md)
+* [**Anleitung**](guidance.md)
 * **Probe**
 
 ## Probe

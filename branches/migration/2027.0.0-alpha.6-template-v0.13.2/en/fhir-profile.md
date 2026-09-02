@@ -1,8 +1,7 @@
 # FHIR Profiles - Modelling Notes - MII Implementation Guide Microbiology v2027.0.0-alpha.6
 
 * [**Table of Contents**](toc.md)
-* [**Home**](index.md)
-* [**Technical Implementation**](technische-implementierung.md)
+* [**Guidance**](guidance.md)
 * **FHIR Profiles - Modelling Notes**
 
 ## FHIR Profiles - Modelling Notes

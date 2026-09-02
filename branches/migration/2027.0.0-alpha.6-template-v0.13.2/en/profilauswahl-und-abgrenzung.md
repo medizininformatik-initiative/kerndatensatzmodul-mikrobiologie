@@ -1,8 +1,7 @@
 # Profile Selection and Delimitation - MII Implementation Guide Microbiology v2027.0.0-alpha.6
 
 * [**Table of Contents**](toc.md)
-* [**Home**](index.md)
-* [**Technical Implementation**](technische-implementierung.md)
+* [**Guidance**](guidance.md)
 * **Profile Selection and Delimitation**
 
 ## Profile Selection and Delimitation

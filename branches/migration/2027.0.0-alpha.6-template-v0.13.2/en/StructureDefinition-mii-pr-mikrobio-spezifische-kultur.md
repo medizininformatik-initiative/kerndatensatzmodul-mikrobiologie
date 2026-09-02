@@ -70,7 +70,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Kultur",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T12:13:25+00:00",
+  "date" : "2026-09-02T12:45:31+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{
