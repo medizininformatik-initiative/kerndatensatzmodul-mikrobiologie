@@ -91,7 +91,7 @@ C4-e83476	conservation	C4	IDENTISCH	Weitere-Eigenschaften/Index.page.md	all 1 pr
 C5-f09e26	conservation	C5	IDENTISCH	input/includes/menu.xml	all 33 menu entries resolve to a real page	-	-
 C5-d64c1f	conservation	C5	IDENTISCH	input/translations/de/includes/menu.xml	all 33 menu entries resolve to a real page	-	-
 C5-87e969	conservation	C5	DIVERGIERT	input/pagecontent/ImplementationGuide-kerndatensatzmodul-mikrobiologie.md	narrative page in NO menu entry -- rendered, but reachable only by typing its URL	-	add it to input/includes/menu.xml (and the per-language copies), or retire the page
-C5-89930f	conservation	C5	DIVERGIERT	input/pagecontent/ImplementationGuide-kerndatensatzmodul-mikrobiologie.md	target page is neither a template page nor the target of any page-map row -- it appeared during migration	-	name its provenance in the page map, or remove it; a page nobody can trace to a source is content a reviewer cannot check
+C5-2d86b5	conservation	C5	NICHT PRUEFBAR	target pages without a source counterpart	references/template-pages.tsv is measured at module-template v0.11.1, but this module vendors v0.13.2 -- a stale manifest produces confident wrong findings in both directions	-	re-measure template-pages.tsv at the vendored tag (record the tag in the third column), then re-run
 C6-cc0b45	conservation	C6	IDENTISCH	Allgemeine-Bestimmung.page.md	6 of 8 runs placed, most on StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung-intro -- the mapped target	-	-
 C6-259bba	conservation	C6	IDENTISCH	Allgemeine-Kultur.page.md	1 of 3 runs placed, most on StructureDefinition-mii-pr-mikrobio-allgemeine-kultur-intro -- the mapped target	-	-
 C6-c9ac30	conservation	C6	IDENTISCH	Antigen-Antikoerper-Quantitativ.page.md	1 of 3 runs placed, most on StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ-intro -- the mapped target	-	-
@@ -166,9 +166,9 @@ F2-e78ce4	fidelity	F2	NICHT PRUEFBAR	hl7.fhir.uv.xver-r5.r4	target-only dependen
 F3-1a29c4	fidelity	F3	NICHT PRUEFBAR	license	target declares CC-BY-4.0 with NO tier evidence behind it (no claim in identity-claims.tsv)	-	read the source's LICENSE (repo-identity.sh) and claim it, or confirm the value at Gate A. The template's literal CC-BY-4.0 reaches here unflagged otherwise
 F3-ce21cb	fidelity	F3	IDENTISCH	LICENSE file	the file text is CC-BY-4.0 (header: 'attribution 4.0 international'), matching the declared scalar	-	-
 F4-daf0ce	fidelity	F4	IDENTISCH	115 FSH files	no fhir_comments rules, no whitespace-bearing code references	-	-
-P1-fded0e	provenance	P1	IDENTISCH	template	rendered de.medizininformatikinitiative.template#1.3.2 == vendored de.medizininformatikinitiative.template#1.3.2	-	-
-P2-264584	provenance	P2	IDENTISCH	vendored template ref	v0.11.1 == latest release v0.11.1	-	-
-P3-a28a47	provenance	P3	IDENTISCH	IG Publisher version	2.3.2 == the workflow pin	-	-
+P1-fded0e	provenance	P1	IDENTISCH	template	rendered de.medizininformatikinitiative.template#1.3.4 == recorded template release v1.3.4 (URL reference)	-	-
+P2-27e398	provenance	P2	IDENTISCH	scaffold template ref	v0.13.2 == latest release v0.13.2	-	-
+P3-a28a47	provenance	P3	DIVERGIERT	IG Publisher version	rendered by 2.3.3, the workflow pins 2.3.2	-	the site was not built by the toolchain the repository declares; rebuild with the pin or correct the pin
 P4-379bde	provenance	P4	IDENTISCH	source guide version	pinned 2025.0.1 (run.log, action simplifier-discover)	-	-
 P5-ae41ea	provenance	P5	IDENTISCH	ig.ini	`ig = fsh-generated/resources/ImplementationGuide-kerndatensatzmodul-mikrobiologie.json` exists in the target	-	-
 R1-866fe1	rendering	R1	IDENTISCH	output/de	tables, tabs and images all non-empty and resolvable	-	-
@@ -177,10 +177,10 @@ R1-e1bc49	rendering	R1	IDENTISCH	output/en	tables, tabs and images all non-empty
 R2-d1da9a	rendering	R2	DIVERGIERT	output/en id="ig-status" [{{]	on 1 page(s), e.g. searchform.html: Search {{title}} (Current Build)	-	rendered header/footer metadata defect -- qa.txt does not report it. Fix the metadata it renders (a jurisdiction code the template cannot resolve is the measured case)
 R1-76f413	rendering	R1	NICHT PRUEFBAR	source-versus-target rendering	no harvested source HTML (./migration-log/guide-harvest/html) and/or no page map	-	harvest with --keep-html and write the page map; without a source rendering, 'non-empty where non-empty in the source' has no reference
 R3-c3bc54	rendering	R3	IDENTISCH	output/de	all 24 narrative pages differ from the default language	-	-
-R4-84ad62	rendering	R4	IDENTISCH	template example links	none, over 1 token(s) from template-artifacts.tsv (verified against template package 1.3.2)	-	-
+R4-84ad62	rendering	R4	NICHT PRUEFBAR	template example links	references/template-artifacts.tsv is verified at module-template v0.11.1, but this module vendors v0.13.2 -- a stale token list looks for the wrong scaffolding in both directions	-	re-verify the token list at the vendored tag (update the `# template_tag:` header), then re-run
 R5-ed8cfb	rendering	R5	IDENTISCH	input/translations/de/ImplementationGuide-kerndatensatzmodul-mikrobiologie.po	a translated unit for every one of the 25 page titles	-	-
-L0-28d3e4	log	L0	IDENTISCH	./migration-log/run.log	564 parsed lines, 1 runs	-	-
-L1-72b929	log	L1	IDENTISCH	silent-partial-success WARNs	the log carries none across 564 lines	-	-
+L0-28d3e4	log	L0	IDENTISCH	./migration-log/run.log	627 parsed lines, 2 runs	-	-
+L1-72b929	log	L1	IDENTISCH	silent-partial-success WARNs	the log carries none across 627 lines	-	-
 L2-0e48db	log	L2	IDENTISCH	1 preflight-analysis	present in the log	-	-
 L2-5e1c48	log	L2	IDENTISCH	pre.2 classify-source-shape	present in the log	-	-
 L2-4fd559	log	L2	IDENTISCH	pre.5 toolchain	present in the log	-	-
@@ -191,7 +191,9 @@ L2-7163a2	log	L2	IDENTISCH	2.1 repo-identity	present in the log	-	-
 L2-07bdbb	log	L2	IDENTISCH	5.1c simplifier-discover	present in the log	-	-
 L2-930ba2	log	L2	NICHT PRUEFBAR	5.1d guide-harvest	no line in the log; the step is conditional (the narrative is not in the repository)	-	confirm the condition did not hold -- This is the step whose absence shipped the template's starter pages under a module's name.
 L2-666ef6	log	L2	IDENTISCH	5.2 skeleton-vendored	present in the log	-	-
+L2-1e1cb5	log	L2	IDENTISCH	5.2 template-reference	present in the log	-	-
 L2-200a9d	log	L2	IDENTISCH	5.2 sushi-skeleton	present in the log	-	-
+L2-f09283	log	L2	IDENTISCH	5.2 license-align	present in the log	-	-
 L2-9a700e	log	L2	IDENTISCH	5.3 transfer-artefacts	present in the log	-	-
 L2-8fadca	log	L2	IDENTISCH	5.4 fql-scan	present in the log	-	-
 L2-ec69ec	log	L2	IDENTISCH	5.4a optional-page-decisions	present in the log	-	-

@@ -2,9 +2,11 @@
 
 **Source** `medizininformatik-initiative/kerndatensatzmodul-mikrobiologie` @ `main` `fdf3190` ·
 rendered guide `https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie?version=2027.0.0-alpha.5` (pinned, published, read-only)
-**Target template** `forschungsgruppe-digital-health/mii-kds-module-template` `v0.11.1` (`de0862b`), vendored as `ig-template/` (package `de.medizininformatikinitiative.template` 1.3.2)
+**Target template** `medizininformatik-initiative/mii-kds-module-template` `v0.13.2` (`a2390de`), referenced by repository URL — **no vendored copy** (package `de.medizininformatikinitiative.template` 1.3.4, resolved at build time)
 **Branch** `migration/2027.0.0-alpha.6-template-v0.11.1` → PR base `main`
-**Run** 2026-08-25 · skill `mii-ig-migration` · everything below traces to `migration-log/run.log`
+**Runs** 1 · 2026-08-25 · skill `mii-ig-migration` v0.23.0 (initial migration onto template v0.11.1)
+**Runs** 2 · 2026-09-02 · skill `mii-ig-migration` v0.25.0 (scaffold re-migration onto template v0.13.2) — see *Run 2* below
+everything below traces to `migration-log/run.log`
 
 ## How to use this report
 
@@ -16,6 +18,51 @@ that carries it — and says honestly where several fixes share one, so a review
 one thing knows what else goes with it.
 Nothing here is published: Gate D (TF KDS / AG IOP / NSG) is untouched.
 
+## Run 2 — scaffold re-migration onto template v0.13.2 (2026-09-02)
+
+Run 1 put the module on template `v0.11.1` with the template **vendored** as `ig-template/`.
+Between then and now the template moved organisation and retired that shape. Run 2 carries the
+scaffold forward. **No narrative, artefact or identity decision from run 1 was re-opened.**
+
+| What changed | Why | Evidence |
+|---|---|---|
+| `ig-template/` (42 files) + `sync-ig-template.{yml,sh}` + `resolve-ig-template-source.sh` removed; `ig.ini` `template =` now the repository URL | template `v0.12.0` made the URL reference the scaffold default; skill `v0.25.0` forbids a vendored template in a migrated module | `5.2 template-reference`, P1 |
+| Catalog skills de-vendored: `skills-lock.json`, `scripts/sync-skills.sh`, `.github/workflows/sync-skills.yml`, `scripts/vendored-skills.test.mjs` and the pinned `fhir-ig-analysis` / `fhir-ig-translation` copies removed | template `v0.13.0` (issue #18) decided it; consumers install on demand | `5.2 devendor` |
+| 24 pristine scaffold files raised to `v0.13.2`; `scripts/gen-pages-index.{mjs,test.mjs}` and `docs/org-move.md` added | `v0.13.1` gh-pages plain index; organisation move | `git show 17b1999` |
+| Ownership handover recorded (MII/TMF until 2026-12-31, NUM-DIZ from 2027-01-01) | template `v0.13.0` | `SECURITY.md`, `CODE_OF_CONDUCT.md` |
+| Licence recorded as an asserted decision and reconciled mechanically | skill `v0.24.0` `license-align` | `5.2 license-align` exit 0 |
+
+**Measured outcome.** SUSHI 0 errors · scaffold unit tests 107/107 · IG Publisher **109 errors,
+573 warnings, 0 broken links** — the error count is unchanged from run 1, so the scaffold move
+introduced no regression. Verification verdicts `IDENTISCH 138 / DIVERGIERT 23` are unchanged;
+`NICHT PRÜFBAR` rose 51 → 53.
+
+**Convention check.** `M6 version` moved **FAIL → PASS** (template `v0.13.2` accepts CalVer
+prerelease suffixes, so `2027.0.0-alpha.6` is now valid); `M5 canonical` and `M7 no floating pins`
+pass, the latter reading the new URL reference. `M2 id` and `M3 name` still FAIL — **verified as
+pre-existing**: the same failures reproduce when run 1's checker is run against this tree. Per
+guardrail 1 the source wins; changing a published `id` breaks consumers. ① Gate A.
+
+**The three new NICHT PRÜFBAR rows are not new gaps.** `L2 guide-harvest`, `L4 conversion count`
+and `R1 source-versus-target rendering` are conditional on a guide harvest and a goFSH conversion,
+neither of which applies to this shape-A scaffold run. They read as unverifiable only because run 2
+opened a new run boundary and therefore carries no such lines. ② confirm the condition.
+
+**Page map — a human decision was overwritten and restored.** Regenerating
+`migration-log/page-map.tsv` (skill: *"re-running overwrites the reviewed map"*) left **42 of 46
+targets unchanged** but replaced four reviewed `RETIRED` rows — the Simplifier FQL snippets
+`FQL-Beschreibung`, `FQL-Capability-Operations`, `FQL-Capability-REST`, `FQL-Capability-Search` —
+with four new `input/pagecontent/fql-*.md` pages. That would have shipped raw `<fql>` bodies the IG
+Publisher cannot render. **The four rows were restored verbatim with their original reason**; all 46
+targets now match the reviewed baseline. Nothing else in the map needs re-review.
+
+**Still open from run 2.** `.github/workflows/fhir-validate.yml` is a pre-migration leftover from
+the Simplifier era (triggers on `master`, a branch that no longer exists). The skill's rule for
+unrecognised entries is *list, do not remove* — ② decide retain or retire.
+`publication-request.json` still carries `{{RELEASE_DESCRIPTION}}` and `{{REGISTRY_DESCRIPTION}}`;
+pre-existing and Gate-D material, not touched by run 2.
+
+
 ## Summary — read this first
 
 The module is on the template and **builds**. SUSHI compiles clean; the IG Publisher renders both
@@ -24,7 +71,7 @@ languages with **zero broken links**.
 | | |
 |---|---|
 | SUSHI | **0 errors, 0 warnings** |
-| IG Publisher 2.3.2 | **109 errors**, 574 warnings, **0 broken links** (from 290 / 120 at the first successful build) |
+| IG Publisher 2.3.3 | **109 errors**, 573 warnings, **0 broken links** (unchanged by run 2; from 290 / 120 at the first successful build) |
 | Artefacts | profiles 20, extensions 2, ValueSets 42, CodeSystems 3, logical models 3, CapabilityStatement 1, SearchParameters 4, examples 27 — **every count identical to the source** |
 | Canonical URLs | source ↔ target diff **empty in both directions** (76 = 76) |
 | Narrative | 43 source pages routed: 20 → intro notes on their artefact page, 4 → sections on `profiles.md`, 10 → agreed pages, 5 → own pages, 4 retired with a reason |

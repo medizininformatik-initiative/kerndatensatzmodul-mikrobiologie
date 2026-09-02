@@ -4,13 +4,13 @@
 
 | Input | Value |
 | --- | --- |
-| source repo | `/private/tmp/claude-501/-Users-patrickwerner-IdeaProjects-kerndatensatzmodul-mikrobiologie/a759b1ea-352c-4c43-b7b4-77c7c89c0da5/scratchpad/source-unmigrated` |
+| source repo | `/private/tmp/claude-501/-Users-patrickwerner-IdeaProjects-kerndatensatzmodul-mikrobiologie/1f63fc89-43bf-460e-a95f-ff084271dc39/scratchpad/src-main` |
 | target repo | `.` |
 | routing table | `/Users/patrickwerner/IdeaProjects/kerndatensatzmodul-mikrobiologie/.claude/skills/mii-ig-migration/references/routing-table.tsv` (17 patterns) |
 | Gate 0 preflight | `/Users/patrickwerner/IdeaProjects/kerndatensatzmodul-mikrobiologie/migration-log/preflight-analysis.json` |
 | artefact census | fsh-generated/resources (103 resources; cross-checked by Gate 0's generated_crosscheck) |
 | page map | `migration-log/page-map.tsv` |
-| generated | 2026-08-25T15:12:15Z |
+| generated | 2026-09-02T08:36:01Z |
 | script | `page-structure-advice.py` v1.3.0 |
 
 Contract limits in force: menu total <= 33, dropdown children <= 10, top level <= 8, menu depth <= 2; size gate at > 2500 words, > 4 merged sources, or ANY repeated heading title; hub at >= 3 children.
@@ -115,31 +115,35 @@ Words = whitespace tokens after removing HTML comments, table separator rows and
 | Page | Words | h2 | h3 | h4 | other h | Repeated titles | Anchor collisions | Merged sources | Size gate |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
 | `ImplementationGuide-kerndatensatzmodul-mikrobiologie.md` | 286 | 0 | 5 | 0 | 0 | 0 | 0 | 0 | ok |
-| `capability-statements.md` | 31 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
-| `changes.md` | 567 | 0 | 1 | 1 | 1 | 0 | 0 | 0 | ok |
-| `code-systems.md` | 148 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
+| `anwendungsfaelle-informationsmodell.md` | 136 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | ok |
+| `capability-statements.md` | 142 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
+| `changes.md` | 6416 | 0 | 6 | 13 | 21 | 8 | 18 | 0 | **TRIPS** - 6416 words > 2500; 8 repeated heading title(s) |
+| `code-systems.md` | 267 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
 | `downloads.md` | 325 | 0 | 0 | 7 | 0 | 0 | 0 | 0 | ok |
-| `examples.md` | 43 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | ok |
-| `extensions.md` | 121 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
-| `guidance.md` | 130 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | ok |
-| `implementer-guidance.md` | 32 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | ok |
-| `index.md` | 484 | 0 | 9 | 0 | 0 | 0 | 0 | 0 | ok |
-| `logical-models.md` | 33 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
-| `metadata.md` | 2198 | 0 | 1 | 7 | 1 | 0 | 0 | 0 | ok |
-| `operations.md` | 104 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
-| `profiles.md` | 77 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | ok |
-| `rendering-artifacts.md` | 3933 | 0 | 8 | 3 | 0 | 0 | 0 | 0 | **TRIPS** - 3933 words > 2500 |
-| `researcher-guidance.md` | 111 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
-| `search-parameters.md` | 112 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
+| `examples.md` | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | ok |
+| `extensions.md` | 56 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
+| `fhir-profile.md` | 228 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
+| `guidance.md` | 243 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | ok |
+| `implementer-guidance.md` | 248 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | ok |
+| `index.md` | 766 | 0 | 9 | 0 | 0 | 0 | 0 | 0 | ok |
+| `logical-models.md` | 309 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | ok |
+| `metadata.md` | 2112 | 0 | 1 | 7 | 1 | 0 | 0 | 0 | ok |
+| `probe.md` | 150 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
+| `profilauswahl-und-abgrenzung.md` | 807 | 0 | 4 | 3 | 0 | 0 | 0 | 0 | ok |
+| `profiles.md` | 174 | 0 | 4 | 0 | 0 | 0 | 0 | 0 | ok |
+| `search-parameters.md` | 47 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
 | `security-and-privacy.md` | 444 | 0 | 0 | 3 | 0 | 0 | 0 | 0 | ok |
+| `technische-implementierung.md` | 44 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | ok |
 | `translationinfo.md` | 80 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | ok |
-| `uml-diagrams.md` | 42 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | ok |
-| `value-sets.md` | 178 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
+| `uml-diagrams.md` | 207 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | ok |
+| `value-sets.md` | 113 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | ok |
 | `version-history.md` | 548 | 0 | 0 | 6 | 0 | 0 | 0 | 0 | ok |
 
 ### 2.1 Pages that trip the size gate
 
-- **`rendering-artifacts.md`** - 3933 words > 2500.
+- **`changes.md`** - 6416 words > 2500; 8 repeated heading title(s).
+  - repeated titles: "High level (what changed in domain terms?)" (x6), "Detailed changes for implementers (per artefact URL / canonical)" (x6), "Profiles (StructureDefinitions)" (x3), "Terminologies (ValueSets)" (x3), "CapabilityStatement" (x2), "SearchParameter" (x2), "Examples and IG page structure" (x2), "General" (x2)
+  - collided anchors: `#high-level-what-changed-in-domain-terms-2`, `#detailed-changes-for-implementers-per-artefact-url-canonical-2`, `#capabilitystatement-2`, `#searchparameter-2`, `#high-level-what-changed-in-domain-terms-3`, `#detailed-changes-for-implementers-per-artefact-url-canonical-3`, `#high-level-what-changed-in-domain-terms-4`, `#detailed-changes-for-implementers-per-artefact-url-canonical-4`, `#general-2`, `#high-level-what-changed-in-domain-terms-5`, `#detailed-changes-for-implementers-per-artefact-url-canonical-5`, `#profiles-structuredefinitions-2`, `#terminologies-valuesets-2`, `#high-level-what-changed-in-domain-terms-6`, `#detailed-changes-for-implementers-per-artefact-url-canonical-6`, `#profiles-structuredefinitions-3`, `#terminologies-valuesets-3`, `#examples-and-ig-page-structure-2`
   - rule 5: re-run routing preferring branches 1 and 2, or split.
 
 ## 3. Menu budget
@@ -148,19 +152,20 @@ Clickable entries are the menu's real destinations: every `<li><a>` except the d
 
 | Metric | Measured | Contract limit | Headroom |
 | --- | ---: | ---: | ---: |
-| total clickable entries | 26 | 33 | 7 |
-| widest dropdown (Artifacts) | 11 | 10 | -1 |
-| top-level entries | 7 | 8 | 1 |
+| total clickable entries | 28 | 33 | 5 |
+| widest dropdown (Artifacts) | 9 | 10 | 1 |
+| top-level entries | 8 | 8 | 0 |
 | menu depth used | 2 | 2 | 0 |
 
 | Dropdown | Children | Free (of 10) |
 | --- | ---: | ---: |
-| Guidance | 5 | 5 |
+| Guidance | 4 | 6 |
 | Conformance | 5 | 5 |
-| Artifacts | 11 | -1 |
+| Artifacts | 9 | 1 |
+| Technical Implementation | 5 | 5 |
 | Metadata | 2 | 8 |
 
-After the proposals in section 4: total 7 free, top level 1 free, freest dropdown Metadata (8 free).
+After the proposals in section 4: total 5 free, top level 0 free, freest dropdown Metadata (8 free).
 
 ## 4. Routing proposal (spec 9d/9e)
 
@@ -169,7 +174,7 @@ One row per source page. The branch number is the spec's; the measurement column
 | # | Source page | Lvl | Children | Words | Branch | Proposed destination | Measurement |
 | ---: | --- | ---: | ---: | ---: | --- | --- | --- |
 | 1 | `MIIIGModulMikrobiologie/Index.page.md` | 1 | 6 | 360 | 3 merge into agreed page | index.md | agreed page named 'index' exists in the target |
-| 2 | `MIIIGModulMikrobiologie/Changelog.page.md` | 1 | 0 | 5187 | 3 merge into agreed page | changes.md <br>_(source page is 5187 words > 2500 - merging it trips the host's size gate on its own (rule 5))_ | menu label 'Changelog' points at changes.html |
+| 2 | `MIIIGModulMikrobiologie/Changelog.page.md` | 1 | 0 | 5187 | 3 merge into agreed page | changes.md <br>_(source page is 5187 words > 2500 - merging it trips the host's size gate on its own (rule 5); host changes.md already trips the size gate (6416 words > 2500; 8 repeated heading title(s)) - rule 5)_ | menu label 'Changelog' points at changes.html |
 | 3 | `MIIIGModulMikrobiologie/Beschreibung-Modul-Mikrobiologie.page.md` | 1 | 0 | 64 | 3 merge into agreed page | index.md | semantic match 'beschreibungmodul' -> index (routing-table) |
 | 4 | `MIIIGModulMikrobiologie/Kontext-im-Gesamtprojekt-Bezuege-zu-anderen-Modulen.page.md` | 1 | 0 | 82 | 3 merge into agreed page | implementer-guidance.md | semantic match 'kontextimgesamtprojekt' -> implementer-guidance (routing-table) |
 | 5 | `MIIIGModulMikrobiologie/Referenzen.page.md` | 1 | 0 | 84 | 3 merge into agreed page | implementer-guidance.md | semantic match 'referenzen' -> implementer-guidance (routing-table) |
@@ -178,41 +183,41 @@ One row per source page. The branch number is the spec's; the measurement column
 | 8 | `MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Datensaetze-inkl-Beschreibungen.page.md` | 2 | 0 | 263 | 3 merge into agreed page | logical-models.md | semantic match 'datensaetze' -> logical-models (routing-table) |
 | 9 | `MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/UML.page.md` | 2 | 0 | 125 | 3 merge into agreed page | uml-diagrams.md | semantic match 'uml' -> uml-diagrams (routing-table) |
 | 10 | `MIIIGModulMikrobiologie/Technische-Implementierung/Index.page.md` | 2 | 4 | 8 | 4 own page | own page (HUB), pages:-NESTED under MIIIGModulMikrobiologie/Index.page.md (its host has no menu entry) <br>_(folder landing page - NOT matched against the target's index.md or an artefact id; routed by its own children)_ | no artefact anchor; no agreed page; 4 child page(s) |
-| 11 | `MIIIGModulMikrobiologie/Technische-Implementierung/Profilauswahl-und-Abgrenzung.page.md` | 2 | 0 | 665 | 4 own page | own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/Index.page.md (its host has no menu entry) | no artefact anchor; no agreed page; 0 child page(s) |
+| 11 | `MIIIGModulMikrobiologie/Technische-Implementierung/Profilauswahl-und-Abgrenzung.page.md` | 2 | 0 | 665 | 3 merge into agreed page | profilauswahl-und-abgrenzung.md | agreed page named 'profilauswahl-und-abgrenzung' exists in the target |
 | 12 | `MIIIGModulMikrobiologie/Technische-Implementierung/CapabilityStatement.page.md` | 2 | 0 | 83 | 3 merge into agreed page | capability-statements.md | semantic match 'capabilitystatement' -> capability-statements (routing-table) |
 | 13 | `MIIIGModulMikrobiologie/Technische-Implementierung/Terminologien.page.md` | 2 | 0 | 162 | 3 merge into agreed page | code-systems.md | semantic match 'terminologien' -> code-systems (routing-table) |
-| 14 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Diagnostic-Report.page.md` | 3 | 0 | 219 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-diagnostic-report-intro.md | compact match on mii-pr-mikrobio-diagnostic-report (1 candidate artefact) |
-| 15 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md` | 3 | 0 | 110 | 4 own page | own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md (its host has no menu entry) | no artefact anchor; no agreed page; 0 child page(s) |
+| 14 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Diagnostic-Report.page.md` | 3 | 0 | 219 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-diagnostic-report-intro.md | compact match on mii-pr-mikrobio-diagnostic-report (1 candidate artefact; intro note already present) |
+| 15 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md` | 3 | 0 | 110 | 3 merge into agreed page | probe.md | agreed page named 'probe' exists in the target |
 | 16 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md` | 3 | 10 | 128 | 4 own page | own page (HUB), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/Index.page.md (its host has no menu entry) <br>_(folder landing page - NOT matched against the target's index.md or an artefact id; routed by its own children)_ | no artefact anchor; no agreed page; 10 child page(s) |
 | 17 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Beschreibung.page.md` | 3 | 0 | 45 | 4 own page | own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md (its host has no menu entry) <br>_(on disk but not listed in MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/toc.yaml)_ | no artefact anchor; no agreed page; 0 child page(s) |
 | 18 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Capability-Operations.page.md` | 3 | 0 | 23 | 4 own page | own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md (its host has no menu entry) <br>_(on disk but not listed in MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/toc.yaml)_ | no artefact anchor; no agreed page; 0 child page(s) |
 | 19 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Capability-REST.page.md` | 3 | 0 | 23 | 4 own page | own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md (its host has no menu entry) <br>_(on disk but not listed in MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/toc.yaml)_ | no artefact anchor; no agreed page; 0 child page(s) |
 | 20 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Capability-Search.page.md` | 3 | 0 | 25 | 4 own page | own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md (its host has no menu entry) <br>_(on disk but not listed in MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/toc.yaml)_ | no artefact anchor; no agreed page; 0 child page(s) |
 | 21 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Index.page.md` | 4 | 7 | 23 | 2 section on index page | h3/h4 section on profiles.md <br>_(folder landing page - NOT matched against the target's index.md or an artefact id; routed by its own children)_ | 7 children, 7 anchoring distinct artefacts (StructureDefinition) |
-| 22 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Allgemeine-Kultur.page.md` | 4 | 0 | 80 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-allgemeine-kultur-intro.md | compact match on mii-pr-mikrobio-allgemeine-kultur (9 candidate artefacts) |
-| 23 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Spezifische-Kultur.page.md` | 4 | 0 | 145 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-spezifische-kultur-intro.md | compact match on mii-pr-mikrobio-spezifische-kultur (10 candidate artefacts) |
-| 24 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Mikroskopie.page.md` | 4 | 0 | 74 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-mikroskopie-intro.md | compact match on mii-pr-mikrobio-mikroskopie (1 candidate artefact) |
-| 25 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Barlett-Score.page.md` | 4 | 0 | 73 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-barlett-score-intro.md | compact match on mii-pr-mikrobio-barlett-score (3 candidate artefacts) |
-| 26 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Nugent-Score.page.md` | 4 | 0 | 65 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-nugent-score-intro.md | compact match on mii-pr-mikrobio-nugent-score (3 candidate artefacts) |
-| 27 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Keimzahl.page.md` | 4 | 0 | 69 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-keimzahl-intro.md | compact match on mii-pr-mikrobio-keimzahl (3 candidate artefacts) |
-| 28 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Empfindlichkeit.page.md` | 4 | 0 | 116 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-empfindlichkeit-intro.md | compact match on mii-pr-mikrobio-empfindlichkeit (7 candidate artefacts) |
+| 22 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Allgemeine-Kultur.page.md` | 4 | 0 | 80 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-allgemeine-kultur-intro.md | compact match on mii-pr-mikrobio-allgemeine-kultur (9 candidate artefacts; intro note already present) |
+| 23 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Spezifische-Kultur.page.md` | 4 | 0 | 145 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-spezifische-kultur-intro.md | compact match on mii-pr-mikrobio-spezifische-kultur (10 candidate artefacts; intro note already present) |
+| 24 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Mikroskopie.page.md` | 4 | 0 | 74 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-mikroskopie-intro.md | compact match on mii-pr-mikrobio-mikroskopie (1 candidate artefact; intro note already present) |
+| 25 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Barlett-Score.page.md` | 4 | 0 | 73 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-barlett-score-intro.md | compact match on mii-pr-mikrobio-barlett-score (3 candidate artefacts; intro note already present) |
+| 26 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Nugent-Score.page.md` | 4 | 0 | 65 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-nugent-score-intro.md | compact match on mii-pr-mikrobio-nugent-score (3 candidate artefacts; intro note already present) |
+| 27 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Keimzahl.page.md` | 4 | 0 | 69 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-keimzahl-intro.md | compact match on mii-pr-mikrobio-keimzahl (3 candidate artefacts; intro note already present) |
+| 28 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Empfindlichkeit.page.md` | 4 | 0 | 116 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-empfindlichkeit-intro.md | compact match on mii-pr-mikrobio-empfindlichkeit (7 candidate artefacts; intro note already present) |
 | 29 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Index.page.md` | 4 | 3 | 11 | 2 section on index page | h3/h4 section on profiles.md <br>_(folder landing page - NOT matched against the target's index.md or an artefact id; routed by its own children)_ | 3 children, 3 anchoring distinct artefacts (StructureDefinition) |
-| 30 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Allgemeine-Bestimmung.page.md` | 4 | 0 | 168 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung-intro.md | compact match on mii-pr-mikrobio-allgemeine-bestimmung (9 candidate artefacts) |
-| 31 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Spezifische-Bestimmung.page.md` | 4 | 0 | 207 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung-intro.md | compact match on mii-pr-mikrobio-spezifische-bestimmung (10 candidate artefacts) |
-| 32 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/CT-Wert.page.md` | 4 | 0 | 66 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-ct-wert-intro.md | compact match on mii-pr-mikrobio-ct-wert (2 candidate artefacts) |
+| 30 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Allgemeine-Bestimmung.page.md` | 4 | 0 | 168 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung-intro.md | compact match on mii-pr-mikrobio-allgemeine-bestimmung (9 candidate artefacts; intro note already present) |
+| 31 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Spezifische-Bestimmung.page.md` | 4 | 0 | 207 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung-intro.md | compact match on mii-pr-mikrobio-spezifische-bestimmung (10 candidate artefacts; intro note already present) |
+| 32 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/CT-Wert.page.md` | 4 | 0 | 66 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-ct-wert-intro.md | compact match on mii-pr-mikrobio-ct-wert (2 candidate artefacts; intro note already present) |
 | 33 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Index.page.md` | 4 | 3 | 13 | 2 section on index page | h3/h4 section on profiles.md <br>_(folder landing page - NOT matched against the target's index.md or an artefact id; routed by its own children)_ | 3 children, 3 anchoring distinct artefacts (StructureDefinition) |
-| 34 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Antigen-Antikoerper-Quantitativ.page.md` | 4 | 0 | 69 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ-intro.md | compact match on mii-pr-mikrobio-antigen-antikoerper-quantitativ (4 candidate artefacts) |
-| 35 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Titer.page.md` | 4 | 0 | 147 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-titer-intro.md | compact match on mii-pr-mikrobio-titer (4 candidate artefacts) |
-| 36 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Molekulare-Pathogenlast.page.md` | 4 | 0 | 70 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast-intro.md | compact match on mii-pr-mikrobio-molekulare-pathogenlast (4 candidate artefacts) |
+| 34 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Antigen-Antikoerper-Quantitativ.page.md` | 4 | 0 | 69 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ-intro.md | compact match on mii-pr-mikrobio-antigen-antikoerper-quantitativ (4 candidate artefacts; intro note already present) |
+| 35 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Titer.page.md` | 4 | 0 | 147 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-titer-intro.md | compact match on mii-pr-mikrobio-titer (4 candidate artefacts; intro note already present) |
+| 36 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Molekulare-Pathogenlast.page.md` | 4 | 0 | 70 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast-intro.md | compact match on mii-pr-mikrobio-molekulare-pathogenlast (4 candidate artefacts; intro note already present) |
 | 37 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Index.page.md` | 4 | 6 | 20 | 2 section on index page | h3/h4 section on profiles.md <br>_(folder landing page - NOT matched against the target's index.md or an artefact id; routed by its own children)_ | 6 children, 6 anchoring distinct artefacts (StructureDefinition) |
-| 38 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Virulenzfaktor.page.md` | 4 | 0 | 64 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-virulenzfaktor-intro.md | compact match on mii-pr-mikrobio-virulenzfaktor (1 candidate artefact) |
-| 39 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzmechanismen-Determinanten.page.md` | 4 | 0 | 68 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten-intro.md | compact match on mii-pr-mikrobio-resistenzmechanismen-determinanten (3 candidate artefacts) |
-| 40 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/MRGN-Klasse.page.md` | 4 | 0 | 169 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-mrgn-klasse-intro.md | compact match on mii-pr-mikrobio-mrgn-klasse (3 candidate artefacts) |
-| 41 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Voraussichtliche-Empfindlichkeit.page.md` | 4 | 0 | 67 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit-intro.md | compact match on mii-pr-mikrobio-voraussichtliche-empfindlichkeit (7 candidate artefacts) |
-| 42 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzkategorie-Status.page.md` | 4 | 0 | 410 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status-intro.md | compact match on mii-pr-mikrobio-resistenzkategorie-status (4 candidate artefacts) |
-| 43 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Aviditaet.page.md` | 4 | 0 | 72 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-aviditaet-intro.md | compact match on mii-pr-mikrobio-aviditaet (3 candidate artefacts) |
+| 38 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Virulenzfaktor.page.md` | 4 | 0 | 64 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-virulenzfaktor-intro.md | compact match on mii-pr-mikrobio-virulenzfaktor (1 candidate artefact; intro note already present) |
+| 39 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzmechanismen-Determinanten.page.md` | 4 | 0 | 68 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten-intro.md | compact match on mii-pr-mikrobio-resistenzmechanismen-determinanten (3 candidate artefacts; intro note already present) |
+| 40 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/MRGN-Klasse.page.md` | 4 | 0 | 169 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-mrgn-klasse-intro.md | compact match on mii-pr-mikrobio-mrgn-klasse (3 candidate artefacts; intro note already present) |
+| 41 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Voraussichtliche-Empfindlichkeit.page.md` | 4 | 0 | 67 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit-intro.md | compact match on mii-pr-mikrobio-voraussichtliche-empfindlichkeit (7 candidate artefacts; intro note already present) |
+| 42 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzkategorie-Status.page.md` | 4 | 0 | 410 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status-intro.md | compact match on mii-pr-mikrobio-resistenzkategorie-status (4 candidate artefacts; intro note already present) |
+| 43 | `MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Aviditaet.page.md` | 4 | 0 | 72 | 1 intro-note | input/intro-notes/StructureDefinition-mii-pr-mikrobio-aviditaet-intro.md | compact match on mii-pr-mikrobio-aviditaet (3 candidate artefacts; intro note already present) |
 
-Branch totals: 1 intro-note = 20, 2 section on index page = 4, 3 merge into agreed page = 10, 4 own page = 9.
+Branch totals: 1 intro-note = 20, 2 section on index page = 4, 3 merge into agreed page = 12, 4 own page = 7.
 
 ## 5. Report queue 1 items
 
@@ -220,8 +225,6 @@ The menu budget forced a ToC-nesting where a menu entry was otherwise warranted.
 
 - MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Index.page.md - nested under MIIIGModulMikrobiologie/Index.page.md because that host got no menu entry of its own; giving this page one directly would put it at menu depth 3 > 2, so it only becomes visible if the human buys the host a top-level entry first.
 - MIIIGModulMikrobiologie/Technische-Implementierung/Index.page.md - nested under MIIIGModulMikrobiologie/Index.page.md because that host got no menu entry of its own; giving this page one directly would put it at menu depth 3 > 2, so it only becomes visible if the human buys the host a top-level entry first.
-- MIIIGModulMikrobiologie/Technische-Implementierung/Profilauswahl-und-Abgrenzung.page.md - nested under MIIIGModulMikrobiologie/Technische-Implementierung/Index.page.md because that host got no menu entry of its own; giving this page one directly would put it at menu depth 3 > 2, so it only becomes visible if the human buys the host a top-level entry first.
-- MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md - nested under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md because that host got no menu entry of its own; giving this page one directly would put it at menu depth 3 > 2, so it only becomes visible if the human buys the host a top-level entry first.
 - MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md - nested under MIIIGModulMikrobiologie/Technische-Implementierung/Index.page.md because that host got no menu entry of its own; giving this page one directly would put it at menu depth 3 > 2, so it only becomes visible if the human buys the host a top-level entry first.
 - MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Beschreibung.page.md - nested under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md because that host got no menu entry of its own; giving this page one directly would put it at menu depth 3 > 2, so it only becomes visible if the human buys the host a top-level entry first.
 - MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Capability-Operations.page.md - nested under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md because that host got no menu entry of its own; giving this page one directly would put it at menu depth 3 > 2, so it only becomes visible if the human buys the host a top-level entry first.
@@ -230,7 +233,7 @@ The menu budget forced a ToC-nesting where a menu entry was otherwise warranted.
 
 Size-gate trips (rule 5) needing a routing re-run or a split:
 
-- `rendering-artifacts.md` - 3933 words > 2500.
+- `changes.md` - 6416 words > 2500; 8 repeated heading title(s).
 
 ## 6. Suggested `5.4c page-routing` run-log lines
 
@@ -247,39 +250,39 @@ One per source page (union pages included), ready for the migration run log. The
 5.4c page-routing	MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Datensaetze-inkl-Beschreibungen.page.md	branch=3	logical-models.md	semantic match 'datensaetze' -> logical-models (routing-table)
 5.4c page-routing	MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/UML.page.md	branch=3	uml-diagrams.md	semantic match 'uml' -> uml-diagrams (routing-table)
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/Index.page.md	branch=4	own page (HUB), pages:-NESTED under MIIIGModulMikrobiologie/Index.page.md (its host has no menu entry)	no artefact anchor; no agreed page; 4 child page(s)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/Profilauswahl-und-Abgrenzung.page.md	branch=4	own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/Index.page.md (its host has no menu entry)	no artefact anchor; no agreed page; 0 child page(s)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/Profilauswahl-und-Abgrenzung.page.md	branch=3	profilauswahl-und-abgrenzung.md	agreed page named 'profilauswahl-und-abgrenzung' exists in the target
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/CapabilityStatement.page.md	branch=3	capability-statements.md	semantic match 'capabilitystatement' -> capability-statements (routing-table)
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/Terminologien.page.md	branch=3	code-systems.md	semantic match 'terminologien' -> code-systems (routing-table)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Diagnostic-Report.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-diagnostic-report-intro.md	compact match on mii-pr-mikrobio-diagnostic-report (1 candidate artefact)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md	branch=4	own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md (its host has no menu entry)	no artefact anchor; no agreed page; 0 child page(s)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Diagnostic-Report.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-diagnostic-report-intro.md	compact match on mii-pr-mikrobio-diagnostic-report (1 candidate artefact; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md	branch=3	probe.md	agreed page named 'probe' exists in the target
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md	branch=4	own page (HUB), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/Index.page.md (its host has no menu entry)	no artefact anchor; no agreed page; 10 child page(s)
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Beschreibung.page.md	branch=4	own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md (its host has no menu entry)	no artefact anchor; no agreed page; 0 child page(s)
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Capability-Operations.page.md	branch=4	own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md (its host has no menu entry)	no artefact anchor; no agreed page; 0 child page(s)
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Capability-REST.page.md	branch=4	own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md (its host has no menu entry)	no artefact anchor; no agreed page; 0 child page(s)
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Capability-Search.page.md	branch=4	own page (merged page), pages:-NESTED under MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md (its host has no menu entry)	no artefact anchor; no agreed page; 0 child page(s)
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Index.page.md	branch=2	h3/h4 section on profiles.md	7 children, 7 anchoring distinct artefacts (StructureDefinition)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Allgemeine-Kultur.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-allgemeine-kultur-intro.md	compact match on mii-pr-mikrobio-allgemeine-kultur (9 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Spezifische-Kultur.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-spezifische-kultur-intro.md	compact match on mii-pr-mikrobio-spezifische-kultur (10 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Mikroskopie.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-mikroskopie-intro.md	compact match on mii-pr-mikrobio-mikroskopie (1 candidate artefact)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Barlett-Score.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-barlett-score-intro.md	compact match on mii-pr-mikrobio-barlett-score (3 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Nugent-Score.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-nugent-score-intro.md	compact match on mii-pr-mikrobio-nugent-score (3 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Keimzahl.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-keimzahl-intro.md	compact match on mii-pr-mikrobio-keimzahl (3 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Empfindlichkeit.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-empfindlichkeit-intro.md	compact match on mii-pr-mikrobio-empfindlichkeit (7 candidate artefacts)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Allgemeine-Kultur.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-allgemeine-kultur-intro.md	compact match on mii-pr-mikrobio-allgemeine-kultur (9 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Spezifische-Kultur.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-spezifische-kultur-intro.md	compact match on mii-pr-mikrobio-spezifische-kultur (10 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Mikroskopie.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-mikroskopie-intro.md	compact match on mii-pr-mikrobio-mikroskopie (1 candidate artefact; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Barlett-Score.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-barlett-score-intro.md	compact match on mii-pr-mikrobio-barlett-score (3 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Nugent-Score.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-nugent-score-intro.md	compact match on mii-pr-mikrobio-nugent-score (3 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Keimzahl.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-keimzahl-intro.md	compact match on mii-pr-mikrobio-keimzahl (3 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Empfindlichkeit.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-empfindlichkeit-intro.md	compact match on mii-pr-mikrobio-empfindlichkeit (7 candidate artefacts; intro note already present)
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Index.page.md	branch=2	h3/h4 section on profiles.md	3 children, 3 anchoring distinct artefacts (StructureDefinition)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Allgemeine-Bestimmung.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung-intro.md	compact match on mii-pr-mikrobio-allgemeine-bestimmung (9 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Spezifische-Bestimmung.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung-intro.md	compact match on mii-pr-mikrobio-spezifische-bestimmung (10 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/CT-Wert.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-ct-wert-intro.md	compact match on mii-pr-mikrobio-ct-wert (2 candidate artefacts)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Allgemeine-Bestimmung.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung-intro.md	compact match on mii-pr-mikrobio-allgemeine-bestimmung (9 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Spezifische-Bestimmung.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung-intro.md	compact match on mii-pr-mikrobio-spezifische-bestimmung (10 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/CT-Wert.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-ct-wert-intro.md	compact match on mii-pr-mikrobio-ct-wert (2 candidate artefacts; intro note already present)
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Index.page.md	branch=2	h3/h4 section on profiles.md	3 children, 3 anchoring distinct artefacts (StructureDefinition)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Antigen-Antikoerper-Quantitativ.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ-intro.md	compact match on mii-pr-mikrobio-antigen-antikoerper-quantitativ (4 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Titer.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-titer-intro.md	compact match on mii-pr-mikrobio-titer (4 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Molekulare-Pathogenlast.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast-intro.md	compact match on mii-pr-mikrobio-molekulare-pathogenlast (4 candidate artefacts)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Antigen-Antikoerper-Quantitativ.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ-intro.md	compact match on mii-pr-mikrobio-antigen-antikoerper-quantitativ (4 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Titer.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-titer-intro.md	compact match on mii-pr-mikrobio-titer (4 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Molekulare-Pathogenlast.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast-intro.md	compact match on mii-pr-mikrobio-molekulare-pathogenlast (4 candidate artefacts; intro note already present)
 5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Index.page.md	branch=2	h3/h4 section on profiles.md	6 children, 6 anchoring distinct artefacts (StructureDefinition)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Virulenzfaktor.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-virulenzfaktor-intro.md	compact match on mii-pr-mikrobio-virulenzfaktor (1 candidate artefact)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzmechanismen-Determinanten.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten-intro.md	compact match on mii-pr-mikrobio-resistenzmechanismen-determinanten (3 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/MRGN-Klasse.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-mrgn-klasse-intro.md	compact match on mii-pr-mikrobio-mrgn-klasse (3 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Voraussichtliche-Empfindlichkeit.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit-intro.md	compact match on mii-pr-mikrobio-voraussichtliche-empfindlichkeit (7 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzkategorie-Status.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status-intro.md	compact match on mii-pr-mikrobio-resistenzkategorie-status (4 candidate artefacts)
-5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Aviditaet.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-aviditaet-intro.md	compact match on mii-pr-mikrobio-aviditaet (3 candidate artefacts)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Virulenzfaktor.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-virulenzfaktor-intro.md	compact match on mii-pr-mikrobio-virulenzfaktor (1 candidate artefact; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzmechanismen-Determinanten.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten-intro.md	compact match on mii-pr-mikrobio-resistenzmechanismen-determinanten (3 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/MRGN-Klasse.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-mrgn-klasse-intro.md	compact match on mii-pr-mikrobio-mrgn-klasse (3 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Voraussichtliche-Empfindlichkeit.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit-intro.md	compact match on mii-pr-mikrobio-voraussichtliche-empfindlichkeit (7 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzkategorie-Status.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status-intro.md	compact match on mii-pr-mikrobio-resistenzkategorie-status (4 candidate artefacts; intro note already present)
+5.4c page-routing	MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Aviditaet.page.md	branch=1	input/intro-notes/StructureDefinition-mii-pr-mikrobio-aviditaet-intro.md	compact match on mii-pr-mikrobio-aviditaet (3 candidate artefacts; intro note already present)
 5.4c page-routing	map rows=43 retired=0 coverage=ok	map=migration-log/page-map.tsv
 ```
 
