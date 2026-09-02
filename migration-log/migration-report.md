@@ -101,38 +101,35 @@ IG Publisher **109 errors, 573 warnings, 0 broken links** — unchanged. `P5` ID
 names the IG resource SUSHI actually writes.
 
 
-## Publication history — the one Gate-D item that needs a decision (2026-09-02)
+## Publication path — released via Simplifier for now (2026-09-02)
 
-**Correction.** An earlier note in this run called `publication-request.json`'s
-`"first": true` wrong because the FHIR registry lists fifteen published versions.
-That reasoning was wrong. `go-publish.yml` ties the flag to the **gh-pages
-publication webroot** — whether `site/package-list.json` exists — not to the
-registry. This repository's `gh-pages` holds only `.nojekyll` and `branches/`,
-so `bootstrap=true` and **`"first": true` is correct**. The workflow checks both
-directions and fails on a mismatch, so the flag cannot misconfigure silently.
+**Operator decision:** the module is released through **Simplifier** for the time being. The
+template's gh-pages publication path is therefore not exercised, and the questions it raises are
+moot until that changes.
 
-**The real question is what happens to the existing history.** The package has
-fifteen published versions up to `2027.0.0-alpha.5`, published through
-Simplifier rather than through this pipeline. Publishing with `first: true`
-seeds a **fresh** `package-list.json` beginning at `2027.0.0-alpha.6`, so those
-versions would not appear in the guide's version list.
+**Correction to an earlier note in this run.** `publication-request.json`'s `"first": true` was
+called wrong here because the FHIR registry lists fifteen published versions. That was the wrong
+test: `go-publish.yml` ties the flag to the **gh-pages publication webroot** — whether
+`site/package-list.json` exists — not to the registry. This repository's `gh-pages` holds only
+`.nojekyll` and `branches/`, so `bootstrap=true` and the flag is **correct**. The workflow checks
+both directions and fails on a mismatch, so it cannot misconfigure silently.
 
-The template states the position in `go-publish.yml`'s header: the one-time
-"import the existing publication history" machinery was **removed**, because the
-reference module's bootstrap was specific to it. The building blocks ship and
-are unit-tested — `scripts/install-history-template.mjs` and
-`scripts/merge-publication-webroot.mjs`, exercised at `go-publish.yml:431-432` —
-but they are wired into **no** publication step. Rebuilding the import is
-per-module work, modelled on `kerndatensatz-basis`.
+**Publication history — parked, not resolved.** The package has fifteen versions published through
+Simplifier up to `2027.0.0-alpha.5`. Were this pipeline ever used, publishing with `first: true`
+would seed a fresh `package-list.json` starting at `2027.0.0-alpha.6` and those versions would not
+appear in the guide's version list. The template removed the one-time history-import machinery and
+ships only the building blocks — `scripts/install-history-template.mjs` and
+`scripts/merge-publication-webroot.mjs`, unit-tested at `go-publish.yml:431-432` — wired into no
+publication step. Rebuilding that import is per-module work, modelled on `kerndatensatz-basis`.
+**Revisit this before the first formal publication through this repository, not before.**
 
-**Decision for Gate D, before the first formal publication:**
-- **import** the fifteen versions into the new webroot, wiring the two shipped
-  scripts into `go-publish.yml`; or
-- **start fresh** at `2027.0.0-alpha.6`, accepting that the guide's version
-  history begins there while the registry keeps the older packages.
-
-Nothing in this branch pre-empts either choice.
-
+**The release workflows stay in place.** `go-publish.yml` fires on `workflow_dispatch` only and
+`module-release.yml` on a `v*` CalVer tag, a published release, or dispatch, so neither can fire by
+accident. Removing them would also break the green test suite: `first-run-bootstrap.test.mjs`,
+`convention-check.test.mjs`, `publication-url-consistency.template-test.mjs` and
+`toolchain-pins.test.mjs` all reference them, as do `convention-check.mjs`, `check-updates.mjs`,
+`gen-pages-index.mjs` and three documents. Dormant costs nothing; removed costs a divergence the
+next template bump would fight.
 
 ## Summary — read this first
 
