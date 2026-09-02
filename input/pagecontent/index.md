@@ -17,12 +17,6 @@ covers the module's use cases and the associated FHIR profiles, extensions and
 terminology resources in their normative form. The MII Core Dataset enables the
 standardized secondary use of routine clinical data for medical research.
 
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Index.page.md gate=C -->
-> **Written during migration - review before release.** TODO:REVIEW - the scope text and the note
-> box below are machine translations of the German source home page; the German mirror carries the
-> original wording verbatim.
-{: .ig-highlight .ig-highlight-blue}
-
 The module describes the investigations carried out in laboratories to detect, identify and
 characterise microorganisms and their properties.
 

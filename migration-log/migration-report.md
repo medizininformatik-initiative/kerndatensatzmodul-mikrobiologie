@@ -153,8 +153,8 @@ valid. No re-measurement is needed.
 
 **The menu itself verifies clean.** `C5` reads IDENTISCH three times: all 33 entries in
 `input/includes/menu.xml` resolve to a real page, all 33 in the German mirror do too, and every one
-of the 24 narrative pages is reachable from a menu entry. The German menu differs from the default,
-so it is a real translation rather than a fallback.
+of the 24 narrative pages is reachable from a menu entry. The translated menu differs byte-wise from
+the English one, so it is a real translation rather than a fallback.
 
 The module's menu follows the approved structure, with the differences a real module is supposed to
 have: *Guidance for Researchers* and *Operations* are absent (M9 optional-page decisions, reported
@@ -398,10 +398,12 @@ content carries **no** marker.
 The full table is `migration-log/derived-table.md`, regenerated with
 `python3 .claude/skills/mii-ig-migration/scripts/derived-scan.py --target . --markdown`.
 
-- **66 `no-source` (Gate C)** — 33 page pairs. The source guide is German-only and the target
-  template renders **English by default**, so every English page is a machine translation of the
-  German source and every German mirror carries a matching marker saying so. This is the sanctioned
-  exception to "invent nothing": each translation traces to the page it renders.
+- **`no-source` (Gate C) — CLEARED 2026-09-02.** Was 66 markers on 33 page pairs. The source guide
+  is German-only and the target template renders **English by default**, so every English page is
+  machine-translated from the German wording, and each mirror carried a matching marker saying so.
+  That is the sanctioned exception to "invent nothing": every translation traces to the page it
+  renders. The operator accepted all of them on 2026-09-02; the markers and their review boxes were
+  removed, and `derived-scan` now reports `gates=A:0,B:6,C:0`. The bridge markers below stand.
 - **6 `bridge` (Gate B)** — 3 page pairs (`anwendungsfaelle-informationsmodell`,
   `technische-implementierung`, `fhir-profile`). These are Simplifier *section landing pages* whose
   children were re-routed to agreed pages; the migration wrote a short hub listing where each child

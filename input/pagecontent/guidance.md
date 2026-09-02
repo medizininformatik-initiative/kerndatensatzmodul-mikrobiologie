@@ -22,12 +22,6 @@ This section collects the domain guidance for implementing and using the
 * **[Guidance for Implementers](implementer-guidance.html)** — technical
   guidance for DIC implementers.
 
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Beschreibung-von-Szenarien-fuer-die-Anwendung-der-Module.page.md gate=C -->
-> **Written during migration - review before release.** TODO:REVIEW - this English text is a
-> machine translation of the German source page named above; the German mirror carries the
-> original wording verbatim.
-{: .ig-highlight .ig-highlight-blue}
-
 The module focuses on the detection, characterisation and description of microorganisms (e.g. bacteria, viruses, fungi, prions and protozoa). The information model allows a common and standardised description of different investigations in the form of FHIR Observations. The goal is to cover the most common microbiological laboratory procedures.
 
 Susceptibility test results can be reported according to the definitions of the European Committee on Antimicrobial Susceptibility Testing ([EUCAST](https://www.eucast.org/ "EUCAST")) as well as those of the Clinical & Laboratory Standards Institute ([CLSI](https://clsi.org/ "CLSI")). Relevant results can be reported in a dedicated DiagnosticReport for microbiology studies.

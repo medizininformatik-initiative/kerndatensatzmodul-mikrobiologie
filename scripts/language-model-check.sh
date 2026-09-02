@@ -49,7 +49,20 @@ PATTERNS=(
 # Reviewed exceptions: "<path>|<substring of the offending line>", one per line.
 # A module author writing their own prose can record a legitimate hit here
 # without blanking a whole file from the scan.
-ALLOW=''
+# Zwei geprüfte Ausnahmen, beide in `migration-log/run.log` (2026-09-02).
+#
+# Keine behauptet ein deutsch-defaultes Modell; beide HALTEN FEST, was ein Lauf
+# gemessen hat — einmal die Normalisierung von Quellprosa, einmal die Korrektur
+# deutscher Displays auf einem englisch-defaulten IG.
+#
+# Warum hier und nicht im Text behoben: `run.log` ist append-only und wird von
+# Schritt 7b als zweites Orakel gegen den Baum gelesen. Eine Zeile nachträglich
+# umzuschreiben, damit eine Prüfung grün wird, würde genau die Eigenschaft
+# zerstören, für die es das Log gibt. Die zwei früheren Treffer im
+# Migrationsreport waren dagegen eigene Prosa und wurden umformuliert statt
+# freigestellt.
+ALLOW='migration-log/run.log|the domain-list bullets had been normalised
+migration-log/run.log|German displays on an English-default IG'
 
 args=()
 for pattern in "${PATTERNS[@]}"; do

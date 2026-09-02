@@ -1,11 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Index.page.md gate=C -->
-> **Während der Migration geschrieben — vor der Veröffentlichung prüfen.** TODO:REVIEW — die
-> englische Standardfassung dieser Seite ist eine Maschinenübersetzung dieses deutschen Textes.
-> Diese deutsche Fassung trägt den Originalwortlaut der Simplifier-Quellseite; zu prüfen ist die
-> englische Entsprechung (Gate C).
-{: .ig-highlight .ig-highlight-blue}
-
 <!--
   HOME PAGE — GERMAN TRANSLATION of the source page input/pagecontent/index.md
   (English is the IG's default language). The structure follows the standard MII

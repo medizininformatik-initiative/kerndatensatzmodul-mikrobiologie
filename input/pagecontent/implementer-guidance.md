@@ -4,12 +4,6 @@
 
 Technical guidance for DIC implementers on implementing the profiles of the **Microbiology** module (ETL from primary systems, FHIR API, validation).
 
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Kontext-im-Gesamtprojekt-Bezuege-zu-anderen-Modulen.page.md gate=C -->
-> **Written during migration - review before release.** TODO:REVIEW - this English text is a
-> machine translation of the German source page named above; the German mirror carries the
-> original wording verbatim.
-{: .ig-highlight .ig-highlight-blue}
-
 ### Context within the overall project - relations to other modules
 
 This KDS module is closely related to the [KDS module Laboratory report](https://simplifier.net/medizininformatikinitiative-modullabor "KDS module Laboratory report"), although all Observations and DiagnosticReports are specific to microbiology.

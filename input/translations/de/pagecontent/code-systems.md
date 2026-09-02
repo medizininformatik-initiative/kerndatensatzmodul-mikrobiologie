@@ -1,11 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Technische-Implementierung/Terminologien.page.md gate=C -->
-> **Während der Migration geschrieben — vor der Veröffentlichung prüfen.** TODO:REVIEW — die
-> englische Standardfassung dieser Seite ist eine Maschinenübersetzung dieses deutschen Textes.
-> Diese deutsche Fassung trägt den Originalwortlaut der Simplifier-Quellseite; zu prüfen ist die
-> englische Entsprechung (Gate C).
-{: .ig-highlight .ig-highlight-blue}
-
 <!-- Deutsche Übersetzung von input/pagecontent/code-systems.md (aufgeteilt aus
      der früheren Seite terminology.md gemäß der TF-KDS-abgestimmten Menüstruktur).
      Der IG-Publisher listet die CodeSystems auf den Artefakt-Seiten

@@ -1,11 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Changelog.page.md gate=C -->
-> **Während der Migration geschrieben — vor der Veröffentlichung prüfen.** TODO:REVIEW — die
-> englische Standardfassung dieser Seite ist eine Maschinenübersetzung dieses deutschen Textes.
-> Diese deutsche Fassung trägt den Originalwortlaut der Simplifier-Quellseite; zu prüfen ist die
-> englische Entsprechung (Gate C).
-{: .ig-highlight .ig-highlight-blue}
-
 <!-- Deutsche Übersetzung der Standardsprachseite input/pagecontent/changes.md
      — beide Dateien müssen dasselbe aussagen. Struktur aus kerndatensatz-basis
      input/pagecontent/changes.md (Branch main) — ein Abschnitt je Version,

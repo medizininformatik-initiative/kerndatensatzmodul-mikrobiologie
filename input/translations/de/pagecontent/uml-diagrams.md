@@ -1,12 +1,5 @@
 <!-- markdownlint-disable MD041 -->
 
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/UML.page.md gate=C -->
-> **Während der Migration geschrieben — vor der Veröffentlichung prüfen.** TODO:REVIEW — die
-> englische Standardfassung dieser Seite ist eine Maschinenübersetzung dieses deutschen Textes.
-> Diese deutsche Fassung trägt den Originalwortlaut der Simplifier-Quellseite; zu prüfen ist die
-> englische Entsprechung (Gate C).
-{: .ig-highlight .ig-highlight-blue}
-
 UML-Übersichten der Datenmodelle des Moduls **Mikrobiologie** und ihrer Beziehungen. Editierbare Quellen (z. B. PlantUML) gehören nach `input/images-source/`, die gerenderten Bilder nach `input/images/`.
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/UML.page.md  -->

@@ -11,12 +11,6 @@ your module's profiles (naming convention `MII_PR_<Module>_<Name>`, see the
 conventions). The module's extensions are listed on the
 [Extensions](extensions.html) page.
 
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Index.page.md gate=C -->
-> **Written during migration - review before release.** TODO:REVIEW - this English text is a
-> machine translation of the German source page named above; the German mirror carries the
-> original wording verbatim.
-{: .ig-highlight .ig-highlight-blue}
-
 The 2027 modelling uses standalone Observation profiles instead of `component` representations. The profiles are grouped into four families; the modelling notes are on [FHIR Profiles - Modelling Notes](fhir-profile.html), the delimitation between them on [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html).
 
 ### Culture
