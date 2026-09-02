@@ -90,26 +90,13 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
   "title" : "MII LM Mikrobio Befund",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T12:45:31+00:00",
-  "publisher" : "NUM-DIZ",
-  "_publisher" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "de"
-      },
-      {
-        "url" : "content",
-        "valueString" : "NUM-DIZ"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
+  "date" : "2026-09-02T21:03:23+00:00",
+  "publisher" : "Medizininformatik Initiative",
   "contact" : [{
-    "name" : "NUM-DIZ",
+    "name" : "Medizininformatik Initiative",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+      "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
   "description" : "Logical Model des mikrobiologischen Befunds für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE]",

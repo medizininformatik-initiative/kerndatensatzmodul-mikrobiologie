@@ -28,25 +28,12 @@ Suchparameter für die Normkategorie der Empfindlichkeitsextension
   "status" : "active",
   "experimental" : false,
   "date" : "2026-04-02",
-  "publisher" : "NUM-DIZ",
-  "_publisher" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "de"
-      },
-      {
-        "url" : "content",
-        "valueString" : "NUM-DIZ"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
+  "publisher" : "Medizininformatik Initiative",
   "contact" : [{
-    "name" : "NUM-DIZ",
+    "name" : "Medizininformatik Initiative",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+      "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
   "description" : "Suchparameter für die Normkategorie der Empfindlichkeitsextension",

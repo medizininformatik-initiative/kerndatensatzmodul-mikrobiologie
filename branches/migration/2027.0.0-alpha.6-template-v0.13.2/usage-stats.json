@@ -137,26 +137,38 @@
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy": [
       "Observation"
     ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-author": [
+      "StructureDefinition"
+    ],
     "http://hl7.org/fhir/StructureDefinition/artifact-editor": [
-      "ImplementationGuide"
+      "ImplementationGuide",
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-endorser": [
-      "ImplementationGuide"
+      "ImplementationGuide",
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-purpose": [
       "ImplementationGuide"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-reviewer": [
-      "ImplementationGuide"
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-topic": [
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-usage": [
-      "ImplementationGuide"
+      "ImplementationGuide",
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm": [
-      "ImplementationGuide"
+      "ImplementationGuide",
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy": [
-      "ImplementationGuide"
+      "ImplementationGuide",
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
       "CapabilityStatement.rest.resource"
@@ -165,7 +177,8 @@
       "ImplementationGuide"
     ],
     "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability": [
-      "ImplementationGuide"
+      "ImplementationGuide",
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
@@ -194,8 +207,15 @@
     "http://hl7.org/fhir/StructureDefinition/regex": [
       "StructureDefinition.snapshot.element.type"
     ],
+    "http://hl7.org/fhir/StructureDefinition/resource-approvalDate": [
+      "StructureDefinition"
+    ],
     "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod": [
-      "ImplementationGuide"
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/resource-lastReviewDate": [
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
@@ -213,17 +233,12 @@
       "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/translation": [
-      "CapabilityStatement.publisher",
-      "CodeSystem.publisher",
       "ImplementationGuide.definition.page.page.page.title",
       "ImplementationGuide.definition.page.page.title",
       "ImplementationGuide.definition.page.title",
-      "ImplementationGuide.publisher",
-      "SearchParameter.publisher",
-      "StructureDefinition.publisher",
+      "StructureDefinition.snapshot.element.binding.description",
       "StructureDefinition.snapshot.element.definition",
-      "StructureDefinition.snapshot.element.short",
-      "ValueSet.publisher"
+      "StructureDefinition.snapshot.element.short"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters": [
       "ImplementationGuide.definition"

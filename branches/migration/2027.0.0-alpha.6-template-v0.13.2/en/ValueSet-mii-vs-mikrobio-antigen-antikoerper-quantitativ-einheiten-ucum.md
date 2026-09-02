@@ -41,26 +41,13 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T12:45:31+00:00",
-  "publisher" : "NUM-DIZ",
-  "_publisher" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "de"
-      },
-      {
-        "url" : "content",
-        "valueString" : "NUM-DIZ"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
+  "date" : "2026-09-02T21:03:23+00:00",
+  "publisher" : "Medizininformatik Initiative",
   "contact" : [{
-    "name" : "NUM-DIZ",
+    "name" : "Medizininformatik Initiative",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+      "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
   "jurisdiction" : [{

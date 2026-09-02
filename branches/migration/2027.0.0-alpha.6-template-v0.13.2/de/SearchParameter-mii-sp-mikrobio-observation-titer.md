@@ -27,26 +27,13 @@ Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-We
   "name" : "MII_SP_Mikrobio_Observation_Titer",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T12:45:31+00:00",
-  "publisher" : "NUM-DIZ",
-  "_publisher" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "de"
-      },
-      {
-        "url" : "content",
-        "valueString" : "NUM-DIZ"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
+  "date" : "2026-09-02T21:03:23+00:00",
+  "publisher" : "Medizininformatik Initiative",
   "contact" : [{
-    "name" : "NUM-DIZ",
+    "name" : "Medizininformatik Initiative",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+      "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
   "description" : "Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-Werts von MII_PR_Mikrobio_Titer; der Zaehler ist dort fest 1. Ein groesserer Nenner bedeutet einen hoeheren Titer, z. B. findet ?titer=gt160 alle Titer oberhalb von 1:160.",

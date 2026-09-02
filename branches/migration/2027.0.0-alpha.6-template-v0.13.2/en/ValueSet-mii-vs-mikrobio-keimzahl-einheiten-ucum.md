@@ -42,25 +42,12 @@ No Expansion for this valueset (Unsupported Code System Version)
   "status" : "active",
   "experimental" : false,
   "date" : "2023-03-02T00:00:00Z",
-  "publisher" : "NUM-DIZ",
-  "_publisher" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "de"
-      },
-      {
-        "url" : "content",
-        "valueString" : "NUM-DIZ"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
+  "publisher" : "Medizininformatik Initiative",
   "contact" : [{
-    "name" : "NUM-DIZ",
+    "name" : "Medizininformatik Initiative",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+      "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
   "jurisdiction" : [{

@@ -18,7 +18,7 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
 
 **status**: Final
 
-**category**: Laboratory studies (set)
+**category**: Laboratory, Mikrobiologie
 
 **code**: Vancomycin resistant enterococcus [Presence] in Specimen
 
@@ -59,23 +59,20 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
   "status" : "final",
   "category" : [{
     "coding" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
-      "code" : "MB"
-    },
-    {
-      "system" : "http://loinc.org",
-      "code" : "26436-6",
-      "display" : "Laboratory studies (set)"
-    },
-    {
       "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
       "code" : "laboratory",
       "display" : "Laboratory"
     },
     {
       "system" : "http://loinc.org",
-      "code" : "18725-2",
-      "display" : "Microbiology studies (set)"
+      "code" : "26436-6",
+      "display" : "Laboratory studies (set)"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code" : "MB"
     }]
   }],
   "code" : {

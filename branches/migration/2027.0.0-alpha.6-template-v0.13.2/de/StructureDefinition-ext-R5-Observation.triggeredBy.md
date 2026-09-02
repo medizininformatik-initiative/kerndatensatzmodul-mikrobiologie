@@ -88,26 +88,13 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-ext-R5-Obser
   "title" : "R5: Triggering observation(s) (new)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T12:45:31+00:00",
-  "publisher" : "NUM-DIZ",
-  "_publisher" : {
-    "extension" : [{
-      "extension" : [{
-        "url" : "lang",
-        "valueCode" : "de"
-      },
-      {
-        "url" : "content",
-        "valueString" : "NUM-DIZ"
-      }],
-      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-    }]
-  },
+  "date" : "2026-09-02T21:03:23+00:00",
+  "publisher" : "Medizininformatik Initiative",
   "contact" : [{
-    "name" : "NUM-DIZ",
+    "name" : "Medizininformatik Initiative",
     "telecom" : [{
       "system" : "url",
-      "value" : "https://www.netzwerk-universitaetsmedizin.de"
+      "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
   "description" : "R5: `Observation.triggeredBy` (new:BackboneElement)",

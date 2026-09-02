@@ -304,38 +304,41 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#kultur" id="markdown-toc-kultur">Kultur</a></li>
+  <li><a href="#bestimmung" id="markdown-toc-bestimmung">Bestimmung</a></li>
+  <li><a href="#quantitative-tests" id="markdown-toc-quantitative-tests">Quantitative Tests</a></li>
+  <li><a href="#weitere-eigenschaften" id="markdown-toc-weitere-eigenschaften">Weitere Eigenschaften</a></li>
+</ul>
+
 </div>
-
-<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
-
-Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde.  Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie <a href="translationinfo.html">hier</a>.
-
-</p>
-
 <!-- markdownlint-disable MD041 -->
 <!-- Deutsche Übersetzung von input/pagecontent/profiles.md (aufgeteilt aus der
      früheren Kombi-Seite profiles-and-extensions.md gemäß der abgestimmten
      TF-KDS-Menüstruktur — eine Seite je Artefakt-Typ). -->
-<p>Diese Seite listet die FHIR-Profile des Moduls <strong>Mikrobiologie</strong>. Als
-Ausgangspunkt liefert die Vorlage ein minimales Beispielprofil,
-die unten aufgeführten Profile — ersetzen Sie es
-durch die Profile Ihres Moduls (Namenskonvention <code class="language-plaintext highlighter-rouge">MII_PR_&lt;Modul&gt;_&lt;Name&gt;</code>, siehe
-<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/recipes/add-a-profile.md"><code class="language-plaintext highlighter-rouge">docs/recipes/add-a-profile.md</code></a> in diesem Repository sowie die
-MII-Namenskonventionen). Die Extensions des Moduls stehen auf der Seite
-<a href="extensions.html">Extensions</a>.</p>
+<p>Diese Seite listet die FHIR-Profile des Moduls <strong>Mikrobiologie</strong>. Sie folgen der
+MII-Namenskonvention <code class="language-plaintext highlighter-rouge">MII_PR_&lt;Modul&gt;_&lt;Name&gt;</code>. Die Extensions des Moduls stehen
+auf der Seite <a href="extensions.html">Extensions</a>.</p>
+
+<p>Die 2027er Modellierung verwendet eigenständige Observation-Profile statt <code class="language-plaintext highlighter-rouge">component</code>-Abbildungen. Die Profile sind in vier Familien gegliedert; die Modellierungshinweise stehen auf <a href="fhir-profile.html">FHIR-Profile – Modellierungshinweise</a>, die Abgrenzung zwischen ihnen auf <a href="profilauswahl-und-abgrenzung.html">Profilauswahl und Abgrenzung</a>.</p>
+
+<h3 id="kultur">Kultur</h3>
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Index.page.md  -->
 <p>In diesem Abschnitt werden kulturbezogene Beobachtungen dargestellt (allgemein, Mikroskopie inkl. Barlett-/Nugent-Score, Keimzahl, Empfindlichkeit).</p>
 
-<p>Die neue 2027-Modellierung verwendet eigenständige Observation-Profile statt <code class="language-plaintext highlighter-rouge">component</code>-Abbildungen.</p>
+<h3 id="bestimmung">Bestimmung</h3>
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Index.page.md  -->
 <p>In diesem Abschnitt werden Bestimmungs-Beobachtungen beschrieben (allgemeine/spezifische Bestimmung, Ct-Wert).</p>
 
+<h3 id="quantitative-tests">Quantitative Tests</h3>
+
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Index.page.md  -->
 <p>In diesem Abschnitt werden quantitative Tests beschrieben (Antigen/Antikoerper, Titer, molekulare Pathogenlast).</p>
+
+<h3 id="weitere-eigenschaften">Weitere Eigenschaften</h3>
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Index.page.md  -->
 <p>In diesem Abschnitt werden weitere Eigenschaften als eigenständige Observationen beschrieben (Virulenz, Resistenzmechanismus, MRGN, voraussichtliche Empfindlichkeit, MRE Klasse, Aviditaet).</p>
@@ -363,9 +366,9 @@ MII-Namenskonventionen). Die Extensions des Moduls stehen auf der Seite
 
 
 
-          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de">NUM-DIZ</a>.  
+          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 12:45+0000">2026-09-02</span>
+          Erstellt <span title="Wed, Sep 2, 2026 21:03+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
