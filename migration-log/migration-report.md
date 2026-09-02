@@ -101,6 +101,31 @@ IG Publisher **109 errors, 573 warnings, 0 broken links** — unchanged. `P5` ID
 names the IG resource SUSHI actually writes.
 
 
+## Menu and page set — untouched by run 2, and that is correct (2026-09-02)
+
+The template's menu was substantially rebuilt — `feat(pages): implement the approved MII module
+menu structure (#94)`, plus visible optional tags and two routing fixes for *Datasets and
+Descriptions*. All of it, down to the last menu commit `6712a02a`, is contained in
+`v0.10.3 … v0.11.1`, so **run 1 already carried it**. Between `v0.11.1` and `v0.13.2`,
+**0 of 62 changed files touch `input/`**: the template page set and both `menu.xml` files are
+byte-identical across those six releases. Run 2 therefore changed nothing here, and nothing was
+missed.
+
+**This also resolves `C5-2d86b5` (NICHT PRÜFBAR).** The verifier could not tell whether
+`references/template-pages.tsv`, measured at `v0.11.1`, still describes a module on `v0.13.2`. The
+measurement above answers it: the template's `input/` tree did not move, so the manifest remains
+valid. No re-measurement is needed.
+
+**The menu itself verifies clean.** `C5` reads IDENTISCH three times: all 33 entries in
+`input/includes/menu.xml` resolve to a real page, all 33 in the German mirror do too, and every one
+of the 24 narrative pages is reachable from a menu entry. The German menu differs from the default,
+so it is a real translation rather than a fallback.
+
+The module's menu follows the approved structure, with the differences a real module is supposed to
+have: *Guidance for Researchers* and *Operations* are absent (M9 optional-page decisions, reported
+`none undecided`), the `(optional)` tags are resolved because the module actually ships those
+artefact classes, and *Examples* and *Technical Implementation* are the module's own entries.
+
 ## Publication path — released via Simplifier for now (2026-09-02)
 
 **Operator decision:** the module is released through **Simplifier** for the time being. The
