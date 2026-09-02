@@ -18,7 +18,7 @@ build on earlier ones.
 | **SUSHI** | The tool that compiles **FSH** into FHIR JSON resources. Runs before the IG Publisher. |
 | **FSH (FHIR Shorthand)** | A concise text language for authoring profiles/extensions/value sets, compiled by SUSHI. Files end in `.fsh`. |
 | **Template** | A bundle of layout, HTML/Liquid fragments, CSS and scripts that decides how an IG *looks*. Applied by the IG Publisher. |
-| **Template package** | A template shipped as an installable FHIR package (id ending in `.template`). The MII one is `de.medizininformatikinitiative.template`; a module built from this scaffold consumes it — first vendored in `ig-template/`, later as a pinned package. |
+| **Template package** | A template shipped as an installable FHIR package (id ending in `.template`). The MII one is `de.medizininformatikinitiative.template`; a module built from this scaffold consumes it — today by repository URL (with the vendored copy in `ig-template/` as offline fallback), later as a pinned published package. |
 | **IG vs template** | The IG is *what* is documented (the profiles + narrative); the template is *how* it is presented (branding + layout). One template serves many IGs. |
 | **Package vs template package** | A normal FHIR *package* ships conformance resources (profiles, value sets). A *template package* ships presentation (layout, CSS) and has an id ending in `.template`. |
 | **Base template** | The template the MII template is derived from: [`fhir2.base.template`](https://github.com/HL7/ig-template-base2). A module never references it directly — a newer base arrives with a newer MII template pin. |

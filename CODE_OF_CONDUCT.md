@@ -5,10 +5,10 @@
 > the [KDS governance](https://www.medizininformatik-initiative.de/en/medical-informatics-initiatives-core-data-set),
 > not in the [meta wiki](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki),
 > and not as an organisation-level default. This file is therefore **this
-> prototype repository's own house rule**, adopted because a public repository
-> benefits from having one. It is not an MII policy and does not preview one;
-> what applies once these repositories move to the MII organisation is for the
-> MII Taskforce Kerndatensatz to decide.
+> repository's own house rule**, adopted because a public repository benefits
+> from having one. It is not an MII policy and does not preview one; whether an
+> organisation-wide policy replaces it is for the MII Taskforce Kerndatensatz
+> to decide.
 
 
 ## Our Pledge
@@ -47,7 +47,7 @@ This Code of Conduct applies within all community spaces, and also applies when 
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the repository maintainers. While these repositories are prototypes they have **no published enforcement contact**: no individual is named here, because no individual speaks for the MII, and reports must not be routed to the MII Geschäftsstelle, which does not own these repositories. Until an owning organisation and its contact are settled (see [issue #143](../../issues/143)), report through GitHub — open a private security advisory on the repository, or use GitHub's own [report abuse](https://github.com/contact/report-abuse) route. All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the **owning organisation's coordination office** (the ownership handover is recorded in [docs/org-move.md](docs/org-move.md); contact data researched 2026-08-28): until 2026-12-31 the MII — Koordinationsstelle der Medizininformatik-Initiative at TMF e.V., <info@medizininformatik-initiative.de>; from 2027-01-01 NUM — NUM-Koordinierungsstelle at Charité – Universitätsmedizin Berlin, <forschungsnetzwerk-unimedizin@charite.de>. To report anonymously, or outside the owning organisation, GitHub's own [report abuse](https://github.com/contact/report-abuse) route remains available. All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 

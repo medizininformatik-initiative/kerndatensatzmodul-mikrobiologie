@@ -120,7 +120,11 @@ copyrightYear: "2026+"
 releaseLabel: 2026.0.0-alpha.6
 # MIGRATION (spec §2.2): the source declares NO licence anywhere — no LICENSE
 # file, no `license:`, no package-manifest field. This is the TEMPLATE DEFAULT,
-# confirmed as the intended value at Gate A on 2026-08-25, not a carried value.
+# confirmed as the intended value at Gate A on 2026-08-25, not a carried value,
+# and re-confirmed by the operator on 2026-09-02 during the v0.13.2 re-migration.
+# Since skill v0.24.0 the LICENSE FILE is reconciled against this field
+# mechanically: `license-align` exits 0 ("already aligned"), so the CC-BY-4.0
+# text in LICENSE is an asserted decision, not an unexamined template artefact.
 license: CC-BY-4.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # Must equal the publication date; go-publish.yml validates this.
 # MIGRATION: {{RELEASE_DATE}} has NO value in the source and none may be

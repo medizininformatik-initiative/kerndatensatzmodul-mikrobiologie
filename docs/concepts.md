@@ -15,19 +15,34 @@ MII-branded FHIR Implementation Guide.
 > point (CI, release automation, docs, an example profile) that you then own,
 > instead of assembling it from scratch.
 
-## 2. How it references the MII template — vendored vs published
+## 2. How it references the MII template — URL now, published package later
 
 The **look** of the IG comes from a separate template package,
-[`de.medizininformatikinitiative.template`](https://github.com/forschungsgruppe-digital-health/ig-template-mii-kds)
-This scaffold references it in `ig.ini`:
+[`de.medizininformatikinitiative.template`](https://github.com/medizininformatik-initiative/ig-template-mii-kds)
+This scaffold references it in `ig.ini`, in one of three forms (decision
+2026-08-28):
 
-- **Vendored (bring-up):** a copy lives in `ig-template/`, referenced as
-  `template = #ig-template`. Used until the template package has a published release.
-- **Published (normal):** `template = de.medizininformatikinitiative.template#<version>`.
-  Switch with [recipes/switch-template-to-published.md](recipes/switch-template-to-published.md).
+- **Interim URL (the default today):**
+  `template = https://github.com/medizininformatik-initiative/ig-template-mii-kds`.
+  The IG Publisher fetches the repository zip at build time — the default
+  branch, i.e. the released state on `main`. Nothing vendored can go stale;
+  the trade is that a build needs network access and follows `main` rather
+  than a pinned version.
+- **Vendored (offline / reproducibility fallback):** a copy lives in
+  `ig-template/`, referenced as `template = #ig-template`, kept in sync from
+  the companion repository's `dev` branch by the `sync-ig-template` workflow.
+  Use it when a build must run offline or byte-stable against a committed copy.
+- **Published (the endgame):** `template = de.medizininformatikinitiative.template#<version>`
+  — a pinned `id#version` resolves through the FHIR package server only, so
+  this waits on the publication decision ([#1](../../../issues/1),
+  [#2](../../../issues/2)). Switch with
+  [recipes/switch-template-to-published.md](recipes/switch-template-to-published.md);
+  the vendored folder and the sync machinery dissolve then.
 
-> **Why vendored first:** the template package has no registry entry yet. Vendoring
-> keeps the module buildable today; the switch is one line later.
+> **Why the URL now:** the package has no registry entry yet, and a vendored
+> copy that builds never exercise goes stale invisibly. The URL keeps every
+> build on the template's released state; the published pin later restores
+> byte-stable rebuilds.
 
 ## 3. The metadata contract (CRMI)
 

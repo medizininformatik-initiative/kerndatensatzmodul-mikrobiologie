@@ -35,7 +35,9 @@ function fixture() {
       "",
     ].join("\n"),
   );
-  writeFileSync(join(root, "ig.ini"), "[IG]\nig = fsh-generated/resources/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.json\ntemplate = #ig-template\n");
+  // The template line mirrors the real ig.ini's URL default; the script must
+  // leave it untouched either way (URL default or the #ig-template fallback).
+  writeFileSync(join(root, "ig.ini"), "[IG]\nig = fsh-generated/resources/ImplementationGuide-mii-ig-{{MODULE_SLUG}}.json\ntemplate = https://github.com/medizininformatik-initiative/ig-template-mii-kds\n");
   mkdirSync(join(root, "input", "translations", "de", "pagecontent"), { recursive: true });
   mkdirSync(join(root, "input", "pagecontent"), { recursive: true });
   writeFileSync(join(root, "input", "index.md"), "Version {{CALVER_VERSION}}, year {{CALVER_YEAR}}.\n");

@@ -1536,3 +1536,18 @@
     branch=migration/2027.0.0-alpha.6-template-v0.11.1 remote=origin commits=11 base_convention=main (the repository default branch; the last 8 merged PRs all target main)
     PR link offered by the remote: https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/pull/new/migration/2027.0.0-alpha.6-template-v0.11.1
     GATE D NOTE for whoever opens it: main IS this repository's publication branch, so merging is itself a publication step. Nothing was published by this run -- no release, no registry entry, no package push.
+2026-09-02T08:24:32Z  INFO   log  run-boundary  ===== run 2 starts  run=2 label=re-migration — scaffold v0.11.1(legacy vendored) -> v0.13.2(URL ref, new org), skill v0.23.0 -> v0.25.0 cwd=/Users/patrickwerner/IdeaProjects/kerndatensatzmodul-mikrobiologie log=migration-log/run.log
+    Every line below belongs to run 2; the lines above are earlier invocations.
+    Per-step raw logs (migration-log/<ACTION>.log) hold THIS run only -- `run`
+    truncates each one and rolls the previous attempt over to <ACTION>.prev.log.
+2026-09-02T08:24:32Z  INFO   3  remigration-state  ig.ini template=#ig-template form=legacy-vendored-hash-prefix
+2026-09-02T08:26:29Z  INFO   5.2  skeleton-vendored  ref=v0.13.2 commit=a2390dea3eacf8139b2231713510f38fa558dad5 repo=medizininformatik-initiative/mii-kds-module-template
+2026-09-02T08:26:29Z  INFO   5.2  template-reference  url=https://github.com/medizininformatik-initiative/ig-template-mii-kds release=v1.3.4
+2026-09-02T08:28:41Z  INFO   5.2  license-align  start  cmd=`python3 .claude/skills/mii-ig-migration/scripts/license-align.py --source /private/tmp/claude-501/-Users-patrickwerner-IdeaProjects-kerndatensatzmodul-mikrobiologie/1f63fc89-43bf-460e-a95f-ff084271dc39/scratchpad/src-main --target . --declared CC-BY-4.0`  raw_log=migration-log/license-align.log
+2026-09-02T08:28:41Z  INFO   5.2  license-align  params  source=/private/tmp/claude-501/-Users-patrickwerner-IdeaProjects-kerndatensatzmodul-mikrobiologie/1f63fc89-43bf-460e-a95f-ff084271dc39/scratchpad/src-main target=/Users/patrickwerner/IdeaProjects/kerndatensatzmodul-mikrobiologie
+2026-09-02T08:28:41Z  INFO   5.2  license-align  result  already aligned: the target LICENSE reads as the declared CC-BY-4.0  exit=0
+2026-09-02T08:28:41Z  INFO   5.2  license-align  done  cmd=`python3 .claude/skills/mii-ig-migration/scripts/license-align.py --source /private/tmp/claude-501/-Users-patrickwerner-IdeaProjects-kerndatensatzmodul-mikrobiologie/1f63fc89-43bf-460e-a95f-ff084271dc39/scratchpad/src-main --target . --declared CC-BY-4.0`  exit=0 raw_log=migration-log/license-align.log raw_log_lines=2
+2026-09-02T08:29:10Z  INFO   7  sushi-verify  start  cmd=`npx --yes fsh-sushi@3.20.0 .`  raw_log=migration-log/sushi-verify.log prev_raw_log=migration-log/sushi-verify.prev.log
+2026-09-02T08:29:22Z  INFO   7  sushi-verify  done  cmd=`npx --yes fsh-sushi@3.20.0 .`  exit=0 raw_log=migration-log/sushi-verify.log raw_log_lines=53
+2026-09-02T08:30:22Z  INFO   5.2  convention-check  M6 FAIL->PASS via template v0.13.2 (CalVer prerelease); M5 PASS; M2/M3 FAIL PRE-EXISTING (id/name vs template pattern) -- source wins per guardrail 1, Gate A item
+2026-09-02T08:30:22Z  INFO   5.2  devendor  removed ig-template/(42) + sync-ig-template machinery(3) + skills vendoring(4) + catalog skill copies; ig.ini -> repository URL

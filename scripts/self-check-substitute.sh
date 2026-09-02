@@ -8,7 +8,7 @@
 #   a documented scaffold; it is therefore not buildable as-is. The substitution
 #   used to live inline in .github/workflows/ig-publisher.yml. A SECOND build
 #   workflow now needs exactly the same substitution — release-demo.yml, which
-#   renders the demo the Pages landing page advertises. Two copies of an
+#   renders the demo the Pages root index advertises. Two copies of an
 #   80-line table is how the two builds silently drift apart, which is the
 #   class of bug release-demo.yml exists to end. So the table lives here, once,
 #   and both workflows call this script.
@@ -114,7 +114,8 @@ subst() { # $1=file  (stdin: KEY|VALUE lines)
 
 # sushi-config.yaml + ig.ini (ig.ini's `ig =` line references
 # ImplementationGuide-mii-ig-{{MODULE_SLUG}}.json; the `template =` line is left
-# untouched — it already points at the vendored ig-template/).
+# untouched — it already names a buildable template: the repository-URL default,
+# or the vendored ig-template/ fallback).
 subst sushi-config.yaml < "${placeholders}"
 subst ig.ini < "${placeholders}"
 

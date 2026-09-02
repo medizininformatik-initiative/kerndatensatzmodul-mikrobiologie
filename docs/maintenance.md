@@ -22,7 +22,7 @@ reports the module's drift without any adaptation.
 | Layer | What it watches | When | Where results land | Switch |
 |---|---|---|---|---|
 | **A — Dependabot** (`.github/dependabot.yml`) | GitHub Actions pins; a root npm manifest (when present); dev container **feature** versions (`devcontainers` ecosystem — the dev container is image-only, so there is no Dockerfile for the `docker` ecosystem to read) | weekly, Monday | update PRs targeting `dev`; Dependabot alerts under **Security → Dependabot** | config-file presence + repo Dependabot settings (no `vars.*` toggle — Dependabot is not a gated job) |
-| **B — Version checker** (`.github/workflows/dependency-check.yml` + `scripts/check-updates.mjs`) | `de.medizininformatikinitiative.template` (from `ig.ini`), `fhir2.base.template` (transitive; local only when vendored), IG Publisher, SUSHI, Jekyll (from the build workflow env), the FHIR package dependencies (from `sushi-config.yaml`), the org skill catalog the vendored `skills/` come from (from `skills-lock.json`) | Monday 06:00 UTC + manual dispatch | one continuously-updated tracking issue **"Dependency status \<YYYYWww\>"** (label `dependencies`) + a `drift-report` workflow artifact | `vars.ENABLE_DEPENDENCY_CHECK` (ON by default) |
+| **B — Version checker** (`.github/workflows/dependency-check.yml` + `scripts/check-updates.mjs`) | `de.medizininformatikinitiative.template` (from `ig.ini`), `fhir2.base.template` (transitive; local only when vendored), IG Publisher, SUSHI, Jekyll (from the build workflow env), the FHIR package dependencies (from `sushi-config.yaml`) | Monday 06:00 UTC + manual dispatch | one continuously-updated tracking issue **"Dependency status \<YYYYWww\>"** (label `dependencies`) + a `drift-report` workflow artifact | `vars.ENABLE_DEPENDENCY_CHECK` (ON by default) |
 | **C — Security scan** (`.github/workflows/security-scan.yml`) | known vulnerabilities (OSV database), misconfigurations, committed secrets — via OSV-Scanner + Trivy `fs`; plus Trivy `image` over the dev container's digest-pinned base image (OS/base-image vulnerabilities the other scans miss) | Monday 07:00 UTC + every PR to `dev` + manual dispatch | **Security → Code scanning** (SARIF categories `osv-scanner`, `trivy-fs`, `trivy-image`) | `vars.ENABLE_SECURITY_SCAN` (ON by default) |
 
 A disabled workflow still triggers but its jobs show as **skipped** — that is
@@ -35,11 +35,9 @@ in sync:
 
 | Pin | Location |
 |---|---|
-| `de.medizininformatikinitiative.template` | `ig.ini` → `template = de.medizininformatikinitiative.template#<version>`; when moving off a vendored copy, follow [`recipes/switch-template-to-published.md`](recipes/switch-template-to-published.md) |
-| `fhir2.base.template` | inside the template package (transitive) — locally only in a vendored bring-up copy (`ig-template/package/package.json`) |
+| `de.medizininformatikinitiative.template` | `ig.ini` → the `template =` line. Today it is the interim repository URL (follows the template's released `main` — no version pin; the checker reports it as unpinned); the endgame is `template = de.medizininformatikinitiative.template#<version>` once published — follow [`recipes/switch-template-to-published.md`](recipes/switch-template-to-published.md) |
+| `fhir2.base.template` | inside the template package (transitive) — locally only in the vendored fallback copy (`ig-template/package/package.json`) |
 | FHIR package dependencies (`de.basisprofil.r4`, `de.medizininformatikinitiative.kerndatensatz.meta`, `hl7.fhir.uv.crmi`, `hl7.fhir.uv.xver-r5.r4`, …) | `sushi-config.yaml` → `dependencies:` block |
-| The org skill catalog (`forschungsgruppe-digital-health/agent-skills`), whose skills are vendored into `skills/` | `skills-lock.json` → `skills.<name>.ref`, written by the catalog's own installer. Bump with `scripts/sync-skills.sh --ref vX.Y.Z` (re-vendors `skills/` and rewrites the lock in one diff). **Pin the `/tree/<ref>` form** — `owner/repo@<tag>` does not pin, `@` introduces a skill *name* there. `scripts/vendored-skills.test.mjs` fails the build if the lock pins a branch, if a pinned skill is not on disk, or if a documented install command names a different ref |
-| The skill installer CLI (`npx skills@<version>`) | `scripts/sync-skills.sh` → `SKILLS_CLI`. Unpinned, a new CLI release could change the vendored bytes and fail the drift check for a reason unrelated to the catalog. **Not watched by the checker** — bump it by hand when the drift check reports a change no catalog release explains |
 | IG Publisher / SUSHI / Jekyll | `env:` values (`PUBLISHER_VERSION`, `PUBLISHER_SHA256`, `SUSHI_VERSION`, `JEKYLL_VERSION`) in each build workflow — `ig-publisher.yml`, `module-release.yml`, `go-publish.yml` and (template repo only) `release-demo.yml`. A workflow cannot read another workflow's `env:`, so the four blocks are copies and must stay identical — `scripts/toolchain-pins.test.mjs` fails the build if they drift. The checker reads `go-publish.yml`. **Also sweep the copy-paste block in `docs/recipes/first-build-in-devcontainer.md`** (publisher URL + jar SHA + expected `sushi --version` output) — it is covered by no test and has gone stale before |
 | Jekyll gem checksum | `go-publish.yml` → `JEKYLL_GEM_SHA256` (**only** there — the release path verifies the gem bytes). **Covered by no test and not watched by the checker**: a Jekyll bump that updates the four `JEKYLL_VERSION` blocks but not this checksum passes every test and then fails `go-publish` at its `gem fetch … sha256sum --check` step. Recompute with `gem fetch jekyll -v <version> && sha256sum jekyll-<version>.gem` |
 | Ruby (for Jekyll) | `ruby-version: "3.3"` in the `ruby/setup-ruby` steps of `ig-publisher.yml`, `module-release.yml` and (template repo only) `release-demo.yml`; `go-publish.yml` deliberately uses the runner's system Ruby. CI floats the patch level on purpose; the dev container exact-pins (see the dev-container row) |
@@ -49,7 +47,7 @@ in sync:
 | Publication support repos (`HL7/fhir-ig-history-template`, `HL7/fhir-web-templates`) | commit-SHA `ref:` pins in `go-publish.yml` **only** (the two checkout steps). **Not watched by the checker** — re-resolve by hand when preparing a release; the comment at each pin records the last resolution date |
 | SU-TermServ proxy: the `medizininformatik-initiative/kerndatensatz-meta` `nginx.conf` ref **and** the nginx proxy image digest | commit-SHA / digest pins in all three build workflows — `ig-publisher.yml`, `module-release.yml`, `go-publish.yml`. Keep the three identical, for the same reason as the toolchain pins above; nothing cross-checks these. **Not watched by the checker** — re-resolve all three by hand when preparing a release |
 | MII reusable validation workflows (`kerndatensatz-meta/.github/workflows/ci_dotnet_validation.yml`, `ci_java_validation.yml`) | `uses: …@<commit-SHA>` in `validation.yml`. **Not watched by the checker** — re-resolve by hand; the trailing comment records the last resolution date |
-| Dev container (base-image digest, feature versions, SUSHI/Jekyll installs) | `.devcontainer/devcontainer.json` — features come as Dependabot PRs; the image digest and the `postCreateCommand` tool pins are bumped manually. **Kept pin-for-pin identical (same image digest and tool pins; the `name` field and comments differ) to the dev container in [`ig-template-mii-kds`](https://github.com/forschungsgruppe-digital-health/ig-template-mii-kds)** — the template package and the modules built from it must agree on the toolchain, so bump both repos in the same sweep; drifted pins mean a module builds in one environment and fails in the other |
+| Dev container (base-image digest, feature versions, SUSHI/Jekyll installs) | `.devcontainer/devcontainer.json` — features come as Dependabot PRs; the image digest and the `postCreateCommand` tool pins are bumped manually. **Kept pin-for-pin identical (same image digest and tool pins; the `name` field and comments differ) to the dev container in [`ig-template-mii-kds`](https://github.com/medizininformatik-initiative/ig-template-mii-kds)** — the template package and the modules built from it must agree on the toolchain, so bump both repos in the same sweep; drifted pins mean a module builds in one environment and fails in the other |
 
 Until a pin's file lands, the tracking issue shows a `pin not found` row — a
 reminder, not an error. Two more expected row states:
@@ -168,11 +166,10 @@ rather than assumed.
 - **The IG statistics report's German prose is no longer this repository's task.**
   The tool that writes it (`scripts/ig-stats.py`) and the skill that owned it
   (`skills/ig-analyze`) moved to the organization's skill catalog as
-  `fhir-ig-analysis` — see [`../skills/RETIRED.md`](../skills/RETIRED.md). A pinned
-  copy is vendored back into
-  [`../skills/fhir-ig-analysis/`](../skills/fhir-ig-analysis/SKILL.md) so the skill
-  stays invocable here, but its content is maintained in the catalog. The two
-  items recorded here (report prose still German while every document here is
+  `fhir-ig-analysis` — see [`../skills/RETIRED.md`](../skills/RETIRED.md). This
+  repository keeps no copy (the vendored copy left on 2026-08-28); the skill is
+  installed from the catalog when needed and its content is maintained there. The
+  two items recorded here (report prose still German while every document here is
   English-source, and `recommendations` rows still framed as a migration) belong
   to that skill now and were carried over with it; track them there, not here.
 - **Two pins in `validation.yml` are not watched by any layer.** The
@@ -188,7 +185,7 @@ rather than assumed.
 This repository and the IG template share a number of documentation filenames —
 compare them with `comm -12` over `git ls-files docs` in both checkouts. That was
 once real duplication; it is not any more. **No shared file is identical**, and the
-closest pairs differ for good reasons — `project-status.md` because each names
+closest pairs differ for good reasons — `org-move.md` because each names
 the other repository, `glossary.md` because this scaffold defines nine terms the
 template repository has no use for, `further-reading.md` because Release Please
 is a template-repo entry a module must not follow.

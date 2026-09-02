@@ -11,7 +11,6 @@ import {
   parseWorkflowEnvPin,
   parseSushiDependencies,
   parseIgIniTemplate,
-  parseSkillsLockRef,
   mergeWatchedDeps,
   latestFromPackageList,
   resolveTemplateLatest,
@@ -136,11 +135,24 @@ test("parseIgIniTemplate reads a pinned template reference", () => {
 });
 
 test("parseIgIniTemplate returns version null for the vendored path form", () => {
-  // bring-up fallback per docs/recipes/switch-template-to-published.md
+  // offline fallback per docs/recipes/switch-template-to-published.md
   assert.deepEqual(parseIgIniTemplate("[IG]\ntemplate = ig-template\n"), {
     id: "ig-template",
     version: null,
   });
+});
+
+test("parseIgIniTemplate returns version null for the interim URL form", () => {
+  // the default since 2026-08-28: the publisher fetches the repository zip of
+  // the released default branch at build time (docs/concepts.md section 2) —
+  // no version pin, so the dependency row reports it as not-a-pin.
+  assert.deepEqual(
+    parseIgIniTemplate("[IG]\ntemplate = https://github.com/medizininformatik-initiative/ig-template-mii-kds\n"),
+    {
+      id: "https://github.com/medizininformatik-initiative/ig-template-mii-kds",
+      version: null,
+    },
+  );
 });
 
 test("parseIgIniTemplate keeps floating labels visible (not silently ok)", () => {
@@ -153,56 +165,6 @@ test("parseIgIniTemplate skips INI comments and handles absence", () => {
   assert.equal(parseIgIniTemplate(ini), null);
   assert.equal(parseIgIniTemplate("[IG]\nig = x\n"), null);
   assert.equal(parseIgIniTemplate(null), null);
-});
-
-// --- parseSkillsLockRef -----------------------------------------------------
-
-// Shape mirrors the real skills-lock.json written by `npx skills add` (verified
-// against forschungsgruppe-digital-health/agent-skills@v0.12.0).
-const SKILLS_LOCK = JSON.stringify({
-  version: 1,
-  skills: {
-    "fhir-ig-analysis": {
-      source: "forschungsgruppe-digital-health/agent-skills",
-      ref: "v0.12.0",
-      sourceType: "github",
-      skillPath: "skills/fhir-ig-analysis/SKILL.md",
-      computedHash: "7228e9a7",
-    },
-    "fhir-ig-translation": {
-      source: "forschungsgruppe-digital-health/agent-skills",
-      ref: "v0.12.0",
-      sourceType: "github",
-      skillPath: "skills/fhir-ig-translation/SKILL.md",
-      computedHash: "8bb2ec02",
-    },
-  },
-});
-
-test("parseSkillsLockRef reads the pinned catalog ref", () => {
-  assert.equal(
-    parseSkillsLockRef(SKILLS_LOCK, "forschungsgruppe-digital-health/agent-skills"),
-    "v0.12.0",
-  );
-});
-
-test("parseSkillsLockRef ignores entries from another source", () => {
-  assert.equal(parseSkillsLockRef(SKILLS_LOCK, "someone-else/skills"), null);
-});
-
-test("parseSkillsLockRef refuses a lock that pins two refs at once", () => {
-  const mixed = JSON.parse(SKILLS_LOCK);
-  mixed.skills["fhir-ig-translation"].ref = "v0.11.0";
-  assert.equal(
-    parseSkillsLockRef(JSON.stringify(mixed), "forschungsgruppe-digital-health/agent-skills"),
-    null,
-  );
-});
-
-test("parseSkillsLockRef tolerates broken or empty input", () => {
-  assert.equal(parseSkillsLockRef("not json", "x/y"), null);
-  assert.equal(parseSkillsLockRef("{}", "x/y"), null);
-  assert.equal(parseSkillsLockRef('{"skills":{}}', "x/y"), null);
 });
 
 // --- mergeWatchedDeps -------------------------------------------------------

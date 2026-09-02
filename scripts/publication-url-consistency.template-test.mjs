@@ -97,17 +97,29 @@ test("does not copy the basis special-url list", () => {
   assert.match(sushiConfig, /docs\/recipes\/regenerate-special-url\.md/);
 });
 
-test("points ig.ini at the SUSHI-generated IG and the vendored template", () => {
+test("points ig.ini at the SUSHI-generated IG and the interim template URL", () => {
   const igIni = read("ig.ini");
 
   assert.match(
     igIni,
     /^ig = fsh-generated\/resources\/ImplementationGuide-mii-ig-\{\{MODULE_SLUG\}\}\.json$/m,
   );
-  // `#ig-template` = the vendored local template folder, kept in step by
-  // sync-ig-template.yml. Swapped for the published package once it exists
+  // The template reference has three sanctioned forms (decision 2026-08-28,
+  // docs/concepts.md section 2): the INTERIM repository URL (the default — the
+  // publisher fetches the released `main` at build time), the vendored
+  // offline/reproducibility fallback `#ig-template` (kept in step by
+  // sync-ig-template.yml), and the published package pin once it exists
   // (docs/recipes/switch-template-to-published.md).
-  assert.match(igIni, /^template = #ig-template$/m);
+  assert.match(
+    igIni,
+    /^template = https:\/\/github\.com\/medizininformatik-initiative\/ig-template-mii-kds$/m,
+  );
+  // The vendored fallback must stay real while the URL is the default: the
+  // folder `#ig-template` would resolve to still carries the template package.
+  assert.ok(
+    readdirSync(new URL("ig-template/package/", `file://${repository}/`)).length > 0,
+    "ig-template/ (the offline fallback) is missing its package content",
+  );
 });
 
 test("keeps publication locations separate from the FHIR canonical in go-publish", () => {

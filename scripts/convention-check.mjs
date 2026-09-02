@@ -41,8 +41,15 @@ export function readTopLevel(yaml, key) {
   const m = yaml.match(re);
   if (!m) return null;
   let v = m[1].trim();
-  if ((v.startsWith('"') && v.endsWith('"')) || (v.startsWith("'") && v.endsWith("'"))) {
-    return v.slice(1, -1);
+  // A quoted value ends at its MATCHING quote, and whatever follows - a
+  // trailing comment included - is not part of it. The earlier order
+  // (quote-strip only when the whole string ends in a quote, comment-strip
+  // after) made `title: "MII X" # comment` keep its quotes and fail M4
+  // spuriously, while a ` #` INSIDE the quotes must survive.
+  const q = v[0];
+  if (q === '"' || q === "'") {
+    const end = v.indexOf(q, 1);
+    if (end > 0) return v.slice(1, end);
   }
   const c = v.search(/\s+#/);
   if (c >= 0) v = v.slice(0, c).trim();
@@ -155,12 +162,36 @@ export function evaluate({ sushiConfig = null, igIni = null, packageJson = null,
       return { ok: true, parameterized: isPlaceholder(v) };
     });
 
-    field("M5 canonical", readTopLevel(sushiConfig, "canonical"), (v) =>
-      checkPrefixed(v, "https://www.medizininformatik-initiative.de/fhir/", "[a-z0-9-]"));
+    // M5 — the MII canonical universe has THREE spaces, not one (measured
+    // across the medizininformatik-initiative kerndatensatz repositories,
+    // 2026-08-27): `/fhir/ext/<module>` ×14 (Erweiterungsmodule — patho,
+    // onko, biobank, …), `/fhir/core/<module>` ×7 (labor, diagnose, fall,
+    // medikation, …) and bare `/fhir/<module>` ×5 (base, meta, mikrobio,
+    // studie, symptom). A canonical is IMMUTABLE — every profile URL hangs
+    // off it — so this check accepts every space published modules already
+    // use rather than demanding a breaking rename (raised by the Pathologie
+    // module team). Which space a NEW module should choose is TF-KDS
+    // governance, not this check's business.
+    field("M5 canonical", readTopLevel(sushiConfig, "canonical"), (v) => {
+      const prefix = "https://www.medizininformatik-initiative.de/fhir/";
+      let value = v;
+      for (const space of ["ext/", "core/"]) {
+        if (v.startsWith(prefix + space)) {
+          value = prefix + v.slice(prefix.length + space.length);
+          break;
+        }
+      }
+      const result = checkPrefixed(value, prefix, "[a-z0-9-]");
+      if (!result.ok && result.reason && !result.reason.startsWith("must start")) {
+        result.reason +=
+          " (allowed canonical spaces: …/fhir/<module>, …/fhir/ext/<module>, …/fhir/core/<module>)";
+      }
+      return result;
+    });
 
     field("M6 version", readTopLevel(sushiConfig, "version"), (v) => {
       if (isPlaceholder(v)) return { ok: true, parameterized: true };
-      return { ok: /^\d{4}\.\d+\.\d+$/.test(v), parameterized: false, reason: "version must be CalVer YYYY.n.n (modules never use SemVer)" };
+      return { ok: /^\d{4}\.\d+\.\d+(-[0-9A-Za-z.-]+)?$/.test(v), parameterized: false, reason: "version must be CalVer YYYY.n.n with an optional prerelease suffix, e.g. 2027.0.0-draft.1 (modules never use SemVer)" };
     });
 
     // M7 — no floating label anywhere (always hard, both branches).

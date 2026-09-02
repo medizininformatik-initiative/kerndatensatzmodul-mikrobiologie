@@ -37,12 +37,11 @@ list — not a glob, because this directory now holds unrelated helpers too.
 | `check-updates.mjs` | Reports drift between the pinned toolchain and what upstream released | `dependency-check.yml` |
 | `sync-ig-template.sh` | Re-vendors `ig-template/`, or fails on drift (`--check`) | `sync-ig-template.yml` |
 | `resolve-ig-template-source.sh` | Resolves which template repository the sync reads from, and whether it is reachable | `sync-ig-template.yml` (both jobs, before the sync step) |
-| `sync-skills.sh` | Re-vendors the org-catalog skills into `skills/` at the ref pinned in `skills-lock.json`, or fails on drift (`--check`); `--probe` reports whether the catalog is reachable; `--ref vX.Y.Z` bumps the pin | `sync-skills.yml` (both jobs), and a maintainer for a pin bump |
 | `gen-rendering-demo.py` | Regenerates the demonstration page in both languages from `demo-en.md` / `demo-de.md` + `rendering-demo-codes.json` — run `python3 scripts/gen-rendering-demo.py .` after editing either source; never hand-edit the generated pages | a maintainer, after editing the demo sources |
 | `set-su-termserv-secrets.sh` | Validates an SU-TermServ client certificate and uploads it as repository secrets | a maintainer, once |
 | `seed-comparison-cache.sh` | Places the previous release's `package.tgz` (a GitHub Release asset) into `~/.fhir/packages` so the publisher's `version-comparison` can load it; no-op while the parameter is commented out | `ig-publisher.yml`, `module-release.yml`, `go-publish.yml`, `release-demo.yml` (before the publisher) |
 | `self-check-substitute.sh` | **Template repo only.** The single source of truth for the self-check placeholder values; substitutes them into workspace copies of `sushi-config.yaml`, `ig.ini` and `input/**` — contents *and* file names. With `SELF_CHECK_RELEASE_TAG=vX.Y.Z` the demo IG's CalVer is derived from the tag instead of the fixed draft value, and the value it wrote is reported as `demo_version` | `ig-publisher.yml` (preview), `release-demo.yml` (released demo) |
-| `update-demo-links.mjs` | **Template repo only.** Conservatively repoints the hand-authored `gh-pages/index.html` at a newly released demo; `--check` dry-runs it and prints the before/after diff | `release-demo.yml`, and manually |
+| `gen-pages-index.mjs` | **Template repo only.** Generates the `gh-pages` ROOT `index.html` — a plain autoindex-style listing of `branches/dev/` and the latest `demo/<tag>/` (only what exists in the checkout; older demos and other previews stay deployed but deliberately unlisted). Replaced `update-demo-links.mjs`, the conservative repointer of the retired hand-authored landing page | `release-demo.yml`, `ig-publisher.yml` (template repo only), and manually |
 
 ## Moved out of this directory
 
@@ -50,12 +49,10 @@ list — not a glob, because this directory now holds unrelated helpers too.
 Both skills moved to the organization's skill catalog and took their scripts with them, so the
 tooling now ships *inside* the skill instead of being reached by parent traversal out of
 `skills/…` into here. They are `fhir-ig-analysis` and `fhir-ig-translation` in
-[`agent-skills`](https://github.com/forschungsgruppe-digital-health/agent-skills), vendored back
-into this repository at a pinned ref — so the tooling is still on disk, now as
-[`../skills/fhir-ig-analysis/scripts/ig-stats.py`](../skills/fhir-ig-analysis/SKILL.md) and
-[`../skills/fhir-ig-translation/scripts/ig-translate.sh`](../skills/fhir-ig-translation/SKILL.md),
-maintained in the catalog and refreshed by `sync-skills.sh`. See
-[`../skills/README.md`](../skills/README.md). No workflow invoked either script.
+[`agent-skills`](https://github.com/forschungsgruppe-digital-health/agent-skills); this repository
+keeps no copies of them (the vendored copies left on 2026-08-28) — install from the catalog when
+needed. See [`../skills/README.md`](../skills/README.md) and
+[`../skills/RETIRED.md`](../skills/RETIRED.md). No workflow invoked either script.
 
 ## Tests
 

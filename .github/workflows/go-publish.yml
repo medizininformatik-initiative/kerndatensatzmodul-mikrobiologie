@@ -65,8 +65,8 @@
 #   on the first push) and the CI preview advertised as `ci-build` in
 #   publication-request.json has been deployed.
 #
-# Placeholders to replace when creating a module: mikrobio,
-#   medizininformatik-initiative, kerndatensatzmodul-mikrobiologie (see sushi-config.yaml for the full table).
+# Placeholders to replace when creating a module: {{MODULE_SLUG}},
+#   {{GITHUB_ORG}}, {{REPO_NAME}} (see sushi-config.yaml for the full table).
 # =============================================================================
 name: Publish release with IG Publisher
 
@@ -76,7 +76,7 @@ on:
       release_ref:
         description: "Immutable release tag to publish"
         required: true
-        default: "v2027.0.0-alpha.6"
+        default: "v{{CALVER_VERSION}}"
         type: string
       publication_date:
         description: "Publication date (YYYY-MM-DD, must match sushi-config.yaml); blank uses the tagged commit date"
@@ -99,11 +99,11 @@ concurrency:
 env:
   # The module's FHIR canonical (MII convention — for example,
   # kerndatensatz-basis uses .../fhir/modul-base).
-  EXPECTED_CANONICAL: "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio"
+  EXPECTED_CANONICAL: "https://www.medizininformatik-initiative.de/fhir/modul-{{MODULE_SLUG}}"
   # The publication website: GitHub Pages under the creating org. Deliberately
   # different from the canonical ("canonical-mismatch").
-  EXPECTED_PUBLICATION_BASE: "https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie"
-  EXPECTED_PACKAGE_ID: "de.medizininformatikinitiative.kerndatensatz.mikrobiologie"
+  EXPECTED_PUBLICATION_BASE: "https://{{GITHUB_ORG}}.github.io/{{REPO_NAME}}"
+  EXPECTED_PACKAGE_ID: "de.medizininformatikinitiative.kerndatensatz.{{MODULE_SLUG}}"
   # Pinned toolchain (bumped by the scheduled dependency check, never floating).
   # Must stay identical to ig-publisher.yml and module-release.yml —
   # scripts/toolchain-pins.test.mjs fails the build if they drift apart.

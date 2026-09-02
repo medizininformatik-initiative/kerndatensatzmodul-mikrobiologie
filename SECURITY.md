@@ -8,23 +8,23 @@ tab and choose **Report a vulnerability**.
 
 Do **not** open a public issue for a security problem.
 
-> **No absolute link on purpose.** These repositories are moving to the
-> `medizininformatik-initiative` organisation. A hard-coded advisory URL sends
-> reports to whichever copy the link names — which, while the move is in
-> progress, may be an empty repository nobody is watching. A vulnerability
-> report that goes somewhere unread is worse than an inconvenient one. Navigate
-> from the repository you actually found the problem in.
-
 > **Why private reporting:** a public issue discloses the problem before a fix
 > exists. GitHub's private vulnerability reporting keeps the report between
 > you and the maintainers until a fix is released, and is enabled for this
 > repository.
 
-If you cannot use GitHub, report through the organisation that owns the
-repository. These repositories are prototypes and have no published security
-contact of their own yet — one is set when they move to the
-medizininformatik-initiative organisation (tracked in [issue #143](../../issues/143)).
-Please do not open a public issue for a vulnerability in the meantime.
+If you cannot use GitHub, report to the owning organisation's coordination
+office (the ownership handover is recorded in
+[docs/org-move.md](docs/org-move.md); contact data researched 2026-08-28):
+
+- **Until 2026-12-31 — the MII:** Koordinationsstelle der
+  Medizininformatik-Initiative at TMF e.V., Charlottenstr. 42, 10117 Berlin —
+  <info@medizininformatik-initiative.de>, +49 30 2200247-0.
+- **From 2027-01-01 — NUM-DIZ:** NUM-Koordinierungsstelle at Charité – (head: Ralf Heyder; NUM-DIZ project coordination: Annalena Herzog)
+  Universitätsmedizin Berlin, Luisenstraße 13, 10117 Berlin —
+  <forschungsnetzwerk-unimedizin@charite.de>.
+
+Please do not open a public issue for a vulnerability in either case.
 
 ## Scope
 

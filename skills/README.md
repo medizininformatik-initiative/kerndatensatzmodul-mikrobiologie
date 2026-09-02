@@ -4,7 +4,9 @@ One folder per skill, instructions in `SKILL.md` ([agent-skills
 format](https://agentskills.io)). `.claude/skills` and `.agents/skills` are relative symlinks to
 this directory, so every agent runtime reads the identical content.
 
-Two kinds of skill share this directory. The difference decides **where a fix goes**.
+Every skill in this directory is **written here** — this repository is its source of truth.
+Skills that belong to the org catalog are not kept as copies here; install them from the catalog
+(see below).
 
 ## Written here — this repository is their source of truth
 
@@ -16,41 +18,31 @@ Two kinds of skill share this directory. The difference decides **where a fix go
 Edit these here. Report-only by design: they propose, a human decides, and any change lands as a
 pull request targeting `dev`.
 
-## Vendored from the org catalog — pinned copies, do not edit
+## From the org catalog — install, do not copy
 
-| Skill | What it does | Upstream |
+The IG-measuring and IG-translation skills belong to the organization's skill catalog,
+[`agent-skills`](https://github.com/forschungsgruppe-digital-health/agent-skills), which is their
+single source of truth:
+
+| Task | Catalog skill | Was |
 | --- | --- | --- |
-| [`fhir-ig-analysis/`](fhir-ig-analysis/SKILL.md) | Measures and compares Implementation Guides read-only — scope, complexity, hygiene, duplication, maturity. Was `skills/ig-analyze` + `scripts/ig-stats.py`. | [`agent-skills`](https://github.com/forschungsgruppe-digital-health/agent-skills) |
-| [`fhir-ig-translation/`](fhir-ig-translation/SKILL.md) | Sets up a guide's translation supplements — translate from the default language or harvest a published rendering. Was `skills/ig-translate` + `scripts/ig-translate.sh`. | [`agent-skills`](https://github.com/forschungsgruppe-digital-health/agent-skills) |
+| Measure / compare Implementation Guides (read-only statistics, hygiene, maturity) | `fhir-ig-analysis` | `skills/ig-analyze` + `scripts/ig-stats.py` |
+| Produce a guide's translation supplements (translate or harvest) | `fhir-ig-translation` | `skills/ig-translate` + `scripts/ig-translate.sh` |
+| Migrate a Simplifier/Forge-published KDS module onto this scaffold | `mii-ig-migration` | never local |
 
-These are **copies**, vendored at a pinned ref. Editing one here is drift: the next pull request
-fails the check. Fix them in the catalog, cut a catalog release, then bump the pin here.
-
-| | |
-| --- | --- |
-| The pin | [`../skills-lock.json`](../skills-lock.json) — `ref` per skill, written by the catalog's own installer |
-| Refresh / verify | `scripts/sync-skills.sh` · `scripts/sync-skills.sh --check` (fails on drift) |
-| CI | [`sync-skills.yml`](../.github/workflows/sync-skills.yml) — drift check on every pull request, weekly repair PR |
-| Bump the pin | `scripts/sync-skills.sh --ref vX.Y.Z`, one reviewable diff; the weekly dependency check proposes it |
-
-**Why vendored rather than only documented:** "Use this template" copies tracked files and fetches
-nothing, and an agent can only invoke a skill that is present on disk. A pointer alone would remove
-the capability from every module created from this template.
-
-`mii-ig-migration` is in the catalog and deliberately **not** vendored here: it runs against a guide
-*before* it lives on this scaffold — in the migrator's own checkout, not in a module.
-
-## Installing catalog skills elsewhere
+This repository keeps **no copies** of them (vendored copies existed until 2026-08-28 — see
+[`RETIRED.md`](RETIRED.md)). Install from the catalog at a pinned release when you need one:
 
 ```bash
-CATALOG=https://github.com/forschungsgruppe-digital-health/agent-skills/tree/v0.15.1
-npx skills add "$CATALOG" --list
-npx skills add "$CATALOG" --skill mii-ig-migration --agent claude-code codex --global --yes
+npx skills add forschungsgruppe-digital-health/agent-skills/tree/<release> --skill fhir-ig-analysis fhir-ig-translation --copy
 ```
 
 Pin with the `/tree/<ref>` form — `owner/repo@v0.15.1` does *not* pin: in that CLI `@` introduces a
-skill *name*, and the install silently comes from the default branch. Inside this checkout use
-`scripts/sync-skills.sh` instead, which runs the same installer at the pinned ref with `--copy`.
+skill *name*, and the install silently comes from the default branch. All consumption paths are in
+the catalog's
+[`docs/consuming-skills.md`](https://github.com/forschungsgruppe-digital-health/agent-skills/blob/main/docs/consuming-skills.md).
+Inside this checkout, remember `.claude/skills` and `.agents/skills` are symlinks to `skills/`, so
+an install lands in `skills/` — installed catalog skills are working copies, not tracked content.
 
 ## Skills never install other skills
 
