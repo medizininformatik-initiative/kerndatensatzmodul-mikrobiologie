@@ -78,13 +78,17 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-ext-R5-Obser
 {
   "resourceType" : "StructureDefinition",
   "id" : "ext-R5-Observation.triggeredBy",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "fhir"
+  }],
   "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy",
   "version" : "2027.0.0-alpha.6",
   "name" : "ExtensionObservation_TriggeredBy",
   "title" : "R5: Triggering observation(s) (new)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T10:49:18+00:00",
+  "date" : "2026-09-02T11:53:33+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{

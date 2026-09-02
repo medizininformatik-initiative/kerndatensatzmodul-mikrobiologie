@@ -29,12 +29,6 @@ Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio
   * **Value**: Organism growth
   * **Flags**: Final
 
--------
-
-Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)
-
--------
-
 
 
 ## Resource Content
@@ -46,14 +40,6 @@ Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid
   "meta" : {
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"]
   },
-  "contained" : [{
-    "resourceType" : "Patient",
-    "id" : "mii-exa-mikrobio-patient-inline",
-    "identifier" : [{
-      "system" : "https://example.org/fhir/sid/test-patient",
-      "value" : "111"
-    }]
-  }],
   "identifier" : [{
     "type" : {
       "coding" : [{
@@ -69,7 +55,17 @@ Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid
     }
   }],
   "basedOn" : [{
-    "reference" : "ServiceRequest/111"
+    "identifier" : {
+      "type" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+          "code" : "PLAC",
+          "display" : "Placer Identifier"
+        }]
+      },
+      "system" : "https://example.org/fhir/sid/test-anforderung",
+      "value" : "111"
+    }
   }],
   "status" : "final",
   "category" : [{
@@ -106,7 +102,7 @@ Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid
     }]
   },
   "subject" : {
-    "reference" : "#mii-exa-mikrobio-patient-inline"
+    "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
   "issued" : "2026-04-02T10:30:00+01:00",

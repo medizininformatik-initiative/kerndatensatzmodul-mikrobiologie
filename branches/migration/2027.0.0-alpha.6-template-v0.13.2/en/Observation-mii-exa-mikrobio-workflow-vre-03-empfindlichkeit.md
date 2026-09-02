@@ -26,7 +26,7 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
 
 **code**: Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Patient/example)
+**subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-03 14:00:00+0100
 
@@ -34,7 +34,7 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
 
 **interpretation**: Resistant
 
-**specimen**: [Specimen/example](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Specimen/example)
+**specimen**: [Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100](Specimen-mii-exa-mikrobio-probe.md)
 
 
 
@@ -103,7 +103,7 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
     }]
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-03T14:00:00+01:00",
   "valueQuantity" : {
@@ -130,7 +130,7 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
     }]
   }],
   "specimen" : {
-    "reference" : "Specimen/example"
+    "reference" : "Specimen/mii-exa-mikrobio-probe"
   }
 }
 

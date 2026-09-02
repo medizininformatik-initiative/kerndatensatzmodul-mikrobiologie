@@ -70,7 +70,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
   "title" : "MII PR Mikrobio MRGN Klasse",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T10:49:18+00:00",
+  "date" : "2026-09-02T11:53:33+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{

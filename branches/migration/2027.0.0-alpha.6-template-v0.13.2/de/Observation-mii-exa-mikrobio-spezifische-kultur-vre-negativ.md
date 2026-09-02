@@ -22,7 +22,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
 
 **code**: Vancomycin resistant enterococcus [Presence] in Specimen by Organism specific culture
 
-**subject**: [Patient/example](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Patient/example)
+**subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
 
@@ -30,7 +30,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
 
 **method**: Organism specific culture
 
-**specimen**: [Specimen/example](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Specimen/example)
+**specimen**: [Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100](Specimen-mii-exa-mikrobio-probe.md)
 
 
 
@@ -86,7 +86,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
     }]
   },
   "subject" : {
-    "reference" : "Patient/example"
+    "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
   "valueCodeableConcept" : {
@@ -104,7 +104,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
     }]
   },
   "specimen" : {
-    "reference" : "Specimen/example"
+    "reference" : "Specimen/mii-exa-mikrobio-probe"
   }
 }
 

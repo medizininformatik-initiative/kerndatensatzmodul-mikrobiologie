@@ -138,6 +138,8 @@ These are example instances that show what data produced and consumed by systems
 | | |
 | :--- | :--- |
 | [ MII EXA Mikrobio MRGN Klasse negativ  ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.md) | Identifiziertes gramnegatives Isolat, dessen Empfindlichkeitsbefunde bewertet wurden und das keiner MRGN-Klasse zuzuordnen ist. |
+| [ MII EXA Mikrobio Patient  ](Patient-mii-exa-mikrobio-patient.md) | Minimales Subject für die Beispiele dieses Moduls. Kein Profil, keine Demografie — Patient wird vom Personen-Modul verantwortet. |
+| [ MII EXA Mikrobio Probe  ](Specimen-mii-exa-mikrobio-probe.md) | Generisches Probenmaterial für die Beispiele dieses Moduls. Der Typ ist bewusst unspezifisch, weil dieselbe Probe Beispiele unterschiedlicher Untersuchungsarten trägt. |
 | [ MII EXA Mikrobio Resistenzkategorie VRE negativ  ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.md) | Identifizierter Enterococcus ohne Vancomycinresistenz: VRE-Status Negative. |
 | [ MII EXA Mikrobio Resistenzkategorie VRE positiv  ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.md) | Identifizierter Enterococcus faecium mit nachgewiesener Vancomycinresistenz: VRE-Status Positive, abgeleitet aus Identifikation und Empfindlichkeitstestung. |
 | [ MII EXA Mikrobio Spezifische Bestimmung VRE negativ  ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md) | Negativer VRE-Nachweis: Der Test auf vancomycinresistente Enterokokken ist negativ. |
