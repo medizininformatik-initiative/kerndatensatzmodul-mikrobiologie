@@ -89,7 +89,7 @@ Dieser Implementierungsleitfaden richtet sich an:
 - **[Profile](profiles.html)** und die weiteren
   **[Artefakt-Seiten](artifacts.html)** — die technischen Artefakte.
 - **[Beispiele](examples.html)** — Beispielinstanzen.
-- **[Abhängigkeiten](ImplementationGuide-kerndatensatzmodul-mikrobiologie.html)** — die
+- **[Abhängigkeiten](ImplementationGuide-mii-ig-mikrobiologie.html)** — die
   ImplementationGuide-Ressource mit Abhängigkeitstabelle, versionsübergreifender
   Analyse und Urheberrechtshinweisen.
 

@@ -80,7 +80,7 @@
 
 # id pattern per the MII naming convention: mii-ig-<slug>
 # (for example, kerndatensatz-basis uses `mii-ig-base`).
-id: kerndatensatzmodul-mikrobiologie
+id: mii-ig-mikrobiologie
 # Canonical pattern per the MII convention:
 # https://www.medizininformatik-initiative.de/fhir/modul-<slug>
 # (for example, kerndatensatz-basis uses
@@ -95,7 +95,7 @@ canonical: https://www.medizininformatik-initiative.de/fhir/modul-mikrobio
 # template pattern would be `MII_IG_Mikrobio`; the source (and every published
 # build of this module) uses the value below. Reported at Gate A — an identity
 # value is never normalized silently.
-name: Kerndatensatzmodul Mikrobiologie
+name: MII_IG_Mikrobiologie
 # title pattern: "MII Implementation Guide <Title>" (for example,
 # kerndatensatz-basis uses "MII Implementation Guide Core Dataset Base").
 title: MII Implementation Guide Microbiology
@@ -357,7 +357,7 @@ dependencies:
 # separate scaffolding step); OPTIONAL entries your module does not need are
 # removed per docs/optional-pages.md.
 # Every `title:` below is also a msgid in the IG-level translation catalogue
-# input/translations/de/ImplementationGuide-kerndatensatzmodul-mikrobiologie.po — if you
+# input/translations/de/ImplementationGuide-mii-ig-mikrobiologie.po — if you
 # add, rename or delete a page here, update that catalogue in the same commit,
 # or the German rendering falls back to the English title for that page.
 pages:
@@ -422,7 +422,7 @@ pages:
   # (ImplementationGuide-<id>.html); this entry gives it a hand-authored intro
   # — dependency table, cross-version analysis, global profiles, copyrights —
   # the kerndatensatz-basis idiom.
-  ImplementationGuide-kerndatensatzmodul-mikrobiologie.md:
+  ImplementationGuide-mii-ig-mikrobiologie.md:
     title: MII ImplementationGuide Resource
 
   translationinfo.md:

@@ -63,6 +63,44 @@ unrecognised entries is *list, do not remove* — ② decide retain or retire.
 pre-existing and Gate-D material, not touched by run 2.
 
 
+## Identity change — ImplementationGuide `id` and `name` (2026-09-02)
+
+**This is a deliberate, operator-authorised divergence from the source**, and therefore an
+exception to guardrail 1, which otherwise forbids changing a published id. It is recorded here
+because the mechanical verification does not raise it: the run-1 identity contradictions it
+reports are unrelated.
+
+| Field | Before | After |
+|---|---|---|
+| `id` | `kerndatensatzmodul-mikrobiologie` | `mii-ig-mikrobiologie` |
+| `name` | `Kerndatensatzmodul Mikrobiologie` | `MII_IG_Mikrobiologie` |
+| IG canonical | `…/ImplementationGuide/kerndatensatzmodul-mikrobiologie` | `…/ImplementationGuide/mii-ig-mikrobiologie` |
+
+**Why.** Both values were inherited verbatim from the source and predate the MII naming
+convention. The sibling modules already follow it — `de.…kerndatensatz.base` publishes
+`mii-ig-base` / `MII_IG_Base`, `de.…kerndatensatz.labor` publishes `mii-ig-labor` /
+`MII_IG_Labor` — so microbiology was the outlier. The id slug follows the **packageId** slug,
+not the canonical path (labor's canonical is `core/modul-labor` while its id is `mii-ig-labor`).
+The module is at prerelease `2027.0.0-alpha.6`, the cheapest point at which to align.
+
+**What did NOT change**, measured rather than assumed:
+- `packageId` `de.medizininformatikinitiative.kerndatensatz.mikrobiologie` — untouched; `M1` passed before and after.
+- Profile, ValueSet and CodeSystem canonicals — they hang off `…/modul-mikrobio/StructureDefinition/…` and never embed the IG id.
+- The GitHub repository slug `kerndatensatzmodul-mikrobiologie` — it is the same string, so only the unambiguous `ImplementationGuide-<id>` prefix was rewritten; `publication-request.json`'s `github.io/kerndatensatzmodul-mikrobiologie/…` paths and every repository URL are intact.
+
+**Files renamed with the id** (their names are load-bearing):
+`input/pagecontent/ImplementationGuide-mii-ig-mikrobiologie.md`,
+`input/translations/de/pagecontent/ImplementationGuide-mii-ig-mikrobiologie.md`,
+`input/translations/de/ImplementationGuide-mii-ig-mikrobiologie.po`. The `.po` is the page-title
+catalogue: at the wrong filename the German titles are ignored **silently**, so the build was
+checked for them — `de/index.html` renders `Startseite`, `de/ImplementationGuide-…html` renders
+`MII ImplementationGuide Ressource`.
+
+**Outcome.** Convention check `Result: PASS` — all of `M1`–`M11` for the first time. SUSHI 0/0.
+IG Publisher **109 errors, 573 warnings, 0 broken links** — unchanged. `P5` IDENTISCH: `ig.ini`
+names the IG resource SUSHI actually writes.
+
+
 ## Summary — read this first
 
 The module is on the template and **builds**. SUSHI compiles clean; the IG Publisher renders both

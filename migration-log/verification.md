@@ -10,10 +10,10 @@ Verdicts: **IDENTISCH** = matches the source · **DIVERGIERT** = differs, named 
 | conservation | C2 | every artefact is reachable from the rendered Artifacts page | 2 | 0 | 0 |
 | conservation | C3 | every source guide page was migrated or explicitly retired | 43 | 0 | 0 |
 | conservation | C4 | the source's narrative text is present somewhere in the target | 8 | 14 | 21 |
-| conservation | C5 | menus lead somewhere, and every page is in a menu | 2 | 1 | 1 |
+| conservation | C5 | menus lead somewhere, and every page is in a menu | 3 | 0 | 1 |
 | conservation | C6 | each text passage landed on the page the page map promised | 37 | 0 | 0 |
 | conservation | C7 | content the migration wrote is marked as such in the guide | 1 | 0 | 20 |
-| fidelity | F1 | module identity is unchanged (id, canonical, version, licence, ...) | 5 | 2 | 2 |
+| fidelity | F1 | module identity is unchanged (id, canonical, version, licence, ...) | 4 | 3 | 2 |
 | fidelity | F2 | dependency versions are pinned exactly as the source pinned them | 1 | 0 | 3 |
 | fidelity | F3 | the licence is asserted from evidence, never defaulted | 1 | 0 | 1 |
 | fidelity | F4 | no mechanical FSH conversion residue is left | 1 | 0 | 0 |
@@ -51,7 +51,7 @@ Verdicts: **IDENTISCH** = matches the source · **DIVERGIERT** = differs, named 
 | `C4-e7d0b5` | C4 | the source's narrative text is present somewhere in the target | Profilauswahl-und-Abgrenzung.page.md | 2 of 31 PROSE runs of the source page are in no target page (first: Für gramnegative Erreger mit einer MRGN-Klassifikation erfol…); 19 generated table row(s) excluded -- migration replaces that view with the artefact page (R1 checks THAT) | map the missing text to a target page section, or record the loss in the report's content map | no |
 | `C4-fe91db` | C4 | the source's narrative text is present somewhere in the target | Referenzen.page.md | 1 of 3 PROSE runs of the source page are in no target page (first: Es baut auf den Vorarbeiten für den [HiGHmed Use Case Infect…) | map the missing text to a target page section, or record the loss in the report's content map | no |
 | `C4-d47516` | C4 | the source's narrative text is present somewhere in the target | UML.page.md | 1 of 10 PROSE runs of the source page are in no target page (first: Zur besseren Lesbarkeit findet sich das vollständige Diagram…) | map the missing text to a target page section, or record the loss in the report's content map | no |
-| `C5-87e969` | C5 | menus lead somewhere, and every page is in a menu | input/pagecontent/ImplementationGuide-kerndatensatzmodul-mikrobiologie.md | narrative page in NO menu entry -- rendered, but reachable only by typing its URL | add it to input/includes/menu.xml (and the per-language copies), or retire the page | no |
+| `F1-093008` | F1 | module identity is unchanged (id, canonical, version, licence, ...) | id | target mii-ig-mikrobiologie  vs  source kerndatensatzmodul-mikrobiologie | the SOURCE wins (spec 2.2); restore it or record the divergence as a Gate-A decision -- never normalise silently | no |
 | `F1-bacf3c` | F1 | module identity is unchanged (id, canonical, version, licence, ...) | packageId | target de.medizininformatikinitiative.kerndatensatz.mikrobiologie  vs  source project | the SOURCE wins (spec 2.2); restore it or record the divergence as a Gate-A decision -- never normalise silently | no |
 | `F1-b5b102` | F1 | module identity is unchanged (id, canonical, version, licence, ...) | title | target MII Implementation Guide Microbiology  vs  source kerndatensatzmodul-mikrobiologie | the SOURCE wins (spec 2.2); restore it or record the divergence as a Gate-A decision -- never normalise silently | no |
 | `P3-a28a47` | P3 | the IG Publisher version matches the workflow pin | IG Publisher version | rendered by 2.3.3, the workflow pins 2.3.2 | the site was not built by the toolchain the repository declares; rebuild with the pin or correct the pin | no |

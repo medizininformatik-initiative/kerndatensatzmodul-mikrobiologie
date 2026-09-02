@@ -36,9 +36,9 @@ this template.
    `ig.ini`, `publication-request.json`, `.github/workflows/go-publish.yml`,
    `qc/custom.rules.yaml`, `tests/`, the pages and the FSH sources. **Also rename the three
    placeholder-NAMED files** to your IG's id — the IG-level catalogue
-   `input/translations/de/ImplementationGuide-kerndatensatzmodul-mikrobiologie.po` (the
+   `input/translations/de/ImplementationGuide-mii-ig-mikrobiologie.po` (the
    publisher ignores it silently if it does not match) and the
-   ImplementationGuide intro page `ImplementationGuide-kerndatensatzmodul-mikrobiologie.md`
+   ImplementationGuide intro page `ImplementationGuide-mii-ig-mikrobiologie.md`
    in `input/pagecontent/` and its German mirror (the build fails on the
    `pages:` entry if they do not match).
    [Create a new module](docs/recipes/create-a-new-module.md) step 5 has the two

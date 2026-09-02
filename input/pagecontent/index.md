@@ -76,7 +76,7 @@ Components of Observations were moved into separate profiles in this version.
 - **[Profiles](profiles.html)** and the further
   **[artifact pages](artifacts.html)** — the technical artifacts.
 - **[Examples](examples.html)** — example instances.
-- **[Dependencies](ImplementationGuide-kerndatensatzmodul-mikrobiologie.html)** — the
+- **[Dependencies](ImplementationGuide-mii-ig-mikrobiologie.html)** — the
   ImplementationGuide resource with the dependency table, cross-version
   analysis and copyright statements.
 

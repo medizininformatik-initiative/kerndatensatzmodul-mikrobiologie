@@ -90,7 +90,7 @@ C4-3c1363	conservation	C4	NICHT PRUEFBAR	Voraussichtliche-Empfindlichkeit.page.m
 C4-e83476	conservation	C4	IDENTISCH	Weitere-Eigenschaften/Index.page.md	all 1 prose runs present in the target's de corpus	-	-
 C5-f09e26	conservation	C5	IDENTISCH	input/includes/menu.xml	all 33 menu entries resolve to a real page	-	-
 C5-d64c1f	conservation	C5	IDENTISCH	input/translations/de/includes/menu.xml	all 33 menu entries resolve to a real page	-	-
-C5-87e969	conservation	C5	DIVERGIERT	input/pagecontent/ImplementationGuide-kerndatensatzmodul-mikrobiologie.md	narrative page in NO menu entry -- rendered, but reachable only by typing its URL	-	add it to input/includes/menu.xml (and the per-language copies), or retire the page
+C5-680af8	conservation	C5	IDENTISCH	24 narrative pages	every one is reachable from a menu entry	-	-
 C5-2d86b5	conservation	C5	NICHT PRUEFBAR	target pages without a source counterpart	references/template-pages.tsv is measured at module-template v0.11.1, but this module vendors v0.13.2 -- a stale manifest produces confident wrong findings in both directions	-	re-measure template-pages.tsv at the vendored tag (record the tag in the third column), then re-run
 C6-cc0b45	conservation	C6	IDENTISCH	Allgemeine-Bestimmung.page.md	6 of 8 runs placed, most on StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung-intro -- the mapped target	-	-
 C6-259bba	conservation	C6	IDENTISCH	Allgemeine-Kultur.page.md	1 of 3 runs placed, most on StructureDefinition-mii-pr-mikrobio-allgemeine-kultur-intro -- the mapped target	-	-
@@ -150,7 +150,7 @@ C7-209de2	conservation	C7	NICHT PRUEFBAR	Titer.page.md	C4 could not tell this pa
 C7-f478aa	conservation	C7	NICHT PRUEFBAR	Virulenzfaktor.page.md	C4 could not tell this page's prose from its embedded element-tree rendering, so whether anything was rewritten here is not measured	-	read the page against its target (the same human action C4 asks for) and mark whatever the migration wrote per spec section 9d
 C7-f4e5a6	conservation	C7	NICHT PRUEFBAR	Voraussichtliche-Empfindlichkeit.page.md	C4 could not tell this page's prose from its embedded element-tree rendering, so whether anything was rewritten here is not measured	-	read the page against its target (the same human action C4 asks for) and mark whatever the migration wrote per spec section 9d
 C7-1d79e9	conservation	C7	IDENTISCH	72 derived-content marker(s)	source= resolves to a page-map row or the literal `none`; both language mirrors carry it (de, default-language); every target page that replaced lost source prose carries one (migration-log/derived-content.tsv). The markers are review items, not defects: they are queue 2 rows, and whether any may remain at publication is a Gate-D decision (spec section 9d).	-	-
-F1-093008	fidelity	F1	IDENTISCH	id	kerndatensatzmodul-mikrobiologie (identical to the source)	-	-
+F1-093008	fidelity	F1	DIVERGIERT	id	target mii-ig-mikrobiologie  vs  source kerndatensatzmodul-mikrobiologie	-	the SOURCE wins (spec 2.2); restore it or record the divergence as a Gate-A decision -- never normalise silently
 F1-bacf3c	fidelity	F1	DIVERGIERT	packageId	target de.medizininformatikinitiative.kerndatensatz.mikrobiologie  vs  source project	-	the SOURCE wins (spec 2.2); restore it or record the divergence as a Gate-A decision -- never normalise silently
 F1-489e82	fidelity	F1	IDENTISCH	canonical	https://www.medizininformatik-initiative.de/fhir/modul-mikro… (identical to the source)	-	-
 F1-6cbfea	fidelity	F1	IDENTISCH	version	2027.0.0-alpha.6 (identical to the source)	-	-
@@ -170,7 +170,7 @@ P1-fded0e	provenance	P1	IDENTISCH	template	rendered de.medizininformatikinitiati
 P2-27e398	provenance	P2	IDENTISCH	scaffold template ref	v0.13.2 == latest release v0.13.2	-	-
 P3-a28a47	provenance	P3	DIVERGIERT	IG Publisher version	rendered by 2.3.3, the workflow pins 2.3.2	-	the site was not built by the toolchain the repository declares; rebuild with the pin or correct the pin
 P4-379bde	provenance	P4	IDENTISCH	source guide version	pinned 2025.0.1 (run.log, action simplifier-discover)	-	-
-P5-ae41ea	provenance	P5	IDENTISCH	ig.ini	`ig = fsh-generated/resources/ImplementationGuide-kerndatensatzmodul-mikrobiologie.json` exists in the target	-	-
+P5-ae41ea	provenance	P5	IDENTISCH	ig.ini	`ig = fsh-generated/resources/ImplementationGuide-mii-ig-mikrobiologie.json` exists in the target	-	-
 R1-866fe1	rendering	R1	IDENTISCH	output/de	tables, tabs and images all non-empty and resolvable	-	-
 R2-48ed52	rendering	R2	DIVERGIERT	output/de id="ig-status" [{{]	on 1 page(s), e.g. searchform.html: Search {{title}} (Current Build)	-	rendered header/footer metadata defect -- qa.txt does not report it. Fix the metadata it renders (a jurisdiction code the template cannot resolve is the measured case)
 R1-e1bc49	rendering	R1	IDENTISCH	output/en	tables, tabs and images all non-empty and resolvable	-	-
@@ -178,9 +178,9 @@ R2-d1da9a	rendering	R2	DIVERGIERT	output/en id="ig-status" [{{]	on 1 page(s), e.
 R1-76f413	rendering	R1	NICHT PRUEFBAR	source-versus-target rendering	no harvested source HTML (./migration-log/guide-harvest/html) and/or no page map	-	harvest with --keep-html and write the page map; without a source rendering, 'non-empty where non-empty in the source' has no reference
 R3-c3bc54	rendering	R3	IDENTISCH	output/de	all 24 narrative pages differ from the default language	-	-
 R4-84ad62	rendering	R4	NICHT PRUEFBAR	template example links	references/template-artifacts.tsv is verified at module-template v0.11.1, but this module vendors v0.13.2 -- a stale token list looks for the wrong scaffolding in both directions	-	re-verify the token list at the vendored tag (update the `# template_tag:` header), then re-run
-R5-ed8cfb	rendering	R5	IDENTISCH	input/translations/de/ImplementationGuide-kerndatensatzmodul-mikrobiologie.po	a translated unit for every one of the 25 page titles	-	-
-L0-28d3e4	log	L0	IDENTISCH	./migration-log/run.log	627 parsed lines, 2 runs	-	-
-L1-72b929	log	L1	IDENTISCH	silent-partial-success WARNs	the log carries none across 627 lines	-	-
+R5-8d8cf9	rendering	R5	IDENTISCH	input/translations/de/ImplementationGuide-mii-ig-mikrobiologie.po	a translated unit for every one of the 25 page titles	-	-
+L0-28d3e4	log	L0	IDENTISCH	./migration-log/run.log	675 parsed lines, 2 runs	-	-
+L1-72b929	log	L1	IDENTISCH	silent-partial-success WARNs	the log carries none across 675 lines	-	-
 L2-0e48db	log	L2	IDENTISCH	1 preflight-analysis	present in the log	-	-
 L2-5e1c48	log	L2	IDENTISCH	pre.2 classify-source-shape	present in the log	-	-
 L2-4fd559	log	L2	IDENTISCH	pre.5 toolchain	present in the log	-	-

@@ -15,8 +15,8 @@
 This ImplementationGuide resource defines the technical details of this
 publication, including dependencies and publishing parameters.
 
-- [XML](../ImplementationGuide-kerndatensatzmodul-mikrobiologie.xml)
-- [JSON](../ImplementationGuide-kerndatensatzmodul-mikrobiologie.json)
+- [XML](../ImplementationGuide-mii-ig-mikrobiologie.xml)
+- [JSON](../ImplementationGuide-mii-ig-mikrobiologie.json)
 
 ### Cross Version Analysis
 
