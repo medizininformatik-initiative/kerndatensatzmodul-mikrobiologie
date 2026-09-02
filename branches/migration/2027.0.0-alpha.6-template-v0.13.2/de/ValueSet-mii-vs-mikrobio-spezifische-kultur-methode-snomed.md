@@ -42,7 +42,7 @@ Methoden-ValueSet fuer die spezifische Kultur. Extensible gebunden, damit staerk
   "title" : "MII VS Mikrobio Spezifische Kultur Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T09:46:11+00:00",
+  "date" : "2026-09-02T09:54:50+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{
