@@ -14,8 +14,6 @@
  
 Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value. 
 
-> **Written during migration - review before release.** TODO:REVIEW - this English page is a machine translation of the German source page named above, produced because the target template renders English as the default language and the source guide is German-only. The German mirror carries the original wording verbatim.
-
 Resistance category status represents the assessment of a detected pathogen with respect to a defined resistance category. The category assessed is in `Observation.code`, the result of the assessment in `Observation.valueCodeableConcept`.
 
 ```
@@ -123,7 +121,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-r
   "title" : "MII PR Mikrobio Resistenzkategorie Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T11:53:33+00:00",
+  "date" : "2026-09-02T12:13:25+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{

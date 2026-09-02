@@ -14,8 +14,6 @@
  
 Avidität beschreibt die qualitative Beurteilung der Bindungsstärke von Antikörpern an ein spezifisches Antigen, typischerweise zur Unterscheidung frischer von zurückliegenden Infektionen. 
 
-> **Written during migration - review before release.** TODO:REVIEW - this English page is a machine translation of the German source page named above, produced because the target template renders English as the default language and the source guide is German-only. The German mirror carries the original wording verbatim.
-
 Avidity describes the qualitative assessment of the binding strength of antibodies to a specific antigen, typically to distinguish recent from past infections.
 
 ### Examples
@@ -64,7 +62,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
   "title" : "MII PR Mikrobio Aviditaet",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T11:53:33+00:00",
+  "date" : "2026-09-02T12:13:25+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{

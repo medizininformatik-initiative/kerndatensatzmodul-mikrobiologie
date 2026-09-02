@@ -5,8 +5,6 @@
 
 ## Logische Modelle
 
-> **Während der Migration geschrieben — vor der Veröffentlichung prüfen.** TODO:REVIEW — die englische Standardfassung dieser Seite ist eine Maschinenübersetzung dieses deutschen Textes. Diese deutsche Fassung trägt den Originalwortlaut der Simplifier-Quellseite; zu prüfen ist die englische Entsprechung (Gate C).
-
 ### Logische Modelle
 
 Die logischen Datenmodelle des Moduls **Mikrobiologie** beschreiben den fachlichen Datensatz unabhängig von der konkreten FHIR-Repräsentation.

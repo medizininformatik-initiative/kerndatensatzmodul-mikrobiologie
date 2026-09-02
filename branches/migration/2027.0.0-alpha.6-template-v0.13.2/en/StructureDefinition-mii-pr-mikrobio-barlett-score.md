@@ -14,8 +14,6 @@
  
 Barlett-Score beschreibt die qualitative mikroskopische Beurteilung der Eignung von Sputumproben für die mikrobiologische Kultur anhand des Verhältnisses von Entzündungs- zu Epithelzellen. 
 
-> **Written during migration - review before release.** TODO:REVIEW - this English page is a machine translation of the German source page named above, produced because the target template renders English as the default language and the source guide is German-only. The German mirror carries the original wording verbatim.
-
 Barlett score describes the qualitative microscopic assessment of the suitability of sputum specimens for microbiological culture, based on the ratio of inflammatory cells to epithelial cells.
 
 ### Examples
@@ -64,7 +62,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-b
   "title" : "MII PR Mikrobio Barlett Score",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T11:53:33+00:00",
+  "date" : "2026-09-02T12:13:25+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{

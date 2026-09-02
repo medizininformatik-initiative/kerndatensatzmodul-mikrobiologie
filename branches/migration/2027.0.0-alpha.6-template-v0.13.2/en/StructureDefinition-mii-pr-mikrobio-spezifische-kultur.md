@@ -14,8 +14,6 @@
  
 Spezifische Kultur beschreibt das Ergebnis einer zielgerichteten kulturbasierten Untersuchung, die prüft, ob ein vordefinierter Mikroorganismus in der Probe wächst. Das gesuchte Ziel ist bereits im Untersuchungscode benannt; das Ergebnis ist die Aussage über Wachstum. 
 
-> **Written during migration - review before release.** TODO:REVIEW - this English page is a machine translation of the German source page named above, produced because the target template renders English as the default language and the source guide is German-only. The German mirror carries the original wording verbatim.
-
 Specific culture describes the result of a targeted culture-based investigation that tests whether a predefined microorganism grows in the specimen. The target sought is already named in the test code; the result is the statement about growth (`Organism growth` or `No growth`).
 
 This profile therefore also represents the negative result of a culture-based targeted pathogen detection, for example a negative VRE or MRSA test. An indeterminate result is not given via `value` but via `dataAbsentReason`. For the delimitation against susceptibility testing and classification see [Profile selection and delimitation](profilauswahl-und-abgrenzung.md).
@@ -72,7 +70,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Kultur",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T11:53:33+00:00",
+  "date" : "2026-09-02T12:13:25+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{

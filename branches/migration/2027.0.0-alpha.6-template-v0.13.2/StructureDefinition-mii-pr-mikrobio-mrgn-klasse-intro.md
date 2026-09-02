@@ -1,10 +1,3 @@
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/MRGN-Klasse.page.md gate=C -->
-> **Written during migration - review before release.** TODO:REVIEW - this English page is a
-> machine translation of the German source page named above, produced because the target
-> template renders English as the default language and the source guide is German-only.
-> The German mirror carries the original wording verbatim.
-{: .ig-highlight .ig-highlight-blue}
-
 MRGN class describes the classification of multi-resistant Gram-negative pathogens according to the RKI categorisation.
 
 The profile classifies an already identified Gram-negative isolate and is not a detection test. The negative result of a targeted pathogen detection is not represented here but via specific determination or specific culture. If the isolate was assessed on the basis of the susceptibility findings and cannot be assigned to any class, the value `keine-mrgn-klasse` is used - such a negative value is meaningful here because a concrete classification scheme exists.

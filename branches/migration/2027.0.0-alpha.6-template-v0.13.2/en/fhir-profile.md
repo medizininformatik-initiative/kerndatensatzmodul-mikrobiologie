@@ -7,8 +7,6 @@
 
 ## FHIR Profiles - Modelling Notes
 
-> **Written during migration - review before release.** TODO:REVIEW - this English page is a machine translation of the German source page named above; the German mirror carries the original wording verbatim.
-
 The model is based on conventions agreed with the RKI, MIO42 and HL7 Europe and takes developments in the European context into account, in particular within the European Health Data Space (EHDS).
 
 ### Representing diagnostic chains

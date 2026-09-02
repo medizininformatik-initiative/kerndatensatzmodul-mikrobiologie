@@ -1,10 +1,3 @@
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Allgemeine-Bestimmung.page.md gate=C -->
-> **Written during migration - review before release.** TODO:REVIEW - this English page is a
-> machine translation of the German source page named above, produced because the target
-> template renders English as the default language and the source guide is German-only.
-> The German mirror carries the original wording verbatim.
-{: .ig-highlight .ig-highlight-blue}
-
 General determination describes the identification of a microorganism or infectious agent in a specimen, without restriction to a predefined target.
 
 ### Result

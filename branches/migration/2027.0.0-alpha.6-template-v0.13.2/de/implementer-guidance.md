@@ -8,8 +8,6 @@
 
  Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 
 
-> **Während der Migration geschrieben — vor der Veröffentlichung prüfen.** TODO:REVIEW — die englische Standardfassung dieser Seite ist eine Maschinenübersetzung dieses deutschen Textes. Diese deutsche Fassung trägt den Originalwortlaut der Simplifier-Quellseite; zu prüfen ist die englische Entsprechung (Gate C).
-
 Technische Hinweise für DIZ-Implementierende zur Umsetzung der Profile des Moduls **Mikrobiologie** (ETL aus Primärsystemen, FHIR-API, Validierung).
 
 Dieses KDS-Modul ist eng mit dem [KDS-Modul Laborbefund](https://simplifier.net/medizininformatikinitiative-modullabor) verbunden, wobei jedoch alle Observations und DiagnosticReports spezifisch für die Mikrobiologie sind.

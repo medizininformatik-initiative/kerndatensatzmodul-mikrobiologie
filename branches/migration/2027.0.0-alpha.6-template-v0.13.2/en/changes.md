@@ -5,8 +5,6 @@
 
 ## Changelog
 
-> **Written during migration - review before release.** TODO:REVIEW - this English changelog is a machine translation of the German source page named above. The German mirror carries the original wording verbatim; artefact ids, canonical URLs, codes and version numbers are unchanged.
-
 This document describes the significant changes per release of the IG.
 
 | | | | |

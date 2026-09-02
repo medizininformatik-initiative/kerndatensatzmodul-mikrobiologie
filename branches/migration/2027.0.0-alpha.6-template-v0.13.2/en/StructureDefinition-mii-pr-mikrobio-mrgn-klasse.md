@@ -14,8 +14,6 @@
  
 MRGN-Klasse beschreibt die Einstufung multiresistenter gramnegativer Erreger entsprechend der RKI-Kategorisierung. 
 
-> **Written during migration - review before release.** TODO:REVIEW - this English page is a machine translation of the German source page named above, produced because the target template renders English as the default language and the source guide is German-only. The German mirror carries the original wording verbatim.
-
 MRGN class describes the classification of multi-resistant Gram-negative pathogens according to the RKI categorisation.
 
 The profile classifies an already identified Gram-negative isolate and is not a detection test. The negative result of a targeted pathogen detection is not represented here but via specific determination or specific culture. If the isolate was assessed on the basis of the susceptibility findings and cannot be assigned to any class, the value `keine-mrgn-klasse` is used - such a negative value is meaningful here because a concrete classification scheme exists.
@@ -70,7 +68,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
   "title" : "MII PR Mikrobio MRGN Klasse",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T11:53:33+00:00",
+  "date" : "2026-09-02T12:13:25+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{

@@ -5,8 +5,6 @@
 
 ## Änderungshistorie
 
-> **Während der Migration geschrieben — vor der Veröffentlichung prüfen.** TODO:REVIEW — die englische Standardfassung dieser Seite ist eine Maschinenübersetzung dieses deutschen Textes. Diese deutsche Fassung trägt den Originalwortlaut der Simplifier-Quellseite; zu prüfen ist die englische Entsprechung (Gate C).
-
 Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 | | | | |

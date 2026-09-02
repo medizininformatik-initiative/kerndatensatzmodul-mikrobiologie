@@ -8,8 +8,6 @@
 
 ## Specimen
 
-> **Written during migration - review before release.** TODO:REVIEW - this English page is a machine translation of the German source page named above; the German mirror carries the original wording verbatim.
-
 ### Report - Specimen
 
 For representing specimens, the profile [MII_PR_Biobank_Specimen_Bioprobe_Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core) from the [MII Biobank module](https://simplifier.net/medizininformatikinitiative-modulbiobank) is referenced.

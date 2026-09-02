@@ -1,11 +1,4 @@
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzkategorie-Status.page.md  -->
-<!-- DERIVED:no-source source=MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzkategorie-Status.page.md gate=C -->
-> **Während der Migration geschrieben — vor der Veröffentlichung prüfen.** TODO:REVIEW — die
-> englische Standardfassung dieser Seite ist eine Maschinenübersetzung dieses deutschen Textes.
-> Diese deutsche Fassung trägt den Originalwortlaut der Simplifier-Quellseite; zu prüfen ist die
-> englische Entsprechung (Gate C).
-{: .ig-highlight .ig-highlight-blue}
-
 Resistenzkategorie-Status bildet die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie ab. Die bewertete Kategorie steht in `Observation.code`, das Ergebnis der Bewertung in `Observation.valueCodeableConcept`.
 
 ```
