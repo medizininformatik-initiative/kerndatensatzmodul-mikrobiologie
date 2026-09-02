@@ -26,7 +26,7 @@ Suche nach der Interpretation einer mikrobiologischen Observation.
   "version" : "2027.0.0-alpha.6",
   "name" : "ObservationInterpretation",
   "status" : "active",
-  "date" : "2026-09-02T21:03:23+00:00",
+  "date" : "2026-09-02T21:10:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",

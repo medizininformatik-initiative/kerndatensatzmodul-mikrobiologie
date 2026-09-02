@@ -41,7 +41,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T21:03:23+00:00",
+  "date" : "2026-09-02T21:10:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
