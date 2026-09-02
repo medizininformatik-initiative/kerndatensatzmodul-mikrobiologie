@@ -11,6 +11,13 @@ Context: Observation
 * ^version = "0.1.0"
 * ^experimental = false
 * ^publisher = "FHIR Infrastructure"
+// Der Canonical liegt unter hl7.org, deshalb verlangt der IG Publisher die
+// zuständige Work Group ("When HL7 is publishing a resource, the owning committee
+// must be stated"). #fhir = FHIR Infrastructure, passend zu publisher und dem
+// fiwg-Kontakt unten. Ohne diese Zeile bleibt genau ein QA-Fehler stehen.
+// Entfällt zusammen mit dieser Datei, sobald der TODO oben aufgelöst ist und das
+// xver-Paket die Extension liefert.
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-wg].valueCode = #fhir
 * ^contact.name = "FHIR Infrastructure"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://www.hl7.org/Special/committees/fiwg"

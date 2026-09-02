@@ -9,7 +9,7 @@ Usage: #example
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#100044-7 "Cefcapene [Susceptibility]"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 1
 * valueQuantity.system = $ucum
@@ -17,4 +17,4 @@ Usage: #example
 * valueQuantity.unit = "mg/L"
 * interpretation = $v3-ObservationInterpretation#S "Susceptible"
 * interpretation.extension[Norm].valueCodeableConcept = MII_CS_Mikrobio_Susceptibility_NORM#EUCAST "EUCAST"
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)

@@ -48,9 +48,6 @@
       ]
     }
   ],
-  "subject": {
-    "reference": "Patient/example"
-  },
   "derivedFrom": [
     {
       "reference": "Observation/mii-exa-mikrobio-workflow-vre-02-identifikation"
@@ -59,9 +56,6 @@
       "reference": "Observation/mii-exa-mikrobio-empfindlichkeit"
     }
   ],
-  "specimen": {
-    "reference": "Specimen/example"
-  },
   "status": "final",
   "code": {
     "coding": [
@@ -72,6 +66,9 @@
       }
     ]
   },
+  "subject": {
+    "reference": "Patient/mii-exa-mikrobio-patient"
+  },
   "effectiveDateTime": "2026-04-03T15:00:00+01:00",
   "valueCodeableConcept": {
     "coding": [
@@ -81,5 +78,8 @@
         "display": "Negative"
       }
     ]
+  },
+  "specimen": {
+    "reference": "Specimen/mii-exa-mikrobio-probe"
   }
 }

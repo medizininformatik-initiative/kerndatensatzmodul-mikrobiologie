@@ -48,9 +48,6 @@
       ]
     }
   ],
-  "subject": {
-    "reference": "Patient/example"
-  },
   "valueQuantity": {
     "system": "http://unitsofmeasure.org",
     "code": "1",
@@ -62,9 +59,6 @@
       "reference": "Observation/mii-exa-mikrobio-spezifische-bestimmung"
     }
   ],
-  "specimen": {
-    "reference": "Specimen/example"
-  },
   "method": {
     "coding": [
       {
@@ -84,5 +78,11 @@
       }
     ]
   },
-  "effectiveDateTime": "2026-04-02T10:00:00+01:00"
+  "subject": {
+    "reference": "Patient/mii-exa-mikrobio-patient"
+  },
+  "effectiveDateTime": "2026-04-02T10:00:00+01:00",
+  "specimen": {
+    "reference": "Specimen/mii-exa-mikrobio-probe"
+  }
 }

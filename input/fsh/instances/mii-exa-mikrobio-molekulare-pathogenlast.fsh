@@ -9,11 +9,11 @@ Usage: #example
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#33006-8 "Cytomegalovirus DNA [#/volume] (viral load) in Specimen by NAA with probe detection"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 350000
 * valueQuantity.system = $ucum
 * valueQuantity.code = #1/mL
 * valueQuantity.unit = "Copies/mL"
 * method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)

@@ -18,8 +18,8 @@ Description: "Negativer VRE-Nachweis: Der Test auf vancomycinresistente Enteroko
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#105904-7 "Vancomycin resistant enterococcus [Presence] in Specimen"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
 * method = $sct#70601000052104 "Real-time polymerase chain reaction technique (qualifier value)"
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)

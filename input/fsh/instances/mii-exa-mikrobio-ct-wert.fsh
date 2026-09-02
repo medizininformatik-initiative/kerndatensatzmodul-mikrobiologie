@@ -9,7 +9,7 @@ Usage: #example
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#74039-9 "Influenza virus A H3 RNA [Cycle Threshold #] in Specimen by NAA with probe detection"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 21.3
 * valueQuantity.unit = "1"
@@ -17,4 +17,4 @@ Usage: #example
 * valueQuantity.code = #1
 * method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
 * derivedFrom = Reference(mii-exa-mikrobio-spezifische-bestimmung)
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)

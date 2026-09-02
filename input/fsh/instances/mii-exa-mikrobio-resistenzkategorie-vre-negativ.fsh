@@ -17,9 +17,9 @@ Description: "Identifizierter Enterococcus ohne Vancomycinresistenz: VRE-Status 
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = MII_CS_Mikrobio_Resistenzkategorie#vre-status "VRE-Status"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-03T15:00:00+01:00"
 * valueCodeableConcept = $sct#260385009 "Negative"
 * derivedFrom[+].reference = "Observation/mii-exa-mikrobio-workflow-vre-02-identifikation"
 * derivedFrom[+].reference = "Observation/mii-exa-mikrobio-empfindlichkeit"
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)

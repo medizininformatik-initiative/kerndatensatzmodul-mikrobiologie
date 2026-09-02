@@ -48,12 +48,6 @@
       ]
     }
   ],
-  "subject": {
-    "reference": "Patient/example"
-  },
-  "specimen": {
-    "reference": "Specimen/example"
-  },
   "status": "final",
   "code": {
     "coding": [
@@ -63,6 +57,9 @@
         "display": "Vancomycin resistant enterococcus [Presence] in Specimen by Organism specific culture"
       }
     ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime": "2026-04-02T10:00:00+01:00",
   "valueCodeableConcept": {
@@ -82,5 +79,8 @@
         "display": "Organism specific culture"
       }
     ]
+  },
+  "specimen": {
+    "reference": "Specimen/mii-exa-mikrobio-probe"
   }
 }

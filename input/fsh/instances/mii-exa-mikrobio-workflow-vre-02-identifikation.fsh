@@ -20,10 +20,10 @@ Description: "Workflow-Kette VRE, Schritt 2: weiterführende Identifikation des 
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#41852-5 "Microorganism or agent identified in Specimen"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-03T09:00:00+01:00"
 * extension[triggeredBy-r5].extension[observation].valueReference = Reference(mii-exa-mikrobio-workflow-vre-01-kultur)
 * extension[triggeredBy-r5].extension[type].valueCode = #reflex
 * valueCodeableConcept = $sct#90272000 "Enterococcus faecium"
 * method = $sct#83581000052107 "Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)"
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)

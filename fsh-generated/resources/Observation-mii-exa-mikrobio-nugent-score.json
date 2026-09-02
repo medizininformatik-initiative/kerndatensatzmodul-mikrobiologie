@@ -48,17 +48,11 @@
       ]
     }
   ],
-  "subject": {
-    "reference": "Patient/example"
-  },
   "valueQuantity": {
     "system": "http://unitsofmeasure.org",
     "code": "1",
     "value": 7,
     "unit": "1"
-  },
-  "specimen": {
-    "reference": "Specimen/example"
   },
   "code": {
     "coding": [
@@ -79,5 +73,11 @@
     ]
   },
   "status": "final",
-  "effectiveDateTime": "2026-04-02T10:00:00+01:00"
+  "subject": {
+    "reference": "Patient/mii-exa-mikrobio-patient"
+  },
+  "effectiveDateTime": "2026-04-02T10:00:00+01:00",
+  "specimen": {
+    "reference": "Specimen/mii-exa-mikrobio-probe"
+  }
 }

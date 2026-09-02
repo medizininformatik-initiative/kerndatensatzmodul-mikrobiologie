@@ -9,10 +9,10 @@ Usage: #example
 * category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
 * category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#41852-5 "Microorganism or agent identified in Specimen"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * extension[triggeredBy-r5].extension[observation].valueReference = Reference(mii-exa-mikrobio-allgemeine-kultur)
 * extension[triggeredBy-r5].extension[type].valueCode = #reflex
 * valueCodeableConcept = $sct#52499004 "Pseudomonas aeruginosa"
 * method = $sct#278289002 "Microscopy technique"
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)

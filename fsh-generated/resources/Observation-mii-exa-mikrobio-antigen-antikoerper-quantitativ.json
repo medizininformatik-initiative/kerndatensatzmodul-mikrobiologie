@@ -48,17 +48,11 @@
       ]
     }
   ],
-  "subject": {
-    "reference": "Patient/example"
-  },
   "valueQuantity": {
     "system": "http://unitsofmeasure.org",
     "value": 42,
     "code": "[IU]/L",
     "unit": "IU/L"
-  },
-  "specimen": {
-    "reference": "Specimen/example"
   },
   "status": "final",
   "code": {
@@ -70,6 +64,9 @@
       }
     ]
   },
+  "subject": {
+    "reference": "Patient/mii-exa-mikrobio-patient"
+  },
   "effectiveDateTime": "2026-04-02T10:00:00+01:00",
   "method": {
     "coding": [
@@ -79,5 +76,8 @@
         "display": "Immunoassay technique"
       }
     ]
+  },
+  "specimen": {
+    "reference": "Specimen/mii-exa-mikrobio-probe"
   }
 }

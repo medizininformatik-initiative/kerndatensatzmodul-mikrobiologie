@@ -13,18 +13,20 @@
 // The 26 Observation examples carry the same dangling reference and render fine,
 // so this is a renderer defect specific to DiagnosticReport.
 //
-// The contained form was chosen because it keeps the module's PUBLISHED artefact
-// set identical to the source — a separate Patient example would add an artefact
-// this module does not own. Revert this block and the `subject` line together.
-// ① OPEN: decide the intended long-term form (contained, a real Patient example,
-// or a reference into the Person module) and report the renderer defect upstream.
+// RESOLVED 2026-09-02: the ① OPEN question below was decided in favour of a real
+// Patient example. mii-exa-mikrobio-patient now exists and every example in the
+// module — this report and all 26 Observations — references it, which also cleared
+// the 52 unresolvable-reference errors the Observations carried. The contained
+// placeholder mii-exa-mikrobio-patient-inline was removed with it.
+//
+// The cost is the one the migration named: the module's published artefact set now
+// carries two examples the source did not have (Patient and Specimen). That was the
+// operator's call on 2026-09-02, taken knowingly. Patient is still modelled by the
+// Person module; this example claims no profile and adds no demography.
+//
+// The renderer defect itself is UNFIXED upstream and still worth reporting:
+// DiagnosticReportRenderer.populateSubjectSummary has no null check.
 // ─────────────────────────────────────────────────────────────────────────────
-Instance: mii-exa-mikrobio-patient-inline
-InstanceOf: Patient
-Usage: #inline
-Description: "Contained placeholder subject — see the note in mii-exa-mikrobio-diagnostic-report.fsh."
-* identifier[0].system = "https://example.org/fhir/sid/test-patient"
-* identifier[0].value = "111"
 
 Instance: mii-exa-mikrobio-diagnostic-report
 InstanceOf: MII_PR_Mikrobio_Diagnostic_Report
@@ -39,9 +41,16 @@ Usage: #example
 * category[mibi-category] = $v2-0074#MB "Microbiology"
 * category[mibi-sub-category] = $loinc#92894-5 "Microbiology - bacterial studies"
 * code.coding[loinc-labReport] = $loinc#11502-2 "Laboratory report"
-* basedOn[0].reference = "ServiceRequest/111"
-* contained[0] = mii-exa-mikrobio-patient-inline
-* subject = Reference(mii-exa-mikrobio-patient-inline) // MIGRATION: was "Patient/111" — see the note above
+// basedOn ist Pflicht (min=1 aus DiagnosticReportLab), zeigte aber auf
+// "ServiceRequest/111", das nichts auflöste. ServiceRequest wird von diesem Modul
+// nicht verantwortet, deshalb steht hier die Anforderungsnummer als
+// Reference.identifier statt einer literalen Referenz — genau der FHIR-Weg, auf
+// eine Ressource zu verweisen, die man nicht mitliefert. Ein drittes Fremdbeispiel
+// wird so vermieden, die Pflichtangabe bleibt erfüllt.
+* basedOn[0].identifier.type.coding[0] = $v2-0203#PLAC "Placer Identifier"
+* basedOn[0].identifier.system = "https://example.org/fhir/sid/test-anforderung"
+* basedOn[0].identifier.value = "111"
+* subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * issued = "2026-04-02T10:30:00+01:00"
 * result[0] = Reference(mii-exa-mikrobio-allgemeine-kultur)

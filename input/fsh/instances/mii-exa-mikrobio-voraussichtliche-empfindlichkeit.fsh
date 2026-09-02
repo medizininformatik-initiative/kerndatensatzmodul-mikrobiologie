@@ -14,7 +14,7 @@ Usage: #example
 // Rifampicin-Fall: aus dem Genotyp vorhergesagte Empfindlichkeit gegen Rifampicin.
 // Wer ein generisches Beispiel braucht, braucht einen anderen Code — nicht ein anderes Display.
 * code = $loinc#89489-9 "rifAMPin [Susceptibility] by Genotype method"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $v3-ObservationInterpretation#S "Susceptible"
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)
