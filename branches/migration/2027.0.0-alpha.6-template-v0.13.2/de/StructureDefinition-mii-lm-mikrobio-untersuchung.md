@@ -95,7 +95,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
   "title" : "MII LM Mikrobio Untersuchung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T09:54:50+00:00",
+  "date" : "2026-09-02T10:49:18+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{

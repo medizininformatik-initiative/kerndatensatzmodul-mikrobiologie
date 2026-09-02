@@ -18,7 +18,7 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
 
 **status**: Final
 
-**category**: Laboruntersuchungen
+**category**: Laboratory studies (set)
 
 **code**: Influenza virus A H3 RNA [Cycle Threshold #] in Specimen by NAA with probe detection
 
@@ -67,7 +67,7 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
     {
       "system" : "http://loinc.org",
       "code" : "26436-6",
-      "display" : "Laboruntersuchungen"
+      "display" : "Laboratory studies (set)"
     },
     {
       "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
@@ -77,7 +77,7 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
     {
       "system" : "http://loinc.org",
       "code" : "18725-2",
-      "display" : "Mikrobiologie"
+      "display" : "Microbiology studies (set)"
     }]
   }],
   "code" : {

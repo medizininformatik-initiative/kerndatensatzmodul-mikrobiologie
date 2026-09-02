@@ -18,7 +18,7 @@ Profile: [MII PR Mikrobio Antigen Antikoerper Quantitativ](StructureDefinition-m
 
 **status**: Final
 
-**category**: Laboruntersuchungen
+**category**: Laboratory studies (set)
 
 **code**: Hepatitis B virus surface Ab [Units/volume] in Serum or Plasma by Immunoassay
 
@@ -65,7 +65,7 @@ Profile: [MII PR Mikrobio Antigen Antikoerper Quantitativ](StructureDefinition-m
     {
       "system" : "http://loinc.org",
       "code" : "26436-6",
-      "display" : "Laboruntersuchungen"
+      "display" : "Laboratory studies (set)"
     },
     {
       "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
@@ -75,7 +75,7 @@ Profile: [MII PR Mikrobio Antigen Antikoerper Quantitativ](StructureDefinition-m
     {
       "system" : "http://loinc.org",
       "code" : "18725-2",
-      "display" : "Mikrobiologie"
+      "display" : "Microbiology studies (set)"
     }]
   }],
   "code" : {

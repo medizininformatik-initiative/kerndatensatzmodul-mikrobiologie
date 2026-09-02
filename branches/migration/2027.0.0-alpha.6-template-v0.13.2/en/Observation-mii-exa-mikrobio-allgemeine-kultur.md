@@ -18,7 +18,7 @@ Profile: [MII PR Mikrobio Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio
 
 **status**: Final
 
-**category**: Laboruntersuchungen
+**category**: Laboratory studies (set)
 
 **code**: Microorganism identified in Specimen by Culture
 
@@ -65,7 +65,7 @@ Profile: [MII PR Mikrobio Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio
     {
       "system" : "http://loinc.org",
       "code" : "26436-6",
-      "display" : "Laboruntersuchungen"
+      "display" : "Laboratory studies (set)"
     },
     {
       "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
@@ -75,7 +75,7 @@ Profile: [MII PR Mikrobio Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio
     {
       "system" : "http://loinc.org",
       "code" : "18725-2",
-      "display" : "Mikrobiologie"
+      "display" : "Microbiology studies (set)"
     }]
   }],
   "code" : {

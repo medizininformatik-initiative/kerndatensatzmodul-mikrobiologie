@@ -81,7 +81,7 @@
       },
       {
         "code" : "SDD",
-        "display" : "Susceptible- Dose Dependent"
+        "display" : "Susceptible-dose dependent"
       },
       {
         "code" : "R",
@@ -89,14 +89,14 @@
       },
       {
         "code" : "NS",
-        "display" : "Nonsusceptible"
+        "display" : "Non-susceptible"
       }]
     },
     {
       "system" : "http://snomed.info/sct",
       "concept" : [{
         "code" : "1306583007",
-        "display" : "EUCAST-Kategorie 2019 - I (sensibel bei erhöhter Exposition)"
+        "display" : "I (Susceptible, increased exposure) EUCAST (European Committee on Antimicrobial Susceptibility Testing) category 2019"
       }]
     }]
   }

@@ -18,7 +18,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
 
 **status**: Final
 
-**category**: Laboruntersuchungen
+**category**: Laboratory studies (set)
 
 **code**: Vancomycin resistant enterococcus [Presence] in Specimen by Organism specific culture
 
@@ -28,7 +28,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
 
 **value**: No growth (qualifier value)
 
-**method**: Mikroorganismusspezifische Kulturtechnik
+**method**: Organism specific culture
 
 **specimen**: [Specimen/example](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Specimen/example)
 
@@ -65,7 +65,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
     {
       "system" : "http://loinc.org",
       "code" : "26436-6",
-      "display" : "Laboruntersuchungen"
+      "display" : "Laboratory studies (set)"
     },
     {
       "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
@@ -75,7 +75,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
     {
       "system" : "http://loinc.org",
       "code" : "18725-2",
-      "display" : "Mikrobiologie"
+      "display" : "Microbiology studies (set)"
     }]
   }],
   "code" : {
@@ -100,7 +100,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "code" : "703752003",
-      "display" : "Mikroorganismusspezifische Kulturtechnik"
+      "display" : "Organism specific culture"
     }]
   },
   "specimen" : {

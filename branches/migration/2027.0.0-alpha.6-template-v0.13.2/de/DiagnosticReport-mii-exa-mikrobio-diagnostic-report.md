@@ -14,7 +14,7 @@
 
 Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
 
-## Laborbericht (Laboratory, Microbiology, Microbiology - bacterial studies) 
+## Laboratory report (Laboratory, Microbiology, Microbiology - bacterial studies) 
 
 | | |
 | :--- | :--- |
@@ -81,7 +81,7 @@ Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid
     {
       "system" : "http://loinc.org",
       "code" : "26436-6",
-      "display" : "Laboruntersuchungen"
+      "display" : "Laboratory studies (set)"
     }]
   },
   {
@@ -102,7 +102,7 @@ Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid
     "coding" : [{
       "system" : "http://loinc.org",
       "code" : "11502-2",
-      "display" : "Laborbericht"
+      "display" : "Laboratory report"
     }]
   },
   "subject" : {

@@ -18,7 +18,7 @@ Profile: [MII PR Mikrobio Resistenzkategorie Status](StructureDefinition-mii-pr-
 
 **status**: Final
 
-**category**: Laboruntersuchungen
+**category**: Laboratory studies (set)
 
 **code**: VRE-Status
 
@@ -68,7 +68,7 @@ Profile: [MII PR Mikrobio Resistenzkategorie Status](StructureDefinition-mii-pr-
     {
       "system" : "http://loinc.org",
       "code" : "26436-6",
-      "display" : "Laboruntersuchungen"
+      "display" : "Laboratory studies (set)"
     },
     {
       "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
@@ -78,7 +78,7 @@ Profile: [MII PR Mikrobio Resistenzkategorie Status](StructureDefinition-mii-pr-
     {
       "system" : "http://loinc.org",
       "code" : "18725-2",
-      "display" : "Mikrobiologie"
+      "display" : "Microbiology studies (set)"
     }]
   }],
   "code" : {

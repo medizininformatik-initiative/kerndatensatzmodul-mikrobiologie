@@ -18,7 +18,7 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
 
 **status**: Final
 
-**category**: Laboruntersuchungen
+**category**: Laboratory studies (set)
 
 **code**: Microorganism identified in Isolate or Specimen by Molecular genetics method
 
@@ -65,7 +65,7 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
     {
       "system" : "http://loinc.org",
       "code" : "26436-6",
-      "display" : "Laboruntersuchungen"
+      "display" : "Laboratory studies (set)"
     },
     {
       "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
@@ -75,7 +75,7 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
     {
       "system" : "http://loinc.org",
       "code" : "18725-2",
-      "display" : "Mikrobiologie"
+      "display" : "Microbiology studies (set)"
     }]
   }],
   "code" : {

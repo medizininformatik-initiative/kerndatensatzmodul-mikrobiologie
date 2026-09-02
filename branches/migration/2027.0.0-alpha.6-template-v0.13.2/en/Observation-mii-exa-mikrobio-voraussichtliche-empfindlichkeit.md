@@ -18,9 +18,9 @@ Profile: [MII PR Mikrobio Voraussichtliche Empfindlichkeit](StructureDefinition-
 
 **status**: Final
 
-**category**: Laboruntersuchungen
+**category**: Laboratory studies (set)
 
-**code**: Antimicrobial susceptibility predicted from genotype
+**code**: rifAMPin [Susceptibility] by Genotype method
 
 **subject**: [Patient/example](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2026.0.3&canonical=http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/Patient/example)
 
@@ -63,7 +63,7 @@ Profile: [MII PR Mikrobio Voraussichtliche Empfindlichkeit](StructureDefinition-
     {
       "system" : "http://loinc.org",
       "code" : "26436-6",
-      "display" : "Laboruntersuchungen"
+      "display" : "Laboratory studies (set)"
     },
     {
       "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
@@ -73,14 +73,14 @@ Profile: [MII PR Mikrobio Voraussichtliche Empfindlichkeit](StructureDefinition-
     {
       "system" : "http://loinc.org",
       "code" : "18725-2",
-      "display" : "Mikrobiologie"
+      "display" : "Microbiology studies (set)"
     }]
   }],
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
       "code" : "89489-9",
-      "display" : "Antimicrobial susceptibility predicted from genotype"
+      "display" : "rifAMPin [Susceptibility] by Genotype method"
     }]
   },
   "subject" : {
