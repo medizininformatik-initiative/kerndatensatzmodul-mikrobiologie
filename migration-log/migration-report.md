@@ -101,6 +101,41 @@ IG Publisher **109 errors, 573 warnings, 0 broken links** — unchanged. `P5` ID
 names the IG resource SUSHI actually writes.
 
 
+## Validation workflows retired (2026-09-02)
+
+Both CI validation workflows are gone. They were removed for **different** reasons, and only one of
+them was a Simplifier-era leftover.
+
+**`fhir-validate.yml` — a genuine leftover.** Firely Terminal CI carried over from the Simplifier
+project. Retired because the module no longer tracks `fsh-generated/`, which its closing step
+committed back.
+
+**`validation.yml` — the template's own file, retired by operator decision.** It was byte-identical
+to module template `v0.13.2`, so it is *not* a leftover; but what it does is Simplifier-bound. It
+wired up two reusable `kerndatensatz-meta` workflows:
+
+- **.NET QC (Firely Terminal)** — authenticates with `SIMPLIFIER_USERNAME` / `SIMPLIFIER_PASSWORD`.
+  This was the CI-red job, and the failure is a **template-level defect, not ours**: the shared
+  workflow ends with `git add fsh-generated`, while both this repository *and* the template
+  gitignore that directory (`.gitignore:15` in the template, `:14` here, 0 tracked files in either).
+  Every module created from this template hits it. Note the validation itself succeeded — only the
+  closing `Add & Commit` step failed.
+- **HL7 Java validator (SU-TermServ)** — not Simplifier-bound, but already skipping for want of an
+  SU-TermServ client certificate. The workflow's own notice records the consequence: *"The IG
+  preview build still validates via tx.fhir.org."*
+
+**What this costs.** `module-release.yml` describes `validation.yml` as "the hard FHIR error gate,
+run on the release PR before the tag"; that gate is now absent, leaving the IG-Publisher
+buildability gate. The same comment records that `kerndatensatz-basis` "wires up neither MII
+reusable validation workflow", so this puts the module on the reference module's footing rather than
+below it. The test suite is unaffected — 107/107, because `toolchain-pins.test.mjs` returns early
+when the file is absent — and `module-release.yml` references it in comments only.
+
+**Follow-up:** five template documents (`workflows.md`, `release.md`, `maintenance.md`,
+`secrets.md`, `recipes/review-a-dependency-update.md`) still describe the workflow. They were left
+untouched: rewriting template-owned prose creates divergence the next template bump has to fight.
+② review whether the module wants its own note instead.
+
 ## Menu and page set — untouched by run 2, and that is correct (2026-09-02)
 
 The template's menu was substantially rebuilt — `feat(pages): implement the approved MII module
