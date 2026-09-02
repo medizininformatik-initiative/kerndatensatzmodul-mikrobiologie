@@ -13,9 +13,8 @@ Description: "Identifizierter Enterococcus ohne Vancomycinresistenz: VRE-Status 
 * identifier[analyseBefundCode].value = "reskat-vre-neg"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboratory studies (set)"
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
+* category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
+* category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = MII_CS_Mikrobio_Resistenzkategorie#vre-status "VRE-Status"
 * subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-03T15:00:00+01:00"

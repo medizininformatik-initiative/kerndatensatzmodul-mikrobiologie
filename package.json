@@ -1,11 +1,14 @@
 {
-  "name": "project",
-  "version": "2027.0.0-alpha.5",
-  "description": "Put a description here",
+  "name": "de.medizininformatikinitiative.kerndatensatz.mikrobiologie",
+  "version": "2027.0.0-alpha.6",
+  "description": "Core Dataset extension module Microbiology of the Medical Informatics Initiative: FHIR profiles for microbiological findings — culture, identification, susceptibility testing, molecular and antigen/antibody diagnostics.",
   "fhirVersions": [
     "4.0.1"
   ],
   "dependencies": {
-    "de.medizininformatikinitiative.kerndatensatz.laborbefund": "2026.0.3"
+    "de.medizininformatikinitiative.kerndatensatz.laborbefund": "2027.0.0-ballot.rc3",
+    "hl7.fhir.uv.crmi": "2.0.0",
+    "hl7.fhir.uv.xver-r5.r4": "0.1.0",
+    "hl7.fhir.uv.ips": "2.0.1"
   }
 }

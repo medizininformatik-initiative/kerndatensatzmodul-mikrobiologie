@@ -5,9 +5,8 @@ Usage: #example
 * identifier[analyseBefundCode].value = "v-empf-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboratory studies (set)"
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
+* category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
+* category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 // 89489-9 ist WIRKSTOFFSPEZIFISCH (Rifampicin), nicht generisch. Bis 2026-09-02 trug der
 // Code hier das Display "Antimicrobial susceptibility predicted from genotype" und behauptete
 // damit ein allgemeines Konzept, das er nicht kodiert. Das Beispiel zeigt folglich einen

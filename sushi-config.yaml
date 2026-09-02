@@ -139,10 +139,13 @@ jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/value
 # proper name, hence language-neutral. The module CONTENT stays MII content —
 # the artifact copyright labels in input/fsh/rulesets/crmi.fsh are unaffected.
 publisher:
-  name: NUM-DIZ
+  # Gate-A-Entscheidung 2026-09-02: Die Quelle nennt keinen Publisher, der Wert ist
+  # also gesetzt und nicht übernommen. Bis zur Ownership-Übergabe an NUM-DIZ zum
+  # 2027-01-01 (siehe SECURITY.md) ist die MII der Herausgeber.
+  name: Medizininformatik Initiative
   # Language-neutral URL: the footer's publisher link is the same on every
   # language's pages, so it must not pin one language's site.
-  url: https://www.netzwerk-universitaetsmedizin.de
+  url: https://www.medizininformatik-initiative.de
 
 # CRMI conformance: the IG resource claims the CRMI shareable, publishable and
 # computable ImplementationGuide profiles (for example, kerndatensatz-basis
@@ -290,7 +293,25 @@ dependencies:
   # ---- carried from the source, unchanged (sushi-config.yaml @ main fdf3190,
   #      and the published package de.medizininformatikinitiative.kerndatensatz
   #      .mikrobiologie@2027.0.0-alpha.5 pins the same version) ----
-  de.medizininformatikinitiative.kerndatensatz.laborbefund: 2026.0.3
+  # 2026-09-02: von 2026.0.3 auf 2027.0.0-ballot.rc2 gehoben. Der Paketname bleibt
+  # `…kerndatensatz.laborbefund`; rc1 war kurzzeitig als `…kerndatensatz.labor`
+  # veröffentlicht, das war ein Fehler und ist in rc2 korrigiert.
+  #
+  # Nicht brechend, was die Ableitung angeht: MII_PR_Labor_Laboruntersuchung und
+  # MII_PR_Labor_Laborbefund tragen unverändert die Canonicals
+  # .../modul-labor/StructureDefinition/ObservationLab bzw. .../DiagnosticReportLab.
+  #
+  # Der Grund für den Sprung: der neue Parent bindet Observation.code.coding an
+  # results-laboratory-PATHOLOGY-observations-uv-ips — den Namen, den IPS 2.0.x
+  # tatsächlich ausliefert. Damit entfällt der Zielkonflikt, der bisher zwang,
+  # entweder ein veraltetes IPS zu pinnen oder 120 nicht auflösbare Links in Kauf
+  # zu nehmen.
+  #
+  # Das category-Slicing hat sich mitgeändert: der Parent slict jetzt selbst
+  # (`laboruntersuchung` bzw. `laborbefund`) und legt seine Pflicht-Codings dort
+  # ab. Dieses Modul ergänzt seine mikrobiologischen Kategorien daneben, statt sie
+  # wie zuvor in den Parent-Slice hineinzuschreiben.
+  de.medizininformatikinitiative.kerndatensatz.laborbefund: 2027.0.0-ballot.rc3
   # ---- added by the migration: TEMPLATE MACHINERY, not source identity ----
   # Required by the CRMI profiles this IG now claims under meta.profile above.
   # Without it the three crmi-*implementationguide claims cannot resolve.
@@ -305,17 +326,18 @@ dependencies:
   # "A definition could not be found for Canonical URL
   # http://hl7.org/fhir/uv/xver/ValueSet/R5-observation-..."; with it, 0.
   hl7.fhir.uv.xver-r5.r4: 0.1.0
-  # International Patient Summary, pinned to 1.1.0 ON PURPOSE and NOT to the
-  # current 2.0.x. The binding is INHERITED from the parent module
-  # de.medizininformatikinitiative.kerndatensatz.laborbefund, which binds
-  # http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips.
-  # Measured 2026-08-25: that ValueSet exists in hl7.fhir.uv.ips#1.1.0 only - in
-  # 2.0.0/2.0.1 it was RENAMED to results-laboratory-pathology-observations-uv-ips.
-  # Consequently: no pin -> 120 broken links; pin 2.0.0 -> still 120; pin 1.1.0 -> 0.
-  # ① OPEN (Gate A): the rename belongs upstream in the Laborbefund module; this
-  # pin is a rendering workaround here, not a modelling statement. Drop it once
-  # the parent binds a ValueSet that current IPS still ships.
-  hl7.fhir.uv.ips: 1.1.0
+  # International Patient Summary, current 2.0.1. GATE-A DECISION 2026-09-02.
+  #
+  # This pin used to be a dilemma and no longer is. The old parent
+  # (…kerndatensatz.laborbefund@2026.0.3) bound
+  # results-laboratory-observations-uv-ips, which ships in IPS 1.1.0 only — 2.0.x
+  # renamed it to results-laboratory-PATHOLOGY-observations-uv-ips. Measured:
+  # no pin -> 120 broken links, 2.0.0 -> 120, 2.0.1 -> 120, 1.1.0 -> 0. Pinning
+  # 1.1.0 rendered cleanly but froze an obsolete IPS to hide an upstream defect.
+  #
+  # The parent bump above resolves it: the new module binds the name current IPS
+  # actually ships, so 2.0.1 and a clean render are no longer in conflict.
+  hl7.fhir.uv.ips: 2.0.1
   # ---- template pins NOT adopted (① decide at Gate A) ----
   # Each would change what this already-published module resolves against.
   # de.basisprofil.r4: 1.5.4                      # source pins it only transitively, via modul-labor

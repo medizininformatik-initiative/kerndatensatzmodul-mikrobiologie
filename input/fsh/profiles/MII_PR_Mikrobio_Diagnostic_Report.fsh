@@ -7,18 +7,22 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
 * insert Publisher
 * ^purpose = "Dieses Profil beschreibt den mikrobiologischen DiagnosticReport."
 * basedOn ..1
+// Der Parent slict DiagnosticReport.category selbst (Slice `v2-lab`,
+// kerndatensatzmodul-labor#66) und legt seine Pflicht-Codings dort ab. Dieses
+// Profil ergaenzt zwei EIGENSTAENDIGE Kategorien daneben — Mikrobiologie und,
+// optional, der Befundtyp.
+//
+// Kein eigenes Slicing auf `category` — das slict der Parent bereits (pattern auf
+// `$this`, offen). `contains` allein genuegt; siehe die Begruendung im RuleSet
+// MIKRO_OBSERVATION_COMMON, der dieselbe Stelle gleich behandelt.
 * category contains mibi-category 1..1 MS and mibi-sub-category 0..* MS
+// Ein Slice, ein fester Wert, keine Coding-Ebene — wie im RuleSet
+// MIKRO_OBSERVATION_COMMON und wie der Parent seinen eigenen Slice fuehrt.
+* category[mibi-category] = $v2-0074#MB
 * category[mibi-category] ^short = "Mikrobiologie-Kategorie"
 * category[mibi-category] ^definition = "Kategorie-Slice für mikrobiologische Befunde"
-* category[mibi-category] ^patternCodeableConcept.coding[+] = $v2-0074#MB //Microbiology
-* category[mibi-category].coding ^slicing.discriminator.type = #pattern
-* category[mibi-category].coding ^slicing.discriminator.path = "$this"
-* category[mibi-category].coding ^slicing.rules = #open
-* category[mibi-category].coding contains v2-microbiology 1..1 MS and loinc-microbiology-studies 0..1 MS
-* category[mibi-category].coding[v2-microbiology] = $v2-0074#MB // "Microbiology"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 // "Microbiology studies (set)"
 * category[mibi-sub-category] ^short = "Mikrobiologie-Kategorie LOINC"
-* category[mibi-sub-category] ^definition = "Kategorie-Slice für die LOINC-Kodierung von mikrobiologischen Befunden. Mehrfachangabe zulaessig, wenn der Befund mehrere Studientypen umfasst, z. B. bakteriologisch und mykologisch. Umfasst der Befund keine benennbaren Studientypen oder soll er nur allgemein eingeordnet werden, entfaellt der Subtyp; die allgemeine Einordnung erfolgt ueber category[mibi-category] mit MB und 18725-2."
+* category[mibi-sub-category] ^definition = "Kategorie-Slice für die LOINC-Kodierung von mikrobiologischen Befunden. Mehrfachangabe zulaessig, wenn der Befund mehrere Studientypen umfasst, z. B. bakteriologisch und mykologisch. Umfasst der Befund keine benennbaren Studientypen oder soll er nur allgemein eingeordnet werden, entfaellt der Subtyp; die allgemeine Einordnung erfolgt dann allein ueber category[mibi-category] mit MB."
 * category[mibi-sub-category] from MII_VS_Mikrobio_Befundtyp_LOINC (required)
 * resultsInterpreter MS
 * specimen ^min = 0

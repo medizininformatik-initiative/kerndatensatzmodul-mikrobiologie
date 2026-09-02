@@ -11,9 +11,8 @@ Description: "Workflow-Kette VRE, Schritt 3: Vancomycin-Empfindlichkeitstestung 
 * identifier[analyseBefundCode].value = "wf-vre-3"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboratory studies (set)"
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Microbiology studies (set)"
+* category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
+* category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#524-9 "Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)"
 * subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-03T14:00:00+01:00"
