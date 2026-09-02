@@ -1,13 +1,18 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Split from the former combined search-parameters-and-operations.md per the
-     TF-KDS-agreed menu structure (one page per artifact type).
+<!-- Table GENERATED from the SearchParameter resources.
      German mirror: input/translations/de/pagecontent/search-parameters.md. -->
 ### Search Parameters
 
-This page lists the module-specific FHIR search parameters of the
-**Microbiology** module (naming convention `MII_SP_<Module>_<Name>`), where
-defined. Cross-module search parameters are defined by the Meta module.
+The **Microbiology** module defines the following search parameters beyond the
+FHIR base set. All of them apply to `Observation`.
 
-> [TODO: List the search parameters — or remove this page if your module
-> defines none.]
-{: .ig-highlight .ig-highlight-grey}
+<!-- Beim Build aus `site.data.resources` erzeugt — siehe die ausfuehrliche
+     Begruendung in value-sets.md. -->
+
+| Parameter | Purpose |
+|---|---|
+{%- for r in site.data.resources %}
+{%- if r[0] contains 'SearchParameter/' %}
+| [{{ r[1].title | replace: '[', '' | replace: ']', '' }}]({{ r[1].path }}) | {{ r[1].description | default: '&mdash;' }} |
+{%- endif %}
+{%- endfor %}

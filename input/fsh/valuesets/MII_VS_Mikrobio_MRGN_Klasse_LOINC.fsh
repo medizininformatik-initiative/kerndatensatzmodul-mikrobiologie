@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_MRGN_Klasse_LOINC
 Id: mii-vs-mikrobio-mrgn-klasse-loinc
 Title: "MII VS Mikrobio MRGN Klasse [LOINC]"
+Description: "Ergebnis-ValueSet für die MRGN-Klassifikation: 2MRGN, 3MRGN und 4MRGN nach RKI-Kategorisierung. Die negative Einstufung steht im modul­eigenen CodeSystem, da die LOINC-AnswerList sie nicht führt."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED
 Id: mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed
 Title: "MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]"
+Description: "Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren zur Identifikation eines Erregers ohne vordefiniertes Ziel, etwa Mikroskopie oder MALDI-TOF."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

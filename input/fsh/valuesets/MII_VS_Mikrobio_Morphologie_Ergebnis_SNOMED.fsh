@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED
 Id: mii-vs-mikrobio-morphologie-ergebnis-snomed
 Title: "MII VS Mikrobio Morphologie Ergebnis [SNOMED]"
+Description: "Ergebnis-ValueSet für die Mikroskopie: mikroskopisch beobachtete Morphologie ohne taxonomische Zuordnung, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

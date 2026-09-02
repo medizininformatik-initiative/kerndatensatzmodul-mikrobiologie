@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED
 Id: mii-vs-mikrobio-spezifische-bestimmung-methode-snomed
 Title: "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]"
+Description: "Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahren des zielgerichteten Erregernachweises, etwa Amplifikation, Immunoassay oder Agglutination."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

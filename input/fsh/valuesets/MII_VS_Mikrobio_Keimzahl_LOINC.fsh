@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Keimzahl_LOINC
 Id: mii-vs-mikrobio-keimzahl-loinc
 Title: "MII VS Mikrobio Keimzahl [LOINC]"
+Description: "Tests-ValueSet für die Keimzahlbestimmung: LOINC-Codes für die quantitative Bestimmung lebensfähiger Mikroorganismen."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

@@ -1,13 +1,17 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung von input/pagecontent/search-parameters.md
-     (aufgeteilt aus der früheren Kombi-Seite
-     search-parameters-and-operations.md). -->
-### Suchparameter
+<!-- Tabelle GENERIERT aus den SearchParameter-Ressourcen. -->
+### Search Parameters
 
-Diese Seite listet die modul-spezifischen FHIR-Suchparameter des Moduls
-**Mikrobiologie** (Namenskonvention `MII_SP_<Modul>_<Name>`), sofern
-definiert. Modulübergreifende Suchparameter definiert das Meta-Modul.
+Das Modul **Mikrobiologie** definiert die folgenden Suchparameter über die
+FHIR-Basisparameter hinaus. Alle gelten für `Observation`.
 
-> [TODO: Listen Sie die Suchparameter auf — oder entfernen Sie diese Seite,
-> wenn Ihr Modul keine definiert.]
-{: .ig-highlight .ig-highlight-grey}
+<!-- Beim Build aus `site.data.resources` erzeugt — siehe die ausfuehrliche
+     Begruendung in value-sets.md. -->
+
+| Parameter | Zweck |
+|---|---|
+{%- for r in site.data.resources %}
+{%- if r[0] contains 'SearchParameter/' %}
+| [{{ r[1].title | replace: '[', '' | replace: ']', '' }}]({{ r[1].path }}) | {{ r[1].description | default: '&mdash;' }} |
+{%- endif %}
+{%- endfor %}
