@@ -26,7 +26,7 @@ Suche nach der Interpretation einer mikrobiologischen Observation.
   "version" : "2027.0.0-alpha.6",
   "name" : "ObservationInterpretation",
   "status" : "active",
-  "date" : "2026-09-02T09:13:42+00:00",
+  "date" : "2026-09-02T09:46:11+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{

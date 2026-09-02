@@ -84,7 +84,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-ext-R5-Obser
   "title" : "R5: Triggering observation(s) (new)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T09:13:42+00:00",
+  "date" : "2026-09-02T09:46:11+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{

@@ -27,7 +27,7 @@ Suche nach der Observation, die eine mikrobiologische Observation ausgelöst hat
   "name" : "MII_SP_Mikrobio_Observation_TriggeredBy",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T09:13:42+00:00",
+  "date" : "2026-09-02T09:46:11+00:00",
   "publisher" : "NUM-DIZ",
   "_publisher" : {
     "extension" : [{
