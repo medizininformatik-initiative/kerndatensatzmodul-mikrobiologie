@@ -717,7 +717,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED",
     "title" : "MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]",
-    "description" : "",
+    "description" : "Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren zur Identifikation eines Erregers ohne vordefiniertes Ziel, etwa Mikroskopie oder MALDI-TOF.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -729,7 +729,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED",
     "title" : "MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]",
-    "description" : "",
+    "description" : "Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkung auf einen vordefinierten Erreger, einschließlich aerober und anaerober Bebrütung.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -741,7 +741,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED",
     "title" : "MII VS Mikrobio Antigen Antikoerper Methode [SNOMED]",
-    "description" : "",
+    "description" : "Methoden-ValueSet für quantitative Antigen- und Antikörpertests sowie für die Aviditätsbestimmung: immunologische Nachweisverfahren.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -754,7 +754,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM",
     "title" : "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]",
-    "description" : "",
+    "description" : "Einheiten-ValueSet für quantitative Antigen- und Antikörpertests (UCUM). Bindet Observation.valueQuantity.code.",
     "systems" : ["http://unitsofmeasure.org"],
     "uses" : {
     },
@@ -766,7 +766,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC",
     "title" : "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]",
-    "description" : "",
+    "description" : "Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für die Messung erregerspezifischer Antigene oder Antikörper.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -778,7 +778,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Aviditaet_Ergebnis",
     "title" : "MII VS Mikrobio Aviditaet Ergebnis",
-    "description" : "",
+    "description" : "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, intermediär oder hoch. Niedrige Avidität spricht für eine frische Infektion.",
     "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"],
     "uses" : {
     },
@@ -790,7 +790,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Aviditaet_Tests_LOINC",
     "title" : "MII VS Mikrobio Aviditaet Tests [LOINC]",
-    "description" : "",
+    "description" : "Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests einschließlich des Zielantigens.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -802,7 +802,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Barlett_Score_LOINC",
     "title" : "MII VS Mikrobio Barlett Score [LOINC]",
-    "description" : "",
+    "description" : "Ergebnis-ValueSet für den Barlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -826,7 +826,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_CT_Wert_LOINC",
     "title" : "MII VS Mikrobio CT Wert [LOINC]",
-    "description" : "",
+    "description" : "Tests-ValueSet für den Ct-Wert: LOINC-Codes mit der Eigenschaft Zyklusschwellenwert bei Nukleinsäurenachweisen.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -869,7 +869,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Detected_Not_Detected_SNOMED",
     "title" : "MII VS Mikrobio Detected Not Detected [SNOMED]",
-    "description" : "",
+    "description" : "Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder nicht nachgewiesen. Ein unbestimmbares Ergebnis wird nicht hierüber, sondern über Observation.dataAbsentReason abgebildet.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -883,7 +883,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM",
     "title" : "MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]",
-    "description" : "",
+    "description" : "Einheiten-ValueSet für die phänotypische Empfindlichkeitstestung (UCUM): minimale Hemmkonzentration in mg/L oder Hemmhofdurchmesser in mm.",
     "systems" : ["http://unitsofmeasure.org"],
     "uses" : {
     },
@@ -895,7 +895,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC",
     "title" : "MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]",
-    "description" : "",
+    "description" : "Tests-ValueSet für die voraussichtliche Empfindlichkeit: LOINC-Codes für die aus dem Genotyp abgeleitete erwartete Wirksamkeit einer antimikrobiellen Substanz.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -907,7 +907,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC",
     "title" : "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]",
-    "description" : "",
+    "description" : "Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der getesteten antimikrobiellen Substanz.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -919,7 +919,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM",
     "title" : "MII VS Mikrobio Keimzahl Einheiten [UCUM]",
-    "description" : "",
+    "description" : "Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse.",
     "systems" : ["http://unitsofmeasure.org"],
     "uses" : {
     },
@@ -931,7 +931,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Keimzahl_LOINC",
     "title" : "MII VS Mikrobio Keimzahl [LOINC]",
-    "description" : "",
+    "description" : "Tests-ValueSet für die Keimzahlbestimmung: LOINC-Codes für die quantitative Bestimmung lebensfähiger Mikroorganismen.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -956,7 +956,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM",
     "title" : "MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]",
-    "description" : "",
+    "description" : "Einheiten-ValueSet für die molekulare Pathogenlast (UCUM): Konzentrationsangaben wie Kopien pro Milliliter.",
     "systems" : ["http://unitsofmeasure.org"],
     "uses" : {
     },
@@ -968,7 +968,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED",
     "title" : "MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]",
-    "description" : "",
+    "description" : "Methoden-ValueSet für die molekulare Pathogenlast: Amplifikationsverfahren zur Quantifizierung von Erregernukleinsäure.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -980,7 +980,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC",
     "title" : "MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]",
-    "description" : "",
+    "description" : "Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für die Nukleinsäurekonzentration eines Erregers.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -992,7 +992,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED",
     "title" : "MII VS Mikrobio Morphologie Ergebnis [SNOMED]",
-    "description" : "",
+    "description" : "Ergebnis-ValueSet für die Mikroskopie: mikroskopisch beobachtete Morphologie ohne taxonomische Zuordnung, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -1004,7 +1004,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Morphologie_Methode_SNOMED",
     "title" : "MII VS Mikrobio Morphologie Methode [SNOMED]",
-    "description" : "",
+    "description" : "Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich der eingesetzten Färbetechnik.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -1016,7 +1016,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_MRGN_Klasse_LOINC",
     "title" : "MII VS Mikrobio MRGN Klasse [LOINC]",
-    "description" : "",
+    "description" : "Ergebnis-ValueSet für die MRGN-Klassifikation: 2MRGN, 3MRGN und 4MRGN nach RKI-Kategorisierung. Die negative Einstufung steht im modul­eigenen CodeSystem, da die LOINC-AnswerList sie nicht führt.",
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis",
     "http://loinc.org"],
     "uses" : {
@@ -1029,7 +1029,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Organismen_SNOMEDCT",
     "title" : "MII VS Mikrobio Organismen [SNOMED CT]",
-    "description" : "",
+    "description" : "Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Erreger stammen kann. Wird nicht direkt gebunden, sondern in die Ergebnis-ValueSets der Bestimmung eingebunden.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -1065,7 +1065,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC",
     "title" : "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]",
-    "description" : "",
+    "description" : "Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den Nachweis von Resistenzgenen, Resistenzproteinen und funktionalen Resistenztests.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -1101,7 +1101,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED",
     "title" : "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]",
-    "description" : "",
+    "description" : "Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahren des zielgerichteten Erregernachweises, etwa Amplifikation, Immunoassay oder Agglutination.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -1149,7 +1149,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Susceptibility",
     "title" : "MII VS Mikrobio Susceptibility",
-    "description" : "",
+    "description" : "Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategorien sensibel, intermediär, sensibel bei erhöhter Exposition, resistent und nicht sensibel.",
     "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
     "http://snomed.info/sct"],
     "uses" : {
@@ -1162,7 +1162,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Susceptibility_NORM",
     "title" : "MII VS Mikrobio Susceptibility Norm",
-    "description" : "",
+    "description" : "Norm-ValueSet für die Empfindlichkeitstestung: das Normsystem, auf dessen Grenzwerten eine Kategorie beruht. Gebunden an die Extension MII_EX_Mikrobio_Empfindlichkeit_Norm.",
     "systems" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm"],
     "uses" : {
     },
@@ -1174,7 +1174,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Titer_Methode_SNOMED",
     "title" : "MII VS Mikrobio Titer Methode [SNOMED]",
-    "description" : "",
+    "description" : "Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreihen.",
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
@@ -1186,7 +1186,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Titer_Tests_LOINC",
     "title" : "MII VS Mikrobio Titer Tests [LOINC]",
-    "description" : "",
+    "description" : "Tests-ValueSet für die Titerbestimmung: LOINC-Codes für semiquantitative Messungen aus Verdünnungsreihen.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -1198,7 +1198,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Virulenz_LOINC",
     "title" : "MII VS Mikrobio Virulenz [LOINC]",
-    "description" : "",
+    "description" : "Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },
@@ -1210,7 +1210,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit",
     "title" : "MII VS Mikrobio Voraussichtliche Empfindlichkeit",
-    "description" : "",
+    "description" : "Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypischen Nachweisen abgeleitete erwartete Kategorie sensibel, intermediär oder resistent.",
     "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"],
     "uses" : {
     },

@@ -196,7 +196,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   "title" : "MII Implementation Guide Microbiology",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T21:10:40+00:00",
+  "date" : "2026-09-02T21:48:21+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -2046,6 +2046,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed"
       },
       "name" : "MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]",
+      "description" : "Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren zur Identifikation eines Erregers ohne vordefiniertes Ziel, etwa Mikroskopie oder MALDI-TOF.",
       "exampleBoolean" : false
     },
     {
@@ -2061,6 +2062,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed"
       },
       "name" : "MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]",
+      "description" : "Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkung auf einen vordefinierten Erreger, einschließlich aerober und anaerober Bebrütung.",
       "exampleBoolean" : false
     },
     {
@@ -2076,6 +2078,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-antigen-antikoerper-methode-snomed"
       },
       "name" : "MII VS Mikrobio Antigen Antikoerper Methode [SNOMED]",
+      "description" : "Methoden-ValueSet für quantitative Antigen- und Antikörpertests sowie für die Aviditätsbestimmung: immunologische Nachweisverfahren.",
       "exampleBoolean" : false
     },
     {
@@ -2091,6 +2094,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"
       },
       "name" : "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]",
+      "description" : "Einheiten-ValueSet für quantitative Antigen- und Antikörpertests (UCUM). Bindet Observation.valueQuantity.code.",
       "exampleBoolean" : false
     },
     {
@@ -2106,6 +2110,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"
       },
       "name" : "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]",
+      "description" : "Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für die Messung erregerspezifischer Antigene oder Antikörper.",
       "exampleBoolean" : false
     },
     {
@@ -2121,6 +2126,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-aviditaet-ergebnis"
       },
       "name" : "MII VS Mikrobio Aviditaet Ergebnis",
+      "description" : "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, intermediär oder hoch. Niedrige Avidität spricht für eine frische Infektion.",
       "exampleBoolean" : false
     },
     {
@@ -2136,6 +2142,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc"
       },
       "name" : "MII VS Mikrobio Aviditaet Tests [LOINC]",
+      "description" : "Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests einschließlich des Zielantigens.",
       "exampleBoolean" : false
     },
     {
@@ -2151,6 +2158,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-barlett-score-loinc"
       },
       "name" : "MII VS Mikrobio Barlett Score [LOINC]",
+      "description" : "Ergebnis-ValueSet für den Barlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten.",
       "exampleBoolean" : false
     },
     {
@@ -2182,6 +2190,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-ct-wert-loinc"
       },
       "name" : "MII VS Mikrobio CT Wert [LOINC]",
+      "description" : "Tests-ValueSet für den Ct-Wert: LOINC-Codes mit der Eigenschaft Zyklusschwellenwert bei Nukleinsäurenachweisen.",
       "exampleBoolean" : false
     },
     {
@@ -2213,6 +2222,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"
       },
       "name" : "MII VS Mikrobio Detected Not Detected [SNOMED]",
+      "description" : "Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder nicht nachgewiesen. Ein unbestimmbares Ergebnis wird nicht hierüber, sondern über Observation.dataAbsentReason abgebildet.",
       "exampleBoolean" : false
     },
     {
@@ -2228,6 +2238,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum"
       },
       "name" : "MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]",
+      "description" : "Einheiten-ValueSet für die phänotypische Empfindlichkeitstestung (UCUM): minimale Hemmkonzentration in mg/L oder Hemmhofdurchmesser in mm.",
       "exampleBoolean" : false
     },
     {
@@ -2243,6 +2254,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"
       },
       "name" : "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]",
+      "description" : "Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der getesteten antimikrobiellen Substanz.",
       "exampleBoolean" : false
     },
     {
@@ -2258,6 +2270,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"
       },
       "name" : "MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]",
+      "description" : "Tests-ValueSet für die voraussichtliche Empfindlichkeit: LOINC-Codes für die aus dem Genotyp abgeleitete erwartete Wirksamkeit einer antimikrobiellen Substanz.",
       "exampleBoolean" : false
     },
     {
@@ -2273,6 +2286,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"
       },
       "name" : "MII VS Mikrobio Keimzahl Einheiten [UCUM]",
+      "description" : "Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse.",
       "exampleBoolean" : false
     },
     {
@@ -2288,6 +2302,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-keimzahl-loinc"
       },
       "name" : "MII VS Mikrobio Keimzahl [LOINC]",
+      "description" : "Tests-ValueSet für die Keimzahlbestimmung: LOINC-Codes für die quantitative Bestimmung lebensfähiger Mikroorganismen.",
       "exampleBoolean" : false
     },
     {
@@ -2319,6 +2334,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum"
       },
       "name" : "MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]",
+      "description" : "Einheiten-ValueSet für die molekulare Pathogenlast (UCUM): Konzentrationsangaben wie Kopien pro Milliliter.",
       "exampleBoolean" : false
     },
     {
@@ -2334,6 +2350,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed"
       },
       "name" : "MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]",
+      "description" : "Methoden-ValueSet für die molekulare Pathogenlast: Amplifikationsverfahren zur Quantifizierung von Erregernukleinsäure.",
       "exampleBoolean" : false
     },
     {
@@ -2349,6 +2366,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc"
       },
       "name" : "MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]",
+      "description" : "Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für die Nukleinsäurekonzentration eines Erregers.",
       "exampleBoolean" : false
     },
     {
@@ -2364,6 +2382,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed"
       },
       "name" : "MII VS Mikrobio Morphologie Ergebnis [SNOMED]",
+      "description" : "Ergebnis-ValueSet für die Mikroskopie: mikroskopisch beobachtete Morphologie ohne taxonomische Zuordnung, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen.",
       "exampleBoolean" : false
     },
     {
@@ -2379,6 +2398,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"
       },
       "name" : "MII VS Mikrobio Morphologie Methode [SNOMED]",
+      "description" : "Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich der eingesetzten Färbetechnik.",
       "exampleBoolean" : false
     },
     {
@@ -2394,6 +2414,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc"
       },
       "name" : "MII VS Mikrobio MRGN Klasse [LOINC]",
+      "description" : "Ergebnis-ValueSet für die MRGN-Klassifikation: 2MRGN, 3MRGN und 4MRGN nach RKI-Kategorisierung. Die negative Einstufung steht im modul­eigenen CodeSystem, da die LOINC-AnswerList sie nicht führt.",
       "exampleBoolean" : false
     },
     {
@@ -2409,6 +2430,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-organismen-snomedct"
       },
       "name" : "MII VS Mikrobio Organismen [SNOMED CT]",
+      "description" : "Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Erreger stammen kann. Wird nicht direkt gebunden, sondern in die Ergebnis-ValueSets der Bestimmung eingebunden.",
       "exampleBoolean" : false
     },
     {
@@ -2456,6 +2478,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc"
       },
       "name" : "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]",
+      "description" : "Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den Nachweis von Resistenzgenen, Resistenzproteinen und funktionalen Resistenztests.",
       "exampleBoolean" : false
     },
     {
@@ -2503,6 +2526,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed"
       },
       "name" : "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]",
+      "description" : "Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahren des zielgerichteten Erregernachweises, etwa Amplifikation, Immunoassay oder Agglutination.",
       "exampleBoolean" : false
     },
     {
@@ -2566,6 +2590,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-susceptibility"
       },
       "name" : "MII VS Mikrobio Susceptibility",
+      "description" : "Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategorien sensibel, intermediär, sensibel bei erhöhter Exposition, resistent und nicht sensibel.",
       "exampleBoolean" : false
     },
     {
@@ -2581,6 +2606,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-susceptibility-norm"
       },
       "name" : "MII VS Mikrobio Susceptibility Norm",
+      "description" : "Norm-ValueSet für die Empfindlichkeitstestung: das Normsystem, auf dessen Grenzwerten eine Kategorie beruht. Gebunden an die Extension MII_EX_Mikrobio_Empfindlichkeit_Norm.",
       "exampleBoolean" : false
     },
     {
@@ -2596,6 +2622,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-titer-methode-snomed"
       },
       "name" : "MII VS Mikrobio Titer Methode [SNOMED]",
+      "description" : "Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreihen.",
       "exampleBoolean" : false
     },
     {
@@ -2611,6 +2638,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-titer-tests-loinc"
       },
       "name" : "MII VS Mikrobio Titer Tests [LOINC]",
+      "description" : "Tests-ValueSet für die Titerbestimmung: LOINC-Codes für semiquantitative Messungen aus Verdünnungsreihen.",
       "exampleBoolean" : false
     },
     {
@@ -2626,6 +2654,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-virulenz-loinc"
       },
       "name" : "MII VS Mikrobio Virulenz [LOINC]",
+      "description" : "Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten.",
       "exampleBoolean" : false
     },
     {
@@ -2641,6 +2670,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit"
       },
       "name" : "MII VS Mikrobio Voraussichtliche Empfindlichkeit",
+      "description" : "Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypischen Nachweisen abgeleitete erwartete Kategorie sensibel, intermediär oder resistent.",
       "exampleBoolean" : false
     },
     {

@@ -11,6 +11,9 @@
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc | *Version*:2027.0.0-alpha.6 |
 | Active as of 2026-09-02 | *Computable Name*:MII_VS_Mikrobio_Aviditaet_Tests_LOINC |
 
+ 
+Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests einschließlich des Zielantigens. 
+
  **References** 
 
 * [MII PR Mikrobio Aviditaet](StructureDefinition-mii-pr-mikrobio-aviditaet.md)
@@ -39,7 +42,7 @@
   "title" : "MII VS Mikrobio Aviditaet Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T21:10:40+00:00",
+  "date" : "2026-09-02T21:48:21+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -48,6 +51,7 @@
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
+  "description" : "Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests einschließlich des Zielantigens.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

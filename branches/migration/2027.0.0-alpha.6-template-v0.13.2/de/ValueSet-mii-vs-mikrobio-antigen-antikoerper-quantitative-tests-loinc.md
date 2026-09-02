@@ -11,6 +11,9 @@
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc | *Version*:2027.0.0-alpha.6 |
 | Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC |
 
+ 
+Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für die Messung erregerspezifischer Antigene oder Antikörper. 
+
  **References** 
 
 * [MII PR Mikrobio Antigen Antikoerper Quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md)
@@ -39,7 +42,7 @@
   "title" : "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T21:10:40+00:00",
+  "date" : "2026-09-02T21:48:21+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -48,6 +51,7 @@
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
+  "description" : "Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für die Messung erregerspezifischer Antigene oder Antikörper.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

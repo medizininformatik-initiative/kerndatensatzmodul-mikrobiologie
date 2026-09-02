@@ -7,7 +7,12 @@
 
 ### Search Parameters
 
-This page lists the module-specific FHIR search parameters of the **Microbiology** module (naming convention `MII_SP_<Module>_<Name>`), where defined. Cross-module search parameters are defined by the Meta module.
+The **Microbiology** module defines the following search parameters beyond the FHIR base set. All of them apply to `Observation`.
 
-> [TODO: List the search parameters — or remove this page if your module defines none.]
+| | |
+| :--- | :--- |
+|  | Suche nach der Interpretation einer mikrobiologischen Observation. |
+|  | Suchparameter für die Normkategorie der Empfindlichkeitsextension |
+|  | Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-Werts von MII_PR_Mikrobio_Titer; der Zaehler ist dort fest 1. Ein groesserer Nenner bedeutet einen hoeheren Titer, z. B. findet ?titer=gt160 alle Titer oberhalb von 1:160. |
+|  | Suche nach der Observation, die eine mikrobiologische Observation ausgelöst hat. |
 

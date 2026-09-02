@@ -338,19 +338,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
 <!-- markdownlint-disable MD041 -->
-<!-- Split from the former combined search-parameters-and-operations.md per the
-     TF-KDS-agreed menu structure (one page per artifact type).
+<!-- Table GENERATED from the SearchParameter resources.
      German mirror: input/translations/de/pagecontent/search-parameters.md. -->
 <h3 id="search-parameters">Search Parameters</h3>
 
-<p>This page lists the module-specific FHIR search parameters of the
-<strong>Microbiology</strong> module (naming convention <code class="language-plaintext highlighter-rouge">MII_SP_&lt;Module&gt;_&lt;Name&gt;</code>), where
-defined. Cross-module search parameters are defined by the Meta module.</p>
+<p>The <strong>Microbiology</strong> module defines the following search parameters beyond the
+FHIR base set. All of them apply to <code class="language-plaintext highlighter-rouge">Observation</code>.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: List the search parameters — or remove this page if your module
-defines none.]</p>
-</blockquote>
+<!-- Beim Build aus `site.data.resources` erzeugt — siehe die ausfuehrliche
+     Begruendung in value-sets.md. -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="SearchParameter-ObservationInterpretation.html"></a></td>
+      <td>Suche nach der Interpretation einer mikrobiologischen Observation.</td>
+    </tr>
+    <tr>
+      <td><a href="SearchParameter-mii-sp-mikrobio-interpretation.html"></a></td>
+      <td>Suchparameter für die Normkategorie der Empfindlichkeitsextension</td>
+    </tr>
+    <tr>
+      <td><a href="SearchParameter-mii-sp-mikrobio-observation-titer.html"></a></td>
+      <td>Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-Werts von MII_PR_Mikrobio_Titer; der Zaehler ist dort fest 1. Ein groesserer Nenner bedeutet einen hoeheren Titer, z. B. findet ?titer=gt160 alle Titer oberhalb von 1:160.</td>
+    </tr>
+    <tr>
+      <td><a href="SearchParameter-mii-sp-mikrobio-observation-triggered-by.html"></a></td>
+      <td>Suche nach der Observation, die eine mikrobiologische Observation ausgelöst hat.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -377,7 +400,7 @@ defines none.]</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 21:10+0000">2026-09-02</span>
+          Generated <span title="Wed, Sep 2, 2026 21:48+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

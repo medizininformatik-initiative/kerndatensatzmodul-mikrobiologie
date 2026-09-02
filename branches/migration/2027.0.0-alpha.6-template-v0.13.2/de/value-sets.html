@@ -315,31 +315,212 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 </p>
 
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung von input/pagecontent/value-sets.md (aufgeteilt aus
-     der früheren Seite terminology.md gemäß der TF-KDS-abgestimmten Menüstruktur).
-     Der IG-Publisher listet die ValueSets auf den Artefakt-Seiten automatisch;
-     hier stehen die MII-Hinweise dazu. -->
-<h3 id="valuesets">ValueSets</h3>
+<!-- Deutsche Übersetzung von input/pagecontent/value-sets.md. Die Tabelle ist
+     GENERIERT aus den Descriptions der ValueSets und aus den Profil-Bindungen,
+     die sie verwenden — bei neuen ValueSets oder geänderten Bindungen neu
+     erzeugen. -->
+<h3 id="value-sets">Value Sets</h3>
 
-<p>Diese Seite beschreibt die ValueSets des Moduls <strong>Mikrobiologie</strong>
-(Namenskonvention <code class="language-plaintext highlighter-rouge">MII_VS_&lt;Modul&gt;_&lt;Name&gt;</code>). Allgemeine Hinweise zur Verwendung
-von Codes: siehe
-<a href="http://hl7.org/fhir/R4/terminologies.html">FHIR Terminology</a>; die
-zugrunde liegenden CodeSystems beschreibt die Seite
-<a href="code-systems.html">CodeSystems</a>.</p>
+<p>Diese Seite listet die ValueSets des Moduls <strong>Mikrobiologie</strong> (Namenskonvention
+<code class="language-plaintext highlighter-rouge">MII_VS_&lt;Modul&gt;_&lt;Name&gt;</code>). Jede Zeile nennt den Zweck; die Codes und die
+Expansion stehen hinter dem Link. Die zugrunde liegenden CodeSysteme sind auf der
+Seite <a href="code-systems.html">Code Systems</a> beschrieben, allgemeine Hinweise zur
+Verwendung von Codes unter
+<a href="http://hl7.org/fhir/R4/terminologies.html">FHIR Terminology</a>.</p>
 
-<p class="bg-info"><strong>Expansionen:</strong> ValueSet-Expansionen dieses Leitfadens werden über einen
-FHIR-Terminologieserver erzeugt — über SU-TermServ, sofern das
-Client-Zertifikat konfiguriert ist, sonst über den öffentlichen HL7-Server
-<code class="language-plaintext highlighter-rouge">tx.fhir.org</code> (dann expandieren einige KDS-spezifische ValueSets ggf. nicht
-vollständig).</p>
+<p class="bg-info"><strong>Expansionen:</strong> Die Expansionen in diesem Leitfaden erzeugt ein
+FHIR-Terminologieserver — SU-TermServ, sofern das Client-Zertifikat konfiguriert
+ist, sonst der öffentliche HL7-Server <code class="language-plaintext highlighter-rouge">tx.fhir.org</code> (dann expandieren manche
+KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Falls Ihr Modul SNOMED CT nutzt, geben Sie die verwendete
-Edition/Version an. Listen Sie die modul-eigenen ValueSets auf oder verweisen
-Sie auf die automatisch erzeugte Artefakt-Liste — oder entfernen Sie diese
-Seite, wenn Ihr Modul keine definiert.]</p>
-</blockquote>
+<!-- Die Tabelle wird beim Build aus `site.data.resources` erzeugt, also aus den
+     ValueSets selbst. Neue ValueSets erscheinen ohne Zutun; der Zweck stammt aus
+     ihrer `description`. Die eckigen Klammern in Titeln wie "… [SNOMED]" wuerden
+     den Markdown-Link zerbrechen, daher das `replace`.
+     Die Descriptions sind DEUTSCH (bewusste Entscheidung 2026-09-02, Konsistenz
+     mit den uebrigen Ressourcen) und lassen sich nicht uebersetzen: package.db
+     kennt keine Sprachspalte, und ein ValueSet-`.po` wird vom Publisher
+     ignoriert (docs/recipes/add-translation.md). Sie stehen daher in beiden
+     Sprachfassungen gleich. -->
+
+<table>
+  <thead>
+    <tr>
+      <th>ValueSet</th>
+      <th>Zweck</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">MII VS Labor Laborergebnis Semiquantitativ</a></td>
+      <td>Kodierung für semi-quantitative Laborergebnisse</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed.html">MII VS Mikrobio Allgemeine Bestimmung Ergebnis SNOMED</a></td>
+      <td>Ergebnis-ValueSet fuer die allgemeine Bestimmung: der identifizierte Mikroorganismus oder das negative Ergebnis, wenn kein Erreger identifiziert wurde.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html">MII VS Mikrobio Allgemeine Bestimmung Methode SNOMED</a></td>
+      <td>Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren zur Identifikation eines Erregers ohne vordefiniertes Ziel, etwa Mikroskopie oder MALDI-TOF.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html">MII VS Mikrobio Allgemeine Kultur Methode SNOMED</a></td>
+      <td>Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkung auf einen vordefinierten Erreger, einschließlich aerober und anaerober Bebrütung.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html">MII VS Mikrobio Antigen Antikoerper Methode SNOMED</a></td>
+      <td>Methoden-ValueSet für quantitative Antigen- und Antikörpertests sowie für die Aviditätsbestimmung: immunologische Nachweisverfahren.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum.html">MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten UCUM</a></td>
+      <td>Einheiten-ValueSet für quantitative Antigen- und Antikörpertests (UCUM). Bindet Observation.valueQuantity.code.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc.html">MII VS Mikrobio Antigen Antikoerper Quantitative Tests LOINC</a></td>
+      <td>Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für die Messung erregerspezifischer Antigene oder Antikörper.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-aviditaet-ergebnis.html">MII VS Mikrobio Aviditaet Ergebnis</a></td>
+      <td>Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, intermediär oder hoch. Niedrige Avidität spricht für eine frische Infektion.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-aviditaet-tests-loinc.html">MII VS Mikrobio Aviditaet Tests LOINC</a></td>
+      <td>Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests einschließlich des Zielantigens.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-barlett-score-loinc.html">MII VS Mikrobio Barlett Score LOINC</a></td>
+      <td>Ergebnis-ValueSet für den Barlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-befundtyp-loinc.html">MII VS Mikrobio Befundtyp LOINC</a></td>
+      <td>Sepzalisierte Kodierung von mikrobiologischen Befunden</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-ct-wert-loinc.html">MII VS Mikrobio CT Wert LOINC</a></td>
+      <td>Tests-ValueSet für den Ct-Wert: LOINC-Codes mit der Eigenschaft Zyklusschwellenwert bei Nukleinsäurenachweisen.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-data-absent-reason.html">MII VS Mikrobio Data Absent Reason</a></td>
+      <td>Gruende fuer ein fehlendes Untersuchungsergebnis. Ergaenzt die FHIR-Basiscodes um das unbestimmbare Ergebnis, das zuvor ueber value[x] kodiert wurde.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html">MII VS Mikrobio Detected Not Detected SNOMED</a></td>
+      <td>Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder nicht nachgewiesen. Ein unbestimmbares Ergebnis wird nicht hierüber, sondern über Observation.dataAbsentReason abgebildet.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum.html">MII VS Mikrobio Empfindlichkeit Einheiten UCUM</a></td>
+      <td>Einheiten-ValueSet für die phänotypische Empfindlichkeitstestung (UCUM): minimale Hemmkonzentration in mg/L oder Hemmhofdurchmesser in mm.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-genotyp-loinc.html">MII VS Mikrobio Empfänglichkeit Genotyp LOINC</a></td>
+      <td>Tests-ValueSet für die voraussichtliche Empfindlichkeit: LOINC-Codes für die aus dem Genotyp abgeleitete erwartete Wirksamkeit einer antimikrobiellen Substanz.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc.html">MII VS Mikrobio Empfindlichkeit Phenotyp LOINC</a></td>
+      <td>Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der getesteten antimikrobiellen Substanz.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html">MII VS Mikrobio Keimzahl Einheiten UCUM</a></td>
+      <td>Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-keimzahl-loinc.html">MII VS Mikrobio Keimzahl LOINC</a></td>
+      <td>Tests-ValueSet für die Keimzahlbestimmung: LOINC-Codes für die quantitative Bestimmung lebensfähiger Mikroorganismen.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html">MII VS Mikrobio Kultur Ergebnis SNOMED</a></td>
+      <td>Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder kein Wachstum. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html">MII VS Mikrobio Molekulare Diagnostik Einheiten UCUM</a></td>
+      <td>Einheiten-ValueSet für die molekulare Pathogenlast (UCUM): Konzentrationsangaben wie Kopien pro Milliliter.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.html">MII VS Mikrobio Molekulare Pathogenlast Methode SNOMED</a></td>
+      <td>Methoden-ValueSet für die molekulare Pathogenlast: Amplifikationsverfahren zur Quantifizierung von Erregernukleinsäure.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc.html">MII VS Mikrobio Molekulare Pathogenlast Tests LOINC</a></td>
+      <td>Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für die Nukleinsäurekonzentration eines Erregers.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">MII VS Mikrobio Morphologie Ergebnis SNOMED</a></td>
+      <td>Ergebnis-ValueSet für die Mikroskopie: mikroskopisch beobachtete Morphologie ohne taxonomische Zuordnung, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html">MII VS Mikrobio Morphologie Methode SNOMED</a></td>
+      <td>Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich der eingesetzten Färbetechnik.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-mrgn-klasse-loinc.html">MII VS Mikrobio MRGN Klasse LOINC</a></td>
+      <td>Ergebnis-ValueSet für die MRGN-Klassifikation: 2MRGN, 3MRGN und 4MRGN nach RKI-Kategorisierung. Die negative Einstufung steht im modul­eigenen CodeSystem, da die LOINC-AnswerList sie nicht führt.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-organismen-snomedct.html">MII VS Mikrobio Organismen SNOMED CT</a></td>
+      <td>Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Erreger stammen kann. Wird nicht direkt gebunden, sondern in die Ergebnis-ValueSets der Bestimmung eingebunden.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html">MII VS Mikrobio Resistenzkategorie Status Ergebnis</a></td>
+      <td>Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observation.code angegebenen Resistenzkategorie.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status.html">MII VS Mikrobio Resistenzkategorie Status</a></td>
+      <td>Untersuchungscodes fuer die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc.html">MII VS Mikrobio Resistenzmechanismen Determinanten LOINC</a></td>
+      <td>Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den Nachweis von Resistenzgenen, Resistenzproteinen und funktionalen Resistenztests.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html">MII VS Mikrobio Resistenzmechanismen Methode SNOMED</a></td>
+      <td>Methoden für den Nachweis von Resistenzgenen oder Resistenzmutationen (molekulare Verfahren).</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html">MII VS Mikrobio Spezifische Bestimmung Ergebnis SNOMED</a></td>
+      <td>Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed.html">MII VS Mikrobio Spezifische Bestimmung Methode SNOMED</a></td>
+      <td>Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahren des zielgerichteten Erregernachweises, etwa Amplifikation, Immunoassay oder Agglutination.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-tests-loinc.html">MII VS Mikrobio Spezifische Bestimmung Tests LOINC</a></td>
+      <td>Tests-ValueSet fuer die spezifische Bestimmung.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html">MII VS Mikrobio Spezifische Kultur Methode SNOMED</a></td>
+      <td>Methoden-ValueSet fuer die spezifische Kultur. Extensible gebunden, damit staerker spezialisierte Kulturverfahren ergaenzt werden koennen.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html">MII VS Mikrobio Spezifische Kultur Tests LOINC</a></td>
+      <td>Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, bei denen das gesuchte Ziel bereits im LOINC-Code benannt ist.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-susceptibility-norm.html">MII VS Mikrobio Susceptibility Norm</a></td>
+      <td>Norm-ValueSet für die Empfindlichkeitstestung: das Normsystem, auf dessen Grenzwerten eine Kategorie beruht. Gebunden an die Extension MII_EX_Mikrobio_Empfindlichkeit_Norm.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-susceptibility.html">MII VS Mikrobio Susceptibility</a></td>
+      <td>Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategorien sensibel, intermediär, sensibel bei erhöhter Exposition, resistent und nicht sensibel.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-titer-methode-snomed.html">MII VS Mikrobio Titer Methode SNOMED</a></td>
+      <td>Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreihen.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-titer-tests-loinc.html">MII VS Mikrobio Titer Tests LOINC</a></td>
+      <td>Tests-ValueSet für die Titerbestimmung: LOINC-Codes für semiquantitative Messungen aus Verdünnungsreihen.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-virulenz-loinc.html">MII VS Mikrobio Virulenz LOINC</a></td>
+      <td>Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-voraussichtliche-empfindlichkeit.html">MII VS Mikrobio Voraussichtliche Empfindlichkeit</a></td>
+      <td>Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypischen Nachweisen abgeleitete erwartete Kategorie sensibel, intermediär oder resistent.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -366,7 +547,7 @@ Seite, wenn Ihr Modul keine definiert.]</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 21:10+0000">2026-09-02</span>
+          Erstellt <span title="Wed, Sep 2, 2026 21:48+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

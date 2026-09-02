@@ -11,6 +11,9 @@
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-methode-snomed | *Version*:2027.0.0-alpha.6 |
 | Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Titer_Methode_SNOMED |
 
+ 
+Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreihen. 
+
  **References** 
 
 * [MII PR Mikrobio Titer](StructureDefinition-mii-pr-mikrobio-titer.md)
@@ -39,7 +42,7 @@
   "title" : "MII VS Mikrobio Titer Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T21:10:40+00:00",
+  "date" : "2026-09-02T21:48:21+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -48,6 +51,7 @@
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
+  "description" : "Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreihen.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

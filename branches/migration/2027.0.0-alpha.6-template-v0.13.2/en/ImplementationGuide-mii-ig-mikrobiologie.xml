@@ -107,7 +107,7 @@
   <title value="MII Implementation Guide Microbiology"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-02T21:10:40+00:00"/>
+  <date value="2026-09-02T21:48:21+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -1436,6 +1436,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]"/>
+      <description value="Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren zur Identifikation eines Erregers ohne vordefiniertes Ziel, etwa Mikroskopie oder MALDI-TOF."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1446,6 +1447,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]"/>
+      <description value="Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkung auf einen vordefinierten Erreger, einschließlich aerober und anaerober Bebrütung."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1456,6 +1458,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-antigen-antikoerper-methode-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Antigen Antikoerper Methode [SNOMED]"/>
+      <description value="Methoden-ValueSet für quantitative Antigen- und Antikörpertests sowie für die Aviditätsbestimmung: immunologische Nachweisverfahren."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1466,6 +1469,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"/>
       </reference>
       <name value="MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]"/>
+      <description value="Einheiten-ValueSet für quantitative Antigen- und Antikörpertests (UCUM). Bindet Observation.valueQuantity.code."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1476,6 +1480,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"/>
+      <description value="Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für die Messung erregerspezifischer Antigene oder Antikörper."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1486,6 +1491,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-aviditaet-ergebnis"/>
       </reference>
       <name value="MII VS Mikrobio Aviditaet Ergebnis"/>
+      <description value="Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, intermediär oder hoch. Niedrige Avidität spricht für eine frische Infektion."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1496,6 +1502,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Aviditaet Tests [LOINC]"/>
+      <description value="Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests einschließlich des Zielantigens."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1506,6 +1513,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-barlett-score-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Barlett Score [LOINC]"/>
+      <description value="Ergebnis-ValueSet für den Barlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1527,6 +1535,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-ct-wert-loinc"/>
       </reference>
       <name value="MII VS Mikrobio CT Wert [LOINC]"/>
+      <description value="Tests-ValueSet für den Ct-Wert: LOINC-Codes mit der Eigenschaft Zyklusschwellenwert bei Nukleinsäurenachweisen."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1548,6 +1557,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Detected Not Detected [SNOMED]"/>
+      <description value="Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder nicht nachgewiesen. Ein unbestimmbares Ergebnis wird nicht hierüber, sondern über Observation.dataAbsentReason abgebildet."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1558,6 +1568,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum"/>
       </reference>
       <name value="MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]"/>
+      <description value="Einheiten-ValueSet für die phänotypische Empfindlichkeitstestung (UCUM): minimale Hemmkonzentration in mg/L oder Hemmhofdurchmesser in mm."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1568,6 +1579,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]"/>
+      <description value="Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der getesteten antimikrobiellen Substanz."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1578,6 +1590,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]"/>
+      <description value="Tests-ValueSet für die voraussichtliche Empfindlichkeit: LOINC-Codes für die aus dem Genotyp abgeleitete erwartete Wirksamkeit einer antimikrobiellen Substanz."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1588,6 +1601,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"/>
       </reference>
       <name value="MII VS Mikrobio Keimzahl Einheiten [UCUM]"/>
+      <description value="Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1598,6 +1612,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-keimzahl-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Keimzahl [LOINC]"/>
+      <description value="Tests-ValueSet für die Keimzahlbestimmung: LOINC-Codes für die quantitative Bestimmung lebensfähiger Mikroorganismen."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1619,6 +1634,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum"/>
       </reference>
       <name value="MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]"/>
+      <description value="Einheiten-ValueSet für die molekulare Pathogenlast (UCUM): Konzentrationsangaben wie Kopien pro Milliliter."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1629,6 +1645,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]"/>
+      <description value="Methoden-ValueSet für die molekulare Pathogenlast: Amplifikationsverfahren zur Quantifizierung von Erregernukleinsäure."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1639,6 +1656,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]"/>
+      <description value="Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für die Nukleinsäurekonzentration eines Erregers."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1649,6 +1667,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Morphologie Ergebnis [SNOMED]"/>
+      <description value="Ergebnis-ValueSet für die Mikroskopie: mikroskopisch beobachtete Morphologie ohne taxonomische Zuordnung, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1659,6 +1678,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Morphologie Methode [SNOMED]"/>
+      <description value="Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich der eingesetzten Färbetechnik."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1669,6 +1689,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc"/>
       </reference>
       <name value="MII VS Mikrobio MRGN Klasse [LOINC]"/>
+      <description value="Ergebnis-ValueSet für die MRGN-Klassifikation: 2MRGN, 3MRGN und 4MRGN nach RKI-Kategorisierung. Die negative Einstufung steht im modul­eigenen CodeSystem, da die LOINC-AnswerList sie nicht führt."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1679,6 +1700,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-organismen-snomedct"/>
       </reference>
       <name value="MII VS Mikrobio Organismen [SNOMED CT]"/>
+      <description value="Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Erreger stammen kann. Wird nicht direkt gebunden, sondern in die Ergebnis-ValueSets der Bestimmung eingebunden."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1711,6 +1733,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]"/>
+      <description value="Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den Nachweis von Resistenzgenen, Resistenzproteinen und funktionalen Resistenztests."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1743,6 +1766,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]"/>
+      <description value="Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahren des zielgerichteten Erregernachweises, etwa Amplifikation, Immunoassay oder Agglutination."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1786,6 +1810,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-susceptibility"/>
       </reference>
       <name value="MII VS Mikrobio Susceptibility"/>
+      <description value="Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategorien sensibel, intermediär, sensibel bei erhöhter Exposition, resistent und nicht sensibel."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1796,6 +1821,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-susceptibility-norm"/>
       </reference>
       <name value="MII VS Mikrobio Susceptibility Norm"/>
+      <description value="Norm-ValueSet für die Empfindlichkeitstestung: das Normsystem, auf dessen Grenzwerten eine Kategorie beruht. Gebunden an die Extension MII_EX_Mikrobio_Empfindlichkeit_Norm."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1806,6 +1832,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-titer-methode-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Titer Methode [SNOMED]"/>
+      <description value="Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreihen."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1816,6 +1843,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-titer-tests-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Titer Tests [LOINC]"/>
+      <description value="Tests-ValueSet für die Titerbestimmung: LOINC-Codes für semiquantitative Messungen aus Verdünnungsreihen."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1826,6 +1854,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-virulenz-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Virulenz [LOINC]"/>
+      <description value="Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1836,6 +1865,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit"/>
       </reference>
       <name value="MII VS Mikrobio Voraussichtliche Empfindlichkeit"/>
+      <description value="Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypischen Nachweisen abgeleitete erwartete Kategorie sensibel, intermediär oder resistent."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

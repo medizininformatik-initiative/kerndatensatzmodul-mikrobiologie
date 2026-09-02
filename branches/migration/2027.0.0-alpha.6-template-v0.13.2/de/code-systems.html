@@ -315,27 +315,38 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 </p>
 
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung von input/pagecontent/code-systems.md (aufgeteilt aus
-     der früheren Seite terminology.md gemäß der TF-KDS-abgestimmten Menüstruktur).
-     Der IG-Publisher listet die CodeSystems auf den Artefakt-Seiten
-     automatisch; hier stehen die MII-Hinweise dazu. -->
-<h3 id="codesystems">CodeSystems</h3>
+<!-- Tabelle GENERIERT aus den CodeSystems und ihren Descriptions. -->
+<h3 id="code-systems">Code Systems</h3>
 
-<p>Diese Seite beschreibt die CodeSystems des Moduls <strong>Mikrobiologie</strong>
-(Namenskonvention <code class="language-plaintext highlighter-rouge">MII_CS_&lt;Modul&gt;_&lt;Name&gt;</code>). Die darauf aufbauenden ValueSets
-beschreibt die Seite <a href="value-sets.html">ValueSets</a>.</p>
+<p>Diese Seite listet die CodeSysteme, die das Modul <strong>Mikrobiologie</strong> selbst
+definiert (Namenskonvention <code class="language-plaintext highlighter-rouge">MII_CS_&lt;Modul&gt;_&lt;Name&gt;</code>). Sie decken ab, wofür in
+internationalen Terminologien kein passender Code existiert.</p>
 
-<p class="bg-info"><strong>Wichtig:</strong> CodeSystem-Ressourcen externer Terminologien (z. B. ICD-10-GM, OPS,
-SNOMED CT) werden in diesem Modul <strong>nicht</strong> publiziert, sondern über den
-zentralen KDS-Terminologieserver (SU-TermServ) bezogen:
-<a href="https://mii-termserv.de/">https://mii-termserv.de/</a>.</p>
+<!-- Beim Build aus `site.data.resources` erzeugt — siehe die ausfuehrliche
+     Begruendung in value-sets.md. -->
 
-<!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/Terminologien.page.md  -->
-<p>In deutschen Laboratorien werden häufig standortspezifische Wertelisten und Regelwerke verwendet. Dieser ImplementationGuide zielt darauf ab, die Kodierung durch die Nutzung international etablierter Terminologien wie SNOMED CT und LOINC zu harmonisieren. LOINC stellt Codes zur Beschreibung von Untersuchungselementen (z. B. Fragestellungen) bereit, während SNOMED CT zur Kodierung der zugehörigen nominalen und ordinalen Werte (z. B. Ergebnisse) dient.</p>
-
-<p>LOINC-Codes beschreiben, was untersucht wird (Observation.code), wobei die „Component“ den Test möglichst spezifisch abbildet (z. B. einen Organismus). Grundsätzlich sind alle LOINC-Codes zulässig; bevorzugt werden jedoch Codes ohne präkoordinierte Angaben zu „System“ und „Method“. Stattdessen wird empfohlen, Material (Specimen) und Methode separat in den entsprechenden FHIR-Elementen zu erfassen, auch wenn diese Informationen bereits im LOINC-Code enthalten sind. Für diese Angaben wird SNOMED CT verwendet: das Material über Specimen.type und die Methode über Observation.method. Das qualitative Testergebnis wird ebenfalls mit SNOMED CT über Observation.valueCodeableConcept kodiert.</p>
-
-<p>Die Interpretation soll grundsätzlich mit HL7-Terminologie über Observation.interpretation kodiert werden; ist diese nicht ausreichend, kann alternativ SNOMED CT verwendet werden.</p>
+<table>
+  <thead>
+    <tr>
+      <th>CodeSystem</th>
+      <th>Zweck</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="CodeSystem-mii-cs-mikrobio-mrgn-ergebnis.html">MII CS Mikrobio MRGN Ergebnis</a></td>
+      <td>CodeSystem für Ergebnisse der MRGN-Klassifikation, die sich nicht über LOINC abbilden lassen. Die LOINC-AnswerList LL6195-3 zu 99780-9 enthält ausschließlich 2MRGN, 3MRGN und 4MRGN und damit keinen Negativwert.</td>
+    </tr>
+    <tr>
+      <td><a href="CodeSystem-mii-cs-mikrobio-resistenzkategorie.html">MII CS Mikrobio Resistenzkategorie</a></td>
+      <td>Untersuchungscodes (Observation.code) für die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie. Jeder Code benennt die bewertete Kategorie; das Ergebnis der Bewertung steht in Observation.value.</td>
+    </tr>
+    <tr>
+      <td><a href="CodeSystem-mii-cs-mikrobio-susceptibility-norm.html">MII CS Mikrobio Susceptibility Norm</a></td>
+      <td>CodeSystem zur Kodierung von Normen für die Interpretation der Empfindlichkeit von Mikroorganismen gegenüber antimikrobiellen Substanzen.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -362,7 +373,7 @@ zentralen KDS-Terminologieserver (SU-TermServ) bezogen:
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 21:10+0000">2026-09-02</span>
+          Erstellt <span title="Wed, Sep 2, 2026 21:48+0000">2026-09-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
