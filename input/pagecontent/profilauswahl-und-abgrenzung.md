@@ -2,6 +2,42 @@ Detection, susceptibility testing and classification are different diagnostic st
 
 > **Key statement:** a negative result of a targeted pathogen detection is represented via Specific determination or Specific culture. MRGN classification and resistance category status, by contrast, presuppose an already detected pathogen and do not replace a detection test.
 
+### Which profiles belong to my laboratory area
+
+A profile appears under more than one area on purpose. The model is
+method-neutral: how an investigation was performed is stated in
+`Observation.method`, not by choosing a different profile. Specific determination
+therefore serves the molecular bench and the serology bench alike.
+
+| Culture | Molecular | Serology |
+|---|---|---|
+| Microscopy, Barlett score, Nugent score | Specific determination — single and multiplex PCR against defined targets, qualitative | Specific determination — antigen and antibody, qualitative |
+| General culture — growth or no growth, untargeted | General determination — panbacterial or panfungal PCR, sequencing, NGS | Antigen/antibody quantitative |
+| Specific culture — growth or no growth, targeted, e.g. MRSA screening | Molecular pathogen load — quantitative molecular results | Titre |
+| Colony count | | Avidity |
+| General determination — species identification, typically MALDI-TOF MS | | |
+| Susceptibility — phenotypic testing, S/I/R and MIC or zone diameter | | |
+| Further properties **of a cultured isolate**: virulence factor, resistance mechanisms, MRGN class, resistance category status, predicted susceptibility | Further properties **direct from the material**, without a culture step: virulence factor, resistance mechanisms, predicted susceptibility | |
+
+### Why some techniques get their own profile and others do not
+
+A profile is defined by the **question asked and the type of its result**, not by
+the technique. That is why the answer differs between qualitative and
+quantitative results, which can look inconsistent at first sight:
+
+* **Qualitative detection** has one result space — `Detected` / `Not detected` —
+  whether the target was found by PCR or by immunoassay. One profile suffices,
+  and `Observation.method` says which technique produced it.
+* **Quantitative measurement** does not. Copies per millilitre, a concentration
+  and a dilution step are different result spaces with different units, so
+  molecular pathogen load, quantitative antigen/antibody testing and titre are
+  separate profiles.
+* **Culture** is separate again for the same reason: its result is neither an
+  organism nor detected/not-detected, but growth or no growth.
+
+So the rule is the same in each case; only the number of distinct result spaces
+differs.
+
 ### Delimitation of the three statement types
 
 | Question | Profile | `Observation.code` | `Observation.value` |

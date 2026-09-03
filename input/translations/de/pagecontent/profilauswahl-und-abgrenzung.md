@@ -3,6 +3,43 @@ Nachweis, Empfindlichkeitstestung und Klassifikation sind unterschiedliche diagn
 
 > **Kernsatz:** Ein negatives Ergebnis eines zielgerichteten Erregernachweises wird über Spezifische Bestimmung bzw. Spezifische Kultur abgebildet. MRGN-Klassifikation und Resistenzkategorie-Status setzen dagegen einen bereits nachgewiesenen Erreger voraus und ersetzen keinen Nachweistest.
 
+### Welche Profile gehören zu meinem Laborbereich?
+
+Dass ein Profil unter mehreren Bereichen auftaucht, ist Absicht. Das Modell ist
+methodenneutral: *wie* eine Untersuchung durchgeführt wurde, steht in
+`Observation.method` und nicht in der Wahl eines anderen Profils. Die Spezifische
+Bestimmung bedient deshalb die molekulare Bank und die Serologie gleichermaßen.
+
+| Kultur | Molekular | Serologie |
+|---|---|---|
+| Mikroskopie, Barlett-Score, Nugent-Score | Spezifische Bestimmung — Einzel- und Multiplex-PCR auf definierte Ziele, qualitativ | Spezifische Bestimmung — Antigen und Antikörper, qualitativ |
+| Allgemeine Kultur — Wachstum oder kein Wachstum, ungerichtet | Allgemeine Bestimmung — panbakterielle oder panfungale PCR, Sequenzierung, NGS | Antigen/Antikörper quantitativ |
+| Spezifische Kultur — Wachstum oder kein Wachstum, gerichtet, z. B. MRSA-Screening | Molekulare Pathogenlast — quantitative molekulare Ergebnisse | Titer |
+| Keimzahl | | Avidität |
+| Allgemeine Bestimmung — Speziesidentifizierung, typischerweise MALDI-TOF-MS | | |
+| Empfindlichkeit — phänotypische Testung, S/I/R und MHK oder Hemmhofdurchmesser | | |
+| Weitere Eigenschaften **eines kulturell nachgewiesenen Erregers**: Virulenzfaktor, Resistenzmechanismen, MRGN-Klasse, Resistenzkategorie-Status, voraussichtliche Empfindlichkeit | Weitere Eigenschaften **direkt aus dem Material**, ohne kulturellen Zwischenschritt: Virulenzfaktor, Resistenzmechanismen, voraussichtliche Empfindlichkeit | |
+
+### Warum manche Verfahren ein eigenes Profil haben und andere nicht
+
+Ein Profil wird durch die **Fragestellung und den Ergebnistyp** bestimmt, nicht
+durch das Verfahren. Deshalb fällt die Antwort bei qualitativen und quantitativen
+Ergebnissen unterschiedlich aus, was auf den ersten Blick inkonsequent wirkt:
+
+* **Qualitativer Nachweis** hat einen einzigen Ergebnisraum — `Detected` /
+  `Not detected` —, gleich ob das Ziel per PCR oder per Immunoassay gefunden
+  wurde. Ein Profil genügt; `Observation.method` nennt das Verfahren.
+* **Quantitative Messung** nicht. Kopien pro Milliliter, eine Konzentration und
+  eine Verdünnungsstufe sind verschiedene Ergebnisräume mit verschiedenen
+  Einheiten — molekulare Pathogenlast, quantitative Antigen-/Antikörpertests und
+  Titer sind deshalb eigene Profile.
+* **Kultur** ist aus demselben Grund eigenständig: ihr Ergebnis ist weder ein
+  Organismus noch nachgewiesen/nicht nachgewiesen, sondern Wachstum oder kein
+  Wachstum.
+
+Die Regel ist also jedes Mal dieselbe; nur die Zahl der unterscheidbaren
+Ergebnisräume ist verschieden.
+
 ### Abgrenzung der drei Aussagetypen
 
 | Fragestellung | Profil | `Observation.code` | `Observation.value` |
