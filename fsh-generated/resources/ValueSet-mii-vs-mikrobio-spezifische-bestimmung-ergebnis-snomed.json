@@ -4,7 +4,7 @@
   "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED",
   "id": "mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed",
   "title": "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
-  "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist.",
+  "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed",
   "version": "2027.0.0-alpha.6",
   "experimental": false,
@@ -24,6 +24,19 @@
       {
         "valueSet": [
           "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "260408008",
+            "display": "Weakly positive"
+          },
+          {
+            "code": "280414007",
+            "display": "Equivocal result"
+          }
         ]
       }
     ]

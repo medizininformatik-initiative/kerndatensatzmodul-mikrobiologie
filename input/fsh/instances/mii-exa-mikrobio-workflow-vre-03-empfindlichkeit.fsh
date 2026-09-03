@@ -11,11 +11,10 @@ Description: "Workflow-Kette VRE, Schritt 3: Vancomycin-Empfindlichkeitstestung 
 * identifier[analyseBefundCode].value = "wf-vre-3"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+* category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
+* category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#524-9 "Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
 * effectiveDateTime = "2026-04-03T14:00:00+01:00"
 * extension[triggeredBy-r5].extension[observation].valueReference = Reference(mii-exa-mikrobio-workflow-vre-02-identifikation)
 * extension[triggeredBy-r5].extension[type].valueCode = #reflex
@@ -25,4 +24,4 @@ Description: "Workflow-Kette VRE, Schritt 3: Vancomycin-Empfindlichkeitstestung 
 * valueQuantity.unit = "mg/L"
 * interpretation = $v3-ObservationInterpretation#R "Resistant"
 * interpretation.extension[Norm].valueCodeableConcept = MII_CS_Mikrobio_Susceptibility_NORM#EUCAST "EUCAST"
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)

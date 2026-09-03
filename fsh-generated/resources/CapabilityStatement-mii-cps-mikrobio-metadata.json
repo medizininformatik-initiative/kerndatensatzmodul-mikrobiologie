@@ -2,7 +2,6 @@
   "resourceType": "CapabilityStatement",
   "id": "mii-cps-mikrobio-metadata",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata",
-  "publisher": "Medizininformatik Initiative",
   "contact": [
     {
       "telecom": [
@@ -13,16 +12,9 @@
       ]
     }
   ],
-  "version": "2027.0.0-alpha.6",
-  "status": "active",
-  "experimental": false,
-  "date": "2027-04-02",
   "implementationGuide": [
     "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5"
   ],
-  "name": "MII_CPS_Mikrobio_Metadata",
-  "title": "MII CPS Mikrobio Metadata",
-  "description": "CapabilityStatement für das MII Mikrobiologie Modul 2027.",
   "jurisdiction": [
     {
       "coding": [
@@ -34,15 +26,12 @@
       ]
     }
   ],
-  "kind": "requirements",
-  "fhirVersion": "4.0.1",
   "format": [
     "application/fhir+xml",
     "application/fhir+json"
   ],
   "rest": [
     {
-      "mode": "server",
       "resource": [
         {
           "extension": [
@@ -51,7 +40,6 @@
               "valueCode": "SHALL"
             }
           ],
-          "type": "Observation",
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur",
             "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
@@ -202,7 +190,8 @@
               "definition": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-titer",
               "type": "quantity"
             }
-          ]
+          ],
+          "type": "Observation"
         },
         {
           "extension": [
@@ -211,7 +200,6 @@
               "valueCode": "SHALL"
             }
           ],
-          "type": "DiagnosticReport",
           "supportedProfile": [
             "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"
           ],
@@ -299,9 +287,21 @@
               "definition": "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion",
               "type": "token"
             }
-          ]
+          ],
+          "type": "DiagnosticReport"
         }
-      ]
+      ],
+      "mode": "server"
     }
-  ]
+  ],
+  "publisher": "Medizininformatik Initiative",
+  "version": "2027.0.0-alpha.6",
+  "status": "active",
+  "experimental": false,
+  "date": "2027-04-02",
+  "name": "MII_CPS_Mikrobio_Metadata",
+  "title": "MII CPS Mikrobio Metadata",
+  "description": "CapabilityStatement für das MII Mikrobiologie Modul 2027.",
+  "kind": "requirements",
+  "fhirVersion": "4.0.1"
 }

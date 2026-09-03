@@ -1,0 +1,181 @@
+<!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/Profilauswahl-und-Abgrenzung.page.md  -->
+Nachweis, Empfindlichkeitstestung und Klassifikation sind unterschiedliche diagnostische Aussagen und werden in diesem Modul über unterschiedliche Profile abgebildet. Diese Seite beschreibt die Abgrenzung, die Darstellung negativer Ergebnisse und die Verknüpfung der Untersuchungen zu einer diagnostischen Kette.
+
+> **Kernsatz:** Ein negatives Ergebnis eines zielgerichteten Erregernachweises wird über Spezifische Bestimmung bzw. Spezifische Kultur abgebildet. MRGN-Klassifikation und Resistenzkategorie-Status setzen dagegen einen bereits nachgewiesenen Erreger voraus und ersetzen keinen Nachweistest.
+
+### Welche Profile gehören zu meinem Laborbereich?
+
+Dass ein Profil unter mehreren Bereichen auftaucht, ist Absicht. Das Modell ist
+methodenneutral: *wie* eine Untersuchung durchgeführt wurde, steht in
+`Observation.method` und nicht in der Wahl eines anderen Profils. Die Spezifische
+Bestimmung bedient deshalb die molekulare Bank und die Serologie gleichermaßen.
+
+**Kultur**
+
+* [Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html) — Morphologie ohne taxonomische Zuordnung
+  * [Barlett-Score](StructureDefinition-mii-pr-mikrobio-barlett-score.html) — ist eine Sputumprobe für die Kultur geeignet?
+  * [Nugent-Score](StructureDefinition-mii-pr-mikrobio-nugent-score.html) — Gramfärbungs-Score für die bakterielle Vaginose
+* [Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html) — Wachstum oder kein Wachstum, ungerichtet
+* [Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html) — Wachstum oder kein Wachstum, gerichtet, z. B. MRSA-Screening
+* [Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.html) — lebensfähige Keime je Volumen oder Masse
+* [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html) — Speziesidentifizierung, typischerweise MALDI-TOF-MS
+* [Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html) — phänotypische Testung, S/I/R mit MHK oder Hemmhofdurchmesser
+* Weitere Eigenschaften, **auf Ebene eines kulturell nachgewiesenen Erregers**:
+  * [Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html)
+  * [Resistenzmechanismen](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html)
+  * [MRGN-Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html)
+  * [MRE-Klasse](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html) — MRSA-, VRE-, LRE- und LVRE-Status; das Profil heißt *Resistenzkategorie-Status*
+  * [Voraussichtliche Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html)
+
+**Molekular**
+
+* [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) — Einzel- und Multiplex-PCR auf definierte Ziele, qualitativ
+* [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html) — panbakterielle oder panfungale PCR, Sequenzierung, NGS
+* [Molekulare Pathogenlast](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html) — quantitative molekulare Ergebnisse
+* Weitere Eigenschaften, **direkt aus dem Material**, ohne kulturellen Zwischenschritt:
+  * [Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html)
+  * [Resistenzmechanismen](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html)
+  * [Voraussichtliche Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html)
+
+**Serologie**
+
+* [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) — Antigen oder Antikörper, qualitativ
+* [Antigen/Antikörper quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html) — quantitative Ergebnisse
+* [Titer](StructureDefinition-mii-pr-mikrobio-titer.html) — Verdünnungsreihe, berichtet als Verhältnis
+* [Avidität](StructureDefinition-mii-pr-mikrobio-aviditaet.html) — frische gegenüber zurückliegender Infektion
+
+**Bereichsübergreifend**
+
+* [Befundbericht](StructureDefinition-mii-pr-mikrobio-diagnostic-report.html) — fasst die Untersuchungen eines mikrobiologischen Befunds zusammen
+* [Ct-Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.html) — der Zyklusschwellenwert selbst. Das Labor übermittelt üblicherweise das daraus abgeleitete Ergebnis, dieses Profil ist daher der Ausnahmefall.
+
+### Warum manche Verfahren ein eigenes Profil haben und andere nicht
+
+Ein Profil wird durch die **Fragestellung und den Ergebnistyp** bestimmt, nicht
+durch das Verfahren. Deshalb fällt die Antwort bei qualitativen und quantitativen
+Ergebnissen unterschiedlich aus, was auf den ersten Blick inkonsequent wirkt:
+
+* **Qualitativer Nachweis** hat einen einzigen Ergebnisraum — `Detected` /
+  `Not detected` —, gleich ob das Ziel per PCR oder per Immunoassay gefunden
+  wurde. Ein Profil genügt; `Observation.method` nennt das Verfahren.
+* **Quantitative Messung** nicht. Kopien pro Milliliter, eine Konzentration und
+  eine Verdünnungsstufe sind verschiedene Ergebnisräume mit verschiedenen
+  Einheiten — molekulare Pathogenlast, quantitative Antigen-/Antikörpertests und
+  Titer sind deshalb eigene Profile.
+* **Kultur** ist aus demselben Grund eigenständig: ihr Ergebnis ist weder ein
+  Organismus noch nachgewiesen/nicht nachgewiesen, sondern Wachstum oder kein
+  Wachstum.
+
+Die Regel ist also jedes Mal dieselbe; nur die Zahl der unterscheidbaren
+Ergebnisräume ist verschieden.
+
+### Abgrenzung der drei Aussagetypen
+
+| Fragestellung | Profil | `Observation.code` | `Observation.value` |
+|---|---|---|---|
+| Ist ein vordefiniertes Ziel nachweisbar? (nicht kulturell) | Spezifische Bestimmung | LOINC-Nachweistest, z. B. `105904-7` | `Detected` / `Not detected` |
+| Wächst ein vordefinierter Mikroorganismus? | Spezifische Kultur | LOINC-Kulturtest, z. B. `13316-5` | `Organism growth` / `No growth` |
+| Ist ein Resistenzgen nachweisbar? | Resistenzmechanismen / Determinanten | LOINC-Determinante, z. B. `48813-0` | `Detected` / `Not detected` |
+| Wie empfindlich ist ein identifiziertes Isolat gegen eine Substanz? | Empfindlichkeit | LOINC `[Susceptibility]`, z. B. `29258-1` | MHK als `Quantity`, Bewertung in `interpretation` (S / I / R) |
+| Welcher MRGN-Klasse ist ein identifiziertes gramnegatives Isolat zuzuordnen? | MRGN-Klasse | `99780-9` | Klassifikationswert, z. B. `3MRGN`, oder `keine-mrgn-klasse` |
+| Erfüllt ein nachgewiesener Erreger die Kriterien einer definierten Resistenzkategorie? | Resistenzkategorie-Status | `mrsa-status`, `vre-status`, `lre-status`, `lvre-status` (MII) | `Positive` / `Negative` |
+
+### Negative Ergebnisse
+
+#### Negativer zielgerichteter Erregernachweis
+
+Die Untersuchung liefert das negative Ergebnis des konkret durchgeführten Nachweistests.
+
+VRE-Nachweis mittels Kultur, negativ:
+
+[mii-exa-mikrobio-spezifische-kultur-vre-negativ](Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.html)
+
+VRE-Nachweis molekular bzw. methodenneutral kodiert, negativ:
+
+[mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html)
+
+#### Keine MRGN-Klasse
+
+Davon zu unterscheiden ist der Fall, dass ein gramnegatives Isolat identifiziert und dessen Empfindlichkeitstestung bewertet wurde, es aber keiner MRGN-Klasse zuzuordnen ist. Dies ist eine **negative Klassifikation** und wird über den Wert `keine-mrgn-klasse` des CodeSystems `mii-cs-mikrobio-mrgn-ergebnis` abgebildet:
+
+[mii-exa-mikrobio-mrgn-klasse-negativ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html)
+
+Die LOINC-AnswerList zu `99780-9` enthält ausschließlich 2MRGN, 3MRGN und 4MRGN und damit keinen Negativwert; der MII-eigene Code schließt diese Lücke.
+
+#### Resistenzkategorie-Status = Negative
+
+Wieder anders gelagert ist die Bewertung eines vorliegenden Erregers hinsichtlich einer Resistenzkategorie:
+
+[mii-exa-mikrobio-resistenzkategorie-vre-negativ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html)
+
+`Negative` bedeutet: Ein nachgewiesener Erreger wurde anhand der für die in `code` genannte Kategorie relevanten Untersuchungen ausreichend bewertet und erfüllt deren Kriterien nicht. Es bedeutet ausdrücklich **nicht**, dass kein Erreger nachgewiesen wurde, dass keine Resistenz vorliegt oder dass keine ausreichende Diagnostik erfolgte.
+
+Kann die Kategorie nicht ausreichend bewertet werden, wird nicht `Negative` angegeben, sondern `dataAbsentReason` gesetzt oder gar keine Status-Observation erzeugt.
+
+Die drei Fälle im direkten Vergleich, jeweils für VRE:
+
+| Aussage | Profil | `code` | `value` |
+|---|---|---|---|
+| VRE wurde gesucht und nicht gefunden | Spezifische Kultur | `13316-5` | `No growth` |
+| VRE wurde gesucht und nicht gefunden (molekular) | Spezifische Bestimmung | `105904-7` | `Not detected` |
+| Ein vorliegender *Enterococcus* ist kein VRE | Resistenzkategorie-Status | `vre-status` | `Negative` |
+
+### Resistenzkategorien
+
+Der Resistenzkategorie-Status bewertet immer **eine** benannte Kategorie. Die Aufnahme einer Kategorie ist fachlich zu begründen; nicht jede einzelne antimikrobielle Resistenz ist eine Resistenzkategorie. Insbesondere erfolgt keine implizite Ableitung aus dem SNOMED-Unterbaum „antimicrobial resistant organism".
+
+| Code | Kategorie | Bewertungsgrundlage |
+|---|---|---|
+| `mrsa-status` | MRSA | *Staphylococcus aureus* + Methicillin-/Oxacillinresistenz (phänotypisch oder `mecA`/`mecC`) |
+| `vre-status` | VRE | *Enterococcus* + Vancomycinresistenz (phänotypisch oder `vanA`/`vanB`) |
+| `lre-status` | LRE | *Enterococcus* + Linezolidresistenz |
+| `lvre-status` | LVRE | *Enterococcus* + Linezolid- **und** Vancomycinresistenz |
+
+Für gramnegative Erreger mit einer MRGN-Klassifikation erfolgt die Abbildung über die [MRGN-Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html). Dort wird das Ergebnis der MRGN-Bewertung als `2MRGN`, `3MRGN`, `4MRGN` oder `keine-mrgn-klasse` angegeben.
+
+### Diagnostische Kette bei positivem Nachweis
+
+Ein positiver zielgerichteter Nachweis kann Folgediagnostik auslösen:
+
+```
+Positiver zielgerichteter Nachweis
+(Spezifische Bestimmung oder Spezifische Kultur)
+        │
+        │ triggeredBy (reflex)
+        ▼
+ggf. weiterführende Identifikation
+        │
+        │ triggeredBy (reflex)
+        ▼
+Empfindlichkeit
+        │
+        ├── ggf. Resistenzmechanismen / Determinanten
+        │
+        │ derivedFrom
+        ▼
+Resistenzkategorie-Status
+  z. B. VRE-Status
+  Positive / Negative
+```
+
+Bei einem bereits erregerspezifischen Nachweis ist das Ziel im Testcode definiert. Nach `MRSA detected` oder `VRE detected` muss keine separate Identifikation folgen. Entfällt sie, verweist die Empfindlichkeit direkt auf den Nachweis und der Resistenzkategorie-Status führt sie nicht in `derivedFrom`.
+
+Für die auslösende Beziehung wird die R5-Backport-Extension `extension-Observation.triggeredBy` mit `type = reflex` verwendet, wie unter [FHIR-Profile](fhir-profile.html) beschrieben. Der letzte Schritt bildet die dort genannte Ausnahme: Der Resistenzkategorie-Status wird aus mehreren Untersuchungen **abgeleitet** und ist keine ausgelöste Folgeuntersuchung — hier trifft `derivedFrom` die Semantik. Diese Untersuchungen SOLLTEN angegeben werden, damit die Bewertungsgrundlage nachvollziehbar bleibt.
+
+Vollständiges Beispiel einer Kette:
+
+Schritt 1 — positiver VRE-Nachweis mittels erregerspezifischer Kultur:
+
+[mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html)
+
+Schritt 2 — weiterführende Identifikation des Isolats (optional):
+
+[mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html)
+
+Schritt 3 — Empfindlichkeitstestung:
+
+[mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html)
+
+Schritt 4 — abgeleiteter Resistenzkategorie-Status:
+
+[mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html)

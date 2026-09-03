@@ -6,33 +6,11 @@
       "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
     ]
   },
-  "category": [
-    {
-      "coding": [
-        {
-          "code": "MB",
-          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
-        },
-        {
-          "code": "26436-6",
-          "system": "http://loinc.org",
-          "display": "Laboruntersuchungen"
-        },
-        {
-          "code": "laboratory",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "display": "Laboratory"
-        },
-        {
-          "code": "18725-2",
-          "system": "http://loinc.org",
-          "display": "Mikrobiologie"
-        }
-      ]
-    }
-  ],
   "identifier": [
     {
+      "assigner": {
+        "display": "Universitätsklinikum Musterstadt"
+      },
       "type": {
         "coding": [
           {
@@ -42,10 +20,39 @@
         ]
       },
       "system": "https://example.org/fhir/sid/test-lab-results",
-      "value": "reskat-vre-pos",
-      "assigner": {
-        "display": "Universitätsklinikum Musterstadt"
-      }
+      "value": "reskat-vre-pos"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        },
+        {
+          "code": "26436-6",
+          "system": "http://loinc.org",
+          "display": "Laboratory studies (set)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "MB",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+        }
+      ]
+    }
+  ],
+  "derivedFrom": [
+    {
+      "reference": "Observation/mii-exa-mikrobio-workflow-vre-02-identifikation"
+    },
+    {
+      "reference": "Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit"
     }
   ],
   "status": "final",
@@ -59,7 +66,7 @@
     ]
   },
   "subject": {
-    "reference": "Patient/example"
+    "reference": "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime": "2026-04-03T15:00:00+01:00",
   "valueCodeableConcept": {
@@ -71,15 +78,7 @@
       }
     ]
   },
-  "derivedFrom": [
-    {
-      "reference": "Observation/mii-exa-mikrobio-workflow-vre-02-identifikation"
-    },
-    {
-      "reference": "Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit"
-    }
-  ],
   "specimen": {
-    "reference": "Specimen/example"
+    "reference": "Specimen/mii-exa-mikrobio-probe"
   }
 }

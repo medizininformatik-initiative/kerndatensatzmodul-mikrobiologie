@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM
 Id: mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum
 Title: "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]"
+Description: "Einheiten-ValueSet für quantitative Antigen- und Antikörpertests (UCUM). Bindet Observation.valueQuantity.code."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

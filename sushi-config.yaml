@@ -1,20 +1,595 @@
+# ╭────────────────────────────── TEMPLATE — READ FIRST ───────────────────────────────╮
+# │ This is the CRMI-profiled metadata contract for an MII KDS module IG,              │
+# │ parameterized from medizininformatik-initiative/kerndatensatz-basis (main).        │
+# │ The file does NOT build until every {{...}} placeholder is replaced.               │
+# │                                                                                    │
+# │ All 19 placeholders this repository uses are listed below — 15 ACTIVE and 4        │
+# │ OPTIONAL. ACTIVE ones sit on lines the build reads today — leaving one             │
+# │ unreplaced ships a bogus artifact. OPTIONAL ones sit inside commented-out          │
+# │ blocks and matter only once you enable that block.                                 │
+# │                                                                                    │
+# │ They occur in: this file, ig.ini, publication-request.json,                        │
+# │ qc/custom.rules.yaml, .github/workflows/go-publish.yml, the narrative pages        │
+# │ (input/pagecontent, input/translations), the FSH sources (input/fsh, incl. the     │
+# │ rulesets library), input/resources and tests/.                                     │
+# │                                                                                    │
+# │ ── ACTIVE ────────────────────────────────────────────────────────────────         │
+# │   {{MODULE_SLUG}}         lowercase module short name, e.g. `base`, `person`,      │
+# │                           `icu`. Drives packageId, id, and the canonical — and     │
+# │                           the resource id inside input/resources/Parameters-       │
+# │                           expansion-manifest.json. It is also the only             │
+# │                           placeholder that appears in FILE NAMES — three:          │
+# │                           input/translations/de/ImplementationGuide-mii-ig-        │
+# │                           {{MODULE_SLUG}}.po and the IG intro page                 │
+# │                           ImplementationGuide-mii-ig-{{MODULE_SLUG}}.md in         │
+# │                           input/pagecontent/ + its German mirror. All three        │
+# │                           must be RENAMED as well as substituted                   │
+# │                           (docs/recipes/create-a-new-module.md step 4; .po         │
+# │                           details: docs/recipes/add-translation.md §5).            │
+# │   {{MODULE_NAME}}         CamelCase computable name part, e.g. `Base` →            │
+# │                           name: MII_IG_Base.                                       │
+# │   {{MODULE_TITLE}}        human-readable title part, e.g.                          │
+# │                           `Core Dataset Base` → title: MII Implementation          │
+# │                           Guide Core Dataset Base.                                 │
+# │   {{MODULE_DESCRIPTION}}  one-sentence English description of the module.          │
+# │   {{CALVER_VERSION}}      MII CalVer YYYY.n.n, e.g. 2026.0.1 (NOT SemVer;          │
+# │                           see the MII Module Release Workflow). Also pins the      │
+# │                           versioned canonicals in input/fsh/rulesets/.             │
+# │   {{CALVER_YEAR}}         the release sequence year, e.g. 2026.                    │
+# │   {{RELEASE_DATE}}        ISO date YYYY-MM-DD; go-publish.yml requires it to       │
+# │                           equal the publication date.                              │
+# │   {{COPYRIGHT_START_YEAR}}  first copyright year, e.g. 2019.                       │
+# │   {{APPROVAL_DATE}}       ISO date this release was approved; see docs/release.md. │
+# │   {{MODULE_AUTHOR_EMAIL}} contact email of the module author.                      │
+# │   {{TOPIC_NCI_CODE}}      NCI Thesaurus code for the module's topic (basis        │
+# │                           declares seven: C15607, C154624, C25218, C16960,         │
+# │                           C25190, C81239, C25717). Read by the artifact-topic      │
+# │                           extension below AND by every profile via                 │
+# │                           `insert CRMIArtifactTopic(...)`. There is no sensible    │
+# │                           default: an unreplaced value ships a bogus code.         │
+# │   {{GITHUB_ORG}} / {{REPO_NAME}}  (publication-request.json, go-publish.yml)       │
+# │                           the org/repo hosting this module; GitHub Pages under     │
+# │                           the creating org is the publication website.             │
+# │   {{RELEASE_DESCRIPTION}} (publication-request.json) one-line description of the   │
+# │                           release being published.                                 │
+# │   {{REGISTRY_DESCRIPTION}}  (publication-request.json) the description shown in    │
+# │                           the FHIR IG registry entry.                              │
+# │                                                                                    │
+# │ ── OPTIONAL (inside commented-out blocks — replace only if you enable them) ──     │
+# │   {{SPECIAL_URL_1}}       one entry of the `special-url` list: a canonical this    │
+# │                           IG defines that does NOT start with the module           │
+# │                           canonical. Regenerate the list per                       │
+# │                           docs/recipes/regenerate-special-url.md.                  │
+# │   {{CITATION_TEXT}}       artifact-relatedArtifact — the module's literature       │
+# │   {{CITATION_URL}}        citation, its URL, and its publication date              │
+# │   {{CITATION_PUBLICATION_DATE}}  (ISO YYYY-MM-DD).                                 │
+# ╰────────────────────────────────────────────────────────────────────────────────────╯
+# ╭──────────────────────────── MIGRATION NOTE ─────────────────────────────╮
+# │ This module was migrated onto the template on 2026-08-25 (skill        │
+# │ mii-ig-migration). The placeholder table ABOVE is the template's own    │
+# │ documentation and is kept verbatim; the values BELOW are the migrated   │
+# │ module's. Lines marked `MIGRATION` record where the source and the      │
+# │ template disagreed and which one was kept (spec §2.2).                  │
+# ╰────────────────────────────────────────────────────────────────────────╯
+# ABOUT THE kerndatensatz-basis CITATIONS BELOW
+# `kerndatensatz-basis` is the MII reference module. Wherever a comment quotes
+# one of its values, that value is an EXAMPLE of the convention in force — not a
+# value to copy into your module. Every quoted value was verified against
+# medizininformatik-initiative/kerndatensatz-basis, branch `main`, commit
+# f6c6878, on 2026-07-26.
+
+# id pattern per the MII naming convention: mii-ig-<slug>
+# (for example, kerndatensatz-basis uses `mii-ig-base`).
+id: mii-ig-mikrobiologie
+# Canonical pattern per the MII convention:
+# https://www.medizininformatik-initiative.de/fhir/modul-<slug>
+# (for example, kerndatensatz-basis uses
+# https://www.medizininformatik-initiative.de/fhir/modul-base).
+# The final value is set per module; the publication WEBSITE deliberately
+# differs (GitHub Pages under the creating org — "canonical-mismatch" in the
+# publication setup). Do not point the canonical at github.io.
 canonical: https://www.medizininformatik-initiative.de/fhir/modul-mikrobio
-fhirVersion: 4.0.1
-FSHOnly: false
+# name pattern per the MII convention: MII_IG_<Name>
+# (for example, kerndatensatz-basis uses `MII_IG_Base`).
+# MIGRATION (spec §2.2): the SOURCE value is carried over unchanged. The
+# template pattern would be `MII_IG_Mikrobio`; the source (and every published
+# build of this module) uses the value below. Reported at Gate A — an identity
+# value is never normalized silently.
+name: MII_IG_Mikrobiologie
+# title pattern: "MII Implementation Guide <Title>" (for example,
+# kerndatensatz-basis uses "MII Implementation Guide Core Dataset Base").
+title: MII Implementation Guide Microbiology
+description: "Core Dataset extension module Microbiology of the Medical Informatics Initiative: FHIR profiles for microbiological findings — culture, identification, susceptibility testing, molecular and antigen/antibody diagnostics."
+status: active # draft | active | retired | unknown
+# MII modules use CalVer YYYY.n.n (e.g. 2026.0.1) per the MII Module Release
+# Workflow — NOT SemVer. Only the template tooling repos use SemVer.
+version: "2027.0.0-alpha.6"
+# packageId pattern per the MII naming convention:
+# de.medizininformatikinitiative.kerndatensatz.<slug> (for example,
+# kerndatensatz-basis uses de.medizininformatikinitiative.kerndatensatz.base).
+packageId: de.medizininformatikinitiative.kerndatensatz.mikrobiologie
+# MIGRATION: carried from the source sushi-config.yaml (SUSHI flag, not in
+# the template scaffold). Kept so extension metadata is emitted exactly as
+# in the published module.
 applyExtensionMetadataToRoot: false
-status: active
-version: 2027.0.0-alpha.6
-dependencies:
-  de.medizininformatikinitiative.kerndatensatz.laborbefund: 2026.0.3
-# TODO: re-add the dependency on the xver package once Simplifier supports it. For now, this is not possible as it causes problems in Snapshot generation.
-#  hl7.fhir.uv.xver-r5.r4: 0.1.0
-
-
-
-
-id: kerndatensatzmodul-mikrobiologie
-name: Kerndatensatzmodul Mikrobiologie
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+copyrightYear: "2026+"
+# MIGRATION (spec §2.2): carried verbatim from the source sushi-config.yaml.
+# The source uses this field as a version string and it CONTRADICTS `version`
+# above (2026 vs 2027) — reported at Gate A, not corrected here.
 releaseLabel: 2026.0.0-alpha.6
-copyrightYear: 2026
-menu:
- Artifacts: artifacts.html
+# MIGRATION (spec §2.2): the source declares NO licence anywhere — no LICENSE
+# file, no `license:`, no package-manifest field. This is the TEMPLATE DEFAULT,
+# confirmed as the intended value at Gate A on 2026-08-25, not a carried value,
+# and re-confirmed by the operator on 2026-09-02 during the v0.13.2 re-migration.
+# Since skill v0.24.0 the LICENSE FILE is reconciled against this field
+# mechanically: `license-align` exits 0 ("already aligned"), so the CC-BY-4.0
+# text in LICENSE is an asserted decision, not an unexamined template artefact.
+license: CC-BY-4.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+# Must equal the publication date; go-publish.yml validates this.
+# MIGRATION: {{RELEASE_DATE}} has NO value in the source and none may be
+# invented (guardrail 3). The property is omitted rather than filled with a
+# placeholder date. Set it at Gate D, when the publication date is known;
+# go-publish.yml requires it to equal that date.
+# date: "YYYY-MM-DD"   # ① OPEN — set before publication
+jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+# NUM-DIZ takes over IG development and maintenance when MII funding ends
+# (end-2026), so NUM-DIZ is the publisher shown in the footer's
+# "IG © <year> <publisher>" line (TF-KDS feedback 2026-08-14). "NUM-DIZ" is a
+# proper name, hence language-neutral. The module CONTENT stays MII content —
+# the artifact copyright labels in input/fsh/rulesets/crmi.fsh are unaffected.
+publisher:
+  # Gate-A-Entscheidung 2026-09-02: Die Quelle nennt keinen Publisher, der Wert ist
+  # also gesetzt und nicht übernommen. Bis zur Ownership-Übergabe an NUM-DIZ zum
+  # 2027-01-01 (siehe SECURITY.md) ist die MII der Herausgeber.
+  name: Medizininformatik Initiative
+  # Language-neutral URL: the footer's publisher link is the same on every
+  # language's pages, so it must not pin one language's site.
+  url: https://www.medizininformatik-initiative.de
+
+# CRMI conformance: the IG resource claims the CRMI shareable, publishable and
+# computable ImplementationGuide profiles (for example, kerndatensatz-basis
+# claims the same three).
+meta:
+  profile:
+    - http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide
+    - http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide
+    - http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide
+experimental: false
+# The artifact-* / cqf-* extension set below mirrors the reference module
+# kerndatensatz-basis one-for-one; only the per-module values are placeholders.
+extension:
+  # MIGRATION: resource-approvalDate REMOVED — {{APPROVAL_DATE}} has no value in
+  # the source and an invented date would ship a false governance claim
+  # (guardrail 3). Re-add it with the real approval date at Gate D:
+  #   - url: http://hl7.org/fhir/StructureDefinition/resource-approvalDate
+  #     valueDate: "YYYY-MM-DD"                      # ① OPEN
+  - url: http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability
+    valueCode: shareable
+  - url: http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability
+    valueCode: publishable
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy
+    valueCodeableConcept:
+      coding:
+        - system: http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes
+          code: package
+          display: Package
+  # Package provenance: must repeat packageId, version, and canonical.
+  - url: http://hl7.org/fhir/StructureDefinition/package-source
+    extension:
+      - url: packageId
+        valueId: de.medizininformatikinitiative.kerndatensatz.mikrobiologie
+      - url: version
+        valueString: "2027.0.0-alpha.6"
+      - url: uri
+        valueUri: https://www.medizininformatik-initiative.de/fhir/modul-mikrobio
+  # Year this release sequence became effective
+  # (for example, kerndatensatz-basis records "2026").
+  - url: http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod
+    valuePeriod:
+      start: "2027"
+  # MIGRATION: artifact-author REMOVED — {{MODULE_AUTHOR_EMAIL}} has no value in
+  # the source (the registry `author` is an account, not a contact). Re-add with
+  # the real module-author address:
+  #   - url: http://hl7.org/fhir/StructureDefinition/artifact-author
+  #     valueContactDetail:
+  #       telecom:
+  #         - system: email
+  #           value: "name@example.org"              # ① OPEN
+  # The MII-wide governance bodies below apply to every MII KDS module — for
+  # example, kerndatensatz-basis records the same National Steering Committee as
+  # reviewer and endorser. Adjust only if your module's governance differs.
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-editor
+    valueContactDetail:
+      name: Taskforce Core Data Set
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-reviewer
+    valueContactDetail:
+      name: Interoperability Working Group
+      telecom:
+        - system: url
+          value: https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-reviewer
+    valueContactDetail:
+      name: National Steering Committee
+      telecom:
+        - system: url
+          value: https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-endorser
+    valueContactDetail:
+      name: Interoperability Working Group
+      telecom:
+        - system: url
+          value: https://www.medizininformatik-initiative.de/en/collaboration/interoperability-working-group
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-endorser
+    valueContactDetail:
+      name: National Steering Committee
+      telecom:
+        - system: url
+          value: https://www.medizininformatik-initiative.de/en/collaboration/national-steering-committee
+  # OPTIONAL (module-specific): literature reference(s) for the module.
+  # For example, kerndatensatz-basis cites the MII core-data-set paper
+  # (doi:10.1007/s00103-024-03888-4) with this exact structure — uncomment and
+  # fill in when your module has a citation:
+  # - url: http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact
+  #   valueRelatedArtifact:
+  #     type: citation
+  #     citation: "{{CITATION_TEXT}}"
+  #     url: "{{CITATION_URL}}"
+  #     extension:
+  #       - url: http://hl7.org/fhir/StructureDefinition/cqf-publicationDate
+  #         valueDate: "{{CITATION_PUBLICATION_DATE}}"
+  #       - url: http://hl7.org/fhir/StructureDefinition/cqf-publicationStatus
+  #         valueCode: active
+  # The module's expansion-parameters manifest — the pinned code system versions
+  # every ValueSet in this IG is expanded against (MII meta wiki, "Terminology
+  # Version Policy"). Shipped at
+  # input/resources/Parameters-expansion-manifest.json; see
+  # input/resources/README.md for the CalVer → SNOMED CT release table. Active
+  # together with path-expansion-params / pin-manifest below — all three must
+  # name the same resource.
+  - url: http://hl7.org/fhir/StructureDefinition/cqf-expansionParameters
+    valueReference:
+      reference: Parameters/mii-param-mikrobio-manifest
+  # `semver` is what the MII modules record here even though MII module versions
+  # are CalVer YYYY.n.n (which parses as three numeric fields) — for example,
+  # kerndatensatz-basis records `semver`. Do not "correct" it without an
+  # MII-wide decision.
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm
+    valueCoding:
+      system: http://hl7.org/fhir/version-algorithm
+      code: semver
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-usage
+    valueMarkdown: "Use this ImplementationGuide resource as a computable definition of all the parts of the corresponding module of the Medical Informatics Initiative core data set."
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-purpose
+    valueMarkdown: "Provide the computable publication unit for the MII Core Dataset Microbiology module, enabling implementers to discover, validate, version, and apply the specification consistently."
+  # Module topic(s), coded with the NCI Thesaurus (for example,
+  # kerndatensatz-basis declares seven: C15607, C154624, C25218, C16960,
+  # C25190, C81239, C25717 — verified against its main branch). Replace the
+  # code with your module's topic(s); repeat the block for each topic.
+  # MIGRATION: artifact-topic REMOVED — {{TOPIC_NCI_CODE}} has no value in the
+  # source, and the template states there is no sensible default: an unreplaced
+  # or guessed code SHIPS A BOGUS TERMINOLOGY CODE that no build error catches.
+  # A missing optional extension is the honest outcome; look the module's NCI
+  # Thesaurus topic code(s) up and re-add:
+  #   - url: http://hl7.org/fhir/StructureDefinition/artifact-topic
+  #     valueCodeableConcept:
+  #       coding:
+  #         - system: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+  #           code: "Cxxxxx"                         # ① OPEN
+
+# The dependencies property corresponds to IG.dependsOn. The key is the
+# package id and the value is the version (for advanced use cases the value
+# can be an object with keys for id, uri, and version).
+#
+# Pinned to the exact versions the reference module kerndatensatz-basis pins on
+# `main`. Fixed versions only — never `current`/`dev` (the go-publish workflow and the convention
+# check reject floating versions; the dependency checker proposes bumps).
+# MIGRATION (spec §11.3 — "dependency pins identical to the source's"):
+# the SOURCE's dependency block is carried over verbatim. The template's own
+# pins are what a NEW module gets; adopting them here would change what this
+# published module resolves against, so each is left COMMENTED with its reason
+# and decided at Gate A.
+dependencies:
+  # ---- carried from the source, unchanged (sushi-config.yaml @ main fdf3190,
+  #      and the published package de.medizininformatikinitiative.kerndatensatz
+  #      .mikrobiologie@2027.0.0-alpha.5 pins the same version) ----
+  # 2026-09-02: von 2026.0.3 auf 2027.0.0-ballot.rc2 gehoben. Der Paketname bleibt
+  # `…kerndatensatz.laborbefund`; rc1 war kurzzeitig als `…kerndatensatz.labor`
+  # veröffentlicht, das war ein Fehler und ist in rc2 korrigiert.
+  #
+  # Nicht brechend, was die Ableitung angeht: MII_PR_Labor_Laboruntersuchung und
+  # MII_PR_Labor_Laborbefund tragen unverändert die Canonicals
+  # .../modul-labor/StructureDefinition/ObservationLab bzw. .../DiagnosticReportLab.
+  #
+  # Der Grund für den Sprung: der neue Parent bindet Observation.code.coding an
+  # results-laboratory-PATHOLOGY-observations-uv-ips — den Namen, den IPS 2.0.x
+  # tatsächlich ausliefert. Damit entfällt der Zielkonflikt, der bisher zwang,
+  # entweder ein veraltetes IPS zu pinnen oder 120 nicht auflösbare Links in Kauf
+  # zu nehmen.
+  #
+  # Das category-Slicing hat sich mitgeändert: der Parent slict jetzt selbst
+  # (`laboruntersuchung` bzw. `laborbefund`) und legt seine Pflicht-Codings dort
+  # ab. Dieses Modul ergänzt seine mikrobiologischen Kategorien daneben, statt sie
+  # wie zuvor in den Parent-Slice hineinzuschreiben.
+  de.medizininformatikinitiative.kerndatensatz.laborbefund: 2027.0.0-ballot.rc3
+  # ---- added by the migration: TEMPLATE MACHINERY, not source identity ----
+  # Required by the CRMI profiles this IG now claims under meta.profile above.
+  # Without it the three crmi-*implementationguide claims cannot resolve.
+  hl7.fhir.uv.crmi: 2.0.0
+  # ---- added by the migration: MEASURED, each with the number that decided it ----
+  # R5 cross-version extensions. The SOURCE dropped this pin with the note
+  # "re-add once Simplifier supports it - it causes problems in snapshot
+  # generation". That constraint was SIMPLIFIER's; on the IG Publisher the pin
+  # works. The module mirrors the R5 extension locally
+  # (StructureDefinition-ext-R5-Observation.triggeredBy), whose bindings point
+  # into this package. Measured 2026-08-25: without it 21 errors
+  # "A definition could not be found for Canonical URL
+  # http://hl7.org/fhir/uv/xver/ValueSet/R5-observation-..."; with it, 0.
+  hl7.fhir.uv.xver-r5.r4: 0.1.0
+  # International Patient Summary, current 2.0.1. GATE-A DECISION 2026-09-02.
+  #
+  # This pin used to be a dilemma and no longer is. The old parent
+  # (…kerndatensatz.laborbefund@2026.0.3) bound
+  # results-laboratory-observations-uv-ips, which ships in IPS 1.1.0 only — 2.0.x
+  # renamed it to results-laboratory-PATHOLOGY-observations-uv-ips. Measured:
+  # no pin -> 120 broken links, 2.0.0 -> 120, 2.0.1 -> 120, 1.1.0 -> 0. Pinning
+  # 1.1.0 rendered cleanly but froze an obsolete IPS to hide an upstream defect.
+  #
+  # The parent bump above resolves it: the new module binds the name current IPS
+  # actually ships, so 2.0.1 and a clean render are no longer in conflict.
+  hl7.fhir.uv.ips: 2.0.1
+  # ---- template pins NOT adopted (① decide at Gate A) ----
+  # Each would change what this already-published module resolves against.
+  # de.basisprofil.r4: 1.5.4                      # source pins it only transitively, via modul-labor
+  # de.medizininformatikinitiative.kerndatensatz.meta: 2026.0.0
+  # hl7.fhir.uv.xver-r5.r4: 0.1.0                 # the source DELIBERATELY dropped this: its
+  #                                               # sushi-config carried the note "re-add once Simplifier
+  #                                               # supports it — it breaks snapshot generation". The module
+  #                                               # mirrors the R5 extension locally instead
+  #                                               # (StructureDefinition-ext-R5-Observation.triggeredBy).
+  #                                               # Re-adding it is a MODELLING decision, out of migration scope.
+  # hl7.terminology.r4: 7.3.0                     # RECOMMENDED: Gate-0 measured `injection_risk: true` on the
+  # hl7.fhir.uv.extensions.r4: 5.3.0              # source — without direct pins every build silently injects
+  #                                               # the LATEST THO/extensions release. Adopting them makes the
+  #                                               # build reproducible but MAY change ValueSet expansions, so it
+  #                                               # is a human decision, not a migration default.
+#
+#
+# The pages property corresponds to IG.definition.page. SUSHI can
+# auto-generate the page list, but if the author includes pages in
+# this file, it is assumed that the author will fully manage the
+# pages section and SUSHI will not generate any page entries.
+# The page file name is used as the key. If title is not provided,
+# then the title will be generated from the file name.  If a
+# generation value is not provided, it will be inferred from the
+# file name extension.  Any subproperties that are valid filenames
+# with supported extensions (e.g., .md/.xml) will be treated as
+# sub-pages.
+#
+# This page tree implements the MII-agreed module menu structure (see
+# docs/page-structure.md for the structure with cardinalities, and
+# docs/optional-pages.md for the OPTIONAL (0..1) entries and how to remove
+# one). kerndatensatz-basis still lists the older combined pages
+# (profiles-and-extensions, search-parameters-and-operations, terminology);
+# this template splits them into one page per artifact type per the agreed
+# structure. The MII-wide conformance topics (Conformance, General
+# Requirements, Must Support, Handling Missing Data) and "Datasets and
+# Descriptions" are MENU LINKS, not pages — they have no entry here.
+# Every entry needs a matching file in input/pagecontent/ (starter pages are a
+# separate scaffolding step); OPTIONAL entries your module does not need are
+# removed per docs/optional-pages.md.
+# Every `title:` below is also a msgid in the IG-level translation catalogue
+# input/translations/de/ImplementationGuide-mii-ig-mikrobiologie.po — if you
+# add, rename or delete a page here, update that catalogue in the same commit,
+# or the German rendering falls back to the English title for that page.
+pages:
+  index.md:
+    title: Home
+
+  guidance.md:
+    title: Guidance
+    implementer-guidance.md:
+      title: Guidance for Implementers
+    uml-diagrams.md:
+      title: UML Diagrams
+    # ── MIGRATED narrative, re-homed 2026-09-02. These three came from the
+    #    Simplifier section "Technische Implementierung", whose index page carried
+    #    no content of its own ("Diese Seite wurde absichtlich leer gelassen.") — a
+    #    navigation level, not a page. They are guidance about the profiles rather
+    #    than artefact listings, so they hang off Guidance, which is also where
+    #    kerndatensatzmodul-labor puts its Specimen page. The guide loses a level of
+    #    depth and index.md stops having children.
+    profilauswahl-und-abgrenzung.md:
+      title: Profile Selection and Delimitation
+    interpretation.md:
+      title: Interpretation
+    fhir-profile.md:
+      title: FHIR Profiles - Modelling Notes
+    probe.md:
+      title: Specimen
+
+  # The only Conformance-cluster PAGE of this guide; the MII-wide conformance
+  # topics are menu links to the Meta module (see input/includes/menu.xml).
+  security-and-privacy.md:
+    title: Security and Privacy
+
+  profiles.md:
+    title: Profiles
+  extensions.md: # OPTIONAL (0..1) — KEPT: the module defines 2 extensions
+    title: Extensions
+  capability-statements.md:
+    title: Capability Statements
+  search-parameters.md: # OPTIONAL (0..1) — KEPT: the module defines 4 search parameters
+    title: Search Parameters
+  logical-models.md:
+    title: Logical Models
+  value-sets.md: # OPTIONAL (0..1) — KEPT: the module defines 42 value sets
+    title: Value Sets
+  code-systems.md: # OPTIONAL (0..1) — KEPT: the module defines 3 code systems
+    title: Code Systems
+  examples.md:
+    title: Examples
+
+  downloads.md:
+    title: Downloads
+
+  changes.md:
+    title: Changelog
+
+  metadata.md: # OPTIONAL (0..1) — KEPT: the IG resource claims 3 CRMI profiles
+    title: Metadata Overview
+  version-history.md:
+    title: Versioning
+
+  # The IG Publisher AUTO-GENERATES the ImplementationGuide resource page
+  # (ImplementationGuide-<id>.html); this entry gives it a hand-authored intro
+  # — dependency table, cross-version analysis, global profiles, copyrights —
+  # the kerndatensatz-basis idiom.
+  ImplementationGuide-mii-ig-mikrobiologie.md:
+    title: MII ImplementationGuide Resource
+
+  translationinfo.md:
+    title: Translation Information
+
+#
+#
+# The parameters property represents IG.definition.parameter. Rather
+# than a list of code/value pairs (as in the ImplementationGuide
+# resource), the code is the YAML key. If a parameter allows repeating
+# values, the value in the YAML should be a sequence/array.
+# For parameters defined by core FHIR see:
+# http://build.fhir.org/codesystem-guide-parameter-code.html
+# For parameters defined by the FHIR Tools IG see:
+# http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
+#
+parameters:
+  path-resource:
+    - input/predefined-resources
+  path-pages:
+    - input/intro-notes # Custom introductory notes
+  # ── Multi-language (e.g. kerndatensatz-basis uses the same model) ──────────
+  # English is the DEFAULT rendering language, German the additional one. The MII
+  # naming conventions prefer German for a conformance resource's description/
+  # name/title but require a translation extension whose content is shown "im
+  # englischsprachigen Implementierungsleitfaden" — they assume the guide is
+  # English. German page mirrors live under input/translations/de/.
+  i18n-default-lang: en # Default language
+  i18n-lang:
+    - de # Additional languages
+  translation-sources:
+    - input/translations/de # Path to German translations
+  excludexml: false
+  excludejson: false
+  excludettl: true
+  # ── Version comparison (enable once a FORMAL publication exists) ───────────
+  # Publishes a machine-generated delta against the previous version at
+  # comparison-v<version>/index.html, and annotates changed elements on the
+  # artifact pages. TWO prerequisites (verified against the publisher's
+  # PreviousVersionComparator):
+  #   1. The canonical must serve package-list.json — the comparator fetches
+  #      <canonical>/package-list.json unconditionally, even for an explicit
+  #      version, and takes the package id from it. MII modules get this with
+  #      their first formal publication at the canonical; until then the
+  #      comparison reports "Unable to find version history" and does nothing.
+  #   2. The previous version's package must be loadable from the package
+  #      cache/registry. If it is not on packages.fhir.org yet,
+  #      scripts/seed-comparison-cache.sh fills the cache from this
+  #      repository's GitHub Release assets (module-release.yml attaches
+  #      package.tgz to every release for exactly this purpose).
+  # Keep the value a released version; update it with every release; link the
+  # report from the version's changelog section (see the Changelog page).
+  # Kill switch: the repository variable ENABLE_VERSION_COMPARISON=false
+  # sets `version-comparison: n/a` in the CI workspace before every build —
+  # n/a is the publisher's documented off-value; an ABSENT parameter defaults
+  # to {last} (registry: http://hl7.org/fhir/tools/CodeSystem/ig-parameters).
+  # version-comparison: "2027.0.0"
+  excludemap: false
+  # ({current}/{last} forms are NOT usable here: they resolve by fetching
+  # <canonical>/package-list.json, which the MII canonical does not serve —
+  # use the explicit version above.)
+  logging:
+    - init
+    - progress
+    - context
+    - html
+    - tx
+  # Pin every canonical reference in the built package (CRMI requirement; for
+  # example, kerndatensatz-basis sets the same value).
+  pin-canonicals: pin-all
+  # Where the IG Publisher reads the pinned code system versions from, and which
+  # manifest's pins are written into the built package. The path is relative to
+  # the publisher's working directory, hence the '../../'. (For example,
+  # kerndatensatz-basis names the file after its slug,
+  # Parameters-mii-param-base-manifest.json; this template uses
+  # a slug-free name so nothing has to be renamed per module.) Keep both in sync
+  # with the cqf-expansionParameters extension above and with the file in
+  # input/resources/ — see input/resources/README.md.
+  path-expansion-params: '../../input/resources/Parameters-expansion-manifest.json'
+  pin-manifest: 'mii-param-mikrobio-manifest'
+  suppress-mappings:
+    - http://hl7.org/v3
+    - http://hl7.org/v3/cda
+  # ── special-url ─────────────────────────────────────────────────────────────
+  # MIGRATION 2026-08-25: GENERATED from the Gate-0 pre-flight measurement of the
+  # UNMIGRATED source (migration-log/preflight-analysis.json,
+  # preflight.canonical_space) — 1 out-of-space url + 6 id/url divergences =
+  # special_url_prediction 7, which is exactly the list below. Not copied from
+  # another module. Without it the publisher raises
+  # "the canonical URL ... does not match the URL. Use the special-url parameter
+  # if you really mean for it not to match" (17 errors, measured).
+  # Regenerate per docs/recipes/regenerate-special-url.md after any id or url change.
+  special-url:
+    # R5 cross-version extension, mirrored locally under the HL7 R5 canonical
+    - http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
+    # id/url divergences the source has carried since it was published — the url
+    # tail is the FHIR search-parameter/interaction name, the id follows the MII
+    # naming convention. Guardrail 1: neither is changed by the migration.
+    - https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata
+    - https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation
+    - https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-norm-kategorie
+    - https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-titer
+    - https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-triggered-by
+    - https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de
+  # FHIR validation test cases (for example, kerndatensatz-basis does the same).
+  # A minimal working harness ships in
+  # tests/profiles/ — see tests/README.md. It stays COMMENTED OUT in the template
+  # repo: the fixtures' canonicals still carry mikrobio, which the CI
+  # self-check substitution does not reach (it rewrites sushi-config.yaml, ig.ini
+  # and the narrative pages only). Replace the placeholders in tests/profiles/,
+  # then uncomment:
+  # profile-test-cases: tests/profiles/profiles.json
+
+# ── MENU (translatable — maintained as menu.xml, NOT the `menu:` property) ────
+# The menu lives in input/includes/menu.xml (English = the default language) with
+# a German translation at input/translations/de/includes/menu.xml. That is
+# the mechanism the HL7 reference IG FHIR/multi-lang-test-ig uses and the ONLY
+# way to get a TRANSLATED menu.
+#
+# Do NOT re-add a `menu:` property here: SUSHI would generate a competing
+# fsh-generated/includes/menu.xml whose labels cannot be translated, so the
+# navigation would stay in one language on every rendered language.
+#
+# Editing rules: keep href targets identical across languages, translate only the
+# labels, give dropdown parents a REAL page (href="#" fails the template's menu
+# QA), and remember only one sub-menu level is supported. When you add or remove
+# a page, update BOTH menu files and the `pages:` tree above.
+#
+# ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
+# │  The flags below configure aspects of how SUSHI processes FSH.                                 │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+#
+# The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
+#
+instanceOptions:
+  # When set to true, slices must be referred to by name and not only by a numeric index in order to be used
+  # in an Instance's assignment rule. All slices appear in the order in which they are specified in FSH rules.
+  # While SUSHI defaults to false for legacy reasons, manualSliceOrding is recommended for new projects.
+  manualSliceOrdering: true # true | false
+
+# Everything above is what this IG actually sets. SUSHI accepts further
+# properties (contact, global profiles, FSHOnly, the remaining instanceOptions,
+# …) that this template deliberately leaves unset; the authoritative list is the
+# SUSHI documentation: https://fshschool.org/docs/sushi/configuration/
+# One of them is a house rule rather than a preference: leave FSHOnly false —
+# this project builds the full IG, not just the resources. (`menu:` is the other;
+# see the menu section above for why it must stay unset.)
