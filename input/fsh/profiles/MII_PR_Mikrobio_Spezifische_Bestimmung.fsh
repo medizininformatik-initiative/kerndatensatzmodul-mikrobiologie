@@ -36,4 +36,5 @@ Description: "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines 
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED (extensible)
+* valueCodeableConcept ^short = "Nachweis oder Ausschluss des im Code benannten Ziels. Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet."
 * method from MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED (extensible)

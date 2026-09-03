@@ -248,7 +248,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Wachstum oder kein Wachstum des im Code benannten Mikroorganismus. Ein unbestimmbares Ergebnis wird über dataAbsentReason abgebildet.",
+        "short": "Wachstum oder kein Wachstum des im Code benannten Mikroorganismus. Lässt sich nicht entscheiden, ob das Ziel gewachsen ist, wird 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Wie viel gewachsen ist, sagt dagegen die Keimzahl. Ein unbestimmbares Ergebnis, bei dem die Kultur gar keine verwertbare Aussage liefert (überwuchert, Material unzureichend), wird über dataAbsentReason abgebildet.",
         "type": [
           {
             "code": "CodeableConcept"

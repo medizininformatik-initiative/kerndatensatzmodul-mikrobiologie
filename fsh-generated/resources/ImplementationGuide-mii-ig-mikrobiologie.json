@@ -668,7 +668,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed"
         },
         "name": "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
-        "description": "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder kein Wachstum. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
+        "description": "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
         "exampleBoolean": false
       },
       {
@@ -764,7 +764,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed"
         },
         "name": "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
-        "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist.",
+        "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
         "exampleBoolean": false
       },
       {

@@ -4,7 +4,7 @@
   "name": "MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED",
   "id": "mii-vs-mikrobio-kultur-ergebnis-snomed",
   "title": "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
-  "description": "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder kein Wachstum. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
+  "description": "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed",
   "version": "2027.0.0-alpha.6",
   "experimental": false,
@@ -31,6 +31,10 @@
           {
             "code": "264868006",
             "display": "No growth (qualifier value)"
+          },
+          {
+            "code": "280414007",
+            "display": "Equivocal result"
           }
         ]
       }
