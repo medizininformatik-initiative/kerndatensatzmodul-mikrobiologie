@@ -55,10 +55,13 @@ Migrationsreport.
 
 ### Die voraussichtliche Empfindlichkeit ist eine andere Aussage
 
-Eine aus dem Genotyp abgeleitete Empfindlichkeit — ein Resistenzgen wurde
-gefunden, also ist Resistenz zu erwarten — ist **nicht** dieses Profil. Sie hat
-keinen Messwert und gehört zur *Voraussichtlichen Empfindlichkeit*, deren
-Ergebnis die erwartete Kategorie selbst ist. Siehe
+Eine aus einem Resistenzmechanismus abgeleitete Empfindlichkeit — ein Gen, eine
+Mutation oder ein Protein wurde gefunden, also ist Resistenz zu erwarten — ist
+**nicht** dieses Profil. Sie hat keinen Messwert und gehört zur
+*Voraussichtlichen Empfindlichkeit*, deren Ergebnis die erwartete Kategorie
+selbst ist. Die Ableitung ist bewusst technologieoffen: ein per Lateral Flow
+nachgewiesenes PBP2a-Protein trägt sie ebenso wie ein per PCR gefundenes
+`mecA`-Gen. Siehe
 [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html).
 
 Dieselbe Grenze gilt für den zielgerichteten Nachweis eines resistenten
