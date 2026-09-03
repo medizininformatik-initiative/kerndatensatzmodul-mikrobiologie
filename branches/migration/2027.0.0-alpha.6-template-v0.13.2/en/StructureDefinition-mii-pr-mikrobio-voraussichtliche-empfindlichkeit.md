@@ -14,7 +14,7 @@
  
 Voraussichtliche Empfindlichkeit beschreibt die aus dem Nachweis von Resistenzmechanismen/Genen/Proteinen abgeleitete erwartete Suszeptibilität oder Resistenz gegenüber antimikrobiellen Substanzen. 
 
-Predicted susceptibility describes an expected susceptibility or resistance against antimicrobial substances, derived from genotypic findings.
+Predicted susceptibility describes the expected susceptibility or resistance against antimicrobial substances, derived from the detection of resistance mechanisms, genes or proteins.
 
 ### Examples
 
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-v
   "title" : "MII PR Mikrobio Voraussichtliche Empfindlichkeit",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T04:37:30+00:00",
+  "date" : "2026-09-03T05:02:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

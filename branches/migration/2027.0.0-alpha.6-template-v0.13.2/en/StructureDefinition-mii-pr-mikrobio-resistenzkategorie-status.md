@@ -14,7 +14,7 @@
  
 Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value. 
 
-Resistance category status represents the assessment of a detected pathogen with respect to a defined resistance category. The category assessed is in `Observation.code`, the result of the assessment in `Observation.valueCodeableConcept`.
+Resistance category status represents the assessment of a detected pathogen with respect to a defined resistance category, for example MRSA, VRE, LRE or LVRE. The category assessed is in `Observation.code`, the result of the assessment in `Observation.valueCodeableConcept`.
 
 ```
 MRSA status: Positive
@@ -238,7 +238,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-r
   "title" : "MII PR Mikrobio Resistenzkategorie Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T04:37:30+00:00",
+  "date" : "2026-09-03T05:02:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

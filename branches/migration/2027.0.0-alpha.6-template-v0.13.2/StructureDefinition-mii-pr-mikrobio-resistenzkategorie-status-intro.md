@@ -1,4 +1,4 @@
-Resistance category status represents the assessment of a detected pathogen with respect to a defined resistance category. The category assessed is in `Observation.code`, the result of the assessment in `Observation.valueCodeableConcept`.
+Resistance category status represents the assessment of a detected pathogen with respect to a defined resistance category, for example MRSA, VRE, LRE or LVRE. The category assessed is in `Observation.code`, the result of the assessment in `Observation.valueCodeableConcept`.
 
 ```
 MRSA status: Positive

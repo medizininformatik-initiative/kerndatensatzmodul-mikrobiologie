@@ -38,7 +38,7 @@ The norm is coded from the module's own CodeSystem: `EUCAST`, `CLSI`, `Andere`.
 
 ### Predicted susceptibility is a different statement
 
-Susceptibility derived from a genotype — a resistance gene found, therefore an expected resistance — is **not** this profile. It has no measured value and belongs to **Predicted Susceptibility**, whose result is the expected category itself. See [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md).
+Susceptibility inferred from a resistance mechanism — a gene, a mutation or a protein found, therefore an expected resistance — is **not** this profile. It has no measured value and belongs to **Predicted Susceptibility**, whose result is the expected category itself. The inference is deliberately technology-open: a PBP2a protein detected by lateral flow supports it exactly as a `mecA` gene found by PCR does. See [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md).
 
 The same boundary applies to the targeted detection of a resistant organism: an MRSA or VRE detection states which organism was found, not how susceptible it is, and belongs to the determination or culture profiles.
 

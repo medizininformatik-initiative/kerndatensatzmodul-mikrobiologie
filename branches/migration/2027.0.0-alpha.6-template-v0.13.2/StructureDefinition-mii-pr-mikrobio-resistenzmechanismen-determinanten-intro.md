@@ -1,4 +1,4 @@
-Resistance mechanisms / determinants describes the detection of resistance genes or resistance mutations in a specimen as an indication of specific resistance mechanisms.
+Resistance mechanisms / determinants describes the detection of resistance genes, resistance mutations, proteins or functional tests (for example the CIM test) in a specimen or an isolate as an indication of specific resistance mechanisms.
 
 ### Examples
 

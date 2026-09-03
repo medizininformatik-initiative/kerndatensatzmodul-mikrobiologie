@@ -14,7 +14,7 @@
  
 Virulenzfaktor beschreibt den qualitativen Nachweis oder Ausschluss von Virulenzdeterminanten in einer Probe oder einem Isolat. 
 
-Virulence factor describes the qualitative detection or exclusion of virulence determinants in a specimen.
+Virulence factor describes the qualitative detection or exclusion of virulence determinants in a specimen or an isolate.
 
 ### Examples
 
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-v
   "title" : "MII PR Mikrobio Virulenzfaktor",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T04:37:30+00:00",
+  "date" : "2026-09-03T05:02:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

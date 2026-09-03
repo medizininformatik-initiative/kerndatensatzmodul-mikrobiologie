@@ -14,7 +14,7 @@
  
 Resistenzmechanismen/Determinanten beschreibt den Nachweis von Resistenzgenen, Resistenzmutationen, Proteinen oder funktionalen Test (z.B. CIM-Test) in einer Probe oder Isolat als Hinweis auf spezifische Resistenzmechanismen. 
 
-Resistance mechanisms / determinants describes the detection of resistance genes or resistance mutations in a specimen as an indication of specific resistance mechanisms.
+Resistance mechanisms / determinants describes the detection of resistance genes, resistance mutations, proteins or functional tests (for example the CIM test) in a specimen or an isolate as an indication of specific resistance mechanisms.
 
 ### Examples
 
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-r
   "title" : "MII PR Mikrobio Resistenzmechanismen Determinanten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T04:37:30+00:00",
+  "date" : "2026-09-03T05:02:03+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

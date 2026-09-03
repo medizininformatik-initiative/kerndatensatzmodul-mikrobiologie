@@ -1,4 +1,4 @@
-Predicted susceptibility describes an expected susceptibility or resistance against antimicrobial substances, derived from genotypic findings.
+Predicted susceptibility describes the expected susceptibility or resistance against antimicrobial substances, derived from the detection of resistance mechanisms, genes or proteins.
 
 ### Examples
 
