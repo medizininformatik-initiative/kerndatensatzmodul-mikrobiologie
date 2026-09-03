@@ -10,15 +10,44 @@ methodenneutral: *wie* eine Untersuchung durchgeführt wurde, steht in
 `Observation.method` und nicht in der Wahl eines anderen Profils. Die Spezifische
 Bestimmung bedient deshalb die molekulare Bank und die Serologie gleichermaßen.
 
-| Kultur | Molekular | Serologie |
-|---|---|---|
-| Mikroskopie, Barlett-Score, Nugent-Score | Spezifische Bestimmung — Einzel- und Multiplex-PCR auf definierte Ziele, qualitativ | Spezifische Bestimmung — Antigen und Antikörper, qualitativ |
-| Allgemeine Kultur — Wachstum oder kein Wachstum, ungerichtet | Allgemeine Bestimmung — panbakterielle oder panfungale PCR, Sequenzierung, NGS | Antigen/Antikörper quantitativ |
-| Spezifische Kultur — Wachstum oder kein Wachstum, gerichtet, z. B. MRSA-Screening | Molekulare Pathogenlast — quantitative molekulare Ergebnisse | Titer |
-| Keimzahl | | Avidität |
-| Allgemeine Bestimmung — Speziesidentifizierung, typischerweise MALDI-TOF-MS | | |
-| Empfindlichkeit — phänotypische Testung, S/I/R und MHK oder Hemmhofdurchmesser | | |
-| Weitere Eigenschaften **eines kulturell nachgewiesenen Erregers**: Virulenzfaktor, Resistenzmechanismen, MRGN-Klasse, Resistenzkategorie-Status, voraussichtliche Empfindlichkeit | Weitere Eigenschaften **direkt aus dem Material**, ohne kulturellen Zwischenschritt: Virulenzfaktor, Resistenzmechanismen, voraussichtliche Empfindlichkeit | |
+**Kultur**
+
+* [Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html) — Morphologie ohne taxonomische Zuordnung
+  * [Barlett-Score](StructureDefinition-mii-pr-mikrobio-barlett-score.html) — ist eine Sputumprobe für die Kultur geeignet?
+  * [Nugent-Score](StructureDefinition-mii-pr-mikrobio-nugent-score.html) — Gramfärbungs-Score für die bakterielle Vaginose
+* [Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html) — Wachstum oder kein Wachstum, ungerichtet
+* [Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html) — Wachstum oder kein Wachstum, gerichtet, z. B. MRSA-Screening
+* [Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.html) — lebensfähige Keime je Volumen oder Masse
+* [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html) — Speziesidentifizierung, typischerweise MALDI-TOF-MS
+* [Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html) — phänotypische Testung, S/I/R mit MHK oder Hemmhofdurchmesser
+* Weitere Eigenschaften, **auf Ebene eines kulturell nachgewiesenen Erregers**:
+  * [Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html)
+  * [Resistenzmechanismen](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html)
+  * [MRGN-Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html)
+  * [MRE-Klasse](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html) — MRSA-, VRE-, LRE- und LVRE-Status; das Profil heißt *Resistenzkategorie-Status*
+  * [Voraussichtliche Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html)
+
+**Molekular**
+
+* [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) — Einzel- und Multiplex-PCR auf definierte Ziele, qualitativ
+* [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html) — panbakterielle oder panfungale PCR, Sequenzierung, NGS
+* [Molekulare Pathogenlast](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html) — quantitative molekulare Ergebnisse
+* Weitere Eigenschaften, **direkt aus dem Material**, ohne kulturellen Zwischenschritt:
+  * [Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html)
+  * [Resistenzmechanismen](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html)
+  * [Voraussichtliche Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html)
+
+**Serologie**
+
+* [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) — Antigen oder Antikörper, qualitativ
+* [Antigen/Antikörper quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html) — quantitative Ergebnisse
+* [Titer](StructureDefinition-mii-pr-mikrobio-titer.html) — Verdünnungsreihe, berichtet als Verhältnis
+* [Avidität](StructureDefinition-mii-pr-mikrobio-aviditaet.html) — frische gegenüber zurückliegender Infektion
+
+**Bereichsübergreifend**
+
+* [Befundbericht](StructureDefinition-mii-pr-mikrobio-diagnostic-report.html) — fasst die Untersuchungen eines mikrobiologischen Befunds zusammen
+* [Ct-Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.html) — der Zyklusschwellenwert selbst. Das Labor übermittelt üblicherweise das daraus abgeleitete Ergebnis, dieses Profil ist daher der Ausnahmefall.
 
 ### Warum manche Verfahren ein eigenes Profil haben und andere nicht
 
