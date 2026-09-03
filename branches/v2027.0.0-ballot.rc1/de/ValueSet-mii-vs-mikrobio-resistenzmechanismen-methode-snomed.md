@@ -42,7 +42,7 @@ Methoden für den Nachweis von Resistenzgenen oder Resistenzmutationen (molekula
   "title" : "MII VS Mikrobio Resistenzmechanismen Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T05:48:26+00:00",
+  "date" : "2026-09-03T10:47:18+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
