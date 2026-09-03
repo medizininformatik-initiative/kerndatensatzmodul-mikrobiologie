@@ -1,0 +1,64 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc</b></p><a name=\"mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc\"> </a><a name=\"hcmii-vs-mikrobio-empfindlichkeit-phenotyp-loinc\"> </a><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where CLASS  = LP7755-4 (ABXBACT), PROPERTY  = LP6870-2 (Susc) and STATUS  = ACTIVE</li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc</b></p><a name=\"de-mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc\"> </a><a name=\"de-hcmii-vs-mikrobio-empfindlichkeit-phenotyp-loinc\"> </a><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where CLASS  = LP7755-4 (ABXBACT), PROPERTY  = LP6870-2 (Susc) and STATUS  = ACTIVE</li></ul></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC",
+  "title" : "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-03-02T00:00:00Z",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der getesteten antimikrobiellen Substanz.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7755-4"
+      },
+      {
+        "property" : "PROPERTY",
+        "op" : "=",
+        "value" : "LP6870-2"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,644 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-lm-mikrobio-untersuchung",
+  "language" : "en",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition mii-lm-mikrobio-untersuchung</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung\" title=\"Abstrakte Basis einer mikrobiologischen Untersuchung. Die fachlichen Ausprägungen (Kultur, Bestimmung, Weitere Eigenschaften, Quantitative Tests) leiten von dieser Klasse ab und ergänzen sie um ihre jeweils spezifischen Attribute.\">mii-lm-mikrobio-untersuchung</a><a name=\"mii-lm-mikrobio-untersuchung\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#Element\">Element</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">This is an abstract type. Child types: <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchungsarten.html\">MII_LM_Mikrobio_Untersuchungsarten</a><br/>Mikrobiologische Untersuchung<br/><br/>Elements defined in Ancestors:<a href=\"http://hl7.org/fhir/R4/datatypes.html#Element\" title=\"Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.\">@id</a>, <a href=\"http://hl7.org/fhir/R4/datatypes.html#Element\" title=\"May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.\">extension</a><br/><span style=\"font-weight:bold\">Instances of this type can be the target of a Reference</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.Identifikation\" title=\"Eindeutiger Identifikator der Untersuchung.\">Identifikation</a><a name=\"mii-lm-mikrobio-untersuchung.Identifikation\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Identifikation<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.Status\" title=\"Status der Untersuchung (z. B. vorläufig, final, korrigiert).\">Status</a><a name=\"mii-lm-mikrobio-untersuchung.Status\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Status</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.Patient\" title=\"Patient, von dem das untersuchte Probenmaterial stammt.\">Patient</a><a name=\"mii-lm-mikrobio-untersuchung.Patient\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Patient</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.Probenmaterial\" title=\"Untersuchtes Probenmaterial. Die Probenart wird über das Probenmaterial abgebildet und nicht über präkoordinierte Untersuchungscodes.\">Probenmaterial</a><a name=\"mii-lm-mikrobio-untersuchung.Probenmaterial\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"http://hl7.org/fhir/R4/specimen.html\">Specimen</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Probenmaterial</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt\" title=\"Klinisch relevanter Zeitpunkt der Untersuchung.\">Untersuchungszeitpunkt</a><a name=\"mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Untersuchungszeitpunkt</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt\" title=\"Gibt an, worauf sich der Untersuchungszeitpunkt bezieht, z. B. Zeitpunkt der Probenentnahme oder Laboreingang.\">QuelleUntersuchungszeitpunkt</a><a name=\"mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Quelle des Untersuchungszeitpunkts</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.Dokumentationszeitpunkt\" title=\"Zeitpunkt, zu dem das Untersuchungsergebnis verfügbar gemacht wurde.\">Dokumentationszeitpunkt</a><a name=\"mii-lm-mikrobio-untersuchung.Dokumentationszeitpunkt\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Dokumentationszeitpunkt</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.InterpretationsbeeinflussendeEigenschaft\" title=\"Eigenschaft der Untersuchung oder der Probe, die die Interpretation des Ergebnisses einschränkt oder verändert, z. B. Hämolyse, Lipämie oder unzureichende Probenmenge. Die Angabe verändert die Bedeutung des Ergebnisses und darf nicht ignoriert werden.\">InterpretationsbeeinflussendeEigenschaft</a><a name=\"mii-lm-mikrobio-untersuchung.InterpretationsbeeinflussendeEigenschaft\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Interpretationsbeeinflussende Eigenschaft<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.Hinweis\" title=\"Freitextliche Kommentierung der Untersuchung.\">Hinweis</a><a name=\"mii-lm-mikrobio-untersuchung.Hinweis\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Hinweis<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung\" title=\"Vorangegangene Untersuchung, die diese Untersuchung ausgelöst hat, z. B. eine durch ein Vorergebnis angestoßene Folgediagnostik (Reflextestung).\">AusloesendeUntersuchung</a><a name=\"mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#BackboneElement\">BackboneElement</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Auslösende Untersuchung<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Untersuchung\" title=\"Die auslösende Untersuchung.\">Untersuchung</a><a name=\"mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Untersuchung\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung.html\">MII LM Mikrobio Untersuchung</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Untersuchung</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck010.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Art\" title=\"Art der Auslösung: reflex | repeat | re-run.\">Art</a><a name=\"mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Art\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Art</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-mii-lm-mikrobio-untersuchung-definitions.html#mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Grund\" title=\"Begründung, warum diese Untersuchung ausgelöst wurde.\">Grund</a><a name=\"mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Grund\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Grund</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
+    "valueCode" : "can-be-target"
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_LM_Mikrobio_Untersuchung",
+  "title" : "MII LM Mikrobio Untersuchung",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-03T05:10:08+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Gemeinsame Angaben aller mikrobiologischen Untersuchungen [DE]",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "kind" : "logical",
+  "abstract" : true,
+  "type" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "4.0.1"
+    }],
+    "element" : [{
+      "id" : "mii-lm-mikrobio-untersuchung",
+      "path" : "mii-lm-mikrobio-untersuchung",
+      "short" : "Mikrobiologische Untersuchung",
+      "definition" : "Abstrakte Basis einer mikrobiologischen Untersuchung. Die fachlichen Ausprägungen (Kultur, Bestimmung, Weitere Eigenschaften, Quantitative Tests) leiten von dieser Klasse ab und ergänzen sie um ihre jeweils spezifischen Attribute.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Element",
+        "min" : 0,
+        "max" : "*"
+      },
+      "condition" : ["ele-1"],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.id",
+      "path" : "mii-lm-mikrobio-untersuchung.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.extension",
+      "path" : "mii-lm-mikrobio-untersuchung.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
+      "short" : "Additional content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Identifikation",
+      "path" : "mii-lm-mikrobio-untersuchung.Identifikation",
+      "short" : "Identifikation",
+      "definition" : "Eindeutiger Identifikator der Untersuchung.",
+      "min" : 1,
+      "max" : "*",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.Identifikation",
+        "min" : 1,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Identifier"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Status",
+      "path" : "mii-lm-mikrobio-untersuchung.Status",
+      "short" : "Status",
+      "definition" : "Status der Untersuchung (z. B. vorläufig, final, korrigiert).",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.Status",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Patient",
+      "path" : "mii-lm-mikrobio-untersuchung.Patient",
+      "short" : "Patient",
+      "definition" : "Patient, von dem das untersuchte Probenmaterial stammt.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.Patient",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Probenmaterial",
+      "path" : "mii-lm-mikrobio-untersuchung.Probenmaterial",
+      "short" : "Probenmaterial",
+      "definition" : "Untersuchtes Probenmaterial. Die Probenart wird über das Probenmaterial abgebildet und nicht über präkoordinierte Untersuchungscodes.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.Probenmaterial",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Specimen"]
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt",
+      "path" : "mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt",
+      "short" : "Untersuchungszeitpunkt",
+      "definition" : "Klinisch relevanter Zeitpunkt der Untersuchung.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt",
+      "path" : "mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt",
+      "short" : "Quelle des Untersuchungszeitpunkts",
+      "definition" : "Gibt an, worauf sich der Untersuchungszeitpunkt bezieht, z. B. Zeitpunkt der Probenentnahme oder Laboreingang.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Dokumentationszeitpunkt",
+      "path" : "mii-lm-mikrobio-untersuchung.Dokumentationszeitpunkt",
+      "short" : "Dokumentationszeitpunkt",
+      "definition" : "Zeitpunkt, zu dem das Untersuchungsergebnis verfügbar gemacht wurde.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.Dokumentationszeitpunkt",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.InterpretationsbeeinflussendeEigenschaft",
+      "path" : "mii-lm-mikrobio-untersuchung.InterpretationsbeeinflussendeEigenschaft",
+      "short" : "Interpretationsbeeinflussende Eigenschaft",
+      "definition" : "Eigenschaft der Untersuchung oder der Probe, die die Interpretation des Ergebnisses einschränkt oder verändert, z. B. Hämolyse, Lipämie oder unzureichende Probenmenge. Die Angabe verändert die Bedeutung des Ergebnisses und darf nicht ignoriert werden.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.InterpretationsbeeinflussendeEigenschaft",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Hinweis",
+      "path" : "mii-lm-mikrobio-untersuchung.Hinweis",
+      "short" : "Hinweis",
+      "definition" : "Freitextliche Kommentierung der Untersuchung.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.Hinweis",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung",
+      "short" : "Auslösende Untersuchung",
+      "definition" : "Vorangegangene Untersuchung, die diese Untersuchung ausgelöst hat, z. B. eine durch ein Vorergebnis angestoßene Folgediagnostik (Reflextestung).",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "BackboneElement"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.id",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.extension",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
+      "short" : "Additional content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.modifierExtension",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.modifierExtension",
+      "short" : "Extensions that cannot be ignored even if unrecognized",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "requirements" : "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
+      "alias" : ["extensions",
+      "user content",
+      "modifiers"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "BackboneElement.modifierExtension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : true,
+      "isModifierReason" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "N/A"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Untersuchung",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Untersuchung",
+      "short" : "Untersuchung",
+      "definition" : "Die auslösende Untersuchung.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Untersuchung",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung"]
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Art",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Art",
+      "short" : "Art",
+      "definition" : "Art der Auslösung: reflex | repeat | re-run.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Art",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Grund",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Grund",
+      "short" : "Grund",
+      "definition" : "Begründung, warum diese Untersuchung ausgelöst wurde.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Grund",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }]
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "mii-lm-mikrobio-untersuchung",
+      "path" : "mii-lm-mikrobio-untersuchung",
+      "short" : "Mikrobiologische Untersuchung",
+      "definition" : "Abstrakte Basis einer mikrobiologischen Untersuchung. Die fachlichen Ausprägungen (Kultur, Bestimmung, Weitere Eigenschaften, Quantitative Tests) leiten von dieser Klasse ab und ergänzen sie um ihre jeweils spezifischen Attribute."
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Identifikation",
+      "path" : "mii-lm-mikrobio-untersuchung.Identifikation",
+      "short" : "Identifikation",
+      "definition" : "Eindeutiger Identifikator der Untersuchung.",
+      "min" : 1,
+      "max" : "*",
+      "type" : [{
+        "code" : "Identifier"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Status",
+      "path" : "mii-lm-mikrobio-untersuchung.Status",
+      "short" : "Status",
+      "definition" : "Status der Untersuchung (z. B. vorläufig, final, korrigiert).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Patient",
+      "path" : "mii-lm-mikrobio-untersuchung.Patient",
+      "short" : "Patient",
+      "definition" : "Patient, von dem das untersuchte Probenmaterial stammt.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Probenmaterial",
+      "path" : "mii-lm-mikrobio-untersuchung.Probenmaterial",
+      "short" : "Probenmaterial",
+      "definition" : "Untersuchtes Probenmaterial. Die Probenart wird über das Probenmaterial abgebildet und nicht über präkoordinierte Untersuchungscodes.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Specimen"]
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt",
+      "path" : "mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt",
+      "short" : "Untersuchungszeitpunkt",
+      "definition" : "Klinisch relevanter Zeitpunkt der Untersuchung.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt",
+      "path" : "mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt",
+      "short" : "Quelle des Untersuchungszeitpunkts",
+      "definition" : "Gibt an, worauf sich der Untersuchungszeitpunkt bezieht, z. B. Zeitpunkt der Probenentnahme oder Laboreingang.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Coding"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Dokumentationszeitpunkt",
+      "path" : "mii-lm-mikrobio-untersuchung.Dokumentationszeitpunkt",
+      "short" : "Dokumentationszeitpunkt",
+      "definition" : "Zeitpunkt, zu dem das Untersuchungsergebnis verfügbar gemacht wurde.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "dateTime"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.InterpretationsbeeinflussendeEigenschaft",
+      "path" : "mii-lm-mikrobio-untersuchung.InterpretationsbeeinflussendeEigenschaft",
+      "short" : "Interpretationsbeeinflussende Eigenschaft",
+      "definition" : "Eigenschaft der Untersuchung oder der Probe, die die Interpretation des Ergebnisses einschränkt oder verändert, z. B. Hämolyse, Lipämie oder unzureichende Probenmenge. Die Angabe verändert die Bedeutung des Ergebnisses und darf nicht ignoriert werden.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Coding"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.Hinweis",
+      "path" : "mii-lm-mikrobio-untersuchung.Hinweis",
+      "short" : "Hinweis",
+      "definition" : "Freitextliche Kommentierung der Untersuchung.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung",
+      "short" : "Auslösende Untersuchung",
+      "definition" : "Vorangegangene Untersuchung, die diese Untersuchung ausgelöst hat, z. B. eine durch ein Vorergebnis angestoßene Folgediagnostik (Reflextestung).",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Untersuchung",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Untersuchung",
+      "short" : "Untersuchung",
+      "definition" : "Die auslösende Untersuchung.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung"]
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Art",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Art",
+      "short" : "Art",
+      "definition" : "Art der Auslösung: reflex | repeat | re-run.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Grund",
+      "path" : "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Grund",
+      "short" : "Grund",
+      "definition" : "Begründung, warum diese Untersuchung ausgelöst wurde.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    }]
+  }
+}

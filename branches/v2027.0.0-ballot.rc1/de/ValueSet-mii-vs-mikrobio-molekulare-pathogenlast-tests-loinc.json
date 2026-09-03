@@ -1,0 +1,149 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc</b></p><a name=\"de-mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc\"> </a><a name=\"de-hcmii-vs-mikrobio-molekulare-pathogenlast-tests-loinc\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6464-4 (Probe.amp.tar), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6404-0 (Molgen), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6462-8 (Probe.amp), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP6463-6 (Probe.amp.sig), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where SCALE_TYP  = LP7753-9 (Qn), METHOD_TYP  = LP208998-7 (Non-probe.amp.tar), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC",
+  "title" : "MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-03T05:10:08+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für die Nukleinsäurekonzentration eines Erregers.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "LP7753-9"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP6464-4"
+      },
+      {
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7819-8"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "LP7753-9"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP6404-0"
+      },
+      {
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7819-8"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "LP7753-9"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP6462-8"
+      },
+      {
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7819-8"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "LP7753-9"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP6463-6"
+      },
+      {
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7819-8"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "LP7753-9"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP208998-7"
+      },
+      {
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7819-8"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    }]
+  }
+}

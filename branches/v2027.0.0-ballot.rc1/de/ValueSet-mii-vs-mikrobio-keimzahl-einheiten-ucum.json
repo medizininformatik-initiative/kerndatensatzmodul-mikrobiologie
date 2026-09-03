@@ -1,0 +1,52 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-keimzahl-einheiten-ucum",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-keimzahl-einheiten-ucum</b></p><a name=\"de-mii-vs-mikrobio-keimzahl-einheiten-ucum\"> </a><a name=\"de-hcmii-vs-mikrobio-keimzahl-einheiten-ucum\"> </a><ul><li>Include these codes as defined in <a href=\"http://unitsofmeasure.org\"><code>http://unitsofmeasure.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>[CFU]/mL</td><td/></tr><tr><td>[arb'U]/mL</td><td/></tr><tr><td>/g</td><td/></tr><tr><td>/mL</td><td/></tr><tr><td>1</td><td/></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM",
+  "title" : "MII VS Mikrobio Keimzahl Einheiten [UCUM]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-03-02T00:00:00Z",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "[CFU]/mL"
+      },
+      {
+        "code" : "[arb'U]/mL"
+      },
+      {
+        "code" : "/g"
+      },
+      {
+        "code" : "/mL"
+      },
+      {
+        "code" : "1"
+      }]
+    }]
+  }
+}

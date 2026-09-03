@@ -1,0 +1,55 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum</b></p><a name=\"mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum\"> </a><a name=\"hcmii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum\"> </a><ul><li>Include these codes as defined in <a href=\"http://unitsofmeasure.org\"><code>http://unitsofmeasure.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>ng/mL</td><td/></tr><tr><td>1/mL</td><td/></tr><tr><td>[IU]/mL</td><td/></tr><tr><td>%</td><td/></tr><tr><td>/g</td><td/></tr><tr><td>pg/mL</td><td/></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM",
+  "title" : "MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-03-02T00:00:00Z",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Einheiten-ValueSet für die molekulare Pathogenlast (UCUM): Konzentrationsangaben wie Kopien pro Milliliter.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://unitsofmeasure.org",
+      "concept" : [{
+        "code" : "ng/mL"
+      },
+      {
+        "code" : "1/mL"
+      },
+      {
+        "code" : "[IU]/mL"
+      },
+      {
+        "code" : "%"
+      },
+      {
+        "code" : "/g"
+      },
+      {
+        "code" : "pg/mL"
+      }]
+    }]
+  }
+}

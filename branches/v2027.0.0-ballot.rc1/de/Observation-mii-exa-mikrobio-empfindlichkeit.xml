@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-mikrobio-empfindlichkeit"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-mikrobio-empfindlichkeit</b></p><a name="de-mii-exa-mikrobio-empfindlichkeit"> </a><a name="de-hcmii-exa-mikrobio-empfindlichkeit"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII PR Mikrobio Empfindlichkeit</a></p></div><p><b>identifier</b>: Observation Instance Identifier/empf-1</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}, {http://loinc.org 26436-6}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 MB}">Mikrobiologie</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 100044-7}">Cefcapene [Susceptibility]</span></p><p><b>subject</b>: <a href="Patient-mii-exa-mikrobio-patient.html">Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)</a></p><p><b>effective</b>: 2026-04-02 10:00:00+0100</p><p><b>value</b>: 1 mg/L<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/L = 'mg/L')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation S}">Susceptible</span></p><p><b>specimen</b>: <a href="Specimen-mii-exa-mikrobio-probe.html">Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100</a></p></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="OBI"/>
+      </coding>
+    </type>
+    <system value="https://example.org/fhir/sid/test-lab-results"/>
+    <value value="empf-1"/>
+    <assigner>
+      <display value="Universitätsklinikum Musterstadt"/>
+    </assigner>
+  </identifier>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="26436-6"/>
+      <display value="Laboratory studies (set)"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="MB"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="100044-7"/>
+      <display value="Cefcapene [Susceptibility]"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-mikrobio-patient"/>
+  </subject>
+  <effectiveDateTime value="2026-04-02T10:00:00+01:00"/>
+  <valueQuantity>
+    <value value="1"/>
+    <unit value="mg/L"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mg/L"/>
+  </valueQuantity>
+  <interpretation>
+    <extension url="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm">
+      <valueCodeableConcept>
+        <coding>
+          <system value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm"/>
+          <code value="EUCAST"/>
+          <display value="EUCAST"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="S"/>
+      <display value="Susceptible"/>
+    </coding>
+  </interpretation>
+  <specimen>
+    <reference value="Specimen/mii-exa-mikrobio-probe"/>
+  </specimen>
+</Observation>

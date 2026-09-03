@@ -1,0 +1,49 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-resistenzkategorie-status",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-resistenzkategorie-status</b></p><a name=\"mii-vs-mikrobio-resistenzkategorie-status\"> </a><a name=\"hcmii-vs-mikrobio-resistenzkategorie-status\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-mii-cs-mikrobio-resistenzkategorie.html\"><code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-resistenzkategorie</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;2027.0.0-alpha.6</span></li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-resistenzkategorie-status</b></p><a name=\"de-mii-vs-mikrobio-resistenzkategorie-status\"> </a><a name=\"de-hcmii-vs-mikrobio-resistenzkategorie-status\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-mii-cs-mikrobio-resistenzkategorie.html\"><code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-resistenzkategorie</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;2027.0.0-alpha.6</span></li></ul></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzkategorie-status",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Resistenzkategorie_Status",
+  "title" : "MII VS Mikrobio Resistenzkategorie Status",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-03T05:10:08+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Untersuchungscodes fuer die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-resistenzkategorie"
+    }]
+  }
+}

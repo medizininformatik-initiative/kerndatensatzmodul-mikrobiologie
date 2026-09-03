@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-susceptibility"/>
+  <language value="de"/>
+  <text>
+    <status value="extensions"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-susceptibility</b></p><a name="de-mii-vs-mikrobio-susceptibility"> </a><a name="de-hcmii-vs-mikrobio-susceptibility"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html"><code>http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation</code></a><span title="Version is not explicitly stated, which means it is fixed to 4.0.0, the version found through the package references"> version &#x1F4E6;4.0.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-S">S</a></td><td>Susceptible</td><td>Bacterial strain inhibited by in vitro concentration of an antimicrobial agent that is associated with a high likelihood of therapeutic success. Reference: CLSI (http://www.clsi.org/Content/NavigationMenu/Resources/HarmonizedTerminologyDatabase/Harmonized\_Terminolo.htm) Synonym (earlier term): Sensitive Projects: ISO 20776-1, ISO 20776-2<br/><br/>\[Note 1: Bacterial strains are categorized as susceptible by applying the appropriate breakpoints in a defined phenotypic system.\]<br/><br/>\[Note 2: This breakpoint can be altered due to changes in circumstances (e.g., changes in commonly used drug dosages, emergence of new resistance mechanisms).\]</td></tr><tr><td><a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-I">I</a></td><td>Intermediate</td><td>Bacterial strain inhibited in vitro by a concentration of an antimicrobial agent that is associated with uncertain therapeutic effect. Reference: CLSI (http://www.clsi.org/Content/NavigationMenu/Resources/HarmonizedTerminologyDatabase/Harmonized\_Terminolo.htm) Projects: ISO 20776-1, ISO 20776-2<br/><br/>\[Note 1: Bacterial strains are categorized as intermediate by applying the appropriate breakpoints in a defined phenotypic test system.\]<br/><br/>\[Note 2: This class of susceptibility implies that an infection due to the isolate can be appropriately treated in body sites where the drugs are physiologically concentrated or when a high dosage of drug can be used.\]<br/><br/>\[Note 3: This class also indicates a &quot;buffer zone,&quot; to prevent small, uncontrolled, technical factors from causing major discrepancies in interpretations.\]<br/><br/>\[Note 4: These breakpoints can be altered due to changes in circumstances (e.g., changes in commonly used drug dosages, emergence of new resistance mechanisms).\]</td></tr><tr><td><a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-SDD">SDD</a></td><td>Susceptible-dose dependent</td><td>A category that includes isolates with antimicrobial agent minimum inhibitory concentrations (MICs) that approach usually attainable blood and tissue levels and for which response rates may be lower than for susceptible isolates.<br/><br/>Reference: CLSI document M44-A2 2009 &quot;Method for antifungal disk diffusion susceptibility testing of yeasts; approved guideline - second edition&quot; - page 2.</td></tr><tr><td><a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-R">R</a></td><td>Resistant</td><td>Bacterial strain inhibited in vitro by a concentration of an antimicrobial agent that is associated with a high likelihood of therapeutic failure. Reference: CLSI (http://www.clsi.org/Content/NavigationMenu/Resources/HarmonizedTerminologyDatabase/Harmonized\_Terminolo.htm) Projects: ISO 20776-1, ISO 20776-2<br/><br/>\[Note 1: Bacterial strains are categorized as resistant by applying the appropriate breakpoints in a defined phenotypic test system.\]<br/><br/>\[Note 2: This breakpoint can be altered due to changes in circumstances (e.g., changes in commonly used drug dosages, emergence of new resistance mechanisms).\]</td></tr><tr><td><a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html#v3-ObservationInterpretation-NS">NS</a></td><td>Non-susceptible</td><td>A category used for isolates for which only a susceptible interpretive criterion has been designated because of the absence or rare occurrence of resistant strains. Isolates that have MICs above or zone diameters below the value indicated for the susceptible breakpoint should be reported as non-susceptible.<br/><br/>NOTE 1: An isolate that is interpreted as non-susceptible does not necessarily mean that the isolate has a resistance mechanism. It is possible that isolates with MICs above the susceptible breakpoint that lack resistance mechanisms may be encountered within the wild-type distribution subsequent to the time the susceptible-only breakpoint is set.<br/><br/>NOTE 2: For strains yielding results in the &quot;nonsusceptible&quot; category, organism identification and antimicrobial susceptibility test results should be confirmed.<br/><br/>Synonym: decreased susceptibility.</td></tr></table></li><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/1306583007">1306583007</a></td><td>I (Susceptible, increased exposure) EUCAST (European Committee on Antimicrobial Susceptibility Testing) category 2019</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Mikrobio_Susceptibility"/>
+  <title value="MII VS Mikrobio Susceptibility"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2023-03-02T00:00:00Z"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategorien sensibel, intermediär, sensibel bei erhöhter Exposition, resistent und nicht sensibel."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <concept>
+        <code value="S"/>
+        <display value="Susceptible"/>
+      </concept>
+      <concept>
+        <code value="I"/>
+        <display value="Intermediate"/>
+      </concept>
+      <concept>
+        <code value="SDD"/>
+        <display value="Susceptible-dose dependent"/>
+      </concept>
+      <concept>
+        <code value="R"/>
+        <display value="Resistant"/>
+      </concept>
+      <concept>
+        <code value="NS"/>
+        <display value="Non-susceptible"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="1306583007"/>
+        <display value="I (Susceptible, increased exposure) EUCAST (European Committee on Antimicrobial Susceptibility Testing) category 2019"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

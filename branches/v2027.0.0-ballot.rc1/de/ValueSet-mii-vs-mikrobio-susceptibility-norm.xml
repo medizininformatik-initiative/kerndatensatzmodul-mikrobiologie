@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-susceptibility-norm"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-susceptibility-norm</b></p><a name="de-mii-vs-mikrobio-susceptibility-norm"> </a><a name="de-hcmii-vs-mikrobio-susceptibility-norm"> </a><ul><li>Include all codes defined in <a href="CodeSystem-mii-cs-mikrobio-susceptibility-norm.html"><code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;2027.0.0-alpha.6</span></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility-norm"/>
+  <version value="2027.0.0-alpha.6"/>
+  <name value="MII_VS_Mikrobio_Susceptibility_NORM"/>
+  <title value="MII VS Mikrobio Susceptibility Norm"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-03T05:10:08+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Norm-ValueSet für die Empfindlichkeitstestung: das Normsystem, auf dessen Grenzwerten eine Kategorie beruht. Gebunden an die Extension MII_EX_Mikrobio_Empfindlichkeit_Norm."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm"/>
+    </include>
+  </compose>
+</ValueSet>

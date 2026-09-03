@@ -1,0 +1,286 @@
+{
+  "package": "de.medizininformatikinitiative.kerndatensatz.mikrobiologie",
+  "version": "2027.0.0-alpha.6",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "DE",
+  "extensions": [
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy",
+      "title": "R5: Triggering observation(s) (new)",
+      "types": [
+        "Reference",
+        "code",
+        "string",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm",
+      "title": "MII EX Mikrobio Empfindlichkeit Norm",
+      "types": [
+        "CodeableConcept"
+      ]
+    }
+  ],
+  "profiles": {
+    "Observation": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit",
+        "title": "MII PR Mikrobio Empfindlichkeit"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",
+        "title": "MII PR Mikrobio Keimzahl"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
+        "title": "MII PR Mikrobio Mikroskopie"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast",
+        "title": "MII PR Mikrobio Molekulare Pathogenlast"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse",
+        "title": "MII PR Mikrobio MRGN Klasse"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score",
+        "title": "MII PR Mikrobio Nugent Score"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status",
+        "title": "MII PR Mikrobio Resistenzkategorie Status"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten",
+        "title": "MII PR Mikrobio Resistenzmechanismen Determinanten"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung",
+        "title": "MII PR Mikrobio Spezifische Bestimmung"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
+        "title": "MII PR Mikrobio Spezifische Kultur"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer",
+        "title": "MII PR Mikrobio Titer"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor",
+        "title": "MII PR Mikrobio Virulenzfaktor"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit",
+        "title": "MII PR Mikrobio Voraussichtliche Empfindlichkeit"
+      }
+    ],
+    "DiagnosticReport": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report",
+        "title": "MII PR Mikrobio Diagnostic Report"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy": [
+      "Observation"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-author": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-editor": [
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-endorser": [
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-purpose": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-reviewer": [
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-topic": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-usage": [
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm": [
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/artifact-versionPolicy": [
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.rest.resource"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/cqf-expansionParameters": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability": [
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/extension-quantity-translation": [
+      "Observation.value[x]"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/package-source": [
+      "ImplementationGuide"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/quantity-precision": [
+      "Observation.value[x].value"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/resource-approvalDate": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod": [
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/resource-lastReviewDate": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/translation": [
+      "CapabilityStatement.publisher",
+      "CodeSystem.publisher",
+      "ImplementationGuide.definition.page.page.page.title",
+      "ImplementationGuide.definition.page.page.title",
+      "ImplementationGuide.definition.page.title",
+      "ImplementationGuide.publisher",
+      "SearchParameter.publisher",
+      "StructureDefinition.publisher",
+      "StructureDefinition.snapshot.element.binding.description",
+      "StructureDefinition.snapshot.element.definition",
+      "StructureDefinition.snapshot.element.short",
+      "ValueSet.publisher"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page",
+      "ImplementationGuide.definition.page.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft": [
+      "Observation"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum": [
+      "DiagnosticReport.effective[x]",
+      "Observation.effective[x]"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable": [
+      "StructureDefinition"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm": [
+      "Observation.interpretation"
+    ]
+  }
+}

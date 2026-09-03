@@ -1,0 +1,326 @@
+# MII VS Mikrobio Virulenz [LOINC] - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII VS Mikrobio Virulenz [LOINC]**
+
+## ValueSet: MII VS Mikrobio Virulenz [LOINC] 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-virulenz-loinc | *Version*:2027.0.0-alpha.6 |
+| Active as of 2026-09-03 | *Computable Name*:MII_VS_Mikrobio_Virulenz_LOINC |
+
+ 
+Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten. 
+
+ **References** 
+
+* [MII PR Mikrobio Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+-------
+
+ [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-virulenz-loinc",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-virulenz-loinc",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_Virulenz_LOINC",
+  "title" : "MII VS Mikrobio Virulenz [LOINC]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-03T05:10:08+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "87402-4",
+        "display" : "Escherichia coli aidA-I gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87318-2",
+        "display" : "Escherichia coli eaeA gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87319-0",
+        "display" : "Escherichia coli enteroaggregative astA gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87320-8",
+        "display" : "Escherichia coli enterotoxigenic heat-labile toxin DNA [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87321-6",
+        "display" : "Escherichia coli enterotoxigenic sta gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87322-4",
+        "display" : "Escherichia coli enterotoxigenic stb gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87370-3",
+        "display" : "Escherichia coli fasA gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87371-1",
+        "display" : "Escherichia coli fedF gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87372-9",
+        "display" : "Escherichia coli FimF41a gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87373-7",
+        "display" : "Escherichia coli K88 DNA [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87374-5",
+        "display" : "Escherichia coli K99 DNA [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87375-2",
+        "display" : "Escherichia coli paa gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87376-0",
+        "display" : "Escherichia coli Stx1 toxin stx1 gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87377-8",
+        "display" : "Escherichia coli Stx2 toxin stx2 gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87380-2",
+        "display" : "Escherichia coli Stx2e-Toxin stx2e-Gen [Nachweis] in Isolat mittels Nukleinsäureamplifikation mit Sondendetektion"
+      },
+      {
+        "code" : "87304-2",
+        "display" : "Clostridium perfringens cpa gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87397-6",
+        "display" : "Clostridium perfringens cpb gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87305-9",
+        "display" : "Clostridium perfringens cpb2 gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87306-7",
+        "display" : "Clostridium perfringens cpe gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87307-5",
+        "display" : "Clostridium perfringens etx gene [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "87313-3",
+        "display" : "Clostridium perfringens iota toxin DNA [Presence] in Isolate by NAA with probe detection"
+      },
+      {
+        "code" : "53941-1",
+        "display" : "Vibrio cholerae toxin Ag [Presence] in Isolate"
+      },
+      {
+        "code" : "24102-6",
+        "display" : "Corynebacterium toxin [Presence] in Specimen by Immune diffusion (ID)"
+      },
+      {
+        "code" : "13329-8",
+        "display" : "Escherichia coli labile toxin [Presence] in Specimen"
+      },
+      {
+        "code" : "33708-9",
+        "display" : "Clostridium botulinum toxin [Presence] in Specimen"
+      },
+      {
+        "code" : "33712-1",
+        "display" : "Clostridium botulinum toxin A+B+E [Presence] in Specimen"
+      },
+      {
+        "code" : "33696-6",
+        "display" : "Clostridium botulinum toxin [Presence] in Specimen by Mouse bioassay"
+      },
+      {
+        "code" : "33709-7",
+        "display" : "Clostridium botulinum toxin A [Presence] in Specimen"
+      },
+      {
+        "code" : "33713-9",
+        "display" : "Clostridium botulinum toxin B [Presence] in Specimen"
+      },
+      {
+        "code" : "33710-5",
+        "display" : "Clostridium botulinum toxin E [Presence] in Specimen"
+      },
+      {
+        "code" : "23349-4",
+        "display" : "Pasteurella multocida toxin [Presence] in Specimen by Immunoassay"
+      },
+      {
+        "code" : "45039-5",
+        "display" : "Clostridium botulinum toxin [Presence] in Specimen by Immunoassay"
+      },
+      {
+        "code" : "33711-3",
+        "display" : "Clostridium botulinum toxin F [Presence] in Specimen"
+      },
+      {
+        "code" : "33704-8",
+        "display" : "Clostridium botulinum toxin A+B+E [Presence] in Specimen by Mouse bioassay neutralization"
+      },
+      {
+        "code" : "33701-4",
+        "display" : "Clostridium botulinum toxin A [Presence] in Specimen by Mouse bioassay neutralization"
+      },
+      {
+        "code" : "33705-5",
+        "display" : "Clostridium botulinum toxin B [Presence] in Specimen by Mouse bioassay neutralization"
+      },
+      {
+        "code" : "33702-2",
+        "display" : "Clostridium botulinum toxin E [Presence] in Specimen by Mouse bioassay neutralization"
+      },
+      {
+        "code" : "38989-0",
+        "display" : "Clostridium botulinum toxin A+B+E+F+G [Presence] in Specimen by Mouse bioassay neutralization"
+      },
+      {
+        "code" : "63427-9",
+        "display" : "Escherichia coli Stx1 toxin stx1 gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "63428-7",
+        "display" : "Escherichia coli Stx2 toxin stx2 gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "71786-8",
+        "display" : "Staphylococcus aureus exfoliative toxin A eta gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "71787-6",
+        "display" : "Staphylococcus aureus exfoliative toxin B etb gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "41630-5",
+        "display" : "Clostridium botulinum toxin A [Presence] in Specimen by Immunofluorescence"
+      },
+      {
+        "code" : "41632-1",
+        "display" : "Clostridium botulinum toxin B [Presence] in Specimen by Immunofluorescence"
+      },
+      {
+        "code" : "41634-7",
+        "display" : "Clostridium botulinum toxin E [Presence] in Specimen by Immunofluorescence"
+      },
+      {
+        "code" : "41635-4",
+        "display" : "Clostridium botulinum toxin F [Presence] in Specimen by Immunofluorescence"
+      },
+      {
+        "code" : "33703-0",
+        "display" : "Clostridium botulinum toxin F [Presence] in Specimen by Mouse bioassay neutralization"
+      },
+      {
+        "code" : "23935-0",
+        "display" : "Staphylococcus aureus toxic shock syndrome toxin 1 [Presence] in Specimen"
+      },
+      {
+        "code" : "80518-4",
+        "display" : "Clostridium baratii toxin F bont gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "81644-7",
+        "display" : "Clostridium botulinum toxin C botC gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "81645-4",
+        "display" : "Clostridium botulinum toxin D botD gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "81646-2",
+        "display" : "Clostridium botulinum toxin E botE gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "81647-0",
+        "display" : "Clostridium botulinum toxin F botF gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "53943-7",
+        "display" : "Bacterial cytolethal distending toxin cdt gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "94611-1",
+        "display" : "Pasteurella multocida toxin toxA gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "41631-3",
+        "display" : "Clostridium botulinum toxin A botA gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "41633-9",
+        "display" : "Clostridium botulinum toxin B botB gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "81648-8",
+        "display" : "Clostridium botulinum toxin G botG gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "44881-1",
+        "display" : "Staphylococcus aureus toxic shock syndrome toxin gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "53942-9",
+        "display" : "Vibrio cholerae toxin ctx gene [Presence] in Specimen by NAA with probe detection"
+      },
+      {
+        "code" : "48816-3",
+        "display" : "Staphylococcus aureus Panton-Valentine leukocidin gene [Presence] in Isolate or Specimen by Molecular genetics method"
+      }]
+    }]
+  }
+}
+
+```

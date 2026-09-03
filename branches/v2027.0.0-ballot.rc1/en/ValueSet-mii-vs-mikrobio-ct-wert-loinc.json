@@ -1,0 +1,52 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-ct-wert-loinc",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-ct-wert-loinc</b></p><a name=\"mii-vs-mikrobio-ct-wert-loinc\"> </a><a name=\"hcmii-vs-mikrobio-ct-wert-loinc\"> </a><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span> where PROPERTY  = LP188772-0 (ThreshNum), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-ct-wert-loinc",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_VS_Mikrobio_CT_Wert_LOINC",
+  "title" : "MII VS Mikrobio CT Wert [LOINC]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-03T05:10:08+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Tests-ValueSet für den Ct-Wert: LOINC-Codes mit der Eigenschaft Zyklusschwellenwert bei Nukleinsäurenachweisen.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "filter" : [{
+        "property" : "PROPERTY",
+        "op" : "=",
+        "value" : "LP188772-0"
+      },
+      {
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7819-8"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    }]
+  }
+}

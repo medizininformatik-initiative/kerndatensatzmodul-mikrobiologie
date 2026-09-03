@@ -1,0 +1,710 @@
+# mii-param-mikrobio-manifest - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **mii-param-mikrobio-manifest**
+
+## Parameters: mii-param-mikrobio-manifest
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Parameters",
+  "id" : "mii-param-mikrobio-manifest",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestparameters"]
+  },
+  "parameter" : [{
+    "name" : "system-version",
+    "valueCanonical" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes|3.0.0"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "http://unitsofmeasure.org|3.0.1"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation|4.0.0"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.1"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-resistenzkategorie|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-detected-not-detected-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Resource-id|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Resource-profile|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/clinical-patient|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-subject|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-based-on|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-category|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/clinical-code|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-code-value-quantity|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-code-value-concept|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/clinical-date|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-device|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-derived-from|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/clinical-encounter|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/clinical-identifier|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-method|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-specimen|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-status|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-triggered-by|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-value-concept|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/Observation-value-quantity|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-titer|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-based-on|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-category|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-issued|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-performer|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-result|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareableimplementationguide|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishableimplementationguide|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Observation|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility-norm|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Patient|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Practitioner|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Specimen|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab|2027.0.0-ballot.rc3"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/security-labels|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/common-tags|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/all-languages|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/languages|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/InterpretationsbeeinflussendeEigenschaft|2027.0.0-ballot.rc3"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/mii-vs-labor-identifier-type-codes|2027.0.0-ballot.rc3"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Period|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Organization|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Reference|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/MedicationAdministration|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/MedicationDispense|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/MedicationStatement|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Immunization|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/ImagingStudy|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/observation-category|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/observation-codes|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips|2.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Group|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Device|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Location|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/resource-types|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum|2027.0.0-ballot.rc3"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/PractitionerRole|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/CareTeam|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/RelatedPerson|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/extension-quantity-translation|5.3.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/quantity-precision|5.3.0"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-data-absent-reason|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Interpretation|2027.0.0-ballot.rc3"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/body-site|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/DeviceMetric|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/SimpleQuantity|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Quantity|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/referencerange-meaning|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Range|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/MolecularSequence|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/DocumentReference|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Media|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/observation-interpretation|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Laborergebnis-codiert|2027.0.0-ballot.rc3"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-methode-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-ergebnis|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-barlett-score-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/observation-methods|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-ct-wert-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/DiagnosticReportLab|2027.0.0-ballot.rc3"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/identifier-type|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/NutritionOrder|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/diagnostic-service-sections|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-befundtyp-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/report-codes|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/clinical-findings|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Attachment|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-labor-laborergebnis-semiquantitativ|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzkategorie-status|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-methode-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-tests-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-methode-snomed|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-virulenz-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc|2027.0.0-alpha.6"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit|2027.0.0-alpha.6"
+  }]
+}
+
+```

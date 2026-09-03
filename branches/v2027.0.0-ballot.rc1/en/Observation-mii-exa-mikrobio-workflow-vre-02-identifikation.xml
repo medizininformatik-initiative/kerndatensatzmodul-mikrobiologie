@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="mii-exa-mikrobio-workflow-vre-02-identifikation"/>
+  <meta>
+    <profile value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-mikrobio-workflow-vre-02-identifikation</b></p><a name="mii-exa-mikrobio-workflow-vre-02-identifikation"> </a><a name="hcmii-exa-mikrobio-workflow-vre-02-identifikation"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">MII PR Mikrobio Allgemeine Bestimmung</a></p></div><blockquote><p><b>R5: Triggering observation(s) (new)</b></p><ul><li>observation: <a href="Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html">Observation Vancomycin resistant enterococcus [Presence] in Specimen by Organism specific culture</a></li><li>type: reflex</li></ul></blockquote><p><b>identifier</b>: Observation Instance Identifier/wf-vre-2</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}, {http://loinc.org 26436-6}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 MB}">Microbiology</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 41852-5}">Microorganism or agent identified in Specimen</span></p><p><b>subject</b>: <a href="Patient-mii-exa-mikrobio-patient.html">Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)</a></p><p><b>effective</b>: 2026-04-03 09:00:00+0100</p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 90272000}">Enterococcus faecium</span></p><p><b>method</b>: <span title="Codes:{http://snomed.info/sct 83581000052107}">Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)</span></p><p><b>specimen</b>: <a href="Specimen-mii-exa-mikrobio-probe.html">Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100</a></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy">
+    <extension url="observation">
+      <valueReference>
+        <reference value="Observation/mii-exa-mikrobio-workflow-vre-01-kultur"/>
+      </valueReference>
+    </extension>
+    <extension url="type">
+      <valueCode value="reflex"/>
+    </extension>
+  </extension>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="OBI"/>
+      </coding>
+    </type>
+    <system value="https://example.org/fhir/sid/test-lab-results"/>
+    <value value="wf-vre-2"/>
+    <assigner>
+      <display value="Universitätsklinikum Musterstadt"/>
+    </assigner>
+  </identifier>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="26436-6"/>
+      <display value="Laboratory studies (set)"/>
+    </coding>
+  </category>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="MB"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="41852-5"/>
+      <display value="Microorganism or agent identified in Specimen"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/mii-exa-mikrobio-patient"/>
+  </subject>
+  <effectiveDateTime value="2026-04-03T09:00:00+01:00"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="90272000"/>
+      <display value="Enterococcus faecium"/>
+    </coding>
+  </valueCodeableConcept>
+  <method>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="83581000052107"/>
+      <display value="Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)"/>
+    </coding>
+  </method>
+  <specimen>
+    <reference value="Specimen/mii-exa-mikrobio-probe"/>
+  </specimen>
+</Observation>

@@ -1,0 +1,293 @@
+{
+  "resourceType" : "CapabilityStatement",
+  "id" : "mii-cps-mikrobio-metadata",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CapabilityStatement mii-cps-mikrobio-metadata</b></p><a name=\"mii-cps-mikrobio-metadata\"> </a><a name=\"hcmii-cps-mikrobio-metadata\"> </a><h2 id=\"title\">MII CPS Mikrobio Metadata</h2><ul><li>Implementation Guide Version: 2027.0.0-alpha.6 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>application/fhir+xml</code>, <code>application/fhir+json</code></li><li>Published on: 2027-04-02 </li><li>Published by: Medizininformatik Initiative </li></ul><blockquote class=\"impl-note\"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h3 id=\"shallIGs\">SHALL Support the Following Implementation Guides</h3><ul><li>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5</li></ul><h2 id=\"rest\">FHIR RESTful Capabilities</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"mode1\" class=\"panel-title\">Mode: <code>server</code></h3></div><div class=\"panel-body\"/></div><h3 id=\"resourcesCap1\">Capabilities by Resource/Profile</h3><h4 id=\"resourcesSummary1\">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class=\"bg-info\">R</span></b>ead, <b><span class=\"bg-info\">S</span></b>earch, <b><span class=\"bg-info\">U</span></b>pdate, and <b><span class=\"bg-info\">C</span></b>reate, are always shown, while <b><span class=\"bg-info\">VR</span></b>ead, <b><span class=\"bg-info\">P</span></b>atch, <b><span class=\"bg-info\">D</span></b>elete, <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">I</span></b>nstance, or <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class=\"table-responsive\"><table class=\"table table-condensed table-hover\"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class=\"text-center\"><b title=\"GET a resource (read interaction)\">R</b></th><th class=\"text-center\"><b title=\"GET all set of resources of the type (search interaction)\">S</b></th><th class=\"text-center\"><b title=\"PUT a new resource version (update interaction)\">U</b></th><th class=\"text-center\"><b title=\"POST a new resource (create interaction)\">C</b></th><th><b title=\"Required and recommended search parameters\">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href=\"#Observation1-1\">Observation</a></td><td>Supported Profiles<br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html\">MII PR Mikrobio Allgemeine Kultur</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html\">MII PR Mikrobio Spezifische Kultur</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html\">MII PR Mikrobio Allgemeine Bestimmung</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html\">MII PR Mikrobio Spezifische Bestimmung</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-keimzahl.html\">MII PR Mikrobio Keimzahl</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html\">MII PR Mikrobio Empfindlichkeit</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-mikroskopie.html\">MII PR Mikrobio Mikroskopie</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html\">MII PR Mikrobio Antigen Antikoerper Quantitativ</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-aviditaet.html\">MII PR Mikrobio Aviditaet</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-ct-wert.html\">MII PR Mikrobio CT Wert</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-titer.html\">MII PR Mikrobio Titer</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-nugent-score.html\">MII PR Mikrobio Nugent Score</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-barlett-score.html\">MII PR Mikrobio Barlett Score</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html\">MII PR Mikrobio Molekulare Pathogenlast</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html\">MII PR Mikrobio Resistenzmechanismen Determinanten</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html\">MII PR Mikrobio Virulenzfaktor</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html\">MII PR Mikrobio Voraussichtliche Empfindlichkeit</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html\">MII PR Mikrobio Resistenzkategorie Status</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html\">MII PR Mikrobio MRGN Klasse</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _profile, _lastUpdated, patient, subject, based-on, category, code, code-value-quantity, code-value-concept, data-absent-reason, date, device, derived-from, encounter, identifier, interpretation, method, specimen, status, triggered-by, value-concept, value-quantity, titer</td><td/><td/><td/></tr><tr><td><a href=\"#DiagnosticReport1-2\">DiagnosticReport</a></td><td>Supported Profiles<br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-diagnostic-report.html\">MII PR Mikrobio Diagnostic Report</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _profile, _lastUpdated, status, based-on, category, code, subject, encounter, date, issued, performer, specimen, result, conclusion</td><td/><td/><td/></tr></tbody></table></div><hr/><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Observation1-1\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Observation</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/observation.html\">Observation</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html\">MII PR Mikrobio Allgemeine Kultur</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html\">MII PR Mikrobio Spezifische Kultur</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html\">MII PR Mikrobio Allgemeine Bestimmung</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html\">MII PR Mikrobio Spezifische Bestimmung</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-keimzahl.html\">MII PR Mikrobio Keimzahl</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html\">MII PR Mikrobio Empfindlichkeit</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-mikroskopie.html\">MII PR Mikrobio Mikroskopie</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html\">MII PR Mikrobio Antigen Antikoerper Quantitativ</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-aviditaet.html\">MII PR Mikrobio Aviditaet</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-ct-wert.html\">MII PR Mikrobio CT Wert</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-titer.html\">MII PR Mikrobio Titer</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-nugent-score.html\">MII PR Mikrobio Nugent Score</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-barlett-score.html\">MII PR Mikrobio Barlett Score</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html\">MII PR Mikrobio Molekulare Pathogenlast</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html\">MII PR Mikrobio Resistenzmechanismen Determinanten</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html\">MII PR Mikrobio Virulenzfaktor</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html\">MII PR Mikrobio Voraussichtliche Empfindlichkeit</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html\">MII PR Mikrobio Resistenzkategorie Status</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html\">MII PR Mikrobio MRGN Klasse</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">patient</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">based-on</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">category</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code-value-quantity</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code-value-concept</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">data-absent-reason</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">device</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">derived-from</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">encounter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ObservationInterpretation.html\">interpretation</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">method</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">specimen</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-mii-sp-mikrobio-observation-triggered-by.html\">triggered-by</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">value-concept</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">value-quantity</a></td><td><code>quantity</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-mii-sp-mikrobio-observation-titer.html\">titer</a></td><td><code>quantity</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"DiagnosticReport1-2\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>DiagnosticReport</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html\">DiagnosticReport</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-mii-pr-mikrobio-diagnostic-report.html\">MII PR Mikrobio Diagnostic Report</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">based-on</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">category</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">encounter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">issued</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">performer</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">specimen</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">result</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">conclusion</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CapabilityStatement mii-cps-mikrobio-metadata</b></p><a name=\"de-mii-cps-mikrobio-metadata\"> </a><a name=\"de-hcmii-cps-mikrobio-metadata\"> </a><h2 id=\"de-title\">MII CPS Mikrobio Metadata</h2><ul><li>Implementation Guide Version: 2027.0.0-alpha.6 </li><li>FHIR Version: 4.0.1 </li><li>Supported Formats: <code>application/fhir+xml</code>, <code>application/fhir+json</code></li><li>Published on: 2027-04-02 </li><li>Published by: Medizininformatik Initiative </li></ul><blockquote class=\"impl-note\"><p><strong>Note to Implementers: FHIR Capabilities</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h3 id=\"de-shallIGs\">SHALL Support the Following Implementation Guides</h3><ul><li>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5</li></ul><h2 id=\"de-rest\">FHIR RESTful Capabilities</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"de-mode1\" class=\"panel-title\">Mode: <code>server</code></h3></div><div class=\"panel-body\"/></div><h3 id=\"de-resourcesCap1\">Capabilities by Resource/Profile</h3><h4 id=\"de-resourcesSummary1\">Summary</h4><p>The summary table lists the resources that are part of this configuration, and for each resource it lists:</p><ul><li>The relevant profiles (if any)</li><li>The interactions supported by each resource (<b><span class=\"bg-info\">R</span></b>ead, <b><span class=\"bg-info\">S</span></b>earch, <b><span class=\"bg-info\">U</span></b>pdate, and <b><span class=\"bg-info\">C</span></b>reate, are always shown, while <b><span class=\"bg-info\">VR</span></b>ead, <b><span class=\"bg-info\">P</span></b>atch, <b><span class=\"bg-info\">D</span></b>elete, <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">I</span></b>nstance, or <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">T</span></b>ype are only present if at least one of the resources has support for them.</li><li><span>The required, recommended, and some optional search parameters (if any). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class=\"table-responsive\"><table class=\"table table-condensed table-hover\"><thead><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th class=\"text-center\"><b title=\"GET a resource (read interaction)\">R</b></th><th class=\"text-center\"><b title=\"GET all set of resources of the type (search interaction)\">S</b></th><th class=\"text-center\"><b title=\"PUT a new resource version (update interaction)\">U</b></th><th class=\"text-center\"><b title=\"POST a new resource (create interaction)\">C</b></th><th><b title=\"Required and recommended search parameters\">Searches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Operations</b></th></tr></thead><tbody><tr><td><a href=\"#de-Observation1-1\">Observation</a></td><td>Supported Profiles<br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html\">MII PR Mikrobio Allgemeine Kultur</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html\">MII PR Mikrobio Spezifische Kultur</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html\">MII PR Mikrobio Allgemeine Bestimmung</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html\">MII PR Mikrobio Spezifische Bestimmung</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-keimzahl.html\">MII PR Mikrobio Keimzahl</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html\">MII PR Mikrobio Empfindlichkeit</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-mikroskopie.html\">MII PR Mikrobio Mikroskopie</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html\">MII PR Mikrobio Antigen Antikoerper Quantitativ</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-aviditaet.html\">MII PR Mikrobio Aviditaet</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-ct-wert.html\">MII PR Mikrobio CT Wert</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-titer.html\">MII PR Mikrobio Titer</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-nugent-score.html\">MII PR Mikrobio Nugent Score</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-barlett-score.html\">MII PR Mikrobio Barlett Score</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html\">MII PR Mikrobio Molekulare Pathogenlast</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html\">MII PR Mikrobio Resistenzmechanismen Determinanten</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html\">MII PR Mikrobio Virulenzfaktor</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html\">MII PR Mikrobio Voraussichtliche Empfindlichkeit</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html\">MII PR Mikrobio Resistenzkategorie Status</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html\">MII PR Mikrobio MRGN Klasse</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _profile, _lastUpdated, patient, subject, based-on, category, code, code-value-quantity, code-value-concept, data-absent-reason, date, device, derived-from, encounter, identifier, interpretation, method, specimen, status, triggered-by, value-concept, value-quantity, titer</td><td/><td/><td/></tr><tr><td><a href=\"#de-DiagnosticReport1-2\">DiagnosticReport</a></td><td>Supported Profiles<br/>\u00a0\u00a0<a href=\"StructureDefinition-mii-pr-mikrobio-diagnostic-report.html\">MII PR Mikrobio Diagnostic Report</a></td><td class=\"text-center\">y</td><td class=\"text-center\">y</td><td class=\"text-center\"/><td class=\"text-center\"/><td>_id, _profile, _lastUpdated, status, based-on, category, code, subject, encounter, date, issued, performer, specimen, result, conclusion</td><td/><td/><td/></tr></tbody></table></div><hr/><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"de-Observation1-1\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>Observation</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/observation.html\">Observation</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html\">MII PR Mikrobio Allgemeine Kultur</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html\">MII PR Mikrobio Spezifische Kultur</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html\">MII PR Mikrobio Allgemeine Bestimmung</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html\">MII PR Mikrobio Spezifische Bestimmung</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-keimzahl.html\">MII PR Mikrobio Keimzahl</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html\">MII PR Mikrobio Empfindlichkeit</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-mikroskopie.html\">MII PR Mikrobio Mikroskopie</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html\">MII PR Mikrobio Antigen Antikoerper Quantitativ</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-aviditaet.html\">MII PR Mikrobio Aviditaet</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-ct-wert.html\">MII PR Mikrobio CT Wert</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-titer.html\">MII PR Mikrobio Titer</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-nugent-score.html\">MII PR Mikrobio Nugent Score</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-barlett-score.html\">MII PR Mikrobio Barlett Score</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html\">MII PR Mikrobio Molekulare Pathogenlast</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html\">MII PR Mikrobio Resistenzmechanismen Determinanten</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html\">MII PR Mikrobio Virulenzfaktor</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html\">MII PR Mikrobio Voraussichtliche Empfindlichkeit</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html\">MII PR Mikrobio Resistenzkategorie Status</a><br/><a href=\"StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html\">MII PR Mikrobio MRGN Klasse</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">patient</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">based-on</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">category</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code-value-quantity</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">code-value-concept</a></td><td><code>composite</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">data-absent-reason</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">device</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">derived-from</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">encounter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">identifier</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-ObservationInterpretation.html\">interpretation</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">method</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">specimen</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-mii-sp-mikrobio-observation-triggered-by.html\">triggered-by</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">value-concept</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/observation.html#search\">value-quantity</a></td><td><code>quantity</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"SearchParameter-mii-sp-mikrobio-observation-titer.html\">titer</a></td><td><code>quantity</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"de-DiagnosticReport1-2\" class=\"panel-title\"><span style=\"float: right;\">Resource Conformance: SHALL </span>DiagnosticReport</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-4\"><span class=\"lead\">Core FHIR Resource</span><br/><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html\">DiagnosticReport</a></div><div class=\"col-lg-4\"><span class=\"lead\">Reference Policy</span><br/></div><div class=\"col-lg-4\"><span class=\"lead\">Interaction summary</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class=\"row\"><div class=\"col-6\"><span class=\"lead\">Supported Profiles</span><p><a href=\"StructureDefinition-mii-pr-mikrobio-diagnostic-report.html\">MII PR Mikrobio Diagnostic Report</a></p></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Search Parameters</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_id</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_profile</a></td><td><code>uri</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/resource.html#search\">_lastUpdated</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">status</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">based-on</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">category</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">code</a></td><td><code>token</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">subject</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">encounter</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">date</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">issued</a></td><td><code>date</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">performer</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">specimen</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">result</a></td><td><code>reference</code></td><td><div/></td></tr><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/diagnosticreport.html#search\">conclusion</a></td><td><code>token</code></td><td><div/></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_CPS_Mikrobio_Metadata",
+  "title" : "MII CPS Mikrobio Metadata",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2027-04-02",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "CapabilityStatement für das MII Mikrobiologie Modul 2027.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "kind" : "requirements",
+  "fhirVersion" : "4.0.1",
+  "format" : ["application/fhir+xml",
+  "application/fhir+json"],
+  "implementationGuide" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5"],
+  "rest" : [{
+    "mode" : "server",
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "SHALL"
+      }],
+      "type" : "Observation",
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"],
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "_id",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
+        "type" : "token"
+      },
+      {
+        "name" : "_profile",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-profile",
+        "type" : "uri"
+      },
+      {
+        "name" : "_lastUpdated",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+        "type" : "date"
+      },
+      {
+        "name" : "patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-patient",
+        "type" : "reference"
+      },
+      {
+        "name" : "subject",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-subject",
+        "type" : "reference"
+      },
+      {
+        "name" : "based-on",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-based-on",
+        "type" : "reference"
+      },
+      {
+        "name" : "category",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-category",
+        "type" : "token"
+      },
+      {
+        "name" : "code",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+        "type" : "token"
+      },
+      {
+        "name" : "code-value-quantity",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-code-value-quantity",
+        "type" : "composite"
+      },
+      {
+        "name" : "code-value-concept",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-code-value-concept",
+        "type" : "composite"
+      },
+      {
+        "name" : "data-absent-reason",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason",
+        "type" : "token"
+      },
+      {
+        "name" : "date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date"
+      },
+      {
+        "name" : "device",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-device",
+        "type" : "reference"
+      },
+      {
+        "name" : "derived-from",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-derived-from",
+        "type" : "reference"
+      },
+      {
+        "name" : "encounter",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
+        "type" : "reference"
+      },
+      {
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+        "type" : "token"
+      },
+      {
+        "name" : "interpretation",
+        "definition" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation",
+        "type" : "token"
+      },
+      {
+        "name" : "method",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-method",
+        "type" : "token"
+      },
+      {
+        "name" : "specimen",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-specimen",
+        "type" : "reference"
+      },
+      {
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-status",
+        "type" : "token"
+      },
+      {
+        "name" : "triggered-by",
+        "definition" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-triggered-by",
+        "type" : "reference"
+      },
+      {
+        "name" : "value-concept",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-value-concept",
+        "type" : "token"
+      },
+      {
+        "name" : "value-quantity",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-value-quantity",
+        "type" : "quantity"
+      },
+      {
+        "name" : "titer",
+        "definition" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-titer",
+        "type" : "quantity"
+      }]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "SHALL"
+      }],
+      "type" : "DiagnosticReport",
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"],
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "_id",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
+        "type" : "token"
+      },
+      {
+        "name" : "_profile",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-profile",
+        "type" : "uri"
+      },
+      {
+        "name" : "_lastUpdated",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+        "type" : "date"
+      },
+      {
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status",
+        "type" : "token"
+      },
+      {
+        "name" : "based-on",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-based-on",
+        "type" : "reference"
+      },
+      {
+        "name" : "category",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-category",
+        "type" : "token"
+      },
+      {
+        "name" : "code",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+        "type" : "token"
+      },
+      {
+        "name" : "subject",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject",
+        "type" : "reference"
+      },
+      {
+        "name" : "encounter",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
+        "type" : "reference"
+      },
+      {
+        "name" : "date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date"
+      },
+      {
+        "name" : "issued",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-issued",
+        "type" : "date"
+      },
+      {
+        "name" : "performer",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-performer",
+        "type" : "reference"
+      },
+      {
+        "name" : "specimen",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen",
+        "type" : "reference"
+      },
+      {
+        "name" : "result",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-result",
+        "type" : "reference"
+      },
+      {
+        "name" : "conclusion",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion",
+        "type" : "token"
+      }]
+    }]
+  }]
+}

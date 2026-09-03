@@ -1,0 +1,313 @@
+# MII CPS Mikrobio Metadata - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII CPS Mikrobio Metadata**
+
+## CapabilityStatement: MII CPS Mikrobio Metadata 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata | *Version*:2027.0.0-alpha.6 |
+| Active as of 2027-04-02 | *Computable Name*:MII_CPS_Mikrobio_Metadata |
+
+ 
+CapabilityStatement für das MII Mikrobiologie Modul 2027. 
+
+ [Raw OpenAPI-Swagger Definition file](../mii-cps-mikrobio-metadata.openapi.json) | [Download](../mii-cps-mikrobio-metadata.openapi.json) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "CapabilityStatement",
+  "id" : "mii-cps-mikrobio-metadata",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata",
+  "version" : "2027.0.0-alpha.6",
+  "name" : "MII_CPS_Mikrobio_Metadata",
+  "title" : "MII CPS Mikrobio Metadata",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2027-04-02",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "CapabilityStatement für das MII Mikrobiologie Modul 2027.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "kind" : "requirements",
+  "fhirVersion" : "4.0.1",
+  "format" : ["application/fhir+xml", "application/fhir+json"],
+  "implementationGuide" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5"],
+  "rest" : [{
+    "mode" : "server",
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "SHALL"
+      }],
+      "type" : "Observation",
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status",
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"],
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "_id",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
+        "type" : "token"
+      },
+      {
+        "name" : "_profile",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-profile",
+        "type" : "uri"
+      },
+      {
+        "name" : "_lastUpdated",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+        "type" : "date"
+      },
+      {
+        "name" : "patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-patient",
+        "type" : "reference"
+      },
+      {
+        "name" : "subject",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-subject",
+        "type" : "reference"
+      },
+      {
+        "name" : "based-on",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-based-on",
+        "type" : "reference"
+      },
+      {
+        "name" : "category",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-category",
+        "type" : "token"
+      },
+      {
+        "name" : "code",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+        "type" : "token"
+      },
+      {
+        "name" : "code-value-quantity",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-code-value-quantity",
+        "type" : "composite"
+      },
+      {
+        "name" : "code-value-concept",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-code-value-concept",
+        "type" : "composite"
+      },
+      {
+        "name" : "data-absent-reason",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-data-absent-reason",
+        "type" : "token"
+      },
+      {
+        "name" : "date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date"
+      },
+      {
+        "name" : "device",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-device",
+        "type" : "reference"
+      },
+      {
+        "name" : "derived-from",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-derived-from",
+        "type" : "reference"
+      },
+      {
+        "name" : "encounter",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
+        "type" : "reference"
+      },
+      {
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-identifier",
+        "type" : "token"
+      },
+      {
+        "name" : "interpretation",
+        "definition" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation",
+        "type" : "token"
+      },
+      {
+        "name" : "method",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-method",
+        "type" : "token"
+      },
+      {
+        "name" : "specimen",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-specimen",
+        "type" : "reference"
+      },
+      {
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-status",
+        "type" : "token"
+      },
+      {
+        "name" : "triggered-by",
+        "definition" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-triggered-by",
+        "type" : "reference"
+      },
+      {
+        "name" : "value-concept",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-value-concept",
+        "type" : "token"
+      },
+      {
+        "name" : "value-quantity",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Observation-value-quantity",
+        "type" : "quantity"
+      },
+      {
+        "name" : "titer",
+        "definition" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-titer",
+        "type" : "quantity"
+      }]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "SHALL"
+      }],
+      "type" : "DiagnosticReport",
+      "supportedProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"],
+      "interaction" : [{
+        "code" : "read"
+      },
+      {
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "name" : "_id",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-id",
+        "type" : "token"
+      },
+      {
+        "name" : "_profile",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-profile",
+        "type" : "uri"
+      },
+      {
+        "name" : "_lastUpdated",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated",
+        "type" : "date"
+      },
+      {
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status",
+        "type" : "token"
+      },
+      {
+        "name" : "based-on",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-based-on",
+        "type" : "reference"
+      },
+      {
+        "name" : "category",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-category",
+        "type" : "token"
+      },
+      {
+        "name" : "code",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-code",
+        "type" : "token"
+      },
+      {
+        "name" : "subject",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject",
+        "type" : "reference"
+      },
+      {
+        "name" : "encounter",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-encounter",
+        "type" : "reference"
+      },
+      {
+        "name" : "date",
+        "definition" : "http://hl7.org/fhir/SearchParameter/clinical-date",
+        "type" : "date"
+      },
+      {
+        "name" : "issued",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-issued",
+        "type" : "date"
+      },
+      {
+        "name" : "performer",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-performer",
+        "type" : "reference"
+      },
+      {
+        "name" : "specimen",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen",
+        "type" : "reference"
+      },
+      {
+        "name" : "result",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-result",
+        "type" : "reference"
+      },
+      {
+        "name" : "conclusion",
+        "definition" : "http://hl7.org/fhir/SearchParameter/DiagnosticReport-conclusion",
+        "type" : "token"
+      }]
+    }]
+  }]
+}
+
+```
