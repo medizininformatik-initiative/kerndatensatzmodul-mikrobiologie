@@ -151,7 +151,7 @@
       ]
     }
   ],
-  "description": "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten pro Volumen oder Masse.",
+  "description": "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.",
   "purpose": "Dieses Profil beschreibt die Keimzahlbestimmung.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -256,6 +256,7 @@
       {
         "id": "Observation.value[x]:valueQuantity.code",
         "path": "Observation.value[x].code",
+        "short": "Bei Probenmaterialien ohne Volumen- oder Massenbezug, etwa Katheterspitzen, wird die nennerlose Einheit [CFU] verwendet; die Bezugsgröße steht in Specimen.type.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"
