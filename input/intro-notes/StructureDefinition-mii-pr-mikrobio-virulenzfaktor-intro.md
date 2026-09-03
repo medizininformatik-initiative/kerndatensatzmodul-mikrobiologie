@@ -1,4 +1,4 @@
-Virulence factor describes the qualitative detection or exclusion of virulence determinants in a specimen.
+Virulence factor describes the qualitative detection or exclusion of virulence determinants in a specimen or an isolate.
 
 ### Examples
 
