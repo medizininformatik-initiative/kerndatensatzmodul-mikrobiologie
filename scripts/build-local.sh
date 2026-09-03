@@ -107,8 +107,19 @@ else
   mv "${jar}.tmp" "${jar}"
 fi
 
+# -fhir-settings allowlists the local SU-TermServ nginx proxy
+# (http://127.0.0.1:8090) for the publisher's terminology access: publisher
+# 2.3.1+ SSRF hardening refuses plain-HTTP/private-network -tx targets without
+# it ("Refusing to fetch from non-https URL"). Inert on the tx.fhir.org path.
+# All three workflows pass it; omitting it here was exactly the CI/local drift
+# this script exists to prevent — measured 2026-09-03, a --tx 127.0.0.1 build
+# died in initialize() while the same target worked in CI.
+SETTINGS=".github/fhir-settings.json"
+[ -f "${SETTINGS}" ] || { echo "ERROR: missing ${SETTINGS}" >&2; exit 1; }
+
 echo "==> IG Publisher build (-tx ${TX})"
-java -Xmx6g -jar "${jar}" -ig ig.ini -tx "${TX}" "${extra_args[@]}"
+java -Xmx6g -jar "${jar}" -ig ig.ini -tx "${TX}" \
+  -fhir-settings "${repo_root}/${SETTINGS}" "${extra_args[@]}"
 
 test -s output/index.html
 echo "Build complete — output/index.html"
