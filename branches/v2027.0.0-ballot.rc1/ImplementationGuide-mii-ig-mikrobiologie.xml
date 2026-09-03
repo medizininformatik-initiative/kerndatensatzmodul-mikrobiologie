@@ -108,7 +108,7 @@
   <title value="MII Implementation Guide Microbiology"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-03T05:17:43+00:00"/>
+  <date value="2026-09-03T05:48:26+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -1058,6 +1058,17 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/mii-exa-mikrobio-keimzahl-katheterspitze"/>
+      </reference>
+      <name value="MII EXA Mikrobio Keimzahl Katheterspitze"/>
+      <description value="Keimzahl einer Katheterspitze in koloniebildenden Einheiten ohne Nenner. Die Bezugsgröße steht in Specimen.type."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/mii-exa-mikrobio-mrgn-klasse-negativ"/>
       </reference>
       <name value="MII EXA Mikrobio MRGN Klasse negativ"/>
@@ -1084,6 +1095,17 @@
       </reference>
       <name value="MII EXA Mikrobio Probe"/>
       <description value="Generisches Probenmaterial für die Beispiele dieses Moduls. Der Typ ist bewusst unspezifisch, weil dieselbe Probe Beispiele unterschiedlicher Untersuchungsarten trägt."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/mii-exa-mikrobio-probe-katheterspitze"/>
+      </reference>
+      <name value="MII EXA Mikrobio Probe Katheterspitze"/>
+      <description value="Katheterspitze als Probenmaterial. Sie hat weder Volumen noch Masse und ist damit selbst die Bezugsgröße der Keimzahl."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1292,7 +1314,7 @@
         <reference value="StructureDefinition/mii-pr-mikrobio-keimzahl"/>
       </reference>
       <name value="MII PR Mikrobio Keimzahl"/>
-      <description value="Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten pro Volumen oder Masse."/>
+      <description value="Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1611,7 +1633,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"/>
       </reference>
       <name value="MII VS Mikrobio Keimzahl Einheiten [UCUM]"/>
-      <description value="Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse."/>
+      <description value="Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1633,7 +1655,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Kultur Ergebnis [SNOMED]"/>
-      <description value="Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder kein Wachstum. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet."/>
+      <description value="Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1765,7 +1787,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]"/>
-      <description value="Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist."/>
+      <description value="Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

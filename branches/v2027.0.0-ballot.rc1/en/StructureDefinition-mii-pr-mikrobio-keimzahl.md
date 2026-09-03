@@ -12,7 +12,7 @@
 | Active as of 2026-09-03 | *Computable Name*:MII_PR_Mikrobio_Keimzahl |
 
  
-Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten pro Volumen oder Masse. 
+Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe. 
 
 Colony count describes the quantitative determination of viable microorganisms in a specimen as colony-forming units per volume or mass.
 
@@ -25,7 +25,7 @@ Example (minimal):
 **Usages:**
 
 * Refer to this Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
-* Examples for this Profile: [Observation/mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.md)
+* Examples for this Profile: [Observation/mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.md) and [Observation/mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.md)
 * CapabilityStatements using this Profile: [MII CPS Mikrobio Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-keimzahl.json)
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-k
   "title" : "MII PR Mikrobio Keimzahl",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T05:17:43+00:00",
+  "date" : "2026-09-03T05:48:26+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -201,7 +201,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-k
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten pro Volumen oder Masse.",
+  "description" : "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -292,6 +292,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-k
     {
       "id" : "Observation.value[x]:valueQuantity.code",
       "path" : "Observation.value[x].code",
+      "short" : "Bei Probenmaterialien ohne Volumen- oder Massenbezug, etwa Katheterspitzen, wird die nennerlose Einheit [CFU] verwendet; die Bezugsgröße steht in Specimen.type.",
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"

@@ -594,7 +594,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten pro Volumen oder Masse.</p>
+<p>Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.</p>
 </td>
          </tr>
          <tr>
@@ -982,7 +982,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse.</p>
+<p>Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.</p>
 </td>
          </tr>
          <tr>
@@ -1006,7 +1006,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder kein Wachstum. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</p>
+<p>Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</p>
 </td>
          </tr>
          <tr>
@@ -1150,7 +1150,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist.</p>
+<p>Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</p>
 </td>
          </tr>
          <tr>
@@ -1327,6 +1327,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html"
+                  title="Observation/mii-exa-mikrobio-keimzahl-katheterspitze">
+                  <span title="Observation/mii-exa-mikrobio-keimzahl-katheterspitze">MII EXA Mikrobio Keimzahl Katheterspitze
+</span>
+               </a>
+            </td>
+            <td>
+<p>Keimzahl einer Katheterspitze in koloniebildenden Einheiten ohne Nenner. Die Bezugsgröße steht in Specimen.type.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html"
                   title="Observation/mii-exa-mikrobio-mrgn-klasse-negativ">
                   <span title="Observation/mii-exa-mikrobio-mrgn-klasse-negativ">MII EXA Mikrobio MRGN Klasse negativ
@@ -1359,6 +1371,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Generisches Probenmaterial für die Beispiele dieses Moduls. Der Typ ist bewusst unspezifisch, weil dieselbe Probe Beispiele unterschiedlicher Untersuchungsarten trägt.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Specimen-mii-exa-mikrobio-probe-katheterspitze.html"
+                  title="Specimen/mii-exa-mikrobio-probe-katheterspitze">
+                  <span title="Specimen/mii-exa-mikrobio-probe-katheterspitze">MII EXA Mikrobio Probe Katheterspitze
+</span>
+               </a>
+            </td>
+            <td>
+<p>Katheterspitze als Probenmaterial. Sie hat weder Volumen noch Masse und ist damit selbst die Bezugsgröße der Keimzahl.</p>
 </td>
          </tr>
          <tr>
@@ -1716,7 +1740,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Sep 3, 2026 05:17+0000">2026-09-03</span>
+          Generated <span title="Thu, Sep 3, 2026 05:48+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

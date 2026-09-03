@@ -187,7 +187,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Kultur",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T05:17:43+00:00",
+  "date" : "2026-09-03T05:48:26+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -294,7 +294,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "id" : "Observation.value[x]:valueCodeableConcept",
       "path" : "Observation.value[x]",
       "sliceName" : "valueCodeableConcept",
-      "short" : "Wachstum oder kein Wachstum des im Code benannten Mikroorganismus. Ein unbestimmbares Ergebnis wird über dataAbsentReason abgebildet.",
+      "short" : "Wachstum oder kein Wachstum des im Code benannten Mikroorganismus. Lässt sich nicht entscheiden, ob das Ziel gewachsen ist, wird 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Wie viel gewachsen ist, sagt dagegen die Keimzahl. Ein unbestimmbares Ergebnis, bei dem die Kultur gar keine verwertbare Aussage liefert (überwuchert, Material unzureichend), wird über dataAbsentReason abgebildet.",
       "type" : [{
         "code" : "CodeableConcept"
       }],

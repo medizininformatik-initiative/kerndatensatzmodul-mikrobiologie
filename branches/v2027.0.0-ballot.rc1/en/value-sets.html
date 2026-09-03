@@ -446,7 +446,7 @@ ValueSets may not expand completely).</p>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html">MII VS Mikrobio Keimzahl Einheiten UCUM</a></td>
-      <td>Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse.</td>
+      <td>Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-keimzahl-loinc.html">MII VS Mikrobio Keimzahl LOINC</a></td>
@@ -454,7 +454,7 @@ ValueSets may not expand completely).</p>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html">MII VS Mikrobio Kultur Ergebnis SNOMED</a></td>
-      <td>Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder kein Wachstum. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</td>
+      <td>Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html">MII VS Mikrobio Molekulare Diagnostik Einheiten UCUM</a></td>
@@ -502,7 +502,7 @@ ValueSets may not expand completely).</p>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html">MII VS Mikrobio Spezifische Bestimmung Ergebnis SNOMED</a></td>
-      <td>Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist.</td>
+      <td>Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed.html">MII VS Mikrobio Spezifische Bestimmung Methode SNOMED</a></td>
@@ -572,7 +572,7 @@ ValueSets may not expand completely).</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Sep 3, 2026 05:17+0000">2026-09-03</span>
+          Generated <span title="Thu, Sep 3, 2026 05:48+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

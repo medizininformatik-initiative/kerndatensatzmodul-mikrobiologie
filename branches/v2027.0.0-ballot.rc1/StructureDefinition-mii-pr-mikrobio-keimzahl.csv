@@ -493,7 +493,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 qty-3","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Observation.value[x]:valueQuantity.code","Observation.value[x].code","","","",1,1,"Y","","Y","code {[]} {[]}
-","Coded form of the unit","A computer processable form of the unit in some unit representation system.","The mandatory system is UCUM.","Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest.","","","","","","","",,"extensible","","https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum","",,,,"Quantity.code",0,1,"ele-1
+","Bei Probenmaterialien ohne Volumen- oder Massenbezug, etwa Katheterspitzen, wird die nennerlose Einheit [CFU] verwendet; die Bezugsgröße steht in Specimen.type.","A computer processable form of the unit in some unit representation system.","The mandatory system is UCUM.","Need a computable form of the unit that is fixed across all forms. UCUM provides this for quantities, but SNOMED CT provides many units of interest.","","","","","","","",,"extensible","","https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum","",,,,"Quantity.code",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Observation.value[x]:valueCodeableConcept","Observation.value[x]","valueCodeableConcept","","",0,1,"Y","","Y","CodeableConcept {[]} {[]}

@@ -249,7 +249,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Spezifische Bestimmung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T05:17:43+00:00",
+  "date" : "2026-09-03T05:48:26+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -356,6 +356,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "id" : "Observation.value[x]:valueCodeableConcept",
       "path" : "Observation.value[x]",
       "sliceName" : "valueCodeableConcept",
+      "short" : "Nachweis oder Ausschluss des im Code benannten Ziels. Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet.",
       "type" : [{
         "code" : "CodeableConcept"
       }],

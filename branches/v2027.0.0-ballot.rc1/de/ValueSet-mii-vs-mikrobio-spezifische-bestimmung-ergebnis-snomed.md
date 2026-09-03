@@ -12,7 +12,7 @@
 | Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED |
 
  
-Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist. 
+Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet. 
 
  **References** 
 
@@ -42,7 +42,7 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des 
   "title" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T05:17:43+00:00",
+  "date" : "2026-09-03T05:48:26+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -64,7 +64,7 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des 
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist.",
+  "description" : "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -75,6 +75,17 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des 
   "compose" : {
     "include" : [{
       "valueSet" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "260408008",
+        "display" : "Weakly positive"
+      },
+      {
+        "code" : "280414007",
+        "display" : "Equivocal result"
+      }]
     }]
   }
 }

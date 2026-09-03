@@ -12,7 +12,7 @@
 | Active Stand: 2023-03-02 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM |
 
  
-Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse. 
+Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe. 
 
  **References** 
 
@@ -66,7 +66,7 @@ No Expansion for this valueset (Unsupported Code System Version)
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse.",
+  "description" : "Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -79,6 +79,12 @@ No Expansion for this valueset (Unsupported Code System Version)
       "system" : "http://unitsofmeasure.org",
       "concept" : [{
         "code" : "[CFU]/mL"
+      },
+      {
+        "code" : "[CFU]/g"
+      },
+      {
+        "code" : "[CFU]"
       },
       {
         "code" : "[arb'U]/mL"

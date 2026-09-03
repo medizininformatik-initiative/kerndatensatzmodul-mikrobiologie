@@ -1,0 +1,24 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "mii-exa-mikrobio-probe-katheterspitze",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Specimen mii-exa-mikrobio-probe-katheterspitze</b></p><a name=\"mii-exa-mikrobio-probe-katheterspitze\"> </a><a name=\"hcmii-exa-mikrobio-probe-katheterspitze\"> </a><p><b>identifier</b>: <code>https://example.org/fhir/sid/test-specimen</code>/probe-katheterspitze-1</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119312009}\">Catheter tip submitted as specimen</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-mikrobio-patient.html\">Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)</a></p><p><b>receivedTime</b>: 2026-04-02 08:30:00+0100</p></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Specimen mii-exa-mikrobio-probe-katheterspitze</b></p><a name=\"de-mii-exa-mikrobio-probe-katheterspitze\"> </a><a name=\"de-hcmii-exa-mikrobio-probe-katheterspitze\"> </a><p><b>identifier</b>: <code>https://example.org/fhir/sid/test-specimen</code>/probe-katheterspitze-1</p><p><b>status</b>: Available</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 119312009}\">Catheter tip submitted as specimen</span></p><p><b>subject</b>: <a href=\"Patient-mii-exa-mikrobio-patient.html\">Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)</a></p><p><b>receivedTime</b>: 2026-04-02 08:30:00+0100</p></div></div>"
+  },
+  "identifier" : [{
+    "system" : "https://example.org/fhir/sid/test-specimen",
+    "value" : "probe-katheterspitze-1"
+  }],
+  "status" : "available",
+  "type" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "119312009",
+      "display" : "Catheter tip submitted as specimen"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/mii-exa-mikrobio-patient"
+  },
+  "receivedTime" : "2026-04-02T08:30:00+01:00"
+}

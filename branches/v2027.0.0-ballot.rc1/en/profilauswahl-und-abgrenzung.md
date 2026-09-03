@@ -14,15 +14,47 @@ Detection, susceptibility testing and classification are different diagnostic st
 
 A profile appears under more than one area on purpose. The model is method-neutral: how an investigation was performed is stated in `Observation.method`, not by choosing a different profile. Specific determination therefore serves the molecular bench and the serology bench alike.
 
-| | | |
-| :--- | :--- | :--- |
-| Microscopy, Barlett score, Nugent score | Specific determination — single and multiplex PCR against defined targets, qualitative | Specific determination — antigen and antibody, qualitative |
-| General culture — growth or no growth, untargeted | General determination — panbacterial or panfungal PCR, sequencing, NGS | Antigen/antibody quantitative |
-| Specific culture — growth or no growth, targeted, e.g. MRSA screening | Molecular pathogen load — quantitative molecular results | Titre |
-| Colony count |   | Avidity |
-| General determination — species identification, typically MALDI-TOF MS |   |   |
-| Susceptibility — phenotypic testing, S/I/R and MIC or zone diameter |   |   |
-| Further properties**of a cultured isolate**: virulence factor, resistance mechanisms, MRGN class, resistance category status, predicted susceptibility | Further properties**direct from the material**, without a culture step: virulence factor, resistance mechanisms, predicted susceptibility |   |
+**Culture**
+
+* [Microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.md) — morphology without taxonomic assignment 
+* [Barlett score](StructureDefinition-mii-pr-mikrobio-barlett-score.md) — is a sputum specimen fit for culture?
+* [Nugent score](StructureDefinition-mii-pr-mikrobio-nugent-score.md) — Gram-stain score for bacterial vaginosis
+ 
+* [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md) — growth or no growth, untargeted
+* [Specific culture](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md) — growth or no growth, targeted, e.g. MRSA screening
+* [Colony count](StructureDefinition-mii-pr-mikrobio-keimzahl.md) — viable count per volume or mass
+* [General determination](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) — species identification, typically MALDI-TOF MS
+* [Susceptibility](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md) — phenotypic testing, S/I/R with MIC or zone diameter
+* Further properties, **of an organism grown in culture**: 
+* [Virulence factor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md)
+* [Resistance mechanisms](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md)
+* [MRGN class](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.md)
+* [MRE class](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.md) — MRSA, VRE, LRE and LVRE status; the profile is named **Resistance category status**
+* [Predicted susceptibility](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.md)
+ 
+
+**Molecular**
+
+* [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md) — single and multiplex PCR against defined targets, qualitative
+* [General determination](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) — panbacterial or panfungal PCR, sequencing, NGS
+* [Molecular pathogen load](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.md) — quantitative molecular results
+* Further properties, **direct from the material**, without a culture step: 
+* [Virulence factor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md)
+* [Resistance mechanisms](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md)
+* [Predicted susceptibility](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.md)
+ 
+
+**Serology**
+
+* [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md) — antigen or antibody, qualitative
+* [Antigen/antibody quantitative](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md) — quantitative results
+* [Titre](StructureDefinition-mii-pr-mikrobio-titer.md) — serial dilution, reported as a ratio
+* [Avidity](StructureDefinition-mii-pr-mikrobio-aviditaet.md) — fresh versus past infection
+
+**Across all areas**
+
+* [Diagnostic report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md) — gathers the investigations belonging to one microbiological report
+* [Ct value](StructureDefinition-mii-pr-mikrobio-ct-wert.md) — the cycle threshold itself. What normally leaves the laboratory is the result derived from it, so this profile is the exception rather than the rule.
 
 ### Why some techniques get their own profile and others do not
 

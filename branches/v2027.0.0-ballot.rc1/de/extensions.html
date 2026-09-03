@@ -320,15 +320,49 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
      der früheren Kombi-Seite profiles-and-extensions.md). -->
 <h3 id="extensions">Extensions</h3>
 
-<p>Diese Seite listet die FHIR-Extensions, die das Modul <strong>Mikrobiologie</strong>
-definiert (Namenskonvention <code class="language-plaintext highlighter-rouge">MII_EX_&lt;Modul&gt;_&lt;Name&gt;</code>). Extensions transportieren
-Informationen, die die Basis-Ressourcen und Profile nicht ausdrücken können; die
-Profile, die sie verwenden, stehen auf der Seite <a href="profiles.html">Profile</a>.</p>
+<p>Das Modul definiert <strong>eine</strong> eigene Extension nach der MII-Namenskonvention
+<code class="language-plaintext highlighter-rouge">MII_EX_&lt;Modul&gt;_&lt;Name&gt;</code> und führt <strong>eine</strong> HL7-Cross-Version-Extension mit, die
+es bisher nicht aus einem Paket beziehen kann. Die Profile, die sie verwenden,
+stehen auf der Seite <a href="profiles.html">Profile</a>.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Listen und beschreiben Sie die Extensions Ihres Moduls — oder
-entfernen Sie diese Seite, wenn Ihr Modul keine definiert.]</p>
-</blockquote>
+<h4 id="mii-ex-mikrobio-empfindlichkeit-norm">MII EX Mikrobio Empfindlichkeit Norm</h4>
+
+<p><a href="StructureDefinition-mii-ex-mikrobio-empfindlichkeit-norm.html">mii-ex-mikrobio-empfindlichkeit-norm</a>
+benennt das Normsystem, auf dessen Grenzwerten eine Empfindlichkeitskategorie
+beruht — <code class="language-plaintext highlighter-rouge">EUCAST</code>, <code class="language-plaintext highlighter-rouge">CLSI</code> oder <code class="language-plaintext highlighter-rouge">Andere</code>, aus
+<a href="ValueSet-mii-vs-mikrobio-susceptibility-norm.html">MII VS Mikrobio Susceptibility Norm</a>.</p>
+
+<p>Ihr Kontext ist <code class="language-plaintext highlighter-rouge">Observation.interpretation</code>, nicht die Observation, und genau
+darauf kommt es an: Eine Kategorie ist ohne die zugrunde liegenden Grenzwerte
+bedeutungslos, und dieselbe MHK ist unter der einen Norm sensibel und unter der
+anderen resistent. An der Bewertung hängend kann eine einzige gemessene MHK eine
+EUCAST- und eine CLSI-Kategorie nebeneinander tragen, jede mit ihrer eigenen
+Norm. <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">Empfindlichkeit</a>
+verlangt sie je Bewertung genau einmal (<code class="language-plaintext highlighter-rouge">1..1 MS</code>). Die Begründung steht unter
+<a href="interpretation.html">Interpretation</a>, einschließlich des offenen Punktes, dass
+die <em>Version</em> der Norm bisher nicht ausdrückbar ist.</p>
+
+<h4 id="r5-triggering-observations">R5: Triggering observation(s)</h4>
+
+<p><a href="StructureDefinition-ext-R5-Observation.triggeredBy.html">ext-R5-Observation.triggeredBy</a>
+ist <strong>keine</strong> MII-Extension. Sie ist eine Kopie der HL7-Cross-Version-Extension
+<code class="language-plaintext highlighter-rouge">http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy</code>,
+die das R5-Element <code class="language-plaintext highlighter-rouge">Observation.triggeredBy</code> nach R4 zurückportiert, mitgeführt
+unter ihrer ursprünglichen Canonical, ihrem Publisher und ihrer Work Group.</p>
+
+<p>Sie wird mitgeführt, weil Simplifier die <code class="language-plaintext highlighter-rouge">xver</code>-Pakete nicht unterstützte, was die
+Snapshot-Generierung brach. Sobald das Modul wieder von dem Paket abhängen kann,
+entfällt diese Kopie und die Abhängigkeit kommt zurück — die Canonical ändert sich
+dabei nicht, Konsumenten sind also nicht betroffen.</p>
+
+<p>Das Modul bildet damit die Reflexkette ab: Eine Untersuchung hält fest, welche
+Untersuchung sie ausgelöst hat, mit <code class="language-plaintext highlighter-rouge">type = reflex</code>. Die Modellierung steht unter
+<a href="fhir-profile.html">FHIR-Profile - Modellierungshinweise</a>, die daraus entstehende
+Kette unter
+<a href="profilauswahl-und-abgrenzung.html">Profilauswahl und Abgrenzung</a>. Der
+Suchparameter
+<a href="SearchParameter-mii-sp-mikrobio-observation-triggered-by.html">mii-sp-mikrobio-observation-triggered-by</a>
+macht die Kette suchbar.</p>
 
 
 
@@ -355,7 +389,7 @@ entfernen Sie diese Seite, wenn Ihr Modul keine definiert.]</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Sep 3, 2026 05:17+0000">2026-09-03</span>
+          Erstellt <span title="Thu, Sep 3, 2026 05:48+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

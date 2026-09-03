@@ -4,7 +4,7 @@
   <id value="mii-vs-mikrobio-keimzahl-einheiten-ucum"/>
   <language value="de"/>
   <text>
-    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-keimzahl-einheiten-ucum</b></p><a name="de-mii-vs-mikrobio-keimzahl-einheiten-ucum"> </a><a name="de-hcmii-vs-mikrobio-keimzahl-einheiten-ucum"> </a><ul><li>Include these codes as defined in <a href="http://unitsofmeasure.org"><code>http://unitsofmeasure.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>[CFU]/mL</td><td/></tr><tr><td>[arb'U]/mL</td><td/></tr><tr><td>/g</td><td/></tr><tr><td>/mL</td><td/></tr><tr><td>1</td><td/></tr></table></li></ul></div>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-keimzahl-einheiten-ucum</b></p><a name="de-mii-vs-mikrobio-keimzahl-einheiten-ucum"> </a><a name="de-hcmii-vs-mikrobio-keimzahl-einheiten-ucum"> </a><ul><li>Include these codes as defined in <a href="http://unitsofmeasure.org"><code>http://unitsofmeasure.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>[CFU]/mL</td><td/></tr><tr><td>[CFU]/g</td><td/></tr><tr><td>[CFU]</td><td/></tr><tr><td>[arb'U]/mL</td><td/></tr><tr><td>/g</td><td/></tr><tr><td>/mL</td><td/></tr><tr><td>1</td><td/></tr></table></li></ul></div>
   </text>
   <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"/>
   <version value="2027.0.0-alpha.6"/>
@@ -21,7 +21,7 @@
       <value value="https://www.medizininformatik-initiative.de"/>
     </telecom>
   </contact>
-  <description value="Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten pro Volumen oder Masse."/>
+  <description value="Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -34,6 +34,12 @@
       <system value="http://unitsofmeasure.org"/>
       <concept>
         <code value="[CFU]/mL"/>
+      </concept>
+      <concept>
+        <code value="[CFU]/g"/>
+      </concept>
+      <concept>
+        <code value="[CFU]"/>
       </concept>
       <concept>
         <code value="[arb'U]/mL"/>

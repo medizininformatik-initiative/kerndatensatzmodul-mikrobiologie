@@ -4,7 +4,7 @@
   "language" : "de",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-kultur-ergebnis-snomed</b></p><a name=\"de-mii-vs-mikrobio-kultur-ergebnis-snomed\"> </a><a name=\"de-hcmii-vs-mikrobio-kultur-ergebnis-snomed\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/365698005\">365698005</a></td><td>Organism growth</td></tr><tr><td><a href=\"http://snomed.info/id/264868006\">264868006</a></td><td>No growth (qualifier value)</td></tr></table></li></ul></div>"
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-kultur-ergebnis-snomed</b></p><a name=\"de-mii-vs-mikrobio-kultur-ergebnis-snomed\"> </a><a name=\"de-hcmii-vs-mikrobio-kultur-ergebnis-snomed\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/365698005\">365698005</a></td><td>Organism growth</td></tr><tr><td><a href=\"http://snomed.info/id/264868006\">264868006</a></td><td>No growth (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/280414007\">280414007</a></td><td>Equivocal result</td></tr></table></li></ul></div>"
   },
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed",
   "version" : "2027.0.0-alpha.6",
@@ -12,7 +12,7 @@
   "title" : "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T05:17:43+00:00",
+  "date" : "2026-09-03T05:48:26+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -21,7 +21,7 @@
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder kein Wachstum. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
+  "description" : "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -39,6 +39,10 @@
       {
         "code" : "264868006",
         "display" : "No growth (qualifier value)"
+      },
+      {
+        "code" : "280414007",
+        "display" : "Equivocal result"
       }]
     }]
   }

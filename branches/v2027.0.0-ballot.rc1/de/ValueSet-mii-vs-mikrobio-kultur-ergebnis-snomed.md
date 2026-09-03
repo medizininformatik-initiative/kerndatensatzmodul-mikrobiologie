@@ -12,7 +12,7 @@
 | Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED |
 
  
-Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder kein Wachstum. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet. 
+Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet. 
 
  **References** 
 
@@ -43,7 +43,7 @@ Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder 
   "title" : "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T05:17:43+00:00",
+  "date" : "2026-09-03T05:48:26+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -65,7 +65,7 @@ Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder 
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder kein Wachstum. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
+  "description" : "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -83,6 +83,10 @@ Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum oder 
       {
         "code" : "264868006",
         "display" : "No growth (qualifier value)"
+      },
+      {
+        "code" : "280414007",
+        "display" : "Equivocal result"
       }]
     }]
   }
