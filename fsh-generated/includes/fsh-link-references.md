@@ -3,9 +3,11 @@
 [MII_CS_Mikrobio_Resistenzkategorie]: CodeSystem-mii-cs-mikrobio-resistenzkategorie.html
 [MII_CS_Mikrobio_Susceptibility_NORM]: CodeSystem-mii-cs-mikrobio-susceptibility-norm.html
 [MII_EX_Mikrobio_Empfindlichkeit_Norm]: StructureDefinition-mii-ex-mikrobio-empfindlichkeit-norm.html
+[mii-exa-mikrobio-keimzahl-katheterspitze]: Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html
 [mii-exa-mikrobio-mrgn-klasse-negativ]: Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html
 [mii-exa-mikrobio-patient]: Patient-mii-exa-mikrobio-patient.html
 [mii-exa-mikrobio-probe]: Specimen-mii-exa-mikrobio-probe.html
+[mii-exa-mikrobio-probe-katheterspitze]: Specimen-mii-exa-mikrobio-probe-katheterspitze.html
 [mii-exa-mikrobio-resistenzkategorie-vre-negativ]: Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html
 [mii-exa-mikrobio-resistenzkategorie-vre-positiv]: Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html
 [mii-exa-mikrobio-spezifische-bestimmung-vre-negativ]: Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html

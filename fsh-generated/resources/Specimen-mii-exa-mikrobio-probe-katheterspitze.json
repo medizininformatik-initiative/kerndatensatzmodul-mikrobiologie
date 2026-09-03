@@ -1,0 +1,24 @@
+{
+  "resourceType": "Specimen",
+  "id": "mii-exa-mikrobio-probe-katheterspitze",
+  "identifier": [
+    {
+      "system": "https://example.org/fhir/sid/test-specimen",
+      "value": "probe-katheterspitze-1"
+    }
+  ],
+  "status": "available",
+  "type": {
+    "coding": [
+      {
+        "code": "119312009",
+        "system": "http://snomed.info/sct",
+        "display": "Catheter tip submitted as specimen"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-mikrobio-patient"
+  },
+  "receivedTime": "2026-04-02T08:30:00+01:00"
+}

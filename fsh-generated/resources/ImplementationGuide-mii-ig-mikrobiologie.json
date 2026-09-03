@@ -233,6 +233,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-mikrobio-keimzahl-katheterspitze"
+        },
+        "name": "MII EXA Mikrobio Keimzahl Katheterspitze",
+        "description": "Keimzahl einer Katheterspitze in koloniebildenden Einheiten ohne Nenner. Die Bezugsgröße steht in Specimen.type.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-mikrobio-mrgn-klasse-negativ"
         },
         "name": "MII EXA Mikrobio MRGN Klasse negativ",
@@ -253,6 +261,14 @@
         },
         "name": "MII EXA Mikrobio Probe",
         "description": "Generisches Probenmaterial für die Beispiele dieses Moduls. Der Typ ist bewusst unspezifisch, weil dieselbe Probe Beispiele unterschiedlicher Untersuchungsarten trägt.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-mikrobio-probe-katheterspitze"
+        },
+        "name": "MII EXA Mikrobio Probe Katheterspitze",
+        "description": "Katheterspitze als Probenmaterial. Sie hat weder Volumen noch Masse und ist damit selbst die Bezugsgröße der Keimzahl.",
         "exampleBoolean": true
       },
       {
