@@ -166,9 +166,17 @@ msgid "MII Implementation Guide Mikrobiologie"
 msgstr "MII Implementierungsleitfaden Mikrobiologie"
 
 # ImplementationGuide.publisher — the footer's "IG © <year> <publisher>" line.
-# "NUM-DIZ" is a proper name and language-neutral, so the German "translation"
-# is identical; the unit stays so the catalogue keeps covering every
-# translatable IG field.
+# The publisher changed on 2026-09-02 from NUM-DIZ to the Medizininformatik
+# Initiative (Gate-A decision; NUM-DIZ takes over on 2027-01-01 per SECURITY.md).
+# The msgid MUST match the value in sushi-config.yaml or the unit is dead. The
+# name is language-neutral, so the German translation is identical; the unit
+# stays so the catalogue keeps covering every translatable IG field.
 #: ImplementationGuide.publisher
-msgid "NUM-DIZ"
-msgstr "NUM-DIZ"
+msgid "Medizininformatik Initiative"
+msgstr "Medizininformatik Initiative"
+
+# A short title used to represent this page in navigational structures such
+# as table of contents, bread crumbs, etc.
+#: ImplementationGuide.definition.page.title
+msgid "Interpretation"
+msgstr "Interpretation"

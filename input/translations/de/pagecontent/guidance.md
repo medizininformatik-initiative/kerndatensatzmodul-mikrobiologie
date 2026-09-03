@@ -1,32 +1,47 @@
 <!-- markdownlint-disable MD041 -->
-<!-- Übersichtsseite "Anleitung". Ersetzen Sie die [TODO]-Hinweise; die
-     Unterseiten-Struktur folgt kerndatensatz-basis. -->
-
-Dieser Abschnitt bündelt die fachlichen Hinweise zur Umsetzung und Nutzung des
-Moduls **Mikrobiologie**.
-
-### Allgemeine Umsetzungshinweise
-
-* **[Datensätze und Beschreibungen](logical-models.html)** — die Datenelemente
-  des Moduls, beschrieben als logische Modelle. (Dieser Eintrag teilt sein Ziel
-  mit *Artefakte → Logische Modelle*; keiner der Anker der Artefakt-Übersicht
-  ist als Linkziel nutzbar — siehe
-  [`docs/page-structure.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/page-structure.md) in diesem Repository.)
-* **[UML-Diagramme](uml-diagrams.html)** — visuelle Darstellung der Datenmodelle
-  und ihrer Beziehungen.
-
-### Zielgruppenspezifische Hinweise
-
-* **[Anleitung für Implementierende](implementer-guidance.html)** — technische
-  Hinweise für DIZ-Implementierende.
+<!-- Nabe des Abschnitts "Anleitung", nach dem Muster von kerndatensatzmodul-labor:
+     zuerst die Substanz, dann eine Zeile je Unterseite. Das Template-Gerüst stellte
+     seine zwei Überschriften und Linklisten voran und den modul-eigenen Text ans
+     Ende, wo ihn niemand liest.
+     HINWEIS zu "Datensätze und Beschreibungen": der Eintrag zielt auf
+     logical-models.html, dieselbe Seite wie Artefakte → Logische Modelle. Keiner
+     der Anker der Artefakt-Übersicht ist als Linkziel nutzbar — siehe
+     docs/page-structure.md. Das ist ein Bau-Detail und gehört hierher, nicht in
+     den gerenderten Text. -->
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Beschreibung-von-Szenarien-fuer-die-Anwendung-der-Module.page.md  -->
-Das Modul fokussiert den Nachweis, die Charakterisierung und Beschreibung von Mikroorganismen (z. B. Bakterien, Viren, Pilzen, Prionen und Protozoen). Das Informationsmodell ermöglicht eine gemeinsame und standardisierte Beschreibung verschiedener Untersuchungen in Form von FHIR Observations. Ziel ist die Abdeckung der häufigsten mikrobiologischen Laborverfahren.
+Das Modul **Mikrobiologie** fokussiert den Nachweis, die Charakterisierung und
+Beschreibung von Mikroorganismen (z. B. Bakterien, Viren, Pilzen, Prionen und
+Protozoen). Das Informationsmodell ermöglicht eine gemeinsame und standardisierte
+Beschreibung verschiedener Untersuchungen in Form von FHIR Observations. Ziel ist
+die Abdeckung der häufigsten mikrobiologischen Laborverfahren.
 
-Die Ergebnisse von Empfindlichkeitstests können sowohl gemäß den Definitionen des European Committee on Antimicrobial Susceptibility Testing ([EUCAST](https://www.eucast.org/ "EUCAST")) als auch des Clinical & Laboratory Standards Institute ([CLSI](https://clsi.org/ "CLSI")) angegeben werden.
-Relevante Ergebnisse können in einem speziellen DiagnosticReport für mikrobiologische Studien gemeldet werden.
+Die Ergebnisse von Empfindlichkeitstests können sowohl gemäß den Definitionen des
+European Committee on Antimicrobial Susceptibility Testing
+([EUCAST](https://www.eucast.org/ "EUCAST")) als auch des Clinical & Laboratory
+Standards Institute ([CLSI](https://clsi.org/ "CLSI")) angegeben werden. Ein
+eigener DiagnosticReport fasst die Ergebnisse zusammen, die zu einem
+mikrobiologischen Befund gehören.
 
-Für alle Untersuchungen, die nicht in diesem Informationsmodell enthalten sind, kann das [KDS-Modul Labor](https://simplifier.net/medizininformatikinitiative-modullabor "KDS modul Labor") verwendet werden.
+Für alle Untersuchungen, die dieses Informationsmodell nicht abdeckt, kann das
+[KDS-Modul Labor](https://simplifier.net/medizininformatikinitiative-modullabor "KDS-Modul Labor")
+verwendet werden.
+
+Die ausführlich behandelten Themen haben eigene Seiten:
+
+* **[Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html)** — welches
+  Profil welche Aussage trägt und wie ein negatives Ergebnis ausgedrückt wird
+* **[Interpretation](interpretation.html)** — die Empfindlichkeitskategorien, die
+  zugrunde liegende Norm und das Verhältnis von Messwert und Bewertung
+* **[FHIR-Profile – Modellierungshinweise](fhir-profile.html)** — die Konventionen
+  hinter den Profilen, einschließlich der Abbildung diagnostischer Ketten
+* **[Probe](probe.html)** — wie das Probenmaterial abgebildet wird und welches
+  Modul es verantwortet
+* **[Datensätze und Beschreibungen](logical-models.html)** — die Datenelemente des
+  Moduls als logische Modelle
+* **[UML-Diagramme](uml-diagrams.html)** — die Datenmodelle und ihre Beziehungen
+* **[Anleitung für Implementierende](implementer-guidance.html)** — technische
+  Hinweise für DIZ-Implementierende und die Bezüge zu anderen KDS-Modulen
 
 ---
 Für die KDS-weiten Konformitätsanforderungen siehe die
