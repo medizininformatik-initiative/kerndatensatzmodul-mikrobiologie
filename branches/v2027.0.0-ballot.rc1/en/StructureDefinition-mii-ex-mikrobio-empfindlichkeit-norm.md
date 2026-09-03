@@ -47,7 +47,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-mikrobio-e
   "title" : "MII EX Mikrobio Empfindlichkeit Norm",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T05:10:08+00:00",
+  "date" : "2026-09-03T05:17:43+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

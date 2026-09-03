@@ -336,6 +336,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#which-profiles-belong-to-my-laboratory-area" id="markdown-toc-which-profiles-belong-to-my-laboratory-area">Which profiles belong to my laboratory area</a></li>
+  <li><a href="#why-some-techniques-get-their-own-profile-and-others-do-not" id="markdown-toc-why-some-techniques-get-their-own-profile-and-others-do-not">Why some techniques get their own profile and others do not</a></li>
   <li><a href="#delimitation-of-the-three-statement-types" id="markdown-toc-delimitation-of-the-three-statement-types">Delimitation of the three statement types</a></li>
   <li><a href="#negative-results" id="markdown-toc-negative-results">Negative results</a></li>
   <li><a href="#resistance-categories" id="markdown-toc-resistance-categories">Resistance categories</a></li>
@@ -348,6 +350,81 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <blockquote>
   <p><strong>Key statement:</strong> a negative result of a targeted pathogen detection is represented via Specific determination or Specific culture. MRGN classification and resistance category status, by contrast, presuppose an already detected pathogen and do not replace a detection test.</p>
 </blockquote>
+
+<h3 id="which-profiles-belong-to-my-laboratory-area">Which profiles belong to my laboratory area</h3>
+
+<p>A profile appears under more than one area on purpose. The model is
+method-neutral: how an investigation was performed is stated in
+<code class="language-plaintext highlighter-rouge">Observation.method</code>, not by choosing a different profile. Specific determination
+therefore serves the molecular bench and the serology bench alike.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Culture</th>
+      <th>Molecular</th>
+      <th>Serology</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Microscopy, Barlett score, Nugent score</td>
+      <td>Specific determination — single and multiplex PCR against defined targets, qualitative</td>
+      <td>Specific determination — antigen and antibody, qualitative</td>
+    </tr>
+    <tr>
+      <td>General culture — growth or no growth, untargeted</td>
+      <td>General determination — panbacterial or panfungal PCR, sequencing, NGS</td>
+      <td>Antigen/antibody quantitative</td>
+    </tr>
+    <tr>
+      <td>Specific culture — growth or no growth, targeted, e.g. MRSA screening</td>
+      <td>Molecular pathogen load — quantitative molecular results</td>
+      <td>Titre</td>
+    </tr>
+    <tr>
+      <td>Colony count</td>
+      <td> </td>
+      <td>Avidity</td>
+    </tr>
+    <tr>
+      <td>General determination — species identification, typically MALDI-TOF MS</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Susceptibility — phenotypic testing, S/I/R and MIC or zone diameter</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Further properties <strong>of a cultured isolate</strong>: virulence factor, resistance mechanisms, MRGN class, resistance category status, predicted susceptibility</td>
+      <td>Further properties <strong>direct from the material</strong>, without a culture step: virulence factor, resistance mechanisms, predicted susceptibility</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="why-some-techniques-get-their-own-profile-and-others-do-not">Why some techniques get their own profile and others do not</h3>
+
+<p>A profile is defined by the <strong>question asked and the type of its result</strong>, not by
+the technique. That is why the answer differs between qualitative and
+quantitative results, which can look inconsistent at first sight:</p>
+
+<ul>
+  <li><strong>Qualitative detection</strong> has one result space — <code class="language-plaintext highlighter-rouge">Detected</code> / <code class="language-plaintext highlighter-rouge">Not detected</code> —
+whether the target was found by PCR or by immunoassay. One profile suffices,
+and <code class="language-plaintext highlighter-rouge">Observation.method</code> says which technique produced it.</li>
+  <li><strong>Quantitative measurement</strong> does not. Copies per millilitre, a concentration
+and a dilution step are different result spaces with different units, so
+molecular pathogen load, quantitative antigen/antibody testing and titre are
+separate profiles.</li>
+  <li><strong>Culture</strong> is separate again for the same reason: its result is neither an
+organism nor detected/not-detected, but growth or no growth.</li>
+</ul>
+
+<p>So the rule is the same in each case; only the number of distinct result spaces
+differs.</p>
 
 <h3 id="delimitation-of-the-three-statement-types">Delimitation of the three statement types</h3>
 
@@ -574,7 +651,7 @@ Resistance category status
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Sep 3, 2026 05:10+0000">2026-09-03</span>
+          Generated <span title="Thu, Sep 3, 2026 05:17+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -307,6 +307,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#welche-profile-gehören-zu-meinem-laborbereich" id="markdown-toc-welche-profile-gehören-zu-meinem-laborbereich">Welche Profile gehören zu meinem Laborbereich?</a></li>
+  <li><a href="#warum-manche-verfahren-ein-eigenes-profil-haben-und-andere-nicht" id="markdown-toc-warum-manche-verfahren-ein-eigenes-profil-haben-und-andere-nicht">Warum manche Verfahren ein eigenes Profil haben und andere nicht</a></li>
   <li><a href="#abgrenzung-der-drei-aussagetypen" id="markdown-toc-abgrenzung-der-drei-aussagetypen">Abgrenzung der drei Aussagetypen</a></li>
   <li><a href="#negative-ergebnisse" id="markdown-toc-negative-ergebnisse">Negative Ergebnisse</a></li>
   <li><a href="#resistenzkategorien" id="markdown-toc-resistenzkategorien">Resistenzkategorien</a></li>
@@ -320,6 +322,82 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <blockquote>
   <p><strong>Kernsatz:</strong> Ein negatives Ergebnis eines zielgerichteten Erregernachweises wird über Spezifische Bestimmung bzw. Spezifische Kultur abgebildet. MRGN-Klassifikation und Resistenzkategorie-Status setzen dagegen einen bereits nachgewiesenen Erreger voraus und ersetzen keinen Nachweistest.</p>
 </blockquote>
+
+<h3 id="welche-profile-gehören-zu-meinem-laborbereich">Welche Profile gehören zu meinem Laborbereich?</h3>
+
+<p>Dass ein Profil unter mehreren Bereichen auftaucht, ist Absicht. Das Modell ist
+methodenneutral: <em>wie</em> eine Untersuchung durchgeführt wurde, steht in
+<code class="language-plaintext highlighter-rouge">Observation.method</code> und nicht in der Wahl eines anderen Profils. Die Spezifische
+Bestimmung bedient deshalb die molekulare Bank und die Serologie gleichermaßen.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Kultur</th>
+      <th>Molekular</th>
+      <th>Serologie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mikroskopie, Barlett-Score, Nugent-Score</td>
+      <td>Spezifische Bestimmung — Einzel- und Multiplex-PCR auf definierte Ziele, qualitativ</td>
+      <td>Spezifische Bestimmung — Antigen und Antikörper, qualitativ</td>
+    </tr>
+    <tr>
+      <td>Allgemeine Kultur — Wachstum oder kein Wachstum, ungerichtet</td>
+      <td>Allgemeine Bestimmung — panbakterielle oder panfungale PCR, Sequenzierung, NGS</td>
+      <td>Antigen/Antikörper quantitativ</td>
+    </tr>
+    <tr>
+      <td>Spezifische Kultur — Wachstum oder kein Wachstum, gerichtet, z. B. MRSA-Screening</td>
+      <td>Molekulare Pathogenlast — quantitative molekulare Ergebnisse</td>
+      <td>Titer</td>
+    </tr>
+    <tr>
+      <td>Keimzahl</td>
+      <td> </td>
+      <td>Avidität</td>
+    </tr>
+    <tr>
+      <td>Allgemeine Bestimmung — Speziesidentifizierung, typischerweise MALDI-TOF-MS</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Empfindlichkeit — phänotypische Testung, S/I/R und MHK oder Hemmhofdurchmesser</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Weitere Eigenschaften <strong>eines kulturell nachgewiesenen Erregers</strong>: Virulenzfaktor, Resistenzmechanismen, MRGN-Klasse, Resistenzkategorie-Status, voraussichtliche Empfindlichkeit</td>
+      <td>Weitere Eigenschaften <strong>direkt aus dem Material</strong>, ohne kulturellen Zwischenschritt: Virulenzfaktor, Resistenzmechanismen, voraussichtliche Empfindlichkeit</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="warum-manche-verfahren-ein-eigenes-profil-haben-und-andere-nicht">Warum manche Verfahren ein eigenes Profil haben und andere nicht</h3>
+
+<p>Ein Profil wird durch die <strong>Fragestellung und den Ergebnistyp</strong> bestimmt, nicht
+durch das Verfahren. Deshalb fällt die Antwort bei qualitativen und quantitativen
+Ergebnissen unterschiedlich aus, was auf den ersten Blick inkonsequent wirkt:</p>
+
+<ul>
+  <li><strong>Qualitativer Nachweis</strong> hat einen einzigen Ergebnisraum — <code class="language-plaintext highlighter-rouge">Detected</code> /
+<code class="language-plaintext highlighter-rouge">Not detected</code> —, gleich ob das Ziel per PCR oder per Immunoassay gefunden
+wurde. Ein Profil genügt; <code class="language-plaintext highlighter-rouge">Observation.method</code> nennt das Verfahren.</li>
+  <li><strong>Quantitative Messung</strong> nicht. Kopien pro Milliliter, eine Konzentration und
+eine Verdünnungsstufe sind verschiedene Ergebnisräume mit verschiedenen
+Einheiten — molekulare Pathogenlast, quantitative Antigen-/Antikörpertests und
+Titer sind deshalb eigene Profile.</li>
+  <li><strong>Kultur</strong> ist aus demselben Grund eigenständig: ihr Ergebnis ist weder ein
+Organismus noch nachgewiesen/nicht nachgewiesen, sondern Wachstum oder kein
+Wachstum.</li>
+</ul>
+
+<p>Die Regel ist also jedes Mal dieselbe; nur die Zahl der unterscheidbaren
+Ergebnisräume ist verschieden.</p>
 
 <h3 id="abgrenzung-der-drei-aussagetypen">Abgrenzung der drei Aussagetypen</h3>
 
@@ -546,7 +624,7 @@ Resistenzkategorie-Status
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Sep 3, 2026 05:10+0000">2026-09-03</span>
+          Erstellt <span title="Thu, Sep 3, 2026 05:17+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
