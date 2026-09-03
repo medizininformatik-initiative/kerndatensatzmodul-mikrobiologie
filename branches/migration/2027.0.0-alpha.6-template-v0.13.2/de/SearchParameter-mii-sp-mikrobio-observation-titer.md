@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-titer | *Version*:2027.0.0-alpha.6 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_SP_Mikrobio_Observation_Titer |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_SP_Mikrobio_Observation_Titer |
 
  
 Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-Werts von MII_PR_Mikrobio_Titer; der Zaehler ist dort fest 1. Ein groesserer Nenner bedeutet einen hoeheren Titer, z. B. findet ?titer=gt160 alle Titer oberhalb von 1:160. 
@@ -27,8 +27,21 @@ Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-We
   "name" : "MII_SP_Mikrobio_Observation_Titer",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T21:48:21+00:00",
+  "date" : "2026-09-03T04:37:30+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{

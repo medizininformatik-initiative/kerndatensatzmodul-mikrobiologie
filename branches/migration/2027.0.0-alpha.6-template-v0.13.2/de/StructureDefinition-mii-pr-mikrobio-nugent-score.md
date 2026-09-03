@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score | *Version*:2027.0.0-alpha.6 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Nugent_Score |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Nugent_Score |
 
  
 Nugent-Score beschreibt ein Gramfärbungs-basiertes semiquantitatives Punktesystem zur Beurteilung vaginaler Mikrobiotamuster bei bakterieller Vaginose. 
@@ -245,8 +245,21 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Nugent Score",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T21:48:21+00:00",
+  "date" : "2026-09-03T04:37:30+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de | *Version*:2027.0.0-alpha.6 |
-| Active as of 2026-09-02 | *Computable Name*:MII_LM_Mikrobio_Befund |
+| Active as of 2026-09-03 | *Computable Name*:MII_LM_Mikrobio_Befund |
 
  
 Logical Model des mikrobiologischen Befunds für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE] 
@@ -42,8 +42,21 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-l
   "title" : "MII LM Mikrobio Befund",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T21:48:21+00:00",
+  "date" : "2026-09-03T04:37:30+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{

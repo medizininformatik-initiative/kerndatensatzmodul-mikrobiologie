@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet | *Version*:2027.0.0-alpha.6 |
-| Active as of 2026-09-02 | *Computable Name*:MII_PR_Mikrobio_Aviditaet |
+| Active as of 2026-09-03 | *Computable Name*:MII_PR_Mikrobio_Aviditaet |
 
  
 Avidität beschreibt die qualitative Beurteilung der Bindungsstärke von Antikörpern an ein spezifisches Antigen, typischerweise zur Unterscheidung frischer von zurückliegenden Infektionen. 
@@ -179,8 +179,21 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
   "title" : "MII PR Mikrobio Aviditaet",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T21:48:21+00:00",
+  "date" : "2026-09-03T04:37:30+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{

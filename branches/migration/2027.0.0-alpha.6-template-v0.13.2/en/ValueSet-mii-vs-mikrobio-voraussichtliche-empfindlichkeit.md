@@ -44,6 +44,19 @@ Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypisch
   "experimental" : false,
   "date" : "2023-03-02T00:00:00Z",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{

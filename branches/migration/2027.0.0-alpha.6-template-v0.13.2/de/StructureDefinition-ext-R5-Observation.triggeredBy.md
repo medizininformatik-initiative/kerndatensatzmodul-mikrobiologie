@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy | *Version*:2027.0.0-alpha.6 |
-| Active Stand: 2026-09-02 | *Maschinenlesbarer Name*:ExtensionObservation_TriggeredBy |
+| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:ExtensionObservation_TriggeredBy |
 
 R5: `Observation.triggeredBy` (new:BackboneElement)
 
@@ -88,8 +88,21 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-ext-R5-Obser
   "title" : "R5: Triggering observation(s) (new)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-02T21:48:21+00:00",
+  "date" : "2026-09-03T04:37:30+00:00",
   "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
   "contact" : [{
     "name" : "Medizininformatik Initiative",
     "telecom" : [{

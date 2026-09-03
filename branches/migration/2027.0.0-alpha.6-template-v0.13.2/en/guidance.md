@@ -5,22 +5,21 @@
 
 ## Guidance
 
-This section collects the domain guidance for implementing and using the **Microbiology** module.
+The **Microbiology** module covers the detection, characterisation and description of microorganisms — bacteria, viruses, fungi, prions and protozoa. Its information model describes the different investigations uniformly as FHIR Observations, with the aim of covering the microbiological laboratory procedures in common use.
 
-### General Implementation Guidance
+Susceptibility results can be reported against the definitions of the European Committee on Antimicrobial Susceptibility Testing ([EUCAST](https://www.eucast.org/)) as well as those of the Clinical & Laboratory Standards Institute ([CLSI](https://clsi.org/)). A dedicated DiagnosticReport gathers the results that belong to one microbiological report.
 
-* **[Datasets and Descriptions](logical-models.md)** — the module's data elements, described as logical models. (This entry shares its target with **Artifacts → Logical Models**; neither Artifacts-Summary anchor is usable as a link target — see [`docs/page-structure.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/page-structure.md) in this repository.)
-* **[UML Diagrams](uml-diagrams.md)** — visual representation of the data models and their relationships.
+Investigations this information model does not cover belong in the [MII Laboratory module](https://simplifier.net/medizininformatikinitiative-modullabor).
 
-### Audience-Specific Guidance
+The subjects treated in detail have their own pages:
 
-* **[Guidance for Implementers](implementer-guidance.md)** — technical guidance for DIC implementers.
-
-The module focuses on the detection, characterisation and description of microorganisms (e.g. bacteria, viruses, fungi, prions and protozoa). The information model allows a common and standardised description of different investigations in the form of FHIR Observations. The goal is to cover the most common microbiological laboratory procedures.
-
-Susceptibility test results can be reported according to the definitions of the European Committee on Antimicrobial Susceptibility Testing ([EUCAST](https://www.eucast.org/)) as well as those of the Clinical & Laboratory Standards Institute ([CLSI](https://clsi.org/)). Relevant results can be reported in a dedicated DiagnosticReport for microbiology studies.
-
-For all investigations not covered by this information model, the [MII Laboratory module](https://simplifier.net/medizininformatikinitiative-modullabor) can be used.
+* **[Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md)** — which profile carries which statement, and how a negative result is expressed
+* **[Interpretation](interpretation.md)** — the susceptibility categories, the norm they rest on, and how the measured value and its assessment relate
+* **[FHIR Profiles – Modelling Notes](fhir-profile.md)** — the conventions behind the profiles, including how diagnostic chains are represented
+* **[Specimen](probe.md)** — how the specimen is represented and which module owns it
+* **[Datasets and Descriptions](logical-models.md)** — the module's data elements as logical models
+* **[UML Diagrams](uml-diagrams.md)** — the data models and their relationships
+* **[Guidance for Implementers](implementer-guidance.md)** — technical guidance for DIC implementers, and the module's relations to other KDS modules
 
 -------
 

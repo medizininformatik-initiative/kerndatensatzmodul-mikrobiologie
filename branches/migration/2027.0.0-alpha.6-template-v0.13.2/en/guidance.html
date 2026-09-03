@@ -221,6 +221,7 @@
            and these live here. Budget after the change: 7 top-level (limit 8),
            7 children here (limit 10), depth 2 (limit 2), 26 entries (limit 33). -->
       <li><a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a></li>
+      <li><a href="interpretation.html">Interpretation</a></li>
       <li><a href="fhir-profile.html">FHIR Profiles - Modelling Notes</a></li>
       <li><a href="probe.html">Specimen</a></li>
     </ul>
@@ -333,46 +334,52 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#general-implementation-guidance" id="markdown-toc-general-implementation-guidance">General Implementation Guidance</a></li>
-  <li><a href="#audience-specific-guidance" id="markdown-toc-audience-specific-guidance">Audience-Specific Guidance</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
+
 <!-- markdownlint-disable MD041 -->
-<!-- Source: kerndatensatz-basis input/pagecontent/guidance.md (MII module page set).
-     "Guidance" overview page. Replace the [TODO] prompts; the sub-page structure
-     follows kerndatensatz-basis. German mirror:
-     input/translations/de/pagecontent/guidance.md — keep both in step. -->
+<!-- Hub page for the Guidance section, following the shape kerndatensatzmodul-labor
+     uses: the substance first, then one line per sub-page. The template scaffold
+     put its two headings and link lists first and the module's own text last,
+     where nobody reads it.
+     NOTE on "Datasets and Descriptions": it targets logical-models.html, the same
+     page as Artifacts → Logical Models. Neither Artifacts-Summary anchor is usable
+     as a link target — see docs/page-structure.md in this repository. That is a
+     build detail and belongs here, not in the rendered text.
+     German mirror: input/translations/de/pagecontent/guidance.md — keep both in step. -->
 
-<p>This section collects the domain guidance for implementing and using the
-<strong>Microbiology</strong> module.</p>
+<p>The <strong>Microbiology</strong> module covers the detection, characterisation and description
+of microorganisms — bacteria, viruses, fungi, prions and protozoa. Its information
+model describes the different investigations uniformly as FHIR Observations, with
+the aim of covering the microbiological laboratory procedures in common use.</p>
 
-<h3 id="general-implementation-guidance">General Implementation Guidance</h3>
+<p>Susceptibility results can be reported against the definitions of the European
+Committee on Antimicrobial Susceptibility Testing
+(<a href="https://www.eucast.org/" title="EUCAST">EUCAST</a>) as well as those of the Clinical &amp;
+Laboratory Standards Institute (<a href="https://clsi.org/" title="CLSI">CLSI</a>). A dedicated
+DiagnosticReport gathers the results that belong to one microbiological report.</p>
+
+<p>Investigations this information model does not cover belong in the
+<a href="https://simplifier.net/medizininformatikinitiative-modullabor" title="KDS module Laboratory">MII Laboratory module</a>.</p>
+
+<p>The subjects treated in detail have their own pages:</p>
 
 <ul>
+  <li><strong><a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a></strong> —
+which profile carries which statement, and how a negative result is expressed</li>
+  <li><strong><a href="interpretation.html">Interpretation</a></strong> — the susceptibility categories, the
+norm they rest on, and how the measured value and its assessment relate</li>
+  <li><strong><a href="fhir-profile.html">FHIR Profiles – Modelling Notes</a></strong> — the conventions
+behind the profiles, including how diagnostic chains are represented</li>
+  <li><strong><a href="probe.html">Specimen</a></strong> — how the specimen is represented and which module
+owns it</li>
   <li><strong><a href="logical-models.html">Datasets and Descriptions</a></strong> — the module's data
-elements, described as logical models. (This entry shares its target with
-<em>Artifacts → Logical Models</em>; neither Artifacts-Summary anchor is usable as
-a link target — see
-<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/page-structure.md"><code class="language-plaintext highlighter-rouge">docs/page-structure.md</code></a> in this repository.)</li>
-  <li><strong><a href="uml-diagrams.html">UML Diagrams</a></strong> — visual representation of the data
-models and their relationships.</li>
+elements as logical models</li>
+  <li><strong><a href="uml-diagrams.html">UML Diagrams</a></strong> — the data models and their relationships</li>
+  <li><strong><a href="implementer-guidance.html">Guidance for Implementers</a></strong> — technical guidance
+for DIC implementers, and the module's relations to other KDS modules</li>
 </ul>
-
-<h3 id="audience-specific-guidance">Audience-Specific Guidance</h3>
-
-<ul>
-  <li><strong><a href="implementer-guidance.html">Guidance for Implementers</a></strong> — technical
-guidance for DIC implementers.</li>
-</ul>
-
-<p>The module focuses on the detection, characterisation and description of microorganisms (e.g. bacteria, viruses, fungi, prions and protozoa). The information model allows a common and standardised description of different investigations in the form of FHIR Observations. The goal is to cover the most common microbiological laboratory procedures.</p>
-
-<p>Susceptibility test results can be reported according to the definitions of the European Committee on Antimicrobial Susceptibility Testing (<a href="https://www.eucast.org/" title="EUCAST">EUCAST</a>) as well as those of the Clinical &amp; Laboratory Standards Institute (<a href="https://clsi.org/" title="CLSI">CLSI</a>). Relevant results can be reported in a dedicated DiagnosticReport for microbiology studies.</p>
-
-<p>For all investigations not covered by this information model, the <a href="https://simplifier.net/medizininformatikinitiative-modullabor" title="KDS module Laboratory">MII Laboratory module</a> can be used.</p>
 
 <hr />
 <p>For the KDS-wide conformance requirements see the
@@ -404,7 +411,7 @@ for the technical artifacts see <a href="profiles.html">Profiles</a>.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 2, 2026 21:48+0000">2026-09-02</span>
+          Generated <span title="Thu, Sep 3, 2026 04:37+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

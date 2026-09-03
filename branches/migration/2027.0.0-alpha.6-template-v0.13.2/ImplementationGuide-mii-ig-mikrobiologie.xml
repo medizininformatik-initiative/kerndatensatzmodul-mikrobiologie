@@ -108,8 +108,17 @@
   <title value="MII Implementation Guide Microbiology"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-02T21:48:21+00:00"/>
-  <publisher value="Medizininformatik Initiative"/>
+  <date value="2026-09-03T04:37:30+00:00"/>
+  <publisher value="Medizininformatik Initiative">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="de"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medizininformatik Initiative"/>
+      </extension>
+    </extension>
+  </publisher>
   <contact>
     <name value="Medizininformatik Initiative"/>
     <telecom>
@@ -2219,6 +2228,23 @@
               </extension>
               <extension url="content">
                 <valueString value="Profilauswahl und Abgrenzung"/>
+              </extension>
+            </extension>
+          </title>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="interpretation.html"/>
+          </extension>
+          <nameUrl value="interpretation.html"/>
+          <title value="Interpretation">
+            <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+              <extension url="lang">
+                <valueCode value="de"/>
+              </extension>
+              <extension url="content">
+                <valueString value="Interpretation"/>
               </extension>
             </extension>
           </title>

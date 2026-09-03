@@ -192,6 +192,7 @@
            Anleitungen zu den Profilen, keine Artefaktlisten — deshalb hier, und
            "Artefakte" bleibt ein reines Artefaktverzeichnis. -->
       <li><a href="profilauswahl-und-abgrenzung.html">Profilauswahl und Abgrenzung</a></li>
+      <li><a href="interpretation.html">Interpretation</a></li>
       <li><a href="fhir-profile.html">FHIR-Profile – Modellierungshinweise</a></li>
       <li><a href="probe.html">Probe</a></li>
     </ul>
@@ -304,46 +305,62 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#allgemeine-umsetzungshinweise" id="markdown-toc-allgemeine-umsetzungshinweise">Allgemeine Umsetzungshinweise</a></li>
-  <li><a href="#zielgruppenspezifische-hinweise" id="markdown-toc-zielgruppenspezifische-hinweise">Zielgruppenspezifische Hinweise</a></li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
+
+<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
+
+Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde.  Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie <a href="translationinfo.html">hier</a>.
+
+</p>
+
 <!-- markdownlint-disable MD041 -->
-<!-- Übersichtsseite "Anleitung". Ersetzen Sie die [TODO]-Hinweise; die
-     Unterseiten-Struktur folgt kerndatensatz-basis. -->
-
-<p>Dieser Abschnitt bündelt die fachlichen Hinweise zur Umsetzung und Nutzung des
-Moduls <strong>Mikrobiologie</strong>.</p>
-
-<h3 id="allgemeine-umsetzungshinweise">Allgemeine Umsetzungshinweise</h3>
-
-<ul>
-  <li><strong><a href="logical-models.html">Datensätze und Beschreibungen</a></strong> — die Datenelemente
-des Moduls, beschrieben als logische Modelle. (Dieser Eintrag teilt sein Ziel
-mit <em>Artefakte → Logische Modelle</em>; keiner der Anker der Artefakt-Übersicht
-ist als Linkziel nutzbar — siehe
-<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/page-structure.md"><code class="language-plaintext highlighter-rouge">docs/page-structure.md</code></a> in diesem Repository.)</li>
-  <li><strong><a href="uml-diagrams.html">UML-Diagramme</a></strong> — visuelle Darstellung der Datenmodelle
-und ihrer Beziehungen.</li>
-</ul>
-
-<h3 id="zielgruppenspezifische-hinweise">Zielgruppenspezifische Hinweise</h3>
-
-<ul>
-  <li><strong><a href="implementer-guidance.html">Anleitung für Implementierende</a></strong> — technische
-Hinweise für DIZ-Implementierende.</li>
-</ul>
+<!-- Nabe des Abschnitts "Anleitung", nach dem Muster von kerndatensatzmodul-labor:
+     zuerst die Substanz, dann eine Zeile je Unterseite. Das Template-Gerüst stellte
+     seine zwei Überschriften und Linklisten voran und den modul-eigenen Text ans
+     Ende, wo ihn niemand liest.
+     HINWEIS zu "Datensätze und Beschreibungen": der Eintrag zielt auf
+     logical-models.html, dieselbe Seite wie Artefakte → Logische Modelle. Keiner
+     der Anker der Artefakt-Übersicht ist als Linkziel nutzbar — siehe
+     docs/page-structure.md. Das ist ein Bau-Detail und gehört hierher, nicht in
+     den gerenderten Text. -->
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Beschreibung-von-Szenarien-fuer-die-Anwendung-der-Module.page.md  -->
-<p>Das Modul fokussiert den Nachweis, die Charakterisierung und Beschreibung von Mikroorganismen (z. B. Bakterien, Viren, Pilzen, Prionen und Protozoen). Das Informationsmodell ermöglicht eine gemeinsame und standardisierte Beschreibung verschiedener Untersuchungen in Form von FHIR Observations. Ziel ist die Abdeckung der häufigsten mikrobiologischen Laborverfahren.</p>
+<p>Das Modul <strong>Mikrobiologie</strong> fokussiert den Nachweis, die Charakterisierung und
+Beschreibung von Mikroorganismen (z. B. Bakterien, Viren, Pilzen, Prionen und
+Protozoen). Das Informationsmodell ermöglicht eine gemeinsame und standardisierte
+Beschreibung verschiedener Untersuchungen in Form von FHIR Observations. Ziel ist
+die Abdeckung der häufigsten mikrobiologischen Laborverfahren.</p>
 
-<p>Die Ergebnisse von Empfindlichkeitstests können sowohl gemäß den Definitionen des European Committee on Antimicrobial Susceptibility Testing (<a href="https://www.eucast.org/" title="EUCAST">EUCAST</a>) als auch des Clinical &amp; Laboratory Standards Institute (<a href="https://clsi.org/" title="CLSI">CLSI</a>) angegeben werden.
-Relevante Ergebnisse können in einem speziellen DiagnosticReport für mikrobiologische Studien gemeldet werden.</p>
+<p>Die Ergebnisse von Empfindlichkeitstests können sowohl gemäß den Definitionen des
+European Committee on Antimicrobial Susceptibility Testing
+(<a href="https://www.eucast.org/" title="EUCAST">EUCAST</a>) als auch des Clinical &amp; Laboratory
+Standards Institute (<a href="https://clsi.org/" title="CLSI">CLSI</a>) angegeben werden. Ein
+eigener DiagnosticReport fasst die Ergebnisse zusammen, die zu einem
+mikrobiologischen Befund gehören.</p>
 
-<p>Für alle Untersuchungen, die nicht in diesem Informationsmodell enthalten sind, kann das <a href="https://simplifier.net/medizininformatikinitiative-modullabor" title="KDS modul Labor">KDS-Modul Labor</a> verwendet werden.</p>
+<p>Für alle Untersuchungen, die dieses Informationsmodell nicht abdeckt, kann das
+<a href="https://simplifier.net/medizininformatikinitiative-modullabor" title="KDS-Modul Labor">KDS-Modul Labor</a>
+verwendet werden.</p>
+
+<p>Die ausführlich behandelten Themen haben eigene Seiten:</p>
+
+<ul>
+  <li><strong><a href="profilauswahl-und-abgrenzung.html">Profilauswahl und Abgrenzung</a></strong> — welches
+Profil welche Aussage trägt und wie ein negatives Ergebnis ausgedrückt wird</li>
+  <li><strong><a href="interpretation.html">Interpretation</a></strong> — die Empfindlichkeitskategorien, die
+zugrunde liegende Norm und das Verhältnis von Messwert und Bewertung</li>
+  <li><strong><a href="fhir-profile.html">FHIR-Profile – Modellierungshinweise</a></strong> — die Konventionen
+hinter den Profilen, einschließlich der Abbildung diagnostischer Ketten</li>
+  <li><strong><a href="probe.html">Probe</a></strong> — wie das Probenmaterial abgebildet wird und welches
+Modul es verantwortet</li>
+  <li><strong><a href="logical-models.html">Datensätze und Beschreibungen</a></strong> — die Datenelemente des
+Moduls als logische Modelle</li>
+  <li><strong><a href="uml-diagrams.html">UML-Diagramme</a></strong> — die Datenmodelle und ihre Beziehungen</li>
+  <li><strong><a href="implementer-guidance.html">Anleitung für Implementierende</a></strong> — technische
+Hinweise für DIZ-Implementierende und die Bezüge zu anderen KDS-Modulen</li>
+</ul>
 
 <hr />
 <p>Für die KDS-weiten Konformitätsanforderungen siehe die
@@ -375,7 +392,7 @@ für die technischen Artefakte siehe <a href="profiles.html">Profile</a>.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-alpha.6 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 2, 2026 21:48+0000">2026-09-02</span>
+          Erstellt <span title="Thu, Sep 3, 2026 04:37+0000">2026-09-03</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

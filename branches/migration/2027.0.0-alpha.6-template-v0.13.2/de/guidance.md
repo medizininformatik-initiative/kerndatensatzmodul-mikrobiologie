@@ -5,22 +5,23 @@
 
 ## Anleitung
 
-Dieser Abschnitt bündelt die fachlichen Hinweise zur Umsetzung und Nutzung des Moduls **Mikrobiologie**.
+ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 
 
-### Allgemeine Umsetzungshinweise
+Das Modul **Mikrobiologie** fokussiert den Nachweis, die Charakterisierung und Beschreibung von Mikroorganismen (z. B. Bakterien, Viren, Pilzen, Prionen und Protozoen). Das Informationsmodell ermöglicht eine gemeinsame und standardisierte Beschreibung verschiedener Untersuchungen in Form von FHIR Observations. Ziel ist die Abdeckung der häufigsten mikrobiologischen Laborverfahren.
 
-* **[Datensätze und Beschreibungen](logical-models.md)** — die Datenelemente des Moduls, beschrieben als logische Modelle. (Dieser Eintrag teilt sein Ziel mit **Artefakte → Logische Modelle**; keiner der Anker der Artefakt-Übersicht ist als Linkziel nutzbar — siehe [`docs/page-structure.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/page-structure.md) in diesem Repository.)
-* **[UML-Diagramme](uml-diagrams.md)** — visuelle Darstellung der Datenmodelle und ihrer Beziehungen.
+Die Ergebnisse von Empfindlichkeitstests können sowohl gemäß den Definitionen des European Committee on Antimicrobial Susceptibility Testing ([EUCAST](https://www.eucast.org/)) als auch des Clinical & Laboratory Standards Institute ([CLSI](https://clsi.org/)) angegeben werden. Ein eigener DiagnosticReport fasst die Ergebnisse zusammen, die zu einem mikrobiologischen Befund gehören.
 
-### Zielgruppenspezifische Hinweise
+Für alle Untersuchungen, die dieses Informationsmodell nicht abdeckt, kann das [KDS-Modul Labor](https://simplifier.net/medizininformatikinitiative-modullabor) verwendet werden.
 
-* **[Anleitung für Implementierende](implementer-guidance.md)** — technische Hinweise für DIZ-Implementierende.
+Die ausführlich behandelten Themen haben eigene Seiten:
 
-Das Modul fokussiert den Nachweis, die Charakterisierung und Beschreibung von Mikroorganismen (z. B. Bakterien, Viren, Pilzen, Prionen und Protozoen). Das Informationsmodell ermöglicht eine gemeinsame und standardisierte Beschreibung verschiedener Untersuchungen in Form von FHIR Observations. Ziel ist die Abdeckung der häufigsten mikrobiologischen Laborverfahren.
-
-Die Ergebnisse von Empfindlichkeitstests können sowohl gemäß den Definitionen des European Committee on Antimicrobial Susceptibility Testing ([EUCAST](https://www.eucast.org/)) als auch des Clinical & Laboratory Standards Institute ([CLSI](https://clsi.org/)) angegeben werden. Relevante Ergebnisse können in einem speziellen DiagnosticReport für mikrobiologische Studien gemeldet werden.
-
-Für alle Untersuchungen, die nicht in diesem Informationsmodell enthalten sind, kann das [KDS-Modul Labor](https://simplifier.net/medizininformatikinitiative-modullabor) verwendet werden.
+* **[Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.md)** — welches Profil welche Aussage trägt und wie ein negatives Ergebnis ausgedrückt wird
+* **[Interpretation](interpretation.md)** — die Empfindlichkeitskategorien, die zugrunde liegende Norm und das Verhältnis von Messwert und Bewertung
+* **[FHIR-Profile – Modellierungshinweise](fhir-profile.md)** — die Konventionen hinter den Profilen, einschließlich der Abbildung diagnostischer Ketten
+* **[Probe](probe.md)** — wie das Probenmaterial abgebildet wird und welches Modul es verantwortet
+* **[Datensätze und Beschreibungen](logical-models.md)** — die Datenelemente des Moduls als logische Modelle
+* **[UML-Diagramme](uml-diagrams.md)** — die Datenmodelle und ihre Beziehungen
+* **[Anleitung für Implementierende](implementer-guidance.md)** — technische Hinweise für DIZ-Implementierende und die Bezüge zu anderen KDS-Modulen
 
 -------
 
