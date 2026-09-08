@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed | *Version*:2027.0.0-alpha.6 |
-| Active as of 2026-09-03 | *Computable Name*:MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED |
+| Active as of 2026-09-08 | *Computable Name*:MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED |
 
  
 Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet. 
@@ -43,7 +43,7 @@ Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein
   "title" : "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T10:47:18+00:00",
+  "date" : "2026-09-08T14:02:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

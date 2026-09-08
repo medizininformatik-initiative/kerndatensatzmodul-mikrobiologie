@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-detected-not-detected-snomed | *Version*:2027.0.0-alpha.6 |
-| Active as of 2026-09-03 | *Computable Name*:MII_VS_Mikrobio_Detected_Not_Detected_SNOMED |
+| Active as of 2026-09-08 | *Computable Name*:MII_VS_Mikrobio_Detected_Not_Detected_SNOMED |
 
  
 Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder nicht nachgewiesen. Ein unbestimmbares Ergebnis wird nicht hierüber, sondern über Observation.dataAbsentReason abgebildet. 
@@ -44,7 +44,7 @@ Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder n
   "title" : "MII VS Mikrobio Detected Not Detected [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T10:47:18+00:00",
+  "date" : "2026-09-08T14:02:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -196,7 +196,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   "title" : "MII Implementation Guide Microbiology",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T10:47:18+00:00",
+  "date" : "2026-09-08T14:02:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -2539,7 +2539,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-resistenzmechanismen-methode-snomed"
       },
       "name" : "MII VS Mikrobio Resistenzmechanismen Methode [SNOMED]",
-      "description" : "Methoden für den Nachweis von Resistenzgenen oder Resistenzmutationen (molekulare Verfahren).",
+      "description" : "Methoden für den Nachweis von Resistenzmechanismen und Determinanten: molekulare, immunologische und funktionale Verfahren.",
       "exampleBoolean" : false
     },
     {

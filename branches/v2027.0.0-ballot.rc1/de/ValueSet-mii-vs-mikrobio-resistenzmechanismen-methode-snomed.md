@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-methode-snomed | *Version*:2027.0.0-alpha.6 |
-| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED |
 
  
-Methoden für den Nachweis von Resistenzgenen oder Resistenzmutationen (molekulare Verfahren). 
+Methoden für den Nachweis von Resistenzmechanismen und Determinanten: molekulare, immunologische und funktionale Verfahren. 
 
  **References** 
 
@@ -42,7 +42,7 @@ Methoden für den Nachweis von Resistenzgenen oder Resistenzmutationen (molekula
   "title" : "MII VS Mikrobio Resistenzmechanismen Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T10:47:18+00:00",
+  "date" : "2026-09-08T14:02:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -64,7 +64,7 @@ Methoden für den Nachweis von Resistenzgenen oder Resistenzmutationen (molekula
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Methoden für den Nachweis von Resistenzgenen oder Resistenzmutationen (molekulare Verfahren).",
+  "description" : "Methoden für den Nachweis von Resistenzmechanismen und Determinanten: molekulare, immunologische und funktionale Verfahren.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -98,6 +98,30 @@ Methoden für den Nachweis von Resistenzgenen oder Resistenzmutationen (molekula
       {
         "code" : "1304162005",
         "display" : "Nucleic acid sequencing technique (qualifier value)"
+      },
+      {
+        "code" : "726449005",
+        "display" : "Immunoassay technique (qualifier value)"
+      },
+      {
+        "code" : "708099001",
+        "display" : "Rapid immunoassay technique (qualifier value)"
+      },
+      {
+        "code" : "703444002",
+        "display" : "Fluorescent immunoassay (qualifier value)"
+      },
+      {
+        "code" : "708104000",
+        "display" : "Agglutination technique (qualifier value)"
+      },
+      {
+        "code" : "703458000",
+        "display" : "Neutralization method (qualifier value)"
+      },
+      {
+        "code" : "782518009",
+        "display" : "Modified carbapenem inactivation technique (qualifier value)"
       }]
     }]
   }

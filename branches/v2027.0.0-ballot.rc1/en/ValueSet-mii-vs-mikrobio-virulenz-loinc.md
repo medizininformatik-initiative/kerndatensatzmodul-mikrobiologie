@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-virulenz-loinc | *Version*:2027.0.0-alpha.6 |
-| Active as of 2026-09-03 | *Computable Name*:MII_VS_Mikrobio_Virulenz_LOINC |
+| Active as of 2026-09-08 | *Computable Name*:MII_VS_Mikrobio_Virulenz_LOINC |
 
  
 Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten. 
@@ -42,7 +42,7 @@ Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschl
   "title" : "MII VS Mikrobio Virulenz [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T10:47:18+00:00",
+  "date" : "2026-09-08T14:02:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

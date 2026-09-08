@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc | *Version*:2027.0.0-alpha.6 |
-| Active Stand: 2026-09-03 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC |
+| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC |
 
  
 Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den Nachweis von Resistenzgenen, Resistenzproteinen und funktionalen Resistenztests. 
@@ -42,7 +42,7 @@ Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den
   "title" : "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-03T10:47:18+00:00",
+  "date" : "2026-09-08T14:02:02+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
