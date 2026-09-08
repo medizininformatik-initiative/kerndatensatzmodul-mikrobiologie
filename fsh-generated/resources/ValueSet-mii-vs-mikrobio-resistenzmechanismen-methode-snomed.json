@@ -4,7 +4,7 @@
   "name": "MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED",
   "id": "mii-vs-mikrobio-resistenzmechanismen-methode-snomed",
   "title": "MII VS Mikrobio Resistenzmechanismen Methode [SNOMED]",
-  "description": "Methoden für den Nachweis von Resistenzgenen oder Resistenzmutationen (molekulare Verfahren).",
+  "description": "Methoden für den Nachweis von Resistenzmechanismen und Determinanten: molekulare, immunologische und funktionale Verfahren.",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-methode-snomed",
   "version": "2027.0.0-alpha.6",
   "experimental": false,
@@ -47,6 +47,30 @@
           {
             "code": "1304162005",
             "display": "Nucleic acid sequencing technique (qualifier value)"
+          },
+          {
+            "code": "726449005",
+            "display": "Immunoassay technique (qualifier value)"
+          },
+          {
+            "code": "708099001",
+            "display": "Rapid immunoassay technique (qualifier value)"
+          },
+          {
+            "code": "703444002",
+            "display": "Fluorescent immunoassay (qualifier value)"
+          },
+          {
+            "code": "708104000",
+            "display": "Agglutination technique (qualifier value)"
+          },
+          {
+            "code": "703458000",
+            "display": "Neutralization method (qualifier value)"
+          },
+          {
+            "code": "782518009",
+            "display": "Modified carbapenem inactivation technique (qualifier value)"
           }
         ]
       }
