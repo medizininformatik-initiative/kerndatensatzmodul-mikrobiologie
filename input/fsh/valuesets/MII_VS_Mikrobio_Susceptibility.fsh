@@ -6,9 +6,9 @@ Description: "Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestun
 * insert Publisher
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
-* $v3-ObservationInterpretation#S "Susceptible"
-* $v3-ObservationInterpretation#I "Intermediate"
-* $v3-ObservationInterpretation#SDD "Susceptible-dose dependent"
-* $v3-ObservationInterpretation#R "Resistant"
-* $v3-ObservationInterpretation#NS "Non-susceptible"
+* $v3-ObservationInterpretation-ver#S "Susceptible"
+* $v3-ObservationInterpretation-ver#I "Intermediate"
+* $v3-ObservationInterpretation-ver#SDD "Susceptible-dose dependent"
+* $v3-ObservationInterpretation-ver#R "Resistant"
+* $v3-ObservationInterpretation-ver#NS "Non-susceptible"
 * $sct#1306583007 "I (Susceptible, increased exposure) EUCAST (European Committee on Antimicrobial Susceptibility Testing) category 2019"

@@ -6,6 +6,6 @@ Description: "Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die a
 * insert Publisher
 * ^status = #active
 * ^date = "2023-03-02T00:00:00Z"
-* $v3-ObservationInterpretation#S "Susceptible"
-* $v3-ObservationInterpretation#I "Intermediate"
-* $v3-ObservationInterpretation#R "Resistant"
+* $v3-ObservationInterpretation-ver#S "Susceptible"
+* $v3-ObservationInterpretation-ver#I "Intermediate"
+* $v3-ObservationInterpretation-ver#R "Resistant"

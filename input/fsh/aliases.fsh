@@ -1,4 +1,18 @@
 Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+// Versionsbehaftete Variante fuer ValueSet-Kompositionen, nach dem Muster des
+// Basismoduls Labor. hl7.terminology.r4 kommt in zwei Staenden herein (6.2.0
+// transitiv ueber IPS -> IPA, 7.1.0 als direkter Pin), dazu 2.1.0 aus dem
+// xver-Paket; ohne Versionsangabe meldet der Publisher eine mehrdeutige
+// Aufloesung und entscheidet selbst.
+//
+// 4.0.0 ist die CODESYSTEM-Version, nicht die Paketversion: THO 7.1.0 liefert
+// v3-ObservationInterpretation in 4.0.0. Wird der THO-Pin in sushi-config.yaml
+// gehoben, muss dieser Alias mitwandern.
+//
+// NUR in ValueSet-Kompositionen verwenden. In Instanzen und als Pattern oder
+// fixed value bleibt der versionslose Alias oben: ein Pattern mit
+// versionsbehafteter system-URL wuerde nicht matchen.
+Alias: $v3-ObservationInterpretation-ver = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation|4.0.0
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $loinc = http://loinc.org
 Alias: $ucum = http://unitsofmeasure.org

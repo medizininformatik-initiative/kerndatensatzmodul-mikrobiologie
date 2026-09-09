@@ -1,4 +1,10 @@
-//TODO: this was added as a workaround as Simplifier does not yet support the xver packages, which caused problems in Snapshot generation. Once Simplifier supports the xver packages, this extension should be removed. And the dependency added again.
+// Eigene Kopie der xver-Extension, weil Simplifier die xver-Pakete nicht
+// unterstuetzt (Snapshot-Generierung bricht sonst). Das Paket
+// hl7.fhir.uv.xver-r5.r4@0.1.0 ist inzwischen WIEDER als Abhaengigkeit gesetzt,
+// beide Definitionen derselben Canonical existieren also nebeneinander. Der
+// Publisher meldet das als "multiple different potential matches"; die Meldung
+// ist in input/ignoreWarnings.txt unterdrueckt. Entfaellt erst, wenn Simplifier
+// xver unterstuetzt.
 
 Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
 

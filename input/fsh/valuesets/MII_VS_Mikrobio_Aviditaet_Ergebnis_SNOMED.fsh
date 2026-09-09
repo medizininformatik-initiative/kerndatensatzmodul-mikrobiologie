@@ -5,6 +5,6 @@ Description: "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
-* $v3-ObservationInterpretation#L "Low"
-* $v3-ObservationInterpretation#I "Intermediate"
-* $v3-ObservationInterpretation#H "High"
+* $v3-ObservationInterpretation-ver#L "Low"
+* $v3-ObservationInterpretation-ver#I "Intermediate"
+* $v3-ObservationInterpretation-ver#H "High"
