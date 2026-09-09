@@ -1,6 +1,5 @@
 <!-- markdownlint-disable MD041 -->
 <!-- Liste GENERIERT aus den Beispielinstanzen, gruppiert nach Profil. -->
-### Beispiele
 
 Die Beispielinstanzen dieses Moduls, nach Profil gruppiert.
 

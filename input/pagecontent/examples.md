@@ -1,7 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 <!-- List GENERATED from the example instances, grouped by profile.
      German mirror: input/translations/de/pagecontent/examples.md. -->
-### Examples
 
 The example instances of this module, grouped by the profile they conform to.
 
