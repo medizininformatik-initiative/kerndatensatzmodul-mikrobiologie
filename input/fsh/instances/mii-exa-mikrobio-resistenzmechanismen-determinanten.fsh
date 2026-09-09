@@ -1,6 +1,8 @@
 Instance: mii-exa-mikrobio-resistenzmechanismen-determinanten
 InstanceOf: MII_PR_Mikrobio_Resistenzmechanismen_Determinanten
 Usage: #example
+Title: "MII EXA Mikrobio Resistenzmechanismen Determinanten"
+Description: "Molekularer Nachweis einer Resistenzdeterminante mittels PCR."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "res-mech-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"

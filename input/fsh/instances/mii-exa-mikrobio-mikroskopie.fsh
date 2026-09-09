@@ -1,6 +1,8 @@
 Instance: mii-exa-mikrobio-mikroskopie
 InstanceOf: MII_PR_Mikrobio_Mikroskopie
 Usage: #example
+Title: "MII EXA Mikrobio Mikroskopie"
+Description: "Mikroskopischer Befund ohne taxonomische Zuordnung: grampositive Kokken in Haufen."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "mikroskopie-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"

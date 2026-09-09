@@ -1,6 +1,8 @@
 Instance: mii-exa-mikrobio-empfindlichkeit
 InstanceOf: MII_PR_Mikrobio_Empfindlichkeit
 Usage: #example
+Title: "MII EXA Mikrobio Empfindlichkeit"
+Description: "Phänotypische Empfindlichkeitstestung mit MHK in mg/L; die Kategorie steht mit ihrer Norm in interpretation."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "empf-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"

@@ -1,6 +1,8 @@
 Instance: mii-exa-mikrobio-barlett-score
 InstanceOf: MII_PR_Mikrobio_Barlett_Score
 Usage: #example
+Title: "MII EXA Mikrobio Barlett Score"
+Description: "Barlett-Score einer Sputumprobe zur Beurteilung, ob sie für die Kultur geeignet ist."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "barlett-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"

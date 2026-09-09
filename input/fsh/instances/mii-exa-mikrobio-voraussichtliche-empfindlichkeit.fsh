@@ -1,6 +1,8 @@
 Instance: mii-exa-mikrobio-voraussichtliche-empfindlichkeit
 InstanceOf: MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit
 Usage: #example
+Title: "MII EXA Mikrobio Voraussichtliche Empfindlichkeit"
+Description: "Aus dem Genotyp abgeleitete erwartete Empfindlichkeit gegenüber Rifampicin."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "v-empf-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"

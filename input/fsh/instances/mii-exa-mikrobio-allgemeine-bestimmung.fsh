@@ -1,6 +1,8 @@
 Instance: mii-exa-mikrobio-allgemeine-bestimmung
 InstanceOf: MII_PR_Mikrobio_Allgemeine_Bestimmung
 Usage: #example
+Title: "MII EXA Mikrobio Allgemeine Bestimmung"
+Description: "Ungerichtete Erregeridentifizierung aus einer Probe, ausgewiesen als Reflex-Folgeuntersuchung der allgemeinen Kultur."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "allg-best-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"

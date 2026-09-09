@@ -1,6 +1,8 @@
 Instance: mii-exa-mikrobio-ct-wert
 InstanceOf: MII_PR_Mikrobio_Ct_Wert
 Usage: #example
+Title: "MII EXA Mikrobio Ct Wert"
+Description: "Zyklusschwellenwert einer Echtzeit-PCR auf Influenza A H3."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "ct-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"

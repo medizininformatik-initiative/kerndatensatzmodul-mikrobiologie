@@ -1,6 +1,8 @@
 Instance: mii-exa-mikrobio-mrgn-klasse
 InstanceOf: MII_PR_Mikrobio_MRGN_Klasse
 Usage: #example
+Title: "MII EXA Mikrobio MRGN Klasse"
+Description: "MRGN-Klassifikation eines gramnegativen Isolats mit dem Ergebnis 2MRGN."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "59826-8_1234567890"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"

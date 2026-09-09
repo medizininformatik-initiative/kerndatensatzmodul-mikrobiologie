@@ -1,6 +1,8 @@
 Instance: mii-exa-mikrobio-aviditaet
 InstanceOf: MII_PR_Mikrobio_Aviditaet
 Usage: #example
+Title: "MII EXA Mikrobio Aviditaet"
+Description: "Aviditätsbestimmung von CMV-IgG-Antikörpern; der Messwert bleibt in value, die Einordnung steht in interpretation."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "avid-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"

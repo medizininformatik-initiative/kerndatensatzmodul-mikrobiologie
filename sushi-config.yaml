@@ -364,6 +364,13 @@ dependencies:
   # The parent bump above resolves it: the new module binds the name current IPS
   # actually ships, so 2.0.1 and a clean render are no longer in conflict.
   hl7.fhir.uv.ips: 2.0.1
+  # Ausdrueckliche Pins statt transitiver Aufloesung, gleiche Versionen wie im
+  # Basismodul Labor. Ohne sie lagen beide Pakete DOPPELT im Baum (extensions.r4
+  # 5.2.0 und 5.3.0, THO 6.2.0 und 7.3.0), was der Publisher als "multiple
+  # different potential matches" meldete und wobei er selbst entschied, welche
+  # Version gilt.
+  hl7.fhir.uv.extensions.r4: 5.2.0
+  hl7.terminology.r4: 7.1.0
   # ---- template pins NOT adopted (① decide at Gate A) ----
   # Each would change what this already-published module resolves against.
   # de.basisprofil.r4: 1.5.4                      # source pins it only transitively, via modul-labor
@@ -374,11 +381,10 @@ dependencies:
   #                                               # mirrors the R5 extension locally instead
   #                                               # (StructureDefinition-ext-R5-Observation.triggeredBy).
   #                                               # Re-adding it is a MODELLING decision, out of migration scope.
-  # hl7.terminology.r4: 7.3.0                     # RECOMMENDED: Gate-0 measured `injection_risk: true` on the
-  # hl7.fhir.uv.extensions.r4: 5.3.0              # source — without direct pins every build silently injects
-  #                                               # the LATEST THO/extensions release. Adopting them makes the
-  #                                               # build reproducible but MAY change ValueSet expansions, so it
-  #                                               # is a human decision, not a migration default.
+  # hl7.terminology.r4 und hl7.fhir.uv.extensions.r4 standen hier als
+  # Gate-A-Empfehlung (7.3.0 / 5.3.0). Am 2026-09-09 entschieden und oben
+  # gesetzt — allerdings auf 7.1.0 / 5.2.0, den Versionen des Basismoduls Labor,
+  # damit beide Module gegen dieselbe Terminologie bauen.
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -403,6 +409,17 @@ dependencies:
 # Descriptions" are MENU LINKS, not pages — they have no entry here.
 # Every entry needs a matching file in input/pagecontent/ (starter pages are a
 # separate scaffolding step); OPTIONAL entries your module does not need are
+# Beschreibungen fuer Ressourcen, die NICHT aus FSH entstehen und deshalb keine
+# eigene Description tragen koennen. Ohne diesen Eintrag meldet der Publisher
+# "Unable to find ImplementationGuide.definition.resource.description" und die
+# Artefaktliste bleibt an dieser Stelle leer. Gleiche Loesung wie im Basismodul
+# Labor.
+resources:
+  Parameters/mii-param-mikrobio-manifest:
+    name: Expansion Parameters Manifest
+    description: "Gepinnte CodeSystem-Versionen, gegen die jedes ValueSet dieses Leitfadens expandiert wird."
+    exampleBoolean: false
+
 # removed per docs/optional-pages.md.
 # Every `title:` below is also a msgid in the IG-level translation catalogue
 # input/translations/de/ImplementationGuide-mii-ig-mikrobiologie.po — if you

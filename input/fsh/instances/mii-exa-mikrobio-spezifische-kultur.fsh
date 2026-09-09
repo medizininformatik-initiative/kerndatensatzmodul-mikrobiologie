@@ -1,6 +1,8 @@
 Instance: mii-exa-mikrobio-spezifische-kultur
 InstanceOf: MII_PR_Mikrobio_Spezifische_Kultur
 Usage: #example
+Title: "MII EXA Mikrobio Spezifische Kultur"
+Description: "Zielgerichtete kulturelle Untersuchung auf einen vordefinierten Erreger, hier mit Wachstumsnachweis."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-kultur-1"
 * identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
