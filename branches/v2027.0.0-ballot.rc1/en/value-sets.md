@@ -5,8 +5,6 @@
 
 ## Value Sets
 
-### Value Sets
-
 This page lists the ValueSets of the **Microbiology** module (naming convention `MII_VS_<Module>_<Name>`). Each row names what the set is for; follow the link for its codes and expansion. The code systems they draw from are described on the [Code Systems](code-systems.md) page; for general guidance on using codes see [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html).
 
 **Expansions:** ValueSet expansions in this guide are produced by a FHIR terminology server — SU-TermServ if the client certificate is configured, otherwise the public HL7 server `tx.fhir.org` (in which case some KDS-specific ValueSets may not expand completely).

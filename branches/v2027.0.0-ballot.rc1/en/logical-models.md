@@ -5,8 +5,6 @@
 
 ## Logical Models
 
-### Logical Models
-
 The logical data models of the **Microbiology** module describe the domain dataset independently of its concrete FHIR representation.
 
 The official, approved version of the information model for the Microbiology module can be found on [ART-DECOR](https://art-decor.org/art-decor/decor-datasets--mide-). To unify the representation, the information model was additionally expressed as FHIR Logical Models.

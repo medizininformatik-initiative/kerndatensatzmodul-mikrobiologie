@@ -7,8 +7,6 @@
 
  Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 
 
-### Value Sets
-
 Diese Seite listet die ValueSets des Moduls **Mikrobiologie** (Namenskonvention `MII_VS_<Modul>_<Name>`). Jede Zeile nennt den Zweck; die Codes und die Expansion stehen hinter dem Link. Die zugrunde liegenden CodeSysteme sind auf der Seite [Code Systems](code-systems.md) beschrieben, allgemeine Hinweise zur Verwendung von Codes unter [FHIR Terminology](http://hl7.org/fhir/R4/terminologies.html).
 
 **Expansionen:** Die Expansionen in diesem Leitfaden erzeugt ein FHIR-Terminologieserver — SU-TermServ, sofern das Client-Zertifikat konfiguriert ist, sonst der öffentliche HL7-Server `tx.fhir.org` (dann expandieren manche KDS-spezifischen ValueSets möglicherweise unvollständig).

@@ -5,8 +5,6 @@
 
 ## Search Parameters
 
-### Search Parameters
-
 The **Microbiology** module defines the following search parameters beyond the FHIR base set. All of them apply to `Observation`.
 
 | | |

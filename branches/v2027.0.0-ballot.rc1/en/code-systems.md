@@ -5,8 +5,6 @@
 
 ## Code Systems
 
-### Code Systems
-
 This page lists the code systems the **Microbiology** module defines itself (naming convention `MII_CS_<Module>_<Name>`). They cover what the international terminologies do not.
 
 | | |

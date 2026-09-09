@@ -334,22 +334,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
-</div>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#mii-ex-mikrobio-empfindlichkeit-norm" id="markdown-toc-mii-ex-mikrobio-empfindlichkeit-norm">MII EX Mikrobio Empfindlichkeit Norm</a></li>
+  <li><a href="#r5-triggering-observations" id="markdown-toc-r5-triggering-observations">R5: Triggering observation(s)</a></li>
+</ul>
 
+</div>
 <!-- markdownlint-disable MD041 -->
 <!-- Split from the former combined profiles-and-extensions.md per the TF-KDS-agreed
      menu structure (one page per artifact type).
      German mirror: input/translations/de/pagecontent/extensions.md. -->
-<h3 id="extensions">Extensions</h3>
 
 <p>The module defines <strong>one</strong> extension of its own, following the MII naming
 convention <code class="language-plaintext highlighter-rouge">MII_EX_&lt;Module&gt;_&lt;Name&gt;</code>, and vendors <strong>one</strong> HL7 cross-version
 extension it cannot yet obtain from a package. The profiles that use them are on
 the <a href="profiles.html">Profiles</a> page.</p>
 
-<h4 id="mii-ex-mikrobio-empfindlichkeit-norm">MII EX Mikrobio Empfindlichkeit Norm</h4>
+<h3 id="mii-ex-mikrobio-empfindlichkeit-norm">MII EX Mikrobio Empfindlichkeit Norm</h3>
 
 <p><a href="StructureDefinition-mii-ex-mikrobio-empfindlichkeit-norm.html">mii-ex-mikrobio-empfindlichkeit-norm</a>
 names the normative system on whose breakpoints a susceptibility category rests —
@@ -365,7 +367,7 @@ requires it once per interpretation (<code class="language-plaintext highlighter
 <a href="interpretation.html">Interpretation</a>, including the open point that the norm's
 <em>version</em> is not yet expressible.</p>
 
-<h4 id="r5-triggering-observations">R5: Triggering observation(s)</h4>
+<h3 id="r5-triggering-observations">R5: Triggering observation(s)</h3>
 
 <p><a href="StructureDefinition-ext-R5-Observation.triggeredBy.html">ext-R5-Observation.triggeredBy</a>
 is <strong>not</strong> an MII extension. It is a copy of the HL7 cross-version extension
@@ -411,7 +413,7 @@ makes the chain searchable.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 9, 2026 14:11+0000">2026-09-09</span>
+          Generated <span title="Wed, Sep 9, 2026 14:19+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

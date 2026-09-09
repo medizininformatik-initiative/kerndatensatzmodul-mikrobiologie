@@ -5,8 +5,6 @@
 
 ## Capability Statements
 
-### Capability Statements
-
 The CapabilityStatements of the **Microbiology** module describe the expected server/client capabilities (supported resources and interactions).
 
 To enable decentralised data analysis via the German Research Data Portal for Health of the Medical Informatics Initiative, the [capabilities interaction](https://www.hl7.org/fhir/http.html#capabilities) MUST be supported, so that the FHIR server exposes a CapabilityStatement at `[BASE_URL]/metadata`. That CapabilityStatement MUST state which profiles - including version - and which search parameters are supported.
