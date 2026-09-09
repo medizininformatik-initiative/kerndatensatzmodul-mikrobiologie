@@ -1,13 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!--
-  HOME PAGE — GERMAN TRANSLATION of the source page input/pagecontent/index.md
-  (English is the IG's default language). The structure follows the standard MII
-  module IG page set (MII IG template and kerndatensatz-basis). Replace the
-  {{...}} placeholders and the bracketed [TODO ...] prompts with your module's
-  real content, then delete these HTML comments. Keep the section headings — a
-  reviewer expects them. See docs/recipes/add-translation.md; keep this file in
-  step with the English source.
--->
 
 ### Einleitung
 
@@ -52,7 +43,7 @@ Profile überführt.
 
 | Veröffentlichung |               |
 |------------------|---------------|
-| Datum            | TODO:REVIEW (Releasedatum — wird zu Gate D gesetzt) |
+| Datum            | noch nicht veröffentlicht |
 | Version          | 2027.0.0-ballot.rc1 (CalVer `JJJJ.n.n`) |
 | Status           | active        |
 | Realm            | DE            |
@@ -146,11 +137,7 @@ Anmerkungen und Kritik werden als *Issues* auf
 
 ### Urheberrecht und Lizenz
 
-© 2019 TMF e. V., Charlottenstraße 42, 10117 Berlin
-
-TODO:REVIEW — die Simplifier-Quellseite nennt 2019 als Copyright-Jahr, die
-`copyrightYear` in `sushi-config.yaml` dagegen 2026. Beide Werte stammen aus der
-Quelle und widersprechen sich; die Migration hat keinen davon geändert (Gate A).
+© 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin
 
 Dieses Werk ist lizenziert unter der
 [Creative Commons Namensnennung 4.0 International Lizenz (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.de).

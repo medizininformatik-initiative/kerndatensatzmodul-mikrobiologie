@@ -1,13 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-<!--
-  HOME PAGE — English is the IG's DEFAULT language, so this file is the source.
-  Structure follows the standard MII module IG page set (kerndatensatz-basis
-  input/pagecontent/index.md). Replace the {{...}} placeholders and the bracketed
-  [TODO ...] prompts with your module's real content, then delete these HTML
-  comments. Keep the section headings — a reviewer expects them. The German
-  translation of this page lives at input/translations/de/pagecontent/index.md
-  (see docs/recipes/add-translation.md) — keep both in step.
--->
 
 ### Introduction
 
@@ -42,7 +33,7 @@ Components of Observations were moved into separate profiles in this version.
 
 | Publication |               |
 |-------------|---------------|
-| Date        | TODO:REVIEW (release date - set at Gate D) |
+| Date        | not yet published |
 | Version     | 2027.0.0-ballot.rc1 (CalVer `YYYY.n.n`) |
 | Status      | active        |
 | Realm       | DE            |
@@ -131,11 +122,7 @@ Comments and issues are welcome as *Issues* on
 
 ### Copyright and License
 
-© 2019 TMF e. V., Charlottenstraße 42, 10117 Berlin
-
-TODO:REVIEW - the Simplifier source home page states 2019 as the copyright year, while
-`copyrightYear` in `sushi-config.yaml` states 2026. Both values come from the source and
-contradict each other; the migration changed neither (Gate A).
+© 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin
 
 This work is licensed under the
 [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
