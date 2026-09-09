@@ -1,0 +1,1430 @@
+{
+  "schemaVersion": "1.0",
+  "module": "kerndatensatzmodul-mikrobiologie",
+  "source": {
+    "repo": "https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie",
+    "commit": "fdf319049491b27a543a134a2050969d88064861",
+    "branch": "main",
+    "shape": "A (SUSHI/IG-Publisher project, hybrid with Simplifier implementation-guides/)",
+    "rendered_guide": {
+      "key": "mii-ig-modul-mikrobiologie-2027-de",
+      "version": "2027.0.0-alpha.5",
+      "root": "MIIIGModulMikrobiologie",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie?version=2027.0.0-alpha.5",
+      "pages_discovered": 37,
+      "authoritative": true,
+      "reason": "matches implementation-guides/modulmikrobio-2027/ and sushi-config version 2027.0.0-alpha.6; flagged Default/Read-only/Public"
+    },
+    "parallel_guide_trees": [
+      {
+        "key": "mii-ig-modul-mikrobiologie-2025-de",
+        "version": "2025.0.1",
+        "pages": 30,
+        "disposition": "retain — prior release, not migrated"
+      },
+      {
+        "key": "copy-of---en--medizininformatik-initiative---modul-mikrobiologie",
+        "version": null,
+        "pages": 0,
+        "disposition": "harvest seed (EN) — preview only, no published version to pin"
+      }
+    ],
+    "top_level_tracked": {
+      ".git": "file",
+      ".github": "dir",
+      ".gitignore": "file",
+      "README.md": "file",
+      "_build.sh": "file",
+      "fsh-generated": "dir",
+      "implementation-guides": "dir",
+      "input": "dir",
+      "materials": "dir",
+      "package.json": "file",
+      "qc": "dir",
+      "sushi-config.yaml": "file",
+      "validator": "dir"
+    }
+  },
+  "identity": {
+    "id": "kerndatensatzmodul-mikrobiologie",
+    "canonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio",
+    "packageId": "project",
+    "name": "Kerndatensatzmodul Mikrobiologie",
+    "title": null,
+    "version": "2027.0.0-alpha.6",
+    "calver": true,
+    "status": "active",
+    "fhirVersion": "4.0.1",
+    "license": null,
+    "publisher": null
+  },
+  "artifacts": {
+    "counts": {
+      "profiles": 20,
+      "extensions": 2,
+      "valuesets": 42,
+      "codesystems": 3,
+      "logicals": 3,
+      "capabilitystatements": 1,
+      "questionnaires": 0,
+      "searchparameters": 4,
+      "operations": 0,
+      "examples": 27,
+      "rulesets": 5,
+      "invariants": 1,
+      "mappings": 0,
+      "other": {},
+      "total": 102,
+      "other_total": 0,
+      "_source": "input/fsh (FSH-Deklarationen)",
+      "generated_crosscheck": {
+        "source": "fsh-generated/resources",
+        "counts": {
+          "profiles": 20,
+          "extensions": 2,
+          "valuesets": 42,
+          "codesystems": 3,
+          "logicals": 3,
+          "capabilitystatements": 1,
+          "questionnaires": 0,
+          "searchparameters": 4,
+          "operations": 0,
+          "examples": 27
+        },
+        "other": {},
+        "mismatches": {}
+      }
+    },
+    "detail": [
+      {
+        "type": "CodeSystem",
+        "name": "MII_CS_Mikrobio_MRGN_Ergebnis",
+        "instanceOf": null,
+        "category": "codesystems",
+        "path": "input/fsh/codesystems/MII_CS_Mikrobio_MRGN_Ergebnis.fsh",
+        "line": 1
+      },
+      {
+        "type": "CodeSystem",
+        "name": "MII_CS_Mikrobio_Resistenzkategorie",
+        "instanceOf": null,
+        "category": "codesystems",
+        "path": "input/fsh/codesystems/MII_CS_Mikrobio_Resistenzkategorie.fsh",
+        "line": 1
+      },
+      {
+        "type": "CodeSystem",
+        "name": "MII_CS_Mikrobio_Susceptibility_NORM",
+        "instanceOf": null,
+        "category": "codesystems",
+        "path": "input/fsh/codesystems/MII_CS_Mikrobio_Susceptibility_Norm.fsh",
+        "line": 1
+      },
+      {
+        "type": "Extension",
+        "name": "ExtensionObservation_TriggeredBy",
+        "instanceOf": null,
+        "category": "extensions",
+        "path": "input/fsh/extensions/ExtensionObservation_TriggeredBy.fsh",
+        "line": 5
+      },
+      {
+        "type": "Extension",
+        "name": "MII_EX_Mikrobio_Empfindlichkeit_Norm",
+        "instanceOf": null,
+        "category": "extensions",
+        "path": "input/fsh/extensions/MII_EX_Mikrobio_Empfindlichkeit_Norm.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "MII-CPS-Metadata-Mikrobio",
+        "instanceOf": "CapabilityStatement",
+        "category": "capabilitystatements",
+        "path": "input/fsh/instances/MII-CPS-Metadata-Mikrobio.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-allgemeine-bestimmung",
+        "instanceOf": "MII_PR_Mikrobio_Allgemeine_Bestimmung",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-allgemeine-bestimmung.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-allgemeine-kultur",
+        "instanceOf": "MII_PR_Mikrobio_Allgemeine_Kultur",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-allgemeine-kultur.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-antigen-antikoerper-quantitativ",
+        "instanceOf": "MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-antigen-antikoerper-quantitativ.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-aviditaet",
+        "instanceOf": "MII_PR_Mikrobio_Aviditaet",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-aviditaet.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-barlett-score",
+        "instanceOf": "MII_PR_Mikrobio_Barlett_Score",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-barlett-score.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-ct-wert",
+        "instanceOf": "MII_PR_Mikrobio_Ct_Wert",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-ct-wert.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-diagnostic-report",
+        "instanceOf": "MII_PR_Mikrobio_Diagnostic_Report",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-diagnostic-report.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-empfindlichkeit",
+        "instanceOf": "MII_PR_Mikrobio_Empfindlichkeit",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-empfindlichkeit.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-keimzahl",
+        "instanceOf": "MII_PR_Mikrobio_Keimzahl",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-keimzahl.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-mikroskopie",
+        "instanceOf": "MII_PR_Mikrobio_Mikroskopie",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-mikroskopie.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-molekulare-pathogenlast",
+        "instanceOf": "MII_PR_Mikrobio_Molekulare_Pathogenlast",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-molekulare-pathogenlast.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-mrgn-klasse-negativ",
+        "instanceOf": "MII_PR_Mikrobio_MRGN_Klasse",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-mrgn-klasse-negativ.fsh",
+        "line": 7
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-mrgn-klasse",
+        "instanceOf": "MII_PR_Mikrobio_MRGN_Klasse",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-mrgn-klasse.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-nugent-score",
+        "instanceOf": "MII_PR_Mikrobio_Nugent_Score",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-nugent-score.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-resistenzkategorie-vre-negativ",
+        "instanceOf": "MII_PR_Mikrobio_Resistenzkategorie_Status",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-resistenzkategorie-vre-negativ.fsh",
+        "line": 7
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-resistenzkategorie-vre-positiv",
+        "instanceOf": "MII_PR_Mikrobio_Resistenzkategorie_Status",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-resistenzkategorie-vre-positiv.fsh",
+        "line": 10
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-resistenzmechanismen-determinanten",
+        "instanceOf": "MII_PR_Mikrobio_Resistenzmechanismen_Determinanten",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-resistenzmechanismen-determinanten.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-spezifische-bestimmung-vre-negativ",
+        "instanceOf": "MII_PR_Mikrobio_Spezifische_Bestimmung",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.fsh",
+        "line": 8
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-spezifische-bestimmung",
+        "instanceOf": "MII_PR_Mikrobio_Spezifische_Bestimmung",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-spezifische-bestimmung.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-spezifische-kultur-vre-negativ",
+        "instanceOf": "MII_PR_Mikrobio_Spezifische_Kultur",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-spezifische-kultur-vre-negativ.fsh",
+        "line": 4
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-spezifische-kultur",
+        "instanceOf": "MII_PR_Mikrobio_Spezifische_Kultur",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-spezifische-kultur.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-titer",
+        "instanceOf": "MII_PR_Mikrobio_Titer",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-titer.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-virulenzfaktor",
+        "instanceOf": "MII_PR_Mikrobio_Virulenzfaktor",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-virulenzfaktor.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-voraussichtliche-empfindlichkeit",
+        "instanceOf": "MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-voraussichtliche-empfindlichkeit.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-workflow-vre-01-kultur",
+        "instanceOf": "MII_PR_Mikrobio_Spezifische_Kultur",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-workflow-vre-01-kultur.fsh",
+        "line": 17
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-workflow-vre-02-identifikation",
+        "instanceOf": "MII_PR_Mikrobio_Allgemeine_Bestimmung",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-workflow-vre-02-identifikation.fsh",
+        "line": 10
+      },
+      {
+        "type": "Instance",
+        "name": "mii-exa-mikrobio-workflow-vre-03-empfindlichkeit",
+        "instanceOf": "MII_PR_Mikrobio_Empfindlichkeit",
+        "category": "examples",
+        "path": "input/fsh/instances/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.fsh",
+        "line": 5
+      },
+      {
+        "type": "Instance",
+        "name": "mii-sp-mikrobio-interpretation",
+        "instanceOf": "SearchParameter",
+        "category": "searchparameters",
+        "path": "input/fsh/instances/mii-sp-mikrobio-interpretation.fsh",
+        "line": 1
+      },
+      {
+        "type": "Logical",
+        "name": "MII_LM_Mikrobio_Befund",
+        "instanceOf": null,
+        "category": "logicals",
+        "path": "input/fsh/logicals/MII_LM_Mikrobio_Befund.fsh",
+        "line": 3
+      },
+      {
+        "type": "Logical",
+        "name": "MII_LM_Mikrobio_Untersuchung",
+        "instanceOf": null,
+        "category": "logicals",
+        "path": "input/fsh/logicals/MII_LM_Mikrobio_Untersuchung.fsh",
+        "line": 5
+      },
+      {
+        "type": "Logical",
+        "name": "MII_LM_Mikrobio_Untersuchungsarten",
+        "instanceOf": null,
+        "category": "logicals",
+        "path": "input/fsh/logicals/MII_LM_Mikrobio_Untersuchungsarten.fsh",
+        "line": 4
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Allgemeine_Bestimmung",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Allgemeine_Bestimmung.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Allgemeine_Kultur",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Allgemeine_Kultur.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Aviditaet",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Aviditaet.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Barlett_Score",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Barlett_Score.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Ct_Wert",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Ct_Wert.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Diagnostic_Report",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Diagnostic_Report.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Empfindlichkeit",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Empfindlichkeit.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Keimzahl",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Keimzahl.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_MRGN_Klasse",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_MRGN_Klasse.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Mikroskopie",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Mikroskopie.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Molekulare_Pathogenlast",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Molekulare_Pathogenlast.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Nugent_Score",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Nugent_Score.fsh",
+        "line": 1
+      },
+      {
+        "type": "Invariant",
+        "name": "nugent-score-0-to-10",
+        "instanceOf": null,
+        "category": "invariants",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Nugent_Score.fsh",
+        "line": 15
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Resistenzkategorie_Status",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Resistenzkategorie_Status.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Resistenzmechanismen_Determinanten",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Resistenzmechanismen_Determinanten.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Spezifische_Bestimmung",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Spezifische_Bestimmung.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Spezifische_Kultur",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Spezifische_Kultur.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Titer",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Titer.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Virulenzfaktor",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Virulenzfaktor.fsh",
+        "line": 1
+      },
+      {
+        "type": "Profile",
+        "name": "MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit",
+        "instanceOf": null,
+        "category": "profiles",
+        "path": "input/fsh/profiles/MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit.fsh",
+        "line": 1
+      },
+      {
+        "type": "RuleSet",
+        "name": "MIKRO_OBSERVATION_COMMON",
+        "instanceOf": null,
+        "category": "rulesets",
+        "path": "input/fsh/rulesets/mikrobio-observation-common.fsh",
+        "line": 1
+      },
+      {
+        "type": "RuleSet",
+        "name": "Publisher",
+        "instanceOf": null,
+        "category": "rulesets",
+        "path": "input/fsh/rulesets/publisher.fsh",
+        "line": 1
+      },
+      {
+        "type": "RuleSet",
+        "name": "SP_Publisher",
+        "instanceOf": null,
+        "category": "rulesets",
+        "path": "input/fsh/rulesets/publisher.fsh",
+        "line": 6
+      },
+      {
+        "type": "RuleSet",
+        "name": "Version",
+        "instanceOf": null,
+        "category": "rulesets",
+        "path": "input/fsh/rulesets/version.fsh",
+        "line": 2
+      },
+      {
+        "type": "RuleSet",
+        "name": "PR_CS_VS_Version",
+        "instanceOf": null,
+        "category": "rulesets",
+        "path": "input/fsh/rulesets/version.fsh",
+        "line": 5
+      },
+      {
+        "type": "Instance",
+        "name": "ObservationInterpretation",
+        "instanceOf": "SearchParameter",
+        "category": "searchparameters",
+        "path": "input/fsh/searchparameter/MII_SP_Mikrobio_Observation-interpretation.fsh",
+        "line": 1
+      },
+      {
+        "type": "Instance",
+        "name": "mii-sp-mikrobio-observation-titer",
+        "instanceOf": "SearchParameter",
+        "category": "searchparameters",
+        "path": "input/fsh/searchparameter/MII_SP_Mikrobio_Observation-titer.fsh",
+        "line": 8
+      },
+      {
+        "type": "Instance",
+        "name": "mii-sp-mikrobio-observation-triggered-by",
+        "instanceOf": "SearchParameter",
+        "category": "searchparameters",
+        "path": "input/fsh/searchparameter/MII_SP_Mikrobio_Observation-triggered-by.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Labor_Laborergebnis_Semiquantitativ",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Labor_Laborergbenis_Semiquantitativ_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Aviditaet_Ergebnis",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Aviditaet_Ergebnis_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Aviditaet_Tests_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Aviditaet_Tests_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Barlett_Score_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Barlett_Score_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Befundtyp_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Befundtyp_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_CT_Wert_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_CT_Wert_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Data_Absent_Reason",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Data_Absent_Reason.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Detected_Not_Detected_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Detected_Not_Detected_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Empfänglichkeit_Genotyp_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Keimzahl_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Keimzahl_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_MRGN_Klasse_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_MRGN_Klasse_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Morphologie_Methode_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Morphologie_Methode_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Organismen_SNOMEDCT",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Organismen_SNOMEDCT.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Resistenzkategorie_Status",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Resistenzkategorie_Status.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Susceptibility",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Susceptibility.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Susceptibility_NORM",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Susceptibility_NORM.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Titer_Methode_SNOMED",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Titer_Methode_SNOMED.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Titer_Tests_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Titer_Tests_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Virulenz_LOINC",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Virulenz_LOINC.fsh",
+        "line": 1
+      },
+      {
+        "type": "ValueSet",
+        "name": "MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit",
+        "instanceOf": null,
+        "category": "valuesets",
+        "path": "input/fsh/valuesets/MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit_SNOMEDCT.fsh",
+        "line": 1
+      }
+    ]
+  },
+  "narrative": {
+    "pages": 40,
+    "pages_all": 43,
+    "words": 11357,
+    "images": 2,
+    "root": "implementation-guides/modulmikrobio-2027/",
+    "files": [
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Beschreibung-von-Szenarien-fuer-die-Anwendung-der-Module.page.md",
+        "words": 105,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Datensaetze-inkl-Beschreibungen.page.md",
+        "words": 276,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Index.page.md",
+        "words": 58,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/UML.page.md",
+        "words": 125,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Beschreibung-Modul-Mikrobiologie.page.md",
+        "words": 64,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Changelog.page.md",
+        "words": 6274,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Index.page.md",
+        "words": 387,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Kontext-im-Gesamtprojekt-Bezuege-zu-anderen-Modulen.page.md",
+        "words": 82,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Referenzen.page.md",
+        "words": 84,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/CapabilityStatement.page.md",
+        "words": 83,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Allgemeine-Bestimmung.page.md",
+        "words": 182,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/CT-Wert.page.md",
+        "words": 66,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Index.page.md",
+        "words": 11,
+        "kind": "source",
+        "stub": true
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Spezifische-Bestimmung.page.md",
+        "words": 207,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Diagnostic-Report.page.md",
+        "words": 229,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Beschreibung.page.md",
+        "words": 45,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Capability-Operations.page.md",
+        "words": 23,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Capability-REST.page.md",
+        "words": 23,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/FQL-Capability-Search.page.md",
+        "words": 25,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md",
+        "words": 135,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Allgemeine-Kultur.page.md",
+        "words": 80,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Barlett-Score.page.md",
+        "words": 73,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Empfindlichkeit.page.md",
+        "words": 116,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Index.page.md",
+        "words": 23,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Keimzahl.page.md",
+        "words": 69,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Mikroskopie.page.md",
+        "words": 74,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Nugent-Score.page.md",
+        "words": 65,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Spezifische-Kultur.page.md",
+        "words": 145,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md",
+        "words": 110,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Antigen-Antikoerper-Quantitativ.page.md",
+        "words": 69,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Index.page.md",
+        "words": 13,
+        "kind": "source",
+        "stub": true
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Molekulare-Pathogenlast.page.md",
+        "words": 70,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Titer.page.md",
+        "words": 162,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Aviditaet.page.md",
+        "words": 72,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Index.page.md",
+        "words": 20,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/MRGN-Klasse.page.md",
+        "words": 169,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzkategorie-Status.page.md",
+        "words": 460,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzmechanismen-Determinanten.page.md",
+        "words": 68,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Virulenzfaktor.page.md",
+        "words": 64,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Voraussichtliche-Empfindlichkeit.page.md",
+        "words": 67,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/Index.page.md",
+        "words": 8,
+        "kind": "source",
+        "stub": true
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/Profilauswahl-und-Abgrenzung.page.md",
+        "words": 746,
+        "kind": "source",
+        "stub": false
+      },
+      {
+        "path": "implementation-guides/modulmikrobio-2027/MIIIGModulMikrobiologie/Technische-Implementierung/Terminologien.page.md",
+        "words": 162,
+        "kind": "source",
+        "stub": false
+      }
+    ]
+  },
+  "guide_pages_rendered": [
+    {
+      "depth": "1",
+      "slug_path": "MIIIGModulMikrobiologie",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "2",
+      "slug_path": "MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "2",
+      "slug_path": "MIIIGModulMikrobiologie/Beschreibung-Modul-Mikrobiologie",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Beschreibung-Modul-Mikrobiologie?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "2",
+      "slug_path": "MIIIGModulMikrobiologie/Changelog",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Changelog?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "2",
+      "slug_path": "MIIIGModulMikrobiologie/Kontext-im-Gesamtprojekt-Bezuege-zu-anderen-Modulen",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Kontext-im-Gesamtprojekt-Bezuege-zu-anderen-Modulen?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "2",
+      "slug_path": "MIIIGModulMikrobiologie/Referenzen",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Referenzen?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "2",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "3",
+      "slug_path": "MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Beschreibung-von-Szenarien-fuer-die-Anwendung-der-Module",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Beschreibung-von-Szenarien-fuer-die-Anwendung-der-Module?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "3",
+      "slug_path": "MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Datensaetze-inkl-Beschreibungen",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/Datensaetze-inkl-Beschreibungen?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "3",
+      "slug_path": "MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/UML",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Anwendungsfaelle-Informationsmodell/UML?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "3",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/CapabilityStatement",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/CapabilityStatement?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "3",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "3",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/Terminologien",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/Terminologien?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "4",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "4",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Diagnostic-Report",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Diagnostic-Report?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "4",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "4",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "4",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "4",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Allgemeine-Bestimmung",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Allgemeine-Bestimmung?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/CT-Wert",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/CT-Wert?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Spezifische-Bestimmung",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Bestimmung/Spezifische-Bestimmung?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Allgemeine-Kultur",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Allgemeine-Kultur?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Barlett-Score",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Barlett-Score?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Empfindlichkeit",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Empfindlichkeit?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Keimzahl",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Keimzahl?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Mikroskopie",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Mikroskopie?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Nugent-Score",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Kultur/Nugent-Score?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Antigen-Antikoerper-Quantitativ",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Antigen-Antikoerper-Quantitativ?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Molekulare-Pathogenlast",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Molekulare-Pathogenlast?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Titer",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Quantitative-tests/Titer?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Aviditaet",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Aviditaet?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/MRE-Klasse",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/MRE-Klasse?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/MRGN-Klasse",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/MRGN-Klasse?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzmechanismen-Determinanten",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Resistenzmechanismen-Determinanten?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Virulenzfaktor",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Virulenzfaktor?version=2027.0.0-alpha.5"
+    },
+    {
+      "depth": "5",
+      "slug_path": "MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Voraussichtliche-Empfindlichkeit",
+      "url": "https://simplifier.net/guide/mii-ig-modul-mikrobiologie-2027-de/MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Weitere-Eigenschaften/Voraussichtliche-Empfindlichkeit?version=2027.0.0-alpha.5"
+    }
+  ],
+  "dependencies": {
+    "count": 1,
+    "pinned": 1,
+    "floating": 0,
+    "items": {
+      "de.medizininformatikinitiative.kerndatensatz.laborbefund": "2026.0.3"
+    },
+    "floating_items": [],
+    "block_present": true,
+    "_source": "sushi-config.yaml: dependencies"
+  }
+}

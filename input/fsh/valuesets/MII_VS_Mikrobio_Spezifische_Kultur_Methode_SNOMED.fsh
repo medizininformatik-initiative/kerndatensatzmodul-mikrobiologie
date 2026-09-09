@@ -5,4 +5,4 @@ Description: "Methoden-ValueSet fuer die spezifische Kultur. Extensible gebunden
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
-* $sct#703752003 "Mikroorganismusspezifische Kulturtechnik"
+* $sct#703752003 "Organism specific culture"

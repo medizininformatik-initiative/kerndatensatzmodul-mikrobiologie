@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Virulenz_LOINC
 Id: mii-vs-mikrobio-virulenz-loinc
 Title: "MII VS Mikrobio Virulenz [LOINC]"
+Description: "Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

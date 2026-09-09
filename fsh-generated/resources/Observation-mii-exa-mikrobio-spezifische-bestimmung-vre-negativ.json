@@ -6,31 +6,6 @@
       "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
     ]
   },
-  "category": [
-    {
-      "coding": [
-        {
-          "code": "MB",
-          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
-        },
-        {
-          "code": "26436-6",
-          "system": "http://loinc.org",
-          "display": "Laboruntersuchungen"
-        },
-        {
-          "code": "laboratory",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "display": "Laboratory"
-        },
-        {
-          "code": "18725-2",
-          "system": "http://loinc.org",
-          "display": "Mikrobiologie"
-        }
-      ]
-    }
-  ],
   "identifier": [
     {
       "type": {
@@ -44,8 +19,38 @@
       "system": "https://example.org/fhir/sid/test-lab-results",
       "value": "spez-best-vre-neg-1",
       "assigner": {
-        "display": "Universitätsklinikum Musterstadt"
+        "reference": "Organization/mii-exa-mikrobio-labor"
       }
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        },
+        {
+          "code": "26436-6",
+          "system": "http://loinc.org",
+          "version": "2.82",
+          "display": "Laboratory studies (set)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "MB",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+        }
+      ]
+    }
+  ],
+  "performer": [
+    {
+      "reference": "Organization/mii-exa-mikrobio-labor"
     }
   ],
   "status": "final",
@@ -54,12 +59,13 @@
       {
         "code": "105904-7",
         "system": "http://loinc.org",
+        "version": "2.82",
         "display": "Vancomycin resistant enterococcus [Presence] in Specimen"
       }
     ]
   },
   "subject": {
-    "reference": "Patient/example"
+    "reference": "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime": "2026-04-02T10:00:00+01:00",
   "valueCodeableConcept": {
@@ -67,6 +73,7 @@
       {
         "code": "260415000",
         "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20260701",
         "display": "Not detected (qualifier value)"
       }
     ]
@@ -76,11 +83,12 @@
       {
         "code": "70601000052104",
         "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20260701",
         "display": "Real-time polymerase chain reaction technique (qualifier value)"
       }
     ]
   },
   "specimen": {
-    "reference": "Specimen/example"
+    "reference": "Specimen/mii-exa-mikrobio-probe"
   }
 }

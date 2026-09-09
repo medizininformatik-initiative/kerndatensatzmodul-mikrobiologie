@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED
 Id: mii-vs-mikrobio-antigen-antikoerper-methode-snomed
 Title: "MII VS Mikrobio Antigen Antikoerper Methode [SNOMED]"
+Description: "Methoden-ValueSet für quantitative Antigen- und Antikörpertests sowie für die Aviditätsbestimmung: immunologische Nachweisverfahren."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

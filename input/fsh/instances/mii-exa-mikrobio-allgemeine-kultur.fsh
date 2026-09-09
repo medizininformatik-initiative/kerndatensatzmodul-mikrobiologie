@@ -1,16 +1,18 @@
 Instance: mii-exa-mikrobio-allgemeine-kultur
 InstanceOf: MII_PR_Mikrobio_Allgemeine_Kultur
 Usage: #example
+Title: "MII EXA Mikrobio Allgemeine Kultur"
+Description: "Ungerichtete kulturelle Anzucht mit Wachstumsnachweis, aerobe Kultur."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "allg-kultur-1"
-* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
+* identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+* category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
+* category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#11475-1 "Microorganism identified in Specimen by Culture"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
+* performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $sct#365698005 "Organism growth"
 * method = $sct#703750006 "Aerobic culture"
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)

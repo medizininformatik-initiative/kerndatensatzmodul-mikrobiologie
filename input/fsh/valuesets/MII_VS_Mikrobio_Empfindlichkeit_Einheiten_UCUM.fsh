@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM
 Id: mii-vs-mikrobio-empfindlichkeit-einheiten-ucum
 Title: "MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]"
+Description: "Einheiten-ValueSet für die phänotypische Empfindlichkeitstestung (UCUM): minimale Hemmkonzentration in mg/L oder Hemmhofdurchmesser in mm."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

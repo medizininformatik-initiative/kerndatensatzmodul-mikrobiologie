@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Titer_Methode_SNOMED
 Id: mii-vs-mikrobio-titer-methode-snomed
 Title: "MII VS Mikrobio Titer Methode [SNOMED]"
+Description: "Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreihen."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

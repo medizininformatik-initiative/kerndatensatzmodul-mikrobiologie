@@ -10,5 +10,5 @@ Description: "Spezifische Kultur beschreibt das Ergebnis einer zielgerichteten k
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED (required)
-* valueCodeableConcept ^short = "Wachstum oder kein Wachstum des im Code benannten Mikroorganismus. Ein unbestimmbares Ergebnis wird über dataAbsentReason abgebildet."
+* valueCodeableConcept ^short = "Wachstum oder kein Wachstum des im Code benannten Mikroorganismus. Lässt sich nicht entscheiden, ob das Ziel gewachsen ist, wird 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Wie viel gewachsen ist, sagt dagegen die Keimzahl. Ein unbestimmbares Ergebnis, bei dem die Kultur gar keine verwertbare Aussage liefert (überwuchert, Material unzureichend), wird über dataAbsentReason abgebildet."
 * method from MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED (extensible)

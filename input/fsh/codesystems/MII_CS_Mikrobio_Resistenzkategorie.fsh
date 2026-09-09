@@ -5,6 +5,7 @@ Description: "Untersuchungscodes (Observation.code) für die Bewertung eines nac
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
+* ^caseSensitive = true
 // Terminologierecherche (tx.fhir.org, SNOMED CT International Edition 20250201, LOINC 2.82):
 //
 // SNOMED CT, Hierarchie "Observable entity" (363787002): Eine Volltextsuche ueber die

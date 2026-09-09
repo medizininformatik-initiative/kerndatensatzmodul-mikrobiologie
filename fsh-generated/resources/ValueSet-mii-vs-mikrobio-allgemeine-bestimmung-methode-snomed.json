@@ -4,8 +4,9 @@
   "name": "MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED",
   "id": "mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed",
   "title": "MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]",
+  "description": "Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren zur Identifikation eines Erregers ohne vordefiniertes Ziel, etwa Mikroskopie oder MALDI-TOF.",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed",
-  "version": "2027.0.0-alpha.6",
+  "version": "2027.0.0-ballot.rc1",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -22,6 +23,7 @@
     "include": [
       {
         "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20260701",
         "concept": [
           {
             "code": "278289002",

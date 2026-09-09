@@ -5,4 +5,5 @@ Description: "CodeSystem für Ergebnisse der MRGN-Klassifikation, die sich nicht
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
+* ^caseSensitive = true
 * #keine-mrgn-klasse "Keine MRGN-Klasse" "Das identifizierte gramnegative Isolat wurde anhand der vorliegenden Empfindlichkeitsbefunde bewertet und ist keiner MRGN-Klasse (2MRGN, 3MRGN, 4MRGN) zuzuordnen. Abzugrenzen vom negativen Ergebnis eines zielgerichteten Erregernachweises: Dieses wird über MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur abgebildet."

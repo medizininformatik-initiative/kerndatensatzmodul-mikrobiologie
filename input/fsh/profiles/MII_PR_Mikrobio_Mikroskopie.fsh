@@ -5,7 +5,7 @@ Title: "MII PR Mikrobio Mikroskopie"
 Description: "Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung), ohne taxonomische Identifikation."
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "Dieses Profil beschreibt mikroskopische Beobachtungen der Morphologie." 
-* code = $loinc#105059-0
+* code = $loinc-no-ver#105059-0
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED (extensible)

@@ -1,0 +1,25 @@
+{
+  "resourceType": "Specimen",
+  "id": "mii-exa-mikrobio-probe",
+  "identifier": [
+    {
+      "system": "https://example.org/fhir/sid/test-specimen",
+      "value": "probe-1"
+    }
+  ],
+  "status": "available",
+  "type": {
+    "coding": [
+      {
+        "code": "123038009",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20260701",
+        "display": "Specimen"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-mikrobio-patient"
+  },
+  "receivedTime": "2026-04-02T08:30:00+01:00"
+}

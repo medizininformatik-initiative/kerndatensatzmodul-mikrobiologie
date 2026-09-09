@@ -5,19 +5,20 @@ RuleSet: MIKRO_OBSERVATION_COMMON
 * extension[triggeredBy-r5] MS
 * extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
 * extension[triggeredBy-r5].extension[type] ^short = "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik." 
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
+// Kein eigenes Slicing auf `category`: das macht der Parent (pattern auf
+// `$this`, offen, unveraendert bis laborbefund@2027.0.0-ballot.rc4). Eine zweite
+// Deklaration muesste exakt uebereinstimmen — SUSHI schluckt Abweichungen, der
+// IG Publisher bricht beim Snapshot ab —, also nur `contains`: ein Slice, ein
+// fester Wert, keine Coding-Ebene. Weitere Codings bleiben zulaessig (Slicing
+// offen, `category` ist 1..*), nur nicht vorgeschrieben.
+//
+// Der Parent-Slice traegt `laboratory`, dieser `MB`. Beide Codes in EINEM
+// CodeableConcept trafen beide Patterns ("matches more than one slice"), die
+// Kategorien brauchen also getrennte category-Eintraege.
 * category contains mibi-category 1..1 MS
-* category[mibi-category] ^patternCodeableConcept.coding[+] = $v2-0074#MB // "Microbiology"
+* category[mibi-category] = $v2-0074#MB
 * category[mibi-category] ^short = "Mikrobiologie-Kategorie"
 * category[mibi-category] ^definition = "Kategorie-Slice für mikrobiologische Laboruntersuchungen."
-// TODO: after: https://github.com/medizininformatik-initiative/kerndatensatzmodul-labor/issues/66 is applied, the loinc codings will be removed
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory
-* category[mibi-category].coding contains v2-microbiology 1..1 MS and loinc-microbiology-studies 0..1 MS
-* category[mibi-category].coding[v2-microbiology] = $v2-0074#MB // "Microbiology"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 // "Mikrobiologie"
 * specimen 1.. MS
 // Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern hier abgebildet
 * dataAbsentReason from MII_VS_Mikrobio_Data_Absent_Reason (extensible)

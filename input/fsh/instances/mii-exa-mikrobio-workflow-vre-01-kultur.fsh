@@ -21,14 +21,14 @@ Title: "MII EXA Mikrobio Workflow VRE 1 Kultur positiv"
 Description: "Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erregerspezifischer Kultur."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "wf-vre-1"
-* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
+* identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+* category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
+* category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#13316-5 "Vancomycin resistant enterococcus [Presence] in Specimen by Organism specific culture"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
+* performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $sct#365698005 "Organism growth"
-* method = $sct#703752003 "Mikroorganismusspezifische Kulturtechnik"
-* specimen.reference = "Specimen/example"
+* method = $sct#703752003 "Organism specific culture"
+* specimen = Reference(mii-exa-mikrobio-probe)

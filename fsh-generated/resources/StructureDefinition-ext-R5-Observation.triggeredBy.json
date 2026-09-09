@@ -1,6 +1,12 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ext-R5-Observation.triggeredBy",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "fhir"
+    }
+  ],
   "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy",
   "version": "0.1.0",
   "name": "ExtensionObservation_TriggeredBy",

@@ -1,19 +1,21 @@
 Instance: mii-exa-mikrobio-antigen-antikoerper-quantitativ
 InstanceOf: MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ
 Usage: #example
+Title: "MII EXA Mikrobio Antigen Antikoerper quantitativ"
+Description: "Quantitative Antikörperbestimmung im Serum am Beispiel der Hepatitis-B-Oberflächen-Antikörper."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "ak-qn-1"
-* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
+* identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
-* category[mibi-category].coding[loinc-observation] = $loinc#26436-6 "Laboruntersuchungen"
-* category[mibi-category].coding[observation-category] = $observation-category#laboratory "Laboratory"
-* category[mibi-category].coding[loinc-microbiology-studies] = $loinc#18725-2 "Mikrobiologie"
+* category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
+* category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#5193-8 "Hepatitis B virus surface Ab [Units/volume] in Serum or Plasma by Immunoassay"
-* subject.reference = "Patient/example"
+* subject = Reference(mii-exa-mikrobio-patient)
+* performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 42
 * valueQuantity.system = $ucum
 * valueQuantity.code = #[IU]/L
 * valueQuantity.unit = "IU/L"
 * method = $sct#726449005 "Immunoassay technique"
-* specimen.reference = "Specimen/example"
+* specimen = Reference(mii-exa-mikrobio-probe)

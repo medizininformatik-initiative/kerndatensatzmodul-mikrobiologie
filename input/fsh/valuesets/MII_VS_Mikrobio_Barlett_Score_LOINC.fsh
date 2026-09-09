@@ -1,6 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Barlett_Score_LOINC
 Id: mii-vs-mikrobio-barlett-score-loinc
 Title: "MII VS Mikrobio Barlett Score [LOINC]"
+Description: "Ergebnis-ValueSet für den Barlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

@@ -6,7 +6,7 @@
   "title": "MII VS Mikrobio Spezifische Kultur Methode [SNOMED]",
   "description": "Methoden-ValueSet fuer die spezifische Kultur. Extensible gebunden, damit staerker spezialisierte Kulturverfahren ergaenzt werden koennen.",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed",
-  "version": "2027.0.0-alpha.6",
+  "version": "2027.0.0-ballot.rc1",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
   "contact": [
@@ -23,10 +23,11 @@
     "include": [
       {
         "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20260701",
         "concept": [
           {
             "code": "703752003",
-            "display": "Mikroorganismusspezifische Kulturtechnik"
+            "display": "Organism specific culture"
           }
         ]
       }
