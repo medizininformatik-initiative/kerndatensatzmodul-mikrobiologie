@@ -166,11 +166,11 @@ experimental: false
 # The artifact-* / cqf-* extension set below mirrors the reference module
 # kerndatensatz-basis one-for-one; only the per-module values are placeholders.
 extension:
-  # MIGRATION: resource-approvalDate REMOVED — {{APPROVAL_DATE}} has no value in
-  # the source and an invented date would ship a false governance claim
-  # (guardrail 3). Re-add it with the real approval date at Gate D:
-  #   - url: http://hl7.org/fhir/StructureDefinition/resource-approvalDate
-  #     valueDate: "YYYY-MM-DD"                      # ① OPEN
+  # Freigabedatum des Ballot-Kandidaten, gesetzt am 2026-09-09 auf Entscheidung
+  # des Modulverantwortlichen. Beim formalen Release (Gate D) auf das Datum der
+  # dortigen Freigabe zu heben.
+  - url: http://hl7.org/fhir/StructureDefinition/resource-approvalDate
+    valueDate: "2026-09-09"
   - url: http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability
     valueCode: shareable
   - url: http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability
