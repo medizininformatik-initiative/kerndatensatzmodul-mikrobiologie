@@ -111,9 +111,9 @@ the shareable one.
 
 ### Versioning and package provenance
 
-The human-readable version scheme is described on the
-[Versioning](version-history.html) page. This section describes how that policy
-is expressed as CRMI metadata.
+This section describes the module's version scheme and how it is expressed as
+CRMI metadata. The released version and the release workflow are on the
+[Versioning](version-history.html) page.
 
 The module uses calendar versioning in the SemVer-compatible numeric form
 `YYYY.MINOR.PATCH[-label]`, currently `2027.0.0-ballot.rc1`. The calendar year

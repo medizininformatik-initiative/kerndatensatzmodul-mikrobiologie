@@ -115,9 +115,9 @@ das Shareable-Profil weg.
 
 ### Versionierung und Paket-Provenienz
 
-Das menschenlesbare Versionsschema beschreibt die Seite
-[Versionierung](version-history.html). Dieser Abschnitt beschreibt, wie diese
-Politik als CRMI-Metadaten ausgedrückt wird.
+Dieser Abschnitt beschreibt das Versionsschema des Moduls und wie es als
+CRMI-Metadaten ausgedrückt wird. Die veröffentlichte Version und der
+Release-Workflow stehen auf der Seite [Versionierung](version-history.html).
 
 Das Modul verwendet die Kalender-Versionierung in der SemVer-kompatiblen
 numerischen Form `JJJJ.MINOR.PATCH[-label]`, derzeit `2027.0.0-ballot.rc1`. Das
