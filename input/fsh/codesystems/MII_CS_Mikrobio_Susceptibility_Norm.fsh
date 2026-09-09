@@ -5,6 +5,7 @@ Description: "CodeSystem zur Kodierung von Normen für die Interpretation der Em
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
+* ^caseSensitive = true
 * #EUCAST "EUCAST"
 * #CLSI "CLSI"
 * #Andere "Andere"
