@@ -24,3 +24,52 @@ The value provided ('en-US') was not found in the value set 'All Languages' (htt
 # mii-lm-mikrobio-untersuchungsarten. Wortgleich mit dem Eintrag im Basismodul
 # Labor, dort aus demselben Grund.
 Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+
+# Quittung fuer pin-canonicals: pin-all (sushi-config.yaml) — der Publisher
+# meldet jede Referenz, die er auf eine Version festlegt. 5866 Meldungen.
+%Pinned the version of%
+
+# Die xver-Extension wird als eigene Kopie mitgefuehrt, weil Simplifier die
+# xver-Pakete nicht unterstuetzt; das Paket ist zugleich als Abhaengigkeit
+# gesetzt. Beide Definitionen derselben Canonical kollidieren zwangslaeufig.
+# Siehe den Kommentar in input/fsh/extensions/ExtensionObservation_TriggeredBy.fsh.
+%potential matches for the url 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy'%
+
+# OIDs fuer ValueSets und CodeSystems sind eine Empfehlung fuer OID-basierte
+# Systeme (CDA). Der Parameter auto-oid-root braucht einen zugewiesenen
+# MII-Wurzel-OID, der nicht vorliegt; das Basismodul Labor haelt es genauso.
+# 45 Meldungen.
+%should have an OID assigned%
+
+# Der Diskriminator stammt aus dem Elternprofil; dieses Modul ist R4. Der
+# Hinweis betrifft eine kuenftige R5-Migration und ist hier nicht handelbar.
+%The discriminator type 'pattern' is deprecated%
+
+# Folge der Mehrfach-Profilierung gegen die CRMI-Profile: jede Extension trifft
+# einen Slice, aber nur in einem der deklarierten Profile.
+%does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/%
+
+# Der zweite category-Eintrag traegt absichtlich die Mikrobiologie-Kategorie MB;
+# die HL7-Basisbindung (preferred) erfuellt der erste Eintrag mit `laboratory`.
+%None of the codings provided are in the value set 'Observation Category Codes'%
+
+# artifact-topic verweist auf den NCI Thesaurus, den der Publisher nicht
+# aufloesen kann; dieselbe Wurzel wie die Unknown-Code-Meldungen.
+%Reference to draft CodeSystem%
+
+# ext-R5-Observation.triggeredBy ist eine unveraenderte Kopie der HL7-Extension
+# (siehe den Kommentar dort). publisher, contact und structuredefinition-wg sind
+# zeichengleich mit xver 0.1.0; die Meldung verlangt eine neuere HL7-Hausregel,
+# die das Originalpaket selbst nicht erfuellt.
+%The nominated WG 'fhir' means that%
+
+# Die Resource-Id folgt der MII-Namenskonvention (mii-ig-mikrobiologie), nicht
+# der packageId. Das Basismodul Labor haelt es genauso.
+The Implementation Guide Resource id should be de.medizininformatikinitiative.kerndatensatz.mikrobiologie
+
+# artifact-topic kodiert die Modulthemen mit dem NCI Thesaurus, den der
+# Publisher nicht aufloesen kann und auch nicht wird -- er ist kein
+# FHIR-Terminologieserver. Die beiden Codes sind am 2026-09-09 gegen die
+# NCI-EVS-API geprueft: C36292 = "Laboratory Test Result", C25294 =
+# "Laboratory Procedure". Beide passen zu einem mikrobiologischen Labormodul.
+%in the CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl'%
