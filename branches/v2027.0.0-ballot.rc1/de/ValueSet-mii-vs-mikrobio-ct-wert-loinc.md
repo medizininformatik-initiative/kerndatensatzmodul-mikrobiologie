@@ -42,7 +42,7 @@ Tests-ValueSet für den Ct-Wert: LOINC-Codes mit der Eigenschaft Zyklusschwellen
   "title" : "MII VS Mikrobio CT Wert [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T14:19:13+00:00",
+  "date" : "2026-09-09T14:42:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -305,16 +305,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#geltungsbereich" id="markdown-toc-geltungsbereich">Geltungsbereich</a></li>
+  <li><a href="#abdeckung-des-crmi-artefaktmanagements" id="markdown-toc-abdeckung-des-crmi-artefaktmanagements">Abdeckung des CRMI-Artefaktmanagements</a></li>
+  <li><a href="#von-diesem-leitfaden-deklarierte-crmi-metadaten" id="markdown-toc-von-diesem-leitfaden-deklarierte-crmi-metadaten">Von diesem Leitfaden deklarierte CRMI-Metadaten</a></li>
+  <li><a href="#codesystem-supplements" id="markdown-toc-codesystem-supplements">CodeSystem-Supplements</a></li>
+  <li><a href="#versionierung-und-paket-provenienz" id="markdown-toc-versionierung-und-paket-provenienz">Versionierung und Paket-Provenienz</a></li>
+  <li><a href="#manifest-und-reproduzierbarkeit" id="markdown-toc-manifest-und-reproduzierbarkeit">Manifest und Reproduzierbarkeit</a></li>
+  <li><a href="#bezug-zu-fair" id="markdown-toc-bezug-zu-fair">Bezug zu FAIR</a></li>
+  <li><a href="#praktische-nutzung" id="markdown-toc-praktische-nutzung">Praktische Nutzung</a></li>
+</ul>
+
 </div>
-
-<p style="border:var(--translation-box-border);background-color:var(--translation-background-color);padding: 5px 5px 5px 5px;">
-
-Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde.  Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie <a href="translationinfo.html">hier</a>.
-
-</p>
-
 <!-- markdownlint-disable MD041 -->
 <!-- Deutsche Übersetzung der Standardsprachseite input/pagecontent/metadata.md
      — beide Dateien müssen dasselbe aussagen. Quelle: kerndatensatz-basis
@@ -326,7 +329,6 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
      nicht. Sobald sushi-config.yaml ein CRMI-Profil, eine artifact-*-Extension
      oder einen Manifest-Parameter gewinnt oder verliert, sind die Tabellen unten
      in BEIDEN Sprachen nachzuziehen. -->
-<h3 id="metadaten-übersicht">Metadaten-Übersicht</h3>
 
 <p>Diese Seite beschreibt die maschinenlesbaren Metadaten des Moduls
 <strong>Mikrobiologie</strong>. Sie existieren, damit die Artefakte dieses Leitfadens
@@ -346,7 +348,7 @@ FHIR-Implementierungsleitfaden nützlich sind.</p>
 kann angepasst werden, wenn CRMI reift, sich der KDS-Veröffentlichungsprozess
 weiterentwickelt und die FAIR-Bewertung von FHIR-Leitfäden konkreter wird.</p>
 
-<h4 id="geltungsbereich">Geltungsbereich</h4>
+<h3 id="geltungsbereich">Geltungsbereich</h3>
 
 <p>CRMI-Metadaten beschreiben die FHIR-Spezifikationsartefakte selbst. Sie sind
 überwiegend beschreibend und ändern die klinischen oder technischen
@@ -361,7 +363,7 @@ beeinflussen.</p>
 den JSON- und XML-Darstellungen, die von jeder Artefaktseite verlinkt sind, sowie
 im <a href="downloads.html">herunterladbaren Paket</a>.</p>
 
-<h4 id="abdeckung-des-crmi-artefaktmanagements">Abdeckung des CRMI-Artefaktmanagements</h4>
+<h3 id="abdeckung-des-crmi-artefaktmanagements">Abdeckung des CRMI-Artefaktmanagements</h3>
 
 <p>CRMI gliedert das Artefaktmanagement in Lebenszyklus-Phasen und begleitende
 Aspekte. Dieser Leitfaden setzt nicht jede CRMI-Fähigkeit um, sondern die Teile,
@@ -420,7 +422,7 @@ Veröffentlichung über ein Knowledge Artifact Repository, keine
 Syndication-Feeds und keine Artefakt-Signierung. Das kann künftige Arbeit am
 Release-Workflow aufgreifen.</p>
 
-<h4 id="von-diesem-leitfaden-deklarierte-crmi-metadaten">Von diesem Leitfaden deklarierte CRMI-Metadaten</h4>
+<h3 id="von-diesem-leitfaden-deklarierte-crmi-metadaten">Von diesem Leitfaden deklarierte CRMI-Metadaten</h3>
 
 <p>Die folgenden CRMI-Metadaten werden in
 <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
@@ -526,7 +528,7 @@ ein gemeinsames <code class="language-plaintext highlighter-rouge">RuleSet</code
 entsprechenden Zeilen.]</p>
 </blockquote>
 
-<h5 id="codesystem-supplements">CodeSystem-Supplements</h5>
+<h3 id="codesystem-supplements">CodeSystem-Supplements</h3>
 
 <p>Veröffentlicht ein Modul CodeSystem-Supplements, ist zu beachten: Das
 CRMI-Profil <em>ShareableCodeSystem</em> verlangt <code class="language-plaintext highlighter-rouge">CodeSystem.caseSensitive</code>, während
@@ -536,7 +538,7 @@ angeben sollte, weil das dem ergänzten CodeSystem widersprechen könnte.
 beansprucht deshalb bei Supplements nur das <em>Publishable</em>-CRMI-Profil und lässt
 das Shareable-Profil weg.</p>
 
-<h4 id="versionierung-und-paket-provenienz">Versionierung und Paket-Provenienz</h4>
+<h3 id="versionierung-und-paket-provenienz">Versionierung und Paket-Provenienz</h3>
 
 <p>Das menschenlesbare Versionsschema beschreibt die Seite
 <a href="version-history.html">Versionierung</a>. Dieser Abschnitt beschreibt, wie diese
@@ -583,7 +585,7 @@ Geltungszeitraum zusammen erlauben Lesenden und Werkzeugen die Entscheidung, ob
 ein Artefakt zum erwarteten Release gehört und ob seine Metadaten zur
 implementierten Version passen.</p>
 
-<h4 id="manifest-und-reproduzierbarkeit">Manifest und Reproduzierbarkeit</h4>
+<h3 id="manifest-und-reproduzierbarkeit">Manifest und Reproduzierbarkeit</h3>
 
 <p>Kanonische Referenzen werden im gebauten Paket gepinnt (<code class="language-plaintext highlighter-rouge">pin-canonicals:
 pin-all</code> in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>); das ist eine CRMI-Erwartung und macht die
@@ -604,7 +606,7 @@ Blöcke in <code class="language-plaintext highlighter-rouge">sushi-config.yaml<
 keine Expansions-Parameter pinnt.]</p>
 </blockquote>
 
-<h4 id="bezug-zu-fair">Bezug zu FAIR</h4>
+<h3 id="bezug-zu-fair">Bezug zu FAIR</h3>
 
 <p>Die <a href="https://www.go-fair.org/fair-principles/">FAIR-Prinzipien</a> beschreiben
 Ziele dafür, digitale Objekte auffindbar (Findable), zugänglich (Accessible),
@@ -771,7 +773,7 @@ Indikatoren der Prioritäten <em>Important</em> und <em>Useful</em> — <code cl
 führt die vollständige Tabelle.]</p>
 </blockquote>
 
-<h4 id="praktische-nutzung">Praktische Nutzung</h4>
+<h3 id="praktische-nutzung">Praktische Nutzung</h3>
 
 <p>Implementierende können diese Metadaten nutzen, um</p>
 
@@ -817,7 +819,7 @@ Ressourcen die vollständigen maschinenlesbaren Metadaten.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 14:19+0000">2026-09-09</span>
+          Erstellt <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

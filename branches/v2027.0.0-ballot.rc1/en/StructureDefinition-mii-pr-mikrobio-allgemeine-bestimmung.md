@@ -193,7 +193,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
   "title" : "MII PR Mikrobio Allgemeine Bestimmung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T14:19:13+00:00",
+  "date" : "2026-09-09T14:42:29+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

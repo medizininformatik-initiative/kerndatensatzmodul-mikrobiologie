@@ -334,10 +334,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
-</div>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#scope" id="markdown-toc-scope">Scope</a></li>
+  <li><a href="#crmi-artifact-management-coverage" id="markdown-toc-crmi-artifact-management-coverage">CRMI artifact-management coverage</a></li>
+  <li><a href="#crmi-metadata-declared-by-this-guide" id="markdown-toc-crmi-metadata-declared-by-this-guide">CRMI metadata declared by this guide</a></li>
+  <li><a href="#codesystem-supplements" id="markdown-toc-codesystem-supplements">CodeSystem supplements</a></li>
+  <li><a href="#versioning-and-package-provenance" id="markdown-toc-versioning-and-package-provenance">Versioning and package provenance</a></li>
+  <li><a href="#manifest-and-reproducibility" id="markdown-toc-manifest-and-reproducibility">Manifest and reproducibility</a></li>
+  <li><a href="#relationship-to-fair" id="markdown-toc-relationship-to-fair">Relationship to FAIR</a></li>
+  <li><a href="#practical-use" id="markdown-toc-practical-use">Practical use</a></li>
+</ul>
 
+</div>
 <!-- markdownlint-disable MD041 -->
 <!-- Default-language (English) page. Ported from kerndatensatz-basis
      input/pagecontent/metadata.md (branch main) and reduced to what THIS
@@ -349,7 +358,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      renders the artifact pages, but it does not write this narrative. Whenever
      sushi-config.yaml gains or loses a CRMI profile, an artifact-* extension or
      a manifest parameter, update the tables below in BOTH languages. -->
-<h3 id="metadata-overview">Metadata Overview</h3>
 
 <p>This page documents the computable metadata of the <strong>Microbiology</strong> module.
 The metadata exists so that the artifacts of this guide can be discovered,
@@ -368,7 +376,7 @@ dataset module as a versioned FHIR implementation guide.</p>
 and may be refined as CRMI matures, as the KDS publication process evolves, and
 as FAIR assessment of FHIR implementation guides becomes more concrete.</p>
 
-<h4 id="scope">Scope</h4>
+<h3 id="scope">Scope</h3>
 
 <p>CRMI metadata describes the FHIR specification artifacts themselves. Most of it
 is descriptive and does <strong>not</strong> change the clinical or technical conformance
@@ -382,7 +390,7 @@ output and validation results.</p>
 the JSON and XML representations linked from each artifact page and in the
 <a href="downloads.html">downloadable package</a>.</p>
 
-<h4 id="crmi-artifact-management-coverage">CRMI artifact-management coverage</h4>
+<h3 id="crmi-artifact-management-coverage">CRMI artifact-management coverage</h3>
 
 <p>CRMI organises artifact management into lifecycle phases and supporting
 concerns. This guide does not implement every CRMI capability; it applies the
@@ -440,7 +448,7 @@ operations such as <code class="language-plaintext highlighter-rouge">$package</
 Knowledge Artifact Repository, no syndication feeds and no artifact signing.
 These may be considered in future release-workflow work.</p>
 
-<h4 id="crmi-metadata-declared-by-this-guide">CRMI metadata declared by this guide</h4>
+<h3 id="crmi-metadata-declared-by-this-guide">CRMI metadata declared by this guide</h3>
 
 <p>The following CRMI-related metadata is set in
 <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml"><code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></a>
@@ -545,7 +553,7 @@ StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
 <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a> — add the corresponding rows here.]</p>
 </blockquote>
 
-<h5 id="codesystem-supplements">CodeSystem supplements</h5>
+<h3 id="codesystem-supplements">CodeSystem supplements</h3>
 
 <p>Where a module publishes CodeSystem supplements, note that the CRMI
 <em>ShareableCodeSystem</em> profile requires <code class="language-plaintext highlighter-rouge">CodeSystem.caseSensitive</code>, while FHIR
@@ -555,7 +563,7 @@ that could contradict the supplemented code system.
 therefore claims only the <em>publishable</em> CRMI profile on supplements and omits
 the shareable one.</p>
 
-<h4 id="versioning-and-package-provenance">Versioning and package provenance</h4>
+<h3 id="versioning-and-package-provenance">Versioning and package provenance</h3>
 
 <p>The human-readable version scheme is described on the
 <a href="version-history.html">Versioning</a> page. This section describes how that policy
@@ -602,7 +610,7 @@ source and effective period let readers and tooling decide whether an artifact
 belongs to the expected release and whether its metadata is consistent with the
 version being implemented.</p>
 
-<h4 id="manifest-and-reproducibility">Manifest and reproducibility</h4>
+<h3 id="manifest-and-reproducibility">Manifest and reproducibility</h3>
 
 <p>Canonical references are pinned in the built package (<code class="language-plaintext highlighter-rouge">pin-canonicals: pin-all</code>
 in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>), which is a CRMI expectation and makes the output
@@ -622,7 +630,7 @@ package pinning.</p>
 or state explicitly that this module does not pin expansion parameters.]</p>
 </blockquote>
 
-<h4 id="relationship-to-fair">Relationship to FAIR</h4>
+<h3 id="relationship-to-fair">Relationship to FAIR</h3>
 
 <p>The <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> describe goals
 for making digital objects Findable, Accessible, Interoperable and Reusable.
@@ -786,7 +794,7 @@ wants the complete self-assessment, extend it with the <em>Important</em> and
 <em>Useful</em> indicators — <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> carries the full table.]</p>
 </blockquote>
 
-<h4 id="practical-use">Practical use</h4>
+<h3 id="practical-use">Practical use</h3>
 
 <p>Implementers can use this metadata to:</p>
 
@@ -830,7 +838,7 @@ metadata.</p>
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 9, 2026 14:19+0000">2026-09-09</span>
+          Generated <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

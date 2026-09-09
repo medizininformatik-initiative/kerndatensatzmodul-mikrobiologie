@@ -5,21 +5,19 @@
 
 ## Metadata Overview
 
-### Metadata Overview
-
 This page documents the computable metadata of the **Microbiology** module. The metadata exists so that the artifacts of this guide can be discovered, evaluated, validated, cited, governed and reused — by people and by software alike.
 
 The metadata model follows the [Canonical Resource Management Infrastructure Implementation Guide](https://hl7.org/fhir/uv/crmi/STU2/en/index.html) (CRMI). CRMI describes how knowledge artifacts are exchanged consistently across their whole management lifecycle, from authoring through publication and distribution to implementation. This guide applies the CRMI profiles, extensions and manifest mechanisms that are useful for publishing an MII core dataset module as a versioned FHIR implementation guide.
 
 The approach is preliminary: it records the CRMI-based metadata currently used and may be refined as CRMI matures, as the KDS publication process evolves, and as FAIR assessment of FHIR implementation guides becomes more concrete.
 
-#### Scope
+### Scope
 
 CRMI metadata describes the FHIR specification artifacts themselves. Most of it is descriptive and does **not** change the clinical or technical conformance requirements defined by the profiles, value sets, code systems, logical models, capability statements or examples. The manifest parameters are the exception: they document and support the publication and validation context — terminology expansion and canonical version pinning — and can therefore influence generated output and validation results.
 
 The metadata can be inspected in the generated FHIR resources, in particular in the JSON and XML representations linked from each artifact page and in the [downloadable package](downloads.md).
 
-#### CRMI artifact-management coverage
+### CRMI artifact-management coverage
 
 CRMI organises artifact management into lifecycle phases and supporting concerns. This guide does not implement every CRMI capability; it applies the parts that are directly useful for publishing a KDS module.
 
@@ -35,7 +33,7 @@ CRMI organises artifact management into lifecycle phases and supporting concerns
 
 This guide defines no `CRMIManifestLibrary`, no CRMI artifact-repository operations such as `$package` or `$data-requirements`, no publication through a Knowledge Artifact Repository, no syndication feeds and no artifact signing. These may be considered in future release-workflow work.
 
-#### CRMI metadata declared by this guide
+### CRMI metadata declared by this guide
 
 The following CRMI-related metadata is set in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml) and ends up in the generated `ImplementationGuide` resource.
 
@@ -60,11 +58,11 @@ Not enabled in this scaffold, but prepared as commented blocks in `sushi-config.
 
 > [TODO: Enable the blocks your module needs and then update the tables above. If your module also applies the CRMI shareable/publishable profiles to its own StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the `kerndatensatz-basis` idiom is a shared `RuleSet` in [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh) — add the corresponding rows here.]
 
-##### CodeSystem supplements
+### CodeSystem supplements
 
 Where a module publishes CodeSystem supplements, note that the CRMI **ShareableCodeSystem** profile requires `CodeSystem.caseSensitive`, while FHIR validation warns that a supplement should not restate `caseSensitive` because that could contradict the supplemented code system. [kerndatensatz-basis](https://github.com/medizininformatik-initiative/kerndatensatz-basis) therefore claims only the **publishable** CRMI profile on supplements and omits the shareable one.
 
-#### Versioning and package provenance
+### Versioning and package provenance
 
 The human-readable version scheme is described on the [Versioning](version-history.md) page. This section describes how that policy is expressed as CRMI metadata.
 
@@ -79,7 +77,7 @@ The module uses calendar versioning in the SemVer-compatible numeric form `YYYY.
 
 `resource-effectivePeriod` complements this by recording the intended period of applicability. Together, version, version algorithm, version policy, package source and effective period let readers and tooling decide whether an artifact belongs to the expected release and whether its metadata is consistent with the version being implemented.
 
-#### Manifest and reproducibility
+### Manifest and reproducibility
 
 Canonical references are pinned in the built package (`pin-canonicals: pin-all` in `sushi-config.yaml`), which is a CRMI expectation and makes the output stable.
 
@@ -87,7 +85,7 @@ A module that additionally wants reproducible terminology expansion adds a CRMI 
 
 > [TODO: Add the manifest for your module (see the commented blocks in `sushi-config.yaml`) and link the generated `Parameters` resource page here, or state explicitly that this module does not pin expansion parameters.]
 
-#### Relationship to FAIR
+### Relationship to FAIR
 
 The [FAIR principles](https://www.go-fair.org/fair-principles/) describe goals for making digital objects Findable, Accessible, Interoperable and Reusable. This section is an informative self-assessment of how the CRMI-based metadata of this guide supports FAIR-aligned publication of FHIR specification artifacts.
 
@@ -120,7 +118,7 @@ The example instances shipped with this guide demonstrate FAIR-relevant FHIR str
 
 > [TODO: The table lists the indicators of priority **Essential**. If your module wants the complete self-assessment, extend it with the **Important** and **Useful** indicators — `kerndatensatz-basis` carries the full table.]
 
-#### Practical use
+### Practical use
 
 Implementers can use this metadata to:
 

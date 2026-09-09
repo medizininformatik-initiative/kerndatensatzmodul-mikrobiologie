@@ -5,23 +5,19 @@
 
 ## Metadaten-Übersicht
 
- Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 
-
-### Metadaten-Übersicht
-
 Diese Seite beschreibt die maschinenlesbaren Metadaten des Moduls **Mikrobiologie**. Sie existieren, damit die Artefakte dieses Leitfadens auffindbar, bewertbar, validierbar, zitierbar, steuerbar und wiederverwendbar sind — für Menschen wie für Software.
 
 Das Metadatenmodell folgt dem [Canonical Resource Management Infrastructure Implementation Guide](https://hl7.org/fhir/uv/crmi/STU2/en/index.html) (CRMI). CRMI beschreibt, wie Wissensartefakte über ihren gesamten Lebenszyklus hinweg konsistent ausgetauscht werden — von der Autorenschaft über Veröffentlichung und Verteilung bis zur Implementierung. Dieser Leitfaden verwendet die CRMI-Profile, -Extensions und -Manifest-Mechanismen, die für die Veröffentlichung eines MII-Kerndatensatz-Moduls als versionierter FHIR-Implementierungsleitfaden nützlich sind.
 
 Das Vorgehen ist vorläufig: Es hält den derzeit genutzten CRMI-Ansatz fest und kann angepasst werden, wenn CRMI reift, sich der KDS-Veröffentlichungsprozess weiterentwickelt und die FAIR-Bewertung von FHIR-Leitfäden konkreter wird.
 
-#### Geltungsbereich
+### Geltungsbereich
 
 CRMI-Metadaten beschreiben die FHIR-Spezifikationsartefakte selbst. Sie sind überwiegend beschreibend und ändern die klinischen oder technischen Konformitätsanforderungen der Profile, ValueSets, CodeSysteme, logischen Modelle, CapabilityStatements und Beispiele **nicht**. Eine Ausnahme sind die Manifest-Parameter: Sie dokumentieren und stützen den Veröffentlichungs- und Validierungskontext — Terminologie-Expansion und kanonische Versions-Pinnung — und können damit die erzeugte Ausgabe und die Validierungsergebnisse beeinflussen.
 
 Die Metadaten sind in den erzeugten FHIR-Ressourcen einsehbar, insbesondere in den JSON- und XML-Darstellungen, die von jeder Artefaktseite verlinkt sind, sowie im [herunterladbaren Paket](downloads.md).
 
-#### Abdeckung des CRMI-Artefaktmanagements
+### Abdeckung des CRMI-Artefaktmanagements
 
 CRMI gliedert das Artefaktmanagement in Lebenszyklus-Phasen und begleitende Aspekte. Dieser Leitfaden setzt nicht jede CRMI-Fähigkeit um, sondern die Teile, die für die Veröffentlichung eines KDS-Moduls unmittelbar nützlich sind.
 
@@ -37,7 +33,7 @@ CRMI gliedert das Artefaktmanagement in Lebenszyklus-Phasen und begleitende Aspe
 
 Dieser Leitfaden definiert keine `CRMIManifestLibrary`, keine CRMI-Repository-Operationen wie `$package` oder `$data-requirements`, keine Veröffentlichung über ein Knowledge Artifact Repository, keine Syndication-Feeds und keine Artefakt-Signierung. Das kann künftige Arbeit am Release-Workflow aufgreifen.
 
-#### Von diesem Leitfaden deklarierte CRMI-Metadaten
+### Von diesem Leitfaden deklarierte CRMI-Metadaten
 
 Die folgenden CRMI-Metadaten werden in [`sushi-config.yaml`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml) gesetzt und landen in der erzeugten `ImplementationGuide`-Ressource.
 
@@ -62,11 +58,11 @@ In diesem Gerüst nicht aktiviert, aber als auskommentierte Blöcke in `sushi-co
 
 > [TODO: Aktivieren Sie die für Ihr Modul nötigen Blöcke und ziehen Sie die Tabellen oben nach. Wenn Ihr Modul die CRMI-Shareable-/Publishable-Profile zusätzlich auf seine eigenen StructureDefinitions, CapabilityStatements, CodeSysteme und ValueSets anwendet — das Idiom aus `kerndatensatz-basis` ist ein gemeinsames `RuleSet` in [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh) —, ergänzen Sie die entsprechenden Zeilen.]
 
-##### CodeSystem-Supplements
+### CodeSystem-Supplements
 
 Veröffentlicht ein Modul CodeSystem-Supplements, ist zu beachten: Das CRMI-Profil **ShareableCodeSystem** verlangt `CodeSystem.caseSensitive`, während die FHIR-Validierung warnt, dass ein Supplement `caseSensitive` nicht erneut angeben sollte, weil das dem ergänzten CodeSystem widersprechen könnte. [kerndatensatz-basis](https://github.com/medizininformatik-initiative/kerndatensatz-basis) beansprucht deshalb bei Supplements nur das **Publishable**-CRMI-Profil und lässt das Shareable-Profil weg.
 
-#### Versionierung und Paket-Provenienz
+### Versionierung und Paket-Provenienz
 
 Das menschenlesbare Versionsschema beschreibt die Seite [Versionierung](version-history.md). Dieser Abschnitt beschreibt, wie diese Politik als CRMI-Metadaten ausgedrückt wird.
 
@@ -81,7 +77,7 @@ Das Modul verwendet die Kalender-Versionierung in der SemVer-kompatiblen numeris
 
 `resource-effectivePeriod` ergänzt dies um den vorgesehenen Geltungszeitraum. Version, Versionsalgorithmus, Versionspolitik, Paketquelle und Geltungszeitraum zusammen erlauben Lesenden und Werkzeugen die Entscheidung, ob ein Artefakt zum erwarteten Release gehört und ob seine Metadaten zur implementierten Version passen.
 
-#### Manifest und Reproduzierbarkeit
+### Manifest und Reproduzierbarkeit
 
 Kanonische Referenzen werden im gebauten Paket gepinnt (`pin-canonicals: pin-all` in `sushi-config.yaml`); das ist eine CRMI-Erwartung und macht die Ausgabe stabil.
 
@@ -89,7 +85,7 @@ Ein Modul, das zusätzlich eine reproduzierbare Terminologie-Expansion will, erg
 
 > [TODO: Ergänzen Sie das Manifest Ihres Moduls (siehe die auskommentierten Blöcke in `sushi-config.yaml`) und verlinken Sie hier die erzeugte `Parameters`-Seite — oder halten Sie ausdrücklich fest, dass dieses Modul keine Expansions-Parameter pinnt.]
 
-#### Bezug zu FAIR
+### Bezug zu FAIR
 
 Die [FAIR-Prinzipien](https://www.go-fair.org/fair-principles/) beschreiben Ziele dafür, digitale Objekte auffindbar (Findable), zugänglich (Accessible), interoperabel (Interoperable) und wiederverwendbar (Reusable) zu machen. Dieser Abschnitt ist eine informative Selbsteinschätzung, wie die CRMI-Metadaten dieses Leitfadens eine FAIR-konforme Veröffentlichung von FHIR-Spezifikationsartefakten unterstützen.
 
@@ -122,7 +118,7 @@ Die mitgelieferten Beispielinstanzen zeigen FAIR-relevante FHIR-Strukturen für 
 
 > [TODO: Die Tabelle führt die Indikatoren der Priorität **Essential** auf. Wenn Ihr Modul die vollständige Selbsteinschätzung will, ergänzen Sie die Indikatoren der Prioritäten **Important** und **Useful** — `kerndatensatz-basis` führt die vollständige Tabelle.]
 
-#### Praktische Nutzung
+### Praktische Nutzung
 
 Implementierende können diese Metadaten nutzen, um
 
