@@ -81,3 +81,20 @@ The Implementation Guide Resource id should be de.medizininformatikinitiative.ke
 #   observation-triggeredbytype -> die mitgefuehrte R5-Extension
 %Reference to experimental CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl%
 %Reference to experimental CodeSystem http://hl7.org/fhir/observation-triggeredbytype%
+
+# Das ValueSet `jurisdiction` setzt sich aus ISO 3166, ISO 3166-2 und M49
+# zusammen. Fuer -2 liefert KEINE THO-Version eine Definition mit Inhalt
+# (7.1.0/7.2.0/7.3.0 gar nicht, 6.2.0 nur einen leeren Stummel, gemessen
+# 2026-09-09), weshalb der Publisher die Pruefung nicht abschliessen kann und
+# die Meldung an unser Element haengt. Unsere eigene Kodierung ist korrekt:
+# urn:iso:std:iso:3166#DE, das System fuer ein Land.
+%A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found%
+
+# UCUM ist auf beiden Terminologieservern nur ohne Codeliste vorhanden
+# (SU-TermServ fuehrt 2024.7.1, tx.fhir.org 2.2, der Build fragt nach 3.0.1).
+# Die dritte Fassung nennt das System 'null' — das ist die Darstellung des
+# Publishers bei nicht aufloesbarem System, nicht ein fehlendes system in
+# unseren Daten: die Quantities tragen durchweg http://unitsofmeasure.org.
+%Resolved system http://unitsofmeasure.org%
+%A definition for CodeSystem 'http://unitsofmeasure.org' could not be found%
+%A definition for CodeSystem 'null' could not be found%
