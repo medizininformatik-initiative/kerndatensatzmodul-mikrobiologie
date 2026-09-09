@@ -1,0 +1,34 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"mii-lm-mikrobio-logical-model-de","mii-lm-mikrobio-logical-model-de","","","",0,*,"","","","null {[]} {[]}
+","Mikrobiologischer Befund","Mikrobiologischer Befundbericht, der zusammengehörige mikrobiologische Untersuchungsergebnisse zusammenfasst und kontextualisiert.","","","","","","","","","",,,,,"",,,,"Element",0,*,"ele-1
+","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"mii-lm-mikrobio-logical-model-de.id","mii-lm-mikrobio-logical-model-de.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
+"mii-lm-mikrobio-logical-model-de.extension","mii-lm-mikrobio-logical-model-de.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
+"mii-lm-mikrobio-logical-model-de.Identifikation","mii-lm-mikrobio-logical-model-de.Identifikation","","","",1,*,"","","","Identifier {[]} {[]}
+","Identifikation","Eindeutiger Identifikator des Befunds.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Identifikation",1,*,"",""
+"mii-lm-mikrobio-logical-model-de.Status","mii-lm-mikrobio-logical-model-de.Status","","","",1,1,"","","","code {[]} {[]}
+","Status","Status des Befunds (z. B. vorläufig, final, korrigiert).","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Status",1,1,"",""
+"mii-lm-mikrobio-logical-model-de.Befundtyp","mii-lm-mikrobio-logical-model-de.Befundtyp","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Befundtyp","Fachliche Einordnung des mikrobiologischen Befunds (LOINC). Mehrfachangabe, wenn der Befund mehrere Studientypen umfasst, z. B. bakteriologisch und mykologisch.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Befundtyp",0,*,"",""
+"mii-lm-mikrobio-logical-model-de.Patient","mii-lm-mikrobio-logical-model-de.Patient","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
+","Patient","Patient, auf den sich der Befund bezieht.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Patient",1,1,"",""
+"mii-lm-mikrobio-logical-model-de.KlinischerBezugszeitpunkt","mii-lm-mikrobio-logical-model-de.KlinischerBezugszeitpunkt","","","",1,1,"","","","dateTime {[]} {[]}
+","Klinischer Bezugszeitpunkt","Zeitpunkt, auf den sich der Befund inhaltlich bezieht (in der Regel der Zeitpunkt der Probenentnahme).","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.KlinischerBezugszeitpunkt",1,1,"",""
+"mii-lm-mikrobio-logical-model-de.QuelleKlinischerBezugszeitpunkt","mii-lm-mikrobio-logical-model-de.QuelleKlinischerBezugszeitpunkt","","","",0,1,"","","","Coding {[]} {[]}
+","Quelle des klinischen Bezugszeitpunkts","Gibt an, worauf sich der klinische Bezugszeitpunkt bezieht, z. B. Zeitpunkt der Probenentnahme oder Laboreingang.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.QuelleKlinischerBezugszeitpunkt",0,1,"",""
+"mii-lm-mikrobio-logical-model-de.Dokumentationszeitpunkt","mii-lm-mikrobio-logical-model-de.Dokumentationszeitpunkt","","","",0,1,"","","","dateTime {[]} {[]}
+","Dokumentationszeitpunkt","Zeitpunkt, zu dem der Befund freigegeben bzw. verfügbar gemacht wurde.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Dokumentationszeitpunkt",0,1,"",""
+"mii-lm-mikrobio-logical-model-de.Anforderung","mii-lm-mikrobio-logical-model-de.Anforderung","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ServiceRequest]]}
+","Anforderung","Zugrunde liegende Laboranforderung.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Anforderung",0,1,"",""
+"mii-lm-mikrobio-logical-model-de.Befundinterpret","mii-lm-mikrobio-logical-model-de.Befundinterpret","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner]]}
+","Befundinterpret","Person, die den Befund fachlich beurteilt und verantwortet.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Befundinterpret",0,*,"",""
+"mii-lm-mikrobio-logical-model-de.Probenmaterial","mii-lm-mikrobio-logical-model-de.Probenmaterial","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Specimen]]}
+","Probenmaterial","Probenmaterialien, auf denen der Befund beruht.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Probenmaterial",0,*,"",""
+"mii-lm-mikrobio-logical-model-de.Untersuchung","mii-lm-mikrobio-logical-model-de.Untersuchung","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung]]}
+","Untersuchung","Die im Befund enthaltenen mikrobiologischen Untersuchungen.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Untersuchung",0,*,"",""

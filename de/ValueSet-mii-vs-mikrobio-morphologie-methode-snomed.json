@@ -1,0 +1,52 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-morphologie-methode-snomed",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-morphologie-methode-snomed</b></p><a name=\"de-mii-vs-mikrobio-morphologie-methode-snomed\"> </a><a name=\"de-hcmii-vs-mikrobio-morphologie-methode-snomed\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/900000000000207008/version/20260701\"> version &#x1F4CD;http://snomed.info/sct/900000000000207008/version/20260701</span> where concept  is-a 278289002</li><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/900000000000207008/version/20260701\"> version &#x1F4CD;http://snomed.info/sct/900000000000207008/version/20260701</span> where concept  is-a 703857004</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Mikrobio_Morphologie_Methode_SNOMED",
+  "title" : "MII VS Mikrobio Morphologie Methode [SNOMED]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-09T16:03:21+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich der eingesetzten Färbetechnik.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "278289002"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "703857004"
+      }]
+    }]
+  }
+}

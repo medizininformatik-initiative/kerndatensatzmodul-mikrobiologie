@@ -1,0 +1,2783 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>IP Review</title>
+    <link rel="stylesheet" href="fhir.css"/>
+  </head>
+  <body>
+    <h2>Unattributed Code Systems</h2>
+    <ul>
+      <li>
+        <a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html">
+<code>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl</code>        </a>
+      </li>
+      <li>
+        <a href="Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html">
+<code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis</code>        </a>
+      </li>
+      <li>
+        <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html">
+<code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-resistenzkategorie</code>        </a>
+      </li>
+      <li>
+        <a href="Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html">
+<code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm</code>        </a>
+      </li>
+    </ul>
+    <h2>Copyright Fragment</h2>
+    <p>
+This fragment is available on       <a href="en/ImplementationGuide-mii-ig-mikrobiologie.html">en/ImplementationGuide-mii-ig-mikrobiologie.html</a>
+    </p>
+    <div>
+      <p>This publication includes IP covered under the following statements.</p>
+
+      <ul>
+
+        <li>
+ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page:           <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a>
+          <div onClick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_1">
+
+            <ul>
+
+              <li>
+                <a href="http://terminology.hl7.org/6.2.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+:                 <a href="StructureDefinition-ext-R5-Observation.triggeredBy.html">ExtensionObservation_TriggeredBy</a>
+,                 <a href="CapabilityStatement-mii-cps-mikrobio-metadata.html">MII_CPS_Mikrobio_Metadata</a>
+                <span onClick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML" id="ips_1">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 74 more</span>                </span>
+                <span style="display: none" id="ips2_1">
+, <a href="CodeSystem-mii-cs-mikrobio-mrgn-ergebnis.html">MII_CS_Mikrobio_MRGN_Ergebnis</a>, <a href="CodeSystem-mii-cs-mikrobio-resistenzkategorie.html">MII_CS_Mikrobio_Resistenzkategorie</a>, <a href="CodeSystem-mii-cs-mikrobio-susceptibility-norm.html">MII_CS_Mikrobio_Susceptibility_NORM</a>, <a href="StructureDefinition-mii-ex-mikrobio-empfindlichkeit-norm.html">MII_EX_Mikrobio_Empfindlichkeit_Norm</a>, <a href="index.html">MII_IG_Mikrobiologie</a>, <a href="StructureDefinition-mii-lm-mikrobio-logical-model.html">MII_LM_Mikrobio_Befund</a>, <a href="StructureDefinition-mii-lm-mikrobio-untersuchung.html">MII_LM_Mikrobio_Untersuchung</a>, <a href="StructureDefinition-mii-lm-mikrobio-untersuchungsarten.html">MII_LM_Mikrobio_Untersuchungsarten</a>, <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">MII_PR_Mikrobio_Allgemeine_Bestimmung</a>, <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">MII_PR_Mikrobio_Allgemeine_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ</a>, <a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html">MII_PR_Mikrobio_Aviditaet</a>, <a href="StructureDefinition-mii-pr-mikrobio-barlett-score.html">MII_PR_Mikrobio_Barlett_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html">MII_PR_Mikrobio_Ct_Wert</a>, <a href="StructureDefinition-mii-pr-mikrobio-diagnostic-report.html">MII_PR_Mikrobio_Diagnostic_Report</a>, <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII_PR_Mikrobio_Empfindlichkeit</a>, <a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">MII_PR_Mikrobio_Keimzahl</a>, <a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html">MII_PR_Mikrobio_MRGN_Klasse</a>, <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">MII_PR_Mikrobio_Mikroskopie</a>, <a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html">MII_PR_Mikrobio_Molekulare_Pathogenlast</a>, <a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html">MII_PR_Mikrobio_Nugent_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html">MII_PR_Mikrobio_Resistenzkategorie_Status</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html">MII_PR_Mikrobio_Resistenzmechanismen_Determinanten</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html">MII_PR_Mikrobio_Spezifische_Bestimmung</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">MII_PR_Mikrobio_Spezifische_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-titer.html">MII_PR_Mikrobio_Titer</a>, <a href="StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html">MII_PR_Mikrobio_Virulenzfaktor</a>, <a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html">MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit</a>, <a href="SearchParameter-mii-sp-mikrobio-interpretation.html">MII_SP_Mikrobio_NormKategorie</a>, <a href="SearchParameter-mii-sp-mikrobio-observation-titer.html">MII_SP_Mikrobio_Observation_Titer</a>, <a href="SearchParameter-mii-sp-mikrobio-observation-triggered-by.html">MII_SP_Mikrobio_Observation_TriggeredBy</a>, <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">MII_VS_Labor_Laborergebnis_Semiquantitativ</a>, <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed.html">MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html">MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html">MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html">MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum.html">MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc.html">MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-aviditaet-ergebnis.html">MII_VS_Mikrobio_Aviditaet_Ergebnis</a>, <a href="ValueSet-mii-vs-mikrobio-aviditaet-tests-loinc.html">MII_VS_Mikrobio_Aviditaet_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-barlett-score-loinc.html">MII_VS_Mikrobio_Barlett_Score_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-befundtyp-loinc.html">MII_VS_Mikrobio_Befundtyp_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-ct-wert-loinc.html">MII_VS_Mikrobio_CT_Wert_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-data-absent-reason.html">MII_VS_Mikrobio_Data_Absent_Reason</a>, <a href="ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html">MII_VS_Mikrobio_Detected_Not_Detected_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-genotyp-loinc.html">MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum.html">MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc.html">MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html">MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-keimzahl-loinc.html">MII_VS_Mikrobio_Keimzahl_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html">MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-mrgn-klasse-loinc.html">MII_VS_Mikrobio_MRGN_Klasse_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html">MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.html">MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc.html">MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html">MII_VS_Mikrobio_Morphologie_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-organismen-snomedct.html">MII_VS_Mikrobio_Organismen_SNOMEDCT</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status.html">MII_VS_Mikrobio_Resistenzkategorie_Status</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html">MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc.html">MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html">MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html">MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed.html">MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-tests-loinc.html">MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html">MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html">MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-susceptibility.html">MII_VS_Mikrobio_Susceptibility</a>, <a href="ValueSet-mii-vs-mikrobio-susceptibility-norm.html">MII_VS_Mikrobio_Susceptibility_NORM</a>, <a href="ValueSet-mii-vs-mikrobio-titer-methode-snomed.html">MII_VS_Mikrobio_Titer_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-titer-tests-loinc.html">MII_VS_Mikrobio_Titer_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-virulenz-loinc.html">MII_VS_Mikrobio_Virulenz_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-voraussichtliche-empfindlichkeit.html">MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit</a> and <a href="SearchParameter-ObservationInterpretation.html">ObservationInterpretation</a>                </span>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </li>
+
+        <li>
+The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.           <a href="https://ucum.org/trac/wiki/TermsOfUse">https://ucum.org/trac/wiki/TermsOfUse</a>
+          <div onClick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}" id="ipp_2" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_2">
+
+            <ul>
+
+              <li>
+                <a href="http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/CodeSystem-v3-ucum.html">Unified Code for Units of Measure (UCUM)</a>
+:                 <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ</a>
+,                 <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII_PR_Mikrobio_Empfindlichkeit</a>
+                <span onClick="document.getElementById('ips_2').innerHTML = document.getElementById('ips2_2').innerHTML" id="ips_2">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 15 more</span>                </span>
+                <span style="display: none" id="ips2_2">
+, <a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">MII_PR_Mikrobio_Keimzahl</a>, <a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html">MII_PR_Mikrobio_Molekulare_Pathogenlast</a>, <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum.html">MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum.html">MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html">MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html">MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM</a>, <a href="Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.html">Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ</a>, <a href="Observation-mii-exa-mikrobio-aviditaet.html">Observation/mii-exa-mikrobio-aviditaet</a>, <a href="Observation-mii-exa-mikrobio-ct-wert.html">Observation/mii-exa-mikrobio-ct-wert</a>, <a href="Observation-mii-exa-mikrobio-empfindlichkeit.html">Observation/mii-exa-mikrobio-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-keimzahl.html">Observation/mii-exa-mikrobio-keimzahl</a>, <a href="Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html">Observation/mii-exa-mikrobio-keimzahl-katheterspitze</a>, <a href="Observation-mii-exa-mikrobio-molekulare-pathogenlast.html">Observation/mii-exa-mikrobio-molekulare-pathogenlast</a>, <a href="Observation-mii-exa-mikrobio-nugent-score.html">Observation/mii-exa-mikrobio-nugent-score</a> and <a href="Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html">Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit</a>                </span>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </li>
+
+        <li>
+This material contains content from           <a href="http://loinc.org">LOINC</a>
+. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the           <a href="http://loinc.org/license">license</a>
+. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.          <div onClick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}" id="ipp_3" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_3">
+
+            <ul>
+
+              <li>
+                <a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-loinc.html">LOINC</a>
+:                 <a href="DiagnosticReport-mii-exa-mikrobio-diagnostic-report.html">DiagnosticReport/mii-exa-mikrobio-diagnostic-report</a>
+,                 <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">MII_PR_Mikrobio_Allgemeine_Bestimmung</a>
+                <span onClick="document.getElementById('ips_3').innerHTML = document.getElementById('ips2_3').innerHTML" id="ips_3">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 61 more</span>                </span>
+                <span style="display: none" id="ips2_3">
+, <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">MII_PR_Mikrobio_Allgemeine_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ</a>, <a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html">MII_PR_Mikrobio_Aviditaet</a>, <a href="StructureDefinition-mii-pr-mikrobio-barlett-score.html">MII_PR_Mikrobio_Barlett_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html">MII_PR_Mikrobio_Ct_Wert</a>, <a href="StructureDefinition-mii-pr-mikrobio-diagnostic-report.html">MII_PR_Mikrobio_Diagnostic_Report</a>, <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII_PR_Mikrobio_Empfindlichkeit</a>, <a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">MII_PR_Mikrobio_Keimzahl</a>, <a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html">MII_PR_Mikrobio_MRGN_Klasse</a>, <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">MII_PR_Mikrobio_Mikroskopie</a>, <a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html">MII_PR_Mikrobio_Molekulare_Pathogenlast</a>, <a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html">MII_PR_Mikrobio_Nugent_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html">MII_PR_Mikrobio_Resistenzkategorie_Status</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html">MII_PR_Mikrobio_Resistenzmechanismen_Determinanten</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html">MII_PR_Mikrobio_Spezifische_Bestimmung</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">MII_PR_Mikrobio_Spezifische_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-titer.html">MII_PR_Mikrobio_Titer</a>, <a href="StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html">MII_PR_Mikrobio_Virulenzfaktor</a>, <a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html">MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit</a>, <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc.html">MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-aviditaet-tests-loinc.html">MII_VS_Mikrobio_Aviditaet_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-barlett-score-loinc.html">MII_VS_Mikrobio_Barlett_Score_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-befundtyp-loinc.html">MII_VS_Mikrobio_Befundtyp_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-ct-wert-loinc.html">MII_VS_Mikrobio_CT_Wert_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-genotyp-loinc.html">MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc.html">MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-keimzahl-loinc.html">MII_VS_Mikrobio_Keimzahl_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-mrgn-klasse-loinc.html">MII_VS_Mikrobio_MRGN_Klasse_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc.html">MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc.html">MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-tests-loinc.html">MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html">MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-titer-tests-loinc.html">MII_VS_Mikrobio_Titer_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-virulenz-loinc.html">MII_VS_Mikrobio_Virulenz_LOINC</a>, <a href="Observation-mii-exa-mikrobio-allgemeine-bestimmung.html">Observation/mii-exa-mikrobio-allgemeine-bestimmung</a>, <a href="Observation-mii-exa-mikrobio-allgemeine-kultur.html">Observation/mii-exa-mikrobio-allgemeine-kultur</a>, <a href="Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.html">Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ</a>, <a href="Observation-mii-exa-mikrobio-aviditaet.html">Observation/mii-exa-mikrobio-aviditaet</a>, <a href="Observation-mii-exa-mikrobio-barlett-score.html">Observation/mii-exa-mikrobio-barlett-score</a>, <a href="Observation-mii-exa-mikrobio-ct-wert.html">Observation/mii-exa-mikrobio-ct-wert</a>, <a href="Observation-mii-exa-mikrobio-empfindlichkeit.html">Observation/mii-exa-mikrobio-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-keimzahl.html">Observation/mii-exa-mikrobio-keimzahl</a>, <a href="Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html">Observation/mii-exa-mikrobio-keimzahl-katheterspitze</a>, <a href="Observation-mii-exa-mikrobio-mikroskopie.html">Observation/mii-exa-mikrobio-mikroskopie</a>, <a href="Observation-mii-exa-mikrobio-molekulare-pathogenlast.html">Observation/mii-exa-mikrobio-molekulare-pathogenlast</a>, <a href="Observation-mii-exa-mikrobio-mrgn-klasse.html">Observation/mii-exa-mikrobio-mrgn-klasse</a>, <a href="Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html">Observation/mii-exa-mikrobio-mrgn-klasse-negativ</a>, <a href="Observation-mii-exa-mikrobio-nugent-score.html">Observation/mii-exa-mikrobio-nugent-score</a>, <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html">Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html">Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv</a>, <a href="Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html">Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung.html">Observation/mii-exa-mikrobio-spezifische-bestimmung</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-spezifische-kultur.html">Observation/mii-exa-mikrobio-spezifische-kultur</a>, <a href="Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-titer.html">Observation/mii-exa-mikrobio-titer</a>, <a href="Observation-mii-exa-mikrobio-virulenzfaktor.html">Observation/mii-exa-mikrobio-virulenzfaktor</a>, <a href="Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html">Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html">Observation/mii-exa-mikrobio-workflow-vre-01-kultur</a>, <a href="Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html">Observation/mii-exa-mikrobio-workflow-vre-02-identifikation</a> and <a href="Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html">Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit</a>                </span>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </li>
+
+        <li>
+This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact           <a href="https://www.snomed.org/get-snomed">https://www.snomed.org/get-snomed</a>
+ or           <a href="mailto:info@snomed.org">info@snomed.org</a>
+.          <div onClick="if (document.getElementById('ipp2_4').innerHTML != '') {document.getElementById('ipp_4').innerHTML = document.getElementById('ipp2_4').innerHTML; document.getElementById('ipp2_4').innerHTML = ''}" id="ipp_4" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_4">
+
+            <ul>
+
+              <li>
+                <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED Clinical Terms&amp;reg; (SNOMED CT&amp;reg;)</a>
+:                 <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">MII_PR_Mikrobio_Allgemeine_Bestimmung</a>
+,                 <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">MII_PR_Mikrobio_Allgemeine_Kultur</a>
+                <span onClick="document.getElementById('ips_4').innerHTML = document.getElementById('ips2_4').innerHTML" id="ips_4">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 60 more</span>                </span>
+                <span style="display: none" id="ips2_4">
+, <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ</a>, <a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html">MII_PR_Mikrobio_Aviditaet</a>, <a href="StructureDefinition-mii-pr-mikrobio-barlett-score.html">MII_PR_Mikrobio_Barlett_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html">MII_PR_Mikrobio_Ct_Wert</a>, <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII_PR_Mikrobio_Empfindlichkeit</a>, <a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">MII_PR_Mikrobio_Keimzahl</a>, <a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html">MII_PR_Mikrobio_MRGN_Klasse</a>, <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">MII_PR_Mikrobio_Mikroskopie</a>, <a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html">MII_PR_Mikrobio_Molekulare_Pathogenlast</a>, <a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html">MII_PR_Mikrobio_Nugent_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html">MII_PR_Mikrobio_Resistenzkategorie_Status</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html">MII_PR_Mikrobio_Resistenzmechanismen_Determinanten</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html">MII_PR_Mikrobio_Spezifische_Bestimmung</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">MII_PR_Mikrobio_Spezifische_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-titer.html">MII_PR_Mikrobio_Titer</a>, <a href="StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html">MII_PR_Mikrobio_Virulenzfaktor</a>, <a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html">MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit</a>, <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">MII_VS_Labor_Laborergebnis_Semiquantitativ</a>, <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed.html">MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html">MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html">MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html">MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-data-absent-reason.html">MII_VS_Mikrobio_Data_Absent_Reason</a>, <a href="ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html">MII_VS_Mikrobio_Detected_Not_Detected_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html">MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.html">MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html">MII_VS_Mikrobio_Morphologie_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-organismen-snomedct.html">MII_VS_Mikrobio_Organismen_SNOMEDCT</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html">MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html">MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html">MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed.html">MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html">MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-susceptibility.html">MII_VS_Mikrobio_Susceptibility</a>, <a href="ValueSet-mii-vs-mikrobio-titer-methode-snomed.html">MII_VS_Mikrobio_Titer_Methode_SNOMED</a>, <a href="Observation-mii-exa-mikrobio-allgemeine-bestimmung.html">Observation/mii-exa-mikrobio-allgemeine-bestimmung</a>, <a href="Observation-mii-exa-mikrobio-allgemeine-kultur.html">Observation/mii-exa-mikrobio-allgemeine-kultur</a>, <a href="Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.html">Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ</a>, <a href="Observation-mii-exa-mikrobio-aviditaet.html">Observation/mii-exa-mikrobio-aviditaet</a>, <a href="Observation-mii-exa-mikrobio-barlett-score.html">Observation/mii-exa-mikrobio-barlett-score</a>, <a href="Observation-mii-exa-mikrobio-ct-wert.html">Observation/mii-exa-mikrobio-ct-wert</a>, <a href="Observation-mii-exa-mikrobio-keimzahl.html">Observation/mii-exa-mikrobio-keimzahl</a>, <a href="Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html">Observation/mii-exa-mikrobio-keimzahl-katheterspitze</a>, <a href="Observation-mii-exa-mikrobio-mikroskopie.html">Observation/mii-exa-mikrobio-mikroskopie</a>, <a href="Observation-mii-exa-mikrobio-molekulare-pathogenlast.html">Observation/mii-exa-mikrobio-molekulare-pathogenlast</a>, <a href="Observation-mii-exa-mikrobio-nugent-score.html">Observation/mii-exa-mikrobio-nugent-score</a>, <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html">Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html">Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv</a>, <a href="Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html">Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung.html">Observation/mii-exa-mikrobio-spezifische-bestimmung</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-spezifische-kultur.html">Observation/mii-exa-mikrobio-spezifische-kultur</a>, <a href="Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-titer.html">Observation/mii-exa-mikrobio-titer</a>, <a href="Observation-mii-exa-mikrobio-virulenzfaktor.html">Observation/mii-exa-mikrobio-virulenzfaktor</a>, <a href="Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html">Observation/mii-exa-mikrobio-workflow-vre-01-kultur</a>, <a href="Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html">Observation/mii-exa-mikrobio-workflow-vre-02-identifikation</a>, <a href="Specimen-mii-exa-mikrobio-probe.html">Specimen/mii-exa-mikrobio-probe</a> and <a href="Specimen-mii-exa-mikrobio-probe-katheterspitze.html">Specimen/mii-exa-mikrobio-probe-katheterspitze</a>                </span>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </li>
+
+        <li>
+This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see:           <a href="https://terminology.hl7.org/license.html">https://terminology.hl7.org/license.html</a>
+          <div onClick="if (document.getElementById('ipp2_5').innerHTML != '') {document.getElementById('ipp_5').innerHTML = document.getElementById('ipp2_5').innerHTML; document.getElementById('ipp2_5').innerHTML = ''}" id="ipp_5" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_5">
+
+            <ul>
+
+              <li>
+                <a href="http://terminology.hl7.org/7.2.0/CodeSystem-observation-category.html">Observation Category Codes</a>
+:                 <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">MII_PR_Mikrobio_Allgemeine_Bestimmung</a>
+,                 <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">MII_PR_Mikrobio_Allgemeine_Kultur</a>
+                <span onClick="document.getElementById('ips_5').innerHTML = document.getElementById('ips2_5').innerHTML" id="ips_5">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 44 more</span>                </span>
+                <span style="display: none" id="ips2_5">
+, <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ</a>, <a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html">MII_PR_Mikrobio_Aviditaet</a>, <a href="StructureDefinition-mii-pr-mikrobio-barlett-score.html">MII_PR_Mikrobio_Barlett_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html">MII_PR_Mikrobio_Ct_Wert</a>, <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII_PR_Mikrobio_Empfindlichkeit</a>, <a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">MII_PR_Mikrobio_Keimzahl</a>, <a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html">MII_PR_Mikrobio_MRGN_Klasse</a>, <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">MII_PR_Mikrobio_Mikroskopie</a>, <a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html">MII_PR_Mikrobio_Molekulare_Pathogenlast</a>, <a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html">MII_PR_Mikrobio_Nugent_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html">MII_PR_Mikrobio_Resistenzkategorie_Status</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html">MII_PR_Mikrobio_Resistenzmechanismen_Determinanten</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html">MII_PR_Mikrobio_Spezifische_Bestimmung</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">MII_PR_Mikrobio_Spezifische_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-titer.html">MII_PR_Mikrobio_Titer</a>, <a href="StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html">MII_PR_Mikrobio_Virulenzfaktor</a>, <a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html">MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-allgemeine-bestimmung.html">Observation/mii-exa-mikrobio-allgemeine-bestimmung</a>, <a href="Observation-mii-exa-mikrobio-allgemeine-kultur.html">Observation/mii-exa-mikrobio-allgemeine-kultur</a>, <a href="Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.html">Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ</a>, <a href="Observation-mii-exa-mikrobio-aviditaet.html">Observation/mii-exa-mikrobio-aviditaet</a>, <a href="Observation-mii-exa-mikrobio-barlett-score.html">Observation/mii-exa-mikrobio-barlett-score</a>, <a href="Observation-mii-exa-mikrobio-ct-wert.html">Observation/mii-exa-mikrobio-ct-wert</a>, <a href="Observation-mii-exa-mikrobio-empfindlichkeit.html">Observation/mii-exa-mikrobio-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-keimzahl.html">Observation/mii-exa-mikrobio-keimzahl</a>, <a href="Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html">Observation/mii-exa-mikrobio-keimzahl-katheterspitze</a>, <a href="Observation-mii-exa-mikrobio-mikroskopie.html">Observation/mii-exa-mikrobio-mikroskopie</a>, <a href="Observation-mii-exa-mikrobio-molekulare-pathogenlast.html">Observation/mii-exa-mikrobio-molekulare-pathogenlast</a>, <a href="Observation-mii-exa-mikrobio-mrgn-klasse.html">Observation/mii-exa-mikrobio-mrgn-klasse</a>, <a href="Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html">Observation/mii-exa-mikrobio-mrgn-klasse-negativ</a>, <a href="Observation-mii-exa-mikrobio-nugent-score.html">Observation/mii-exa-mikrobio-nugent-score</a>, <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html">Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html">Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv</a>, <a href="Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html">Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung.html">Observation/mii-exa-mikrobio-spezifische-bestimmung</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-spezifische-kultur.html">Observation/mii-exa-mikrobio-spezifische-kultur</a>, <a href="Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-titer.html">Observation/mii-exa-mikrobio-titer</a>, <a href="Observation-mii-exa-mikrobio-virulenzfaktor.html">Observation/mii-exa-mikrobio-virulenzfaktor</a>, <a href="Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html">Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html">Observation/mii-exa-mikrobio-workflow-vre-01-kultur</a>, <a href="Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html">Observation/mii-exa-mikrobio-workflow-vre-02-identifikation</a> and <a href="Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html">Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit</a>                </span>
+              </li>
+
+              <li>
+                <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0074.html">diagnosticServiceSectionId</a>
+:                 <a href="DiagnosticReport-mii-exa-mikrobio-diagnostic-report.html">DiagnosticReport/mii-exa-mikrobio-diagnostic-report</a>
+,                 <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">MII_PR_Mikrobio_Allgemeine_Bestimmung</a>
+                <span onClick="document.getElementById('ips_6').innerHTML = document.getElementById('ips2_6').innerHTML" id="ips_6">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 46 more</span>                </span>
+                <span style="display: none" id="ips2_6">
+, <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">MII_PR_Mikrobio_Allgemeine_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ</a>, <a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html">MII_PR_Mikrobio_Aviditaet</a>, <a href="StructureDefinition-mii-pr-mikrobio-barlett-score.html">MII_PR_Mikrobio_Barlett_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html">MII_PR_Mikrobio_Ct_Wert</a>, <a href="StructureDefinition-mii-pr-mikrobio-diagnostic-report.html">MII_PR_Mikrobio_Diagnostic_Report</a>, <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII_PR_Mikrobio_Empfindlichkeit</a>, <a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">MII_PR_Mikrobio_Keimzahl</a>, <a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html">MII_PR_Mikrobio_MRGN_Klasse</a>, <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">MII_PR_Mikrobio_Mikroskopie</a>, <a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html">MII_PR_Mikrobio_Molekulare_Pathogenlast</a>, <a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html">MII_PR_Mikrobio_Nugent_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html">MII_PR_Mikrobio_Resistenzkategorie_Status</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html">MII_PR_Mikrobio_Resistenzmechanismen_Determinanten</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html">MII_PR_Mikrobio_Spezifische_Bestimmung</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">MII_PR_Mikrobio_Spezifische_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-titer.html">MII_PR_Mikrobio_Titer</a>, <a href="StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html">MII_PR_Mikrobio_Virulenzfaktor</a>, <a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html">MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-allgemeine-bestimmung.html">Observation/mii-exa-mikrobio-allgemeine-bestimmung</a>, <a href="Observation-mii-exa-mikrobio-allgemeine-kultur.html">Observation/mii-exa-mikrobio-allgemeine-kultur</a>, <a href="Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.html">Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ</a>, <a href="Observation-mii-exa-mikrobio-aviditaet.html">Observation/mii-exa-mikrobio-aviditaet</a>, <a href="Observation-mii-exa-mikrobio-barlett-score.html">Observation/mii-exa-mikrobio-barlett-score</a>, <a href="Observation-mii-exa-mikrobio-ct-wert.html">Observation/mii-exa-mikrobio-ct-wert</a>, <a href="Observation-mii-exa-mikrobio-empfindlichkeit.html">Observation/mii-exa-mikrobio-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-keimzahl.html">Observation/mii-exa-mikrobio-keimzahl</a>, <a href="Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html">Observation/mii-exa-mikrobio-keimzahl-katheterspitze</a>, <a href="Observation-mii-exa-mikrobio-mikroskopie.html">Observation/mii-exa-mikrobio-mikroskopie</a>, <a href="Observation-mii-exa-mikrobio-molekulare-pathogenlast.html">Observation/mii-exa-mikrobio-molekulare-pathogenlast</a>, <a href="Observation-mii-exa-mikrobio-mrgn-klasse.html">Observation/mii-exa-mikrobio-mrgn-klasse</a>, <a href="Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html">Observation/mii-exa-mikrobio-mrgn-klasse-negativ</a>, <a href="Observation-mii-exa-mikrobio-nugent-score.html">Observation/mii-exa-mikrobio-nugent-score</a>, <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html">Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html">Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv</a>, <a href="Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html">Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung.html">Observation/mii-exa-mikrobio-spezifische-bestimmung</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-spezifische-kultur.html">Observation/mii-exa-mikrobio-spezifische-kultur</a>, <a href="Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-titer.html">Observation/mii-exa-mikrobio-titer</a>, <a href="Observation-mii-exa-mikrobio-virulenzfaktor.html">Observation/mii-exa-mikrobio-virulenzfaktor</a>, <a href="Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html">Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html">Observation/mii-exa-mikrobio-workflow-vre-01-kultur</a>, <a href="Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html">Observation/mii-exa-mikrobio-workflow-vre-02-identifikation</a> and <a href="Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html">Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit</a>                </span>
+              </li>
+
+              <li>
+                <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v2-0203.html">identifierType</a>
+:                 <a href="DiagnosticReport-mii-exa-mikrobio-diagnostic-report.html">DiagnosticReport/mii-exa-mikrobio-diagnostic-report</a>
+,                 <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">MII_PR_Mikrobio_Allgemeine_Bestimmung</a>
+                <span onClick="document.getElementById('ips_7').innerHTML = document.getElementById('ips2_7').innerHTML" id="ips_7">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 46 more</span>                </span>
+                <span style="display: none" id="ips2_7">
+, <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">MII_PR_Mikrobio_Allgemeine_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ</a>, <a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html">MII_PR_Mikrobio_Aviditaet</a>, <a href="StructureDefinition-mii-pr-mikrobio-barlett-score.html">MII_PR_Mikrobio_Barlett_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html">MII_PR_Mikrobio_Ct_Wert</a>, <a href="StructureDefinition-mii-pr-mikrobio-diagnostic-report.html">MII_PR_Mikrobio_Diagnostic_Report</a>, <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII_PR_Mikrobio_Empfindlichkeit</a>, <a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">MII_PR_Mikrobio_Keimzahl</a>, <a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html">MII_PR_Mikrobio_MRGN_Klasse</a>, <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">MII_PR_Mikrobio_Mikroskopie</a>, <a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html">MII_PR_Mikrobio_Molekulare_Pathogenlast</a>, <a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html">MII_PR_Mikrobio_Nugent_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html">MII_PR_Mikrobio_Resistenzkategorie_Status</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html">MII_PR_Mikrobio_Resistenzmechanismen_Determinanten</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html">MII_PR_Mikrobio_Spezifische_Bestimmung</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">MII_PR_Mikrobio_Spezifische_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-titer.html">MII_PR_Mikrobio_Titer</a>, <a href="StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html">MII_PR_Mikrobio_Virulenzfaktor</a>, <a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html">MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-allgemeine-bestimmung.html">Observation/mii-exa-mikrobio-allgemeine-bestimmung</a>, <a href="Observation-mii-exa-mikrobio-allgemeine-kultur.html">Observation/mii-exa-mikrobio-allgemeine-kultur</a>, <a href="Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.html">Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ</a>, <a href="Observation-mii-exa-mikrobio-aviditaet.html">Observation/mii-exa-mikrobio-aviditaet</a>, <a href="Observation-mii-exa-mikrobio-barlett-score.html">Observation/mii-exa-mikrobio-barlett-score</a>, <a href="Observation-mii-exa-mikrobio-ct-wert.html">Observation/mii-exa-mikrobio-ct-wert</a>, <a href="Observation-mii-exa-mikrobio-empfindlichkeit.html">Observation/mii-exa-mikrobio-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-keimzahl.html">Observation/mii-exa-mikrobio-keimzahl</a>, <a href="Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html">Observation/mii-exa-mikrobio-keimzahl-katheterspitze</a>, <a href="Observation-mii-exa-mikrobio-mikroskopie.html">Observation/mii-exa-mikrobio-mikroskopie</a>, <a href="Observation-mii-exa-mikrobio-molekulare-pathogenlast.html">Observation/mii-exa-mikrobio-molekulare-pathogenlast</a>, <a href="Observation-mii-exa-mikrobio-mrgn-klasse.html">Observation/mii-exa-mikrobio-mrgn-klasse</a>, <a href="Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html">Observation/mii-exa-mikrobio-mrgn-klasse-negativ</a>, <a href="Observation-mii-exa-mikrobio-nugent-score.html">Observation/mii-exa-mikrobio-nugent-score</a>, <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html">Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html">Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv</a>, <a href="Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html">Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung.html">Observation/mii-exa-mikrobio-spezifische-bestimmung</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-spezifische-kultur.html">Observation/mii-exa-mikrobio-spezifische-kultur</a>, <a href="Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ</a>, <a href="Observation-mii-exa-mikrobio-titer.html">Observation/mii-exa-mikrobio-titer</a>, <a href="Observation-mii-exa-mikrobio-virulenzfaktor.html">Observation/mii-exa-mikrobio-virulenzfaktor</a>, <a href="Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html">Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html">Observation/mii-exa-mikrobio-workflow-vre-01-kultur</a>, <a href="Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html">Observation/mii-exa-mikrobio-workflow-vre-02-identifikation</a> and <a href="Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html">Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit</a>                </span>
+              </li>
+
+              <li>
+                <a href="http://terminology.hl7.org/7.2.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>
+:                 <a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html">MII_PR_Mikrobio_Aviditaet</a>
+,                 <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII_PR_Mikrobio_Empfindlichkeit</a>
+                <span onClick="document.getElementById('ips_8').innerHTML = document.getElementById('ips2_8').innerHTML" id="ips_8">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 9 more</span>                </span>
+                <span style="display: none" id="ips2_8">
+, <a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html">MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit</a>, <a href="ValueSet-mii-vs-mikrobio-aviditaet-ergebnis.html">MII_VS_Mikrobio_Aviditaet_Ergebnis</a>, <a href="ValueSet-mii-vs-mikrobio-susceptibility.html">MII_VS_Mikrobio_Susceptibility</a>, <a href="ValueSet-mii-vs-mikrobio-voraussichtliche-empfindlichkeit.html">MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-aviditaet.html">Observation/mii-exa-mikrobio-aviditaet</a>, <a href="Observation-mii-exa-mikrobio-empfindlichkeit.html">Observation/mii-exa-mikrobio-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html">Observation/mii-exa-mikrobio-keimzahl-katheterspitze</a>, <a href="Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html">Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit</a> and <a href="Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html">Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit</a>                </span>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </li>
+
+
+      </ul>
+
+
+    </div>
+    <h2>Copyright and Registered Trademark Uses</h2>
+    <ul>
+      <li>
+
+
+
+
+          IG &copy; 2019+ Medizininformatik Initiative.  
+          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on FHIR 4.0.1.
+          Generated 2026-09-09
+          
+          
+            
+
+          Links: Table of Contents |
+                 QA Report
+                 
+                 | netzwerk-universitaetsmedizin.de
+                 | medizininformatik-initiative.de
+                 | Legal notice
+                 
+                 
+                 HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.
+
+          
+         (        <a href="en/version-history.html">src</a>
+)
+      </li>
+      <li>
+
+
+
+
+          IG &copy; 2019+ Medizininformatik Initiative.  
+          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf FHIR 4.0.1.
+          Erstellt 2026-09-09
+          
+          
+            
+
+          Links: Inhaltsverzeichnis |
+                 QA-Bericht
+                 
+                 | netzwerk-universitaetsmedizin.de
+                 | medizininformatik-initiative.de
+                 | Impressum
+                 
+                 
+                 HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.
+
+          
+         (        <a href="de/version-history.html">src</a>
+)
+      </li>
+      <li>
+
+          hl7.fhir.us.hai: Healthcare Associated Infection Implementation Guide  &reg;&copy; HL7 |
+             
+                CC0
+         (        <a href="searchform.html">src</a>
+)
+      </li>
+      <li>
+Copyright/Legal: This content LOINC&reg; is copyright &copy; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use (        <a href="en/ValueSet-mii-vs-mikrobio-befundtyp-loinc.html">src</a>
+)
+      </li>
+      <li>
+Copyright/Rechtliches: This content LOINC&reg; is copyright &copy; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use (        <a href="de/ValueSet-mii-vs-mikrobio-befundtyp-loinc.html">src</a>
+)
+      </li>
+      <li>
+HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7. (        <a href="en/version-history.html">src</a>
+)
+      </li>
+      <li>
+MII Implementation Guide Microbiology - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the Directory of published versions (        <a href="version-history.html">src</a>
+)
+      </li>
+      <li>
+This material contains content from LOINC. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc. Show Usage
+
+
+* LOINC: DiagnosticReport/mii-exa-mikrobio-diagnostic-report, MII_PR_Mikrobio_Allgemeine_Bestimmung... Show 61 more, MII_PR_Mikrobio_Allgemeine_Kultur, MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ, MII_PR_Mikrobio_Aviditaet, MII_PR_Mikrobio_Barlett_Score, MII_PR_Mikrobio_Ct_Wert, MII_PR_Mikrobio_Diagnostic_Report, MII_PR_Mikrobio_Empfindlichkeit, MII_PR_Mikrobio_Keimzahl, MII_PR_Mikrobio_MRGN_Klasse, MII_PR_Mikrobio_Mikroskopie, MII_PR_Mikrobio_Molekulare_Pathogenlast, MII_PR_Mikrobio_Nugent_Score, MII_PR_Mikrobio_Resistenzkategorie_Status, MII_PR_Mikrobio_Resistenzmechanismen_Determinanten, MII_PR_Mikrobio_Spezifische_Bestimmung, MII_PR_Mikrobio_Spezifische_Kultur, MII_PR_Mikrobio_Titer, MII_PR_Mikrobio_Virulenzfaktor, MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit, MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC, MII_VS_Mikrobio_Aviditaet_Tests_LOINC, MII_VS_Mikrobio_Barlett_Score_LOINC, MII_VS_Mikrobio_Befundtyp_LOINC, MII_VS_Mikrobio_CT_Wert_LOINC, MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC, MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC, MII_VS_Mikrobio_Keimzahl_LOINC, MII_VS_Mikrobio_MRGN_Klasse_LOINC, MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC, MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC, MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC, MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC, MII_VS_Mikrobio_Titer_Tests_LOINC, MII_VS_Mikrobio_Virulenz_LOINC, Observation/mii-exa-mikrobio-allgemeine-bestimmung, Observation/mii-exa-mikrobio-allgemeine-kultur, Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ, Observation/mii-exa-mikrobio-aviditaet, Observation/mii-exa-mikrobio-barlett-score, Observation/mii-exa-mikrobio-ct-wert, Observation/mii-exa-mikrobio-empfindlichkeit, Observation/mii-exa-mikrobio-keimzahl, Observation/mii-exa-mikrobio-keimzahl-katheterspitze, Observation/mii-exa-mikrobio-mikroskopie, Observation/mii-exa-mikrobio-molekulare-pathogenlast, Observation/mii-exa-mikrobio-mrgn-klasse, Observation/mii-exa-mikrobio-mrgn-klasse-negativ, Observation/mii-exa-mikrobio-nugent-score, Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ, Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv, Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten, Observation/mii-exa-mikrobio-spezifische-bestimmung, Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ, Observation/mii-exa-mikrobio-spezifische-kultur, Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ, Observation/mii-exa-mikrobio-titer, Observation/mii-exa-mikrobio-virulenzfaktor, Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit, Observation/mii-exa-mikrobio-workflow-vre-01-kultur, Observation/mii-exa-mikrobio-workflow-vre-02-identifikation and Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit
+
+
+
+
+ (        <a href="en/ImplementationGuide-mii-ig-mikrobiologie.html">src</a>
+)
+      </li>
+      <li>
+This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: https://terminology.hl7.org/license.html Show Usage
+
+
+* Observation Category Codes: MII_PR_Mikrobio_Allgemeine_Bestimmung, MII_PR_Mikrobio_Allgemeine_Kultur... Show 44 more, MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ, MII_PR_Mikrobio_Aviditaet, MII_PR_Mikrobio_Barlett_Score, MII_PR_Mikrobio_Ct_Wert, MII_PR_Mikrobio_Empfindlichkeit, MII_PR_Mikrobio_Keimzahl, MII_PR_Mikrobio_MRGN_Klasse, MII_PR_Mikrobio_Mikroskopie, MII_PR_Mikrobio_Molekulare_Pathogenlast, MII_PR_Mikrobio_Nugent_Score, MII_PR_Mikrobio_Resistenzkategorie_Status, MII_PR_Mikrobio_Resistenzmechanismen_Determinanten, MII_PR_Mikrobio_Spezifische_Bestimmung, MII_PR_Mikrobio_Spezifische_Kultur, MII_PR_Mikrobio_Titer, MII_PR_Mikrobio_Virulenzfaktor, MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit, Observation/mii-exa-mikrobio-allgemeine-bestimmung, Observation/mii-exa-mikrobio-allgemeine-kultur, Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ, Observation/mii-exa-mikrobio-aviditaet, Observation/mii-exa-mikrobio-barlett-score, Observation/mii-exa-mikrobio-ct-wert, Observation/mii-exa-mikrobio-empfindlichkeit, Observation/mii-exa-mikrobio-keimzahl, Observation/mii-exa-mikrobio-keimzahl-katheterspitze, Observation/mii-exa-mikrobio-mikroskopie, Observation/mii-exa-mikrobio-molekulare-pathogenlast, Observation/mii-exa-mikrobio-mrgn-klasse, Observation/mii-exa-mikrobio-mrgn-klasse-negativ, Observation/mii-exa-mikrobio-nugent-score, Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ, Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv, Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten, Observation/mii-exa-mikrobio-spezifische-bestimmung, Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ, Observation/mii-exa-mikrobio-spezifische-kultur, Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ, Observation/mii-exa-mikrobio-titer, Observation/mii-exa-mikrobio-virulenzfaktor, Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit, Observation/mii-exa-mikrobio-workflow-vre-01-kultur, Observation/mii-exa-mikrobio-workflow-vre-02-identifikation and Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit
+
+* diagnosticServiceSectionId: DiagnosticReport/mii-exa-mikrobio-diagnostic-report, MII_PR_Mikrobio_Allgemeine_Bestimmung... Show 46 more, MII_PR_Mikrobio_Allgemeine_Kultur, MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ, MII_PR_Mikrobio_Aviditaet, MII_PR_Mikrobio_Barlett_Score, MII_PR_Mikrobio_Ct_Wert, MII_PR_Mikrobio_Diagnostic_Report, MII_PR_Mikrobio_Empfindlichkeit, MII_PR_Mikrobio_Keimzahl, MII_PR_Mikrobio_MRGN_Klasse, MII_PR_Mikrobio_Mikroskopie, MII_PR_Mikrobio_Molekulare_Pathogenlast, MII_PR_Mikrobio_Nugent_Score, MII_PR_Mikrobio_Resistenzkategorie_Status, MII_PR_Mikrobio_Resistenzmechanismen_Determinanten, MII_PR_Mikrobio_Spezifische_Bestimmung, MII_PR_Mikrobio_Spezifische_Kultur, MII_PR_Mikrobio_Titer, MII_PR_Mikrobio_Virulenzfaktor, MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit, Observation/mii-exa-mikrobio-allgemeine-bestimmung, Observation/mii-exa-mikrobio-allgemeine-kultur, Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ, Observation/mii-exa-mikrobio-aviditaet, Observation/mii-exa-mikrobio-barlett-score, Observation/mii-exa-mikrobio-ct-wert, Observation/mii-exa-mikrobio-empfindlichkeit, Observation/mii-exa-mikrobio-keimzahl, Observation/mii-exa-mikrobio-keimzahl-katheterspitze, Observation/mii-exa-mikrobio-mikroskopie, Observation/mii-exa-mikrobio-molekulare-pathogenlast, Observation/mii-exa-mikrobio-mrgn-klasse, Observation/mii-exa-mikrobio-mrgn-klasse-negativ, Observation/mii-exa-mikrobio-nugent-score, Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ, Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv, Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten, Observation/mii-exa-mikrobio-spezifische-bestimmung, Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ, Observation/mii-exa-mikrobio-spezifische-kultur, Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ, Observation/mii-exa-mikrobio-titer, Observation/mii-exa-mikrobio-virulenzfaktor, Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit, Observation/mii-exa-mikrobio-workflow-vre-01-kultur, Observation/mii-exa-mikrobio-workflow-vre-02-identifikation and Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit
+
+* identifierType: DiagnosticReport/mii-exa-mikrobio-diagnostic-report, MII_PR_Mikrobio_Allgemeine_Bestimmung... Show 46 more, MII_PR_Mikrobio_Allgemeine_Kultur, MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ, MII_PR_Mikrobio_Aviditaet, MII_PR_Mikrobio_Barlett_Score, MII_PR_Mikrobio_Ct_Wert, MII_PR_Mikrobio_Diagnostic_Report, MII_PR_Mikrobio_Empfindlichkeit, MII_PR_Mikrobio_Keimzahl, MII_PR_Mikrobio_MRGN_Klasse, MII_PR_Mikrobio_Mikroskopie, MII_PR_Mikrobio_Molekulare_Pathogenlast, MII_PR_Mikrobio_Nugent_Score, MII_PR_Mikrobio_Resistenzkategorie_Status, MII_PR_Mikrobio_Resistenzmechanismen_Determinanten, MII_PR_Mikrobio_Spezifische_Bestimmung, MII_PR_Mikrobio_Spezifische_Kultur, MII_PR_Mikrobio_Titer, MII_PR_Mikrobio_Virulenzfaktor, MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit, Observation/mii-exa-mikrobio-allgemeine-bestimmung, Observation/mii-exa-mikrobio-allgemeine-kultur, Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ, Observation/mii-exa-mikrobio-aviditaet, Observation/mii-exa-mikrobio-barlett-score, Observation/mii-exa-mikrobio-ct-wert, Observation/mii-exa-mikrobio-empfindlichkeit, Observation/mii-exa-mikrobio-keimzahl, Observation/mii-exa-mikrobio-keimzahl-katheterspitze, Observation/mii-exa-mikrobio-mikroskopie, Observation/mii-exa-mikrobio-molekulare-pathogenlast, Observation/mii-exa-mikrobio-mrgn-klasse, Observation/mii-exa-mikrobio-mrgn-klasse-negativ, Observation/mii-exa-mikrobio-nugent-score, Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ, Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv, Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten, Observation/mii-exa-mikrobio-spezifische-bestimmung, Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ, Observation/mii-exa-mikrobio-spezifische-kultur, Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ, Observation/mii-exa-mikrobio-titer, Observation/mii-exa-mikrobio-virulenzfaktor, Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit, Observation/mii-exa-mikrobio-workflow-vre-01-kultur, Observation/mii-exa-mikrobio-workflow-vre-02-identifikation and Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit
+
+* ObservationInterpretation: MII_PR_Mikrobio_Aviditaet, MII_PR_Mikrobio_Empfindlichkeit... Show 9 more, MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit, MII_VS_Mikrobio_Aviditaet_Ergebnis, MII_VS_Mikrobio_Susceptibility, MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit, Observation/mii-exa-mikrobio-aviditaet, Observation/mii-exa-mikrobio-empfindlichkeit, Observation/mii-exa-mikrobio-keimzahl-katheterspitze, Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit and Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit
+
+
+
+
+ (        <a href="en/ImplementationGuide-mii-ig-mikrobiologie.html">src</a>
+)
+      </li>
+      <li>
+&copy; 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin (        <a href="en/index.html">src</a>
+)
+      </li>
+    </ul>
+    <h2>External References</h2>
+    <table class="grid">
+      <tr>
+        <th>
+          <b>Type</b>
+        </th>
+        <th>
+          <b>Reference</b>
+        </th>
+        <th>
+          <b>Content</b>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260347006">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260347006">260347006</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260348001">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260348001">260348001</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260349009">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260349009">260349009</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260350009">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260350009">260350009</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/410594000">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/410594000">410594000</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260405006">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260405006">260405006</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/441614007">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/441614007">441614007</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/441517005">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/441517005">441517005</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/441521003">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/441521003">441521003</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260415000">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260415000">260415000</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/278289002">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/278289002">278289002</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/83581000052107">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/83581000052107">83581000052107</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/703750006">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/703750006">703750006</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/703751005">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/703751005">703751005</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/708104000">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/708104000">708104000</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/726449005">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/726449005">726449005</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/703444002">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/703444002">703444002</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum.html">web</a>
+        </td>
+        <td>
+          <a href="http://unitsofmeasure.org">unitsofmeasure.org</a>
+        </td>
+        <td>
+Include these codes as defined in           <a href="http://unitsofmeasure.org">
+<code>http://unitsofmeasure.org</code>          </a>
+          <span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span>
+          <table class="none">
+            <tr>
+              <td style="white-space:nowrap">
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>ng/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>pg/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>ug/L</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[IU]/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[IU]/L</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[arb'U]/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[arb'U]/L</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[arb'U]</td>
+              <td></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-data-absent-reason.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/82334004">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/82334004">82334004</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260373001">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260373001">260373001</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum.html">web</a>
+        </td>
+        <td>
+          <a href="http://unitsofmeasure.org">unitsofmeasure.org</a>
+        </td>
+        <td>
+Include these codes as defined in           <a href="http://unitsofmeasure.org">
+<code>http://unitsofmeasure.org</code>          </a>
+          <span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span>
+          <table class="none">
+            <tr>
+              <td style="white-space:nowrap">
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>ug/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>mg/L</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[arb'U]/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>mm</td>
+              <td></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html">web</a>
+        </td>
+        <td>
+          <a href="http://unitsofmeasure.org">unitsofmeasure.org</a>
+        </td>
+        <td>
+Include these codes as defined in           <a href="http://unitsofmeasure.org">
+<code>http://unitsofmeasure.org</code>          </a>
+          <span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span>
+          <table class="none">
+            <tr>
+              <td style="white-space:nowrap">
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>[CFU]/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[CFU]/g</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[CFU]</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[arb'U]/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>/g</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/365698005">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/365698005">365698005</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/264868006">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/264868006">264868006</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/280414007">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/280414007">280414007</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html">web</a>
+        </td>
+        <td>
+          <a href="http://unitsofmeasure.org">unitsofmeasure.org</a>
+        </td>
+        <td>
+Include these codes as defined in           <a href="http://unitsofmeasure.org">
+<code>http://unitsofmeasure.org</code>          </a>
+          <span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span>
+          <table class="none">
+            <tr>
+              <td style="white-space:nowrap">
+                <b>Code</b>
+              </td>
+              <td>
+                <b>Display</b>
+              </td>
+            </tr>
+            <tr>
+              <td>ng/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>[IU]/mL</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>/g</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>pg/mL</td>
+              <td></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/70601000052104">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/70601000052104">70601000052104</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/1303992007">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/1303992007">1303992007</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/1304048000">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/1304048000">1304048000</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/723529006">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/723529006">723529006</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/404509004">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/404509004">404509004</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/404510009">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/404510009">404510009</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/427824002">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/427824002">427824002</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/61609004">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/61609004">61609004</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/70003006">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/70003006">70003006</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/734444009">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/734444009">734444009</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/734447002">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/734447002">734447002</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/404507002">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/404507002">404507002</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/768480006">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/768480006">768480006</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/768488004">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/768488004">768488004</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/768479008">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/768479008">768479008</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/768481005">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/768481005">768481005</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/719645005">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/719645005">719645005</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/719644009">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/719644009">719644009</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/10828004">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/10828004">10828004</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260385009">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260385009">260385009</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/258066000">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/258066000">258066000</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/1303998006">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/1303998006">1303998006</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/1304162005">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/1304162005">1304162005</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/708099001">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/708099001">708099001</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/703458000">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/703458000">703458000</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/782518009">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/782518009">782518009</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260408008">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/260408008">260408008</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/703752003">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/703752003">703752003</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="ValueSet-mii-vs-mikrobio-susceptibility.html">web</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/1306583007">snomed.info</a>
+        </td>
+        <td>
+          <a href="http://snomed.info/id/1306583007">1306583007</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">www.netzwerk-universitaetsmedizin.de</a>
+        </td>
+        <td>
+
+
+            <a no-external="true" id="project-logo" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+
+    <img src="assets/images/logo-num-diz-de.svg" alt="NUM-DIZ (Netzwerk Universitätsmedizin — Datenintegrationszentrum)" height="50"/>
+
+  
+          </a>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">github.com</a>
+        </td>
+        <td>
+
+              <!-- Eltern-Eintrag und die ersten vier Einträge verlinken die KDS-weiten
+         Konformitätsregeln des Meta-Moduls (INTERIM: Meta-Wiki; siehe
+         Quell-Menü). -->
+
+              <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">
+Konformität<b class="caret"> </b>          </a>
+
+              <ul class="dropdown-menu">
+
+                  <li>
+              <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a>
+            </li>
+
+                  <li>
+              <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a>
+            </li>
+
+                  <li>
+              <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a>
+            </li>
+
+                  <li>
+              <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a>
+            </li>
+
+                  <li>
+              <a href="security-and-privacy.html">Sicherheit und Datenschutz</a>
+            </li>
+
+    
+          </ul>
+
+  
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformität</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">Allgemeine Anforderungen</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must-Support</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Umgang mit fehlenden Daten</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.medizininformatik-initiative.de">www.medizininformatik-initiative.de</a>
+        </td>
+        <td>
+
+
+
+
+          IG &copy; 2019+           <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>
+.  
+          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
+.
+          Erstellt           <span title="Wed, Sep 9, 2026 16:03+0000">2026-09-09</span>
+
+                    <br/>
+
+                    <span style="color: var(--footer-highlight-text-color)">
+
+                        <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/" target="_blank">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/" target="_blank">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/impressum" target="_blank">Impressum</a>
+                 <br/>
+                             <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          
+          </span>
+
+        
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.netzwerk-universitaetsmedizin.de/">www.netzwerk-universitaetsmedizin.de</a>
+        </td>
+        <td>
+
+                      <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+
+          Links:           <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a>
+ |
+                           <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+
+                 
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/" target="_blank">netzwerk-universitaetsmedizin.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/" target="_blank">medizininformatik-initiative.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/impressum" target="_blank">Impressum</a>
+
+                           <br/>
+
+                           <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+
+                           <span>HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.medizininformatik-initiative.de/">www.medizininformatik-initiative.de</a>
+        </td>
+        <td>
+
+                      <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+
+          Links:           <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a>
+ |
+                           <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+
+                 
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/" target="_blank">netzwerk-universitaetsmedizin.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/" target="_blank">medizininformatik-initiative.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/impressum" target="_blank">Impressum</a>
+
+                           <br/>
+
+                           <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+
+                           <span>HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.netzwerk-universitaetsmedizin.de/impressum">www.netzwerk-universitaetsmedizin.de</a>
+        </td>
+        <td>
+
+                      <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+
+          Links:           <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a>
+ |
+                           <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+
+                 
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/" target="_blank">netzwerk-universitaetsmedizin.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/" target="_blank">medizininformatik-initiative.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/impressum" target="_blank">Impressum</a>
+
+                           <br/>
+
+                           <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+
+                           <span>HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/ImplementationGuide-mii-ig-mikrobiologie.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">github.com</a>
+        </td>
+        <td>
+          <strong>Woher die Versionen kommen.</strong>
+ Jedes Paket der Tabelle ist direkt in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">
+<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
+
+(          <code class="language-plaintext highlighter-rouge">dependencies:</code>
+) gepinnt — auch           <code class="language-plaintext highlighter-rouge">hl7.terminology.r4</code>
+ (THO) und
+          <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4</code>
+, und diese beiden mit Bedacht: Die
+          <a href="https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages">Automatik des IG Publishers</a>
+
+liest ausschließlich die           <strong>eigene</strong>
+ Abhängigkeitsliste dieses Leitfadens;
+ohne direkten Pin würde jeder Build stillschweigend das jeweils aktuellste
+THO-/Extensions-Release injizieren — eine allein im MII-Meta-Paket gepinnte
+Version kann den Build nicht steuern (verifiziert im Publisher-Quellcode des
+gepinnten Release). Eine wöchentliche Prüfung warnt, wenn diese beiden Pins
+von den Vorgaben des gepinnten Meta-Pakets abweichen; die von einem
+konkreten Build verwendeten Versionen stehen in dessen           <code class="language-plaintext highlighter-rouge">qa-versions.json</code>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/ImplementationGuide-mii-ig-mikrobiologie.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.iso.org/iso-3166-country-codes.html">www.iso.org</a>
+        </td>
+        <td>
+ISO maintains the copyright on the country codes, and controls its use carefully. For further details see the ISO 3166 web page:           <a href="https://www.iso.org/iso-3166-country-codes.html">https://www.iso.org/iso-3166-country-codes.html</a>
+          <div onclick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_1">
+
+            <ul>
+
+              <li>
+                <a href="http://terminology.hl7.org/6.2.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+:                 <a href="StructureDefinition-ext-R5-Observation.triggeredBy.html">ExtensionObservation_TriggeredBy</a>
+,                 <a href="CapabilityStatement-mii-cps-mikrobio-metadata.html">MII_CPS_Mikrobio_Metadata</a>
+                <span onclick="document.getElementById('ips_1').innerHTML = document.getElementById('ips2_1').innerHTML" id="ips_1">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 74 more</span>                </span>
+                <span style="display: none" id="ips2_1">
+, <a href="CodeSystem-mii-cs-mikrobio-mrgn-ergebnis.html">MII_CS_Mikrobio_MRGN_Ergebnis</a>, <a href="CodeSystem-mii-cs-mikrobio-resistenzkategorie.html">MII_CS_Mikrobio_Resistenzkategorie</a>, <a href="CodeSystem-mii-cs-mikrobio-susceptibility-norm.html">MII_CS_Mikrobio_Susceptibility_NORM</a>, <a href="StructureDefinition-mii-ex-mikrobio-empfindlichkeit-norm.html">MII_EX_Mikrobio_Empfindlichkeit_Norm</a>, <a href="index.html">MII_IG_Mikrobiologie</a>, <a href="StructureDefinition-mii-lm-mikrobio-logical-model.html">MII_LM_Mikrobio_Befund</a>, <a href="StructureDefinition-mii-lm-mikrobio-untersuchung.html">MII_LM_Mikrobio_Untersuchung</a>, <a href="StructureDefinition-mii-lm-mikrobio-untersuchungsarten.html">MII_LM_Mikrobio_Untersuchungsarten</a>, <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">MII_PR_Mikrobio_Allgemeine_Bestimmung</a>, <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">MII_PR_Mikrobio_Allgemeine_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ</a>, <a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html">MII_PR_Mikrobio_Aviditaet</a>, <a href="StructureDefinition-mii-pr-mikrobio-barlett-score.html">MII_PR_Mikrobio_Barlett_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html">MII_PR_Mikrobio_Ct_Wert</a>, <a href="StructureDefinition-mii-pr-mikrobio-diagnostic-report.html">MII_PR_Mikrobio_Diagnostic_Report</a>, <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII_PR_Mikrobio_Empfindlichkeit</a>, <a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">MII_PR_Mikrobio_Keimzahl</a>, <a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html">MII_PR_Mikrobio_MRGN_Klasse</a>, <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">MII_PR_Mikrobio_Mikroskopie</a>, <a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html">MII_PR_Mikrobio_Molekulare_Pathogenlast</a>, <a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html">MII_PR_Mikrobio_Nugent_Score</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html">MII_PR_Mikrobio_Resistenzkategorie_Status</a>, <a href="StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html">MII_PR_Mikrobio_Resistenzmechanismen_Determinanten</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html">MII_PR_Mikrobio_Spezifische_Bestimmung</a>, <a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">MII_PR_Mikrobio_Spezifische_Kultur</a>, <a href="StructureDefinition-mii-pr-mikrobio-titer.html">MII_PR_Mikrobio_Titer</a>, <a href="StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html">MII_PR_Mikrobio_Virulenzfaktor</a>, <a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html">MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit</a>, <a href="SearchParameter-mii-sp-mikrobio-interpretation.html">MII_SP_Mikrobio_NormKategorie</a>, <a href="SearchParameter-mii-sp-mikrobio-observation-titer.html">MII_SP_Mikrobio_Observation_Titer</a>, <a href="SearchParameter-mii-sp-mikrobio-observation-triggered-by.html">MII_SP_Mikrobio_Observation_TriggeredBy</a>, <a href="ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html">MII_VS_Labor_Laborergebnis_Semiquantitativ</a>, <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed.html">MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html">MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html">MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html">MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum.html">MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc.html">MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-aviditaet-ergebnis.html">MII_VS_Mikrobio_Aviditaet_Ergebnis</a>, <a href="ValueSet-mii-vs-mikrobio-aviditaet-tests-loinc.html">MII_VS_Mikrobio_Aviditaet_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-barlett-score-loinc.html">MII_VS_Mikrobio_Barlett_Score_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-befundtyp-loinc.html">MII_VS_Mikrobio_Befundtyp_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-ct-wert-loinc.html">MII_VS_Mikrobio_CT_Wert_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-data-absent-reason.html">MII_VS_Mikrobio_Data_Absent_Reason</a>, <a href="ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html">MII_VS_Mikrobio_Detected_Not_Detected_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-genotyp-loinc.html">MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum.html">MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc.html">MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html">MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-keimzahl-loinc.html">MII_VS_Mikrobio_Keimzahl_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html">MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-mrgn-klasse-loinc.html">MII_VS_Mikrobio_MRGN_Klasse_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html">MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.html">MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc.html">MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html">MII_VS_Mikrobio_Morphologie_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-organismen-snomedct.html">MII_VS_Mikrobio_Organismen_SNOMEDCT</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status.html">MII_VS_Mikrobio_Resistenzkategorie_Status</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html">MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc.html">MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html">MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html">MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed.html">MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-tests-loinc.html">MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html">MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html">MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-susceptibility.html">MII_VS_Mikrobio_Susceptibility</a>, <a href="ValueSet-mii-vs-mikrobio-susceptibility-norm.html">MII_VS_Mikrobio_Susceptibility_NORM</a>, <a href="ValueSet-mii-vs-mikrobio-titer-methode-snomed.html">MII_VS_Mikrobio_Titer_Methode_SNOMED</a>, <a href="ValueSet-mii-vs-mikrobio-titer-tests-loinc.html">MII_VS_Mikrobio_Titer_Tests_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-virulenz-loinc.html">MII_VS_Mikrobio_Virulenz_LOINC</a>, <a href="ValueSet-mii-vs-mikrobio-voraussichtliche-empfindlichkeit.html">MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit</a> and <a href="SearchParameter-ObservationInterpretation.html">ObservationInterpretation</a>                </span>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/ImplementationGuide-mii-ig-mikrobiologie.html">web</a>
+        </td>
+        <td>
+          <a href="https://ucum.org/trac/wiki/TermsOfUse">ucum.org</a>
+        </td>
+        <td>
+The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.           <a href="https://ucum.org/trac/wiki/TermsOfUse">https://ucum.org/trac/wiki/TermsOfUse</a>
+          <div onclick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}" id="ipp_2" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_2">
+
+            <ul>
+
+              <li>
+                <a href="http://hl7.org/fhir/uv/xver-r5.r4/0.1.0/CodeSystem-v3-ucum.html">Unified Code for Units of Measure (UCUM)</a>
+:                 <a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ</a>
+,                 <a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">MII_PR_Mikrobio_Empfindlichkeit</a>
+                <span onclick="document.getElementById('ips_2').innerHTML = document.getElementById('ips2_2').innerHTML" id="ips_2">
+... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 15 more</span>                </span>
+                <span style="display: none" id="ips2_2">
+, <a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">MII_PR_Mikrobio_Keimzahl</a>, <a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html">MII_PR_Mikrobio_Molekulare_Pathogenlast</a>, <a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum.html">MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum.html">MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html">MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM</a>, <a href="ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html">MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM</a>, <a href="Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.html">Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ</a>, <a href="Observation-mii-exa-mikrobio-aviditaet.html">Observation/mii-exa-mikrobio-aviditaet</a>, <a href="Observation-mii-exa-mikrobio-ct-wert.html">Observation/mii-exa-mikrobio-ct-wert</a>, <a href="Observation-mii-exa-mikrobio-empfindlichkeit.html">Observation/mii-exa-mikrobio-empfindlichkeit</a>, <a href="Observation-mii-exa-mikrobio-keimzahl.html">Observation/mii-exa-mikrobio-keimzahl</a>, <a href="Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html">Observation/mii-exa-mikrobio-keimzahl-katheterspitze</a>, <a href="Observation-mii-exa-mikrobio-molekulare-pathogenlast.html">Observation/mii-exa-mikrobio-molekulare-pathogenlast</a>, <a href="Observation-mii-exa-mikrobio-nugent-score.html">Observation/mii-exa-mikrobio-nugent-score</a> and <a href="Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html">Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit</a>                </span>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/ImplementationGuide-mii-ig-mikrobiologie.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">github.com</a>
+        </td>
+        <td>
+Expansionsparameter sind Query-Parameter, die an eine           <code class="language-plaintext highlighter-rouge">ValueSet</code>
+-
+          <code class="language-plaintext highlighter-rouge">$expand</code>
+-Operation übergeben werden können, um zu steuern, wie das ValueSet
+expandiert wird — also wie die vollständige Liste der Codes aus der
+ValueSet-Definition erzeugt wird. Die für diesen IG verwendeten
+          <a href="https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html">IG-Parameter</a>
+
+sind in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">
+<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
+
+(          <code class="language-plaintext highlighter-rouge">parameters:</code>
+) deklariert. Ein Modul, das seine Expansionsparameter über ein
+CRMI-Manifest pinnt, verlinkt hier zusätzlich die generierte
+          <code class="language-plaintext highlighter-rouge">Parameters</code>
+-Ressource (siehe die auskommentierten Manifest-Blöcke in
+          <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>
+ und die Seite Metadata Overview, sofern das Modul sie
+behält).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/Parameters-mii-param-mikrobio-manifest.html">web</a>
+        </td>
+        <td>
+          <a href="https://tx.ontoserver.csiro.au/fhir/ValueSet/900000000000207008-20260701">tx.ontoserver.csiro.au</a>
+        </td>
+        <td>
+          <a href="https://tx.ontoserver.csiro.au/fhir/ValueSet/900000000000207008-20260701">SNOMED CT core</a>
+ version: http://snomed.info/sct/900000000000207008/version/20260701
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/guidance.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.eucast.org/">www.eucast.org</a>
+        </td>
+        <td>
+Die Ergebnisse von Empfindlichkeitstests können sowohl gemäß den Definitionen des
+European Committee on Antimicrobial Susceptibility Testing
+(          <a href="https://www.eucast.org/" title="EUCAST">EUCAST</a>
+) als auch des Clinical &amp; Laboratory
+Standards Institute (          <a href="https://clsi.org/" title="CLSI">CLSI</a>
+) angegeben werden. Ein
+eigener DiagnosticReport fasst die Ergebnisse zusammen, die zu einem
+mikrobiologischen Befund gehören.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/guidance.html">web</a>
+        </td>
+        <td>
+          <a href="https://clsi.org/">clsi.org</a>
+        </td>
+        <td>
+Die Ergebnisse von Empfindlichkeitstests können sowohl gemäß den Definitionen des
+European Committee on Antimicrobial Susceptibility Testing
+(          <a href="https://www.eucast.org/" title="EUCAST">EUCAST</a>
+) als auch des Clinical &amp; Laboratory
+Standards Institute (          <a href="https://clsi.org/" title="CLSI">CLSI</a>
+) angegeben werden. Ein
+eigener DiagnosticReport fasst die Ergebnisse zusammen, die zu einem
+mikrobiologischen Befund gehören.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/guidance.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">github.com</a>
+        </td>
+        <td>
+Für die KDS-weiten Konformitätsanforderungen siehe die
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Konformitätsregeln des Meta-Moduls</a>
+;
+für die technischen Artefakte siehe           <a href="profiles.html">Profile</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/index.html">web</a>
+        </td>
+        <td>
+          <a href="http://www.who.int">www.who.int</a>
+        </td>
+        <td>
+Das Modul beschreibt die Untersuchungen, die in Laboratorien zum Nachweis, zur
+Identifizierung und zur Charakterisierung von Mikroorganismen und deren
+Eigenschaften durchgeführt werden. Es ist von entscheidender Bedeutung, da es die
+Grundlage für eine gemeinsame Untersuchung von Infektionskrankheiten und
+Antibiotikaresistenzen bildet, die zu globalen Gesundheitsnotfällen führen und zu
+den Hauptprioritäten der           <a href="http://www.who.int" title="WHO">WHO</a>
+ gehören.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">github.com</a>
+        </td>
+        <td>
+          <strong>Konformität</strong>
+ — die KDS-weiten Konformitätsregeln (Anforderungssprache,
+Must-Support, Umgang mit fehlenden Daten) pflegt zentral das
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Meta-Modul</a>
+;
+die modul-spezifischen Aspekte zu
+          <a href="security-and-privacy.html">Sicherheit und Datenschutz</a>
+ sind Teil dieses
+Leitfadens.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.medizininformatik-initiative.de/">www.medizininformatik-initiative.de</a>
+        </td>
+        <td>
+Dieses Modul ist Teil des MII-Kerndatensatzes; die weiteren KDS-Module und ihre
+Abhängigkeiten sind unter
+          <a href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+
+beschrieben.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/FHIR/ig-registry">github.com</a>
+        </td>
+        <td>
+Weitere FHIR-Implementierungsleitfäden finden Sie im offiziellen
+          <strong>
+<a href="https://fhir.org/guides/registry/">FHIR IG Registry</a>          </strong>
+ (Quelle:
+          <a href="https://github.com/FHIR/ig-registry">
+<code class="language-plaintext highlighter-rouge">FHIR/ig-registry</code>          </a>
+).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://mii.zulipchat.com/">mii.zulipchat.com</a>
+        </td>
+        <td>
+Fragen zu dieser Publikation können im HL7-FHIR-Zulip
+          <a href="https://chat.fhir.org">chat.fhir.org</a>
+ im Stream           <code class="language-plaintext highlighter-rouge">german/mi-initiative</code>
+ oder im
+MII-Zulip           <a href="https://mii.zulipchat.com/">mii.zulipchat.com</a>
+ im Stream
+          <code class="language-plaintext highlighter-rouge">MII-Kerndatensatz</code>
+ gestellt werden.
+Anmerkungen und Kritik werden als           <em>Issues</em>
+ auf
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/issues">GitHub</a>
+ entgegengenommen.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/issues">github.com</a>
+        </td>
+        <td>
+Fragen zu dieser Publikation können im HL7-FHIR-Zulip
+          <a href="https://chat.fhir.org">chat.fhir.org</a>
+ im Stream           <code class="language-plaintext highlighter-rouge">german/mi-initiative</code>
+ oder im
+MII-Zulip           <a href="https://mii.zulipchat.com/">mii.zulipchat.com</a>
+ im Stream
+          <code class="language-plaintext highlighter-rouge">MII-Kerndatensatz</code>
+ gestellt werden.
+Anmerkungen und Kritik werden als           <em>Issues</em>
+ auf
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/issues">GitHub</a>
+ entgegengenommen.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://creativecommons.org/licenses/by/4.0/deed.de">creativecommons.org</a>
+        </td>
+        <td>
+Dieses Werk ist lizenziert unter der
+          <a href="https://creativecommons.org/licenses/by/4.0/deed.de">Creative Commons Namensnennung 4.0 International Lizenz (CC BY 4.0)</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/logical-models.html">web</a>
+        </td>
+        <td>
+          <a href="https://art-decor.org/art-decor/decor-datasets--mide-">art-decor.org</a>
+        </td>
+        <td>
+Die offizielle und abgenommene Version des Informationsmodells für das Modul Mikrobiologie findet sich auf           <a href="https://art-decor.org/art-decor/decor-datasets--mide-">ART-DECOR</a>
+. Zur Vereinheitlichung der Repräsentation wurde das Informationsmodell zusätzlich als FHIR Logical Model abgebildet.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">github.com</a>
+        </td>
+        <td>
+Die folgenden CRMI-Metadaten werden in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">
+<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
+
+gesetzt und landen in der erzeugten           <code class="language-plaintext highlighter-rouge">ImplementationGuide</code>
+-Ressource.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh">github.com</a>
+        </td>
+        <td>
+Die CRMI-          <strong>Profile</strong>
+ beansprucht allein der ImplementationGuide
+(          <code class="language-plaintext highlighter-rouge">crmi-shareableimplementationguide</code>
+,           <code class="language-plaintext highlighter-rouge">crmi-publishableimplementationguide</code>
+,
+          <code class="language-plaintext highlighter-rouge">crmi-implementationguide</code>
+). Die eigenen Profile, ValueSets und CodeSystems des
+Moduls beanspruchen sie nicht; sie tragen statt dessen die
+CRMI-          <strong>Extensions</strong>
+, gesetzt über die gemeinsamen RuleSets in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh">
+<code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code>          </a>
+:
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-basis">github.com</a>
+        </td>
+        <td>
+Veröffentlicht ein Modul CodeSystem-Supplements, ist zu beachten: Das
+CRMI-Profil           <em>ShareableCodeSystem</em>
+ verlangt           <code class="language-plaintext highlighter-rouge">CodeSystem.caseSensitive</code>
+, während
+die FHIR-Validierung warnt, dass ein Supplement           <code class="language-plaintext highlighter-rouge">caseSensitive</code>
+ nicht erneut
+angeben sollte, weil das dem ergänzten CodeSystem widersprechen könnte.
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-basis">kerndatensatz-basis</a>
+
+beansprucht deshalb bei Supplements nur das           <em>Publishable</em>
+-CRMI-Profil und lässt
+das Shareable-Profil weg.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md">github.com</a>
+        </td>
+        <td>
+Dieses Modul pinnt seine Expansionsparameter. Das Manifest ist
+          <a href="Parameters-mii-param-mikrobio-manifest.html">
+<code class="language-plaintext highlighter-rouge">mii-param-mikrobio-manifest</code>          </a>
+,
+vom IG über           <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code>
+ referenziert und vom Publisher über
+          <code class="language-plaintext highlighter-rouge">path-expansion-params</code>
+ und           <code class="language-plaintext highlighter-rouge">pin-manifest</code>
+ gelesen. Es legt fünf Versionen fest:
+SNOMED CT (die dem           <code class="language-plaintext highlighter-rouge">v2027</code>
+-CalVer-Strang zugeordnete internationale Ausgabe vom
+2026-07-01), LOINC 2.82 — zusätzlich als           <code class="language-plaintext highlighter-rouge">force-system-version</code>
+ —,
+          <code class="language-plaintext highlighter-rouge">v3-ObservationInterpretation</code>
+ 4.0.0 und           <code class="language-plaintext highlighter-rouge">artifact-version-policy-codes</code>
+ 3.0.0.
+Die Begründung, und warum der SNOMED-Pin den öffentlichen Terminologieserver für
+diesen Leitfaden unbrauchbar macht, steht in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md">
+<code class="language-plaintext highlighter-rouge">input/resources/README.md</code>          </a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.go-fair.org/fair-principles/">www.go-fair.org</a>
+        </td>
+        <td>
+Die           <a href="https://www.go-fair.org/fair-principles/">FAIR-Prinzipien</a>
+ beschreiben
+Ziele dafür, digitale Objekte auffindbar (Findable), zugänglich (Accessible),
+interoperabel (Interoperable) und wiederverwendbar (Reusable) zu machen. Dieser
+Abschnitt ist eine informative Selbsteinschätzung, wie die CRMI-Metadaten dieses
+Leitfadens eine FAIR-konforme Veröffentlichung von FHIR-Spezifikationsartefakten
+unterstützen.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/security-and-privacy.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.medizininformatik-initiative.de/de/datenschutzkonzept">www.medizininformatik-initiative.de</a>
+        </td>
+        <td>
+Das
+          <a href="https://www.medizininformatik-initiative.de/de/datenschutzkonzept">übergreifende Datenschutzkonzept der Medizininformatik-Initiative</a>
+
+regelt, wie Patientendaten über das Netz der Datenintegrationszentren hinweg
+für die Forschung verarbeitet werden
+dürfen: die Rechtsgrundlage (der Broad Consent der MII), die Rollen der
+Datenintegrationszentren und der Use-&amp;-Access-Committees sowie die
+standortübergreifenden Anwendungsszenarien (Machbarkeitsanfragen, verteilte
+Analysen, Daten- und Bioproben-Bereitstellung). Alles, was dieses Modul
+spezifiziert, bewegt sich innerhalb dieses Rahmens — dieser Leitfaden fügt
+keinen eigenen Verarbeitungszweck hinzu.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/security-and-privacy.html">web</a>
+        </td>
+        <td>
+          <a href="https://medizininformatik-initiative.github.io/dataportal/data-node/DIMP.html">medizininformatik-initiative.github.io</a>
+        </td>
+        <td>
+Wie Daten, die ein Datenintegrationszentrum verlassen, praktisch
+de-identifiziert werden, spezifiziert
+          <a href="https://medizininformatik-initiative.github.io/dataportal/data-node/DIMP.html">DIMP (De-Identification — Minimisation — Pseudonymisation)</a>
+
+in der Dokumentation des Datenportals: direkte Identifikatoren werden
+entfernt, vom genehmigten Projekt nicht benötigte Datenelemente entfallen, und
+identifizierende Werte werden durch projektspezifische Pseudonyme ersetzt
+(FHIR-Pseudonymizer-Konfiguration). Die Profile dieses Moduls beschreiben die
+Daten           <em>vor</em>
+ Anwendung von DIMP; welche Elemente eine konkrete
+Datenbereitstellung erreicht, entscheidet je Projekt die DIMP-Konfiguration,
+nicht dieser Leitfaden.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/translationinfo.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/recipes/add-translation.md">github.com</a>
+        </td>
+        <td>
+Übersetzte Seiten liegen unter           <code class="language-plaintext highlighter-rouge">input/translations/de/pagecontent/</code>
+ (gleicher
+Dateiname wie die englische Seite); Ressourcen-Übersetzungen als           <code class="language-plaintext highlighter-rouge">.po</code>
+-Dateien
+unter           <code class="language-plaintext highlighter-rouge">input/translations/de/</code>
+. Details:
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/recipes/add-translation.md">
+<code class="language-plaintext highlighter-rouge">docs/recipes/add-translation.md</code>          </a>
+ in diesem Repository.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/uml-diagrams.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/implementation-guides/modulmikrobio-2027/images/mii-mikrobio-informationsmodell.png">github.com</a>
+        </td>
+        <td>
+Zur besseren Lesbarkeit findet sich das vollständige Diagramm nochmal           <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/implementation-guides/modulmikrobio-2027/images/mii-mikrobio-informationsmodell.png">hier</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/uml-diagrams.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/implementation-guides/modulmikrobio-2027/images/mii-mikrobio-untersuchungsarten.png">github.com</a>
+        </td>
+        <td>
+Zur besseren Lesbarkeit findet sich das vollständige Diagramm nochmal           <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/implementation-guides/modulmikrobio-2027/images/mii-mikrobio-untersuchungsarten.png">hier</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/version-history.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">github.com</a>
+        </td>
+        <td>
+Releases folgen dem
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">Module Release Workflow</a>
+.
+Darüber hinaus hat das Modul keine eigene Versionierungspolitik — kein
+Support-Fenster für ältere Versionen und keine gesonderte Deprecation-Regel für
+Profile.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">www.netzwerk-universitaetsmedizin.de</a>
+        </td>
+        <td>
+
+
+            <a no-external="true" id="project-logo" href="https://www.netzwerk-universitaetsmedizin.de/forschung/num-diz">
+
+
+    <img src="assets/images/logo-num-diz-en.svg" alt="NUM-DIZ (Network of University Medicine — Data Integration Center)" height="50"/>
+
+  
+          </a>
+
+
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">github.com</a>
+        </td>
+        <td>
+
+              <!-- The parent and the first four entries link to the KDS-wide conformance
+         rules of the Meta module (INTERIM: meta-wiki; see header note). -->
+
+              <a data-toggle="dropdown" href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance" class="dropdown-toggle">
+Conformance<b class="caret"> </b>          </a>
+
+              <ul class="dropdown-menu">
+
+                  <li>
+              <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Conformance</a>
+            </li>
+
+                  <li>
+              <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">General Requirements</a>
+            </li>
+
+                  <li>
+              <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must Support</a>
+            </li>
+
+                  <li>
+              <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Handling Missing Data</a>
+            </li>
+
+                  <li>
+              <a href="security-and-privacy.html">Security and Privacy</a>
+            </li>
+
+    
+          </ul>
+
+  
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Conformance</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation">General Requirements</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms">Must Support</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten">Handling Missing Data</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.medizininformatik-initiative.de">www.medizininformatik-initiative.de</a>
+        </td>
+        <td>
+
+
+
+
+          IG &copy; 2019+           <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>
+.  
+          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
+.
+          Generated           <span title="Wed, Sep 9, 2026 16:03+0000">2026-09-09</span>
+
+                    <br/>
+
+                    <span style="color: var(--footer-highlight-text-color)">
+
+                        <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+          Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/" target="_blank">netzwerk-universitaetsmedizin.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/" target="_blank">medizininformatik-initiative.de</a>
+                 | <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice" target="_blank">Legal notice</a>
+                 <br/>
+                             <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+                 <span>HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+          
+          </span>
+
+        
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.netzwerk-universitaetsmedizin.de/">www.netzwerk-universitaetsmedizin.de</a>
+        </td>
+        <td>
+
+                      <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+
+          Links:           <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a>
+ |
+                           <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+
+                 
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/" target="_blank">netzwerk-universitaetsmedizin.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/" target="_blank">medizininformatik-initiative.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice" target="_blank">Legal notice</a>
+
+                           <br/>
+
+                           <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+
+                           <span>HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.medizininformatik-initiative.de/">www.medizininformatik-initiative.de</a>
+        </td>
+        <td>
+
+                      <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+
+          Links:           <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a>
+ |
+                           <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+
+                 
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/" target="_blank">netzwerk-universitaetsmedizin.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/" target="_blank">medizininformatik-initiative.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice" target="_blank">Legal notice</a>
+
+                           <br/>
+
+                           <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+
+                           <span>HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/CapabilityStatement-mii-cps-mikrobio-metadata-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice">www.netzwerk-universitaetsmedizin.de</a>
+        </td>
+        <td>
+
+                      <!-- Branding override for the fhir2.base.template footer fragment.
+     Unlike header/css, the base footer fragment is NOT an empty placeholder: it
+     renders "Links: Table of Contents | QA Report [| feedback dashboards]".
+     The base uses site.data.stringsBase[include.lang][...] for the labels. The
+     reason this override supplies its own is the Imprint label: the base ships no
+     stringsBase key for it and a child template cannot add one (docs/styleguide.md
+     section 6), and the same include.lang branch then has to carry the other
+     labels too. (The blank-label problem that first motivated this is separately
+     mitigated: this repo vendors the base's own German catalogs into
+     translations/ — see translations/README.md.) The override preserves the base
+     links (TOC, QA, feedback dashboards) and appends the project information links.
+     NUM-DIZ takes over IG development and maintenance when MII funding ends
+     (end-2026), so the NUM-DIZ website link renders BEFORE the MII website link —
+     in BOTH brand designs and both languages; the MII links stay because the
+     modules remain MII content. Both anchors are the SITE ROOTS with the bare
+     domain as anchor text (TF-KDS feedback 2026-08-14: aligned anchor style;
+     domains are language-neutral, styleguide §6).
+     Imprint: points at the NUM-DIZ website's legal pages since 2026-08-14
+     (TF-KDS: NUM-DIZ takes over from MII in 2027, so legal-aspect links use
+     the NUM-DIZ counterpart where one exists) - German /impressum and English
+     /en/legal-notice (both verified HTTP 200 on 2026-08-14). -->
+
+
+          Links:           <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a>
+ |
+                           <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+
+                 
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/" target="_blank">netzwerk-universitaetsmedizin.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de/" target="_blank">medizininformatik-initiative.de</a>
+
+                 |           <a style="color: var(--footer-hyperlink-text-color)" href="https://www.netzwerk-universitaetsmedizin.de/en/legal-notice" target="_blank">Legal notice</a>
+
+                           <br/>
+
+                           <!-- HL7 trademark attribution (required wherever the FHIR flame
+                      renders - the header shows it on every page; see HL7's
+                      trademark guidelines; permission request tracked in issue #109). The sentence is
+                      HL7's prescribed formula and stays in English on every
+                      language's pages (legal wording, styleguide §6). -->
+
+                           <span>HL7&reg;, FHIR&reg; and the FHIR flame design are registered trademarks of Health Level Seven International. Their use does not constitute endorsement by HL7.</span>
+
+
+          
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/ImplementationGuide-mii-ig-mikrobiologie.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">github.com</a>
+        </td>
+        <td>
+          <strong>Where the versions come from.</strong>
+ Every package in the table is pinned
+directly in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">
+<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
+
+(          <code class="language-plaintext highlighter-rouge">dependencies:</code>
+) — including           <code class="language-plaintext highlighter-rouge">hl7.terminology.r4</code>
+ (THO) and
+          <code class="language-plaintext highlighter-rouge">hl7.fhir.uv.extensions.r4</code>
+, and those two deliberately so: the IG
+Publisher's
+          <a href="https://build.fhir.org/ig/FHIR/ig-guidance/versions.html#automatic-packages">automatic-packages rule</a>
+
+consults only this guide's           <strong>own</strong>
+ dependency list, so without a direct pin
+every build would silently inject the latest THO/extensions release — a
+version pinned by the MII meta package alone cannot control the build
+(verified in the publisher source at the pinned release). A weekly check
+warns when these two pins drift from what the pinned meta package ships,
+and the exact versions a concrete build used are recorded in its
+          <code class="language-plaintext highlighter-rouge">qa-versions.json</code>
+ output.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/ImplementationGuide-mii-ig-mikrobiologie.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">github.com</a>
+        </td>
+        <td>
+Expansion parameters are query parameters that can be passed to a           <code class="language-plaintext highlighter-rouge">ValueSet</code>
+
+          <code class="language-plaintext highlighter-rouge">$expand</code>
+ operation to control how the ValueSet is expanded — that is, how the
+full list of codes is generated from the ValueSet definition. The
+          <a href="https://hl7.org/fhir/tools/en/CodeSystem-ig-parameters.html">IG Parameters</a>
+
+used for this IG are declared in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">
+<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
+
+(          <code class="language-plaintext highlighter-rouge">parameters:</code>
+). A module that pins its expansion parameters through a CRMI
+manifest additionally links the generated           <code class="language-plaintext highlighter-rouge">Parameters</code>
+ resource from here (see
+the commented manifest blocks in           <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>
+ and the Metadata Overview
+page, if the module keeps it).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/guidance.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.eucast.org/">www.eucast.org</a>
+        </td>
+        <td>
+Susceptibility results can be reported against the definitions of the European
+Committee on Antimicrobial Susceptibility Testing
+(          <a href="https://www.eucast.org/" title="EUCAST">EUCAST</a>
+) as well as those of the Clinical &amp;
+Laboratory Standards Institute (          <a href="https://clsi.org/" title="CLSI">CLSI</a>
+). A dedicated
+DiagnosticReport gathers the results that belong to one microbiological report.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/guidance.html">web</a>
+        </td>
+        <td>
+          <a href="https://clsi.org/">clsi.org</a>
+        </td>
+        <td>
+Susceptibility results can be reported against the definitions of the European
+Committee on Antimicrobial Susceptibility Testing
+(          <a href="https://www.eucast.org/" title="EUCAST">EUCAST</a>
+) as well as those of the Clinical &amp;
+Laboratory Standards Institute (          <a href="https://clsi.org/" title="CLSI">CLSI</a>
+). A dedicated
+DiagnosticReport gathers the results that belong to one microbiological report.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/guidance.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">github.com</a>
+        </td>
+        <td>
+For the KDS-wide conformance requirements see the
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Conformance rules of the Meta module</a>
+;
+for the technical artifacts see           <a href="profiles.html">Profiles</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/index.html">web</a>
+        </td>
+        <td>
+          <a href="http://www.who.int">www.who.int</a>
+        </td>
+        <td>
+The module describes the investigations carried out in laboratories to detect, identify and
+characterise microorganisms and their properties. It is of decisive importance because it forms the
+basis for a common investigation of infectious diseases and antibiotic resistance, which lead to
+global health emergencies and are among the main priorities of the           <a href="http://www.who.int" title="WHO">WHO</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">github.com</a>
+        </td>
+        <td>
+          <strong>Conformance</strong>
+ — the KDS-wide conformance rules (requirements language,
+Must Support, handling missing data) are maintained centrally by the
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance">Meta module</a>
+;
+the module-specific           <a href="security-and-privacy.html">Security and Privacy</a>
+
+considerations are part of this guide.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.medizininformatik-initiative.de/">www.medizininformatik-initiative.de</a>
+        </td>
+        <td>
+This module is part of the MII Core Dataset; the other KDS modules and their
+dependencies are described at
+          <a href="https://www.medizininformatik-initiative.de/">medizininformatik-initiative.de</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/FHIR/ig-registry">github.com</a>
+        </td>
+        <td>
+More FHIR implementation guides can be found in the official
+          <strong>
+<a href="https://fhir.org/guides/registry/">FHIR IG Registry</a>          </strong>
+ (source:
+          <a href="https://github.com/FHIR/ig-registry">
+<code class="language-plaintext highlighter-rouge">FHIR/ig-registry</code>          </a>
+).
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://mii.zulipchat.com/">mii.zulipchat.com</a>
+        </td>
+        <td>
+Questions about this publication can be asked on the HL7 FHIR Zulip
+          <a href="https://chat.fhir.org">chat.fhir.org</a>
+ in the           <code class="language-plaintext highlighter-rouge">german/mi-initiative</code>
+ stream, or
+on the MII Zulip           <a href="https://mii.zulipchat.com/">mii.zulipchat.com</a>
+ in the
+          <code class="language-plaintext highlighter-rouge">MII-Kerndatensatz</code>
+ stream.
+Comments and issues are welcome as           <em>Issues</em>
+ on
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/issues">GitHub</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/issues">github.com</a>
+        </td>
+        <td>
+Questions about this publication can be asked on the HL7 FHIR Zulip
+          <a href="https://chat.fhir.org">chat.fhir.org</a>
+ in the           <code class="language-plaintext highlighter-rouge">german/mi-initiative</code>
+ stream, or
+on the MII Zulip           <a href="https://mii.zulipchat.com/">mii.zulipchat.com</a>
+ in the
+          <code class="language-plaintext highlighter-rouge">MII-Kerndatensatz</code>
+ stream.
+Comments and issues are welcome as           <em>Issues</em>
+ on
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/issues">GitHub</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/index.html">web</a>
+        </td>
+        <td>
+          <a href="https://creativecommons.org/licenses/by/4.0/">creativecommons.org</a>
+        </td>
+        <td>
+This work is licensed under the
+          <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/logical-models.html">web</a>
+        </td>
+        <td>
+          <a href="https://art-decor.org/art-decor/decor-datasets--mide-">art-decor.org</a>
+        </td>
+        <td>
+The official, approved version of the information model for the Microbiology module can be found on           <a href="https://art-decor.org/art-decor/decor-datasets--mide-">ART-DECOR</a>
+. To unify the representation, the information model was additionally expressed as FHIR Logical Models.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">github.com</a>
+        </td>
+        <td>
+The following CRMI-related metadata is set in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/sushi-config.yaml">
+<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>          </a>
+
+and ends up in the generated           <code class="language-plaintext highlighter-rouge">ImplementationGuide</code>
+ resource.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh">github.com</a>
+        </td>
+        <td>
+The CRMI           <strong>profiles</strong>
+ are claimed by the ImplementationGuide alone
+(          <code class="language-plaintext highlighter-rouge">crmi-shareableimplementationguide</code>
+,           <code class="language-plaintext highlighter-rouge">crmi-publishableimplementationguide</code>
+,
+          <code class="language-plaintext highlighter-rouge">crmi-implementationguide</code>
+). The module's own profiles, value sets and code
+systems do not claim them; they carry the CRMI           <strong>extensions</strong>
+ instead, applied
+through the shared rule sets in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh">
+<code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code>          </a>
+:
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-basis">github.com</a>
+        </td>
+        <td>
+Where a module publishes CodeSystem supplements, note that the CRMI
+          <em>ShareableCodeSystem</em>
+ profile requires           <code class="language-plaintext highlighter-rouge">CodeSystem.caseSensitive</code>
+, while FHIR
+validation warns that a supplement should not restate           <code class="language-plaintext highlighter-rouge">caseSensitive</code>
+ because
+that could contradict the supplemented code system.
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-basis">kerndatensatz-basis</a>
+
+therefore claims only the           <em>publishable</em>
+ CRMI profile on supplements and omits
+the shareable one.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md">github.com</a>
+        </td>
+        <td>
+This module pins its expansion parameters. The manifest is
+          <a href="Parameters-mii-param-mikrobio-manifest.html">
+<code class="language-plaintext highlighter-rouge">mii-param-mikrobio-manifest</code>          </a>
+,
+referenced from the IG through           <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code>
+ and read by the
+publisher through           <code class="language-plaintext highlighter-rouge">path-expansion-params</code>
+ and           <code class="language-plaintext highlighter-rouge">pin-manifest</code>
+. It fixes five
+versions: SNOMED CT (the 2026-07-01 international release bound to the           <code class="language-plaintext highlighter-rouge">v2027</code>
+
+CalVer line), LOINC 2.82 — also as           <code class="language-plaintext highlighter-rouge">force-system-version</code>
+ —,
+          <code class="language-plaintext highlighter-rouge">v3-ObservationInterpretation</code>
+ 4.0.0 and           <code class="language-plaintext highlighter-rouge">artifact-version-policy-codes</code>
+ 3.0.0.
+The reasoning, and why the SNOMED pin makes the public terminology server
+unusable for this guide, is in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md">
+<code class="language-plaintext highlighter-rouge">input/resources/README.md</code>          </a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.go-fair.org/fair-principles/">www.go-fair.org</a>
+        </td>
+        <td>
+The           <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a>
+ describe goals
+for making digital objects Findable, Accessible, Interoperable and Reusable.
+This section is an informative self-assessment of how the CRMI-based metadata of
+this guide supports FAIR-aligned publication of FHIR specification artifacts.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/security-and-privacy.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.medizininformatik-initiative.de/en/data-protection-concept">www.medizininformatik-initiative.de</a>
+        </td>
+        <td>
+The
+          <a href="https://www.medizininformatik-initiative.de/en/data-protection-concept">overarching data protection concept of the Medical Informatics Initiative</a>
+
+governs how patient data may be processed for research across the network of
+Data Integration Centers: it
+covers the legal basis (the MII Broad Consent), the roles of the Data
+Integration Centers and Use &amp; Access Committees, and the cross-site application
+scenarios (feasibility queries, distributed analyses, data and biosample
+provision). Everything this module specifies operates inside that framework —
+this guide adds no processing purpose of its own.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/security-and-privacy.html">web</a>
+        </td>
+        <td>
+          <a href="https://medizininformatik-initiative.github.io/dataportal/data-node/DIMP.html">medizininformatik-initiative.github.io</a>
+        </td>
+        <td>
+How data leaving a Data Integration Center is de-identified in practice is
+specified by
+          <a href="https://medizininformatik-initiative.github.io/dataportal/data-node/DIMP.html">DIMP (De-Identification — Minimisation — Pseudonymisation)</a>
+
+in the data portal documentation: direct identifiers are removed,
+data elements not needed by the approved project are dropped, and identifying
+values are replaced by project-specific pseudonyms (FHIR Pseudonymizer
+configuration). The profiles of this module describe data           <em>before</em>
+ DIMP is
+applied; which elements survive a concrete data release is decided per project
+by the DIMP configuration, not by this guide.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/translationinfo.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/recipes/add-translation.md">github.com</a>
+        </td>
+        <td>
+Translated pages live under           <code class="language-plaintext highlighter-rouge">input/translations/de/pagecontent/</code>
+ (same file name
+as the English page); resource translations are           <code class="language-plaintext highlighter-rouge">.po</code>
+ files under
+          <code class="language-plaintext highlighter-rouge">input/translations/de/</code>
+. Details:
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/recipes/add-translation.md">
+<code class="language-plaintext highlighter-rouge">docs/recipes/add-translation.md</code>          </a>
+ in this repository.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/uml-diagrams.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/images/mii-mikrobio-informationsmodell.png">github.com</a>
+        </td>
+        <td>
+For better legibility, the full diagram is also available           <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/images/mii-mikrobio-informationsmodell.png">here</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/uml-diagrams.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/images/mii-mikrobio-untersuchungsarten.png">github.com</a>
+        </td>
+        <td>
+For better legibility, the full diagram is also available           <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/images/mii-mikrobio-untersuchungsarten.png">here</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/version-history.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">github.com</a>
+        </td>
+        <td>
+Releases follow the
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">Module Release Workflow</a>
+.
+Beyond that workflow the module has no versioning policy of its own — no support
+window for older versions and no separate deprecation rule for profiles.
+        </td>
+      </tr>
+    </table>
+    <h2>Internal Images</h2>
+    <table class="grid">
+      <tr>
+        <td>
+mii-mikrobio-informationsmodell.png          <br/>
+          <img src="mii-mikrobio-informationsmodell.png" alt="mii-mikrobio-informationsmodell.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+mii-mikrobio-untersuchungsarten.png          <br/>
+          <img src="mii-mikrobio-untersuchungsarten.png" alt="mii-mikrobio-untersuchungsarten.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+tree-filter.png          <br/>
+          <img src="tree-filter.png" alt="tree-filter.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
