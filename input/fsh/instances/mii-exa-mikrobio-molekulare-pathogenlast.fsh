@@ -5,12 +5,13 @@ Title: "MII EXA Mikrobio Molekulare Pathogenlast"
 Description: "Quantitative molekulare Erregerlast am Beispiel der CMV-DNA in Kopien je Milliliter."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "pathogenlast-1"
-* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
+* identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
 * category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
 * category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#33006-8 "Cytomegalovirus DNA [#/volume] (viral load) in Specimen by NAA with probe detection"
 * subject = Reference(mii-exa-mikrobio-patient)
+* performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 350000
 * valueQuantity.system = $ucum

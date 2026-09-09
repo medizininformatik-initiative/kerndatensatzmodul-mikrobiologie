@@ -5,12 +5,13 @@ Title: "MII EXA Mikrobio Aviditaet"
 Description: "Aviditätsbestimmung von CMV-IgG-Antikörpern; der Messwert bleibt in value, die Einordnung steht in interpretation."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "avid-1"
-* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
+* identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
 * category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
 * category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#52984-2 "Cytomegalovirus IgG Ab avidity [Ratio] in Serum or Plasma by Immunoassay"
 * subject = Reference(mii-exa-mikrobio-patient)
+* performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 35
 * valueQuantity.unit = "%"

@@ -26,12 +26,13 @@ Title: "MII EXA Mikrobio Keimzahl Katheterspitze"
 Description: "Keimzahl einer Katheterspitze in koloniebildenden Einheiten ohne Nenner. Die Bezugsgröße steht in Specimen.type."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "keimzahl-katheterspitze-1"
-* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
+* identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
 * category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
 * category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#564-5 "Colony count [#] in Specimen by Visual count"
 * subject = Reference(mii-exa-mikrobio-patient)
+* performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 32
 * valueQuantity.system = $ucum

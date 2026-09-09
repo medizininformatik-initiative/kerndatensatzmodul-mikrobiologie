@@ -5,12 +5,13 @@ Title: "MII EXA Mikrobio Antigen Antikoerper quantitativ"
 Description: "Quantitative Antikörperbestimmung im Serum am Beispiel der Hepatitis-B-Oberflächen-Antikörper."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "ak-qn-1"
-* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
+* identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
 * category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
 * category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#5193-8 "Hepatitis B virus surface Ab [Units/volume] in Serum or Plasma by Immunoassay"
 * subject = Reference(mii-exa-mikrobio-patient)
+* performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueQuantity.value = 42
 * valueQuantity.system = $ucum

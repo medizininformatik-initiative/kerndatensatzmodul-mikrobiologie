@@ -36,7 +36,7 @@ Description: "Mikrobiologischer Befundbericht, der die zugehörigen Untersuchung
 * identifier[befund].type.coding[fillerV2] = $v2-0203#FILL "Filler Identifier"
 * identifier[befund].system = "https://example.org/fhir/sid/test-befund"
 * identifier[befund].value = "mikrobio-dr-1"
-* identifier[befund].assigner.display = "Universitätsklinikum Musterstadt"
+* identifier[befund].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
 // Drei eigenstaendige Kategorien: die des Parents (Labor, zwei Pflicht-Codings),
 // die mikrobiologische, und der Befundtyp.
@@ -55,6 +55,7 @@ Description: "Mikrobiologischer Befundbericht, der die zugehörigen Untersuchung
 * basedOn[0].identifier.system = "https://example.org/fhir/sid/test-anforderung"
 * basedOn[0].identifier.value = "111"
 * subject = Reference(mii-exa-mikrobio-patient)
+* performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * issued = "2026-04-02T10:30:00+01:00"
 * result[0] = Reference(mii-exa-mikrobio-allgemeine-kultur)

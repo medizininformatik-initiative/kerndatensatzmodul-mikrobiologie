@@ -14,6 +14,7 @@
 [mii-exa-mikrobio-empfindlichkeit]: Observation-mii-exa-mikrobio-empfindlichkeit.html
 [mii-exa-mikrobio-keimzahl]: Observation-mii-exa-mikrobio-keimzahl.html
 [mii-exa-mikrobio-keimzahl-katheterspitze]: Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html
+[mii-exa-mikrobio-labor]: Organization-mii-exa-mikrobio-labor.html
 [mii-exa-mikrobio-mikroskopie]: Observation-mii-exa-mikrobio-mikroskopie.html
 [mii-exa-mikrobio-molekulare-pathogenlast]: Observation-mii-exa-mikrobio-molekulare-pathogenlast.html
 [mii-exa-mikrobio-mrgn-klasse]: Observation-mii-exa-mikrobio-mrgn-klasse.html

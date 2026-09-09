@@ -8,9 +8,6 @@
   },
   "identifier": [
     {
-      "assigner": {
-        "display": "Universitätsklinikum Musterstadt"
-      },
       "type": {
         "coding": [
           {
@@ -20,7 +17,10 @@
         ]
       },
       "system": "https://example.org/fhir/sid/test-lab-results",
-      "value": "titer-1"
+      "value": "titer-1",
+      "assigner": {
+        "reference": "Organization/mii-exa-mikrobio-labor"
+      }
     }
   ],
   "category": [
@@ -45,6 +45,11 @@
           "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
         }
       ]
+    }
+  ],
+  "performer": [
+    {
+      "reference": "Organization/mii-exa-mikrobio-labor"
     }
   ],
   "valueRatio": {

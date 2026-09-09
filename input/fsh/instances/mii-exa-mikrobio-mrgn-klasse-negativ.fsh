@@ -11,12 +11,13 @@ Title: "MII EXA Mikrobio MRGN Klasse negativ"
 Description: "Identifiziertes gramnegatives Isolat, dessen Empfindlichkeitsbefunde bewertet wurden und das keiner MRGN-Klasse zuzuordnen ist."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "mrgn-neg-1"
-* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
+* identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
 * category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
 * category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#99780-9 "Multidrug resistant gram-negative organism classification [Type]"
 * subject = Reference(mii-exa-mikrobio-patient)
+* performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = MII_CS_Mikrobio_MRGN_Ergebnis#keine-mrgn-klasse "Keine MRGN-Klasse"
 * derivedFrom.reference = "Observation/mii-exa-mikrobio-empfindlichkeit"

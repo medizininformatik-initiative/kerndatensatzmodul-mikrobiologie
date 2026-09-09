@@ -5,7 +5,7 @@ Title: "MII EXA Mikrobio Voraussichtliche Empfindlichkeit"
 Description: "Aus dem Genotyp abgeleitete erwartete Empfindlichkeit gegenüber Rifampicin."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "v-empf-1"
-* identifier[analyseBefundCode].assigner.display = "Universitätsklinikum Musterstadt"
+* identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
 * category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
 * category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
@@ -16,6 +16,7 @@ Description: "Aus dem Genotyp abgeleitete erwartete Empfindlichkeit gegenüber R
 // Wer ein generisches Beispiel braucht, braucht einen anderen Code — nicht ein anderes Display.
 * code = $loinc#89489-9 "rifAMPin [Susceptibility] by Genotype method"
 * subject = Reference(mii-exa-mikrobio-patient)
+* performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $v3-ObservationInterpretation#S "Susceptible"
 * specimen = Reference(mii-exa-mikrobio-probe)

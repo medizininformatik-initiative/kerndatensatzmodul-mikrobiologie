@@ -17,11 +17,11 @@
           }
         ]
       },
-      "assigner": {
-        "display": "Universitätsklinikum Musterstadt"
-      },
       "system": "https://example.org/fhir/sid/test-befund",
-      "value": "mikrobio-dr-1"
+      "value": "mikrobio-dr-1",
+      "assigner": {
+        "reference": "Organization/mii-exa-mikrobio-labor"
+      }
     }
   ],
   "category": [
@@ -82,6 +82,11 @@
         "system": "https://example.org/fhir/sid/test-anforderung",
         "value": "111"
       }
+    }
+  ],
+  "performer": [
+    {
+      "reference": "Organization/mii-exa-mikrobio-labor"
     }
   ],
   "result": [
