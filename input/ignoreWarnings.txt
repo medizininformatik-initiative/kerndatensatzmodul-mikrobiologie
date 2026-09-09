@@ -73,3 +73,11 @@ The Implementation Guide Resource id should be de.medizininformatikinitiative.ke
 # NCI-EVS-API geprueft: C36292 = "Laboratory Test Result", C25294 =
 # "Laboratory Procedure". Beide passen zu einem mikrobiologischen Labormodul.
 %in the CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl'%
+
+# Verweise auf FREMDE experimentelle CodeSystems. Bewusst je System gefiltert
+# und nicht pauschal ueber den Meldungstext: Waere eines unserer eigenen
+# CodeSystems experimental, soll die Meldung sichtbar bleiben.
+#   NCI Thesaurus  -> artifact-topic (siehe oben)
+#   observation-triggeredbytype -> die mitgefuehrte R5-Extension
+%Reference to experimental CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl%
+%Reference to experimental CodeSystem http://hl7.org/fhir/observation-triggeredbytype%
