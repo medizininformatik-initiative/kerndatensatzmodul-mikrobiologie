@@ -28,6 +28,12 @@ um eine konforme Umsetzung zu bauen — siehe die FHIR-Dokumentation zur
 
 * [Paket (komprimierter Ordner)](../package.tgz){::download="true"}
 
+Der Leitfaden ist zweisprachig, deshalb erzeugt der Publisher zusätzlich je ein
+Paket pro Sprache mit den Ressourcentexten dieser Sprache:
+
+* [Paket, Englisch](../de.medizininformatikinitiative.kerndatensatz.mikrobiologie.en.tgz){::download="true"}
+* [Paket, Deutsch](../de.medizininformatikinitiative.kerndatensatz.mikrobiologie.de.tgz){::download="true"}
+
 #### Herunterladbare Kopie dieses Leitfadens
 
 Eine herunterladbare Fassung des gerenderten Leitfadens für den lokalen Betrieb:
@@ -60,15 +66,15 @@ Die `ImplementationGuide`-Ressource trägt die technischen Details dieser
 Veröffentlichung einschließlich ihrer Abhängigkeiten und
 Veröffentlichungsparameter.
 
-> [TODO: Diese Vorlage liefert keine Seite für diese Ressource aus, hier ist
-> also noch nichts zu verlinken. `kerndatensatz-basis` veröffentlicht eine
-> solche Seite als `input/pagecontent/ImplementationGuide-mii-ig-base.md`,
-> eingetragen unter `pages:` in `sushi-config.yaml`. Legen Sie das Gegenstück
-> für Ihr Modul in beiden Sprachen an und verlinken Sie es hier. Der Dateiname
-> muss Ihren Slug wörtlich enthalten: ein `pages:`-Dateiname kann keinen
-> Platzhalter tragen, weil die Platzhalter-Ersetzung Dateiinhalte ersetzt, nicht
-> Dateinamen.]
-{: .ig-highlight .ig-highlight-grey}
+* [ImplementationGuide-Ressource](ImplementationGuide-mii-ig-mikrobiologie.html)
+
+#### Definitionen und Expansionen
+
+Die Konformitätsressourcen für sich genommen, und die ValueSets mit bereits
+aufgelösten Codes:
+
+* [Definitionen, XML](../definitions.xml.zip) · [JSON](../definitions.json.zip)
+* [Expansionen, XML](../expansions.xml.zip) · [JSON](../expansions.json.zip)
 
 #### Versionshistorie
 
@@ -76,7 +82,5 @@ Frühere Versionen und die ausführliche Änderungshistorie stehen auf den Seite
 [Versionierung](version-history.html) und
 [Änderungshistorie](changes.html).
 
-> [TODO: Ergänzen Sie weitere Downloads Ihres Moduls — etwa ein Beispiel-Bundle,
-> ein Datenwörterbuch oder eine Mapping-Tabelle — und entfernen Sie die oben
-> aufgeführten Einträge, die Ihr Build nicht erzeugt.]
-{: .ig-highlight .ig-highlight-grey}
+Darüber hinaus bietet das Modul keine eigenen Downloads über die vom Publisher
+erzeugten hinaus.
