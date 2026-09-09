@@ -15,7 +15,7 @@
 # MII" — prefixes PR, EX, LM, VS, CS, CM, SM, NS, SP, CPS, OD, IG, QST, OBSDEF,
 # MSR, EXA, PARAM.
 #
-# PLACEHOLDERS: mikrobio, Mikrobio and 2027.0.0-alpha.6 are
+# PLACEHOLDERS: mikrobio, Mikrobio and 2027.0.0-ballot.rc1 are
 # replaced when you create your module — see the header of sushi-config.yaml.
 #
 # MIGRATION 2026-08-25: the template's starter artefacts were deleted (skill
@@ -70,7 +70,7 @@
 - name: version-filled
   status: "Checking that every conformance resource carries the release version"
   filter: (StructureDefinition or ValueSet or CodeSystem or ConceptMap or StructureMap or SearchParameter or CapabilityStatement or OperationDefinition or ImplementationGuide).exists()
-  predicate: version.exists() and (version in ('2027.0.0-alpha.6'))
+  predicate: version.exists() and (version in ('2027.0.0-ballot.rc1'))
   error-message: "version missing, or not equal to the module's CalVer version"
   files:
     - /**/*.xml

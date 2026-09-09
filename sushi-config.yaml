@@ -103,7 +103,7 @@ description: "Core Dataset extension module Microbiology of the Medical Informat
 status: active # draft | active | retired | unknown
 # MII modules use CalVer YYYY.n.n (e.g. 2026.0.1) per the MII Module Release
 # Workflow — NOT SemVer. Only the template tooling repos use SemVer.
-version: "2027.0.0-alpha.6"
+version: "2027.0.0-ballot.rc1"
 # packageId pattern per the MII naming convention:
 # de.medizininformatikinitiative.kerndatensatz.<slug> (for example,
 # kerndatensatz-basis uses de.medizininformatikinitiative.kerndatensatz.base).
@@ -114,10 +114,17 @@ packageId: de.medizininformatikinitiative.kerndatensatz.mikrobiologie
 applyExtensionMetadataToRoot: false
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: "2026+"
-# MIGRATION (spec §2.2): carried verbatim from the source sushi-config.yaml.
-# The source uses this field as a version string and it CONTRADICTS `version`
-# above (2026 vs 2027) — reported at Gate A, not corrected here.
-releaseLabel: 2026.0.0-alpha.6
+# Aufgeloest am 2026-09-09 mit dem Setzen von version: 2027.0.0-ballot.rc1.
+# Die Quelle nutzte dieses Feld als Versionsstring (`2026.0.0-alpha.6`) und
+# widersprach damit `version` oben — das Jahr stimmte nicht einmal ueberein. Die
+# Migration hatte den Wert verbatim uebernommen und den Widerspruch als
+# Gate-A-Punkt gemeldet, nicht korrigiert (spec §2.2).
+#
+# releaseLabel ist kein Versionsfeld, sondern das Statuslabel, das der IG
+# Publisher in das Kopfbanner rendert. Fuer einen Ballot-Kandidaten ist `ballot`
+# der Wert. Ein Versionsstring an dieser Stelle haette auf dem Ballot-Leitfaden
+# sichtbar `2026.0.0-alpha.6` angezeigt.
+releaseLabel: ballot
 # MIGRATION (spec §2.2): the source declares NO licence anywhere — no LICENSE
 # file, no `license:`, no package-manifest field. This is the TEMPLATE DEFAULT,
 # confirmed as the intended value at Gate A on 2026-08-25, not a carried value,
@@ -180,7 +187,7 @@ extension:
       - url: packageId
         valueId: de.medizininformatikinitiative.kerndatensatz.mikrobiologie
       - url: version
-        valueString: "2027.0.0-alpha.6"
+        valueString: "2027.0.0-ballot.rc1"
       - url: uri
         valueUri: https://www.medizininformatik-initiative.de/fhir/modul-mikrobio
   # Year this release sequence became effective
@@ -311,7 +318,26 @@ dependencies:
   # (`laboruntersuchung` bzw. `laborbefund`) und legt seine Pflicht-Codings dort
   # ab. Dieses Modul ergänzt seine mikrobiologischen Kategorien daneben, statt sie
   # wie zuvor in den Parent-Slice hineinzuschreiben.
-  de.medizininformatikinitiative.kerndatensatz.laborbefund: 2027.0.0-ballot.rc3
+  #
+  # Die URI wird AUSDRUECKLICH gesetzt, weil das ueber Simplifier veroeffentlichte
+  # Paketmanifest kein `canonical`-Feld fuehrt. Gemessen am 2026-09-09 direkt an
+  # den Registry-Tarballs: weder rc3 noch rc4 hat das Feld, beide tragen statt
+  # dessen die npm-Felder `homepage` und `keywords`. Ohne `canonical` faellt SUSHI
+  # auf `http://fhir.org/packages/...` zurueck und der IG Publisher bricht ab:
+  # "points to the canonical ... which is inconsistent with the stated canonical".
+  #
+  # Dass es bis rc3 gutging, war ein Zufall dieses Rechners: der rc3-Eintrag im
+  # lokalen Paket-Cache stammte aus einem IG-Publisher-Lauf, nicht von Simplifier
+  # (erkennbar an `tools-version`, `notForPublication`, `date`, `url`), und trug
+  # das Feld deshalb. Der Pin ist also nicht rc4-spezifisch und bleibt auch beim
+  # naechsten Versionssprung noetig, solange das Modul ueber Simplifier erscheint.
+  #
+  # Der Wert ist die Canonical aus der sushi-config.yaml des Labormoduls, um
+  # /ImplementationGuide/<ig-id> ergaenzt -- genau die Form, die SUSHI selbst
+  # erzeugt, wenn das Manifest vollstaendig ist.
+  de.medizininformatikinitiative.kerndatensatz.laborbefund:
+    uri: https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor
+    version: 2027.0.0-ballot.rc4
   # ---- added by the migration: TEMPLATE MACHINERY, not source identity ----
   # Required by the CRMI profiles this IG now claims under meta.profile above.
   # Without it the three crmi-*implementationguide claims cannot resolve.

@@ -11,7 +11,8 @@ RuleSet: MIKRO_OBSERVATION_COMMON
 // SUSHI schluckt eine Abweichung, der IG Publisher bricht beim Snapshot ab.
 // `contains` allein genuegt, weil das Slicing des Parents offen ist.
 // Ein Slice, ein fester Wert, keine Coding-Ebene — genau wie der Parent seinen
-// eigenen Slice fuehrt (laborbefund@2027.0.0-ballot.rc3). Die frueher hier
+// eigenen Slice fuehrt (laborbefund@2027.0.0-ballot.rc4; Slicing-Form gegenueber
+// rc3 unveraendert, Snapshots am 2026-09-09 verglichen). Die frueher hier
 // geslicten Codings sind entfallen: 26436-6 und observation-category#laboratory
 // gehoerten nie in diesen Slice (sie sind die LABOR-Kategorie und liegen jetzt im
 // Parent-Slice), und LOINC 18725-2 war ein optionales Zweit-Coding, dessen

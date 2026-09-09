@@ -43,7 +43,7 @@ Components of Observations were moved into separate profiles in this version.
 | Publication |               |
 |-------------|---------------|
 | Date        | TODO:REVIEW (release date - set at Gate D) |
-| Version     | 2027.0.0-alpha.6 (CalVer `YYYY.n.n`) |
+| Version     | 2027.0.0-ballot.rc1 (CalVer `YYYY.n.n`) |
 | Status      | active        |
 | Realm       | DE            |
 

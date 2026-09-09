@@ -53,7 +53,7 @@ Profile überführt.
 | Veröffentlichung |               |
 |------------------|---------------|
 | Datum            | TODO:REVIEW (Releasedatum — wird zu Gate D gesetzt) |
-| Version          | 2027.0.0-alpha.6 (CalVer `JJJJ.n.n`) |
+| Version          | 2027.0.0-ballot.rc1 (CalVer `JJJJ.n.n`) |
 | Status           | active        |
 | Realm            | DE            |
 
