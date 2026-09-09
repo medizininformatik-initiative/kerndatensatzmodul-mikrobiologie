@@ -1,7 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 <!-- Source: kerndatensatz-basis input/pagecontent/logical-models.md.
      German mirror: input/translations/de/pagecontent/logical-models.md. -->
-### Logical Models
 
 The logical data models of the **Microbiology** module describe the domain dataset independently of its concrete FHIR representation.
 

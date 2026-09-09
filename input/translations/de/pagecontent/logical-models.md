@@ -1,5 +1,4 @@
 <!-- markdownlint-disable MD041 -->
-### Logische Modelle
 
 Die logischen Datenmodelle des Moduls **Mikrobiologie** beschreiben den fachlichen Datensatz unabhängig von der konkreten FHIR-Repräsentation.
 

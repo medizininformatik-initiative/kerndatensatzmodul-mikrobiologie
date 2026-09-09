@@ -3,7 +3,6 @@
      GENERIERT aus den Descriptions der ValueSets und aus den Profil-Bindungen,
      die sie verwenden — bei neuen ValueSets oder geänderten Bindungen neu
      erzeugen. -->
-### Value Sets
 
 Diese Seite listet die ValueSets des Moduls **Mikrobiologie** (Namenskonvention
 `MII_VS_<Modul>_<Name>`). Jede Zeile nennt den Zweck; die Codes und die

@@ -2,14 +2,13 @@
 <!-- Split from the former combined profiles-and-extensions.md per the TF-KDS-agreed
      menu structure (one page per artifact type).
      German mirror: input/translations/de/pagecontent/extensions.md. -->
-### Extensions
 
 The module defines **one** extension of its own, following the MII naming
 convention `MII_EX_<Module>_<Name>`, and vendors **one** HL7 cross-version
 extension it cannot yet obtain from a package. The profiles that use them are on
 the [Profiles](profiles.html) page.
 
-#### MII EX Mikrobio Empfindlichkeit Norm
+### MII EX Mikrobio Empfindlichkeit Norm
 
 [mii-ex-mikrobio-empfindlichkeit-norm](StructureDefinition-mii-ex-mikrobio-empfindlichkeit-norm.html)
 names the normative system on whose breakpoints a susceptibility category rests —
@@ -25,7 +24,7 @@ requires it once per interpretation (`1..1 MS`). The reasoning is set out under
 [Interpretation](interpretation.html), including the open point that the norm's
 *version* is not yet expressible.
 
-#### R5: Triggering observation(s)
+### R5: Triggering observation(s)
 
 [ext-R5-Observation.triggeredBy](StructureDefinition-ext-R5-Observation.triggeredBy.html)
 is **not** an MII extension. It is a copy of the HL7 cross-version extension

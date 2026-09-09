@@ -1,7 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 <!-- Table GENERATED from the SearchParameter resources.
      German mirror: input/translations/de/pagecontent/search-parameters.md. -->
-### Search Parameters
 
 The **Microbiology** module defines the following search parameters beyond the
 FHIR base set. All of them apply to `Observation`.

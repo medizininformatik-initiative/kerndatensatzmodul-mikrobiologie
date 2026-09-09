@@ -1,7 +1,6 @@
 <!-- markdownlint-disable MD041 -->
 <!-- Table GENERATED from the CodeSystems and their descriptions.
      German mirror: input/translations/de/pagecontent/code-systems.md. -->
-### Code Systems
 
 This page lists the code systems the **Microbiology** module defines itself
 (naming convention `MII_CS_<Module>_<Name>`). They cover what the international

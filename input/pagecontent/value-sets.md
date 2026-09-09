@@ -5,7 +5,6 @@
      descriptions and from the profile bindings that use them — regenerate it when
      ValueSets are added or their bindings change.
      German mirror: input/translations/de/pagecontent/value-sets.md. -->
-### Value Sets
 
 This page lists the ValueSets of the **Microbiology** module (naming convention
 `MII_VS_<Module>_<Name>`). Each row names what the set is for; follow the link for

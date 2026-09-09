@@ -1,14 +1,13 @@
 <!-- markdownlint-disable MD041 -->
 <!-- Deutsche Übersetzung von input/pagecontent/extensions.md (aufgeteilt aus
      der früheren Kombi-Seite profiles-and-extensions.md). -->
-### Extensions
 
 Das Modul definiert **eine** eigene Extension nach der MII-Namenskonvention
 `MII_EX_<Modul>_<Name>` und führt **eine** HL7-Cross-Version-Extension mit, die
 es bisher nicht aus einem Paket beziehen kann. Die Profile, die sie verwenden,
 stehen auf der Seite [Profile](profiles.html).
 
-#### MII EX Mikrobio Empfindlichkeit Norm
+### MII EX Mikrobio Empfindlichkeit Norm
 
 [mii-ex-mikrobio-empfindlichkeit-norm](StructureDefinition-mii-ex-mikrobio-empfindlichkeit-norm.html)
 benennt das Normsystem, auf dessen Grenzwerten eine Empfindlichkeitskategorie
@@ -25,7 +24,7 @@ verlangt sie je Bewertung genau einmal (`1..1 MS`). Die Begründung steht unter
 [Interpretation](interpretation.html), einschließlich des offenen Punktes, dass
 die *Version* der Norm bisher nicht ausdrückbar ist.
 
-#### R5: Triggering observation(s)
+### R5: Triggering observation(s)
 
 [ext-R5-Observation.triggeredBy](StructureDefinition-ext-R5-Observation.triggeredBy.html)
 ist **keine** MII-Extension. Sie ist eine Kopie der HL7-Cross-Version-Extension

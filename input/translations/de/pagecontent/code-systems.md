@@ -1,6 +1,5 @@
 <!-- markdownlint-disable MD041 -->
 <!-- Tabelle GENERIERT aus den CodeSystems und ihren Descriptions. -->
-### Code Systems
 
 Diese Seite listet die CodeSysteme, die das Modul **Mikrobiologie** selbst
 definiert (Namenskonvention `MII_CS_<Modul>_<Name>`). Sie decken ab, wofür in

@@ -1,6 +1,5 @@
 <!-- markdownlint-disable MD041 -->
 <!-- Tabelle GENERIERT aus den SearchParameter-Ressourcen. -->
-### Search Parameters
 
 Das Modul **Mikrobiologie** definiert die folgenden Suchparameter über die
 FHIR-Basisparameter hinaus. Alle gelten für `Observation`.
