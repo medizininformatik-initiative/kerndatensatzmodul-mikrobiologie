@@ -8,6 +8,3 @@ Die Abbildung diagnostischer Ketten erfolgt in Abstimmung mit HL7 Europe (im Kon
 |---------|---------------------|
 | **!** | Für verpflichtende oder als must-support markierten Elemente sei an dieser Stelle auf die entsprechenden [Regeln der IPS](https://build.fhir.org/ig/HL7/fhir-ips/design.html#must-support) verwiesen, die auch für diesen ImplementationGuide gelten. |
 
-<!-- DERIVED:bridge source=MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Index.page.md gate=B -->
-> **Während der Migration geschrieben — vor der Veröffentlichung prüfen.** Die zehn Unterseiten dieses Abschnitts sind im migrierten Leitfaden verteilt: die vier Familienübersichten (Kultur, Bestimmung, Quantitative Tests, Weitere Eigenschaften) stehen als Abschnitte auf [Profile](profiles.html), die Beschreibung jedes einzelnen Profils steht als Intro-Note auf der jeweiligen Artefaktseite, und [Probe](probe.html) sowie [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html) haben eigene Seiten.
-{: .ig-highlight .ig-highlight-blue}
