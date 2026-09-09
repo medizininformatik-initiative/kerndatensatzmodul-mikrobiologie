@@ -16,3 +16,11 @@ The value provided ('de') was not found in the value set 'All Languages' (http:/
 The value provided ('de-DE') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de-DE' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de-DE' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
 The value provided ('en') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'en' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#en' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
 The value provided ('en-US') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'en-US' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#en-US' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
+
+# Die Elementnamen der Logical Models folgen dem abgenommenen ART-DECOR-Modell
+# (deutsche CamelCase-Begriffe). eld-20 ist eine Empfehlung fuer
+# Codegeneratoren, keine Konformitaetsanforderung; die Namen sind fachlich
+# abgestimmt und werden nicht umbenannt. Betrifft 315 Meldungen, davon 256 aus
+# mii-lm-mikrobio-untersuchungsarten. Wortgleich mit dem Eintrag im Basismodul
+# Labor, dort aus demselben Grund.
+Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
