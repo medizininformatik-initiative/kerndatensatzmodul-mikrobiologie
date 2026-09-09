@@ -25,20 +25,33 @@ each MII CalVer release is bound to one SNOMED CT International release.
 |---|---|---|
 | `v2025.*` | 2024-07-01 | `http://snomed.info/sct/900000000000207008/version/20240701` |
 | `v2026.*` | 2025-07-01 | `http://snomed.info/sct/900000000000207008/version/20250701` |
+| `v2027.*` | 2026-07-01 | `http://snomed.info/sct/900000000000207008/version/20260701` |
 
-The shipped file carries the **verified `v2026.*` pin**, matching the 2026
-dependency line this template pins in `sushi-config.yaml`. When your module moves
-to a later CalVer line, look the release up in that wiki table and update this
-file **and** the `$sct` alias in `input/fsh/aliases.fsh`. Do not guess a version —
-if the wiki has no row for your CalVer line yet, ask the MII Taskforce Core Data
-Set / the Interoperability Working Group before releasing.
+The shipped file carries the **`v2027.*` pin**, matching this module's version.
+When the module moves to a later CalVer line, look the release up in that wiki
+table and update this file. Do not guess a version — if the wiki has no row for
+your CalVer line yet, ask the MII Taskforce Core Data Set / the Interoperability
+Working Group before releasing.
 
-The second pin, `artifact-version-policy-codes|3.0.0`, is the code system behind
-the CRMI version-policy extension that `input/fsh/rulesets/crmi.fsh` puts on every
-artifact (basis pins it the same way). Add a `system-version` entry for every
-further code system your module's value sets expand against — e.g. basis also
-pins `http://hl7.org/fhir/encounter-status|4.0.1` because its Encounter profile
-binds to it.
+The full set of pins, all matching the Labor base module:
+
+| Pin | Why |
+|---|---|
+| `force-system-version` LOINC `2.82` | `force-` also overrides resources that name another LOINC version |
+| `system-version` SNOMED CT `…/20260701` | the release bound to the `v2027.*` line |
+| `system-version` LOINC `2.82` | |
+| `system-version` `v3-ObservationInterpretation|4.0.0` | the code system arrives in THREE versions — 6.2.0 via IPS→IPA, 7.1.0 from our own pin, 7.2.0 via meta→CRMI. Without this entry the publisher picks one itself |
+| `system-version` `artifact-version-policy-codes|3.0.0` | the code system behind the CRMI version-policy extension `input/fsh/rulesets/crmi.fsh` puts on every artifact |
+
+### The SNOMED pin makes the public terminology server unusable
+
+Measured 2026-09-09: SU-TermServ holds `…/version/20260701`, **tx.fhir.org does
+not** — and the two servers share no version of the SNOMED CT International
+edition at all. A build against `https://tx.fhir.org` therefore reports ~100
+validation errors, where before the pin it merely expanded some value sets
+incompletely. The public server is documented as the fallback in
+`.github/workflows/ig-publisher.yml` when no SU-TermServ client certificate is
+configured; that path now yields a faulty guide, not a degraded one.
 
 The policy governs **ValueSet expansion**. MII profiles do not currently require
 `Coding.version` for SNOMED CT in instance data (they do for ICD-10-GM, OPS and

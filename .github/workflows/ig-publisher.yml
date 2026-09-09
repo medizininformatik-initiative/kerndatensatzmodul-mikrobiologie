@@ -279,7 +279,7 @@ jobs:
             echo "Terminology: SU-TermServ via client-certificate proxy" >> "${GITHUB_STEP_SUMMARY}"
           else
             echo "tx=https://tx.fhir.org" >> "${GITHUB_OUTPUT}"
-            echo "::notice::No SU-TermServ client certificate configured — falling back to the public HL7 terminology server https://tx.fhir.org. Some MII-specific value sets may not fully expand (a QA note, not a failure)."
+            echo "::warning::No SU-TermServ client certificate configured — falling back to the public HL7 terminology server https://tx.fhir.org. That server does not hold the SNOMED CT release this module pins (see input/resources/README.md), so the build reports validation errors and the rendered guide is NOT release-quality. Use it for a quick look only."
             echo "Terminology: public HL7 fallback (https://tx.fhir.org)" >> "${GITHUB_STEP_SUMMARY}"
           fi
 
