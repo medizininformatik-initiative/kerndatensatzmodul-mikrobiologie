@@ -1,4 +1,4 @@
-# Metadaten-Übersicht - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# Metadaten-Übersicht - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Metadaten-Übersicht**
@@ -70,7 +70,7 @@ Veröffentlicht ein Modul CodeSystem-Supplements, ist zu beachten: Das CRMI-Prof
 
 Das menschenlesbare Versionsschema beschreibt die Seite [Versionierung](version-history.md). Dieser Abschnitt beschreibt, wie diese Politik als CRMI-Metadaten ausgedrückt wird.
 
-Das Modul verwendet die Kalender-Versionierung in der SemVer-kompatiblen numerischen Form `JJJJ.MINOR.PATCH[-label]`, derzeit `2027.0.0-alpha.6`. Das Kalenderjahr dient als CRMI-`<major>`-Komponente; `MINOR` und `PATCH` behalten ihre übliche additive bzw. korrigierende Bedeutung. Stabile Versionen lassen sich damit über den deklarierten Versionsalgorithmus `semver` vergleichen. Labels tragen Vorab- oder Build-Informationen; gemäß CRMI-/FHIR-Konvention wird zwischen Labels keine Reihenfolge abgeleitet.
+Das Modul verwendet die Kalender-Versionierung in der SemVer-kompatiblen numerischen Form `JJJJ.MINOR.PATCH[-label]`, derzeit `2027.0.0-ballot.rc1`. Das Kalenderjahr dient als CRMI-`<major>`-Komponente; `MINOR` und `PATCH` behalten ihre übliche additive bzw. korrigierende Bedeutung. Stabile Versionen lassen sich damit über den deklarierten Versionsalgorithmus `semver` vergleichen. Labels tragen Vorab- oder Build-Informationen; gemäß CRMI-/FHIR-Konvention wird zwischen Labels keine Reihenfolge abgeleitet.
 
 | | |
 | :--- | :--- |

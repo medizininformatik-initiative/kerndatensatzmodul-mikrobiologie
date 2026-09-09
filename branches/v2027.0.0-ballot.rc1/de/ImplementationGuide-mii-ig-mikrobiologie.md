@@ -1,4 +1,4 @@
-# MII ImplementationGuide Ressource - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# MII ImplementationGuide Ressource - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **MII ImplementationGuide Ressource**
@@ -109,7 +109,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     },
     {
       "url" : "version",
-      "valueString" : "2027.0.0-alpha.6"
+      "valueString" : "2027.0.0-ballot.rc1"
     },
     {
       "url" : "uri",
@@ -191,12 +191,12 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     "valueMarkdown" : "Provide the computable publication unit for the MII Core Dataset Microbiology module, enabling implementers to discover, validate, version, and apply the specification consistently."
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie",
-  "version" : "2027.0.0-alpha.6",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_IG_Mikrobiologie",
   "title" : "MII Implementation Guide Microbiology",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T14:02:02+00:00",
+  "date" : "2026-09-09T10:10:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -251,9 +251,9 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_laborbefund",
-    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.laborbefund",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.laborbefund",
-    "version" : "2027.0.0-ballot.rc3"
+    "version" : "2027.0.0-ballot.rc4"
   },
   {
     "id" : "hl7_fhir_uv_crmi",
@@ -292,7 +292,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "value",
-        "valueString" : "2026.0.0-alpha.6"
+        "valueString" : "ballot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -863,7 +863,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "value",
-        "valueString" : "2026.0.0-alpha.6"
+        "valueString" : "ballot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

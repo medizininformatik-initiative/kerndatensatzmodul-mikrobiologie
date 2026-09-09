@@ -1,4 +1,4 @@
-# Home - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# Home - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Home**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie | *Version*:2027.0.0-alpha.6 |
-| Active as of 2026-09-08 | *Computable Name*:MII_IG_Mikrobiologie |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-09 | *Computable Name*:MII_IG_Mikrobiologie |
 
 ### Introduction
 
@@ -30,7 +30,7 @@ Components of Observations were moved into separate profiles in this version.
 | | |
 | :--- | :--- |
 | Date | TODO:REVIEW (release date - set at Gate D) |
-| Version | 2027.0.0-alpha.6 (CalVer`YYYY.n.n`) |
+| Version | 2027.0.0-ballot.rc1 (CalVer`YYYY.n.n`) |
 | Status | active |
 | Realm | DE |
 

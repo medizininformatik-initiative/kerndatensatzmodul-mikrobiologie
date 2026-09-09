@@ -1,4 +1,4 @@
-# MII VS Mikrobio Susceptibility Norm - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# MII VS Mikrobio Susceptibility Norm - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility-norm | *Version*:2027.0.0-alpha.6 |
-| Active as of 2026-09-08 | *Computable Name*:MII_VS_Mikrobio_Susceptibility_NORM |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility-norm | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-09 | *Computable Name*:MII_VS_Mikrobio_Susceptibility_NORM |
 
  
 Norm-ValueSet für die Empfindlichkeitstestung: das Normsystem, auf dessen Grenzwerten eine Kategorie beruht. Gebunden an die Extension MII_EX_Mikrobio_Empfindlichkeit_Norm. 
@@ -37,12 +37,12 @@ Norm-ValueSet für die Empfindlichkeitstestung: das Normsystem, auf dessen Grenz
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-susceptibility-norm",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility-norm",
-  "version" : "2027.0.0-alpha.6",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Mikrobio_Susceptibility_NORM",
   "title" : "MII VS Mikrobio Susceptibility Norm",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T14:02:02+00:00",
+  "date" : "2026-09-09T10:10:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

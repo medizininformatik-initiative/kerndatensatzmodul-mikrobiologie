@@ -1,4 +1,4 @@
-# Anleitung für Implementierende - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# Anleitung für Implementierende - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Anleitung**](guidance.md)

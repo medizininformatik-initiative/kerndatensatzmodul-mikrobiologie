@@ -1,4 +1,4 @@
-# MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed | *Version*:2027.0.0-alpha.6 |
-| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED |
 
  
 Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet. 
@@ -37,12 +37,12 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des 
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed",
-  "version" : "2027.0.0-alpha.6",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED",
   "title" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T14:02:02+00:00",
+  "date" : "2026-09-09T10:10:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

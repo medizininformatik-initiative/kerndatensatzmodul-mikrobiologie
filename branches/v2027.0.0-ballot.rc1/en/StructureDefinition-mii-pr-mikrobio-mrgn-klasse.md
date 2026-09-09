@@ -1,4 +1,4 @@
-# MII PR Mikrobio MRGN Klasse - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# MII PR Mikrobio MRGN Klasse - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse | *Version*:2027.0.0-alpha.6 |
-| Active as of 2026-09-08 | *Computable Name*:MII_PR_Mikrobio_MRGN_Klasse |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-09 | *Computable Name*:MII_PR_Mikrobio_MRGN_Klasse |
 
  
 MRGN-Klasse beschreibt die Einstufung multiresistenter gramnegativer Erreger entsprechend der RKI-Kategorisierung. 
@@ -180,12 +180,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse",
-  "version" : "2027.0.0-alpha.6",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Mikrobio_MRGN_Klasse",
   "title" : "MII PR Mikrobio MRGN Klasse",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T14:02:02+00:00",
+  "date" : "2026-09-09T10:10:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

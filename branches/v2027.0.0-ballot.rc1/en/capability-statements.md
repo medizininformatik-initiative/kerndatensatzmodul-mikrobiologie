@@ -1,4 +1,4 @@
-# Capability Statements - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# Capability Statements - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * **Capability Statements**

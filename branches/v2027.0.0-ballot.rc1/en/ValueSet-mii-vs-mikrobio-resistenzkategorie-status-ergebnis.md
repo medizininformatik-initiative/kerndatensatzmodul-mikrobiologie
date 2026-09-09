@@ -1,4 +1,4 @@
-# MII VS Mikrobio Resistenzkategorie Status Ergebnis - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# MII VS Mikrobio Resistenzkategorie Status Ergebnis - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis | *Version*:2027.0.0-alpha.6 |
-| Active as of 2026-09-08 | *Computable Name*:MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-09 | *Computable Name*:MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis |
 
  
 Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observation.code angegebenen Resistenzkategorie. 
@@ -37,12 +37,12 @@ Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observa
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-resistenzkategorie-status-ergebnis",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis",
-  "version" : "2027.0.0-alpha.6",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis",
   "title" : "MII VS Mikrobio Resistenzkategorie Status Ergebnis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T14:02:02+00:00",
+  "date" : "2026-09-09T10:10:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

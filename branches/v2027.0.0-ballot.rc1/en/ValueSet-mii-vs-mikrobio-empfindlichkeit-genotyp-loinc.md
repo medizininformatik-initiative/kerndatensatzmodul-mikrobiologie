@@ -1,4 +1,4 @@
-# MII VS Mikrobio Empfänglichkeit Genotyp [LOINC] - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# MII VS Mikrobio Empfänglichkeit Genotyp [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc | *Version*:2027.0.0-alpha.6 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc | *Version*:2027.0.0-ballot.rc1 |
 | Active as of 2023-03-02 | *Computable Name*:MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC |
 
  
@@ -37,7 +37,7 @@ Tests-ValueSet für die voraussichtliche Empfindlichkeit: LOINC-Codes für die a
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-empfindlichkeit-genotyp-loinc",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc",
-  "version" : "2027.0.0-alpha.6",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC",
   "title" : "MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]",
   "status" : "active",

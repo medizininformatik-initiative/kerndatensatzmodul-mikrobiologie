@@ -1,4 +1,4 @@
-# R5: Triggering observation(s) (new) - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# R5: Triggering observation(s) (new) - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy | *Version*:2027.0.0-alpha.6 |
-| Active Stand: 2026-09-08 | *Maschinenlesbarer Name*:ExtensionObservation_TriggeredBy |
+| *Offizielle URL*:http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy | *Version*:2027.0.0-ballot.rc1 |
+| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:ExtensionObservation_TriggeredBy |
 
 R5: `Observation.triggeredBy` (new:BackboneElement)
 
@@ -83,12 +83,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-ext-R5-Obser
     "valueCode" : "fhir"
   }],
   "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy",
-  "version" : "2027.0.0-alpha.6",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "ExtensionObservation_TriggeredBy",
   "title" : "R5: Triggering observation(s) (new)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T14:02:02+00:00",
+  "date" : "2026-09-09T10:10:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

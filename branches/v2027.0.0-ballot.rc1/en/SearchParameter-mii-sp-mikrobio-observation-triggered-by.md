@@ -1,4 +1,4 @@
-# mii-sp-mikrobio-observation-triggered-by - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# mii-sp-mikrobio-observation-triggered-by - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-triggered-by | *Version*:2027.0.0-alpha.6 |
-| Active as of 2026-09-08 | *Computable Name*:MII_SP_Mikrobio_Observation_TriggeredBy |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-triggered-by | *Version*:2027.0.0-ballot.rc1 |
+| Active as of 2026-09-09 | *Computable Name*:MII_SP_Mikrobio_Observation_TriggeredBy |
 
  
 Suche nach der Observation, die eine mikrobiologische Observation ausgelöst hat. 
@@ -23,11 +23,11 @@ Suche nach der Observation, die eine mikrobiologische Observation ausgelöst hat
   "resourceType" : "SearchParameter",
   "id" : "mii-sp-mikrobio-observation-triggered-by",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-triggered-by",
-  "version" : "2027.0.0-alpha.6",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_SP_Mikrobio_Observation_TriggeredBy",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-08T14:02:02+00:00",
+  "date" : "2026-09-09T10:10:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

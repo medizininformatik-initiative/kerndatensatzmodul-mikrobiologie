@@ -1,4 +1,4 @@
-# MII EXA Mikrobio Workflow VRE 2 Identifikation - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# MII EXA Mikrobio Workflow VRE 2 Identifikation - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)

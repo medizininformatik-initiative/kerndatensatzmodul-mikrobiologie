@@ -1,4 +1,4 @@
-# MII VS Mikrobio Voraussichtliche Empfindlichkeit - MII Implementation Guide Microbiology v2027.0.0-alpha.6
+# MII VS Mikrobio Voraussichtliche Empfindlichkeit - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit | *Version*:2027.0.0-alpha.6 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit | *Version*:2027.0.0-ballot.rc1 |
 | Active Stand: 2023-03-02 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit |
 
  
@@ -37,7 +37,7 @@ Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypisch
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-voraussichtliche-empfindlichkeit",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit",
-  "version" : "2027.0.0-alpha.6",
+  "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit",
   "title" : "MII VS Mikrobio Voraussichtliche Empfindlichkeit",
   "status" : "active",

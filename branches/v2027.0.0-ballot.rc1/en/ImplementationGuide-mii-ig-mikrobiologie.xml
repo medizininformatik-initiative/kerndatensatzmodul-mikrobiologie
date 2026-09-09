@@ -32,7 +32,7 @@
       <valueId value="de.medizininformatikinitiative.kerndatensatz.mikrobiologie"/>
     </extension>
     <extension url="version">
-      <valueString value="2027.0.0-alpha.6"/>
+      <valueString value="2027.0.0-ballot.rc1"/>
     </extension>
     <extension url="uri">
       <valueUri value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio"/>
@@ -102,12 +102,12 @@
     <valueMarkdown value="Provide the computable publication unit for the MII Core Dataset Microbiology module, enabling implementers to discover, validate, version, and apply the specification consistently."/>
   </extension>
   <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie"/>
-  <version value="2027.0.0-alpha.6"/>
+  <version value="2027.0.0-ballot.rc1"/>
   <name value="MII_IG_Mikrobiologie"/>
   <title value="MII Implementation Guide Microbiology"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-08T14:02:02+00:00"/>
+  <date value="2026-09-09T10:10:08+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -144,9 +144,9 @@
     <version value="5.3.0"/>
   </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_laborbefund">
-    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.laborbefund/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.laborbefund"/>
+    <uri value="https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.laborbefund"/>
-    <version value="2027.0.0-ballot.rc3"/>
+    <version value="2027.0.0-ballot.rc4"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_crmi">
     <uri value="http://hl7.org/fhir/uv/crmi/ImplementationGuide/hl7.fhir.uv.crmi"/>
@@ -177,7 +177,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="2026.0.0-alpha.6"/>
+        <valueString value="ballot"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -593,7 +593,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="2026.0.0-alpha.6"/>
+        <valueString value="ballot"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
