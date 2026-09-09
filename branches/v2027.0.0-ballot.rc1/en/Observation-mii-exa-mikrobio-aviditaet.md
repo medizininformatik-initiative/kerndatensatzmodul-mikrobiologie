@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-aviditaet - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Aviditaet - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **mii-exa-mikrobio-aviditaet**
+* **MII EXA Mikrobio Aviditaet**
 
-## Example Observation: mii-exa-mikrobio-aviditaet
+## Example Observation: MII EXA Mikrobio Aviditaet
 
 -------
 
@@ -25,6 +25,8 @@ Profile: [MII PR Mikrobio Aviditaet](StructureDefinition-mii-pr-mikrobio-avidita
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
+
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
 **value**: 35 % (Details: UCUM code% = '%')
 
@@ -55,7 +57,7 @@ Profile: [MII PR Mikrobio Aviditaet](StructureDefinition-mii-pr-mikrobio-avidita
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "avid-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -67,6 +69,7 @@ Profile: [MII PR Mikrobio Aviditaet](StructureDefinition-mii-pr-mikrobio-avidita
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -80,6 +83,7 @@ Profile: [MII PR Mikrobio Aviditaet](StructureDefinition-mii-pr-mikrobio-avidita
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "52984-2",
       "display" : "Cytomegalovirus IgG Ab avidity [Ratio] in Serum or Plasma by Immunoassay"
     }]
@@ -88,6 +92,9 @@ Profile: [MII PR Mikrobio Aviditaet](StructureDefinition-mii-pr-mikrobio-avidita
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueQuantity" : {
     "value" : 35,
     "unit" : "%",
@@ -104,6 +111,7 @@ Profile: [MII PR Mikrobio Aviditaet](StructureDefinition-mii-pr-mikrobio-avidita
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "726449005",
       "display" : "Immunoassay technique"
     }]

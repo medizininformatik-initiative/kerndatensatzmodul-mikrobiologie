@@ -75,6 +75,7 @@ Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypisch
   "compose" : {
     "include" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "version" : "4.0.0",
       "concept" : [{
         "code" : "S",
         "display" : "Susceptible"

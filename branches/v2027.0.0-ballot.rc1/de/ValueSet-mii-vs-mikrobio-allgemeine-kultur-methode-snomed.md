@@ -24,6 +24,8 @@ Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkun
 
 ### Expansion
 
+No Expansion for this valueset (Unsupported Code System Version)
+
 -------
 
  [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -42,7 +44,7 @@ Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkun
   "title" : "MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +77,7 @@ Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkun
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
         "code" : "703750006",
         "display" : "Aerobic culture technique (qualifier value)"

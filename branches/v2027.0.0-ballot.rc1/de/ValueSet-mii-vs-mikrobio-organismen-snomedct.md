@@ -24,6 +24,8 @@ Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Er
 
 ### Expansion
 
+No Expansion for this valueset (Unsupported Code System Version)
+
 -------
 
  [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -75,6 +77,7 @@ Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Er
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "filter" : [{
         "property" : "concept",
         "op" : "is-a",
@@ -83,6 +86,7 @@ Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Er
     },
     {
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "filter" : [{
         "property" : "concept",
         "op" : "is-a",
@@ -91,6 +95,7 @@ Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Er
     },
     {
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "filter" : [{
         "property" : "concept",
         "op" : "is-a",
@@ -99,6 +104,7 @@ Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Er
     },
     {
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "filter" : [{
         "property" : "concept",
         "op" : "is-a",
@@ -107,6 +113,7 @@ Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Er
     },
     {
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "filter" : [{
         "property" : "concept",
         "op" : "is-a",
@@ -115,6 +122,7 @@ Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Er
     },
     {
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "filter" : [{
         "property" : "concept",
         "op" : "is-a",

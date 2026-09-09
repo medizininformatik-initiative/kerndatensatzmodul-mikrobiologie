@@ -75,6 +75,7 @@ Tests-ValueSet für die voraussichtliche Empfindlichkeit: LOINC-Codes für die a
   "compose" : {
     "include" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "CLASS",
         "op" : "=",

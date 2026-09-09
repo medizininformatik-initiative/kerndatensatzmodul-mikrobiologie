@@ -42,7 +42,7 @@ Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschl
   "title" : "MII VS Mikrobio Virulenz [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +75,7 @@ Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschl
   "compose" : {
     "include" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "concept" : [{
         "code" : "87402-4",
         "display" : "Escherichia coli aidA-I gene [Presence] in Isolate by NAA with probe detection"

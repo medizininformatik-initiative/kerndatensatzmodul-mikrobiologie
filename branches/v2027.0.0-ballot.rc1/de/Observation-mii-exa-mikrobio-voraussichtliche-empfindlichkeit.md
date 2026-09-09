@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-voraussichtliche-empfindlichkeit - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Voraussichtliche Empfindlichkeit - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **mii-exa-mikrobio-voraussichtliche-empfindlichkeit**
+* **MII EXA Mikrobio Voraussichtliche Empfindlichkeit**
 
-## Beispiel Observation: mii-exa-mikrobio-voraussichtliche-empfindlichkeit
+## Beispiel Observation: MII EXA Mikrobio Voraussichtliche Empfindlichkeit
 
 -------
 
@@ -25,6 +25,8 @@ Profile: [MII PR Mikrobio Voraussichtliche Empfindlichkeit](StructureDefinition-
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
+
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
 **value**: Susceptible
 
@@ -51,7 +53,7 @@ Profile: [MII PR Mikrobio Voraussichtliche Empfindlichkeit](StructureDefinition-
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "v-empf-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -63,6 +65,7 @@ Profile: [MII PR Mikrobio Voraussichtliche Empfindlichkeit](StructureDefinition-
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -76,6 +79,7 @@ Profile: [MII PR Mikrobio Voraussichtliche Empfindlichkeit](StructureDefinition-
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "89489-9",
       "display" : "rifAMPin [Susceptibility] by Genotype method"
     }]
@@ -84,6 +88,9 @@ Profile: [MII PR Mikrobio Voraussichtliche Empfindlichkeit](StructureDefinition-
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",

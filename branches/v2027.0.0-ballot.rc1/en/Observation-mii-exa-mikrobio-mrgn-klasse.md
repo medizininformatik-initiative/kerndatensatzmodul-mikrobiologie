@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-mrgn-klasse - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio MRGN Klasse - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **mii-exa-mikrobio-mrgn-klasse**
+* **MII EXA Mikrobio MRGN Klasse**
 
-## Example Observation: mii-exa-mikrobio-mrgn-klasse
+## Example Observation: MII EXA Mikrobio MRGN Klasse
 
 -------
 
@@ -25,6 +25,8 @@ Profile: [MII PR Mikrobio MRGN Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
+
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
 **value**: 2MRGN
 
@@ -51,7 +53,7 @@ Profile: [MII PR Mikrobio MRGN Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "59826-8_1234567890",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -63,6 +65,7 @@ Profile: [MII PR Mikrobio MRGN Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -76,6 +79,7 @@ Profile: [MII PR Mikrobio MRGN Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "99780-9",
       "display" : "Multidrug resistant gram-negative organism classification [Type]"
     }]
@@ -84,9 +88,13 @@ Profile: [MII PR Mikrobio MRGN Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "LA33214-0",
       "display" : "2MRGN"
     }]

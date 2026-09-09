@@ -24,6 +24,8 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des 
 
 ### Expansion
 
+No Expansion for this valueset (Unsupported Code System Version)
+
 -------
 
  [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -42,7 +44,7 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des 
   "title" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -78,6 +80,7 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des 
     },
     {
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
         "code" : "260408008",
         "display" : "Weakly positive"

@@ -107,7 +107,7 @@
   <title value="MII Implementation Guide Microbiology"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-09T10:10:08+00:00"/>
+  <date value="2026-09-09T13:56:56+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -127,22 +127,6 @@
   <packageId value="de.medizininformatikinitiative.kerndatensatz.mikrobiologie"/>
   <license value="CC-BY-4.0"/>
   <fhirVersion value="4.0.1"/>
-  <dependsOn id="hl7tx">
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
-      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
-    </extension>
-    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
-    <packageId value="hl7.terminology.r4"/>
-    <version value="7.3.0"/>
-  </dependsOn>
-  <dependsOn id="hl7ext">
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
-      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
-    </extension>
-    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
-    <packageId value="hl7.fhir.uv.extensions.r4"/>
-    <version value="5.3.0"/>
-  </dependsOn>
   <dependsOn id="de_medizininformatikinitiative_kerndatensatz_laborbefund">
     <uri value="https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor"/>
     <packageId value="de.medizininformatikinitiative.kerndatensatz.laborbefund"/>
@@ -162,6 +146,16 @@
     <uri value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
     <packageId value="hl7.fhir.uv.ips"/>
     <version value="2.0.1"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_extensions_r4">
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_terminology_r4">
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="7.1.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -990,6 +984,17 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/mii-param-mikrobio-manifest"/>
+      </reference>
+      <name value="Expansion Parameters Manifest"/>
+      <description value="Gepinnte CodeSystem-Versionen, gegen die jedes ValueSet dieses Leitfadens expandiert wird."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="CapabilityStatement"/>
       </extension>
       <reference>
@@ -1048,11 +1053,154 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/mii-exa-mikrobio-allgemeine-bestimmung"/>
+      </reference>
+      <name value="MII EXA Mikrobio Allgemeine Bestimmung"/>
+      <description value="Ungerichtete Erregeridentifizierung aus einer Probe, ausgewiesen als Reflex-Folgeuntersuchung der allgemeinen Kultur."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-allgemeine-kultur"/>
+      </reference>
+      <name value="MII EXA Mikrobio Allgemeine Kultur"/>
+      <description value="Ungerichtete kulturelle Anzucht mit Wachstumsnachweis, aerobe Kultur."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ"/>
+      </reference>
+      <name value="MII EXA Mikrobio Antigen Antikoerper quantitativ"/>
+      <description value="Quantitative Antikörperbestimmung im Serum am Beispiel der Hepatitis-B-Oberflächen-Antikörper."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-aviditaet"/>
+      </reference>
+      <name value="MII EXA Mikrobio Aviditaet"/>
+      <description value="Aviditätsbestimmung von CMV-IgG-Antikörpern; der Messwert bleibt in value, die Einordnung steht in interpretation."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-barlett-score"/>
+      </reference>
+      <name value="MII EXA Mikrobio Barlett Score"/>
+      <description value="Barlett-Score einer Sputumprobe zur Beurteilung, ob sie für die Kultur geeignet ist."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-ct-wert"/>
+      </reference>
+      <name value="MII EXA Mikrobio Ct Wert"/>
+      <description value="Zyklusschwellenwert einer Echtzeit-PCR auf Influenza A H3."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/mii-exa-mikrobio-diagnostic-report"/>
+      </reference>
+      <name value="MII EXA Mikrobio Diagnostic Report"/>
+      <description value="Mikrobiologischer Befundbericht, der die zugehörigen Untersuchungen zusammenfasst."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-empfindlichkeit"/>
+      </reference>
+      <name value="MII EXA Mikrobio Empfindlichkeit"/>
+      <description value="Phänotypische Empfindlichkeitstestung mit MHK in mg/L; die Kategorie steht mit ihrer Norm in interpretation."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-keimzahl"/>
+      </reference>
+      <name value="MII EXA Mikrobio Keimzahl"/>
+      <description value="Keimzahlbestimmung als koloniebildende Einheiten je Milliliter."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/mii-exa-mikrobio-keimzahl-katheterspitze"/>
       </reference>
       <name value="MII EXA Mikrobio Keimzahl Katheterspitze"/>
       <description value="Keimzahl einer Katheterspitze in koloniebildenden Einheiten ohne Nenner. Die Bezugsgröße steht in Specimen.type."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/mii-exa-mikrobio-labor"/>
+      </reference>
+      <name value="MII EXA Mikrobio Labor"/>
+      <description value="Durchführendes mikrobiologisches Labor der Beispiele dieses Moduls."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-mikroskopie"/>
+      </reference>
+      <name value="MII EXA Mikrobio Mikroskopie"/>
+      <description value="Mikroskopischer Befund ohne taxonomische Zuordnung: grampositive Kokken in Haufen."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-molekulare-pathogenlast"/>
+      </reference>
+      <name value="MII EXA Mikrobio Molekulare Pathogenlast"/>
+      <description value="Quantitative molekulare Erregerlast am Beispiel der CMV-DNA in Kopien je Milliliter."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-mrgn-klasse"/>
+      </reference>
+      <name value="MII EXA Mikrobio MRGN Klasse"/>
+      <description value="MRGN-Klassifikation eines gramnegativen Isolats mit dem Ergebnis 2MRGN."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1064,6 +1212,17 @@
       <name value="MII EXA Mikrobio MRGN Klasse negativ"/>
       <description value="Identifiziertes gramnegatives Isolat, dessen Empfindlichkeitsbefunde bewertet wurden und das keiner MRGN-Klasse zuzuordnen ist."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-nugent-score"/>
+      </reference>
+      <name value="MII EXA Mikrobio Nugent Score"/>
+      <description value="Nugent-Score einer Vaginalprobe zur Beurteilung einer bakteriellen Vaginose."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1125,6 +1284,28 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten"/>
+      </reference>
+      <name value="MII EXA Mikrobio Resistenzmechanismen Determinanten"/>
+      <description value="Molekularer Nachweis einer Resistenzdeterminante mittels PCR."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-spezifische-bestimmung"/>
+      </reference>
+      <name value="MII EXA Mikrobio Spezifische Bestimmung"/>
+      <description value="Zielgerichteter molekularer Erregernachweis mit negativem Ergebnis."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ"/>
       </reference>
       <name value="MII EXA Mikrobio Spezifische Bestimmung VRE negativ"/>
@@ -1136,11 +1317,55 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/mii-exa-mikrobio-spezifische-kultur"/>
+      </reference>
+      <name value="MII EXA Mikrobio Spezifische Kultur"/>
+      <description value="Zielgerichtete kulturelle Untersuchung auf einen vordefinierten Erreger, hier mit Wachstumsnachweis."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ"/>
       </reference>
       <name value="MII EXA Mikrobio Spezifische Kultur VRE negativ"/>
       <description value="Negativer VRE-Nachweis mittels erregerspezifischer Kultur: kein Wachstum vancomycinresistenter Enterokokken."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-titer"/>
+      </reference>
+      <name value="MII EXA Mikrobio Titer"/>
+      <description value="Titerbestimmung als Verdünnungsverhältnis am Beispiel von Rötelnvirus-Antikörpern."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-virulenzfaktor"/>
+      </reference>
+      <name value="MII EXA Mikrobio Virulenzfaktor"/>
+      <description value="Nachweis eines Virulenzfaktor-Gens mit negativem Ergebnis."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit"/>
+      </reference>
+      <name value="MII EXA Mikrobio Voraussichtliche Empfindlichkeit"/>
+      <description value="Aus dem Genotyp abgeleitete erwartete Empfindlichkeit gegenüber Rifampicin."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1888,206 +2113,6 @@
       </reference>
       <name value="MII VS Mikrobio Voraussichtliche Empfindlichkeit"/>
       <description value="Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypischen Nachweisen abgeleitete erwartete Kategorie sensibel, intermediär oder resistent."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-allgemeine-bestimmung"/>
-      </reference>
-      <name value="mii-exa-mikrobio-allgemeine-bestimmung"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-allgemeine-kultur"/>
-      </reference>
-      <name value="mii-exa-mikrobio-allgemeine-kultur"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ"/>
-      </reference>
-      <name value="mii-exa-mikrobio-antigen-antikoerper-quantitativ"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-aviditaet"/>
-      </reference>
-      <name value="mii-exa-mikrobio-aviditaet"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-barlett-score"/>
-      </reference>
-      <name value="mii-exa-mikrobio-barlett-score"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-ct-wert"/>
-      </reference>
-      <name value="mii-exa-mikrobio-ct-wert"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="DiagnosticReport"/>
-      </extension>
-      <reference>
-        <reference value="DiagnosticReport/mii-exa-mikrobio-diagnostic-report"/>
-      </reference>
-      <name value="mii-exa-mikrobio-diagnostic-report"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-empfindlichkeit"/>
-      </reference>
-      <name value="mii-exa-mikrobio-empfindlichkeit"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-keimzahl"/>
-      </reference>
-      <name value="mii-exa-mikrobio-keimzahl"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-mikroskopie"/>
-      </reference>
-      <name value="mii-exa-mikrobio-mikroskopie"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-molekulare-pathogenlast"/>
-      </reference>
-      <name value="mii-exa-mikrobio-molekulare-pathogenlast"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-mrgn-klasse"/>
-      </reference>
-      <name value="mii-exa-mikrobio-mrgn-klasse"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-nugent-score"/>
-      </reference>
-      <name value="mii-exa-mikrobio-nugent-score"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten"/>
-      </reference>
-      <name value="mii-exa-mikrobio-resistenzmechanismen-determinanten"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-spezifische-bestimmung"/>
-      </reference>
-      <name value="mii-exa-mikrobio-spezifische-bestimmung"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-spezifische-kultur"/>
-      </reference>
-      <name value="mii-exa-mikrobio-spezifische-kultur"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-titer"/>
-      </reference>
-      <name value="mii-exa-mikrobio-titer"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-virulenzfaktor"/>
-      </reference>
-      <name value="mii-exa-mikrobio-virulenzfaktor"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit"/>
-      </reference>
-      <name value="mii-exa-mikrobio-voraussichtliche-empfindlichkeit"/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Parameters"/>
-      </extension>
-      <reference>
-        <reference value="Parameters/mii-param-mikrobio-manifest"/>
-      </reference>
-      <name value="mii-param-mikrobio-manifest"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

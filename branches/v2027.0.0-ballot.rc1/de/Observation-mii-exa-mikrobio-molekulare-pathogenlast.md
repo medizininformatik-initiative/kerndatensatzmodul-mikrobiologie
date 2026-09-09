@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-molekulare-pathogenlast - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Molekulare Pathogenlast - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **mii-exa-mikrobio-molekulare-pathogenlast**
+* **MII EXA Mikrobio Molekulare Pathogenlast**
 
-## Beispiel Observation: mii-exa-mikrobio-molekulare-pathogenlast
+## Beispiel Observation: MII EXA Mikrobio Molekulare Pathogenlast
 
 -------
 
@@ -25,6 +25,8 @@ Profile: [MII PR Mikrobio Molekulare Pathogenlast](StructureDefinition-mii-pr-mi
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
+
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
 **value**: 350000 Copies/mL (Details: UCUM code1/mL = '1/mL')
 
@@ -53,7 +55,7 @@ Profile: [MII PR Mikrobio Molekulare Pathogenlast](StructureDefinition-mii-pr-mi
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "pathogenlast-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -65,6 +67,7 @@ Profile: [MII PR Mikrobio Molekulare Pathogenlast](StructureDefinition-mii-pr-mi
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -78,6 +81,7 @@ Profile: [MII PR Mikrobio Molekulare Pathogenlast](StructureDefinition-mii-pr-mi
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "33006-8",
       "display" : "Cytomegalovirus DNA [#/volume] (viral load) in Specimen by NAA with probe detection"
     }]
@@ -86,6 +90,9 @@ Profile: [MII PR Mikrobio Molekulare Pathogenlast](StructureDefinition-mii-pr-mi
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueQuantity" : {
     "value" : 350000,
     "unit" : "Copies/mL",
@@ -95,6 +102,7 @@ Profile: [MII PR Mikrobio Molekulare Pathogenlast](StructureDefinition-mii-pr-mi
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "70601000052104",
       "display" : "Real-time polymerase chain reaction technique"
     }]

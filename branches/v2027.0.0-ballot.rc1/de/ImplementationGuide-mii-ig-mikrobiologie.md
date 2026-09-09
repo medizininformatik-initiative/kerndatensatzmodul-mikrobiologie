@@ -60,10 +60,10 @@ This publication includes IP covered under the following statements.
 
 * This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
 
-* [Observation Category Codes](http://terminology.hl7.org/7.3.0/CodeSystem-observation-category.html): [MII_PR_Mikrobio_Allgemeine_Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md), [MII_PR_Mikrobio_Allgemeine_Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md)... Show 44 more, [MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md), [MII_PR_Mikrobio_Aviditaet](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [MII_PR_Mikrobio_Barlett_Score](StructureDefinition-mii-pr-mikrobio-barlett-score.md), [MII_PR_Mikrobio_Ct_Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.md), [MII_PR_Mikrobio_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md), [MII_PR_Mikrobio_Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.md), [MII_PR_Mikrobio_MRGN_Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.md), [MII_PR_Mikrobio_Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), [MII_PR_Mikrobio_Molekulare_Pathogenlast](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.md), [MII_PR_Mikrobio_Nugent_Score](StructureDefinition-mii-pr-mikrobio-nugent-score.md), [MII_PR_Mikrobio_Resistenzkategorie_Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.md), [MII_PR_Mikrobio_Resistenzmechanismen_Determinanten](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md), [MII_PR_Mikrobio_Spezifische_Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), [MII_PR_Mikrobio_Spezifische_Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md), [MII_PR_Mikrobio_Titer](StructureDefinition-mii-pr-mikrobio-titer.md), [MII_PR_Mikrobio_Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md), [MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-allgemeine-bestimmung](Observation-mii-exa-mikrobio-allgemeine-bestimmung.md), [Observation/mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.md), [Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ](Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.md), [Observation/mii-exa-mikrobio-aviditaet](Observation-mii-exa-mikrobio-aviditaet.md), [Observation/mii-exa-mikrobio-barlett-score](Observation-mii-exa-mikrobio-barlett-score.md), [Observation/mii-exa-mikrobio-ct-wert](Observation-mii-exa-mikrobio-ct-wert.md), [Observation/mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.md), [Observation/mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.md), [Observation/mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.md), [Observation/mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.md), [Observation/mii-exa-mikrobio-molekulare-pathogenlast](Observation-mii-exa-mikrobio-molekulare-pathogenlast.md), [Observation/mii-exa-mikrobio-mrgn-klasse](Observation-mii-exa-mikrobio-mrgn-klasse.md), [Observation/mii-exa-mikrobio-mrgn-klasse-negativ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.md), [Observation/mii-exa-mikrobio-nugent-score](Observation-mii-exa-mikrobio-nugent-score.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.md), [Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten](Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md), [Observation/mii-exa-mikrobio-spezifische-kultur](Observation-mii-exa-mikrobio-spezifische-kultur.md), [Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ](Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.md), [Observation/mii-exa-mikrobio-titer](Observation-mii-exa-mikrobio-titer.md), [Observation/mii-exa-mikrobio-virulenzfaktor](Observation-mii-exa-mikrobio-virulenzfaktor.md), [Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit](Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.md), [Observation/mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.md) and [Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md)
-* [diagnosticServiceSectionId](http://terminology.hl7.org/7.3.0/CodeSystem-v2-0074.html): [DiagnosticReport/mii-exa-mikrobio-diagnostic-report](DiagnosticReport-mii-exa-mikrobio-diagnostic-report.md), [MII_PR_Mikrobio_Allgemeine_Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)... Show 46 more, [MII_PR_Mikrobio_Allgemeine_Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md), [MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md), [MII_PR_Mikrobio_Aviditaet](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [MII_PR_Mikrobio_Barlett_Score](StructureDefinition-mii-pr-mikrobio-barlett-score.md), [MII_PR_Mikrobio_Ct_Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.md), [MII_PR_Mikrobio_Diagnostic_Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md), [MII_PR_Mikrobio_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md), [MII_PR_Mikrobio_Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.md), [MII_PR_Mikrobio_MRGN_Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.md), [MII_PR_Mikrobio_Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), [MII_PR_Mikrobio_Molekulare_Pathogenlast](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.md), [MII_PR_Mikrobio_Nugent_Score](StructureDefinition-mii-pr-mikrobio-nugent-score.md), [MII_PR_Mikrobio_Resistenzkategorie_Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.md), [MII_PR_Mikrobio_Resistenzmechanismen_Determinanten](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md), [MII_PR_Mikrobio_Spezifische_Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), [MII_PR_Mikrobio_Spezifische_Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md), [MII_PR_Mikrobio_Titer](StructureDefinition-mii-pr-mikrobio-titer.md), [MII_PR_Mikrobio_Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md), [MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-allgemeine-bestimmung](Observation-mii-exa-mikrobio-allgemeine-bestimmung.md), [Observation/mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.md), [Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ](Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.md), [Observation/mii-exa-mikrobio-aviditaet](Observation-mii-exa-mikrobio-aviditaet.md), [Observation/mii-exa-mikrobio-barlett-score](Observation-mii-exa-mikrobio-barlett-score.md), [Observation/mii-exa-mikrobio-ct-wert](Observation-mii-exa-mikrobio-ct-wert.md), [Observation/mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.md), [Observation/mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.md), [Observation/mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.md), [Observation/mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.md), [Observation/mii-exa-mikrobio-molekulare-pathogenlast](Observation-mii-exa-mikrobio-molekulare-pathogenlast.md), [Observation/mii-exa-mikrobio-mrgn-klasse](Observation-mii-exa-mikrobio-mrgn-klasse.md), [Observation/mii-exa-mikrobio-mrgn-klasse-negativ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.md), [Observation/mii-exa-mikrobio-nugent-score](Observation-mii-exa-mikrobio-nugent-score.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.md), [Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten](Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md), [Observation/mii-exa-mikrobio-spezifische-kultur](Observation-mii-exa-mikrobio-spezifische-kultur.md), [Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ](Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.md), [Observation/mii-exa-mikrobio-titer](Observation-mii-exa-mikrobio-titer.md), [Observation/mii-exa-mikrobio-virulenzfaktor](Observation-mii-exa-mikrobio-virulenzfaktor.md), [Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit](Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.md), [Observation/mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.md) and [Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md)
-* [identifierType](http://terminology.hl7.org/7.3.0/CodeSystem-v2-0203.html): [DiagnosticReport/mii-exa-mikrobio-diagnostic-report](DiagnosticReport-mii-exa-mikrobio-diagnostic-report.md), [MII_PR_Mikrobio_Allgemeine_Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)... Show 46 more, [MII_PR_Mikrobio_Allgemeine_Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md), [MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md), [MII_PR_Mikrobio_Aviditaet](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [MII_PR_Mikrobio_Barlett_Score](StructureDefinition-mii-pr-mikrobio-barlett-score.md), [MII_PR_Mikrobio_Ct_Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.md), [MII_PR_Mikrobio_Diagnostic_Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md), [MII_PR_Mikrobio_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md), [MII_PR_Mikrobio_Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.md), [MII_PR_Mikrobio_MRGN_Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.md), [MII_PR_Mikrobio_Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), [MII_PR_Mikrobio_Molekulare_Pathogenlast](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.md), [MII_PR_Mikrobio_Nugent_Score](StructureDefinition-mii-pr-mikrobio-nugent-score.md), [MII_PR_Mikrobio_Resistenzkategorie_Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.md), [MII_PR_Mikrobio_Resistenzmechanismen_Determinanten](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md), [MII_PR_Mikrobio_Spezifische_Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), [MII_PR_Mikrobio_Spezifische_Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md), [MII_PR_Mikrobio_Titer](StructureDefinition-mii-pr-mikrobio-titer.md), [MII_PR_Mikrobio_Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md), [MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-allgemeine-bestimmung](Observation-mii-exa-mikrobio-allgemeine-bestimmung.md), [Observation/mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.md), [Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ](Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.md), [Observation/mii-exa-mikrobio-aviditaet](Observation-mii-exa-mikrobio-aviditaet.md), [Observation/mii-exa-mikrobio-barlett-score](Observation-mii-exa-mikrobio-barlett-score.md), [Observation/mii-exa-mikrobio-ct-wert](Observation-mii-exa-mikrobio-ct-wert.md), [Observation/mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.md), [Observation/mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.md), [Observation/mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.md), [Observation/mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.md), [Observation/mii-exa-mikrobio-molekulare-pathogenlast](Observation-mii-exa-mikrobio-molekulare-pathogenlast.md), [Observation/mii-exa-mikrobio-mrgn-klasse](Observation-mii-exa-mikrobio-mrgn-klasse.md), [Observation/mii-exa-mikrobio-mrgn-klasse-negativ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.md), [Observation/mii-exa-mikrobio-nugent-score](Observation-mii-exa-mikrobio-nugent-score.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.md), [Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten](Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md), [Observation/mii-exa-mikrobio-spezifische-kultur](Observation-mii-exa-mikrobio-spezifische-kultur.md), [Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ](Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.md), [Observation/mii-exa-mikrobio-titer](Observation-mii-exa-mikrobio-titer.md), [Observation/mii-exa-mikrobio-virulenzfaktor](Observation-mii-exa-mikrobio-virulenzfaktor.md), [Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit](Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.md), [Observation/mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.md) and [Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md)
-* [ObservationInterpretation](http://terminology.hl7.org/7.3.0/CodeSystem-v3-ObservationInterpretation.html): [MII_PR_Mikrobio_Aviditaet](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [MII_PR_Mikrobio_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md)... Show 9 more, [MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.md), [MII_VS_Mikrobio_Aviditaet_Ergebnis](ValueSet-mii-vs-mikrobio-aviditaet-ergebnis.md), [MII_VS_Mikrobio_Susceptibility](ValueSet-mii-vs-mikrobio-susceptibility.md), [MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit](ValueSet-mii-vs-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-aviditaet](Observation-mii-exa-mikrobio-aviditaet.md), [Observation/mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.md), [Observation/mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.md), [Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit](Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.md) and [Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md)
+* [Observation Category Codes](http://terminology.hl7.org/7.2.0/CodeSystem-observation-category.html): [MII_PR_Mikrobio_Allgemeine_Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md), [MII_PR_Mikrobio_Allgemeine_Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md)... Show 44 more, [MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md), [MII_PR_Mikrobio_Aviditaet](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [MII_PR_Mikrobio_Barlett_Score](StructureDefinition-mii-pr-mikrobio-barlett-score.md), [MII_PR_Mikrobio_Ct_Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.md), [MII_PR_Mikrobio_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md), [MII_PR_Mikrobio_Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.md), [MII_PR_Mikrobio_MRGN_Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.md), [MII_PR_Mikrobio_Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), [MII_PR_Mikrobio_Molekulare_Pathogenlast](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.md), [MII_PR_Mikrobio_Nugent_Score](StructureDefinition-mii-pr-mikrobio-nugent-score.md), [MII_PR_Mikrobio_Resistenzkategorie_Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.md), [MII_PR_Mikrobio_Resistenzmechanismen_Determinanten](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md), [MII_PR_Mikrobio_Spezifische_Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), [MII_PR_Mikrobio_Spezifische_Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md), [MII_PR_Mikrobio_Titer](StructureDefinition-mii-pr-mikrobio-titer.md), [MII_PR_Mikrobio_Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md), [MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-allgemeine-bestimmung](Observation-mii-exa-mikrobio-allgemeine-bestimmung.md), [Observation/mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.md), [Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ](Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.md), [Observation/mii-exa-mikrobio-aviditaet](Observation-mii-exa-mikrobio-aviditaet.md), [Observation/mii-exa-mikrobio-barlett-score](Observation-mii-exa-mikrobio-barlett-score.md), [Observation/mii-exa-mikrobio-ct-wert](Observation-mii-exa-mikrobio-ct-wert.md), [Observation/mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.md), [Observation/mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.md), [Observation/mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.md), [Observation/mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.md), [Observation/mii-exa-mikrobio-molekulare-pathogenlast](Observation-mii-exa-mikrobio-molekulare-pathogenlast.md), [Observation/mii-exa-mikrobio-mrgn-klasse](Observation-mii-exa-mikrobio-mrgn-klasse.md), [Observation/mii-exa-mikrobio-mrgn-klasse-negativ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.md), [Observation/mii-exa-mikrobio-nugent-score](Observation-mii-exa-mikrobio-nugent-score.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.md), [Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten](Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md), [Observation/mii-exa-mikrobio-spezifische-kultur](Observation-mii-exa-mikrobio-spezifische-kultur.md), [Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ](Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.md), [Observation/mii-exa-mikrobio-titer](Observation-mii-exa-mikrobio-titer.md), [Observation/mii-exa-mikrobio-virulenzfaktor](Observation-mii-exa-mikrobio-virulenzfaktor.md), [Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit](Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.md), [Observation/mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.md) and [Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md)
+* [diagnosticServiceSectionId](http://terminology.hl7.org/7.2.0/CodeSystem-v2-0074.html): [DiagnosticReport/mii-exa-mikrobio-diagnostic-report](DiagnosticReport-mii-exa-mikrobio-diagnostic-report.md), [MII_PR_Mikrobio_Allgemeine_Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)... Show 46 more, [MII_PR_Mikrobio_Allgemeine_Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md), [MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md), [MII_PR_Mikrobio_Aviditaet](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [MII_PR_Mikrobio_Barlett_Score](StructureDefinition-mii-pr-mikrobio-barlett-score.md), [MII_PR_Mikrobio_Ct_Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.md), [MII_PR_Mikrobio_Diagnostic_Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md), [MII_PR_Mikrobio_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md), [MII_PR_Mikrobio_Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.md), [MII_PR_Mikrobio_MRGN_Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.md), [MII_PR_Mikrobio_Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), [MII_PR_Mikrobio_Molekulare_Pathogenlast](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.md), [MII_PR_Mikrobio_Nugent_Score](StructureDefinition-mii-pr-mikrobio-nugent-score.md), [MII_PR_Mikrobio_Resistenzkategorie_Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.md), [MII_PR_Mikrobio_Resistenzmechanismen_Determinanten](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md), [MII_PR_Mikrobio_Spezifische_Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), [MII_PR_Mikrobio_Spezifische_Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md), [MII_PR_Mikrobio_Titer](StructureDefinition-mii-pr-mikrobio-titer.md), [MII_PR_Mikrobio_Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md), [MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-allgemeine-bestimmung](Observation-mii-exa-mikrobio-allgemeine-bestimmung.md), [Observation/mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.md), [Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ](Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.md), [Observation/mii-exa-mikrobio-aviditaet](Observation-mii-exa-mikrobio-aviditaet.md), [Observation/mii-exa-mikrobio-barlett-score](Observation-mii-exa-mikrobio-barlett-score.md), [Observation/mii-exa-mikrobio-ct-wert](Observation-mii-exa-mikrobio-ct-wert.md), [Observation/mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.md), [Observation/mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.md), [Observation/mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.md), [Observation/mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.md), [Observation/mii-exa-mikrobio-molekulare-pathogenlast](Observation-mii-exa-mikrobio-molekulare-pathogenlast.md), [Observation/mii-exa-mikrobio-mrgn-klasse](Observation-mii-exa-mikrobio-mrgn-klasse.md), [Observation/mii-exa-mikrobio-mrgn-klasse-negativ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.md), [Observation/mii-exa-mikrobio-nugent-score](Observation-mii-exa-mikrobio-nugent-score.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.md), [Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten](Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md), [Observation/mii-exa-mikrobio-spezifische-kultur](Observation-mii-exa-mikrobio-spezifische-kultur.md), [Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ](Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.md), [Observation/mii-exa-mikrobio-titer](Observation-mii-exa-mikrobio-titer.md), [Observation/mii-exa-mikrobio-virulenzfaktor](Observation-mii-exa-mikrobio-virulenzfaktor.md), [Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit](Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.md), [Observation/mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.md) and [Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md)
+* [identifierType](http://terminology.hl7.org/7.2.0/CodeSystem-v2-0203.html): [DiagnosticReport/mii-exa-mikrobio-diagnostic-report](DiagnosticReport-mii-exa-mikrobio-diagnostic-report.md), [MII_PR_Mikrobio_Allgemeine_Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)... Show 46 more, [MII_PR_Mikrobio_Allgemeine_Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md), [MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md), [MII_PR_Mikrobio_Aviditaet](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [MII_PR_Mikrobio_Barlett_Score](StructureDefinition-mii-pr-mikrobio-barlett-score.md), [MII_PR_Mikrobio_Ct_Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.md), [MII_PR_Mikrobio_Diagnostic_Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md), [MII_PR_Mikrobio_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md), [MII_PR_Mikrobio_Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.md), [MII_PR_Mikrobio_MRGN_Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.md), [MII_PR_Mikrobio_Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), [MII_PR_Mikrobio_Molekulare_Pathogenlast](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.md), [MII_PR_Mikrobio_Nugent_Score](StructureDefinition-mii-pr-mikrobio-nugent-score.md), [MII_PR_Mikrobio_Resistenzkategorie_Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.md), [MII_PR_Mikrobio_Resistenzmechanismen_Determinanten](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md), [MII_PR_Mikrobio_Spezifische_Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), [MII_PR_Mikrobio_Spezifische_Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md), [MII_PR_Mikrobio_Titer](StructureDefinition-mii-pr-mikrobio-titer.md), [MII_PR_Mikrobio_Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md), [MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-allgemeine-bestimmung](Observation-mii-exa-mikrobio-allgemeine-bestimmung.md), [Observation/mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.md), [Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ](Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.md), [Observation/mii-exa-mikrobio-aviditaet](Observation-mii-exa-mikrobio-aviditaet.md), [Observation/mii-exa-mikrobio-barlett-score](Observation-mii-exa-mikrobio-barlett-score.md), [Observation/mii-exa-mikrobio-ct-wert](Observation-mii-exa-mikrobio-ct-wert.md), [Observation/mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.md), [Observation/mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.md), [Observation/mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.md), [Observation/mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.md), [Observation/mii-exa-mikrobio-molekulare-pathogenlast](Observation-mii-exa-mikrobio-molekulare-pathogenlast.md), [Observation/mii-exa-mikrobio-mrgn-klasse](Observation-mii-exa-mikrobio-mrgn-klasse.md), [Observation/mii-exa-mikrobio-mrgn-klasse-negativ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.md), [Observation/mii-exa-mikrobio-nugent-score](Observation-mii-exa-mikrobio-nugent-score.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.md), [Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.md), [Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten](Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md), [Observation/mii-exa-mikrobio-spezifische-kultur](Observation-mii-exa-mikrobio-spezifische-kultur.md), [Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ](Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.md), [Observation/mii-exa-mikrobio-titer](Observation-mii-exa-mikrobio-titer.md), [Observation/mii-exa-mikrobio-virulenzfaktor](Observation-mii-exa-mikrobio-virulenzfaktor.md), [Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit](Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.md), [Observation/mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.md) and [Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md)
+* [ObservationInterpretation](http://terminology.hl7.org/7.2.0/CodeSystem-v3-ObservationInterpretation.html): [MII_PR_Mikrobio_Aviditaet](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [MII_PR_Mikrobio_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md)... Show 9 more, [MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.md), [MII_VS_Mikrobio_Aviditaet_Ergebnis](ValueSet-mii-vs-mikrobio-aviditaet-ergebnis.md), [MII_VS_Mikrobio_Susceptibility](ValueSet-mii-vs-mikrobio-susceptibility.md), [MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit](ValueSet-mii-vs-mikrobio-voraussichtliche-empfindlichkeit.md), [Observation/mii-exa-mikrobio-aviditaet](Observation-mii-exa-mikrobio-aviditaet.md), [Observation/mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.md), [Observation/mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.md), [Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit](Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.md) and [Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md)
 
 
 ### IG-Parametereinstellungen und Expansionsparameter
@@ -196,7 +196,7 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
   "title" : "MII Implementation Guide Microbiology",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -230,26 +230,6 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
   "license" : "CC-BY-4.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [{
-    "id" : "hl7tx",
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
-      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
-    }],
-    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
-    "packageId" : "hl7.terminology.r4",
-    "version" : "7.3.0"
-  },
-  {
-    "id" : "hl7ext",
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
-      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
-    }],
-    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
-    "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.3.0"
-  },
-  {
     "id" : "de_medizininformatikinitiative_kerndatensatz_laborbefund",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.laborbefund",
@@ -272,6 +252,18 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     "uri" : "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
     "packageId" : "hl7.fhir.uv.ips",
     "version" : "2.0.1"
+  },
+  {
+    "id" : "hl7_fhir_uv_extensions_r4",
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "5.2.0"
+  },
+  {
+    "id" : "hl7_terminology_r4",
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "7.1.0"
   }],
   "definition" : {
     "extension" : [{
@@ -1409,6 +1401,22 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-mii-param-mikrobio-manifest.html"
+      }],
+      "reference" : {
+        "reference" : "Parameters/mii-param-mikrobio-manifest"
+      },
+      "name" : "Expansion Parameters Manifest",
+      "description" : "Gepinnte CodeSystem-Versionen, gegen die jedes ValueSet dieses Leitfadens expandiert wird.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
       },
       {
@@ -1493,6 +1501,150 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-allgemeine-bestimmung.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-allgemeine-bestimmung"
+      },
+      "name" : "MII EXA Mikrobio Allgemeine Bestimmung",
+      "description" : "Ungerichtete Erregeridentifizierung aus einer Probe, ausgewiesen als Reflex-Folgeuntersuchung der allgemeinen Kultur.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-allgemeine-kultur.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-allgemeine-kultur"
+      },
+      "name" : "MII EXA Mikrobio Allgemeine Kultur",
+      "description" : "Ungerichtete kulturelle Anzucht mit Wachstumsnachweis, aerobe Kultur.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ"
+      },
+      "name" : "MII EXA Mikrobio Antigen Antikoerper quantitativ",
+      "description" : "Quantitative Antikörperbestimmung im Serum am Beispiel der Hepatitis-B-Oberflächen-Antikörper.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-aviditaet.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-aviditaet"
+      },
+      "name" : "MII EXA Mikrobio Aviditaet",
+      "description" : "Aviditätsbestimmung von CMV-IgG-Antikörpern; der Messwert bleibt in value, die Einordnung steht in interpretation.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-barlett-score.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-barlett-score"
+      },
+      "name" : "MII EXA Mikrobio Barlett Score",
+      "description" : "Barlett-Score einer Sputumprobe zur Beurteilung, ob sie für die Kultur geeignet ist.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-ct-wert.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-ct-wert"
+      },
+      "name" : "MII EXA Mikrobio Ct Wert",
+      "description" : "Zyklusschwellenwert einer Echtzeit-PCR auf Influenza A H3.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DiagnosticReport"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DiagnosticReport-mii-exa-mikrobio-diagnostic-report.html"
+      }],
+      "reference" : {
+        "reference" : "DiagnosticReport/mii-exa-mikrobio-diagnostic-report"
+      },
+      "name" : "MII EXA Mikrobio Diagnostic Report",
+      "description" : "Mikrobiologischer Befundbericht, der die zugehörigen Untersuchungen zusammenfasst.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-empfindlichkeit.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-empfindlichkeit"
+      },
+      "name" : "MII EXA Mikrobio Empfindlichkeit",
+      "description" : "Phänotypische Empfindlichkeitstestung mit MHK in mg/L; die Kategorie steht mit ihrer Norm in interpretation.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-keimzahl.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-keimzahl"
+      },
+      "name" : "MII EXA Mikrobio Keimzahl",
+      "description" : "Keimzahlbestimmung als koloniebildende Einheiten je Milliliter.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html"
       }],
       "reference" : {
@@ -1501,6 +1653,70 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       "name" : "MII EXA Mikrobio Keimzahl Katheterspitze",
       "description" : "Keimzahl einer Katheterspitze in koloniebildenden Einheiten ohne Nenner. Die Bezugsgröße steht in Specimen.type.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-mii-exa-mikrobio-labor.html"
+      }],
+      "reference" : {
+        "reference" : "Organization/mii-exa-mikrobio-labor"
+      },
+      "name" : "MII EXA Mikrobio Labor",
+      "description" : "Durchführendes mikrobiologisches Labor der Beispiele dieses Moduls.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-mikroskopie.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-mikroskopie"
+      },
+      "name" : "MII EXA Mikrobio Mikroskopie",
+      "description" : "Mikroskopischer Befund ohne taxonomische Zuordnung: grampositive Kokken in Haufen.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-molekulare-pathogenlast.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-molekulare-pathogenlast"
+      },
+      "name" : "MII EXA Mikrobio Molekulare Pathogenlast",
+      "description" : "Quantitative molekulare Erregerlast am Beispiel der CMV-DNA in Kopien je Milliliter.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-mrgn-klasse.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-mrgn-klasse"
+      },
+      "name" : "MII EXA Mikrobio MRGN Klasse",
+      "description" : "MRGN-Klassifikation eines gramnegativen Isolats mit dem Ergebnis 2MRGN.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
     },
     {
       "extension" : [{
@@ -1517,6 +1733,22 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       "name" : "MII EXA Mikrobio MRGN Klasse negativ",
       "description" : "Identifiziertes gramnegatives Isolat, dessen Empfindlichkeitsbefunde bewertet wurden und das keiner MRGN-Klasse zuzuordnen ist.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-nugent-score.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-nugent-score"
+      },
+      "name" : "MII EXA Mikrobio Nugent Score",
+      "description" : "Nugent-Score einer Vaginalprobe zur Beurteilung einer bakteriellen Vaginose.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score"
     },
     {
       "extension" : [{
@@ -1605,6 +1837,38 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten"
+      },
+      "name" : "MII EXA Mikrobio Resistenzmechanismen Determinanten",
+      "description" : "Molekularer Nachweis einer Resistenzdeterminante mittels PCR.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-spezifische-bestimmung.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-spezifische-bestimmung"
+      },
+      "name" : "MII EXA Mikrobio Spezifische Bestimmung",
+      "description" : "Zielgerichteter molekularer Erregernachweis mit negativem Ergebnis.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html"
       }],
       "reference" : {
@@ -1621,6 +1885,22 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       {
         "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-spezifische-kultur.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-spezifische-kultur"
+      },
+      "name" : "MII EXA Mikrobio Spezifische Kultur",
+      "description" : "Zielgerichtete kulturelle Untersuchung auf einen vordefinierten Erreger, hier mit Wachstumsnachweis.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
         "valueUri" : "Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.html"
       }],
       "reference" : {
@@ -1629,6 +1909,54 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       "name" : "MII EXA Mikrobio Spezifische Kultur VRE negativ",
       "description" : "Negativer VRE-Nachweis mittels erregerspezifischer Kultur: kein Wachstum vancomycinresistenter Enterokokken.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-titer.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-titer"
+      },
+      "name" : "MII EXA Mikrobio Titer",
+      "description" : "Titerbestimmung als Verdünnungsverhältnis am Beispiel von Rötelnvirus-Antikörpern.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-virulenzfaktor.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-virulenzfaktor"
+      },
+      "name" : "MII EXA Mikrobio Virulenzfaktor",
+      "description" : "Nachweis eines Virulenzfaktor-Gens mit negativem Ergebnis.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html"
+      }],
+      "reference" : {
+        "reference" : "Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit"
+      },
+      "name" : "MII EXA Mikrobio Voraussichtliche Empfindlichkeit",
+      "description" : "Aus dem Genotyp abgeleitete erwartete Empfindlichkeit gegenüber Rifampicin.",
+      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"
     },
     {
       "extension" : [{
@@ -2716,306 +3044,6 @@ Expansionsparameter sind Query-Parameter, die an eine `ValueSet`- `$expand`-Oper
       },
       "name" : "MII VS Mikrobio Voraussichtliche Empfindlichkeit",
       "description" : "Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypischen Nachweisen abgeleitete erwartete Kategorie sensibel, intermediär oder resistent.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-allgemeine-bestimmung.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-allgemeine-bestimmung"
-      },
-      "name" : "mii-exa-mikrobio-allgemeine-bestimmung",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-allgemeine-kultur.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-allgemeine-kultur"
-      },
-      "name" : "mii-exa-mikrobio-allgemeine-kultur",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ"
-      },
-      "name" : "mii-exa-mikrobio-antigen-antikoerper-quantitativ",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-aviditaet.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-aviditaet"
-      },
-      "name" : "mii-exa-mikrobio-aviditaet",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-barlett-score.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-barlett-score"
-      },
-      "name" : "mii-exa-mikrobio-barlett-score",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-ct-wert.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-ct-wert"
-      },
-      "name" : "mii-exa-mikrobio-ct-wert",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "DiagnosticReport"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "DiagnosticReport-mii-exa-mikrobio-diagnostic-report.html"
-      }],
-      "reference" : {
-        "reference" : "DiagnosticReport/mii-exa-mikrobio-diagnostic-report"
-      },
-      "name" : "mii-exa-mikrobio-diagnostic-report",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-empfindlichkeit.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-empfindlichkeit"
-      },
-      "name" : "mii-exa-mikrobio-empfindlichkeit",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-keimzahl.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-keimzahl"
-      },
-      "name" : "mii-exa-mikrobio-keimzahl",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-mikroskopie.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-mikroskopie"
-      },
-      "name" : "mii-exa-mikrobio-mikroskopie",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-molekulare-pathogenlast.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-molekulare-pathogenlast"
-      },
-      "name" : "mii-exa-mikrobio-molekulare-pathogenlast",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-mrgn-klasse.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-mrgn-klasse"
-      },
-      "name" : "mii-exa-mikrobio-mrgn-klasse",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-nugent-score.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-nugent-score"
-      },
-      "name" : "mii-exa-mikrobio-nugent-score",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten"
-      },
-      "name" : "mii-exa-mikrobio-resistenzmechanismen-determinanten",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-spezifische-bestimmung.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-spezifische-bestimmung"
-      },
-      "name" : "mii-exa-mikrobio-spezifische-bestimmung",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-spezifische-kultur.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-spezifische-kultur"
-      },
-      "name" : "mii-exa-mikrobio-spezifische-kultur",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-titer.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-titer"
-      },
-      "name" : "mii-exa-mikrobio-titer",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-virulenzfaktor.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-virulenzfaktor"
-      },
-      "name" : "mii-exa-mikrobio-virulenzfaktor",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Observation"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html"
-      }],
-      "reference" : {
-        "reference" : "Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit"
-      },
-      "name" : "mii-exa-mikrobio-voraussichtliche-empfindlichkeit",
-      "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Parameters"
-      },
-      {
-        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-        "valueUri" : "Parameters-mii-param-mikrobio-manifest.html"
-      }],
-      "reference" : {
-        "reference" : "Parameters/mii-param-mikrobio-manifest"
-      },
-      "name" : "mii-param-mikrobio-manifest",
       "exampleBoolean" : false
     },
     {

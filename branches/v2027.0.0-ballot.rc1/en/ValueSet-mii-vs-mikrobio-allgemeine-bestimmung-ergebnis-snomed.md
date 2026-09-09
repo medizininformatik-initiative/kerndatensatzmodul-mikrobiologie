@@ -24,7 +24,7 @@ Ergebnis-ValueSet fuer die allgemeine Bestimmung: der identifizierte Mikroorgani
 
 ### Expansion
 
-No Expansion for this valueset (Unknown Code System)
+No Expansion for this valueset (Unsupported Code System Version)
 
 -------
 
@@ -44,7 +44,7 @@ No Expansion for this valueset (Unknown Code System)
   "title" : "MII VS Mikrobio Allgemeine Bestimmung Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -80,6 +80,7 @@ No Expansion for this valueset (Unknown Code System)
     },
     {
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
         "code" : "260415000",
         "display" : "Not detected (qualifier value)"

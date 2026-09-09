@@ -9,7 +9,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>mii-param-mikrobio-manifest - JSON Representation - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1</title>
+    <title>Expansion Parameters Manifest - JSON Representation - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -70,8 +70,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"18.107"}
-    h3,h4,h5,h6{--heading-prefix:"18.107"}</style>
+    <style type="text/css">h2{--heading-prefix:"18.108"}
+    h3,h4,h5,h6{--heading-prefix:"18.108"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -272,7 +272,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><a href='artifacts.html'><b>Artefaktübersicht</b></a></li><li><b>mii-param-mikrobio-manifest</b></li>
+          <li><a href='toc.html'><b>Inhaltsverzeichnis</b></a></li><li><a href='artifacts.html'><b>Artefaktübersicht</b></a></li><li><b>Expansion Parameters Manifest</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -328,7 +328,7 @@
 
 
 
-<h2 id="root">: mii-param-mikrobio-manifest</h2>
+<h2 id="root">: Expansion Parameters Manifest</h2>
 
 
 <p><a href="Parameters-mii-param-mikrobio-manifest.json" no-download="true">Raw json</a> | <a href="Parameters-mii-param-mikrobio-manifest.json" download>Download</a></p>
@@ -349,16 +349,28 @@
   "<a href="http://hl7.org/fhir/R4/resource.html#Parameters.language">language</a>" : "de",
   "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">parameter</a>" : [
     {
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "force-system-version",
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueCanonical</a>" : "http://loinc.org|2.82"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "system-version",
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueCanonical</a>" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "system-version",
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueCanonical</a>" : "http://loinc.org|2.82"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "system-version",
+      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueCanonical</a>" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation|4.0.0"
+    },
+    {
       "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "system-version",
       "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueCanonical</a>" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes|3.0.0"
     },
     {
       "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "system-version",
       "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueCanonical</a>" : "http://unitsofmeasure.org|3.0.1"
-    },
-    {
-      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "system-version",
-      "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">valueCanonical</a>" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation|4.0.0"
     },
     {
       "<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">name</a>" : "default-valueset-version",
@@ -1067,7 +1079,7 @@
 
           IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 10:10+0000">2026-09-09</span>
+          Erstellt <span title="Wed, Sep 9, 2026 13:56+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

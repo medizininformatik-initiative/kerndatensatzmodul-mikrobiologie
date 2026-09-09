@@ -42,7 +42,7 @@ Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, 
   "title" : "MII VS Mikrobio Spezifische Kultur Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +75,7 @@ Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, 
   "compose" : {
     "include" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -98,6 +99,7 @@ Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, 
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",

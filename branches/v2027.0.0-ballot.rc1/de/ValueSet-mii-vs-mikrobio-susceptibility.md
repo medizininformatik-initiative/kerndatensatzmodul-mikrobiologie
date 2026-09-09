@@ -24,6 +24,8 @@ Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategor
 
 ### Expansion
 
+No Expansion for this valueset (Unsupported Code System Version)
+
 -------
 
  [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -75,6 +77,7 @@ Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategor
   "compose" : {
     "include" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "version" : "4.0.0",
       "concept" : [{
         "code" : "S",
         "display" : "Susceptible"
@@ -98,6 +101,7 @@ Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategor
     },
     {
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
         "code" : "1306583007",
         "display" : "I (Susceptible, increased exposure) EUCAST (European Committee on Antimicrobial Susceptibility Testing) category 2019"

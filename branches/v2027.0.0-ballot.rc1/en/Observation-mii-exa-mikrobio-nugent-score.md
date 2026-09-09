@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-nugent-score - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Nugent Score - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **mii-exa-mikrobio-nugent-score**
+* **MII EXA Mikrobio Nugent Score**
 
-## Example Observation: mii-exa-mikrobio-nugent-score
+## Example Observation: MII EXA Mikrobio Nugent Score
 
 -------
 
@@ -25,6 +25,8 @@ Profile: [MII PR Mikrobio Nugent Score](StructureDefinition-mii-pr-mikrobio-nuge
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
+
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
 **value**: 7 1 (Details: UCUM code1 = '1')
 
@@ -53,7 +55,7 @@ Profile: [MII PR Mikrobio Nugent Score](StructureDefinition-mii-pr-mikrobio-nuge
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "nugent-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -65,6 +67,7 @@ Profile: [MII PR Mikrobio Nugent Score](StructureDefinition-mii-pr-mikrobio-nuge
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -78,6 +81,7 @@ Profile: [MII PR Mikrobio Nugent Score](StructureDefinition-mii-pr-mikrobio-nuge
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "101433-1",
       "display" : "Bacterial vaginosis score in Vaginal fluid Qualitative by Nugent"
     }]
@@ -86,6 +90,9 @@ Profile: [MII PR Mikrobio Nugent Score](StructureDefinition-mii-pr-mikrobio-nuge
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueQuantity" : {
     "value" : 7,
     "unit" : "1",
@@ -95,6 +102,7 @@ Profile: [MII PR Mikrobio Nugent Score](StructureDefinition-mii-pr-mikrobio-nuge
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "702661004",
       "display" : "Light microscopy"
     }]

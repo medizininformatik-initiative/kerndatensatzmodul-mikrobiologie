@@ -139,43 +139,44 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 
 | | |
 | :--- | :--- |
+| [ MII EXA Mikrobio Allgemeine Bestimmung  ](Observation-mii-exa-mikrobio-allgemeine-bestimmung.md) | Ungerichtete Erregeridentifizierung aus einer Probe, ausgewiesen als Reflex-Folgeuntersuchung der allgemeinen Kultur. |
+| [ MII EXA Mikrobio Allgemeine Kultur  ](Observation-mii-exa-mikrobio-allgemeine-kultur.md) | Ungerichtete kulturelle Anzucht mit Wachstumsnachweis, aerobe Kultur. |
+| [ MII EXA Mikrobio Antigen Antikoerper quantitativ  ](Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.md) | Quantitative Antikörperbestimmung im Serum am Beispiel der Hepatitis-B-Oberflächen-Antikörper. |
+| [ MII EXA Mikrobio Aviditaet  ](Observation-mii-exa-mikrobio-aviditaet.md) | Aviditätsbestimmung von CMV-IgG-Antikörpern; der Messwert bleibt in value, die Einordnung steht in interpretation. |
+| [ MII EXA Mikrobio Barlett Score  ](Observation-mii-exa-mikrobio-barlett-score.md) | Barlett-Score einer Sputumprobe zur Beurteilung, ob sie für die Kultur geeignet ist. |
+| [ MII EXA Mikrobio Ct Wert  ](Observation-mii-exa-mikrobio-ct-wert.md) | Zyklusschwellenwert einer Echtzeit-PCR auf Influenza A H3. |
+| [ MII EXA Mikrobio Diagnostic Report  ](DiagnosticReport-mii-exa-mikrobio-diagnostic-report.md) | Mikrobiologischer Befundbericht, der die zugehörigen Untersuchungen zusammenfasst. |
+| [ MII EXA Mikrobio Empfindlichkeit  ](Observation-mii-exa-mikrobio-empfindlichkeit.md) | Phänotypische Empfindlichkeitstestung mit MHK in mg/L; die Kategorie steht mit ihrer Norm in interpretation. |
+| [ MII EXA Mikrobio Keimzahl  ](Observation-mii-exa-mikrobio-keimzahl.md) | Keimzahlbestimmung als koloniebildende Einheiten je Milliliter. |
 | [ MII EXA Mikrobio Keimzahl Katheterspitze  ](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.md) | Keimzahl einer Katheterspitze in koloniebildenden Einheiten ohne Nenner. Die Bezugsgröße steht in Specimen.type. |
+| [ MII EXA Mikrobio Labor  ](Organization-mii-exa-mikrobio-labor.md) | Durchführendes mikrobiologisches Labor der Beispiele dieses Moduls. |
+| [ MII EXA Mikrobio MRGN Klasse  ](Observation-mii-exa-mikrobio-mrgn-klasse.md) | MRGN-Klassifikation eines gramnegativen Isolats mit dem Ergebnis 2MRGN. |
 | [ MII EXA Mikrobio MRGN Klasse negativ  ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.md) | Identifiziertes gramnegatives Isolat, dessen Empfindlichkeitsbefunde bewertet wurden und das keiner MRGN-Klasse zuzuordnen ist. |
+| [ MII EXA Mikrobio Mikroskopie  ](Observation-mii-exa-mikrobio-mikroskopie.md) | Mikroskopischer Befund ohne taxonomische Zuordnung: grampositive Kokken in Haufen. |
+| [ MII EXA Mikrobio Molekulare Pathogenlast  ](Observation-mii-exa-mikrobio-molekulare-pathogenlast.md) | Quantitative molekulare Erregerlast am Beispiel der CMV-DNA in Kopien je Milliliter. |
+| [ MII EXA Mikrobio Nugent Score  ](Observation-mii-exa-mikrobio-nugent-score.md) | Nugent-Score einer Vaginalprobe zur Beurteilung einer bakteriellen Vaginose. |
 | [ MII EXA Mikrobio Patient  ](Patient-mii-exa-mikrobio-patient.md) | Minimales Subject für die Beispiele dieses Moduls. Kein Profil, keine Demografie — Patient wird vom Personen-Modul verantwortet. |
 | [ MII EXA Mikrobio Probe  ](Specimen-mii-exa-mikrobio-probe.md) | Generisches Probenmaterial für die Beispiele dieses Moduls. Der Typ ist bewusst unspezifisch, weil dieselbe Probe Beispiele unterschiedlicher Untersuchungsarten trägt. |
 | [ MII EXA Mikrobio Probe Katheterspitze  ](Specimen-mii-exa-mikrobio-probe-katheterspitze.md) | Katheterspitze als Probenmaterial. Sie hat weder Volumen noch Masse und ist damit selbst die Bezugsgröße der Keimzahl. |
 | [ MII EXA Mikrobio Resistenzkategorie VRE negativ  ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.md) | Identifizierter Enterococcus ohne Vancomycinresistenz: VRE-Status Negative. |
 | [ MII EXA Mikrobio Resistenzkategorie VRE positiv  ](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.md) | Identifizierter Enterococcus faecium mit nachgewiesener Vancomycinresistenz: VRE-Status Positive, abgeleitet aus Identifikation und Empfindlichkeitstestung. |
+| [ MII EXA Mikrobio Resistenzmechanismen Determinanten  ](Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.md) | Molekularer Nachweis einer Resistenzdeterminante mittels PCR. |
+| [ MII EXA Mikrobio Spezifische Bestimmung  ](Observation-mii-exa-mikrobio-spezifische-bestimmung.md) | Zielgerichteter molekularer Erregernachweis mit negativem Ergebnis. |
 | [ MII EXA Mikrobio Spezifische Bestimmung VRE negativ  ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md) | Negativer VRE-Nachweis: Der Test auf vancomycinresistente Enterokokken ist negativ. |
+| [ MII EXA Mikrobio Spezifische Kultur  ](Observation-mii-exa-mikrobio-spezifische-kultur.md) | Zielgerichtete kulturelle Untersuchung auf einen vordefinierten Erreger, hier mit Wachstumsnachweis. |
 | [ MII EXA Mikrobio Spezifische Kultur VRE negativ  ](Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.md) | Negativer VRE-Nachweis mittels erregerspezifischer Kultur: kein Wachstum vancomycinresistenter Enterokokken. |
+| [ MII EXA Mikrobio Titer  ](Observation-mii-exa-mikrobio-titer.md) | Titerbestimmung als Verdünnungsverhältnis am Beispiel von Rötelnvirus-Antikörpern. |
+| [ MII EXA Mikrobio Virulenzfaktor  ](Observation-mii-exa-mikrobio-virulenzfaktor.md) | Nachweis eines Virulenzfaktor-Gens mit negativem Ergebnis. |
+| [ MII EXA Mikrobio Voraussichtliche Empfindlichkeit  ](Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.md) | Aus dem Genotyp abgeleitete erwartete Empfindlichkeit gegenüber Rifampicin. |
 | [ MII EXA Mikrobio Workflow VRE 1 Kultur positiv  ](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.md) | Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erregerspezifischer Kultur. |
 | [ MII EXA Mikrobio Workflow VRE 2 Identifikation  ](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.md) | Workflow-Kette VRE, Schritt 2: weiterführende Identifikation des Isolats als Enterococcus faecium, ausgelöst durch den positiven Nachweis. |
 | [ MII EXA Mikrobio Workflow VRE 3 Empfindlichkeit  ](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md) | Workflow-Kette VRE, Schritt 3: Vancomycin-Empfindlichkeitstestung des identifizierten Isolats mit dem Ergebnis resistent. |
-| [ mii-exa-mikrobio-allgemeine-bestimmung  ](Observation-mii-exa-mikrobio-allgemeine-bestimmung.md) |  |
-| [ mii-exa-mikrobio-allgemeine-kultur  ](Observation-mii-exa-mikrobio-allgemeine-kultur.md) |  |
-| [ mii-exa-mikrobio-antigen-antikoerper-quantitativ  ](Observation-mii-exa-mikrobio-antigen-antikoerper-quantitativ.md) |  |
-| [ mii-exa-mikrobio-aviditaet  ](Observation-mii-exa-mikrobio-aviditaet.md) |  |
-| [ mii-exa-mikrobio-barlett-score  ](Observation-mii-exa-mikrobio-barlett-score.md) |  |
-| [ mii-exa-mikrobio-ct-wert  ](Observation-mii-exa-mikrobio-ct-wert.md) |  |
-| [ mii-exa-mikrobio-diagnostic-report  ](DiagnosticReport-mii-exa-mikrobio-diagnostic-report.md) |  |
-| [ mii-exa-mikrobio-empfindlichkeit  ](Observation-mii-exa-mikrobio-empfindlichkeit.md) |  |
-| [ mii-exa-mikrobio-keimzahl  ](Observation-mii-exa-mikrobio-keimzahl.md) |  |
-| [ mii-exa-mikrobio-mikroskopie  ](Observation-mii-exa-mikrobio-mikroskopie.md) |  |
-| [ mii-exa-mikrobio-molekulare-pathogenlast  ](Observation-mii-exa-mikrobio-molekulare-pathogenlast.md) |  |
-| [ mii-exa-mikrobio-mrgn-klasse  ](Observation-mii-exa-mikrobio-mrgn-klasse.md) |  |
-| [ mii-exa-mikrobio-nugent-score  ](Observation-mii-exa-mikrobio-nugent-score.md) |  |
-| [ mii-exa-mikrobio-resistenzmechanismen-determinanten  ](Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.md) |  |
-| [ mii-exa-mikrobio-spezifische-bestimmung  ](Observation-mii-exa-mikrobio-spezifische-bestimmung.md) |  |
-| [ mii-exa-mikrobio-spezifische-kultur  ](Observation-mii-exa-mikrobio-spezifische-kultur.md) |  |
-| [ mii-exa-mikrobio-titer  ](Observation-mii-exa-mikrobio-titer.md) |  |
-| [ mii-exa-mikrobio-virulenzfaktor  ](Observation-mii-exa-mikrobio-virulenzfaktor.md) |  |
-| [ mii-exa-mikrobio-voraussichtliche-empfindlichkeit  ](Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.md) |  |
 
 ### Sonstige 
 
 Dies sind Ressourcen, die in diesem Implementierungsleitfaden verwendet werden, die in keine der anderen Kategorien passen.
 
-| |
-| :--- |
-| [ mii-param-mikrobio-manifest  ](Parameters-mii-param-mikrobio-manifest.md) |
+| | |
+| :--- | :--- |
+| [ Expansion Parameters Manifest  ](Parameters-mii-param-mikrobio-manifest.md) | Gepinnte CodeSystem-Versionen, gegen die jedes ValueSet dieses Leitfadens expandiert wird. |
 

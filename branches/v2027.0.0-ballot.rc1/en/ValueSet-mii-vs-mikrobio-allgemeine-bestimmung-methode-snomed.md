@@ -24,6 +24,8 @@ Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren
 
 ### Expansion
 
+No Expansion for this valueset (Unsupported Code System Version)
+
 -------
 
  [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -42,7 +44,7 @@ Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren
   "title" : "MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +77,7 @@ Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
         "code" : "278289002",
         "display" : "Microscopy technique (qualifier value)"

@@ -24,6 +24,8 @@ Ergebnis-ValueSet für die Mikroskopie: mikroskopisch beobachtete Morphologie oh
 
 ### Expansion
 
+No Expansion for this valueset (Unsupported Code System Version)
+
 -------
 
  [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -42,7 +44,7 @@ Ergebnis-ValueSet für die Mikroskopie: mikroskopisch beobachtete Morphologie oh
   "title" : "MII VS Mikrobio Morphologie Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +77,7 @@ Ergebnis-ValueSet für die Mikroskopie: mikroskopisch beobachtete Morphologie oh
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
         "code" : "723529006",
         "display" : "Extracellular Gram-negative diplococcus (finding)"

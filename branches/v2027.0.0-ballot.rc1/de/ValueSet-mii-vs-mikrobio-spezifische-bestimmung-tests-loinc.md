@@ -42,7 +42,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
   "title" : "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +75,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
   "compose" : {
     "include" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -98,6 +99,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -121,6 +123,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -144,6 +147,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -167,6 +171,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -190,6 +195,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -213,6 +219,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -236,6 +243,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -259,6 +267,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -282,6 +291,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -305,6 +315,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -328,6 +339,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -351,6 +363,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -374,6 +387,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -397,6 +411,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -420,6 +435,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -443,6 +459,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -466,6 +483,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "PROPERTY",
         "op" : "=",
@@ -489,6 +507,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "concept" : [{
         "code" : "105904-7",
         "display" : "Vancomycin resistant enterococcus [Presence] in Specimen"

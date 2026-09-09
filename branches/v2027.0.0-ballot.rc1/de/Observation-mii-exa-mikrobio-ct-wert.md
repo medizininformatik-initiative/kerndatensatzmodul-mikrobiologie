@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-ct-wert - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Ct Wert - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **mii-exa-mikrobio-ct-wert**
+* **MII EXA Mikrobio Ct Wert**
 
-## Beispiel Observation: mii-exa-mikrobio-ct-wert
+## Beispiel Observation: MII EXA Mikrobio Ct Wert
 
 -------
 
@@ -25,6 +25,8 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
+
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
 **value**: 21.3 1 (Details: UCUM code1 = '1')
 
@@ -55,7 +57,7 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "ct-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -67,6 +69,7 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -80,6 +83,7 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "74039-9",
       "display" : "Influenza virus A H3 RNA [Cycle Threshold #] in Specimen by NAA with probe detection"
     }]
@@ -88,6 +92,9 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueQuantity" : {
     "value" : 21.3,
     "unit" : "1",
@@ -97,6 +104,7 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "70601000052104",
       "display" : "Real-time polymerase chain reaction technique"
     }]

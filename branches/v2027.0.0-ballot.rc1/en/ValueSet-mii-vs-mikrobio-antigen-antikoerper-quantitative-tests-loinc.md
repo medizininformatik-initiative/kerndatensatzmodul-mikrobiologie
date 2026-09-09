@@ -42,7 +42,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
   "title" : "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +75,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
   "compose" : {
     "include" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -98,6 +99,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -121,6 +123,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -144,6 +147,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -167,6 +171,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -190,6 +195,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -213,6 +219,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -236,6 +243,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -259,6 +267,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",

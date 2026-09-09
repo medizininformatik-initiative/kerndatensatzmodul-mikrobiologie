@@ -75,6 +75,7 @@ Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der 
   "compose" : {
     "include" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "CLASS",
         "op" : "=",

@@ -75,6 +75,7 @@ Ergebnis-ValueSet für die MRGN-Klassifikation: 2MRGN, 3MRGN und 4MRGN nach RKI-
   "compose" : {
     "include" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "concept" : [{
         "code" : "LA33214-0",
         "display" : "2MRGN"

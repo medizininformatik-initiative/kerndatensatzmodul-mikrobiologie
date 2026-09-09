@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-allgemeine-bestimmung - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Allgemeine Bestimmung - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **mii-exa-mikrobio-allgemeine-bestimmung**
+* **MII EXA Mikrobio Allgemeine Bestimmung**
 
-## Beispiel Observation: mii-exa-mikrobio-allgemeine-bestimmung
+## Beispiel Observation: MII EXA Mikrobio Allgemeine Bestimmung
 
 -------
 
@@ -29,6 +29,8 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
+
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
 **value**: Pseudomonas aeruginosa
 
@@ -70,7 +72,7 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "allg-best-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -82,6 +84,7 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -95,6 +98,7 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "41852-5",
       "display" : "Microorganism or agent identified in Specimen"
     }]
@@ -103,9 +107,13 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "52499004",
       "display" : "Pseudomonas aeruginosa"
     }]
@@ -113,6 +121,7 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "278289002",
       "display" : "Microscopy technique"
     }]

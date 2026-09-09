@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-diagnostic-report - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Diagnostic Report - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **mii-exa-mikrobio-diagnostic-report**
+* **MII EXA Mikrobio Diagnostic Report**
 
-## Example DiagnosticReport: mii-exa-mikrobio-diagnostic-report
+## Example DiagnosticReport: MII EXA Mikrobio Diagnostic Report
 
 -------
 
@@ -21,6 +21,7 @@ Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio
 | Subject | Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111) |
 | Relevant Time | 2026-04-02 10:00:00+0100 |
 | Reported | 2026-04-02 10:30:00+0100 |
+| Performer | [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md) |
 | Identifier | Filler Identifier/mikrobio-dr-1 |
 
 **Report Details**
@@ -51,7 +52,7 @@ Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio
     "system" : "https://example.org/fhir/sid/test-befund",
     "value" : "mikrobio-dr-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "basedOn" : [{
@@ -76,6 +77,7 @@ Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -90,6 +92,7 @@ Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio
   {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "92894-5",
       "display" : "Microbiology - bacterial studies"
     }]
@@ -97,6 +100,7 @@ Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "11502-2",
       "display" : "Laboratory report"
     }]
@@ -106,6 +110,9 @@ Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
   "issued" : "2026-04-02T10:30:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "result" : [{
     "reference" : "Observation/mii-exa-mikrobio-allgemeine-kultur"
   }]

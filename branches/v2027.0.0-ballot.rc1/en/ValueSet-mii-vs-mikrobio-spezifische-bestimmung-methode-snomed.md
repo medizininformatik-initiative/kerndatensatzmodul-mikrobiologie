@@ -24,6 +24,8 @@ Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahre
 
 ### Expansion
 
+No Expansion for this valueset (Unsupported Code System Version)
+
 -------
 
  [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -42,7 +44,7 @@ Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahre
   "title" : "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +77,7 @@ Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahre
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
         "code" : "258066000",
         "display" : "Polymerase chain reaction technique (qualifier value)"

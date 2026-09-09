@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-allgemeine-kultur - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Allgemeine Kultur - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **mii-exa-mikrobio-allgemeine-kultur**
+* **MII EXA Mikrobio Allgemeine Kultur**
 
-## Beispiel Observation: mii-exa-mikrobio-allgemeine-kultur
+## Beispiel Observation: MII EXA Mikrobio Allgemeine Kultur
 
 -------
 
@@ -25,6 +25,8 @@ Profile: [MII PR Mikrobio Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
+
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
 **value**: Organism growth
 
@@ -53,7 +55,7 @@ Profile: [MII PR Mikrobio Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "allg-kultur-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -65,6 +67,7 @@ Profile: [MII PR Mikrobio Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -78,6 +81,7 @@ Profile: [MII PR Mikrobio Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "11475-1",
       "display" : "Microorganism identified in Specimen by Culture"
     }]
@@ -86,9 +90,13 @@ Profile: [MII PR Mikrobio Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "365698005",
       "display" : "Organism growth"
     }]
@@ -96,6 +104,7 @@ Profile: [MII PR Mikrobio Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "703750006",
       "display" : "Aerobic culture"
     }]

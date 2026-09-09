@@ -42,7 +42,7 @@ Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für d
   "title" : "MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +75,7 @@ Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für d
   "compose" : {
     "include" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -98,6 +99,7 @@ Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für d
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -121,6 +123,7 @@ Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für d
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -144,6 +147,7 @@ Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für d
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",
@@ -167,6 +171,7 @@ Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für d
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "filter" : [{
         "property" : "SCALE_TYP",
         "op" : "=",

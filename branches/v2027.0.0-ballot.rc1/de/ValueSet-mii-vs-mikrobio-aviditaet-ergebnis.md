@@ -42,7 +42,7 @@ Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsind
   "title" : "MII VS Mikrobio Aviditaet Ergebnis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +75,7 @@ Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsind
   "compose" : {
     "include" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "version" : "4.0.0",
       "concept" : [{
         "code" : "L",
         "display" : "Low"

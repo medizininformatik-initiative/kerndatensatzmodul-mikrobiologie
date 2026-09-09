@@ -4,7 +4,7 @@
   <id value="mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"/>
   <language value="en"/>
   <text>
-    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc</b></p><a name="mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"> </a><a name="hcmii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"> </a><ul><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span> where CLASS  = LP7755-4 (ABXBACT), PROPERTY  = LP6870-2 (Susc) and STATUS  = ACTIVE</li></ul></div>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc</b></p><a name="mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"> </a><a name="hcmii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"> </a><ul><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.82"> version &#x1F4CD;2.82</span> where CLASS  = LP7755-4 (ABXBACT), PROPERTY  = LP6870-2 (Susc) and STATUS  = ACTIVE</li></ul></div>
   </text>
   <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"/>
   <version value="2027.0.0-ballot.rc1"/>
@@ -32,6 +32,7 @@
   <compose>
     <include>
       <system value="http://loinc.org"/>
+      <version value="2.82"/>
       <filter>
         <property value="CLASS"/>
         <op value="="/>

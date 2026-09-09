@@ -26,6 +26,8 @@ Profile: [MII PR Mikrobio Resistenzkategorie Status](StructureDefinition-mii-pr-
 
 **effective**: 2026-04-03 15:00:00+0100
 
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
+
 **value**: Positive
 
 **specimen**: [Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100](Specimen-mii-exa-mikrobio-probe.md)
@@ -56,7 +58,7 @@ Profile: [MII PR Mikrobio Resistenzkategorie Status](StructureDefinition-mii-pr-
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "reskat-vre-pos",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -68,6 +70,7 @@ Profile: [MII PR Mikrobio Resistenzkategorie Status](StructureDefinition-mii-pr-
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -89,9 +92,13 @@ Profile: [MII PR Mikrobio Resistenzkategorie Status](StructureDefinition-mii-pr-
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-03T15:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "10828004",
       "display" : "Positive"
     }]

@@ -26,6 +26,8 @@ Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder n
 
 ### Expansion
 
+No Expansion for this valueset (Unsupported Code System Version)
+
 -------
 
  [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -44,7 +46,7 @@ Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder n
   "title" : "MII VS Mikrobio Detected Not Detected [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -77,6 +79,7 @@ Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder n
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
         "code" : "260373001",
         "display" : "Detected (qualifier value)"

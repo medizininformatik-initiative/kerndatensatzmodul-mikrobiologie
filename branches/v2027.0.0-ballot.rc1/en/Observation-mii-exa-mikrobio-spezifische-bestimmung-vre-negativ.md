@@ -26,6 +26,8 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
 
 **effective**: 2026-04-02 10:00:00+0100
 
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
+
 **value**: Not detected (qualifier value)
 
 **method**: Real-time polymerase chain reaction technique (qualifier value)
@@ -53,7 +55,7 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "spez-best-vre-neg-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -65,6 +67,7 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -78,6 +81,7 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "105904-7",
       "display" : "Vancomycin resistant enterococcus [Presence] in Specimen"
     }]
@@ -86,9 +90,13 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "260415000",
       "display" : "Not detected (qualifier value)"
     }]
@@ -96,6 +104,7 @@ Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mik
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "70601000052104",
       "display" : "Real-time polymerase chain reaction technique (qualifier value)"
     }]

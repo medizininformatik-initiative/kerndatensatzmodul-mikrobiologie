@@ -75,6 +75,7 @@ Ergebnis-ValueSet für den Barlett-Score: Punktkategorien von +3 bis -1, die das
   "compose" : {
     "include" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "concept" : [{
         "code" : "LA21392-8",
         "display" : "+3 Active inflammation"

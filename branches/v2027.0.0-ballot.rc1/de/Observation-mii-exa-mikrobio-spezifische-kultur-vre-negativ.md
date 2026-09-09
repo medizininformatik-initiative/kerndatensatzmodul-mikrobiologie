@@ -26,6 +26,8 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
 
 **effective**: 2026-04-02 10:00:00+0100
 
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
+
 **value**: No growth (qualifier value)
 
 **method**: Organism specific culture
@@ -53,7 +55,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "spez-kultur-vre-neg-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -65,6 +67,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -78,6 +81,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "13316-5",
       "display" : "Vancomycin resistant enterococcus [Presence] in Specimen by Organism specific culture"
     }]
@@ -86,9 +90,13 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "264868006",
       "display" : "No growth (qualifier value)"
     }]
@@ -96,6 +104,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "703752003",
       "display" : "Organism specific culture"
     }]

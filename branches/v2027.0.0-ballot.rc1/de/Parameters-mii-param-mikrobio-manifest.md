@@ -1,10 +1,10 @@
-# mii-param-mikrobio-manifest - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# Expansion Parameters Manifest - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **mii-param-mikrobio-manifest**
+* **Expansion Parameters Manifest**
 
-## Parameters: mii-param-mikrobio-manifest
+## Parameters: Expansion Parameters Manifest
 
 
 
@@ -18,16 +18,28 @@
     "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-manifestparameters"]
   },
   "parameter" : [{
+    "name" : "force-system-version",
+    "valueCanonical" : "http://loinc.org|2.82"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "http://loinc.org|2.82"
+  },
+  {
+    "name" : "system-version",
+    "valueCanonical" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation|4.0.0"
+  },
+  {
     "name" : "system-version",
     "valueCanonical" : "http://terminology.hl7.org/CodeSystem/artifact-version-policy-codes|3.0.0"
   },
   {
     "name" : "system-version",
     "valueCanonical" : "http://unitsofmeasure.org|3.0.1"
-  },
-  {
-    "name" : "system-version",
-    "valueCanonical" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation|4.0.0"
   },
   {
     "name" : "default-valueset-version",

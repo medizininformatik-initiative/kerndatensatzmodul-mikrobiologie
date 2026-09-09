@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-keimzahl - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Keimzahl - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **mii-exa-mikrobio-keimzahl**
+* **MII EXA Mikrobio Keimzahl**
 
-## Example Observation: mii-exa-mikrobio-keimzahl
+## Example Observation: MII EXA Mikrobio Keimzahl
 
 -------
 
@@ -25,6 +25,8 @@ Profile: [MII PR Mikrobio Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
+
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
 **value**: 100000 /mL (Details: UCUM code/mL = '/mL')
 
@@ -53,7 +55,7 @@ Profile: [MII PR Mikrobio Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "keimzahl-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -65,6 +67,7 @@ Profile: [MII PR Mikrobio Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -78,6 +81,7 @@ Profile: [MII PR Mikrobio Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "49223-1",
       "display" : "Colony count [#/volume] in Specimen by Visual count"
     }]
@@ -86,6 +90,9 @@ Profile: [MII PR Mikrobio Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueQuantity" : {
     "value" : 100000,
     "unit" : "/mL",
@@ -95,6 +102,7 @@ Profile: [MII PR Mikrobio Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "410681005",
       "display" : "Count of entities"
     }]

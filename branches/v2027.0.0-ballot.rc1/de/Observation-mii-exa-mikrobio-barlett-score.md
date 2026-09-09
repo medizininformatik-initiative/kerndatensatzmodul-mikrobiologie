@@ -1,10 +1,10 @@
-# mii-exa-mikrobio-barlett-score - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Barlett Score - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **mii-exa-mikrobio-barlett-score**
+* **MII EXA Mikrobio Barlett Score**
 
-## Beispiel Observation: mii-exa-mikrobio-barlett-score
+## Beispiel Observation: MII EXA Mikrobio Barlett Score
 
 -------
 
@@ -25,6 +25,8 @@ Profile: [MII PR Mikrobio Barlett Score](StructureDefinition-mii-pr-mikrobio-bar
 **subject**: [Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)](Patient-mii-exa-mikrobio-patient.md)
 
 **effective**: 2026-04-02 10:00:00+0100
+
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
 **value**: +1 Active inflammation
 
@@ -53,7 +55,7 @@ Profile: [MII PR Mikrobio Barlett Score](StructureDefinition-mii-pr-mikrobio-bar
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "barlett-1",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -65,6 +67,7 @@ Profile: [MII PR Mikrobio Barlett Score](StructureDefinition-mii-pr-mikrobio-bar
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -78,6 +81,7 @@ Profile: [MII PR Mikrobio Barlett Score](StructureDefinition-mii-pr-mikrobio-bar
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "75371-5",
       "display" : "Bartlett score of Sputum Qualitative by Light microscopy"
     }]
@@ -86,9 +90,13 @@ Profile: [MII PR Mikrobio Barlett Score](StructureDefinition-mii-pr-mikrobio-bar
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-02T10:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "LA21390-2",
       "display" : "+1 Active inflammation"
     }]
@@ -96,6 +104,7 @@ Profile: [MII PR Mikrobio Barlett Score](StructureDefinition-mii-pr-mikrobio-bar
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "702661004",
       "display" : "Light microscopy"
     }]

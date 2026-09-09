@@ -30,6 +30,8 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
 
 **effective**: 2026-04-03 14:00:00+0100
 
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
+
 **value**: 64 mg/L (Details: UCUM codemg/L = 'mg/L')
 
 **interpretation**: Resistant
@@ -70,7 +72,7 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "wf-vre-3",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -82,6 +84,7 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -95,6 +98,7 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "524-9",
       "display" : "Vancomycin [Susceptibility] by Minimum inhibitory concentration (MIC)"
     }]
@@ -103,6 +107,9 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-03T14:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueQuantity" : {
     "value" : 64,
     "unit" : "mg/L",

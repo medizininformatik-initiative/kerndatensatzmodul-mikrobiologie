@@ -25,6 +25,8 @@ Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein
 
 ### Expansion
 
+No Expansion for this valueset (Unsupported Code System Version)
+
 -------
 
  [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -43,7 +45,7 @@ Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein
   "title" : "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -76,6 +78,7 @@ Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
         "code" : "365698005",
         "display" : "Organism growth"

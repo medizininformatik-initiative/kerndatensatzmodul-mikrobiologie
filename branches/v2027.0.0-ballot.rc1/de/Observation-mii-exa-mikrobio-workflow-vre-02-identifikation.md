@@ -30,6 +30,8 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
 
 **effective**: 2026-04-03 09:00:00+0100
 
+**performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
+
 **value**: Enterococcus faecium
 
 **method**: Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)
@@ -70,7 +72,7 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
     "system" : "https://example.org/fhir/sid/test-lab-results",
     "value" : "wf-vre-2",
     "assigner" : {
-      "display" : "Universitätsklinikum Musterstadt"
+      "reference" : "Organization/mii-exa-mikrobio-labor"
     }
   }],
   "status" : "final",
@@ -82,6 +84,7 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
     },
     {
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "26436-6",
       "display" : "Laboratory studies (set)"
     }]
@@ -95,6 +98,7 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
   "code" : {
     "coding" : [{
       "system" : "http://loinc.org",
+      "version" : "2.82",
       "code" : "41852-5",
       "display" : "Microorganism or agent identified in Specimen"
     }]
@@ -103,9 +107,13 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime" : "2026-04-03T09:00:00+01:00",
+  "performer" : [{
+    "reference" : "Organization/mii-exa-mikrobio-labor"
+  }],
   "valueCodeableConcept" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "90272000",
       "display" : "Enterococcus faecium"
     }]
@@ -113,6 +121,7 @@ Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikr
   "method" : {
     "coding" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "83581000052107",
       "display" : "Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)"
     }]

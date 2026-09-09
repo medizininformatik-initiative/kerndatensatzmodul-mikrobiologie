@@ -24,6 +24,8 @@ Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observa
 
 ### Expansion
 
+No Expansion for this valueset (Unsupported Code System Version)
+
 -------
 
  [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -42,7 +44,7 @@ Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observa
   "title" : "MII VS Mikrobio Resistenzkategorie Status Ergebnis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -75,6 +77,7 @@ Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observa
   "compose" : {
     "include" : [{
       "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
         "code" : "10828004",
         "display" : "Positive"

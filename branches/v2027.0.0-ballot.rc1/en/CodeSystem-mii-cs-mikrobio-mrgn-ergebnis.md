@@ -36,7 +36,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Mikrobio MRGN Ergebnis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T10:10:08+00:00",
+  "date" : "2026-09-09T13:56:56+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -66,6 +66,7 @@ This Code system is referenced in the definition of the following value sets:
       "display" : "Germany"
     }]
   }],
+  "caseSensitive" : true,
   "content" : "complete",
   "count" : 1,
   "concept" : [{
