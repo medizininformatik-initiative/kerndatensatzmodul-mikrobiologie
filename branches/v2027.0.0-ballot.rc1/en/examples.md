@@ -5,8 +5,6 @@
 
 ## Examples
 
-### Examples
-
 The example instances of this module, grouped by the profile they conform to.
 
 **[Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)**

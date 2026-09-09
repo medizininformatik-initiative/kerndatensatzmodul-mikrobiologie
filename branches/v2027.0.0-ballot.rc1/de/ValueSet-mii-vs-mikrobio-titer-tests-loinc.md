@@ -42,7 +42,7 @@ Tests-ValueSet für die Titerbestimmung: LOINC-Codes für semiquantitative Messu
   "title" : "MII VS Mikrobio Titer Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T13:56:56+00:00",
+  "date" : "2026-09-09T14:11:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
