@@ -339,97 +339,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 
 <!-- markdownlint-disable MD041 -->
-<!-- Default-language (English) page. Ported from kerndatensatz-basis
-     input/pagecontent/version-history.md (branch main); the release process is
-     the MII meta wiki page "Module Release Workflow"
-     (https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow).
-     German mirror: input/translations/de/pagecontent/version-history.md — both
-     files must say the same thing. -->
+<!-- Kept deliberately short, like the Laboratory base module: the KDS
+     calendar-versioning scheme is documented once in kerndatensatz-basis, and
+     this guide's own CRMI expression of it is on metadata.html. Repeating the
+     scheme here only duplicated that page.
+     German mirror: input/translations/de/pagecontent/version-history.md. -->
 
-<h4 id="version-scheme">Version scheme</h4>
-
-<p>The <strong>Microbiology</strong> module follows the KDS calendar-versioning (CalVer)
-scheme in a SemVer-compatible numeric form:</p>
-
-<ul>
-  <li>format <strong><code class="language-plaintext highlighter-rouge">YYYY.MINOR.PATCH[-label]</code></strong> — the current version is
-<code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code>;</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">YYYY</code></strong> — the year in which the guide applies and is intended to be used;
-it takes the place of the major version;</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">MINOR</code></strong> — incremented for non-breaking additions and refinements;</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">PATCH</code></strong> — incremented for corrections and bug fixes;</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">label</code></strong> — optional pre-release or build label, e.g. <code class="language-plaintext highlighter-rouge">draft</code>, <code class="language-plaintext highlighter-rouge">ballot</code> or
-<code class="language-plaintext highlighter-rouge">cibuild</code>.</li>
-</ul>
-
-<h4 id="comparing-versions">Comparing versions</h4>
-
-<p>Stable releases can be compared by reading the numeric components as
-SemVer-style <code class="language-plaintext highlighter-rouge">&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code>, with the calendar year as the major
-component: <code class="language-plaintext highlighter-rouge">2026.1.0</code> is newer than <code class="language-plaintext highlighter-rouge">2026.0.3</code>. Labels denote pre-release or
-build status; no ordering is inferred among labels.</p>
-
-<h4 id="artifact-versions">Artifact versions</h4>
-
-<p>All released FHIR artifacts in the package carry the same version as the guide
-and its package. An artifact may therefore receive a new version on release even
-when the artifact itself did not change. The computable metadata that declares
-the version algorithm, the versioning policy, the package source and the
-manifest parameters is described on the <a href="metadata.html">Metadata Overview</a> page.</p>
-
-<h4 id="release-process">Release process</h4>
+<p>The module follows MII calendar versioning. The version published here is
+<code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code>, the ballot candidate for 2027.0.0; detailed changes are
+recorded in the <a href="changes.html">changelog</a>, and how the scheme is expressed as
+CRMI metadata is described under <a href="metadata.html">Metadata Overview</a>.</p>
 
 <p>Releases follow the
-<a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">Module Release Workflow</a>:
-the version is raised in the release branch, the changelog entry is written, the
-validation workflows run on the release pull request, and the release is tagged
-after the merge.</p>
-
-<h4 id="version-history-and-changes">Version history and changes</h4>
-
-<ul>
-  <li><strong><a href="changes.html">Changelog</a></strong> — the changes of each released version.</li>
-</ul>
-
-<h4 id="version-comparison">Version comparison</h4>
-
-<p>From the second <strong>formal publication</strong> on, this guide also publishes a
-<strong>machine-generated version comparison</strong>. It complements the changelog: the
-changelog explains <em>why</em> and <em>what to do</em>, the comparison shows <em>exactly what
-changed</em>.</p>
-
-<p><strong>Where it lives.</strong> The report is part of the published site itself:
-<code class="language-plaintext highlighter-rouge">comparison-v&lt;previous&gt;/index.html</code> next to the guide's pages, linked from the
-QA report. The index lists the compared artifact pairs; each pair links a
-detail page with three views — the <strong>difference</strong> analysis (what changed
-element by element), the <strong>union</strong> (everything either version allows) and the
-<strong>intersection</strong> (only what both versions allow).</p>
-
-<p><strong>How it is performed.</strong> The IG Publisher's previous-version comparator loads
-the previous release's package, pairs every profile, value set and code
-system with its counterpart by canonical URL, compares the pairs, and renders
-the report into the build output — so it publishes with the site, with no
-extra deployment step. It is enabled by the <code class="language-plaintext highlighter-rouge">version-comparison</code> parameter — an official IG
-Publisher parameter from the
-<a href="https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html">ig-parameters registry</a>,
-passed through <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> (the commented block there explains the
-setup and its two prerequisites: a publication history at the canonical, and
-a loadable previous package). Absent, it defaults to <code class="language-plaintext highlighter-rouge">{last}</code>; the value
-<code class="language-plaintext highlighter-rouge">n/a</code> is the documented way to switch the comparison off.</p>
-
-<p><strong>The demonstration below</strong> (this template repository's preview only) shows
-the same kind of report before any formal publication exists: the build
-compares itself against the previous <code class="language-plaintext highlighter-rouge">dev</code> preview using the FHIR validator's
-<code class="language-plaintext highlighter-rouge">-compare</code> command and publishes the result at <code class="language-plaintext highlighter-rouge">comparison-demo/index.html</code>.
-The repository variable <code class="language-plaintext highlighter-rouge">ENABLE_VERSION_COMPARISON=false</code> switches the whole
-feature off — the publisher's comparison in every build workflow and this
-demonstration alike; a created module never renders the demonstration.</p>
-
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: If your module has a versioning policy of its own beyond the KDS scheme
-— for example a support window for older versions, or a deprecation policy for
-profiles — describe it here. Delete this prompt afterwards.]</p>
-</blockquote>
+<a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">Module Release Workflow</a>.
+Beyond that workflow the module has no versioning policy of its own — no support
+window for older versions and no separate deprecation rule for profiles.</p>
 
 
 
@@ -454,9 +378,9 @@ profiles — describe it here. Delete this prompt afterwards.]</p>
 
 
 
-          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
+          IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
+          Generated <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

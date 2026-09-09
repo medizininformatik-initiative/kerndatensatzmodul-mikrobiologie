@@ -47,7 +47,7 @@ Die folgenden CRMI-Metadaten werden in [`sushi-config.yaml`](https://github.com/
 | [Artifact Version Algorithm](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-versionAlgorithm.html) | Artefakt-Konventionen; Versionierung | `ImplementationGuide.extension`(`semver`) | Deklariert, wie Versionen verglichen werden, um die aktuellere zu bestimmen. |
 | [Artifact Version Policy](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-versionPolicy.html) | Lebenszyklus; Versionierung | `ImplementationGuide.extension`(`package`) | Deklariert, dass Artefakt-Versionen mit der Paketversion geführt werden — ein Release kann ein Artefakt hochzählen, dessen Inhalt sich nicht geändert hat. |
 | [Package Source](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-package-source.html) | Versions-Manifest; Paketierung; Verteilung | `ImplementationGuide.extension`(packageId, version, uri) | Deklariert das Paket, in dem ein Artefakt definiert ist, damit Auswertungsumgebungen Namensräume und Abhängigkeiten im vorgesehenen Kontext auflösen. |
-| [Resource Approval Date](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-approvalDate.html) | Lebenszyklus; Veröffentlichung; Governance | `ImplementationGuide.extension`(`TODO:REVIEW`) | Hält fest, wann der Herausgeber den Inhalt offiziell zur Nutzung freigegeben hat. |
+| [Resource Approval Date](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-approvalDate.html) | Lebenszyklus; Veröffentlichung; Governance | `ImplementationGuide.extension`—`2026-09-09` | Hält fest, wann der Herausgeber den Inhalt offiziell zur Nutzung freigegeben hat. |
 | [Resource Effective Period](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-effectivePeriod.html) | Lebenszyklus; Veröffentlichung; Implementierung | `ImplementationGuide.extension`(Beginn`2027`) | Hält fest, für welchen Zeitraum der Inhalt gelten soll oder gegolten hat. |
 | [Artifact Author](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-author.html)[Artifact Editor](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-editor.html)[Artifact Reviewer](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-reviewer.html)[Artifact Endorser](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-endorser.html) | Veröffentlichung; Governance; Provenienz | `ImplementationGuide.extension` | Hält Autorenschaft, die für die innere Stimmigkeit verantwortliche Redaktion, die Reviewer und die offiziell befürwortenden Gremien fest. Bei einem KDS-Modul sind Redaktion, Reviewer und befürwortende Gremien die Governance-Gremien des Kerndatensatz-Prozesses. |
 
@@ -56,7 +56,12 @@ In diesem Gerüst nicht aktiviert, aber als auskommentierte Blöcke in `sushi-co
 * [Artifact Related Artifact](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-artifact-relatedArtifact.html) — eine Literaturangabe zum Modul.
 * [CQF Expansion Parameters](http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-cqf-expansionParameters.html) zusammen mit einer [CRMI-Manifest-Parameters](https://hl7.org/fhir/uv/crmi/STU2/en/StructureDefinition-crmi-manifestparameters.html)-Ressource und den Parametern `path-expansion-params` / `pin-manifest`.
 
-> [TODO: Aktivieren Sie die für Ihr Modul nötigen Blöcke und ziehen Sie die Tabellen oben nach. Wenn Ihr Modul die CRMI-Shareable-/Publishable-Profile zusätzlich auf seine eigenen StructureDefinitions, CapabilityStatements, CodeSysteme und ValueSets anwendet — das Idiom aus `kerndatensatz-basis` ist ein gemeinsames `RuleSet` in [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh) —, ergänzen Sie die entsprechenden Zeilen.]
+Die CRMI-**Profile** beansprucht allein der ImplementationGuide (`crmi-shareableimplementationguide`, `crmi-publishableimplementationguide`, `crmi-implementationguide`). Die eigenen Profile, ValueSets und CodeSystems des Moduls beanspruchen sie nicht; sie tragen statt dessen die CRMI-**Extensions**, gesetzt über die gemeinsamen RuleSets in [`input/fsh/rulesets/crmi.fsh`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh):
+
+| | |
+| :--- | :--- |
+| `cqf-knowledgeCapability`,`artifact-topic`,`artifact-reviewer`,`artifact-endorser` | 40 |
+| `artifact-versionAlgorithm`,`artifact-versionPolicy`,`artifact-usage`,`artifact-author`,`artifact-editor`,`mii-ex-meta-license-codeable` | 20 |
 
 ### CodeSystem-Supplements
 
@@ -64,7 +69,7 @@ Veröffentlicht ein Modul CodeSystem-Supplements, ist zu beachten: Das CRMI-Prof
 
 ### Versionierung und Paket-Provenienz
 
-Das menschenlesbare Versionsschema beschreibt die Seite [Versionierung](version-history.md). Dieser Abschnitt beschreibt, wie diese Politik als CRMI-Metadaten ausgedrückt wird.
+Dieser Abschnitt beschreibt das Versionsschema des Moduls und wie es als CRMI-Metadaten ausgedrückt wird. Die veröffentlichte Version und der Release-Workflow stehen auf der Seite [Versionierung](version-history.md).
 
 Das Modul verwendet die Kalender-Versionierung in der SemVer-kompatiblen numerischen Form `JJJJ.MINOR.PATCH[-label]`, derzeit `2027.0.0-ballot.rc1`. Das Kalenderjahr dient als CRMI-`<major>`-Komponente; `MINOR` und `PATCH` behalten ihre übliche additive bzw. korrigierende Bedeutung. Stabile Versionen lassen sich damit über den deklarierten Versionsalgorithmus `semver` vergleichen. Labels tragen Vorab- oder Build-Informationen; gemäß CRMI-/FHIR-Konvention wird zwischen Labels keine Reihenfolge abgeleitet.
 
@@ -83,7 +88,7 @@ Kanonische Referenzen werden im gebauten Paket gepinnt (`pin-canonicals: pin-all
 
 Ein Modul, das zusätzlich eine reproduzierbare Terminologie-Expansion will, ergänzt eine CRMI-Manifest-Parameters-Ressource — das Idiom aus `kerndatensatz-basis` ist `Parameters/mii-param-<slug>-manifest` —, verlinkt sie über `cqf-expansionParameters` aus dem `ImplementationGuide` und weist den Publisher mit `path-expansion-params` und `pin-manifest` darauf hin. Lesende wie Werkzeuge haben dann eine stabile Stelle, an der die Parameter für Expansion und Paket-Pinnung einsehbar sind.
 
-> [TODO: Ergänzen Sie das Manifest Ihres Moduls (siehe die auskommentierten Blöcke in `sushi-config.yaml`) und verlinken Sie hier die erzeugte `Parameters`-Seite — oder halten Sie ausdrücklich fest, dass dieses Modul keine Expansions-Parameter pinnt.]
+Dieses Modul pinnt seine Expansionsparameter. Das Manifest ist [`mii-param-mikrobio-manifest`](Parameters-mii-param-mikrobio-manifest.md), vom IG über `cqf-expansionParameters` referenziert und vom Publisher über `path-expansion-params` und `pin-manifest` gelesen. Es legt fünf Versionen fest: SNOMED CT (die dem `v2027`-CalVer-Strang zugeordnete internationale Ausgabe vom 2026-07-01), LOINC 2.82 — zusätzlich als `force-system-version` —, `v3-ObservationInterpretation` 4.0.0 und `artifact-version-policy-codes` 3.0.0. Die Begründung, und warum der SNOMED-Pin den öffentlichen Terminologieserver für diesen Leitfaden unbrauchbar macht, steht in [`input/resources/README.md`](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md).
 
 ### Bezug zu FAIR
 
@@ -116,7 +121,7 @@ Die mitgelieferten Beispielinstanzen zeigen FAIR-relevante FHIR-Strukturen für 
 | R1.3 | RDA-R1.3-01D | Daten entsprechen einem Community-Standard | Die Beispiele deklarieren die Profile dieses Moduls. Produktiv muss die Konformität gegen Profile, Bindings und CapabilityStatement-Erwartungen validiert werden. |
 | R1.3 | RDA-R1.3-02M | Metadaten sind gemäß einem Community-Standard maschinenverständlich | CRMI-konforme FHIR-Metadaten als JSON/XML und als FHIR-Paket im NPM-Format des IG-Publisher-Ökosystems. |
 
-> [TODO: Die Tabelle führt die Indikatoren der Priorität **Essential** auf. Wenn Ihr Modul die vollständige Selbsteinschätzung will, ergänzen Sie die Indikatoren der Prioritäten **Important** und **Useful** — `kerndatensatz-basis` führt die vollständige Tabelle.]
+Die Tabelle deckt die Indikatoren der Priorität **Essential** ab. Die Indikatoren **Important** und **Useful** werden hier nicht wiederholt: `kerndatensatz-basis` führt die vollständige Selbstbewertung, und sie gilt für jedes KDS-Modul, das denselben Publikationskonventionen folgt.
 
 ### Praktische Nutzung
 

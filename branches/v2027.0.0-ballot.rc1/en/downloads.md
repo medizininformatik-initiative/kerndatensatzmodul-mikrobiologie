@@ -13,6 +13,11 @@ The package file is an NPM-format FHIR package used by most FHIR tooling. It con
 
 * [Package (compressed folder)](../package.tgz)
 
+The guide is bilingual, so the publisher additionally emits one package per language, carrying the resource texts of that language:
+
+* [Package, English](../de.medizininformatikinitiative.kerndatensatz.mikrobiologie.en.tgz)
+* [Package, German](../de.medizininformatikinitiative.kerndatensatz.mikrobiologie.de.tgz)
+
 #### Downloadable copy of this guide
 
 A downloadable copy of the rendered guide, for hosting locally:
@@ -41,11 +46,18 @@ The profile information of the whole guide in a single CSV or Excel file — use
 
 The `ImplementationGuide` resource carries the technical details of this publication, including its dependencies and publication parameters.
 
-> [TODO: This template ships no page for that resource, so there is nothing to link here yet. `kerndatensatz-basis` publishes one as `input/pagecontent/ImplementationGuide-mii-ig-base.md`, registered under `pages:` in `sushi-config.yaml`. Add the equivalent for your module in both languages and link it from here. The file name must carry your slug literally: a `pages:` file name cannot hold a placeholder, because the placeholder substitution rewrites file contents, not file names.]
+* [ImplementationGuide resource](ImplementationGuide-mii-ig-mikrobiologie.md)
+
+#### Definitions and expansions
+
+The conformance resources on their own, and the value sets with their codes already expanded:
+
+* [Definitions, XML](../definitions.xml.zip) · [JSON](../definitions.json.zip)
+* [Expansions, XML](../expansions.xml.zip) · [JSON](../expansions.json.zip)
 
 #### Version history
 
 Earlier versions and the detailed change history are on the [Versioning](version-history.md) and [Changelog](changes.md) pages.
 
-> [TODO: Add any further downloads your module offers — for example an example bundle, a data dictionary or a mapping table — and remove the entries above that your build does not produce.]
+The module offers no downloads of its own beyond those the publisher generates.
 

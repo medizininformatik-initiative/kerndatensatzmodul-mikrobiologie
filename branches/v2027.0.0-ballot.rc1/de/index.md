@@ -31,7 +31,7 @@ Komponenten aus Observationen wurden in dieser Version fachlich in separate Prof
 
 | | |
 | :--- | :--- |
-| Datum | TODO:REVIEW (Releasedatum — wird zu Gate D gesetzt) |
+| Datum | noch nicht veröffentlicht |
 | Version | 2027.0.0-ballot.rc1 (CalVer`JJJJ.n.n`) |
 | Status | active |
 | Realm | DE |
@@ -95,9 +95,7 @@ Fragen zu dieser Publikation können im HL7-FHIR-Zulip [chat.fhir.org](https://c
 
 ### Urheberrecht und Lizenz
 
-© 2019 TMF e. V., Charlottenstraße 42, 10117 Berlin
-
-TODO:REVIEW — die Simplifier-Quellseite nennt 2019 als Copyright-Jahr, die `copyrightYear` in `sushi-config.yaml` dagegen 2026. Beide Werte stammen aus der Quelle und widersprechen sich; die Migration hat keinen davon geändert (Gate A).
+© 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin
 
 Dieses Werk ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Lizenz (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.de).
 

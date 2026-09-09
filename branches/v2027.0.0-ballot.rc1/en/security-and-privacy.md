@@ -17,11 +17,11 @@ How data leaving a Data Integration Center is de-identified in practice is speci
 
 #### 3. Module-specific aspects
 
-This is the module's own contribution: the security and privacy properties that follow from the **kind of data this module carries**. **Its content is optional** — not every module has aspects of its own. If yours does not, the whole section body becomes the following default text (delete the example and TODO boxes below and adopt it verbatim):
+Three properties of microbiological findings are specific to this module.
 
-> Beyond the overarching framework above — the overarching data protection concept, the Broad Consent it rests on, and DIMP — this module carries no data category that raises security or privacy aspects of its own, and it places no module-specific security or privacy requirements on implementers.
+**A finding is sensitive without a diagnosis.** The test code names the target: an HIV, tuberculosis or hepatitis result is readable from `Observation.code` even where no `Condition` exists. Access rules keyed to diagnoses do not see it.
 
-> **Illustrative example — remove before the first release.** How another KDS module fills this section (**Person**): the patient identifiers are pseudonyms from the trusted third party; systems must not let record linkage re-identify a person, and the pseudonym's scope (site-wide vs project-specific) must be respected when data is combined.
+**Colonisation status outlives the episode.** MRSA, VRE, LRE, LVRE and the MRGN classes describe the person rather than the encounter and steer isolation and admission decisions — yet they are modelled as ordinary Observations, with nothing in the resource marking that weight.
 
-> [TODO: State your module's specific aspects — the data categories it carries and their sensitivity, risks that profile-level pseudonymisation does not cover, and any security- or privacy-related SHALL/SHOULD/MAY requirements this module places on implementers, each with the risk it addresses. Name residual risks that must be handled in system design, deployment or policy — or adopt the default text above if there are none.]
+**IfSG notification runs elsewhere.** Many of the pathogens representable here are notifiable under the German Infection Protection Act. That duty is discharged through demis; receiving these resources for research neither satisfies nor substitutes for it. This module defines no reporting workflow and no notification status.
 

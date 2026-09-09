@@ -358,43 +358,23 @@ nicht dieser Leitfaden.</p>
 
 <h4 id="3-modul-spezifische-aspekte">3. Modul-spezifische Aspekte</h4>
 
-<p>Dies ist der eigene Beitrag des Moduls: die Sicherheits- und
-Datenschutz-Eigenschaften, die aus der <em>Art der Daten dieses Moduls</em> folgen.
-<strong>Der Inhalt dieses Abschnitts ist optional</strong> — nicht jedes Modul hat eigene
-Aspekte. Hat Ihres keine, besteht der gesamte Abschnitt aus dem folgenden
-Standardtext (löschen Sie die Beispiel- und TODO-Boxen unten und übernehmen
-Sie ihn wörtlich):</p>
+<p>Drei Eigenschaften mikrobiologischer Befunde sind diesem Modul eigen.</p>
 
-<blockquote>
-  <p>Über den oben verlinkten übergreifenden Rahmen hinaus — das übergreifende
-Datenschutzkonzept, den ihm zugrunde liegenden Broad Consent und DIMP —
-führt dieses Modul keine Datenkategorie, die eigene Sicherheits- oder
-Datenschutzaspekte aufwirft, und stellt keine modulspezifischen Sicherheits-
-oder Datenschutzanforderungen an Implementierende.</p>
-</blockquote>
+<p><strong>Ein Befund ist sensibel ohne Diagnose.</strong> Der Untersuchungscode benennt das
+Ziel: Ein HIV-, Tuberkulose- oder Hepatitis-Ergebnis ist aus <code class="language-plaintext highlighter-rouge">Observation.code</code>
+ablesbar, auch wenn keine <code class="language-plaintext highlighter-rouge">Condition</code> existiert. Zugriffsregeln, die an
+Diagnosen anknüpfen, sehen ihn nicht.</p>
 
-<!-- ILLUSTRATIVE-EXAMPLE — Abschnitt entscheiden und die Beispiel-Box unten
-     (in dieser Datei UND der englischen Quellseite) vor dem ersten Release
-     entfernen; der Konventions-Check (M11) lässt einen Release-Branch damit
-     fehlschlagen. -->
-<blockquote class="ig-highlight ig-highlight-orange">
-  <p><strong>Illustratives Beispiel — vor dem ersten Release entfernen.</strong> So füllt ein
-anderes KDS-Modul diesen Abschnitt (<em>Person</em>): die Patienten-Identifikatoren
-sind Pseudonyme der Treuhandstelle; Systeme dürfen ein Record Linkage nicht
-zur Re-Identifizierung führen lassen, und der Geltungsbereich eines
-Pseudonyms (standortweit vs. projektspezifisch) ist beim Zusammenführen von
-Daten zu respektieren.</p>
-</blockquote>
+<p><strong>Der Kolonisationsstatus überdauert den Behandlungsfall.</strong> MRSA, VRE, LRE, LVRE
+und die MRGN-Klassen beschreiben die Person statt des Kontakts und steuern
+Isolierungs- und Aufnahmeentscheidungen — modelliert sind sie als gewöhnliche
+Observations, denen dieses Gewicht nicht anzusehen ist.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Nennen Sie die spezifischen Aspekte Ihres Moduls — die geführten
-Datenkategorien und ihre Sensibilität, Risiken, die eine Pseudonymisierung
-auf Profilebene nicht abdeckt, sowie sicherheits- oder datenschutzbezogene
-SHALL/SHOULD/MAY-Anforderungen dieses Moduls an Implementierende, jeweils mit
-dem adressierten Risiko. Benennen Sie verbleibende Risiken, die im
-Systemdesign, im Betrieb oder per Policy behandelt werden müssen — oder
-übernehmen Sie den Standardtext oben, wenn es keine gibt.]</p>
-</blockquote>
+<p><strong>Die IfSG-Meldepflicht läuft anderswo.</strong> Ein Teil der hier abbildbaren Erreger
+ist nach dem Infektionsschutzgesetz meldepflichtig. Diese Pflicht wird über
+demis erfüllt; der Empfang dieser Ressourcen zu Forschungszwecken erfüllt sie
+weder noch ersetzt er sie. Dieses Modul definiert keinen Meldeworkflow und
+keinen Meldestatus.</p>
 
 
 
@@ -419,9 +399,9 @@ Systemdesign, im Betrieb oder per Policy behandelt werden müssen — oder
 
 
 
-          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
+          IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
+          Erstellt <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

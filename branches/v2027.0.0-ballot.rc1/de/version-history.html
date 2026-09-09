@@ -316,103 +316,21 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 </p>
 
 <!-- markdownlint-disable MD041 -->
-<!-- Deutsche Übersetzung der Standardsprachseite
-     input/pagecontent/version-history.md — beide Dateien müssen dasselbe
-     aussagen. Quelle: kerndatensatz-basis input/pagecontent/version-history.md
-     (Branch main); der Release-Prozess ist die Seite "Module Release Workflow"
-     des MII-Meta-Wikis
-     (https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow). -->
+<!-- Bewusst kurz gehalten, wie im Basismodul Labor: Das KDS-CalVer-Schema steht
+     einmal in kerndatensatz-basis, die CRMI-Ausprägung dieses Leitfadens auf
+     metadata.html. Es hier zu wiederholen, dupliziert nur jene Seite.
+     Englische Quellseite: input/pagecontent/version-history.md. -->
 
-<h4 id="versionsschema">Versionsschema</h4>
-
-<p>Das Modul <strong>Mikrobiologie</strong> folgt dem KDS-Schema der Kalender-Versionierung
-(CalVer) in einer SemVer-kompatiblen numerischen Form:</p>
-
-<ul>
-  <li>Format <strong><code class="language-plaintext highlighter-rouge">JJJJ.MINOR.PATCH[-label]</code></strong> — die aktuelle Version ist
-<code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code>;</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">JJJJ</code></strong> — das Jahr, in dem der Leitfaden gilt und genutzt werden soll; es
-tritt an die Stelle der Major-Version;</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">MINOR</code></strong> — wird für nicht brechende Ergänzungen und Präzisierungen erhöht;</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">PATCH</code></strong> — wird für Korrekturen und Fehlerbehebungen erhöht;</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">label</code></strong> — optionales Vorab- oder Build-Label, z. B. <code class="language-plaintext highlighter-rouge">draft</code>, <code class="language-plaintext highlighter-rouge">ballot</code> oder
-<code class="language-plaintext highlighter-rouge">cibuild</code>.</li>
-</ul>
-
-<h4 id="versionen-vergleichen">Versionen vergleichen</h4>
-
-<p>Stabile Releases lassen sich vergleichen, indem die numerischen Bestandteile als
-SemVer-artiges <code class="language-plaintext highlighter-rouge">&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code> gelesen werden, mit dem Kalenderjahr
-als Major-Komponente: <code class="language-plaintext highlighter-rouge">2026.1.0</code> ist neuer als <code class="language-plaintext highlighter-rouge">2026.0.3</code>. Labels kennzeichnen
-den Vorab- oder Build-Status; zwischen Labels wird keine Reihenfolge abgeleitet.</p>
-
-<h4 id="artefakt-versionen">Artefakt-Versionen</h4>
-
-<p>Alle veröffentlichten FHIR-Artefakte im Paket tragen dieselbe Version wie der
-Leitfaden und sein Paket. Ein Artefakt kann daher beim Release eine neue Version
-erhalten, obwohl es selbst unverändert geblieben ist. Die maschinenlesbaren
-Metadaten, die Versionsalgorithmus, Versionierungs-Politik, Paketquelle und
-Manifest-Parameter deklarieren, beschreibt die Seite
-<a href="metadata.html">Metadaten-Übersicht</a>.</p>
-
-<h4 id="release-prozess">Release-Prozess</h4>
+<p>Das Modul folgt der MII-Kalenderversionierung. Die hier veröffentlichte Version
+ist <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code>, der Ballot-Kandidat für 2027.0.0; die Änderungen im
+Einzelnen stehen im <a href="changes.html">Changelog</a>, die Abbildung des Schemas als
+CRMI-Metadaten unter <a href="metadata.html">Metadaten-Übersicht</a>.</p>
 
 <p>Releases folgen dem
-<a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">Module Release Workflow</a>:
-Die Version wird im Release-Branch angehoben, der Changelog-Eintrag geschrieben,
-die Validierungs-Workflows laufen auf dem Release-Pull-Request, und nach dem
-Merge wird das Release getaggt.</p>
-
-<h4 id="versionshistorie-und-änderungen">Versionshistorie und Änderungen</h4>
-
-<ul>
-  <li><strong><a href="changes.html">Änderungshistorie</a></strong> — die Änderungen jeder veröffentlichten
-Version.</li>
-</ul>
-
-<h4 id="versionsvergleich">Versionsvergleich</h4>
-
-<p>Ab der zweiten <strong>formalen Publikation</strong> veröffentlicht dieser Leitfaden
-zusätzlich einen <strong>maschinell erzeugten Versionsvergleich</strong>. Er ergänzt die
-Änderungshistorie: Die Änderungshistorie erklärt <em>warum</em> und <em>was zu tun
-ist</em>, der Vergleich zeigt, <em>was sich genau geändert hat</em>.</p>
-
-<p><strong>Wo er liegt.</strong> Der Bericht ist Teil der veröffentlichten Website selbst:
-<code class="language-plaintext highlighter-rouge">comparison-v&lt;Vorversion&gt;/index.html</code> neben den Seiten des Leitfadens,
-verlinkt aus dem QA-Bericht. Der Index listet die verglichenen
-Artefakt-Paare; jedes Paar verlinkt eine Detailseite mit drei Ansichten — der
-<strong>Differenz</strong>-Analyse (was sich Element für Element geändert hat), der
-<strong>Vereinigung</strong> (alles, was eine der beiden Versionen erlaubt) und dem
-<strong>Schnitt</strong> (nur was beide Versionen erlauben).</p>
-
-<p><strong>Wie er erzeugt wird.</strong> Der Vorversions-Vergleicher des IG Publishers lädt
-das Paket des vorherigen Releases, ordnet jedes Profil, ValueSet und
-CodeSystem über die kanonische URL seinem Gegenstück zu, vergleicht die Paare
-und rendert den Bericht in die Build-Ausgabe — er wird also mit der Website
-veröffentlicht, ohne zusätzlichen Deployment-Schritt. Aktiviert wird er über den Parameter <code class="language-plaintext highlighter-rouge">version-comparison</code> — einen
-offiziellen IG-Publisher-Parameter aus der
-<a href="https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html">ig-parameters-Registry</a>,
-durchgereicht über die <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> (der auskommentierte Block dort
-erklärt die Einrichtung und ihre beiden Voraussetzungen: eine
-Publikationshistorie an der kanonischen URL und ein ladbares
-Vorversions-Paket). Fehlt der Parameter, gilt der Standard <code class="language-plaintext highlighter-rouge">{last}</code>; der
-Wert <code class="language-plaintext highlighter-rouge">n/a</code> ist der dokumentierte Weg, den Vergleich abzuschalten.</p>
-
-<p><strong>Die Demonstration unten</strong> (nur in der Vorschau dieses
-Vorlagen-Repositories) zeigt dieselbe Art Bericht, bevor eine formale
-Publikation existiert: Der Build vergleicht sich mit der vorherigen
-<code class="language-plaintext highlighter-rouge">dev</code>-Vorschau über das <code class="language-plaintext highlighter-rouge">-compare</code>-Kommando des FHIR-Validators und
-veröffentlicht das Ergebnis unter <code class="language-plaintext highlighter-rouge">comparison-demo/index.html</code>.
-Die Repository-Variable <code class="language-plaintext highlighter-rouge">ENABLE_VERSION_COMPARISON=false</code> schaltet das
-gesamte Feature ab — den Publisher-Vergleich in allen Build-Workflows ebenso
-wie diese Demonstration; ein erstelltes Modul rendert die Demonstration nie.</p>
-
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Falls Ihr Modul über das KDS-Schema hinaus eine eigene
-Versionierungs-Politik hat — etwa einen Unterstützungszeitraum für ältere
-Versionen oder eine Abkündigungs-Politik für Profile —, beschreiben Sie sie
-hier. Löschen Sie diesen Hinweis anschließend.]</p>
-</blockquote>
+<a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">Module Release Workflow</a>.
+Darüber hinaus hat das Modul keine eigene Versionierungspolitik — kein
+Support-Fenster für ältere Versionen und keine gesonderte Deprecation-Regel für
+Profile.</p>
 
 
 
@@ -437,9 +355,9 @@ hier. Löschen Sie diesen Hinweis anschließend.]</p>
 
 
 
-          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
+          IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
+          Erstellt <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

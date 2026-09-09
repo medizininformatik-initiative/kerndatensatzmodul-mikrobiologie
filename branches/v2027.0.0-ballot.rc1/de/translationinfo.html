@@ -319,8 +319,6 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 <!-- Deutsche Übersetzung der Quellseite input/pagecontent/translationinfo.md
      (Englisch ist die Standardsprache der IG). Mechanik: siehe
      docs/recipes/add-translation.md. -->
-<h3 id="übersetzungsinformationen">Übersetzungsinformationen</h3>
-
 <p>Dieser Leitfaden ist <strong>englischsprachig</strong> (Standardsprache); <strong>Deutsch</strong> ist die
 Übersetzung. Englisch ist damit sowohl die Basis-Darstellung des Leitfadens als
 auch die <code class="language-plaintext highlighter-rouge">/en/</code>-Darstellung; über den Sprachumschalter oben rechts wechseln Sie
@@ -331,10 +329,44 @@ Dateiname wie die englische Seite); Ressourcen-Übersetzungen als <code class="l
 unter <code class="language-plaintext highlighter-rouge">input/translations/de/</code>. Details:
 <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/docs/recipes/add-translation.md"><code class="language-plaintext highlighter-rouge">docs/recipes/add-translation.md</code></a> in diesem Repository.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Vermerken Sie, welche Teile des Moduls bereits ins Deutsche übersetzt
-sind.]</p>
-</blockquote>
+<h3 id="was-übersetzt-ist">Was übersetzt ist</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ebene</th>
+      <th>Stand</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Narrativseiten</td>
+      <td><strong>23 von 23</strong> gespiegelt unter <code class="language-plaintext highlighter-rouge">input/translations/de/pagecontent/</code></td>
+    </tr>
+    <tr>
+      <td>IG-Seitentitel, Guide-Titel, Publisher</td>
+      <td><strong>26 von 26</strong> Einheiten übersetzt in <code class="language-plaintext highlighter-rouge">ImplementationGuide-mii-ig-mikrobiologie.po</code></td>
+    </tr>
+    <tr>
+      <td>Beschreibungen der Konformitätsressourcen</td>
+      <td><strong>nicht übersetzt — sie sind deutsch verfasst</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Die letzte Zeile ist die, die man kennen muss. Die MII-Namenskonventionen
+verlangen Deutsch in <code class="language-plaintext highlighter-rouge">description</code>, <code class="language-plaintext highlighter-rouge">name</code> und <code class="language-plaintext highlighter-rouge">title</code> einer
+Konformitätsressource, weshalb der Leitfaden sie in <strong>beiden</strong> Darstellungen auf
+Deutsch führt: 22 Profile, 42 ValueSets, 3 CodeSystems, 4 Suchparameter und das
+CapabilityStatement. Drei Artefakte weichen ab — die beiden Extensions sind
+englisch beschrieben, und das Logical Model <code class="language-plaintext highlighter-rouge">mii-lm-mikrobio-untersuchung</code>
+kennzeichnet seine deutsche Beschreibung mit <code class="language-plaintext highlighter-rouge">[DE]</code>.</p>
+
+<p>Englische Beschreibungen über den <code class="language-plaintext highlighter-rouge">.po</code>-Weg nachzureichen, geht nur teilweise:
+Übersetzungseinheiten greifen für <code class="language-plaintext highlighter-rouge">StructureDefinition</code>- und
+<code class="language-plaintext highlighter-rouge">CodeSystem</code>-Beschreibungen, werden für <code class="language-plaintext highlighter-rouge">ValueSet</code>-Texte aber <strong>stillschweigend
+ignoriert</strong>. Die 42 ValueSets liessen sich so also nicht übersetzen, selbst wenn
+die Texte vorlägen.</p>
 
 
 
@@ -359,9 +391,9 @@ sind.]</p>
 
 
 
-          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
+          IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
+          Erstellt <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

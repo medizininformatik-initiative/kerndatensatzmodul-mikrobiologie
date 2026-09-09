@@ -515,7 +515,7 @@ and ends up in the generated <code class="language-plaintext highlighter-rouge">
     <tr>
       <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-approvalDate.html">Resource Approval Date</a></td>
       <td>Artifact lifecycle; publishing; governance</td>
-      <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> (<code class="language-plaintext highlighter-rouge">TODO:REVIEW</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> — <code class="language-plaintext highlighter-rouge">2026-09-09</code></td>
       <td>Records the date on which the publisher officially approved the content for use.</td>
     </tr>
     <tr>
@@ -545,13 +545,31 @@ together with a
 resource and the <code class="language-plaintext highlighter-rouge">path-expansion-params</code> / <code class="language-plaintext highlighter-rouge">pin-manifest</code> parameters.</li>
 </ul>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Enable the blocks your module needs and then update the tables above.
-If your module also applies the CRMI shareable/publishable profiles to its own
-StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
-<code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> idiom is a shared <code class="language-plaintext highlighter-rouge">RuleSet</code> in
-<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a> — add the corresponding rows here.]</p>
-</blockquote>
+<p>The CRMI <strong>profiles</strong> are claimed by the ImplementationGuide alone
+(<code class="language-plaintext highlighter-rouge">crmi-shareableimplementationguide</code>, <code class="language-plaintext highlighter-rouge">crmi-publishableimplementationguide</code>,
+<code class="language-plaintext highlighter-rouge">crmi-implementationguide</code>). The module's own profiles, value sets and code
+systems do not claim them; they carry the CRMI <strong>extensions</strong> instead, applied
+through the shared rule sets in
+<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Extension</th>
+      <th>On how many artifacts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cqf-knowledgeCapability</code>, <code class="language-plaintext highlighter-rouge">artifact-topic</code>, <code class="language-plaintext highlighter-rouge">artifact-reviewer</code>, <code class="language-plaintext highlighter-rouge">artifact-endorser</code></td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">artifact-versionAlgorithm</code>, <code class="language-plaintext highlighter-rouge">artifact-versionPolicy</code>, <code class="language-plaintext highlighter-rouge">artifact-usage</code>, <code class="language-plaintext highlighter-rouge">artifact-author</code>, <code class="language-plaintext highlighter-rouge">artifact-editor</code>, <code class="language-plaintext highlighter-rouge">mii-ex-meta-license-codeable</code></td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="codesystem-supplements">CodeSystem supplements</h3>
 
@@ -565,9 +583,9 @@ the shareable one.</p>
 
 <h3 id="versioning-and-package-provenance">Versioning and package provenance</h3>
 
-<p>The human-readable version scheme is described on the
-<a href="version-history.html">Versioning</a> page. This section describes how that policy
-is expressed as CRMI metadata.</p>
+<p>This section describes the module's version scheme and how it is expressed as
+CRMI metadata. The released version and the release workflow are on the
+<a href="version-history.html">Versioning</a> page.</p>
 
 <p>The module uses calendar versioning in the SemVer-compatible numeric form
 <code class="language-plaintext highlighter-rouge">YYYY.MINOR.PATCH[-label]</code>, currently <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code>. The calendar year
@@ -624,11 +642,16 @@ it with <code class="language-plaintext highlighter-rouge">path-expansion-params
 then have one stable place to inspect the parameters used for expansion and
 package pinning.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Add the manifest for your module (see the commented blocks in
-<code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>) and link the generated <code class="language-plaintext highlighter-rouge">Parameters</code> resource page here,
-or state explicitly that this module does not pin expansion parameters.]</p>
-</blockquote>
+<p>This module pins its expansion parameters. The manifest is
+<a href="Parameters-mii-param-mikrobio-manifest.html"><code class="language-plaintext highlighter-rouge">mii-param-mikrobio-manifest</code></a>,
+referenced from the IG through <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code> and read by the
+publisher through <code class="language-plaintext highlighter-rouge">path-expansion-params</code> and <code class="language-plaintext highlighter-rouge">pin-manifest</code>. It fixes five
+versions: SNOMED CT (the 2026-07-01 international release bound to the <code class="language-plaintext highlighter-rouge">v2027</code>
+CalVer line), LOINC 2.82 — also as <code class="language-plaintext highlighter-rouge">force-system-version</code> —,
+<code class="language-plaintext highlighter-rouge">v3-ObservationInterpretation</code> 4.0.0 and <code class="language-plaintext highlighter-rouge">artifact-version-policy-codes</code> 3.0.0.
+The reasoning, and why the SNOMED pin makes the public terminology server
+unusable for this guide, is in
+<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md"><code class="language-plaintext highlighter-rouge">input/resources/README.md</code></a>.</p>
 
 <h3 id="relationship-to-fair">Relationship to FAIR</h3>
 
@@ -788,11 +811,10 @@ asserted to be a persistently identified FAIR dataset.</p>
   </tbody>
 </table>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: The table lists the indicators of priority <em>Essential</em>. If your module
-wants the complete self-assessment, extend it with the <em>Important</em> and
-<em>Useful</em> indicators — <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> carries the full table.]</p>
-</blockquote>
+<p>The table covers the indicators of priority <em>Essential</em>. The <em>Important</em> and
+<em>Useful</em> indicators are not repeated here: <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> carries the
+complete self-assessment, and it holds for every KDS module built on the same
+publication conventions.</p>
 
 <h3 id="practical-use">Practical use</h3>
 
@@ -836,9 +858,9 @@ metadata.</p>
 
 
 
-          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
+          IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
+          Generated <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

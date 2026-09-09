@@ -207,7 +207,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
 
 
 
-          IG &copy; 2026+ Medizininformatik Initiative.  
+          IG &copy; 2019+ Medizininformatik Initiative.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on FHIR 4.0.1.
           Generated 2026-09-09
           
@@ -233,7 +233,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
 
 
 
-          IG &copy; 2026+ Medizininformatik Initiative.  
+          IG &copy; 2019+ Medizininformatik Initiative.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf FHIR 4.0.1.
           Erstellt 2026-09-09
           
@@ -309,7 +309,7 @@ This material derives from the HL7 Terminology (THO). THO is copyright &copy;198
 )
       </li>
       <li>
-&copy; 2019 TMF e. V., Charlottenstraße 42, 10117 Berlin (        <a href="en/index.html">src</a>
+&copy; 2019+ TMF e. V., Charlottenstraße 42, 10117 Berlin (        <a href="en/index.html">src</a>
 )
       </li>
     </ul>
@@ -1205,11 +1205,11 @@ Konformität<b class="caret"> </b>          </a>
 
 
 
-          IG &copy; 2026+           <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>
+          IG &copy; 2019+           <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>
 .  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
-          Erstellt           <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
+          Erstellt           <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
 
                     <br/>
 
@@ -1779,16 +1779,19 @@ gesetzt und landen in der erzeugten           <code class="language-plaintext hi
           <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh">github.com</a>
         </td>
         <td>
-[TODO: Aktivieren Sie die für Ihr Modul nötigen Blöcke und ziehen Sie die
-Tabellen oben nach. Wenn Ihr Modul die CRMI-Shareable-/Publishable-Profile
-zusätzlich auf seine eigenen StructureDefinitions, CapabilityStatements,
-CodeSysteme und ValueSets anwendet — das Idiom aus           <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>
- ist
-ein gemeinsames           <code class="language-plaintext highlighter-rouge">RuleSet</code>
- in           <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh">
+Die CRMI-          <strong>Profile</strong>
+ beansprucht allein der ImplementationGuide
+(          <code class="language-plaintext highlighter-rouge">crmi-shareableimplementationguide</code>
+,           <code class="language-plaintext highlighter-rouge">crmi-publishableimplementationguide</code>
+,
+          <code class="language-plaintext highlighter-rouge">crmi-implementationguide</code>
+). Die eigenen Profile, ValueSets und CodeSystems des
+Moduls beanspruchen sie nicht; sie tragen statt dessen die
+CRMI-          <strong>Extensions</strong>
+, gesetzt über die gemeinsamen RuleSets in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh">
 <code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code>          </a>
- —, ergänzen Sie die
-entsprechenden Zeilen.]
+:
         </td>
       </tr>
       <tr>
@@ -1811,6 +1814,37 @@ angeben sollte, weil das dem ergänzten CodeSystem widersprechen könnte.
 beansprucht deshalb bei Supplements nur das           <em>Publishable</em>
 -CRMI-Profil und lässt
 das Shareable-Profil weg.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="de/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md">github.com</a>
+        </td>
+        <td>
+Dieses Modul pinnt seine Expansionsparameter. Das Manifest ist
+          <a href="Parameters-mii-param-mikrobio-manifest.html">
+<code class="language-plaintext highlighter-rouge">mii-param-mikrobio-manifest</code>          </a>
+,
+vom IG über           <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code>
+ referenziert und vom Publisher über
+          <code class="language-plaintext highlighter-rouge">path-expansion-params</code>
+ und           <code class="language-plaintext highlighter-rouge">pin-manifest</code>
+ gelesen. Es legt fünf Versionen fest:
+SNOMED CT (die dem           <code class="language-plaintext highlighter-rouge">v2027</code>
+-CalVer-Strang zugeordnete internationale Ausgabe vom
+2026-07-01), LOINC 2.82 — zusätzlich als           <code class="language-plaintext highlighter-rouge">force-system-version</code>
+ —,
+          <code class="language-plaintext highlighter-rouge">v3-ObservationInterpretation</code>
+ 4.0.0 und           <code class="language-plaintext highlighter-rouge">artifact-version-policy-codes</code>
+ 3.0.0.
+Die Begründung, und warum der SNOMED-Pin den öffentlichen Terminologieserver für
+diesen Leitfaden unbrauchbar macht, steht in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md">
+<code class="language-plaintext highlighter-rouge">input/resources/README.md</code>          </a>
+.
         </td>
       </tr>
       <tr>
@@ -1924,10 +1958,10 @@ Zur besseren Lesbarkeit findet sich das vollständige Diagramm nochmal          
         <td>
 Releases folgen dem
           <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">Module Release Workflow</a>
-:
-Die Version wird im Release-Branch angehoben, der Changelog-Eintrag geschrieben,
-die Validierungs-Workflows laufen auf dem Release-Pull-Request, und nach dem
-Merge wird das Release getaggt.
+.
+Darüber hinaus hat das Modul keine eigene Versionierungspolitik — kein
+Support-Fenster für ältere Versionen und keine gesonderte Deprecation-Regel für
+Profile.
         </td>
       </tr>
       <tr>
@@ -2051,11 +2085,11 @@ Conformance<b class="caret"> </b>          </a>
 
 
 
-          IG &copy; 2026+           <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>
+          IG &copy; 2019+           <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>
 .  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
 .
-          Generated           <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
+          Generated           <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
 
                     <br/>
 
@@ -2541,15 +2575,19 @@ and ends up in the generated           <code class="language-plaintext highlight
           <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh">github.com</a>
         </td>
         <td>
-[TODO: Enable the blocks your module needs and then update the tables above.
-If your module also applies the CRMI shareable/publishable profiles to its own
-StructureDefinitions, CapabilityStatements, CodeSystems and ValueSets — the
-          <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>
- idiom is a shared           <code class="language-plaintext highlighter-rouge">RuleSet</code>
- in
+The CRMI           <strong>profiles</strong>
+ are claimed by the ImplementationGuide alone
+(          <code class="language-plaintext highlighter-rouge">crmi-shareableimplementationguide</code>
+,           <code class="language-plaintext highlighter-rouge">crmi-publishableimplementationguide</code>
+,
+          <code class="language-plaintext highlighter-rouge">crmi-implementationguide</code>
+). The module's own profiles, value sets and code
+systems do not claim them; they carry the CRMI           <strong>extensions</strong>
+ instead, applied
+through the shared rule sets in
           <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh">
 <code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code>          </a>
- — add the corresponding rows here.]
+:
         </td>
       </tr>
       <tr>
@@ -2572,6 +2610,37 @@ that could contradict the supplemented code system.
 therefore claims only the           <em>publishable</em>
  CRMI profile on supplements and omits
 the shareable one.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="en/metadata.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md">github.com</a>
+        </td>
+        <td>
+This module pins its expansion parameters. The manifest is
+          <a href="Parameters-mii-param-mikrobio-manifest.html">
+<code class="language-plaintext highlighter-rouge">mii-param-mikrobio-manifest</code>          </a>
+,
+referenced from the IG through           <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code>
+ and read by the
+publisher through           <code class="language-plaintext highlighter-rouge">path-expansion-params</code>
+ and           <code class="language-plaintext highlighter-rouge">pin-manifest</code>
+. It fixes five
+versions: SNOMED CT (the 2026-07-01 international release bound to the           <code class="language-plaintext highlighter-rouge">v2027</code>
+
+CalVer line), LOINC 2.82 — also as           <code class="language-plaintext highlighter-rouge">force-system-version</code>
+ —,
+          <code class="language-plaintext highlighter-rouge">v3-ObservationInterpretation</code>
+ 4.0.0 and           <code class="language-plaintext highlighter-rouge">artifact-version-policy-codes</code>
+ 3.0.0.
+The reasoning, and why the SNOMED pin makes the public terminology server
+unusable for this guide, is in
+          <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md">
+<code class="language-plaintext highlighter-rouge">input/resources/README.md</code>          </a>
+.
         </td>
       </tr>
       <tr>
@@ -2683,10 +2752,9 @@ For better legibility, the full diagram is also available           <a href="htt
         <td>
 Releases follow the
           <a href="https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Module-Release-Workflow">Module Release Workflow</a>
-:
-the version is raised in the release branch, the changelog entry is written, the
-validation workflows run on the release pull request, and the release is tagged
-after the merge.
+.
+Beyond that workflow the module has no versioning policy of its own — no support
+window for older versions and no separate deprecation rule for profiles.
         </td>
       </tr>
     </table>

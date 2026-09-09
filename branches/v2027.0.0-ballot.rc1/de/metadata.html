@@ -489,7 +489,7 @@ gesetzt und landen in der erzeugten <code class="language-plaintext highlighter-
     <tr>
       <td><a href="http://hl7.org/fhir/extensions/5.3.0/StructureDefinition-resource-approvalDate.html">Resource Approval Date</a></td>
       <td>Lebenszyklus; Veröffentlichung; Governance</td>
-      <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> (<code class="language-plaintext highlighter-rouge">TODO:REVIEW</code>)</td>
+      <td><code class="language-plaintext highlighter-rouge">ImplementationGuide.extension</code> — <code class="language-plaintext highlighter-rouge">2026-09-09</code></td>
       <td>Hält fest, wann der Herausgeber den Inhalt offiziell zur Nutzung freigegeben hat.</td>
     </tr>
     <tr>
@@ -519,14 +519,31 @@ zusammen mit einer
 und den Parametern <code class="language-plaintext highlighter-rouge">path-expansion-params</code> / <code class="language-plaintext highlighter-rouge">pin-manifest</code>.</li>
 </ul>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Aktivieren Sie die für Ihr Modul nötigen Blöcke und ziehen Sie die
-Tabellen oben nach. Wenn Ihr Modul die CRMI-Shareable-/Publishable-Profile
-zusätzlich auf seine eigenen StructureDefinitions, CapabilityStatements,
-CodeSysteme und ValueSets anwendet — das Idiom aus <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> ist
-ein gemeinsames <code class="language-plaintext highlighter-rouge">RuleSet</code> in <a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a> —, ergänzen Sie die
-entsprechenden Zeilen.]</p>
-</blockquote>
+<p>Die CRMI-<strong>Profile</strong> beansprucht allein der ImplementationGuide
+(<code class="language-plaintext highlighter-rouge">crmi-shareableimplementationguide</code>, <code class="language-plaintext highlighter-rouge">crmi-publishableimplementationguide</code>,
+<code class="language-plaintext highlighter-rouge">crmi-implementationguide</code>). Die eigenen Profile, ValueSets und CodeSystems des
+Moduls beanspruchen sie nicht; sie tragen statt dessen die
+CRMI-<strong>Extensions</strong>, gesetzt über die gemeinsamen RuleSets in
+<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/fsh/rulesets/crmi.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/rulesets/crmi.fsh</code></a>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Extension</th>
+      <th>auf wie vielen Artefakten</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">cqf-knowledgeCapability</code>, <code class="language-plaintext highlighter-rouge">artifact-topic</code>, <code class="language-plaintext highlighter-rouge">artifact-reviewer</code>, <code class="language-plaintext highlighter-rouge">artifact-endorser</code></td>
+      <td>40</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">artifact-versionAlgorithm</code>, <code class="language-plaintext highlighter-rouge">artifact-versionPolicy</code>, <code class="language-plaintext highlighter-rouge">artifact-usage</code>, <code class="language-plaintext highlighter-rouge">artifact-author</code>, <code class="language-plaintext highlighter-rouge">artifact-editor</code>, <code class="language-plaintext highlighter-rouge">mii-ex-meta-license-codeable</code></td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="codesystem-supplements">CodeSystem-Supplements</h3>
 
@@ -540,9 +557,9 @@ das Shareable-Profil weg.</p>
 
 <h3 id="versionierung-und-paket-provenienz">Versionierung und Paket-Provenienz</h3>
 
-<p>Das menschenlesbare Versionsschema beschreibt die Seite
-<a href="version-history.html">Versionierung</a>. Dieser Abschnitt beschreibt, wie diese
-Politik als CRMI-Metadaten ausgedrückt wird.</p>
+<p>Dieser Abschnitt beschreibt das Versionsschema des Moduls und wie es als
+CRMI-Metadaten ausgedrückt wird. Die veröffentlichte Version und der
+Release-Workflow stehen auf der Seite <a href="version-history.html">Versionierung</a>.</p>
 
 <p>Das Modul verwendet die Kalender-Versionierung in der SemVer-kompatiblen
 numerischen Form <code class="language-plaintext highlighter-rouge">JJJJ.MINOR.PATCH[-label]</code>, derzeit <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc1</code>. Das
@@ -599,12 +616,16 @@ Publisher mit <code class="language-plaintext highlighter-rouge">path-expansion-
 Werkzeuge haben dann eine stabile Stelle, an der die Parameter für Expansion und
 Paket-Pinnung einsehbar sind.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Ergänzen Sie das Manifest Ihres Moduls (siehe die auskommentierten
-Blöcke in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>) und verlinken Sie hier die erzeugte
-<code class="language-plaintext highlighter-rouge">Parameters</code>-Seite — oder halten Sie ausdrücklich fest, dass dieses Modul
-keine Expansions-Parameter pinnt.]</p>
-</blockquote>
+<p>Dieses Modul pinnt seine Expansionsparameter. Das Manifest ist
+<a href="Parameters-mii-param-mikrobio-manifest.html"><code class="language-plaintext highlighter-rouge">mii-param-mikrobio-manifest</code></a>,
+vom IG über <code class="language-plaintext highlighter-rouge">cqf-expansionParameters</code> referenziert und vom Publisher über
+<code class="language-plaintext highlighter-rouge">path-expansion-params</code> und <code class="language-plaintext highlighter-rouge">pin-manifest</code> gelesen. Es legt fünf Versionen fest:
+SNOMED CT (die dem <code class="language-plaintext highlighter-rouge">v2027</code>-CalVer-Strang zugeordnete internationale Ausgabe vom
+2026-07-01), LOINC 2.82 — zusätzlich als <code class="language-plaintext highlighter-rouge">force-system-version</code> —,
+<code class="language-plaintext highlighter-rouge">v3-ObservationInterpretation</code> 4.0.0 und <code class="language-plaintext highlighter-rouge">artifact-version-policy-codes</code> 3.0.0.
+Die Begründung, und warum der SNOMED-Pin den öffentlichen Terminologieserver für
+diesen Leitfaden unbrauchbar macht, steht in
+<a href="https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/resources/README.md"><code class="language-plaintext highlighter-rouge">input/resources/README.md</code></a>.</p>
 
 <h3 id="bezug-zu-fair">Bezug zu FAIR</h3>
 
@@ -766,12 +787,10 @@ dauerhaft identifizierter FAIR-Datensatz behauptet.</p>
   </tbody>
 </table>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Die Tabelle führt die Indikatoren der Priorität <em>Essential</em> auf. Wenn
-Ihr Modul die vollständige Selbsteinschätzung will, ergänzen Sie die
-Indikatoren der Prioritäten <em>Important</em> und <em>Useful</em> — <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>
-führt die vollständige Tabelle.]</p>
-</blockquote>
+<p>Die Tabelle deckt die Indikatoren der Priorität <em>Essential</em> ab. Die Indikatoren
+<em>Important</em> und <em>Useful</em> werden hier nicht wiederholt: <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code>
+führt die vollständige Selbstbewertung, und sie gilt für jedes KDS-Modul, das
+denselben Publikationskonventionen folgt.</p>
 
 <h3 id="praktische-nutzung">Praktische Nutzung</h3>
 
@@ -817,9 +836,9 @@ Ressourcen die vollständigen maschinenlesbaren Metadaten.</p>
 
 
 
-          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
+          IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
+          Erstellt <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

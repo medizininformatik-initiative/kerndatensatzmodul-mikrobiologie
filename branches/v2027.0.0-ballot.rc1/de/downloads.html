@@ -346,6 +346,14 @@ um eine konforme Umsetzung zu bauen — siehe die FHIR-Dokumentation zur
   <li><a href="../package.tgz">Paket (komprimierter Ordner)</a></li>
 </ul>
 
+<p>Der Leitfaden ist zweisprachig, deshalb erzeugt der Publisher zusätzlich je ein
+Paket pro Sprache mit den Ressourcentexten dieser Sprache:</p>
+
+<ul>
+  <li><a href="../de.medizininformatikinitiative.kerndatensatz.mikrobiologie.en.tgz">Paket, Englisch</a></li>
+  <li><a href="../de.medizininformatikinitiative.kerndatensatz.mikrobiologie.de.tgz">Paket, Deutsch</a></li>
+</ul>
+
 <h4 id="herunterladbare-kopie-dieses-leitfadens">Herunterladbare Kopie dieses Leitfadens</h4>
 
 <p>Eine herunterladbare Fassung des gerenderten Leitfadens für den lokalen Betrieb:</p>
@@ -386,16 +394,19 @@ profilübergreifend in einer Tabelle sichten wollen:</p>
 Veröffentlichung einschließlich ihrer Abhängigkeiten und
 Veröffentlichungsparameter.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Diese Vorlage liefert keine Seite für diese Ressource aus, hier ist
-also noch nichts zu verlinken. <code class="language-plaintext highlighter-rouge">kerndatensatz-basis</code> veröffentlicht eine
-solche Seite als <code class="language-plaintext highlighter-rouge">input/pagecontent/ImplementationGuide-mii-ig-base.md</code>,
-eingetragen unter <code class="language-plaintext highlighter-rouge">pages:</code> in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>. Legen Sie das Gegenstück
-für Ihr Modul in beiden Sprachen an und verlinken Sie es hier. Der Dateiname
-muss Ihren Slug wörtlich enthalten: ein <code class="language-plaintext highlighter-rouge">pages:</code>-Dateiname kann keinen
-Platzhalter tragen, weil die Platzhalter-Ersetzung Dateiinhalte ersetzt, nicht
-Dateinamen.]</p>
-</blockquote>
+<ul>
+  <li><a href="ImplementationGuide-mii-ig-mikrobiologie.html">ImplementationGuide-Ressource</a></li>
+</ul>
+
+<h4 id="definitionen-und-expansionen">Definitionen und Expansionen</h4>
+
+<p>Die Konformitätsressourcen für sich genommen, und die ValueSets mit bereits
+aufgelösten Codes:</p>
+
+<ul>
+  <li><a href="../definitions.xml.zip">Definitionen, XML</a> · <a href="../definitions.json.zip">JSON</a></li>
+  <li><a href="../expansions.xml.zip">Expansionen, XML</a> · <a href="../expansions.json.zip">JSON</a></li>
+</ul>
 
 <h4 id="versionshistorie">Versionshistorie</h4>
 
@@ -403,11 +414,8 @@ Dateinamen.]</p>
 <a href="version-history.html">Versionierung</a> und
 <a href="changes.html">Änderungshistorie</a>.</p>
 
-<blockquote class="ig-highlight ig-highlight-grey">
-  <p>[TODO: Ergänzen Sie weitere Downloads Ihres Moduls — etwa ein Beispiel-Bundle,
-ein Datenwörterbuch oder eine Mapping-Tabelle — und entfernen Sie die oben
-aufgeführten Einträge, die Ihr Build nicht erzeugt.]</p>
-</blockquote>
+<p>Darüber hinaus bietet das Modul keine eigenen Downloads über die vom Publisher
+erzeugten hinaus.</p>
 
 
 
@@ -432,9 +440,9 @@ aufgeführten Einträge, die Ihr Build nicht erzeugt.]</p>
 
 
 
-          IG © 2026+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
+          IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 14:42+0000">2026-09-09</span>
+          Erstellt <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

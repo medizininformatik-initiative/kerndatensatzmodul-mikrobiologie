@@ -43,7 +43,7 @@ Sepzalisierte Kodierung von mikrobiologischen Befunden
   "title" : "MII VS Mikrobio Befundtyp [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T14:42:29+00:00",
+  "date" : "2026-09-09T15:55:32+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
