@@ -4,8 +4,8 @@ Id: mii-pr-mikrobio-barlett-score
 Title: "MII PR Mikrobio Barlett Score"
 Description: "Barlett-Score beschreibt die qualitative mikroskopische Beurteilung der Eignung von Sputumproben für die mikrobiologische Kultur anhand des Verhältnisses von Entzündungs- zu Epithelzellen."
 * insert MIKRO_OBSERVATION_COMMON
-* code = $loinc#75371-5
+* code = $loinc-no-ver#75371-5
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Barlett_Score_LOINC (extensible)
-* method = $sct#702661004
+* method = $sct-no-ver#702661004

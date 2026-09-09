@@ -14,10 +14,23 @@ Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-
 // versionsbehafteter system-URL wuerde nicht matchen.
 Alias: $v3-ObservationInterpretation-ver = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation|4.0.0
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $loinc = http://loinc.org
+// Versionsbehaftet, wie im Basismodul Labor: Die Version landet damit als
+// compose.include.version in den ValueSets UND als Coding.version in den
+// Beispielen. Letzteres ist Absicht -- das Elternprofil
+// MII_PR_Labor_Laboruntersuchung setzt Coding.version auf Observation.code und
+// auf value[x]:valueCodeableConcept MUST SUPPORT (rc4 nachgemessen), und die
+// Beispiele sollen die MS-Elemente zeigen.
+//
+// Fuer Patterns und fixed values in Profilen die -no-ver-Varianten nehmen: ein
+// Pattern mit versionsbehafteter system-URL matcht nicht.
+//
+// Beide Versionen muessen mit input/resources/Parameters-expansion-manifest.json
+// uebereinstimmen; scripts/terminology-pins.test.mjs prueft das.
+Alias: $loinc = http://loinc.org|2.82
+Alias: $loinc-no-ver = http://loinc.org
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $sct = http://snomed.info/sct
+Alias: $sct = http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701
 Alias: $refgene = https://www.ncbi.nlm.nih.gov/pathogens/refgene/
 Alias: $microbigge = https://www.ncbi.nlm.nih.gov/pathogens/microbigge/
 Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
@@ -31,8 +44,8 @@ Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── SNOMED CT ────────────────────────────────────────────────────────────────
-// $sct pins the SNOMED CT International release bound to this MII CalVer line;
-// $sct-no-ver is the plain system URI for instance-level codings.
+// $sct traegt die SNOMED-CT-Release dieser MII-CalVer-Linie (oben definiert);
+// $sct-no-ver ist die blanke System-URI fuer Patterns und fixed values.
 //
 // The MII binds each CalVer release to ONE SNOMED CT International release so
 // that ValueSet expansions are reproducible — MII meta wiki, "Terminology
@@ -41,13 +54,18 @@ Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
 //   MII release (CalVer) | SNOMED CT International release | version string
 //   v2025.*              | 2024-07-01 | http://snomed.info/sct/900000000000207008/version/20240701
 //   v2026.*              | 2025-07-01 | http://snomed.info/sct/900000000000207008/version/20250701
+//   v2027.*              | 2026-07-01 | http://snomed.info/sct/900000000000207008/version/20260701
 //
-// The value below is the verified v2026.* pin (this template's dependencies are
-// pinned to the 2026 line). When your module moves to a later CalVer line, look
-// the release up in that wiki table and update BOTH this alias and
-// input/resources/Parameters-expansion-manifest.json — do not guess.
-// Note the policy applies to ValueSet expansion; MII profiles do not currently
-// require Coding.version for SNOMED CT in instance data.
+// Dieses Modul steht auf der v2027-Linie; der Wert steht oben bei $sct. Bei
+// einem CalVer-Wechsel BEIDE Orte aktualisieren: diesen Alias und
+// input/resources/Parameters-expansion-manifest.json — nicht raten.
+//
+// Der Template-Satz "MII profiles do not currently require Coding.version for
+// SNOMED CT in instance data" stand hier frueher als Begruendung fuer
+// versionslose Instanz-Codings. Er spricht ueber KARDINALITAET, nicht ueber
+// Must Support: Das Elternprofil MII_PR_Labor_Laboruntersuchung setzt
+// Coding.version auf Observation.code und auf value[x]:valueCodeableConcept
+// mustSupport (rc4 nachgemessen), weshalb die Beispiele sie zeigen.
 Alias: $sct-no-ver = http://snomed.info/sct
 
 // ── Further code systems used across MII modules ─────────────────────────────

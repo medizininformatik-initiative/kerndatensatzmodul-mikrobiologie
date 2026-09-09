@@ -4,7 +4,7 @@ Id: mii-pr-mikrobio-allgemeine-bestimmung
 Title: "MII PR Mikrobio Allgemeine Bestimmung"
 Description: "Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorganismus oder infektiösen Agens in einer Probe, ohne Einschränkung auf ein vordefiniertes Ziel."
 * insert MIKRO_OBSERVATION_COMMON
-* code = $loinc#41852-5 // Microorganism or agent identified in Specimen
+* code = $loinc-no-ver#41852-5 // Microorganism or agent identified in Specimen
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED (extensible)

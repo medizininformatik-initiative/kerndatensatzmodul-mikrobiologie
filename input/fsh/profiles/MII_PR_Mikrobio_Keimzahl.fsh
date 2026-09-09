@@ -10,5 +10,5 @@ Description: "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mik
 * valueQuantity
   * code from MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM (extensible)
   * code ^short = "Bei Probenmaterialien ohne Volumen- oder Massenbezug, etwa Katheterspitzen, wird die nennerlose Einheit [CFU] verwendet; die Bezugsgröße steht in Specimen.type."
-* method = $sct#410681005 // Count of entities (property) (qualifier value)
+* method = $sct-no-ver#410681005 // Count of entities (property) (qualifier value)
 * interpretation from MII_VS_Labor_Laborergebnis_Semiquantitativ (extensible)

@@ -35,5 +35,5 @@ Description: "CT-Wert beschreibt die Quantifizierung des Zyklusschwellenwerts be
 * value[x] only Quantity
 * valueQuantity
   * code = #1
-* method = $sct#70601000052104 // Cycle Treshold für Nukleinsäurenachweis in Probenmaterial bei Polymerase-Kettenreaktion in Echtzeit
+* method = $sct-no-ver#70601000052104 // Cycle Treshold für Nukleinsäurenachweis in Probenmaterial bei Polymerase-Kettenreaktion in Echtzeit
 * derivedFrom MS
