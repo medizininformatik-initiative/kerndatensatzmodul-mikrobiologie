@@ -42,36 +42,20 @@ nicht dieser Leitfaden.
 
 #### 3. Modul-spezifische Aspekte
 
-Dies ist der eigene Beitrag des Moduls: die Sicherheits- und
-Datenschutz-Eigenschaften, die aus der *Art der Daten dieses Moduls* folgen.
-**Der Inhalt dieses Abschnitts ist optional** — nicht jedes Modul hat eigene
-Aspekte. Hat Ihres keine, besteht der gesamte Abschnitt aus dem folgenden
-Standardtext (löschen Sie die Beispiel- und TODO-Boxen unten und übernehmen
-Sie ihn wörtlich):
+Drei Eigenschaften mikrobiologischer Befunde sind diesem Modul eigen.
 
-> Über den oben verlinkten übergreifenden Rahmen hinaus — das übergreifende
-> Datenschutzkonzept, den ihm zugrunde liegenden Broad Consent und DIMP —
-> führt dieses Modul keine Datenkategorie, die eigene Sicherheits- oder
-> Datenschutzaspekte aufwirft, und stellt keine modulspezifischen Sicherheits-
-> oder Datenschutzanforderungen an Implementierende.
+**Ein Befund ist sensibel ohne Diagnose.** Der Untersuchungscode benennt das
+Ziel: Ein HIV-, Tuberkulose- oder Hepatitis-Ergebnis ist aus `Observation.code`
+ablesbar, auch wenn keine `Condition` existiert. Zugriffsregeln, die an
+Diagnosen anknüpfen, sehen ihn nicht.
 
-<!-- ILLUSTRATIVE-EXAMPLE — Abschnitt entscheiden und die Beispiel-Box unten
-     (in dieser Datei UND der englischen Quellseite) vor dem ersten Release
-     entfernen; der Konventions-Check (M11) lässt einen Release-Branch damit
-     fehlschlagen. -->
-> **Illustratives Beispiel — vor dem ersten Release entfernen.** So füllt ein
-> anderes KDS-Modul diesen Abschnitt (*Person*): die Patienten-Identifikatoren
-> sind Pseudonyme der Treuhandstelle; Systeme dürfen ein Record Linkage nicht
-> zur Re-Identifizierung führen lassen, und der Geltungsbereich eines
-> Pseudonyms (standortweit vs. projektspezifisch) ist beim Zusammenführen von
-> Daten zu respektieren.
-{: .ig-highlight .ig-highlight-orange}
+**Der Kolonisationsstatus überdauert den Behandlungsfall.** MRSA, VRE, LRE, LVRE
+und die MRGN-Klassen beschreiben die Person statt des Kontakts und steuern
+Isolierungs- und Aufnahmeentscheidungen — modelliert sind sie als gewöhnliche
+Observations, denen dieses Gewicht nicht anzusehen ist.
 
-> [TODO: Nennen Sie die spezifischen Aspekte Ihres Moduls — die geführten
-> Datenkategorien und ihre Sensibilität, Risiken, die eine Pseudonymisierung
-> auf Profilebene nicht abdeckt, sowie sicherheits- oder datenschutzbezogene
-> SHALL/SHOULD/MAY-Anforderungen dieses Moduls an Implementierende, jeweils mit
-> dem adressierten Risiko. Benennen Sie verbleibende Risiken, die im
-> Systemdesign, im Betrieb oder per Policy behandelt werden müssen — oder
-> übernehmen Sie den Standardtext oben, wenn es keine gibt.]
-{: .ig-highlight .ig-highlight-grey}
+**Die IfSG-Meldepflicht läuft anderswo.** Ein Teil der hier abbildbaren Erreger
+ist nach dem Infektionsschutzgesetz meldepflichtig. Diese Pflicht wird über
+demis erfüllt; der Empfang dieser Ressourcen zu Forschungszwecken erfüllt sie
+weder noch ersetzt er sie. Dieses Modul definiert keinen Meldeworkflow und
+keinen Meldestatus.

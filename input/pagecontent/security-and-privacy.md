@@ -4,10 +4,9 @@
      protection concept, (2) DIMP in the data portal, (3) the
      module-specific aspects. Stages 1 and 2 are static overarching content —
      keep them; stage 3 is where your module writes. Stage 3's CONTENT is
-     optional: a module with no aspects of its own adopts the default text in
-     the section. The Person example box is illustrative only and MUST be
-     removed before the first release (ILLUSTRATIVE-EXAMPLE marker, convention
-     check M11).
+     optional: a module with no aspects of its own adopts the template's default
+     text. This module states three aspects of its own; the template's
+     illustrative Person example was removed with them.
      German mirror: input/translations/de/pagecontent/security-and-privacy.md —
      both files must say the same thing. -->
 
@@ -45,31 +44,19 @@ by the DIMP configuration, not by this guide.
 
 #### 3. Module-specific aspects
 
-This is the module's own contribution: the security and privacy properties
-that follow from the *kind of data this module carries*. **Its content is
-optional** — not every module has aspects of its own. If yours does not, the
-whole section body becomes the following default text (delete the example and
-TODO boxes below and adopt it verbatim):
+Three properties of microbiological findings are specific to this module.
 
-> Beyond the overarching framework above — the overarching data protection
-> concept, the Broad Consent it rests on, and DIMP — this module carries no
-> data category that raises security or privacy aspects of its own, and it
-> places no module-specific security or privacy requirements on implementers.
+**A finding is sensitive without a diagnosis.** The test code names the target:
+an HIV, tuberculosis or hepatitis result is readable from `Observation.code`
+even where no `Condition` exists. Access rules keyed to diagnoses do not see it.
 
-<!-- ILLUSTRATIVE-EXAMPLE — decide this section and remove the example box
-     below (in this file AND the German mirror) before the first release;
-     the convention check (M11) fails a release branch while it is present. -->
-> **Illustrative example — remove before the first release.** How another KDS
-> module fills this section (*Person*): the patient identifiers are pseudonyms
-> from the trusted third party; systems must not let record linkage
-> re-identify a person, and the pseudonym's scope (site-wide vs
-> project-specific) must be respected when data is combined.
-{: .ig-highlight .ig-highlight-orange}
+**Colonisation status outlives the episode.** MRSA, VRE, LRE, LVRE and the MRGN
+classes describe the person rather than the encounter and steer isolation and
+admission decisions — yet they are modelled as ordinary Observations, with
+nothing in the resource marking that weight.
 
-> [TODO: State your module's specific aspects — the data categories it carries
-> and their sensitivity, risks that profile-level pseudonymisation does not
-> cover, and any security- or privacy-related SHALL/SHOULD/MAY requirements
-> this module places on implementers, each with the risk it addresses. Name
-> residual risks that must be handled in system design, deployment or policy —
-> or adopt the default text above if there are none.]
-{: .ig-highlight .ig-highlight-grey}
+**IfSG notification runs elsewhere.** Many of the pathogens representable here
+are notifiable under the German Infection Protection Act. That duty is
+discharged through demis; receiving these resources for research neither
+satisfies nor substitutes for it. This module defines no reporting workflow and
+no notification status.
