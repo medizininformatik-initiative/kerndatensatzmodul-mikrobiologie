@@ -118,7 +118,16 @@ SETTINGS=".github/fhir-settings.json"
 [ -f "${SETTINGS}" ] || { echo "ERROR: missing ${SETTINGS}" >&2; exit 1; }
 
 echo "==> IG Publisher build (-tx ${TX})"
-java -Xmx6g -jar "${jar}" -ig ig.ini -tx "${TX}" \
+# -Djava.net.preferIPv4Stack=true: on a NAT64/DNS64 network the resolver answers
+# with a synthesized IPv6 address from 64:ff9b::/96 alongside the real A record,
+# and the publisher's NonPublicAddressRejectingDns rejects the whole lookup —
+# "Refusing to fetch from non-public address 64:ff9b::2238:95c4 for host
+# tx.fhir.org" — although the host is publicly reachable over IPv4 (measured
+# 2026-09-09). preferIPv4Addresses only reorders the list and does NOT help; the
+# rejected address stays in it. This drops IPv6 from the JVM's lookups instead,
+# which changes address selection only and weakens no check. Inert on networks
+# without DNS64, and on GitHub runners, so CI parity is preserved.
+java -Xmx6g -Djava.net.preferIPv4Stack=true -jar "${jar}" -ig ig.ini -tx "${TX}" \
   -fhir-settings "${repo_root}/${SETTINGS}" "${extra_args[@]}"
 
 test -s output/index.html
