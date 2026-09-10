@@ -344,6 +344,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#determination" id="markdown-toc-determination">Determination</a></li>
   <li><a href="#quantitative-tests" id="markdown-toc-quantitative-tests">Quantitative tests</a></li>
   <li><a href="#further-properties" id="markdown-toc-further-properties">Further properties</a></li>
+  <li><a href="#report-and-specimen" id="markdown-toc-report-and-specimen">Report and specimen</a></li>
 </ul>
 
 </div>
@@ -356,23 +357,64 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 MII naming convention <code class="language-plaintext highlighter-rouge">MII_PR_&lt;Module&gt;_&lt;Name&gt;</code>. The module's extensions are
 listed on the <a href="extensions.html">Extensions</a> page.</p>
 
-<p>The 2027 modelling uses standalone Observation profiles instead of <code class="language-plaintext highlighter-rouge">component</code> representations. The profiles are grouped into four families; the modelling notes are on <a href="fhir-profile.html">FHIR Profiles - Modelling Notes</a>, the delimitation between them on <a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a>.</p>
+<p>The 2027 modelling uses standalone Observation profiles instead of <code class="language-plaintext highlighter-rouge">component</code> representations. The investigation profiles are grouped into four families; the report and the specimen stand beside them. The modelling notes are on <a href="fhir-profile.html">FHIR Profiles - Modelling Notes</a>, the delimitation between them on <a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a>.</p>
 
 <h3 id="culture">Culture</h3>
 
 <p>Culture-related observations (general, microscopy including Bartlett/Nugent score, colony count, susceptibility).</p>
 
+<ul>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">General culture</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">Specific culture</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">General microscopy</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html">Specific microscopy</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-bartlett-score.html">Bartlett score</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html">Nugent score</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">Colony count</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">Susceptibility</a></li>
+</ul>
+
 <h3 id="determination">Determination</h3>
 
 <p>Determination observations (general/specific determination, Ct value).</p>
+
+<ul>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">General determination (identification)</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html">Specific determination</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html">Ct value</a></li>
+</ul>
 
 <h3 id="quantitative-tests">Quantitative tests</h3>
 
 <p>Quantitative tests (antigen/antibody, titre, molecular pathogen load).</p>
 
+<ul>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">Antigen/antibody, quantitative</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-titer.html">Titre</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html">Molecular pathogen load</a></li>
+</ul>
+
 <h3 id="further-properties">Further properties</h3>
 
 <p>Further properties as standalone Observations (virulence, resistance mechanism, MRGN, predicted susceptibility, resistance category status, avidity).</p>
+
+<ul>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html">Virulence factor</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html">Resistance mechanisms / determinants</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html">MRGN class</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html">Predicted susceptibility</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html">Resistance category status</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html">Avidity</a></li>
+</ul>
+
+<h3 id="report-and-specimen">Report and specimen</h3>
+
+<p>The report that gathers the investigations, and the specimen they were performed on.</p>
+
+<ul>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-diagnostic-report.html">Microbiological report (DiagnosticReport)</a></li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-probe.html">Specimen</a></li>
+</ul>
 
 
 
@@ -399,7 +441,7 @@ listed on the <a href="extensions.html">Extensions</a> page.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Sep 10, 2026 17:22+0000">2026-09-10</span>
+          Generated <span title="Thu, Sep 10, 2026 17:39+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
