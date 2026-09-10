@@ -40,6 +40,8 @@ Die ausführlich behandelten Themen haben eigene Seiten:
 * **[Datensätze und Beschreibungen](logical-models.html)** — die Datenelemente des
   Moduls als logische Modelle
 * **[UML-Diagramme](uml-diagrams.html)** — die Datenmodelle und ihre Beziehungen
+* **[Anleitung für Forschende](researcher-guidance.html)** — wo die Auswertung der
+  Daten dieses Moduls beginnt und worauf dabei zu achten ist
 * **[Anleitung für Implementierende](implementer-guidance.html)** — technische
   Hinweise für DIZ-Implementierende und die Bezüge zu anderen KDS-Modulen
 

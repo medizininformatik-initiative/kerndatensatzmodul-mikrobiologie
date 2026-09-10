@@ -36,6 +36,8 @@ The subjects treated in detail have their own pages:
 * **[Datasets and Descriptions](logical-models.html)** — the module's data
   elements as logical models
 * **[UML Diagrams](uml-diagrams.html)** — the data models and their relationships
+* **[Guidance for Researchers](researcher-guidance.html)** — where to start when
+  analysing this module's data, and what to watch out for
 * **[Guidance for Implementers](implementer-guidance.html)** — technical guidance
   for DIC implementers, and the module's relations to other KDS modules
 

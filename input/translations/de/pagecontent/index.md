@@ -36,6 +36,28 @@ Rückmeldung bitten. Implementierende sollten in den betroffenen Bereichen mit
 </div>
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Beschreibung-Modul-Mikrobiologie.page.md  -->
+### Zielgruppe
+
+Dieser Implementierungsleitfaden richtet sich an:
+
+<div class="ig-highlight ig-highlight-blue" markdown="1">
+<h5>Implementierende</h5>
+Für Datenmanagement und Integration in Datenintegrationszentren (DIZ), Software-Entwickelnde und System-Architekt:innen, die FHIR-basierte Lösungen umsetzen.
+
+* → [Profile](profiles.html) — die verbindlichen Einschränkungen
+* → [Anleitung für Implementierende](implementer-guidance.html) — Konformität, Artefakte, Validierung
+* → [Logische Modelle](logical-models.html) und [UML-Diagramme](uml-diagrams.html) — die konzeptuelle Sicht
+</div>
+
+<div class="ig-highlight ig-highlight-green" markdown="1">
+<h5>Forschende</h5>
+Für Wissenschaftler:innen, die mit MII-Daten arbeiten.
+
+* → [Anleitung für Forschende](researcher-guidance.html) — wo die Auswertung beginnt
+* → [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html) — welches Profil welche Aussage trägt und was ein negatives Ergebnis bedeutet
+* → [Beispiele](examples.html) — wie die Daten in der Praxis aussehen
+</div>
+
 Das Erweiterungsmodul Mikrobiologie 2027 modelliert mikrobiologische Befunde als
 eigenständige Observationen. Die wichtigsten Domänen sind:
 
@@ -60,39 +82,23 @@ Dies ist ein Ballot-Kandidat. Die folgenden Punkte sind bewusst offen gelassen;
 wir bitten während des Ballots um Rückmeldung dazu. Jeder ist auf der Seite
 vollständig dargestellt, zu der er gehört.
 
-1. **[Entsteht immer eine Specimen-Ressource?](probe.html)** — jedes
+1. **[Entsteht immer eine Specimen-Ressource?](probe.html#ballot-question-1)** — jedes
    Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`.
-2. **[Ist die Färbetechnik allein über `Specimen` darstellbar?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html)**
+2. **[Ist die Färbetechnik allein über `Specimen` darstellbar?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2)**
    — das europäische Datenmodell legt sie nach `Specimen.processing`; wir fragen,
    ob das implementierbar ist.
-3. **[Pflicht-Temperaturbedingungen an `Specimen.processing`](probe.html)** — aus
+3. **[Pflicht-Temperaturbedingungen an `Specimen.processing`](probe.html#ballot-question-3)** — aus
    dem Bioproben-Basisprofil geerbt, ohne Aussage für die mikrobiologische
    Aufarbeitung.
-4. **[Sind Bebrütungsdauer und -temperatur über `Specimen.processing` darstellbar?](probe.html)**
+4. **[Sind Bebrütungsdauer und -temperatur über `Specimen.processing` darstellbar?](probe.html#ballot-question-4)**
    — FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie
    befüllen können.
-5. **[Komponente oder `hasMember` für eine semiquantitative Menge?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html)**
+5. **[Komponente oder `hasMember` für eine semiquantitative Menge?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5)**
    — das europäische Datenmodell lässt es offen; eine Komponente dreht eine
    Entscheidung dieses Zyklus zurück.
-6. **[Können Sie zu jedem Befund `Observation.method` liefern?](profilauswahl-und-abgrenzung.html)**
+6. **[Können Sie zu jedem Befund `Observation.method` liefern?](profilauswahl-und-abgrenzung.html#ballot-question-6)**
    — das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre
    Antwort entscheidet mehr als eine Frage.
-
-### Zielgruppe
-
-Dieser Implementierungsleitfaden richtet sich an:
-
-<div class="ig-highlight ig-highlight-blue">
-<h5>Implementierende</h5>
-<p>Datenintegrationszentren (DIZ), Software-Entwickelnde und System-Architekt:innen, die FHIR-basierte Lösungen umsetzen.<br/>
-→ siehe <a href="profiles.html">Profile</a> und <a href="logical-models.html">Logische Modelle</a>.</p>
-</div>
-
-<div class="ig-highlight ig-highlight-green">
-<h5>Forschende</h5>
-<p>Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.<br/>
-→ siehe <a href="guidance.html">Anleitung</a>.</p>
-</div>
 
 ### Inhalt dieses Leitfadens
 
@@ -123,10 +129,6 @@ auf; die formale Abhängigkeit steht als `de.medizininformatikinitiative.kerndat
 in `sushi-config.yaml`. Die Bezüge zu den Modulen Molekulargenetischer
 Befundbericht, Biobank, Fall und Strukturdaten beschreibt die Seite
 [Anleitung für Implementierende](implementer-guidance.html).
-
-Weitere FHIR-Implementierungsleitfäden finden Sie im offiziellen
-**[FHIR IG Registry](https://fhir.org/guides/registry/)** (Quelle:
-[`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)).
 
 ### Impressum
 

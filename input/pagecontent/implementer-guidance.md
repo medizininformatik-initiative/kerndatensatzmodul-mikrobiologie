@@ -1,8 +1,81 @@
 <!-- markdownlint-disable MD041 -->
 <!-- Source: kerndatensatz-basis input/pagecontent/implementer-guidance.md.
+     STRUCTURE follows kerndatensatzmodul-labor
+     input/pagecontent/implementer-guidance.md: understanding the requirements,
+     conformance, technical artifacts, domain guidance, getting started. The two
+     module-own sections (relations to other modules, references) are kept and sit
+     before "Getting Started"; the Laboratory module keeps the same two subjects
+     on pages of their own (project-context.md, references.md), which would cost
+     two further menu entries here for two short sections.
      German mirror: input/translations/de/pagecontent/implementer-guidance.md. -->
 
-Technical guidance for DIC implementers on implementing the profiles of the **Microbiology** module (ETL from primary systems, FHIR API, validation).
+This page collects what is needed to implement the **Microbiology** module in
+FHIR-based systems (ETL from primary systems, FHIR API, validation).
+
+### Understanding the Requirements
+
+**1. Logical Models — Business Requirements**
+
+The [Logical Models](logical-models.html) carry the business and clinical
+requirements, independently of the FHIR profiles:
+
+* **Report** — the microbiological report and the investigations it summarises
+* **Investigation** — the abstract base: identification, status, patient,
+  specimen, timings, interpretation-affecting properties, triggering
+  investigation
+* **Investigation types** — the domain variants and the attributes each one adds
+
+Their data types and cardinalities are not normative; the profiles define the
+binding requirements.
+
+**2. UML Diagrams — Data Relationships**
+
+The [UML Diagrams](uml-diagrams.html) illustrate the relationships between the
+elements and the references between the resources.
+
+### Conformance
+
+The conformance rules apply across the whole Core Dataset and are maintained by
+the Meta module, not repeated here:
+
+* [Conformance](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance) — the rules as a whole
+* [General Requirements](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#anforderungsdokumentation)
+* [Must Support](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#must-support-ms)
+* [Handling Missing Data](https://github.com/medizininformatik-initiative/kerndatensatz-meta/wiki/Conformance#fehlende-daten)
+* [Security and Privacy](security-and-privacy.html) — module-specific notes
+
+### Technical Artifacts
+
+* [Profiles](profiles.html) — the 22 profiles with their constraints, one per
+  investigation type plus the report and the specimen
+* [Extensions](extensions.html) — the norm behind a susceptibility assessment,
+  and the R5 backport that carries the triggering investigation
+* [Value Sets](value-sets.html) — the 48 value sets the module defines
+* [Code Systems](code-systems.html) — the four the module defines itself, among
+  them the interim codes for which no LOINC or SNOMED code exists yet
+* [Capability Statements](capability-statements.html) — the REST requirements,
+  including interactions and search parameters
+* [Search Parameters](search-parameters.html) — the four the module defines,
+  including the one for the triggering investigation
+* [Examples](examples.html) — sample resources
+* [ImplementationGuide resource](ImplementationGuide-mii-ig-mikrobiologie.html) —
+  the package versions this guide actually resolves to, the global profiles and
+  the expansion parameters
+
+### Domain Guidance
+
+Four subjects are described separately for implementation:
+
+* [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) — which
+  profile carries which statement, how the four kinds of negative result are
+  distinguished, and how the steps of a diagnostic workflow are linked
+* [Interpretation](interpretation.html) — the susceptibility categories, the norm
+  they rest on, and how a measured value and its assessment relate
+* [FHIR Profiles – Modelling Notes](fhir-profile.html) — the conventions behind
+  the profiles: post-coordination, the method axis, and the representation of
+  diagnostic chains
+* [Specimen](probe.html) — the representation of specimen material via the
+  Biobank module
 
 ### Context within the overall project - relations to other modules
 
@@ -19,3 +92,29 @@ The model is based on conventions agreed with the RKI, MIO42 and HL7 Europe and 
 It was produced with the involvement of domain representatives from the university hospitals and was discussed with a representative of the German Society for Hygiene and Microbiology.
 
 It builds on the preparatory work for the [HiGHmed Use Case Infection Control](https://simplifier.net/MedizininformatikInitiative-HiGHmed-IC "HiGHmed") and the [SMITH Use Case HELP](https://simplifier.net/MedizininformatikInitiatie-SMITH-HELP "HELP"), but is extended to all possible microbiological investigations.
+
+### Getting Started with Implementation
+
+**Downloads**
+
+The [Downloads](downloads.html) page provides the FHIR package for validation,
+one package per language, and a downloadable copy of this guide.
+
+**Terminology Service**
+
+For value set expansion and code validation, use the MII terminology server:
+
+* **URL:** [https://www.ontoserver.mii-termserv.de/](https://www.ontoserver.mii-termserv.de/)
+
+Access is client-certificate-gated and granted to entities in Germany. The
+versions this guide is pinned to are declared in its
+[expansion parameters](Parameters-mii-param-mikrobio-manifest.html) — SNOMED CT
+`20260701` and LOINC `2.82` at the time of writing. Expanding against a different
+version can yield a different set of codes; this module's value sets are built
+from LOINC axis filters, so a version change moves membership rather than only
+displays.
+
+**Validation**
+
+Validate against the FHIR package with the
+[FHIR Validator](https://confluence.hl7.org/spaces/FHIR/pages/35718580/Using+the+FHIR+Validator).

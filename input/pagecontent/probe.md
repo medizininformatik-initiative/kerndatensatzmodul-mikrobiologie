@@ -1,20 +1,20 @@
 ### Report - Specimen
 
+<a id="ballot-question-1"></a>
+
 {:.bg-warning}
 **Ballot question 1 — can you supply a Specimen resource for every result?**
-Every investigation profile in this module requires `Observation.specimen`. That
-is not a choice this guide made on its own: the European white paper states that
-the specimen **shall always** be represented explicitly in a FHIR Specimen
-resource, preferably in `Specimen.type` using SNOMED CT — and expressly says this
-holds *even where the LOINC code already carries the specimen*. So the question
-is not whether the requirement is right, but whether it is deliverable.
+Every investigation profile in this module requires `Observation.specimen`. The
+requirement does not originate with this guide alone: the European white paper
+states that the specimen **shall always** be represented explicitly in a FHIR
+Specimen resource, preferably in `Specimen.type` using SNOMED CT — and expressly
+says this holds *even where the LOINC code already carries the specimen*.
 
 Feedback from German laboratory practice is that a Specimen resource is
-frequently not produced. **We would like to know whether your site can supply
-one.** If a substantial number cannot, the two ways out point in opposite
-directions: relax `Observation.specimen` to `0..1` and let pre-coordinated LOINC
-codes carry the material, or keep the requirement and accept that some senders
-cannot conform. Please comment during the ballot.
+frequently not produced. If that holds widely, the two ways out point in
+opposite directions: relax `Observation.specimen` to `0..1` and let
+pre-coordinated LOINC codes carry the material, or keep the requirement and
+accept that some senders cannot conform. Please comment during the ballot.
 
 Specimens are represented by [Specimen](StructureDefinition-mii-pr-mikrobio-probe.html),
 which derives from
@@ -41,6 +41,8 @@ The following elements are particularly relevant for the microbiological use cas
 
 ### Processing, and what is not represented here
 
+<a id="ballot-question-3"></a>
+
 {:.bg-warning}
 **Ballot question 3 — mandatory storage temperature conditions on `Specimen.processing`.**
 The base profile requires the extension `temperaturbedingungen` on every
@@ -62,6 +64,8 @@ The staining technique is consequently **not** given under
 question 2 sets out the reasoning.
 
 ### Incubation duration and temperature
+
+<a id="ballot-question-4"></a>
 
 {:.bg-warning}
 **Ballot question 4 — is incubation representable via `Specimen.processing`?**

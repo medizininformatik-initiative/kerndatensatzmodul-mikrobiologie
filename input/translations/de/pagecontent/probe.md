@@ -1,23 +1,23 @@
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md  -->
 ## Befund - Probe
 
+<a id="ballot-question-1"></a>
+
 {:.bg-warning}
 **Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?**
-Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`. Das ist
-keine Festlegung, die dieser Leitfaden allein getroffen hat: Das europäische
-Whitepaper hält fest, dass die Probe **immer** ausdrücklich in einer
+Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`. Die
+Anforderung stammt nicht allein aus diesem Leitfaden: Das europäische Whitepaper
+hält fest, dass die Probe **immer** ausdrücklich in einer
 FHIR-Specimen-Ressource abzubilden ist, bevorzugt in `Specimen.type` mit SNOMED
 CT — und sagt ausdrücklich, dass das auch dann gilt, *wenn der LOINC-Code die
-Probe bereits trägt*. Die Frage ist also nicht, ob die Anforderung richtig ist,
-sondern ob sie erfüllbar ist.
+Probe bereits trägt*.
 
-Aus der deutschen Laborpraxis kommt die Rückmeldung, dass eine Specimen-Ressource
-häufig nicht erzeugt wird. **Wir möchten wissen, ob Ihr Standort eine liefern
-kann.** Wenn das für viele nicht gilt, weisen die beiden Auswege in
-entgegengesetzte Richtungen: `Observation.specimen` auf `0..1` lockern und
-präkoordinierte LOINC-Codes das Material tragen lassen, oder die Pflicht
-beibehalten und hinnehmen, dass manche Sender nicht konform sein können. Wir
-bitten um Rückmeldung im Ballot.
+Aus der deutschen Laborpraxis kommt die Rückmeldung, dass eine
+Specimen-Ressource häufig nicht erzeugt wird. Trifft das breit zu, weisen die
+beiden Auswege in entgegengesetzte Richtungen: `Observation.specimen` auf `0..1`
+lockern und präkoordinierte LOINC-Codes das Material tragen lassen, oder die
+Pflicht beibehalten und hinnehmen, dass manche Sender nicht konform sein können.
+Wir bitten um Rückmeldung im Ballot.
 
 Proben werden über [Probe](StructureDefinition-mii-pr-mikrobio-probe.html)
 abgebildet, das von
@@ -49,6 +49,8 @@ folgende Elemente relevant:
 
 ## Aufarbeitung, und was hier nicht abgebildet wird
 
+<a id="ballot-question-3"></a>
+
 {:.bg-warning}
 **Ballotfrage 3 — Pflicht-Temperaturbedingungen an `Specimen.processing`.**
 Das Basisprofil verlangt die Extension `temperaturbedingungen` an jedem
@@ -70,6 +72,8 @@ vorschlägt, sondern in `Observation.method` — siehe
 Ballotfrage 2 die Begründung enthält.
 
 ## Bebrütungsdauer und -temperatur
+
+<a id="ballot-question-4"></a>
 
 {:.bg-warning}
 **Ballotfrage 4 — ist die Bebrütung über `Specimen.processing` darstellbar?**

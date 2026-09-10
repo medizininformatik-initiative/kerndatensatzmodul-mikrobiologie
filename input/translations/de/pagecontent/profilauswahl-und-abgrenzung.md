@@ -159,16 +159,16 @@ modulweite Pflicht würde heute konforme Daten ungültig machen. Erzwungen wird 
 an der einen Stelle, an der die Aussage sonst mehrdeutig ist: bei der Allgemeinen
 Kultur mit dem methodenneutralen Code `41852-5`.
 
+<a id="ballot-question-6"></a>
+
 {:.bg-warning}
 **Ballotfrage 6 — können Sie zu jedem Befund `Observation.method` liefern?**
-Das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur. **Wir möchten
-wissen, ob eine Pflicht an Ihrem Standort erfüllbar wäre.** Wenn ja, kann eine
+Das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur. Wir bitten um Rückmeldung, ob eine Pflicht an Ihrem Standort erfüllbar wäre. Wenn ja, kann eine
 spätere Version `Observation.method` auf `1..1` heben, und das Sonderinvariant
-der Allgemeinen Kultur wird überflüssig. Beachten Sie, was daraus noch folgt: Ist
+der Allgemeinen Kultur wird überflüssig. Daraus folgt ein Zweites: Ist
 die Methode immer vorhanden, ist `41852-5` samt Methode überall eindeutig, und
 der Grund, aus dem dieser Leitfaden die methodentragenden Codes `11475-1` und
-`664-3` empfiehlt, entfällt weitgehend. Ihre Antwort entscheidet also mehr als
-eine Frage. Wir bitten um Rückmeldung im Ballot.
+`664-3` empfiehlt, entfällt weitgehend. Die Antwort wirkt damit auf beide Fragen. Wir bitten um Rückmeldung im Ballot.
 
 ### Zwei Granularitätsstufen auf derselben Achse
 
