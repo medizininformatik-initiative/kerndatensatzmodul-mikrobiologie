@@ -1,5 +1,5 @@
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md  -->
-## Befund - Probe
+### Befund - Probe
 
 <a id="ballot-question-1"></a>
 
@@ -47,7 +47,7 @@ folgende Elemente relevant:
     Specimen abgeleitet oder entnommen wurde, z. B. bei
     weiterverarbeiteten oder aus Primärproben gewonnenen Materialien.
 
-## Aufarbeitung, und was hier nicht abgebildet wird
+### `Specimen.processing`: Temperaturbedingungen und Färbung
 
 <a id="ballot-question-3"></a>
 
@@ -71,7 +71,7 @@ vorschlägt, sondern in `Observation.method` — siehe
 [Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html), wo
 Ballotfrage 2 die Begründung enthält.
 
-## Bebrütungsdauer und -temperatur
+### Bebrütungsdauer und -temperatur
 
 <a id="ballot-question-4"></a>
 

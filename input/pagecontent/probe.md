@@ -39,7 +39,7 @@ The following elements are particularly relevant for the microbiological use cas
     Represents the relationship to the specimen from which another specimen was derived or taken,
     e.g. for further-processed materials or materials obtained from primary specimens.
 
-### Processing, and what is not represented here
+### `Specimen.processing`: temperature conditions and staining
 
 <a id="ballot-question-3"></a>
 
