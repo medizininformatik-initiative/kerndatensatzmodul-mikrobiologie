@@ -7,6 +7,15 @@
 # which the bootstrap removes. A module released from this template uses THIS
 # workflow (MII CalVer `YYYY.n.n`) and NEVER Release Please. See docs/release.md.
 #
+# TAG SCHEME — READ THIS BEFORE TAGGING. The trigger glob below requires the `v`
+#            prefix: `v2027.0.0`, not `2027.0.0`. This repository's own history
+#            does NOT follow it — all six existing tags are bare
+#            (`2025.0.1`, `2025.0.2`, `2027.0.0-alpha.1` … `-alpha.5`), which
+#            means this workflow has never fired. Following the MII convention is
+#            a deliberate choice, so tag the next release `v2027.0.0-ballot.rc1`
+#            and not `2027.0.0-ballot.rc1`, or nothing happens. The labor module
+#            carries the same warning for the same reason.
+#
 #   The two template repos release themselves with SemVer via Release Please.
 #   The MODULES they produce release with CalVer via THIS workflow. Never mix
 #   the two on one repo — two release systems corrupt the history.
@@ -14,12 +23,14 @@
 # Purpose:   Faithful, gated automation of the MII "Module Release Workflow"
 #            (kerndatensatz-meta wiki). Modelled on the reference module's
 #            release workflow — for example kerndatensatz-basis `main.yml`
-#            (RELEASE + NOTIFY_ZULIP jobs) + hands off to `go-publish.yml`.
+#            (RELEASE + NOTIFY_ZULIP jobs) + names the package path.
 #            On a CalVer tag it BUILDS the IG (buildability gate), CREATES a
 #            DRAFT GitHub Release with generated notes, and — when a human
 #            publishes that release — ANNOUNCES it to the MII Zulip (topic
-#            "Releases"). Formal FHIR publication stays behind the gated,
-#            manual `go-publish.yml` (this workflow only points at it).
+#            "Releases"). It publishes NOTHING itself: this module's FHIR
+#            package goes out through Simplifier for the time being, and the
+#            gated `go-publish.yml` stays available for a later move to formal
+#            FHIR publication.
 #
 # Triggers:
 #   - push tag `v[0-9]+.[0-9]+.[0-9]+*` (CalVer, e.g. v2026.0.1; the same glob
@@ -46,9 +57,9 @@
 #      does steps 1–5 of the wiki workflow; this file reacts to the pushed tag.
 #   2. Publishing the DRAFT release — turns the draft
 #      created here into a published release, which fires `notify_zulip`.
-#   3. Formal FHIR publication via `go-publish.yml` — manual
-#      workflow_dispatch, `publish: false` (a complete dry run) by default. This
-#      workflow only PRINTS the handoff; it never dispatches go-publish itself.
+#   3. Publishing the FHIR package through Simplifier. This workflow only
+#      PRINTS the handoff; it publishes nothing itself. `go-publish.yml` remains
+#      for a later move to formal FHIR publication.
 #   4. secrets.ZULIP_API_KEY — mapped to env; when absent the
 #      announcement SKIPS with a ::notice, it never fails the release.
 #
@@ -152,7 +163,7 @@ jobs:
           path: kerndatensatz-meta
 
       - name: Set up Java (temurin 17)
-        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
+        uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
         with:
           distribution: temurin
           java-version: "17"
@@ -202,9 +213,16 @@ jobs:
         id: terminology
         shell: bash
         env:
-          SU_TERMSERV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-          SU_TERMSERV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-          SU_TERMSERV_CLIENT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+          # The MII organisation stores this certificate as CDS_DEV_CLIENT_CERT /
+          # _KEY / _CERT_PASSWORD, NOT under the SU_TERMSERV_* names the scaffold
+          # expects. Measured on 2026-09-10 from a CI log: with the scaffold names
+          # the variables arrived empty and every build silently fell back to the
+          # public HL7 server, so SNOMED 20250201 was validated against instead of
+          # the pinned 20260701. The labor module found and documented the same.
+          # The LOCAL variable names stay as they are — only the source changes.
+          SU_TERMSERV_CLIENT_CERT: ${{ secrets.CDS_DEV_CLIENT_CERT }}
+          SU_TERMSERV_CLIENT_KEY: ${{ secrets.CDS_DEV_CLIENT_KEY }}
+          SU_TERMSERV_CLIENT_PASSWORD: ${{ secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
         run: |
           set -euo pipefail
           # Prefer SU-TermServ through the client-certificate nginx proxy;
@@ -351,7 +369,7 @@ jobs:
           path: release-assets
 
       - name: Create the draft GitHub Release
-        uses: softprops/action-gh-release@3d0d9888cb7fd7b750713d6e236d1fcb99157228 # v3.0.2
+        uses: softprops/action-gh-release@efb35369e0ad2afab669f228072c1b0d510eae64 # v3.0.3
         with:
           name: "${{ steps.prep.outputs.version }}"
           files: release-assets/package.tgz
@@ -378,11 +396,15 @@ jobs:
             ### Next: formal FHIR publication (human-gated)
 
             <!-- DELETE START -->
-            After publishing this release, run the gated **go-publish.yml**
-            (Actions → "Publish release with IG Publisher" → Run workflow):
-            first with `publish: false` (a complete dry run), then — only after
-            review — with `publish: true`. This workflow never triggers
-            go-publish itself. See `docs/release.md`.
+            The FHIR package for this module is published **through
+            Simplifier** for the time being, not through the IG Publisher. This
+            workflow does not touch that path; it only drafts the GitHub
+            Release.
+
+            The gated **go-publish.yml** stays in place for the day the module
+            moves to formal FHIR publication (Actions → "Publish release with IG
+            Publisher" → Run workflow, first with `publish: false` as a dry run).
+            Until then it is not part of the release path. See `docs/release.md`.
             <!-- DELETE END -->
 
             See the auto-generated release notes below.
@@ -394,8 +416,8 @@ jobs:
             echo "### Release drafted — next steps (human-gated)"
             echo
             echo "1. Finalize and **publish** the draft Release \`${{ steps.prep.outputs.version }}\` (fires the MII Zulip announcement)."
-            echo "2. Run the gated **go-publish.yml** dry run: Actions → \"Publish release with IG Publisher\" → \`release_ref = ${{ steps.prep.outputs.version }}\`, \`publish = false\`."
-            echo "3. After review, re-run go-publish with \`publish = true\`."
+            echo "2. Publish the FHIR package **through Simplifier** — that is this module\'s package path for the time being; this workflow does not touch it."
+            echo "3. The gated **go-publish.yml** stays available for a later move to formal FHIR publication and is not part of the release path today."
             echo
             echo "The two paths never mix: modules release with CalVer via this workflow; the template repos release with SemVer via Release Please. See docs/release.md."
           } >> "${GITHUB_STEP_SUMMARY}"

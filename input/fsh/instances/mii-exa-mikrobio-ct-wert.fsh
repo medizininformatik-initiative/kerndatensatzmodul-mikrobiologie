@@ -1,3 +1,13 @@
+// KEIN derivedFrom hier, und das ist der Punkt. `A.derivedFrom = B` heisst "A
+// entsteht aus B" — der qualitative Nachweis entsteht aus dieser Messung, nicht
+// umgekehrt. Der Verweis steht deshalb am Nachweis:
+// mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv verweist mit
+// derivedFrom hierher. Bis 2026-09-10 stand er hier und zeigte auf einen
+// NEGATIVEN Nachweis — falsche Richtung und fachlich unmoeglich, denn ein Ct von
+// 21,3 ist ein starkes Positiv.
+//
+// `derivedFrom` bleibt am Profil trotzdem Must Support: Ein Ct-Wert kann seinerseits
+// aus einer vorangegangenen Untersuchung entstehen.
 Instance: mii-exa-mikrobio-ct-wert
 InstanceOf: MII_PR_Mikrobio_Ct_Wert
 Usage: #example
@@ -18,5 +28,4 @@ Description: "Zyklusschwellenwert einer Echtzeit-PCR auf Influenza A H3."
 * valueQuantity.system = $ucum
 * valueQuantity.code = #1
 * method = $sct#70601000052104 "Real-time polymerase chain reaction technique"
-* derivedFrom = Reference(mii-exa-mikrobio-spezifische-bestimmung)
 * specimen = Reference(mii-exa-mikrobio-probe)

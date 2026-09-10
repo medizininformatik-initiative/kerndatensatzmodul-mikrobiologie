@@ -74,6 +74,7 @@ Die Beispielinstanzen dieses Moduls, nach Profil gruppiert.
 **[Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html)**
 
 - [mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.html)
+- [mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv](Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.html)
 - [mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html)
 
 **[Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html)**

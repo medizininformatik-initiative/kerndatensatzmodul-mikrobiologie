@@ -73,6 +73,37 @@ entry names the condition, how to check it, and what to do if it has changed.
   substitution in `changes.md` with a migration note — instances carrying the
   interim code stay valid data but no longer match the profile.
 
+### Terminology-server certificate in CI
+
+- **Condition we relied on:** the workflows read the client certificate from the
+  organisation secrets `CDS_DEV_CLIENT_CERT`, `CDS_DEV_CLIENT_KEY` and
+  `CDS_DEV_CLIENT_CERT_PASSWORD`. The scaffold expects `SU_TERMSERV_*`, which the
+  MII organisation does not use — measured on 2026-09-10 from a CI log, where the
+  variables arrived empty and every build silently fell back to the public HL7
+  server.
+- **Why it matters:** without the certificate the build validates against
+  whatever SNOMED and LOINC versions tx.fhir.org happens to serve, not against
+  the versions this module pins. The build still succeeds, so the only signal is
+  a `::warning` in the log.
+- **How to check:** open the newest `ig-publisher.yml` run and look at the step
+  summary. It says either "Terminology: SU-TermServ via client-certificate proxy"
+  or "Terminology: public HL7 fallback". The step summary is not in the run log —
+  the log holds only the script that writes it, with both branches in it. Read the
+  log instead for what actually happened: the environment dump of the selection
+  step shows `SU_TERMSERV_CLIENT_CERT: ***` when the secret arrived and an empty
+  value when it did not, the step "Stop terminology proxy" exists only where the
+  proxy was started, and the SNOMED edition the publisher validated against
+  appears as `.../version/<yyyymmdd>`.
+- **RESOLVED on 2026-09-10**, run 34480399801 on `v2027.0.0-ballot.rc1`: all three
+  secrets arrive populated, the proxy step ran, 758 log lines address
+  `127.0.0.1:8090`, and the edition used is
+  `http://snomed.info/sct/900000000000207008/version/20260701` — the pinned one,
+  not the public server's 20250201. Errors 208, Warnings 63, Info 152, Broken
+  Links 0, unchanged against the local build, so the switch added no noise. The
+  same run on `main` still falls back, and will until this branch is merged.
+- **If the fallback line appears:** the secret names have drifted again. Compare
+  against the labor module, which carries the same mapping.
+
 ### Terminology pins
 
 - **Condition:** SNOMED CT `http://snomed.info/sct/900000000000207008/version/20260701`

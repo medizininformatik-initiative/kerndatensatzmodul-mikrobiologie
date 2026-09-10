@@ -165,6 +165,7 @@
         "id": "Observation.extension:triggeredBy-r5",
         "path": "Observation.extension",
         "sliceName": "triggeredBy-r5",
+        "short": "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung der MRGN-Einstufung wird nicht hierüber, sondern über derivedFrom abgebildet.",
         "min": 0,
         "max": "*",
         "type": [
@@ -268,6 +269,12 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "short": "Untersuchungen, aus denen die Einstufung abgeleitet wurde: die Empfindlichkeitsbefunde der bewerteten Substanzgruppen, gegebenenfalls zusammen mit der Erregeridentifikation. Diese Untersuchungen SOLLTEN angegeben werden, damit die Grundlage der Einstufung nachvollziehbar ist. Sie dürfen entfallen, wenn die Klasse unmittelbar aus einem bereits eingestuften Laborbefund übernommen wird.",
+        "mustSupport": true
       }
     ]
   }

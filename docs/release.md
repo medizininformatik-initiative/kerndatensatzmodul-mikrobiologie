@@ -86,6 +86,14 @@ The headings below match the wiki's numbered steps. This template is
 Simplifier bake pipeline), so the Simplifier-specific wiki sub-steps are replaced
 by the IG-Publisher / `go-publish.yml` path — noted inline where they differ.
 
+> **In this module, step 3 is different.** The FHIR package is published
+> **through Simplifier** for the time being, which is a decision about this
+> module and not about the template. `go-publish.yml` stays in place, keeps the
+> gh-pages root reserved, and remains the route for a later move to formal FHIR
+> publication — but it is not part of the release path today. `module-release.yml`
+> says the same in its release notes and its run summary. When the module does
+> move, restore the go-publish handoff in those two places.
+
 ### 1. Create the release branch — *human*
 
 ```bash

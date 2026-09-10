@@ -44,6 +44,20 @@ more than the sum of its parts" and asks that the conclusion be exchangeable,
 free text for the time being, and this module has no value set for coded overall
 assessments.
 
+### What the report bundles, and what the Observations carry
+
+`DiagnosticReport.result` references the investigations the report covers, every
+step of a diagnostic chain among them, from the culture to a derived resistance
+category. The list is flat and carries no order: it says which investigations
+belong to this report, not how they relate to one another.
+
+Those relationships are recorded on the Observations themselves — `triggeredBy`
+for a triggered follow-up investigation, `derivedFrom` for a derived result,
+`hasMember` for a panel held together by an organizer. A consumer therefore reads
+the report for the scope of a finding and the Observations for its structure.
+[Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) sets out
+the division of labour between the three.
+
 ### Examples
 
 Example (minimal):

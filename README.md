@@ -2,8 +2,14 @@
 
 ### Übersicht
 
-Gerenderter Leitfaden (Stand main, aus dem der Kandidat gebaut wird):
+Aktueller Ballot-Kandidat: **2027.0.0-ballot.rc1**
+
+Gerenderter Leitfaden, aktueller Build (Stand main, aus dem der Kandidat gebaut wird):
 https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/
+
+Gerenderter Leitfaden, Build des Kandidatenbranches `v2027.0.0-ballot.rc1` — enthält
+Arbeitsstände, die noch nicht nach main gemergt sind:
+https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/branches/v2027.0.0-ballot.rc1/
 
 [![FHIR Project on GitHub.com](https://img.shields.io/badge/FHIR_project_on_GitHub.com-kerndatensatzmodul--mikrobiologie-green)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie)
 
@@ -13,7 +19,7 @@ Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Erweiterungsmoduls
 
 Aktuelle stabile Version: [2025.0.2](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2025.0.2)
 
-Aktueller Ballot-Kandidat: 2027.0.0-ballot.rc1 — [gerenderter Leitfaden](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/). Im Zuge eines Harmonisierungsprozesses zwischen RKI, MIO42 und MII wurde das mikrobiologische Datenmodell grundlegend überarbeitet und die Abstimmung auf den europäischen Kontext (EHDS) ausgeweitet. Ein offiziell ballotiertes Release ist für Ende des Jahres geplant.
+Aktueller Ballot-Kandidat: 2027.0.0-ballot.rc1 — [aktueller Build](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/), [Build des Kandidatenbranches](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/branches/v2027.0.0-ballot.rc1/). Simplifier-Paket und GitHub-Release folgen mit dem Tag `v2027.0.0-ballot.rc1`; veröffentlicht ist bislang [2027.0.0-alpha.5](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2027.0.0-alpha.5). Im Zuge eines Harmonisierungsprozesses zwischen RKI, MIO42 und MII wurde das mikrobiologische Datenmodell grundlegend überarbeitet und die Abstimmung auf den europäischen Kontext (EHDS) ausgeweitet. Ein offiziell ballotiertes Release ist für Ende des Jahres geplant.
 <!-- Reifegrad: -->
 
 Alle veröffentlichten FHIR-Artefakte innerhalb des Projektes verfügen über einen Status, durch welchen der jeweilige Reifegrad abgeleitet werden kann.
@@ -27,7 +33,7 @@ Profile mit dem Status 'Draft' wurden noch nicht ballotiert und können noch div
 
 ### Kurzzusammenfassung
 
-Das Modul beschreibt die im Labor durchgeführten Untersuchungen zum Nachweis, zur Identifizierung und zur Charakterisierung von Mikroorganismen und ihren Eigenschaften. Es bildet damit die Grundlage für eine gemeinsame Betrachtung von Infektionskrankheiten und Antibiotikaresistenzen. Die Befunde werden als eigenständige Observations modelliert; die Hauptbereiche sind Kultur (allgemein, Mikroskopie einschließlich Barlett- und Nugent-Score, Keimzahl, Empfindlichkeit), Bestimmung (allgemein/spezifisch, Ct-Wert), quantitative Tests (Antigen/Antikörper, Titer, molekulare Pathogenlast) sowie weitere Eigenschaften als eigenständige Observations (Virulenz, Resistenzmechanismen, MRGN, voraussichtliche Empfindlichkeit, Resistenzkategorie-Status, Avidität). Klinische Chemie und Hämatologie sind Gegenstand des Basismoduls Labor.
+Das Modul beschreibt die im Labor durchgeführten Untersuchungen zum Nachweis, zur Identifizierung und zur Charakterisierung von Mikroorganismen und ihren Eigenschaften. Es bildet damit die Grundlage für eine gemeinsame Betrachtung von Infektionskrankheiten und Antibiotikaresistenzen. Die Befunde werden als eigenständige Observations modelliert; die Hauptbereiche sind Kultur (allgemein, Mikroskopie einschließlich Bartlett- und Nugent-Score, Keimzahl, Empfindlichkeit), Bestimmung (allgemein/spezifisch, Ct-Wert), quantitative Tests (Antigen/Antikörper, Titer, molekulare Pathogenlast) sowie weitere Eigenschaften als eigenständige Observations (Virulenz, Resistenzmechanismen, MRGN, voraussichtliche Empfindlichkeit, Resistenzkategorie-Status, Avidität). Klinische Chemie und Hämatologie sind Gegenstand des Basismoduls Labor.
 
 ### Wichtige Dokumente und Links
 * [Beschreibung des MII-Kerndatensatzes in der Version 1.0 vom 10.3.2017 (PDF)](https://www.medizininformatik-initiative.de/sites/default/files/inline-files/MII_04_Kerndatensatz_1-0.pdf)
