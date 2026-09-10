@@ -166,11 +166,17 @@ experimental: false
 # The artifact-* / cqf-* extension set below mirrors the reference module
 # kerndatensatz-basis one-for-one; only the per-module values are placeholders.
 extension:
-  # Freigabedatum des Ballot-Kandidaten, gesetzt am 2026-09-09 auf Entscheidung
-  # des Modulverantwortlichen. Beim formalen Release (Gate D) auf das Datum der
-  # dortigen Freigabe zu heben.
+  # Freigabe- und Pruefdatum des Ballot-Kandidaten: der 2026-09-14, an dem der
+  # Stand fuer das Ballot eingefroren wird. Auf Entscheidung des
+  # Modulverantwortlichen am 2026-09-10 von 2026-09-09 auf dieses Datum gezogen,
+  # damit beide Angaben den eingefrorenen Stand datieren und nicht einen
+  # Zwischenstand. VERSCHIEBT SICH DER FREEZE, sind beide Daten nachzuziehen —
+  # sie liegen dann in der Zukunft. Beim formalen Release (Gate D) auf das Datum
+  # der dortigen Freigabe zu heben.
   - url: http://hl7.org/fhir/StructureDefinition/resource-approvalDate
-    valueDate: "2026-09-09"
+    valueDate: "2026-09-14"
+  - url: http://hl7.org/fhir/StructureDefinition/resource-lastReviewDate
+    valueDate: "2026-09-14"
   - url: http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability
     valueCode: shareable
   - url: http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability
@@ -195,14 +201,16 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod
     valuePeriod:
       start: "2027"
-  # MIGRATION: artifact-author REMOVED — {{MODULE_AUTHOR_EMAIL}} has no value in
-  # the source (the registry `author` is an account, not a contact). Re-add with
-  # the real module-author address:
-  #   - url: http://hl7.org/fhir/StructureDefinition/artifact-author
-  #     valueContactDetail:
-  #       telecom:
-  #         - system: email
-  #           value: "name@example.org"              # ① OPEN
+  # Der Modulautor. Die Migration hatte die Extension entfernt, weil
+  # {{MODULE_AUTHOR_EMAIL}} in der Quelle keinen Wert hatte (der Registry-`author`
+  # ist ein Konto, kein Kontakt). RESOLVED am 2026-09-10 auf Entscheidung des
+  # Modulverantwortlichen: dieselbe Adresse, die kerndatensatzmodul-labor an
+  # derselben Stelle fuehrt.
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-author
+    valueContactDetail:
+      telecom:
+        - system: email
+          value: "pw@gefyra.de"
   # The MII-wide governance bodies below apply to every MII KDS module — for
   # example, kerndatensatz-basis records the same National Steering Committee as
   # reviewer and endorser. Adjust only if your module's governance differs.
@@ -269,20 +277,35 @@ extension:
     valueMarkdown: "Use this ImplementationGuide resource as a computable definition of all the parts of the corresponding module of the Medical Informatics Initiative core data set."
   - url: http://hl7.org/fhir/StructureDefinition/artifact-purpose
     valueMarkdown: "Provide the computable publication unit for the MII Core Dataset Microbiology module, enabling implementers to discover, validate, version, and apply the specification consistently."
-  # Module topic(s), coded with the NCI Thesaurus (for example,
-  # kerndatensatz-basis declares seven: C15607, C154624, C25218, C16960,
-  # C25190, C81239, C25717 — verified against its main branch). Replace the
-  # code with your module's topic(s); repeat the block for each topic.
-  # MIGRATION: artifact-topic REMOVED — {{TOPIC_NCI_CODE}} has no value in the
-  # source, and the template states there is no sensible default: an unreplaced
-  # or guessed code SHIPS A BOGUS TERMINOLOGY CODE that no build error catches.
-  # A missing optional extension is the honest outcome; look the module's NCI
-  # Thesaurus topic code(s) up and re-add:
-  #   - url: http://hl7.org/fhir/StructureDefinition/artifact-topic
-  #     valueCodeableConcept:
-  #       coding:
-  #         - system: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
-  #           code: "Cxxxxx"                         # ① OPEN
+  # Module topic(s), coded with the NCI Thesaurus. The migration had removed this
+  # extension because {{TOPIC_NCI_CODE}} had no value in the source and a guessed
+  # code ships a bogus terminology code that no build error catches. RESOLVED on
+  # 2026-09-10: the three codes below were looked up against the NCI EVS API
+  # (api-evsrest.nci.nih.gov/api/v1/concept/ncit), not chosen from memory —
+  #   C16851   Microbiology
+  #   C217438  Diagnostic Microbiology Testing
+  #   C25294   Laboratory Procedure
+  # The first two name this module's subject; the third is one of the two topics
+  # kerndatensatz-labor declares (with C36292 Laboratory Test Result) and records
+  # that this is its extension module. No `display` is given, matching the
+  # laboratory module and kerndatensatz-basis, so no display-mismatch can arise.
+  # The NCI Thesaurus is not a code system the publisher can resolve; the two
+  # message patterns this raises are suppressed in input/ignoreWarnings.txt.
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-topic
+    valueCodeableConcept:
+      coding:
+        - system: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+          code: "C16851"
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-topic
+    valueCodeableConcept:
+      coding:
+        - system: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+          code: "C217438"
+  - url: http://hl7.org/fhir/StructureDefinition/artifact-topic
+    valueCodeableConcept:
+      coding:
+        - system: http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl
+          code: "C25294"
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (for advanced use cases the value

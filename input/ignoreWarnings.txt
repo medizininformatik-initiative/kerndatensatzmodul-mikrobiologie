@@ -69,9 +69,17 @@ The Implementation Guide Resource id should be de.medizininformatikinitiative.ke
 
 # artifact-topic kodiert die Modulthemen mit dem NCI Thesaurus, den der
 # Publisher nicht aufloesen kann und auch nicht wird -- er ist kein
-# FHIR-Terminologieserver. Die beiden Codes sind am 2026-09-09 gegen die
-# NCI-EVS-API geprueft: C36292 = "Laboratory Test Result", C25294 =
-# "Laboratory Procedure". Beide passen zu einem mikrobiologischen Labormodul.
+# FHIR-Terminologieserver. Die drei Codes sind am 2026-09-10 gegen die
+# NCI-EVS-API geprueft: C16851 = "Microbiology", C217438 = "Diagnostic
+# Microbiology Testing", C25294 = "Laboratory Procedure".
+#
+# KORREKTUR am 2026-09-10: Hier standen bis dahin C36292 "Laboratory Test Result"
+# und C25294 als die Codes DIESES Moduls. Das waren die Codes des Labormoduls;
+# in unserer sushi-config.yaml war artifact-topic zu diesem Zeitpunkt gar nicht
+# gesetzt (nachgemessen: C36292 kommt in ihrer Historie nicht vor). Diese
+# Unterdrueckung war damit vorsorglich und ist erst mit dem Setzen der Extension
+# scharf geworden. C25294 fuehrt das Labormodul ebenfalls -- das ist gewollt und
+# haelt fest, dass dieses Modul seine Erweiterung ist.
 %in the CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl'%
 
 # Verweise auf FREMDE experimentelle CodeSystems. Bewusst je System gefiltert
