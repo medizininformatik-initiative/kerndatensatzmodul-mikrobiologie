@@ -23,7 +23,7 @@ The following elements are particularly relevant for the microbiological use cas
 * **`Specimen.parent`**
  Represents the relationship to the specimen from which another specimen was derived or taken, e.g. for further-processed materials or materials obtained from primary specimens.
 
-### Processing, and what is not represented here
+### Specimen.processing: temperature conditions and staining
 
 **Ballot question 3 — mandatory storage temperature conditions on `Specimen.processing`.** The base profile requires the extension `temperaturbedingungen` on every `Specimen.processing` element, in `2026.0.1` as in `2027.0.0-ballot.rc2`. That requirement comes from the biobank, where `Specimen.processing` describes the storage process of a biosample and the temperature is a core statement. In microbiology the same place describes laboratory processing — staining, enrichment, incubation — where a storage temperature is either unknown or without meaning. A derived profile can only narrow, never relax, so this module cannot resolve it. We consider the requirement misplaced in this context and are raising it with the biobank module, with a view to confining it to the storage slice `processing:lagerprozess`, where it belongs. Please comment during the ballot if you are affected.
 

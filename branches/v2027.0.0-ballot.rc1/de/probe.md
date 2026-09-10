@@ -6,9 +6,7 @@
 
 ## Probe
 
- Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfaden verfasst wurde. Informationen zu diesen Übersetzungen und Anweisungen zum Abgeben von Feedback zu den Übersetzungen finden Sie [hier](translationinfo.md). 
-
-## Befund - Probe
+### Befund - Probe
 
 **Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?** Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`. Die Anforderung stammt nicht allein aus diesem Leitfaden: Das europäische Whitepaper hält fest, dass die Probe **immer** ausdrücklich in einer FHIR-Specimen-Ressource abzubilden ist, bevorzugt in `Specimen.type` mit SNOMED CT — und sagt ausdrücklich, dass das auch dann gilt, **wenn der LOINC-Code die Probe bereits trägt**.
 
@@ -25,13 +23,13 @@ Für die mikrobiologischen Anwendungsfälle sind dabei insbesondere folgende Ele
 * **`Specimen.parent`**
  Bildet die Beziehung zu dem Specimen ab, aus dem ein anderes Specimen abgeleitet oder entnommen wurde, z. B. bei weiterverarbeiteten oder aus Primärproben gewonnenen Materialien.
 
-## Aufarbeitung, und was hier nicht abgebildet wird
+### Specimen.processing: Temperaturbedingungen und Färbung
 
 **Ballotfrage 3 — Pflicht-Temperaturbedingungen an `Specimen.processing`.** Das Basisprofil verlangt die Extension `temperaturbedingungen` an jedem `Specimen.processing`-Element, in `2026.0.1` wie in `2027.0.0-ballot.rc2`. Diese Pflicht stammt aus der Biobank, wo `Specimen.processing` den Lagerprozess einer Bioprobe beschreibt und die Temperatur zur Kernaussage gehört. In der Mikrobiologie beschreibt derselbe Platz die Aufarbeitung — Färbung, Anreicherung, Bebrütung —, und dort ist eine Lagertemperatur entweder unbekannt oder ohne Aussage. Ein abgeleitetes Profil darf nur verengen und nie lockern, dieses Modul kann die Pflicht also nicht auflösen. Wir halten sie in diesem Zusammenhang für fehlplatziert und bringen sie beim Biobank-Modul ein, mit dem Ziel, sie auf den Lagerprozess-Slice `processing:lagerprozess` zu begrenzen, wo sie hingehört. Wir bitten um Rückmeldung im Ballot, falls Sie davon betroffen sind.
 
 Die Färbetechnik wird deshalb **nicht** unter `Specimen.processing.procedure` angegeben, wie das europäische Datenmodell es vorschlägt, sondern in `Observation.method` — siehe [Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), wo Ballotfrage 2 die Begründung enthält.
 
-## Bebrütungsdauer und -temperatur
+### Bebrütungsdauer und -temperatur
 
 **Ballotfrage 4 — ist die Bebrütung über `Specimen.processing` darstellbar?** FHIR sieht sie dort vor, und die MII hat die Bausteine bereits. Gemessen an R4 Core und am Biobank-Modul am 2026-09-10:
 
