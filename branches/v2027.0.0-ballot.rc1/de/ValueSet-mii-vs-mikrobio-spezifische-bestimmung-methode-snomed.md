@@ -42,7 +42,7 @@ Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahre
   "title" : "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T17:39:40+00:00",
+  "date" : "2026-09-10T18:06:33+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
