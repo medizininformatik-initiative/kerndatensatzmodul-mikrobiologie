@@ -403,7 +403,7 @@ jobs:
           } >> "${GITHUB_STEP_SUMMARY}"
 
       - name: Set up Java
-        uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961 # v5.7.0
+        uses: actions/setup-java@dd06d9cba3e5552c54d9f8ea23572deb30010f7c # v6.0.0
         with:
           distribution: temurin
           java-version: "17"
@@ -494,9 +494,16 @@ jobs:
         id: terminology
         shell: bash
         env:
-          SU_TERMSERV_CLIENT_CERT: ${{ secrets.SU_TERMSERV_CLIENT_CERT }}
-          SU_TERMSERV_CLIENT_KEY: ${{ secrets.SU_TERMSERV_CLIENT_KEY }}
-          SU_TERMSERV_CLIENT_PASSWORD: ${{ secrets.SU_TERMSERV_CLIENT_PASSWORD }}
+          # The MII organisation stores this certificate as CDS_DEV_CLIENT_CERT /
+          # _KEY / _CERT_PASSWORD, NOT under the SU_TERMSERV_* names the scaffold
+          # expects. Measured on 2026-09-10 from a CI log: with the scaffold names
+          # the variables arrived empty and every build silently fell back to the
+          # public HL7 server, so SNOMED 20250201 was validated against instead of
+          # the pinned 20260701. The labor module found and documented the same.
+          # The LOCAL variable names stay as they are — only the source changes.
+          SU_TERMSERV_CLIENT_CERT: ${{ secrets.CDS_DEV_CLIENT_CERT }}
+          SU_TERMSERV_CLIENT_KEY: ${{ secrets.CDS_DEV_CLIENT_KEY }}
+          SU_TERMSERV_CLIENT_PASSWORD: ${{ secrets.CDS_DEV_CLIENT_CERT_PASSWORD }}
         run: |
           set -euo pipefail
           # Prefer the MII terminology server (SU-TermServ) through the

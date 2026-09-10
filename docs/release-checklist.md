@@ -73,6 +73,24 @@ entry names the condition, how to check it, and what to do if it has changed.
   substitution in `changes.md` with a migration note — instances carrying the
   interim code stay valid data but no longer match the profile.
 
+### Terminology-server certificate in CI
+
+- **Condition we relied on:** the workflows read the client certificate from the
+  organisation secrets `CDS_DEV_CLIENT_CERT`, `CDS_DEV_CLIENT_KEY` and
+  `CDS_DEV_CLIENT_CERT_PASSWORD`. The scaffold expects `SU_TERMSERV_*`, which the
+  MII organisation does not use — measured on 2026-09-10 from a CI log, where the
+  variables arrived empty and every build silently fell back to the public HL7
+  server.
+- **Why it matters:** without the certificate the build validates against
+  whatever SNOMED and LOINC versions tx.fhir.org happens to serve, not against
+  the versions this module pins. The build still succeeds, so the only signal is
+  a `::warning` in the log.
+- **How to check:** open the newest `ig-publisher.yml` run and look at the step
+  summary. It says either "Terminology: SU-TermServ via client-certificate proxy"
+  or "Terminology: public HL7 fallback".
+- **If the fallback line appears:** the secret names have drifted again. Compare
+  against the labor module, which carries the same mapping.
+
 ### Terminology pins
 
 - **Condition:** SNOMED CT `http://snomed.info/sct/900000000000207008/version/20260701`
