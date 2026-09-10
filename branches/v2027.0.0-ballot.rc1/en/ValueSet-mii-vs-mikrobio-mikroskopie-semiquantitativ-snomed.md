@@ -43,7 +43,7 @@ Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, 
   "title" : "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:32:54+00:00",
+  "date" : "2026-09-10T13:47:44+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
