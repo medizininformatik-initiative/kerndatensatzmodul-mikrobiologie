@@ -9,9 +9,28 @@ Zur Abgrenzung gegenüber Empfindlichkeitstestung und Klassifikation sowie zur C
 
 Untersuchungen ohne vordefiniertes Ziel, bei denen das Ergebnis die Nennung des identifizierten Erregers ist, werden über [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html) abgebildet.
 
+### Stellung in der diagnostischen Kette
+
+Ein positiver zielgerichteter Nachweis kann eine Kette eröffnen: Identifizierung
+des Isolats, Empfindlichkeitstestung und abgeleitete Bewertungen können folgen
+und verweisen jeweils über die `triggeredBy`-Extension mit `type = reflex`
+hierher zurück.
+
+Wird neben dem Nachweis ein Ct-Wert berichtet, läuft die Beziehung in die andere
+Richtung und über ein anderes Element: Dieser Nachweis trägt `derivedFrom` auf
+den [Ct-Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.html), aus dem er
+abgelesen wurde, nicht der Ct-Wert auf den Nachweis.
+[Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html) zeigt die Kette
+im Ganzen.
+
 ### Beispiele
 
 Beispiel (minimal):
 
 [mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.html)
+
+Positiver Nachweis mit dem Ct-Wert, aus dem er abgelesen wurde — zeigt die
+Richtung von `derivedFrom`:
+
+[mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv](Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.html)
 

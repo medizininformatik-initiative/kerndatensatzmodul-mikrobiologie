@@ -31,6 +31,7 @@
 [mii-exa-mikrobio-resistenzkategorie-vre-positiv]: Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html
 [mii-exa-mikrobio-resistenzmechanismen-determinanten]: Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html
 [mii-exa-mikrobio-spezifische-bestimmung]: Observation-mii-exa-mikrobio-spezifische-bestimmung.html
+[mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv]: Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.html
 [mii-exa-mikrobio-spezifische-bestimmung-vre-negativ]: Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html
 [mii-exa-mikrobio-spezifische-kultur]: Observation-mii-exa-mikrobio-spezifische-kultur.html
 [mii-exa-mikrobio-spezifische-kultur-vre-negativ]: Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.html

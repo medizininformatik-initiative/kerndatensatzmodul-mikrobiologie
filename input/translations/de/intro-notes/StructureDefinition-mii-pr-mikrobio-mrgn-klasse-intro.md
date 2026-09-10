@@ -7,6 +7,18 @@ MRGN ist eine echte Klassifikation mit eigenem Schema: Der Wert ist die konkrete
 
 Der [Resistenzkategorie-Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html) steht gleichrangig daneben und bewertet grampositive Erreger (MRSA, VRE, LRE, LVRE). Die beiden Profile überschneiden sich nicht: Eine MRGN-Klassifikation geht in keine der derzeit festgelegten Resistenzkategorien ein. Zur Abgrenzung siehe [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html).
 
+### Stellung in der diagnostischen Kette
+
+Die MRGN-Einstufung steht am Ende der Kette und ist eine abgeleitete Aussage: Die
+Empfindlichkeitsbefunde, aus denen eingestuft wurde, werden über
+`Observation.derivedFrom` referenziert und sollten angegeben werden, damit die
+Grundlage der Einstufung nachvollziehbar bleibt. `triggeredBy` wird dafür
+**nicht** verwendet — die Einstufung entsteht durch fachliche Ableitung und nicht
+als ausgelöste Folgediagnostik. Dasselbe gilt für den
+[Resistenzkategorie-Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html).
+[Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html) zeigt die Kette
+im Ganzen.
+
 ### Beispiele
 
 Beispiel (minimal):
