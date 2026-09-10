@@ -16,5 +16,12 @@ Description: "Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbas
 // 703752003 (mikroorganismusspezifische Kulturtechnik) ist nach
 // MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED ausgelagert
 
-// TODO: For manual biochemical identification (rapid test), the corresponding SNOMED CT concept is missing and may need to be requested:
-//Targeted rapid biochemical microbial detection technique (qualifier value)
+// Aus dem Methodenblock des Blattes "Molecular techniques", der fuer den
+// gezielten wie den allgemeinen Nachweis gilt.
+* $sct#1259932009 "Loop-mediated isothermal amplification technique (qualifier value)"
+* $sct#1304162005 "Nucleic acid sequencing technique (qualifier value)"
+
+// Die SNOMED-Anforderung "Targeted rapid biochemical microbial detection
+// technique" (VITEK) stand hier; in der Datenmodell-Fassung vom 2026-09-10 ist
+// sie auf das Blatt "Phenotypic Identification" gewandert und daher jetzt in
+// MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED vermerkt.

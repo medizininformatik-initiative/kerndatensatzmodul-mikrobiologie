@@ -62,6 +62,7 @@
 [MII_VS_Labor_Laborergebnis_Semiquantitativ]: ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html
 [MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED]: ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed.html
 [MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html
+[MII_VS_Mikrobio_Allgemeine_Bestimmung_Tests_LOINC]: ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc.html
 [MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html
 [MII_VS_Mikrobio_Antigen_Antikoerper_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html
 [MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM]: ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum.html
