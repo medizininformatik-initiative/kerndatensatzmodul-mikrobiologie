@@ -50,6 +50,12 @@ Der Grund: Eine serologische Diagnose ist oft keine ihrer Einzelmessungen. Bei a
 
 `conclusionCode` wird hier bewusst nicht eingeschränkt. Das Whitepaper schlägt für den Anfang Freitext vor, und dieses Modul hat kein ValueSet für kodierte Gesamtaussagen.
 
+### Was der Befund bündelt und was die Observations tragen
+
+`DiagnosticReport.result` referenziert die Untersuchungen, die der Befund umfasst, darunter jeden Schritt einer diagnostischen Kette von der Kultur bis zu einer abgeleiteten Resistenzkategorie. Die Liste ist flach und trägt keine Ordnung: Sie sagt, welche Untersuchungen zu diesem Befund gehören, nicht, wie sie zusammenhängen.
+
+Diese Zusammenhänge werden an den Observations selbst angegeben — `triggeredBy` für eine ausgelöste Folgediagnostik, `derivedFrom` für ein abgeleitetes Ergebnis, `hasMember` für ein über einen Organizer zusammengefasstes Panel. Ein Konsument liest also den Befund für den Umfang einer Untersuchungsfolge und die Observations für ihre Struktur. [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.md) beschreibt die Arbeitsteilung zwischen den drei Elementen.
+
 ### Beispiele
 
 Beispiel (minimal):
@@ -312,7 +318,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Diagnostic Report",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:00:57+00:00",
+  "date" : "2026-09-10T16:03:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

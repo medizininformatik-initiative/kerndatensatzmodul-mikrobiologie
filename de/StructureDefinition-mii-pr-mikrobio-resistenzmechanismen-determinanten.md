@@ -16,6 +16,12 @@ Resistenzmechanismen/Determinanten beschreibt den Nachweis von Resistenzgenen, R
 
 Resistenzmechanismen/Determinanten beschreibt den Nachweis von Resistenzgenen, Resistenzmutationen, Proteinen oder funktionalen Tests (z. B. CIM-Test) in einer Probe oder einem Isolat als Hinweis auf spezifische Resistenzmechanismen.
 
+### Stellung in der diagnostischen Kette
+
+Der Nachweis von Resistenzmechanismen steht an derselben Stelle der Kette wie die Empfindlichkeitstestung: Beide bewerten einen bereits identifizierten Erreger. Er verweist über die `triggeredBy`-Extension mit `type = reflex` auf die Untersuchung zurück, die ihn ausgelöst hat — die Identifizierung, oder den Nachweis, wenn die Identifizierung entfiel.
+
+Der [Resistenzkategorie-Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.md) kann aus diesem Ergebnis abgeleitet sein und verweist dann über `derivedFrom` darauf, etwa ein nachgewiesenes `mecA` als Grundlage einer MRSA-Bewertung. [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.md) zeigt die Kette im Ganzen.
+
 ### Beispiele
 
 Beispiel (minimal):
@@ -253,7 +259,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Resistenzmechanismen Determinanten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:00:57+00:00",
+  "date" : "2026-09-10T16:03:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

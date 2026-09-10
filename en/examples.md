@@ -78,6 +78,7 @@ The example instances of this module, grouped by the profile they conform to.
 **[Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md)**
 
 * [mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md)
+* [mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv](Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.md)
 * [mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md)
 
 **[Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md)**

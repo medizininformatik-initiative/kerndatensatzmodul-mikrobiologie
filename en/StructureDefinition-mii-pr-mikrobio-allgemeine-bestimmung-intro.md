@@ -18,6 +18,16 @@ To be distinguished from the neighbouring negative cases:
 
 `264868006 |No growth|` is tied to growth in culture and therefore remains reserved for the culture profiles. An indeterminate result is represented via `dataAbsentReason`, not via `Not detected`.
 
+### Position in the diagnostic chain
+
+The general determination normally follows a culture whose growth it names, and
+points back at it through the `triggeredBy` extension with `type = reflex`; the
+[example](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html) shows this.
+Susceptibility testing in turn follows the identification and points back here in
+the same way.
+[Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) shows the
+chain as a whole.
+
 ### Examples
 
 Example (minimal):

@@ -4,6 +4,16 @@ This profile therefore also represents the negative result of a culture-based ta
 
 Non-culture-based targeted detection is represented via [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html).
 
+### Position in the diagnostic chain
+
+A positive targeted culture can start a chain: further identification of the
+isolate, susceptibility testing and a derived assessment such as a resistance
+category may follow. Each of those points back here through the `triggeredBy`
+extension with `type = reflex` — the reference sits on the later investigation,
+never on this one. A negative result ends the chain.
+[Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) shows the
+chain as a whole.
+
 ### Examples
 
 Example (minimal):

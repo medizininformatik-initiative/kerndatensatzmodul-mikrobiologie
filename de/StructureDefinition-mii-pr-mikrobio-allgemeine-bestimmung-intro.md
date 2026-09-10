@@ -19,6 +19,17 @@ Abzugrenzen von den benachbarten Negativfällen:
 
 `264868006 |No growth|` ist an das Wachstum in der Kultur gebunden und bleibt deshalb den Kulturprofilen vorbehalten. Ein unbestimmbares Ergebnis wird über `dataAbsentReason` abgebildet, nicht über `Not detected`.
 
+### Stellung in der diagnostischen Kette
+
+Die allgemeine Bestimmung folgt in der Regel einer Kultur, deren Wachstum sie
+benennt, und verweist über die `triggeredBy`-Extension mit `type = reflex` auf
+sie zurück; das
+[Beispiel](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html) zeigt das.
+Die Empfindlichkeitstestung folgt ihrerseits der Identifizierung und verweist
+auf dieselbe Weise hierher zurück.
+[Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html) zeigt die Kette
+im Ganzen.
+
 ### Beispiele
 
 Beispiel (minimal):

@@ -20,6 +20,10 @@ Allgemeine Kultur beschreibt das Ergebnis einer nicht zielgerichteten mikrobiolo
 
 Bevorzugt wird `11475-1 |Microorganism identified in Specimen by Culture|`, weil der Code das Verfahren selbst benennt. `41852-5 |Microorganism or agent identified in Specimen|` ist gleichwertig zulässig: Das europäische Datenmodell bevorzugt ihn hier, weil er das Verfahren aus dem Testcode heraushält und nach `Observation.method` verlagert. Es ist derselbe Code, den auch die [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) bevorzugt; eine Untersuchung, die ihn verwendet, ist deshalb allein an ihrer Methode als Kultur erkennbar — die das Invariant `allgemeine-kultur-method-with-neutral-code` für genau diesen Code daher zur Pflicht macht. Wird aerobe und anaerobe Bebrütung nicht unterschieden, steht `702658000 |Microbial culture technique|` zur Verfügung. Wie die beiden Profile unterscheidbar bleiben, steht unter [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.md).
 
+### Stellung in der diagnostischen Kette
+
+Die allgemeine Kultur ist in der Regel der erste Schritt: Sie stellt fest, dass etwas wächst, nicht was es ist. Die Benennung des Erregers ist eine eigene Untersuchung — [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) —, die über die `triggeredBy`-Extension mit `type = reflex` auf diese Kultur zurückverweist. Die Kultur selbst trägt keinen Verweis auf das, was ihr folgt; die Beziehung wird immer an der späteren Untersuchung angegeben. [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.md) zeigt die Kette im Ganzen.
+
 ### Beispiele
 
 Beispiel (minimal):
@@ -261,7 +265,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Allgemeine Kultur",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:00:57+00:00",
+  "date" : "2026-09-10T16:03:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

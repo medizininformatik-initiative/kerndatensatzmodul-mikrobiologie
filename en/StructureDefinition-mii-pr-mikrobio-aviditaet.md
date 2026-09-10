@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
   "title" : "MII PR Mikrobio Aviditaet",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:00:57+00:00",
+  "date" : "2026-09-10T16:03:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

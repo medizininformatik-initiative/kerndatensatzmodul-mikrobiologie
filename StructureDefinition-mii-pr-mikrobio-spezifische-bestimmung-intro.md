@@ -8,8 +8,27 @@ For the delimitation against susceptibility testing and classification, and for 
 
 Investigations without a predefined target, where the result is the naming of the identified pathogen, are represented via [General determination](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html).
 
+### Position in the diagnostic chain
+
+A positive targeted detection can start a chain: identification of the isolate,
+susceptibility testing and derived assessments may follow, each pointing back
+here through the `triggeredBy` extension with `type = reflex`.
+
+Where a Ct value is reported alongside the detection, the relationship runs in
+the other direction and uses a different element: this detection carries
+`derivedFrom` pointing at the
+[Ct value](StructureDefinition-mii-pr-mikrobio-ct-wert.html) it was read from,
+not the Ct value at the detection.
+[Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) shows the
+chain as a whole.
+
 ### Examples
 
 Example (minimal):
 
 [mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.html)
+
+Positive detection with the Ct value it was read from, showing the direction of
+`derivedFrom`:
+
+[mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv](Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.html)

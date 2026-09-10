@@ -22,6 +22,10 @@ MRGN is a genuine classification with its own scheme: the value is the concrete 
 
 [Resistance category status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.md) stands alongside it as an equal and assesses Gram-positive pathogens (MRSA, VRE, LRE, LVRE). The two profiles do not overlap: an MRGN classification does not enter into any of the currently defined resistance categories. For the delimitation see [Profile selection and delimitation](profilauswahl-und-abgrenzung.md).
 
+### Position in the diagnostic chain
+
+The MRGN classification stands at the end of the chain and is a derived statement: the susceptibility findings it was classified from are referenced through `Observation.derivedFrom`, and they should be given so that the basis of the classification remains traceable. `triggeredBy` is **not** used for this — the classification arises by clinical derivation and not as a triggered follow-up investigation. The same applies to [Resistance category status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.md). [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md) shows the chain as a whole.
+
 ### Examples
 
 Example (minimal):
@@ -185,7 +189,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
   "title" : "MII PR Mikrobio MRGN Klasse",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:00:57+00:00",
+  "date" : "2026-09-10T16:03:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -231,6 +235,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
       "id" : "Observation.extension:triggeredBy-r5",
       "path" : "Observation.extension",
       "sliceName" : "triggeredBy-r5",
+      "short" : "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung der MRGN-Einstufung wird nicht hierüber, sondern über derivedFrom abgebildet.",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -318,6 +323,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
         "code" : "Reference",
         "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
       }]
+    },
+    {
+      "id" : "Observation.derivedFrom",
+      "path" : "Observation.derivedFrom",
+      "short" : "Untersuchungen, aus denen die Einstufung abgeleitet wurde: die Empfindlichkeitsbefunde der bewerteten Substanzgruppen, gegebenenfalls zusammen mit der Erregeridentifikation. Diese Untersuchungen SOLLTEN angegeben werden, damit die Grundlage der Einstufung nachvollziehbar ist. Sie dürfen entfallen, wenn die Klasse unmittelbar aus einem bereits eingestuften Laborbefund übernommen wird.",
+      "mustSupport" : true
     }]
   }
 }

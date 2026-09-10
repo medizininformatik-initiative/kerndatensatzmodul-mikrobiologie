@@ -34,8 +34,6 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
 
 **specimen**: [Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100](Specimen-mii-exa-mikrobio-probe.md)
 
-**derivedFrom**: [Observation Microorganism identified in Isolate or Specimen by Molecular genetics method](Observation-mii-exa-mikrobio-spezifische-bestimmung.md)
-
 
 
 ## Resource Content
@@ -111,10 +109,7 @@ Profile: [MII PR Mikrobio CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.m
   },
   "specimen" : {
     "reference" : "Specimen/mii-exa-mikrobio-probe"
-  },
-  "derivedFrom" : [{
-    "reference" : "Observation/mii-exa-mikrobio-spezifische-bestimmung"
-  }]
+  }
 }
 
 ```
