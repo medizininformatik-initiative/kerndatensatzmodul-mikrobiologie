@@ -427,6 +427,38 @@ MII PR Mikrobio Empfindlichkeit
 
 <p>Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, etwa ein linezolidresistenter Enterococcus über <code class="language-plaintext highlighter-rouge">29258-1 |Linezolid [Susceptibility]|</code> mit <code class="language-plaintext highlighter-rouge">interpretation</code> R; der Negativfall ist <code class="language-plaintext highlighter-rouge">interpretation</code> S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen in die Nachweisprofile — siehe <a href="profilauswahl-und-abgrenzung.html">Profilauswahl und Abgrenzung</a>.</p>
 
+<h3 id="stellung-in-der-diagnostischen-kette">Stellung in der diagnostischen Kette</h3>
+
+<p>Die Empfindlichkeitstestung folgt der Identifizierung des Erregers, den sie
+bewertet, und verweist über die <code class="language-plaintext highlighter-rouge">triggeredBy</code>-Extension mit <code class="language-plaintext highlighter-rouge">type = reflex</code> auf
+sie zurück. Fand keine eigene Identifizierung statt, weil der Nachweis bereits
+erregerspezifisch war, verweist sie unmittelbar auf diesen Nachweis.</p>
+
+<p><a href="StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html">Resistenzkategorie-Status</a>
+und <a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html">MRGN-Klasse</a> stehen am
+Ende der Kette und verweisen über <code class="language-plaintext highlighter-rouge">derivedFrom</code> auf die Empfindlichkeitsbefunde,
+aus denen sie abgeleitet wurden, nicht über <code class="language-plaintext highlighter-rouge">triggeredBy</code>: Sie sind fachliche
+Ableitungen und keine ausgelöste Folgediagnostik.</p>
+
+<h3 id="ein-antibiogramm-zusammenfassen">Ein Antibiogramm zusammenfassen</h3>
+
+<p>Ein Antibiogramm ist nicht ein Ergebnis, sondern viele — je getestete Substanz
+eine Observation dieses Profils. Das europäische Whitepaper bindet sie über eine
+<strong>Organizer-Observation</strong> zusammen: eine Observation, die den Panel-Code
+<code class="language-plaintext highlighter-rouge">29576-6 |Bacterial susceptibility panel|</code> trägt und selbst kein <code class="language-plaintext highlighter-rouge">value[x]</code>, und
+die über <code class="language-plaintext highlighter-rouge">Observation.hasMember</code> auf die Einzelergebnisse und über <code class="language-plaintext highlighter-rouge">triggeredBy</code>
+auf die Identifizierung verweist, der sie folgte.</p>
+
+<p>Der Organizer ist in diesem Modul nicht profiliert. <code class="language-plaintext highlighter-rouge">Observation.hasMember</code> steht
+unbeschränkt aus dem Laborbefund-Basisprofil zur Verfügung, und ein
+Organizer-Profil erzeugte eine eigene Canonical für etwas, das FHIR bereits
+regelt. Für ihn gibt es entsprechend kein Profil unter den Zielen, die
+<code class="language-plaintext highlighter-rouge">DiagnosticReport.result</code> zulässt; dort werden die Einzelergebnisse unmittelbar
+referenziert.
+<a href="profilauswahl-und-abgrenzung.html">Profilauswahl und Abgrenzung</a> beschreibt das
+Muster und die Arbeitsteilung zwischen <code class="language-plaintext highlighter-rouge">hasMember</code>, <code class="language-plaintext highlighter-rouge">triggeredBy</code> und
+<code class="language-plaintext highlighter-rouge">derivedFrom</code>.</p>
+
 <h3 id="beispiele">Beispiele</h3>
 
 <p>Beispiel (minimal):</p>
@@ -1186,7 +1218,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity" title="Quantity">SimpleQuantity</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">High Range, if relevant<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="If a code for the unit is present, the system SHALL also be present" class="constraint">qty-3</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="The comparator is not used on a SimpleQuantity" class="constraint">sqty-1</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-empfindlichkeitK'), 'binding', document.getElementById('cbmii-pr-mikrobio-empfindlichkeitK-binding').checked, document.getElementById('ppmii-pr-mikrobio-empfindlichkeitK'));
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1770,7 +1802,7 @@ filterDesc(document.getElementById('mii-pr-mikrobio-empfindlichkeitK'), 'obligat
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-mikrobio-probe.html">MII PR Mikrobio Probe</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Probenmaterial</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-empfindlichkeitD'), 'binding', document.getElementById('cbmii-pr-mikrobio-empfindlichkeitD-binding').checked, document.getElementById('ppmii-pr-mikrobio-empfindlichkeitD'));
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -3151,7 +3183,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-empfindlichkeitS'), 'binding', document.getElementById('cbmii-pr-mikrobio-empfindlichkeitS-binding').checked, document.getElementById('ppmii-pr-mikrobio-empfindlichkeitS'));
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4772,7 +4804,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity" title="Quantity">SimpleQuantity</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">High Range, if relevant<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="If a code for the unit is present, the system SHALL also be present" class="constraint">qty-3</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="The comparator is not used on a SimpleQuantity" class="constraint">sqty-1</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-empfindlichkeitKA'), 'binding', document.getElementById('cbmii-pr-mikrobio-empfindlichkeitKA-binding').checked, document.getElementById('ppmii-pr-mikrobio-empfindlichkeitKA'));
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -5355,7 +5387,7 @@ filterDesc(document.getElementById('mii-pr-mikrobio-empfindlichkeitKA'), 'obliga
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-mikrobio-probe.html">MII PR Mikrobio Probe</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Probenmaterial</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-empfindlichkeitDA'), 'binding', document.getElementById('cbmii-pr-mikrobio-empfindlichkeitDA-binding').checked, document.getElementById('ppmii-pr-mikrobio-empfindlichkeitDA'));
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -6733,7 +6765,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-empfindlichkeitSA'), 'binding', document.getElementById('cbmii-pr-mikrobio-empfindlichkeitSA-binding').checked, document.getElementById('ppmii-pr-mikrobio-empfindlichkeitSA'));
 document.getElementById('cbmii-pr-mikrobio-empfindlichkeitSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -7684,7 +7716,7 @@ Summary
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Sep 10, 2026 13:10+0000">2026-09-10</span>
+          Erstellt <span title="Thu, Sep 10, 2026 13:32+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -50,6 +50,12 @@ The reason is that a serological diagnosis is often not any one of its measureme
 
 `conclusionCode` is deliberately not constrained here. The white paper proposes free text for the time being, and this module has no value set for coded overall assessments.
 
+### What the report bundles, and what the Observations carry
+
+`DiagnosticReport.result` references the investigations the report covers, every step of a diagnostic chain among them, from the culture to a derived resistance category. The list is flat and carries no order: it says which investigations belong to this report, not how they relate to one another.
+
+Those relationships are recorded on the Observations themselves — `triggeredBy` for a triggered follow-up investigation, `derivedFrom` for a derived result, `hasMember` for a panel held together by an organizer. A consumer therefore reads the report for the scope of a finding and the Observations for its structure. [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md) sets out the division of labour between the three.
+
 ### Examples
 
 Example (minimal):
@@ -212,7 +218,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-d
   "title" : "MII PR Mikrobio Diagnostic Report",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:10:47+00:00",
+  "date" : "2026-09-10T13:32:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

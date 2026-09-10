@@ -461,11 +461,30 @@ MII PR Mikrobio Spezifische Bestimmung
 
 <p>Investigations without a predefined target, where the result is the naming of the identified pathogen, are represented via <a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">General determination</a>.</p>
 
+<h3 id="position-in-the-diagnostic-chain">Position in the diagnostic chain</h3>
+
+<p>A positive targeted detection can start a chain: identification of the isolate,
+susceptibility testing and derived assessments may follow, each pointing back
+here through the <code class="language-plaintext highlighter-rouge">triggeredBy</code> extension with <code class="language-plaintext highlighter-rouge">type = reflex</code>.</p>
+
+<p>Where a Ct value is reported alongside the detection, the relationship runs in
+the other direction and uses a different element: this detection carries
+<code class="language-plaintext highlighter-rouge">derivedFrom</code> pointing at the
+<a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html">Ct value</a> it was read from,
+not the Ct value at the detection.
+<a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a> shows the
+chain as a whole.</p>
+
 <h3 id="examples">Examples</h3>
 
 <p>Example (minimal):</p>
 
 <p><a href="Observation-mii-exa-mikrobio-spezifische-bestimmung.html">mii-exa-mikrobio-spezifische-bestimmung</a></p>
+
+<p>Positive detection with the Ct value it was read from, showing the direction of
+<code class="language-plaintext highlighter-rouge">derivedFrom</code>:</p>
+
+<p><a href="Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.html">mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv</a></p>
 
 
 </div>
@@ -476,7 +495,7 @@ MII PR Mikrobio Spezifische Bestimmung
 <p><b>Usages:</b></p>
 <ul>
  <li>Refer to this Profile: <a href="StructureDefinition-mii-pr-mikrobio-diagnostic-report.html">MII PR Mikrobio Diagnostic Report</a></li>
- <li>Examples for this Profile: <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ</a> and <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung.html">Observation/mii-exa-mikrobio-spezifische-bestimmung</a></li>
+ <li>Examples for this Profile: <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.html">Observation/mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv</a>, <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.html">Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ</a> and <a href="Observation-mii-exa-mikrobio-spezifische-bestimmung.html">Observation/mii-exa-mikrobio-spezifische-bestimmung</a></li>
  <li>CapabilityStatements using this Profile: <a href="CapabilityStatement-mii-cps-mikrobio-metadata.html">MII CPS Mikrobio Metadata</a></li>
 </ul>
 <p>You can also check for <a href="https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.json">usages in the FHIR IG Statistics</a></p>
@@ -1200,7 +1219,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity" title="Quantity">SimpleQuantity</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">High Range, if relevant<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="If a code for the unit is present, the system SHALL also be present" class="constraint">qty-3</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="The comparator is not used on a SimpleQuantity" class="constraint">sqty-1</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-spezifische-bestimmungK'), 'binding', document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungK-binding').checked, document.getElementById('ppmii-pr-mikrobio-spezifische-bestimmungK'));
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1702,7 +1721,7 @@ filterDesc(document.getElementById('mii-pr-mikrobio-spezifische-bestimmungK'), '
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-mikrobio-probe.html">MII PR Mikrobio Probe</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Probenmaterial</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-spezifische-bestimmungD'), 'binding', document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungD-binding').checked, document.getElementById('ppmii-pr-mikrobio-spezifische-bestimmungD'));
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2971,7 +2990,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-spezifische-bestimmungS'), 'binding', document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungS-binding').checked, document.getElementById('ppmii-pr-mikrobio-spezifische-bestimmungS'));
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -4520,7 +4539,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity" title="Quantity">SimpleQuantity</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">High Range, if relevant<br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="If a code for the unit is present, the system SHALL also be present" class="constraint">qty-3</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="The comparator is not used on a SimpleQuantity" class="constraint">sqty-1</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-spezifische-bestimmungKA'), 'binding', document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungKA-binding').checked, document.getElementById('ppmii-pr-mikrobio-spezifische-bestimmungKA'));
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -5021,7 +5040,7 @@ filterDesc(document.getElementById('mii-pr-mikrobio-spezifische-bestimmungKA'), 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-mii-pr-mikrobio-probe.html">MII PR Mikrobio Probe</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Probenmaterial</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-spezifische-bestimmungDA'), 'binding', document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungDA-binding').checked, document.getElementById('ppmii-pr-mikrobio-spezifische-bestimmungDA'));
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -6287,7 +6306,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">See <a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange" title="Observation.referenceRange">referenceRange (Observation)</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Provides guide for interpretation of component result<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 130380d6-fc11-4cd1-ba28-01e0297822bc
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 50acd99a-08ef-4875-b7e1-3442b1fd879b
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('mii-pr-mikrobio-spezifische-bestimmungSA'), 'binding', document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungSA-binding').checked, document.getElementById('ppmii-pr-mikrobio-spezifische-bestimmungSA'));
 document.getElementById('cbmii-pr-mikrobio-spezifische-bestimmungSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -7186,7 +7205,7 @@ Summary
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Sep 10, 2026 13:10+0000">2026-09-10</span>
+          Generated <span title="Thu, Sep 10, 2026 13:32+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

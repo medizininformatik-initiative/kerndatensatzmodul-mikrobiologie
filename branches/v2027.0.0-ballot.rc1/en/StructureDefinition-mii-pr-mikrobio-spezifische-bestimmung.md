@@ -24,16 +24,26 @@ For the delimitation against susceptibility testing and classification, and for 
 
 Investigations without a predefined target, where the result is the naming of the identified pathogen, are represented via [General determination](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md).
 
+### Position in the diagnostic chain
+
+A positive targeted detection can start a chain: identification of the isolate, susceptibility testing and derived assessments may follow, each pointing back here through the `triggeredBy` extension with `type = reflex`.
+
+Where a Ct value is reported alongside the detection, the relationship runs in the other direction and uses a different element: this detection carries `derivedFrom` pointing at the [Ct value](StructureDefinition-mii-pr-mikrobio-ct-wert.md) it was read from, not the Ct value at the detection. [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md) shows the chain as a whole.
+
 ### Examples
 
 Example (minimal):
 
 [mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md)
 
+Positive detection with the Ct value it was read from, showing the direction of `derivedFrom`:
+
+[mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv](Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.md)
+
 **Usages:**
 
 * Refer to this Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
-* Examples for this Profile: [Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md) and [Observation/mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md)
+* Examples for this Profile: [Observation/mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv](Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md) and [Observation/mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md)
 * CapabilityStatements using this Profile: [MII CPS Mikrobio Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.json)
@@ -187,7 +197,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Bestimmung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:10:47+00:00",
+  "date" : "2026-09-10T13:32:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -27,7 +27,7 @@ Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-We
   "name" : "MII_SP_Mikrobio_Observation_Titer",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:10:47+00:00",
+  "date" : "2026-09-10T13:32:54+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

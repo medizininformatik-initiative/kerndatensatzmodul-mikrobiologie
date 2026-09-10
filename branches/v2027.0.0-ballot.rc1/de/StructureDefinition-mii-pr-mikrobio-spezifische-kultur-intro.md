@@ -5,6 +5,17 @@ Damit bildet dieses Profil auch das negative Ergebnis eines kulturell durchgefü
 
 Der nicht kulturbasierte zielgerichtete Nachweis wird über [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) abgebildet.
 
+### Stellung in der diagnostischen Kette
+
+Eine positive zielgerichtete Kultur kann eine Kette eröffnen: eine weitere
+Identifizierung des Isolats, eine Empfindlichkeitstestung und eine abgeleitete
+Bewertung wie ein Resistenzkategorie-Status können folgen. Jede davon verweist
+über die `triggeredBy`-Extension mit `type = reflex` hierher zurück — der Verweis
+sitzt an der späteren Untersuchung, nicht an dieser. Ein negatives Ergebnis
+beendet die Kette.
+[Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html) zeigt die Kette
+im Ganzen.
+
 ### Beispiele
 
 Beispiel (minimal):

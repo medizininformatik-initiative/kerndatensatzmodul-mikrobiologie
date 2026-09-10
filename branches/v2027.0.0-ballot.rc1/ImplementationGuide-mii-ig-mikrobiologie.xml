@@ -111,7 +111,7 @@
   <title value="MII Implementation Guide Microbiology"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-10T13:10:47+00:00"/>
+  <date value="2026-09-10T13:32:54+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -1361,6 +1361,17 @@
       </reference>
       <name value="MII EXA Mikrobio Spezifische Bestimmung"/>
       <description value="Zielgerichteter molekularer Erregernachweis mit negativem Ergebnis."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv"/>
+      </reference>
+      <name value="MII EXA Mikrobio Spezifische Bestimmung Influenza positiv"/>
+      <description value="Zielgerichteter molekularer Erregernachweis mit positivem Ergebnis, abgeleitet aus dem berichteten Ct-Wert."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
     </resource>
     <resource>
