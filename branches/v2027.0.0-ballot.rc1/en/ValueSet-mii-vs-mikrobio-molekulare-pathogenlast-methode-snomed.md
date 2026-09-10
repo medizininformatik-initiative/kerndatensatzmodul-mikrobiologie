@@ -24,8 +24,6 @@ Methoden-ValueSet für die molekulare Pathogenlast: Amplifikationsverfahren zur 
 
 ### Expansion
 
-No Expansion for this valueset (Unsupported Code System Version)
-
 -------
 
  [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
@@ -44,7 +42,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T12:50:06+00:00",
+  "date" : "2026-09-10T13:10:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

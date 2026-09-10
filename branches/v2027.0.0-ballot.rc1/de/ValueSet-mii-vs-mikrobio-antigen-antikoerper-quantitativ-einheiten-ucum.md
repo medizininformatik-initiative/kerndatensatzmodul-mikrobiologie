@@ -24,7 +24,7 @@ Einheiten-ValueSet für quantitative Antigen- und Antikörpertests (UCUM). Binde
 
 ### Expansion
 
-No Expansion for this valueset (Unsupported Code System Version)
+No Expansion for this valueset (Unknown Code System)
 
 -------
 
@@ -44,7 +44,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T12:50:06+00:00",
+  "date" : "2026-09-10T13:10:47+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
