@@ -9,6 +9,6 @@ Description: "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mik
 * value[x] only Quantity
 * valueQuantity
   * code from MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM (extensible)
-  * code ^short = "Bei Probenmaterialien ohne Volumen- oder Massenbezug, etwa Katheterspitzen, wird die nennerlose Einheit [CFU] verwendet; die Bezugsgröße steht in Specimen.type."
+  * code ^short = "Bevorzugt eine Einheit MIT der KBE-Annotation: [CFU]/mL je Volumen, [CFU]/g je Masse, [CFU] je Probe. Die unannotierten Formen /mL, /g und 1 sagen weniger — /mL heisst in UCUM woertlich 'pro Milliliter' und nicht, WAS pro Milliliter, und 1 ist die dimensionslose Eins. Sie bleiben zulaessig, weil sie bis 2025.0.2 die einzige Moeglichkeit waren; der Migrationspfad ist mechanisch. Bei Probenmaterialien ohne Volumen- oder Massenbezug, etwa Katheterspitzen, wird [CFU] verwendet und die Bezugsgroesse steht in Specimen.type."
 * method = $sct-no-ver#410681005 // Count of entities (property) (qualifier value)
 * interpretation from MII_VS_Labor_Laborergebnis_Semiquantitativ (extensible)

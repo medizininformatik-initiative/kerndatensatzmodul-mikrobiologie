@@ -50,9 +50,9 @@ package "Kultur" {
     Ergebnis: CodeableConcept — Morphologie_Ergebnis_SNOMED
     Methode: Morphologie_Methode_SNOMED
   }
-  class "Barlett Score" as BarlettScore {
+  class "Bartlett Score" as BartlettScore {
     Code: LOINC 75371-5
-    Ergebnis: CodeableConcept — Barlett_Score_LOINC
+    Ergebnis: CodeableConcept — Bartlett_Score_LOINC
     Methode: SNOMED 702661004 Mikroskopie
   }
   class "Nugent Score" as NugentScore {
@@ -75,13 +75,13 @@ package "Kultur" {
   ' Zeilen
   AllgemeineKultur -[hidden]right- SpezifischeKultur
   SpezifischeKultur -[hidden]right- Mikroskopie
-  BarlettScore -[hidden]right- NugentScore
+  BartlettScore -[hidden]right- NugentScore
   NugentScore -[hidden]right- Keimzahl
   ' Spalten: je eine Kante pro Spalte, sonst wird die naechste Zeile zentriert
-  AllgemeineKultur -[hidden]down- BarlettScore
+  AllgemeineKultur -[hidden]down- BartlettScore
   SpezifischeKultur -[hidden]down- NugentScore
   Mikroskopie -[hidden]down- Keimzahl
-  BarlettScore -[hidden]down- Empfindlichkeit
+  BartlettScore -[hidden]down- Empfindlichkeit
 }
 
 package "Bestimmung" {

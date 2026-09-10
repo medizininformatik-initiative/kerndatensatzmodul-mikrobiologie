@@ -10,11 +10,24 @@ Description: "Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-
       CLASS = "LP7755-4" and
       STATUS = "ACTIVE"
 
-// Die Carbapenemase-Schnelltests des EU-Datenmodells liegen in der LOINC-Klasse
-// MICRO (LP7819-8), nicht in ABXBACT (LP7755-4) — am 2026-09-10 gegen LOINC 2.82
-// nachgemessen. Der Filter oben erfasst sie deshalb NICHT, obwohl das Modul die
-// zugehoerigen Verfahren (Lateral-Flow-Immunoassays) im Methoden-ValueSet fuehrt.
-// Methode ja, Code nein waere ein Widerspruch im eigenen Modul.
+// Die Carbapenemase-Schnelltests des EU-Datenmodells liegen ueberwiegend in der
+// LOINC-Klasse MICRO (LP7819-8), nicht in ABXBACT (LP7755-4). Der Filter oben
+// erfasst sie deshalb NICHT, obwohl das Modul die zugehoerigen Verfahren
+// (Lateral-Flow-Immunoassays) im Methoden-ValueSet fuehrt. Methode ja, Code nein
+// waere ein Widerspruch im eigenen Modul.
+//
+// "Ueberwiegend", nicht "alle": Am 2026-09-10 gegen LOINC 2.82 gemessen, teilt
+// LOINC diese eine Codefamilie auf zwei Klassen auf, bei identischem PROPERTY
+// (PrThr) und identischer Verfahrensfamilie:
+//
+//   MICRO     101673-2 KPC, 101675-7 IMP, 101677-3 NDM, 101676-5 VIM,
+//             101674-0 OXA-48-like, 86930-5 Carbapenemase (allgemein)
+//   ABXBACT   105037-6 OXA-23, 105038-4 OXA-40 und OXA-58
+//
+// Die beiden ABXBACT-Codes kommen also ueber den Filter oben herein und sind
+// unten NICHT aufgezaehlt — sonst waeren sie doppelt. Die Aufteilung selbst ist
+// an Regenstrief gemeldet; sie ist das schaerfste Beispiel dafuer, dass ein
+// CLASS-Filter in diesem Blattwerk nicht traegt.
 //
 // Aufgezaehlt statt den Filter auf CLASS = MICRO zu weiten: Zusammen mit
 // PROPERTY = PrThr finge MICRO jeden gezielten Erregernachweis mit ein und

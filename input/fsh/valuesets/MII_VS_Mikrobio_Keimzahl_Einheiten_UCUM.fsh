@@ -21,7 +21,11 @@ Description: "Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebild
 // zählen. Bleibt unabhängig vom TODO unten.
 * $ucum#[arb'U]/mL
 
-// TODO (2026-09-03): Sollen diese drei Codes DEPRECATED werden?
+// TODO (2026-09-03, eingegrenzt 2026-09-10): Sollen diese drei Codes zusaetzlich
+// maschinenlesbar DEPRECATED werden? Die EMPFEHLUNG selbst ist entschieden und
+// steht seit 2026-09-10 im code ^short von MII_PR_Mikrobio_Keimzahl, also dort,
+// wo ein Implementierer sie liest. Offen ist nur noch das maschinenlesbare
+// Signal.
 //
 // Seit [CFU] und [CFU]/g dazugekommen sind, steht für jeden Bezug beides in der
 // Liste, und die unannotierte Form sagt jeweils weniger:
@@ -40,12 +44,13 @@ Description: "Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebild
 // nicht nach Entfernen: Konsumenten behalten den Code, bekommen aber das Signal.
 //
 // Zu prüfen:
-//   - Mechanismus: die R4-Extension
-//     http://hl7.org/fhir/StructureDefinition/valueset-deprecated mit Kontext
-//     ValueSet.compose.include.concept — passt genau auf diese Stelle. Zu
-//     messen ist, ob IG Publisher und die eingesetzten Terminologieserver sie
-//     auch anzeigen; ohne Anzeige bliebe es folgenlos und die Guidance gehörte
-//     statt dessen auf eine Seite.
+//   - Mechanismus: GEMESSEN 2026-09-10. Die Extension
+//     http://hl7.org/fhir/StructureDefinition/valueset-deprecated liegt in R4
+//     Core und in hl7.fhir.uv.extensions.r4 5.2.0, Kontext
+//     ValueSet.compose.include.concept, Wert boolean — passt genau. NICHT
+//     gemessen ist, ob IG Publisher und die eingesetzten Terminologieserver sie
+//     anzeigen. Ohne Anzeige bliebe das Flag folgenlos; die Empfehlung ist
+//     davon aber nicht mehr abhaengig, weil sie im ^short steht.
 //   - Zeitpunkt: 2027.0.0 ist ein Major-Bump mit Ballot und stellt ohnehin von
 //     component-Darstellungen auf eigenständige Observation-Profile um. Wenn
 //     überhaupt, ist das das Fenster dafür.

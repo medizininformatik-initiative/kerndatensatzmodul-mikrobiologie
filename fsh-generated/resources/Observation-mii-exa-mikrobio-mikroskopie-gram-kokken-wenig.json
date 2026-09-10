@@ -1,0 +1,106 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-mikrobio-mikroskopie-gram-kokken-wenig",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "OBI"
+          }
+        ]
+      },
+      "system": "https://example.org/fhir/sid/test-lab-results",
+      "value": "mikroskopie-gram-1",
+      "assigner": {
+        "reference": "Organization/mii-exa-mikrobio-labor"
+      }
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        },
+        {
+          "code": "26436-6",
+          "system": "http://loinc.org",
+          "version": "2.82",
+          "display": "Laboratory studies (set)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "MB",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+        }
+      ]
+    }
+  ],
+  "performer": [
+    {
+      "reference": "Organization/mii-exa-mikrobio-labor"
+    }
+  ],
+  "component": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "semiquantitative-menge",
+            "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "57176003",
+            "system": "http://snomed.info/sct",
+            "version": "http://snomed.info/sct/900000000000207008/version/20260701",
+            "display": "Few"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "664-3",
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "display": "Microscopic observation [Identifier] in Specimen by Gram stain"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-mikrobio-patient"
+  },
+  "effectiveDateTime": "2026-04-02T10:00:00+01:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "70003006",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20260701",
+        "display": "Gram-positive cocci in clusters (finding)"
+      }
+    ]
+  },
+  "specimen": {
+    "reference": "Specimen/mii-exa-mikrobio-probe"
+  }
+}

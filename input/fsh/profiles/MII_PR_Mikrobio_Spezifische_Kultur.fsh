@@ -1,3 +1,6 @@
+// TODO (2026-09-10): BEBRÜTUNGSDAUER UND -TEMPERATUR — betrifft dieses Profil
+// gleichermaßen. Hypothese und Begründung stehen bei
+// MII_PR_Mikrobio_Allgemeine_Kultur.
 Profile: MII_PR_Mikrobio_Spezifische_Kultur
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-spezifische-kultur

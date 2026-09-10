@@ -19,6 +19,9 @@ RuleSet: MIKRO_OBSERVATION_COMMON
 * category[mibi-category] = $v2-0074#MB
 * category[mibi-category] ^short = "Mikrobiologie-Kategorie"
 * category[mibi-category] ^definition = "Kategorie-Slice für mikrobiologische Laboruntersuchungen."
+// Das Zielprofil war bis 2026-09-10 offen: `specimen 1..` verlangte eine Probe,
+// liess aber jede beliebige zu.
 * specimen 1.. MS
+* specimen only Reference(MII_PR_Mikrobio_Probe)
 // Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern hier abgebildet
 * dataAbsentReason from MII_VS_Mikrobio_Data_Absent_Reason (extensible)

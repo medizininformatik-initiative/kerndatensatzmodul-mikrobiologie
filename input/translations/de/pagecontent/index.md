@@ -21,19 +21,25 @@ Antibiotikaresistenzen bildet, die zu globalen Gesundheitsnotfällen führen und
 den Hauptprioritäten der [WHO](http://www.who.int "WHO") gehören.
 
 <div class="ig-highlight ig-highlight-orange" markdown="1">
-**Hinweis.** Im Rahmen eines Harmonisierungsprozesses zwischen dem RKI, MIO42 und
-der MII wurde das Mikrobiologie-Datenmodell grundlegend überarbeitet. Die
-Abstimmungen wurden zusätzlich auf den europäischen Kontext (EHDS) ausgeweitet.
-Der vorliegende Alpha-Release bildet den aktuellen Stand der erzielten
-Abstimmungsergebnisse ab. Ein offiziell ballotiertes Release ist für Ende des
-Jahres vorgesehen.
+**Hinweis zum Stand des zugrunde liegenden Modells.** Im Rahmen eines
+Harmonisierungsprozesses zwischen dem RKI, MIO42 und der MII wurde das
+Mikrobiologie-Datenmodell grundlegend überarbeitet; die Abstimmungen wurden auf
+den europäischen Kontext (EHDS) ausgeweitet.
+
+Dieses europäische Modell ist **noch nicht final**. Der vorliegende Release bildet
+seinen aktuellen Stand so genau ab, wie es eine implementierbare Spezifikation
+zulässt: Wo die zugrunde liegenden Abstimmungen eine Frage offen lassen, benennt
+dieser Leitfaden die getroffene Entscheidung und ihre Begründung. Bewusst offen
+gelassene Punkte stehen unter [Ballotfragen](#ballotfragen), zu denen wir um
+Rückmeldung bitten. Implementierende sollten in den betroffenen Bereichen mit
+Änderungen rechnen.
 </div>
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Beschreibung-Modul-Mikrobiologie.page.md  -->
 Das Erweiterungsmodul Mikrobiologie 2027 modelliert mikrobiologische Befunde als
 eigenständige Observationen. Die wichtigsten Domänen sind:
 
-- Kultur (allgemein, Mikroskopie inkl. Barlett-/Nugent-Score, Keimzahl, Empfindlichkeit)
+- Kultur (allgemein, Mikroskopie inkl. Bartlett-/Nugent-Score, Keimzahl, Empfindlichkeit)
 - Bestimmung (allgemein/spezifisch, Ct-Wert)
 - Quantitative tests (Antigen/Antikoerper, Titer, molekulare Pathogenlast)
 - Weitere Eigenschaften (Virulenz, Resistenzmechanismus, MRGN, voraussichtliche Empfindlichkeit, MRE Klasse, Aviditaet)
@@ -47,6 +53,30 @@ Profile überführt.
 | Version          | 2027.0.0-ballot.rc1 (CalVer `JJJJ.n.n`) |
 | Status           | active        |
 | Realm            | DE            |
+
+### Ballotfragen
+
+Dies ist ein Ballot-Kandidat. Die folgenden Punkte sind bewusst offen gelassen;
+wir bitten während des Ballots um Rückmeldung dazu. Jeder ist auf der Seite
+vollständig dargestellt, zu der er gehört.
+
+1. **[Entsteht immer eine Specimen-Ressource?](probe.html)** — jedes
+   Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`.
+2. **[Ist die Färbetechnik allein über `Specimen` darstellbar?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html)**
+   — das europäische Datenmodell legt sie nach `Specimen.processing`; wir fragen,
+   ob das implementierbar ist.
+3. **[Pflicht-Temperaturbedingungen an `Specimen.processing`](probe.html)** — aus
+   dem Bioproben-Basisprofil geerbt, ohne Aussage für die mikrobiologische
+   Aufarbeitung.
+4. **[Sind Bebrütungsdauer und -temperatur über `Specimen.processing` darstellbar?](probe.html)**
+   — FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie
+   befüllen können.
+5. **[Komponente oder `hasMember` für eine semiquantitative Menge?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html)**
+   — das europäische Datenmodell lässt es offen; eine Komponente dreht eine
+   Entscheidung dieses Zyklus zurück.
+6. **[Können Sie zu jedem Befund `Observation.method` liefern?](profilauswahl-und-abgrenzung.html)**
+   — das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre
+   Antwort entscheidet mehr als eine Frage.
 
 ### Zielgruppe
 

@@ -4,7 +4,7 @@
 
 The example instances of this module, grouped by the profile they conform to.
 
-**[Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html)**
+**[Allgemeine Bestimmung (Identifizierung)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html)**
 
 - [mii-exa-mikrobio-allgemeine-bestimmung](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html)
 - [mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html)
@@ -12,6 +12,12 @@ The example instances of this module, grouped by the profile they conform to.
 **[Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html)**
 
 - [mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.html)
+- [mii-exa-mikrobio-allgemeine-kultur-methodenneutral](Observation-mii-exa-mikrobio-allgemeine-kultur-methodenneutral.html)
+
+**[Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html)**
+
+- [mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.html)
+- [mii-exa-mikrobio-mikroskopie-gram-kokken-wenig](Observation-mii-exa-mikrobio-mikroskopie-gram-kokken-wenig.html)
 
 **[Antigen Antikoerper Quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html)**
 
@@ -21,9 +27,9 @@ The example instances of this module, grouped by the profile they conform to.
 
 - [mii-exa-mikrobio-aviditaet](Observation-mii-exa-mikrobio-aviditaet.html)
 
-**[Barlett Score](StructureDefinition-mii-pr-mikrobio-barlett-score.html)**
+**[Bartlett Score](StructureDefinition-mii-pr-mikrobio-bartlett-score.html)**
 
-- [mii-exa-mikrobio-barlett-score](Observation-mii-exa-mikrobio-barlett-score.html)
+- [mii-exa-mikrobio-bartlett-score](Observation-mii-exa-mikrobio-bartlett-score.html)
 
 **[CT Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.html)**
 
@@ -36,20 +42,18 @@ The example instances of this module, grouped by the profile they conform to.
 **[Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html)**
 
 - [mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.html)
+- [mii-exa-mikrobio-empfindlichkeit-nur-kategorie](Observation-mii-exa-mikrobio-empfindlichkeit-nur-kategorie.html)
 - [mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html)
 
 **[Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.html)**
 
 - [mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.html)
+- [mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html)
 
 **[MRGN Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html)**
 
 - [mii-exa-mikrobio-mrgn-klasse](Observation-mii-exa-mikrobio-mrgn-klasse.html)
 - [mii-exa-mikrobio-mrgn-klasse-negativ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html)
-
-**[Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html)**
-
-- [mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.html)
 
 **[Molekulare Pathogenlast](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html)**
 
@@ -79,6 +83,12 @@ The example instances of this module, grouped by the profile they conform to.
 - [mii-exa-mikrobio-spezifische-kultur-vre-negativ](Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.html)
 - [mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html)
 
+**[Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html)**
+
+- [mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ](Observation-mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ.html)
+- [mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus](Observation-mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus.html)
+- [mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld](Observation-mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld.html)
+
 **[Titer](StructureDefinition-mii-pr-mikrobio-titer.html)**
 
 - [mii-exa-mikrobio-titer](Observation-mii-exa-mikrobio-titer.html)
@@ -95,3 +105,4 @@ The example instances of this module, grouped by the profile they conform to.
 
 - [mii-exa-mikrobio-patient](Patient-mii-exa-mikrobio-patient.html)
 - [mii-exa-mikrobio-probe](Specimen-mii-exa-mikrobio-probe.html)
+- [mii-exa-mikrobio-probe-katheterspitze](Specimen-mii-exa-mikrobio-probe-katheterspitze.html)

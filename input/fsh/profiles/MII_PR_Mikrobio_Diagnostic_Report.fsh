@@ -25,6 +25,21 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
 * category[mibi-sub-category] ^definition = "Kategorie-Slice für die LOINC-Kodierung von mikrobiologischen Befunden. Mehrfachangabe zulaessig, wenn der Befund mehrere Studientypen umfasst, z. B. bakteriologisch und mykologisch. Umfasst der Befund keine benennbaren Studientypen oder soll er nur allgemein eingeordnet werden, entfaellt der Subtyp; die allgemeine Einordnung erfolgt dann allein ueber category[mibi-category] mit MB."
 * category[mibi-sub-category] from MII_VS_Mikrobio_Befundtyp_LOINC (required)
 * resultsInterpreter MS
+// Die zusammenfassende Aussage des Labors. Fuer die Serologie ist sie der
+// tragende Teil des Befunds und nicht Beigabe: Bei EBV ergeben VCA-IgM, VCA-IgG
+// und EBNA-IgG einzeln noch keine Diagnose — erst die Zusammenschau sagt
+// "frische Infektion" oder "durchgemachte Infektion", und diese Aussage ist
+// keine der drei Einzeluntersuchungen.
+//
+// Das europaeische Whitepaper haelt im Serologie-Kapitel fest: "While the
+// content of a conclusion is difficult to standardize, the ability to exchange a
+// conclusion is important; this could be free text to begin with."
+//
+// Deshalb Freitext und BEWUSST kein conclusionCode: Das Whitepaper schlaegt fuer
+// den Anfang ausdruecklich Freitext vor, und ein ValueSet fuer kodierte
+// Gesamtaussagen hat dieses Modul nicht.
+* conclusion MS
+* conclusion ^short = "Zusammenfassende Beurteilung des Labors im Freitext. Fuer serologische Befunde die tragende Stelle, weil sich die Diagnose dort erst aus der Zusammenschau mehrerer Einzelergebnisse ergibt."
 * specimen ^min = 0
 * result only Reference(
     MII_PR_Mikrobio_Allgemeine_Kultur or
@@ -33,13 +48,14 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
     MII_PR_Mikrobio_Spezifische_Bestimmung or
     MII_PR_Mikrobio_Keimzahl or
     MII_PR_Mikrobio_Empfindlichkeit or
-    MII_PR_Mikrobio_Mikroskopie or
+    MII_PR_Mikrobio_Allgemeine_Mikroskopie or
+    MII_PR_Mikrobio_Spezifische_Mikroskopie or
     MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ or
     MII_PR_Mikrobio_Aviditaet or
     MII_PR_Mikrobio_Ct_Wert or
     MII_PR_Mikrobio_Titer or
     MII_PR_Mikrobio_Nugent_Score or
-    MII_PR_Mikrobio_Barlett_Score or
+    MII_PR_Mikrobio_Bartlett_Score or
     MII_PR_Mikrobio_Molekulare_Pathogenlast or
     MII_PR_Mikrobio_Resistenzmechanismen_Determinanten or
     MII_PR_Mikrobio_Virulenzfaktor or

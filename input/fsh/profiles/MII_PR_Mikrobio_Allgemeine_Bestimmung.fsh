@@ -1,7 +1,7 @@
 Profile: MII_PR_Mikrobio_Allgemeine_Bestimmung
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-allgemeine-bestimmung
-Title: "MII PR Mikrobio Allgemeine Bestimmung"
+Title: "MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)"
 Description: "Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorganismus oder infektiösen Agens in einer Probe, ohne Einschränkung auf ein vordefiniertes Ziel."
 * insert MIKRO_OBSERVATION_COMMON
 * code from MII_VS_Mikrobio_Allgemeine_Bestimmung_Tests_LOINC (extensible)
