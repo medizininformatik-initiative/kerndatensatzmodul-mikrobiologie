@@ -201,7 +201,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T16:53:22+00:00",
+  "date" : "2026-09-10T17:52:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

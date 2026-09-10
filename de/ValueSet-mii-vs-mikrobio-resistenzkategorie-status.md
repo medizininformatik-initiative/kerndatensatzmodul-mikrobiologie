@@ -42,7 +42,7 @@ Untersuchungscodes fuer die Bewertung eines nachgewiesenen Erregers hinsichtlich
   "title" : "MII VS Mikrobio Resistenzkategorie Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T16:53:22+00:00",
+  "date" : "2026-09-10T17:52:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
