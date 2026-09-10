@@ -9,12 +9,16 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Allgemeine_Kultur |
+| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Allgemeine_Kultur |
 
  
 Allgemeine Kultur beschreibt das Ergebnis einer nicht zielgerichteten mikrobiologischen Kultur, die prüft, ob in der Probe irgendein Mikroorganismus wächst, ohne die Analyse auf einen vordefinierten Erreger zu beschränken. 
 
 Allgemeine Kultur beschreibt das Ergebnis einer nicht zielgerichteten mikrobiologischen Kultur, die prüft, ob in der Probe irgendein Mikroorganismus wächst, ohne die Analyse auf einen vordefinierten Erreger zu beschränken.
+
+### Testcode
+
+Bevorzugt wird `11475-1 |Microorganism identified in Specimen by Culture|`, weil der Code das Verfahren selbst benennt. `41852-5 |Microorganism or agent identified in Specimen|` ist gleichwertig zulässig: Das europäische Datenmodell bevorzugt ihn hier, weil er das Verfahren aus dem Testcode heraushält und nach `Observation.method` verlagert. Es ist derselbe Code, den auch die [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) bevorzugt; eine Untersuchung, die ihn verwendet, ist deshalb allein an ihrer Methode als Kultur erkennbar — die das Invariant `allgemeine-kultur-method-with-neutral-code` für genau diesen Code daher zur Pflicht macht. Wird aerobe und anaerobe Bebrütung nicht unterschieden, steht `702658000 |Microbial culture technique|` zur Verfügung. Wie die beiden Profile unterscheidbar bleiben, steht unter [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.md).
 
 ### Beispiele
 
@@ -25,7 +29,7 @@ Beispiel (minimal):
 **Usages:**
 
 * Refer to this Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
-* Examples for this Profile: [Observation/mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.md)
+* Examples for this Profile: [Observation/mii-exa-mikrobio-allgemeine-kultur-methodenneutral](Observation-mii-exa-mikrobio-allgemeine-kultur-methodenneutral.md) and [Observation/mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.md)
 * CapabilityStatements using this Profile: [MII CPS Mikrobio Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.json)
@@ -48,6 +52,8 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 #### Terminology Bindings (Differential)
 
+#### Constraints
+
 #### Terminology Bindings
 
 #### Constraints
@@ -58,6 +64,12 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 Mandatory: 2 elements
  Must-Support: 2 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Mikrobio Probe (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe)](StructureDefinition-mii-pr-mikrobio-probe.md)
 
 **Extensions**
 
@@ -77,6 +89,8 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 #### Terminology Bindings (Differential)
 
+#### Constraints
+
  **Snapshot-AnsichtView** 
 
 #### Terminology Bindings
@@ -89,6 +103,12 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 Mandatory: 2 elements
  Must-Support: 2 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Mikrobio Probe (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe)](StructureDefinition-mii-pr-mikrobio-probe.md)
 
 **Extensions**
 
@@ -241,7 +261,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Allgemeine Kultur",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:55:32+00:00",
+  "date" : "2026-09-10T12:50:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -281,7 +301,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "constraint" : [{
+        "key" : "allgemeine-kultur-method-with-neutral-code",
+        "severity" : "error",
+        "human" : "If the method-neutral code 41852-5 is used, Observation.method SHALL be present, because only the method identifies the investigation as a culture.",
+        "expression" : "code.coding.where(system = 'http://loinc.org' and code = '41852-5').exists() implies method.exists()",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+      }]
     },
     {
       "id" : "Observation.extension:triggeredBy-r5",
@@ -331,11 +358,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "11475-1"
-        }]
+      "short" : "Bevorzugt 11475-1 'Microorganism identified in Specimen by Culture'. 41852-5 'Microorganism or agent identified in Specimen' ist gleichwertig zulaessig, weil das EU-Datenmodell die Methode nach Observation.method auslagert; derselbe Code steht auch bei der Allgemeinen Bestimmung, dort mit einem Organismus als Ergebnis. Bei 41852-5 ist Observation.method deshalb Pflicht (allgemeine-kultur-method-with-neutral-code). Siehe die Seite 'Profilauswahl und Abgrenzung'.",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc"
       }
     },
     {
@@ -376,7 +402,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
     }]
   }
 }

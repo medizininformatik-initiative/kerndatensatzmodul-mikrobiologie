@@ -1,0 +1,58 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-empfindlichkeit-methode-snomed",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-empfindlichkeit-methode-snomed</b></p><a name=\"de-mii-vs-mikrobio-empfindlichkeit-methode-snomed\"> </a><a name=\"de-hcmii-vs-mikrobio-empfindlichkeit-methode-snomed\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/900000000000207008/version/20260701\"> version &#x1F4CD;http://snomed.info/sct/900000000000207008/version/20260701</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/263696007\">263696007</a></td><td>Broth dilution (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/1303975003\">1303975003</a></td><td>Disk diffusion technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/703442003\">703442003</a></td><td>Gradient strip susceptibility test technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/260111000146108\">260111000146108</a></td><td>Manual minimum inhibitory concentration microdilution susceptibility test technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/260101000146106\">260101000146106</a></td><td>Automated minimum inhibitory concentration microdilution susceptibility test technique (qualifier value)</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-methode-snomed",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Mikrobio_Empfindlichkeit_Methode_SNOMED",
+  "title" : "MII VS Mikrobio Empfindlichkeit Methode [SNOMED]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-10T12:50:06+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Methoden-ValueSet für die phänotypische Empfindlichkeitstestung: die Verfahren, mit denen eine minimale Hemmkonzentration oder ein Hemmhofdurchmesser gemessen wird.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+      "concept" : [{
+        "code" : "263696007",
+        "display" : "Broth dilution (qualifier value)"
+      },
+      {
+        "code" : "1303975003",
+        "display" : "Disk diffusion technique (qualifier value)"
+      },
+      {
+        "code" : "703442003",
+        "display" : "Gradient strip susceptibility test technique (qualifier value)"
+      },
+      {
+        "code" : "260111000146108",
+        "display" : "Manual minimum inhibitory concentration microdilution susceptibility test technique (qualifier value)"
+      },
+      {
+        "code" : "260101000146106",
+        "display" : "Automated minimum inhibitory concentration microdilution susceptibility test technique (qualifier value)"
+      }]
+    }]
+  }
+}

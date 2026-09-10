@@ -309,9 +309,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#welche-profile-gehören-zu-meinem-laborbereich" id="markdown-toc-welche-profile-gehören-zu-meinem-laborbereich">Welche Profile gehören zu meinem Laborbereich?</a></li>
   <li><a href="#warum-manche-verfahren-ein-eigenes-profil-haben-und-andere-nicht" id="markdown-toc-warum-manche-verfahren-ein-eigenes-profil-haben-und-andere-nicht">Warum manche Verfahren ein eigenes Profil haben und andere nicht</a></li>
+  <li><a href="#ein-testcode-zwei-profile" id="markdown-toc-ein-testcode-zwei-profile">Ein Testcode, zwei Profile</a></li>
+  <li><a href="#die-serologie-ist-die-ausnahme-von-der-specimen-postkoordination" id="markdown-toc-die-serologie-ist-die-ausnahme-von-der-specimen-postkoordination">Die Serologie ist die Ausnahme von der Specimen-Postkoordination</a></li>
+  <li><a href="#die-methode-gehört-in-observationmethod" id="markdown-toc-die-methode-gehört-in-observationmethod">Die Methode gehört in <code class="language-plaintext highlighter-rouge">Observation.method</code></a></li>
+  <li><a href="#zwei-granularitätsstufen-auf-derselben-achse" id="markdown-toc-zwei-granularitätsstufen-auf-derselben-achse">Zwei Granularitätsstufen auf derselben Achse</a></li>
   <li><a href="#abgrenzung-der-drei-aussagetypen" id="markdown-toc-abgrenzung-der-drei-aussagetypen">Abgrenzung der drei Aussagetypen</a></li>
   <li><a href="#negative-ergebnisse" id="markdown-toc-negative-ergebnisse">Negative Ergebnisse</a></li>
   <li><a href="#resistenzkategorien" id="markdown-toc-resistenzkategorien">Resistenzkategorien</a></li>
+  <li><a href="#mehrere-ergebnisse-zusammenfassen-das-panel" id="markdown-toc-mehrere-ergebnisse-zusammenfassen-das-panel">Mehrere Ergebnisse zusammenfassen: das Panel</a></li>
   <li><a href="#diagnostische-kette-bei-positivem-nachweis" id="markdown-toc-diagnostische-kette-bei-positivem-nachweis">Diagnostische Kette bei positivem Nachweis</a></li>
 </ul>
 
@@ -333,12 +338,13 @@ Bestimmung bedient deshalb die molekulare Bank und die Serologie gleichermaßen.
 <p><strong>Kultur</strong></p>
 
 <ul>
-  <li><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Mikroskopie</a> — Morphologie ohne taxonomische Zuordnung
+  <li><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Allgemeine Mikroskopie</a> — die gesehene morphologische Gruppe, keine Spezies
     <ul>
-      <li><a href="StructureDefinition-mii-pr-mikrobio-barlett-score.html">Barlett-Score</a> — ist eine Sputumprobe für die Kultur geeignet?</li>
+      <li><a href="StructureDefinition-mii-pr-mikrobio-bartlett-score.html">Bartlett-Score</a> — ist eine Sputumprobe für die Kultur geeignet?</li>
       <li><a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html">Nugent-Score</a> — Gramfärbungs-Score für die bakterielle Vaginose</li>
     </ul>
   </li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html">Spezifische Mikroskopie</a> — das Objekt steht im Code, das Ergebnis ist seine semiquantitative Stufe</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">Allgemeine Kultur</a> — Wachstum oder kein Wachstum, ungerichtet</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">Spezifische Kultur</a> — Wachstum oder kein Wachstum, gerichtet, z. B. MRSA-Screening</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">Keimzahl</a> — lebensfähige Keime je Volumen oder Masse</li>
@@ -407,6 +413,164 @@ Wachstum.</li>
 
 <p>Die Regel ist also jedes Mal dieselbe; nur die Zahl der unterscheidbaren
 Ergebnisräume ist verschieden.</p>
+
+<h3 id="ein-testcode-zwei-profile">Ein Testcode, zwei Profile</h3>
+
+<p><code class="language-plaintext highlighter-rouge">41852-5 |Microorganism or agent identified in Specimen|</code> ist in der
+<a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">Allgemeinen Kultur</a>
+ebenso zulässig wie in der
+<a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">Allgemeinen Bestimmung</a>,
+und das europäische Datenmodell führt ihn für beide als <em>preferred</em>. Das ist kein
+Versehen, sondern folgt aus dessen Grundsatz: Das Verfahren gehört nach
+<code class="language-plaintext highlighter-rouge">Observation.method</code>, ein Testcode sagt daher, wonach gesucht wurde, und schweigt
+darüber, wie. Ein methodenneutraler Code passt dann auf den kulturellen und den
+nicht kulturellen Weg gleichermaßen.</p>
+
+<p>Unterscheidbar bleiben die beiden Profile über zwei voneinander unabhängige Achsen,
+von denen keine einen einzigen Code mit der anderen teilt:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Allgemeine Kultur</th>
+      <th>Allgemeine Bestimmung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Die Fragestellung</td>
+      <td>wächst überhaupt etwas?</td>
+      <td>welcher Organismus ist es?</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">value[x]</code></td>
+      <td><code class="language-plaintext highlighter-rouge">365698005 Organism growth</code>, <code class="language-plaintext highlighter-rouge">264868006 No growth</code>, <code class="language-plaintext highlighter-rouge">280414007 Equivocal result</code>, <code class="language-plaintext highlighter-rouge">required</code> gebunden</td>
+      <td>ein Organismus aus dem Organismen-ValueSet oder <code class="language-plaintext highlighter-rouge">260415000 Not detected</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Observation.method</code></td>
+      <td><code class="language-plaintext highlighter-rouge">703750006</code> aerobe, <code class="language-plaintext highlighter-rouge">703751005</code> anaerobe, <code class="language-plaintext highlighter-rouge">702658000</code> nicht näher bestimmte Kultur</td>
+      <td><code class="language-plaintext highlighter-rouge">278289002</code> Mikroskopie, <code class="language-plaintext highlighter-rouge">83581000052107</code> MALDI-TOF, <code class="language-plaintext highlighter-rouge">258083009</code> visuelle Einschätzung, <code class="language-plaintext highlighter-rouge">1304162005</code> Sequenzierung</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Beide Elemente sind im Labor-Basisprofil optional. Die Allgemeine Kultur macht die
+Methode deshalb genau für den Code zur Pflicht, der sie braucht: Das Invariant
+<code class="language-plaintext highlighter-rouge">allgemeine-kultur-method-with-neutral-code</code> verlangt <code class="language-plaintext highlighter-rouge">Observation.method</code>, sobald
+<code class="language-plaintext highlighter-rouge">code</code> gleich <code class="language-plaintext highlighter-rouge">41852-5</code> ist. Die Pflicht hängt am Code, der die Mehrdeutigkeit
+auslöst, und nicht am Element — bei <code class="language-plaintext highlighter-rouge">11475-1</code> nennt der Code das Verfahren selbst,
+die Methode fügt nichts hinzu. Die Allgemeine Bestimmung braucht kein Gegenstück,
+weil die Asymmetrie bereits entscheidet: Eine Untersuchung mit <code class="language-plaintext highlighter-rouge">41852-5</code> und ohne
+Methode kann keine gültige Kultur sein, also ist sie eine Bestimmung.</p>
+
+<p>Darüber hinaus empfiehlt dieses Modul den Code, der seine Methode mitführt, wo es
+einen gibt: <code class="language-plaintext highlighter-rouge">11475-1 |Microorganism identified in Specimen by Culture|</code> für die
+Kultur, <code class="language-plaintext highlighter-rouge">41852-5</code> für die Bestimmung. Ein Empfänger liest die Art der Aussage dann am
+Code ab und muss nicht erst Ergebnis oder Methode auswerten. Diese Empfehlung steht
+am <code class="language-plaintext highlighter-rouge">code</code>-Element des jeweiligen Profils und wird, anders als das Invariant, nicht
+erzwungen.</p>
+
+<h3 id="die-serologie-ist-die-ausnahme-von-der-specimen-postkoordination">Die Serologie ist die Ausnahme von der Specimen-Postkoordination</h3>
+
+<p>Überall sonst bevorzugt dieses Modul Untersuchungscodes, die das Material
+weglassen, und lässt es von <code class="language-plaintext highlighter-rouge">Specimen.type</code> tragen. Die Serologie ist davon
+bewusst ausgenommen. Das europäische Whitepaper nennt den Grund:</p>
+
+<blockquote>
+  <p>In comparison with culture techniques, far fewer specimen types are involved in
+serology. The majority of specimens are serum-based. Therefore, we allow
+pre-coordination of the specimen in the code.</p>
+</blockquote>
+
+<p>Das Argument gegen Präkoordination ist die Codeexplosion — ein Kulturcode
+multipliziert mit jeder Körperstelle. In der Serologie fehlt dieser Multiplikator,
+der Preis entfällt also, und die Konvention kauft nichts mehr ein.</p>
+
+<p>Die Ausnahme gilt für
+<a href="StructureDefinition-mii-pr-mikrobio-titer.html">Titer</a>,
+<a href="StructureDefinition-mii-pr-mikrobio-aviditaet.html">Avidität</a>,
+<a href="StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html">Antigen/Antikörper quantitativ</a>
+und die <strong>serologische Anwendung</strong> der
+<a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html">Spezifischen Bestimmung</a>
+— jenes Profil bedient auch die molekulare Bank, wo die Konvention weiter gilt,
+die Ausnahme hängt dort also an der Anwendung und nicht am Profil.</p>
+
+<p>Eine Specimen-Ressource wird trotzdem in jedem Fall erwartet; Ballotfrage 1 bleibt
+davon unberührt. Die Ausnahme erlaubt einen Untersuchungscode, der Serum benennt
+— sie erlaubt nicht, <code class="language-plaintext highlighter-rouge">Observation.specimen</code> leer zu lassen.</p>
+
+<p>Eine weitere Eigenheit der serologischen Befundung ist zu kennen: Die Diagnose
+ergibt sich häufig erst aus mehreren Ergebnissen zusammen und nicht aus einem
+einzelnen. Diese Aussage gehört in <code class="language-plaintext highlighter-rouge">DiagnosticReport.conclusion</code> — siehe
+<a href="StructureDefinition-mii-pr-mikrobio-diagnostic-report.html">Befundbericht</a>.</p>
+
+<h3 id="die-methode-gehört-in-observationmethod">Die Methode gehört in <code class="language-plaintext highlighter-rouge">Observation.method</code></h3>
+
+<p>Das europäische Whitepaper führt das als Grundsatz und formuliert es schärfer,
+als man erwarten würde:</p>
+
+<blockquote>
+  <p>The LOINC-axis "method" should be omitted completely. […] Even if the method is
+pre-coordinated in the LOINC-Code the recommendation is to <strong>always</strong> represent
+the method consistently in <code class="language-plaintext highlighter-rouge">Observation.method</code> using SNOMED CT.</p>
+</blockquote>
+
+<p>Die Methode ist also auch dann anzugeben, wenn der Untersuchungscode sie bereits
+trägt — eine Kultur unter <code class="language-plaintext highlighter-rouge">11475-1 |… by Culture|</code> soll trotzdem sagen, ob aerob
+oder anaerob bebrütet wurde, und ein Grampräparat unter <code class="language-plaintext highlighter-rouge">664-3 |… by Gram stain|</code>
+soll trotzdem die Färbung nennen.</p>
+
+<p>Dieser Leitfaden hält das als <strong>Empfehlung</strong> fest, nicht als Pflicht.
+<code class="language-plaintext highlighter-rouge">Observation.method</code> ist im Labor-Basisprofil <code class="language-plaintext highlighter-rouge">0..1</code> Must Support, und eine
+modulweite Pflicht würde heute konforme Daten ungültig machen. Erzwungen wird sie
+an der einen Stelle, an der die Aussage sonst mehrdeutig ist: bei der Allgemeinen
+Kultur mit dem methodenneutralen Code <code class="language-plaintext highlighter-rouge">41852-5</code>.</p>
+
+<p class="bg-warning"><strong>Ballotfrage 6 — können Sie zu jedem Befund <code class="language-plaintext highlighter-rouge">Observation.method</code> liefern?</strong>
+Das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur. <strong>Wir möchten
+wissen, ob eine Pflicht an Ihrem Standort erfüllbar wäre.</strong> Wenn ja, kann eine
+spätere Version <code class="language-plaintext highlighter-rouge">Observation.method</code> auf <code class="language-plaintext highlighter-rouge">1..1</code> heben, und das Sonderinvariant
+der Allgemeinen Kultur wird überflüssig. Beachten Sie, was daraus noch folgt: Ist
+die Methode immer vorhanden, ist <code class="language-plaintext highlighter-rouge">41852-5</code> samt Methode überall eindeutig, und
+der Grund, aus dem dieser Leitfaden die methodentragenden Codes <code class="language-plaintext highlighter-rouge">11475-1</code> und
+<code class="language-plaintext highlighter-rouge">664-3</code> empfiehlt, entfällt weitgehend. Ihre Antwort entscheidet also mehr als
+eine Frage. Wir bitten um Rückmeldung im Ballot.</p>
+
+<h3 id="zwei-granularitätsstufen-auf-derselben-achse">Zwei Granularitätsstufen auf derselben Achse</h3>
+
+<p>Mikroskopie und Bestimmung beantworten beide „welcher Organismus", kreisen ihn
+aber unterschiedlich eng ein. „Grampositive Kokken gesehen" <strong>ist</strong> eine
+taxonomische Aussage — sie schränkt den Organismus auf eine Klasse ein, statt ihn
+zu benennen. Was
+<a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Allgemeine Mikroskopie</a> und
+<a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">Allgemeine Bestimmung</a>
+trennt, ist deshalb die Granularität und nicht die Achse.</p>
+
+<p>Das ist kein Bild. In SNOMED CT ist die Antwort der Mikroskopie buchstäblich ein
+Vorfahre der Antwort der Bestimmung — am 2026-09-10 nachgemessen:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>59206002 |Gram-positive coccus|  subsumiert  3092008 |Staphylococcus aureus|
+</code></pre></div></div>
+
+<p>Daraus folgt eine Konsequenz, die man kennen sollte. SNOMED führt
+<code class="language-plaintext highlighter-rouge">(finding)</code>-Codes nur für die <strong>angeordneten</strong> Formen — in chains, in clusters,
+in pairs —, während die nackten Morphologien nur als <code class="language-plaintext highlighter-rouge">(organism)</code> existieren:
+<code class="language-plaintext highlighter-rouge">59206002</code>, <code class="language-plaintext highlighter-rouge">18383003 |Gram-negative coccus|</code>, <code class="language-plaintext highlighter-rouge">83514008</code>, <code class="language-plaintext highlighter-rouge">87172008</code>. Diese vier
+sind Nachkommen von <code class="language-plaintext highlighter-rouge">409822003 |Bacteria domain|</code> und damit auch Mitglieder des
+Organismen-ValueSets — sie sind also <strong>ebenso gültige Werte der Allgemeinen
+Bestimmung</strong>.</p>
+
+<p>Für einen Konsumenten folgt daraus eine Regel: <strong>Die Granularität steht im Profil
+oder im Untersuchungscode, nie in <code class="language-plaintext highlighter-rouge">value[x]</code> allein.</strong> Eine Abfrage nach
+identifizierten Organismen, die nur den Wert filtert, bekommt auch
+Morphologiegruppen aus der Mikroskopie. Die Untersuchungscodes sind disjunkt —
+<code class="language-plaintext highlighter-rouge">105059-0</code> und <code class="language-plaintext highlighter-rouge">664-3</code> gegen <code class="language-plaintext highlighter-rouge">41852-5</code> —, eine Mehrdeutigkeit entsteht also
+nicht; nur eine nachlässig geschriebene Abfrage bekommt mehr, als sie erfragt hat.</p>
+
+<p>Eine Speziesidentifizierung gehört nie in die Mikroskopie, auch wenn sie am
+Mikroskop gestellt wurde.</p>
 
 <h3 id="abgrenzung-der-drei-aussagetypen">Abgrenzung der drei Aussagetypen</h3>
 
@@ -562,6 +726,59 @@ Ergebnisräume ist verschieden.</p>
 
 <p>Für gramnegative Erreger mit einer MRGN-Klassifikation erfolgt die Abbildung über die <a href="StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html">MRGN-Klasse</a>. Dort wird das Ergebnis der MRGN-Bewertung als <code class="language-plaintext highlighter-rouge">2MRGN</code>, <code class="language-plaintext highlighter-rouge">3MRGN</code>, <code class="language-plaintext highlighter-rouge">4MRGN</code> oder <code class="language-plaintext highlighter-rouge">keine-mrgn-klasse</code> angegeben.</p>
 
+<h3 id="mehrere-ergebnisse-zusammenfassen-das-panel">Mehrere Ergebnisse zusammenfassen: das Panel</h3>
+
+<p>Ein Antibiogramm ist kein Ergebnis, sondern viele — je getestete Substanz eine
+Observation. Das europäische Whitepaper empfiehlt, sie über eine
+<strong>Organizer-Observation</strong> zusammenzuhalten: eine Observation, die den Panel-Code
+<code class="language-plaintext highlighter-rouge">29576-6 |Bacterial susceptibility panel|</code> trägt und selbst kein <code class="language-plaintext highlighter-rouge">value[x]</code> hat
+und die über <code class="language-plaintext highlighter-rouge">Observation.hasMember</code> auf die Einzelergebnisse zeigt. Der Organizer
+verweist seinerseits über die <code class="language-plaintext highlighter-rouge">triggeredBy</code>-Extension auf die Identifizierung, der
+er gefolgt ist.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Observation: Bacterial susceptibility panel (29576-6), ohne Wert
+  triggeredBy → Observation: Erreger identifiziert
+  hasMember   → Observation: Meropenem [Susceptibility], MHK 0,5 mg/L, S
+  hasMember   → Observation: Ciprofloxacin [Susceptibility], MHK 4 mg/L, R
+</code></pre></div></div>
+
+<p>Die drei Mechanismen haben verschiedene Aufgaben und sind nicht gegeneinander
+austauschbar:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Verwendung</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">hasMember</code></td>
+      <td>Gruppierung — ein Panel, das ein Organizer zusammenhält</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">triggeredBy</code></td>
+      <td>Reflex — die spätere Untersuchung verweist zurück auf ihren Auslöser</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">derivedFrom</code></td>
+      <td>Ableitung — ein Ergebnis, das aus einem anderen berechnet oder interpretiert wurde</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">triggeredBy</code> ist insbesondere <strong>kein</strong> Gruppierungsmechanismus. Und <code class="language-plaintext highlighter-rouge">derivedFrom</code>
+läuft vom abgeleiteten Ergebnis zu seiner Grundlage, nicht umgekehrt: Ein
+qualitativer Nachweis trägt <code class="language-plaintext highlighter-rouge">derivedFrom</code> auf den
+<a href="StructureDefinition-mii-pr-mikrobio-ct-wert.html">Ct-Wert</a>, aus dem er abgelesen
+wurde, niemals andersherum.</p>
+
+<p>Dieser Leitfaden beschreibt das Muster, profiliert es aber nicht.
+<code class="language-plaintext highlighter-rouge">Observation.hasMember</code> steht unbeschränkt aus dem Labor-Basisprofil zur
+Verfügung, und ein Organizer-Profil erzeugte ein eigenes Canonical für etwas, das
+FHIR bereits regelt.</p>
+
 <h3 id="diagnostische-kette-bei-positivem-nachweis">Diagnostische Kette bei positivem Nachweis</h3>
 
 <p>Ein positiver zielgerichteter Nachweis kann Folgediagnostik auslösen:</p>
@@ -633,7 +850,7 @@ Resistenzkategorie-Status
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
+          Erstellt <span title="Thu, Sep 10, 2026 12:50+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

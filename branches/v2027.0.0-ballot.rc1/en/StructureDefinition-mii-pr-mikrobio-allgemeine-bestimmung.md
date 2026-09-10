@@ -1,20 +1,24 @@
-# MII PR Mikrobio Allgemeine Bestimmung - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII PR Mikrobio Allgemeine Bestimmung (Identifizierung) - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **MII PR Mikrobio Allgemeine Bestimmung**
+* **MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)**
 
-## Resource Profile: MII PR Mikrobio Allgemeine Bestimmung 
+## Resource Profile: MII PR Mikrobio Allgemeine Bestimmung (Identifizierung) 
 
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Mikrobio_Allgemeine_Bestimmung |
+| Active as of 2026-09-10 | *Computable Name*:MII_PR_Mikrobio_Allgemeine_Bestimmung |
 
  
 Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorganismus oder infektiösen Agens in einer Probe, ohne Einschränkung auf ein vordefiniertes Ziel. 
 
 General determination describes the identification of a microorganism or infectious agent in a specimen, without restriction to a predefined target.
+
+### Test code
+
+Preferred is `41852-5 |Microorganism or agent identified in Specimen|`. The same code is also valid in [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md), so it does not by itself identify which of the two statements is being made; [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md) sets out how the two profiles stay distinguishable.
 
 ### Result
 
@@ -190,10 +194,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Mikrobio_Allgemeine_Bestimmung",
-  "title" : "MII PR Mikrobio Allgemeine Bestimmung",
+  "title" : "MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:55:32+00:00",
+  "date" : "2026-09-10T12:50:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -282,11 +286,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "41852-5"
-        }]
+      "short" : "Bevorzugt 41852-5 'Microorganism or agent identified in Specimen'. Benennt das Labor die Erregergruppe (Bakterien, Pilze, Viren) oder das Sequenzierziel (16S, 18S rRNA) im Code, sind die entsprechenden Codes gleichwertig zulaessig. Es werden bevorzugt LOINC-Codes ohne praekoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat ueber Specimen.type kodiert.",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc"
       }
     },
     {
@@ -328,7 +331,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
     {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
     }]
   }
 }

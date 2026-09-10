@@ -12,6 +12,8 @@
 
 -------
 
+Profile: [MII PR Mikrobio Probe](StructureDefinition-mii-pr-mikrobio-probe.md)
+
 **identifier**: `https://example.org/fhir/sid/test-specimen`/probe-katheterspitze-1
 
 **status**: Available
@@ -22,6 +24,13 @@
 
 **receivedTime**: 2026-04-02 08:30:00+0100
 
+### Collections
+
+| | |
+| :--- | :--- |
+| - | **Collected[x]** |
+| * | 2026-04-02 08:00:00+0100 |
+
 
 
 ## Resource Content
@@ -30,6 +39,9 @@
 {
   "resourceType" : "Specimen",
   "id" : "mii-exa-mikrobio-probe-katheterspitze",
+  "meta" : {
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+  },
   "identifier" : [{
     "system" : "https://example.org/fhir/sid/test-specimen",
     "value" : "probe-katheterspitze-1"
@@ -46,7 +58,10 @@
   "subject" : {
     "reference" : "Patient/mii-exa-mikrobio-patient"
   },
-  "receivedTime" : "2026-04-02T08:30:00+01:00"
+  "receivedTime" : "2026-04-02T08:30:00+01:00",
+  "collection" : {
+    "collectedDateTime" : "2026-04-02T08:00:00+01:00"
+  }
 }
 
 ```

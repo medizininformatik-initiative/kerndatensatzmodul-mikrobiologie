@@ -74,30 +74,6 @@
   "profiles": {
     "Observation": [
       {
-        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit",
-        "title": "MII PR Mikrobio Empfindlichkeit"
-      },
-      {
-        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",
-        "title": "MII PR Mikrobio Keimzahl"
-      },
-      {
-        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
-        "title": "MII PR Mikrobio Mikroskopie"
-      },
-      {
-        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast",
-        "title": "MII PR Mikrobio Molekulare Pathogenlast"
-      },
-      {
-        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse",
-        "title": "MII PR Mikrobio MRGN Klasse"
-      },
-      {
-        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score",
-        "title": "MII PR Mikrobio Nugent Score"
-      },
-      {
         "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status",
         "title": "MII PR Mikrobio Resistenzkategorie Status"
       },
@@ -112,6 +88,10 @@
       {
         "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
         "title": "MII PR Mikrobio Spezifische Kultur"
+      },
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie",
+        "title": "MII PR Mikrobio Spezifische Mikroskopie"
       },
       {
         "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer",
@@ -131,11 +111,23 @@
         "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report",
         "title": "MII PR Mikrobio Diagnostic Report"
       }
+    ],
+    "Specimen": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe",
+        "title": "MII PR Mikrobio Probe"
+      }
     ]
   },
   "usage": {
+    "http://hl7.eu/fhir/laboratory/StructureDefinition/specimen-focus": [
+      "Specimen"
+    ],
     "http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy": [
       "Observation"
+    ],
+    "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature": [
+      "Specimen"
     ],
     "http://hl7.org/fhir/StructureDefinition/artifact-author": [
       "StructureDefinition"
@@ -198,11 +190,15 @@
     "http://hl7.org/fhir/StructureDefinition/extension-quantity-translation": [
       "Observation.value[x]"
     ],
+    "http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation": [
+      "Specimen.collection.quantity"
+    ],
     "http://hl7.org/fhir/StructureDefinition/package-source": [
       "ImplementationGuide"
     ],
     "http://hl7.org/fhir/StructureDefinition/quantity-precision": [
-      "Observation.value[x].value"
+      "Observation.value[x].value",
+      "Specimen.collection.quantity"
     ],
     "http://hl7.org/fhir/StructureDefinition/regex": [
       "StructureDefinition.snapshot.element.type"
@@ -273,6 +269,18 @@
     "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/QuelleKlinischesBezugsdatum": [
       "DiagnosticReport.effective[x]",
       "Observation.effective[x]"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/EinstellungBlutversorgung": [
+      "Specimen.collection"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen": [
+      "Specimen.processing"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-ebene": [
+      "Specimen"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-infektiositaetsstatus": [
+      "Specimen"
     ],
     "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable": [
       "StructureDefinition"

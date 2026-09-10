@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-methode-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED |
+| Active as of 2026-09-10 | *Computable Name*:MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED |
 
  
 Methoden für den Nachweis von Resistenzmechanismen und Determinanten: molekulare, immunologische und funktionale Verfahren. 
@@ -44,7 +44,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Mikrobio Resistenzmechanismen Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:55:32+00:00",
+  "date" : "2026-09-10T12:50:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -99,6 +99,10 @@ No Expansion for this valueset (Unsupported Code System Version)
         "display" : "Transcription mediated amplification technique (qualifier value)"
       },
       {
+        "code" : "1259932009",
+        "display" : "Loop-mediated isothermal amplification technique (qualifier value)"
+      },
+      {
         "code" : "1304162005",
         "display" : "Nucleic acid sequencing technique (qualifier value)"
       },
@@ -125,6 +129,22 @@ No Expansion for this valueset (Unsupported Code System Version)
       {
         "code" : "782518009",
         "display" : "Modified carbapenem inactivation technique (qualifier value)"
+      },
+      {
+        "code" : "1303975003",
+        "display" : "Disk diffusion technique (qualifier value)"
+      },
+      {
+        "code" : "703442003",
+        "display" : "Gradient strip susceptibility test technique (qualifier value)"
+      },
+      {
+        "code" : "260111000146108",
+        "display" : "Manual minimum inhibitory concentration microdilution susceptibility test technique (qualifier value)"
+      },
+      {
+        "code" : "260101000146106",
+        "display" : "Automated minimum inhibitory concentration microdilution susceptibility test technique (qualifier value)"
       }]
     }]
   }

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Mikrobio_Resistenzkategorie_Status |
+| Active as of 2026-09-10 | *Computable Name*:MII_PR_Mikrobio_Resistenzkategorie_Status |
 
  
 Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value. 
@@ -238,7 +238,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-r
   "title" : "MII PR Mikrobio Resistenzkategorie Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:55:32+00:00",
+  "date" : "2026-09-10T12:50:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -368,7 +368,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-r
     {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
     },
     {
       "id" : "Observation.derivedFrom",

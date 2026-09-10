@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED |
+| Active as of 2026-09-10 | *Computable Name*:MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED |
 
  
 Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren zur Identifikation eines Erregers ohne vordefiniertes Ziel, etwa Mikroskopie oder MALDI-TOF. 
 
  **References** 
 
-* [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
+* [MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
 
 ### Logical Definition (CLD)
 
@@ -44,7 +44,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:55:32+00:00",
+  "date" : "2026-09-10T12:50:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -85,6 +85,14 @@ No Expansion for this valueset (Unsupported Code System Version)
       {
         "code" : "83581000052107",
         "display" : "Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)"
+      },
+      {
+        "code" : "258083009",
+        "display" : "Visual estimation technique (qualifier value)"
+      },
+      {
+        "code" : "1304162005",
+        "display" : "Nucleic acid sequencing technique (qualifier value)"
       }]
     }]
   }

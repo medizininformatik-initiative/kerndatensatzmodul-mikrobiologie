@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC |
+| Active as of 2026-09-10 | *Computable Name*:MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC |
 
  
 Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den Nachweis von Resistenzgenen, Resistenzproteinen und funktionalen Resistenztests. 
@@ -42,7 +42,7 @@ Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den
   "title" : "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:55:32+00:00",
+  "date" : "2026-09-10T12:50:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -91,11 +91,47 @@ Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den
         "op" : "=",
         "value" : "ACTIVE"
       }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "concept" : [{
+        "code" : "86930-5",
+        "display" : "Carbapenemase [Presence] in Isolate"
+      },
+      {
+        "code" : "101673-2",
+        "display" : "KPC carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "code" : "101675-7",
+        "display" : "IMP Carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "code" : "101677-3",
+        "display" : "NDM Carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "code" : "101676-5",
+        "display" : "VIM Carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      },
+      {
+        "code" : "101674-0",
+        "display" : "OXA-48-like carbapenemase [Presence] in Isolate by Rapid immunoassay"
+      }]
     }],
     "exclude" : [{
       "system" : "http://loinc.org",
       "version" : "2.82",
       "concept" : [{
+        "code" : "92246-8",
+        "display" : "Microorganism resistance mutation detected [Presence] by Molecular method"
+      },
+      {
+        "code" : "108153-8",
+        "display" : "Genetic determinants of antimicrobial resistance [Presence] in Specimen by NAA with non-probe detection"
+      },
+      {
         "code" : "35492-8",
         "display" : "Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] in Specimen by NAA with probe detection"
       }]

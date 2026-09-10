@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Diagnostic_Report |
+| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Diagnostic_Report |
 
  
 Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextualisierung zugehöriger mikrobiologischer Untersuchungsergebnisse. 
@@ -41,6 +41,14 @@ Umfasst ein Befund mehrere Studientypen, etwa den Nachweis von Bakterien **und**
 ]
 
 ```
+
+### Die zusammenfassende Beurteilung
+
+`DiagnosticReport.conclusion` trägt die zusammenfassende Beurteilung des Labors als Freitext. Das Element ist Must Support, geerbt aus dem Labor-Basisprofil, und in der Serologie ist es der tragende Teil des Befunds und nicht Beigabe.
+
+Der Grund: Eine serologische Diagnose ist oft keine ihrer Einzelmessungen. Bei akuter EBV-Infektion erscheint zuerst IgM gegen das Viruskapsid-Antigen, dann VCA-IgG, und EBNA-IgG entsteht erst nach sechs bis zwölf Wochen. Jedes der drei Ergebnisse ist eine eigene Observation; die Aussage „frische Infektion" oder „durchgemachte Infektion" ergibt sich erst aus der Zusammenschau und ist keine von ihnen. Das europäische Whitepaper formuliert es als „a serological report is often more than the sum of its parts" und verlangt, dass die Beurteilung austauschbar ist — „free text to begin with".
+
+`conclusionCode` wird hier bewusst nicht eingeschränkt. Das Whitepaper schlägt für den Anfang Freitext vor, und dieses Modul hat kein ValueSet für kodierte Gesamtaussagen.
 
 ### Beispiele
 
@@ -90,17 +98,18 @@ This structure refers to these other structures:
 
 * [MII PR Mikrobio Allgemeine Kultur (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur)](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md)
 * [MII PR Mikrobio Spezifische Kultur (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur)](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md)
-* [MII PR Mikrobio Allgemeine Bestimmung (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
+* [MII PR Mikrobio Allgemeine Bestimmung (Identifizierung) (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
 * [MII PR Mikrobio Spezifische Bestimmung (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung)](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md)
 * [MII PR Mikrobio Keimzahl (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl)](StructureDefinition-mii-pr-mikrobio-keimzahl.md)
 * [MII PR Mikrobio Empfindlichkeit (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit)](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md)
-* [MII PR Mikrobio Mikroskopie (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie)](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)
+* [MII PR Mikrobio Allgemeine Mikroskopie (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie)](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)
+* [MII PR Mikrobio Spezifische Mikroskopie (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie)](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md)
 * [MII PR Mikrobio Antigen Antikoerper Quantitativ (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ)](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md)
 * [MII PR Mikrobio Aviditaet (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet)](StructureDefinition-mii-pr-mikrobio-aviditaet.md)
 * [MII PR Mikrobio CT Wert (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert)](StructureDefinition-mii-pr-mikrobio-ct-wert.md)
 * [MII PR Mikrobio Titer (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer)](StructureDefinition-mii-pr-mikrobio-titer.md)
 * [MII PR Mikrobio Nugent Score (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score)](StructureDefinition-mii-pr-mikrobio-nugent-score.md)
-* [MII PR Mikrobio Barlett Score (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score)](StructureDefinition-mii-pr-mikrobio-barlett-score.md)
+* [MII PR Mikrobio Bartlett Score (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-bartlett-score)](StructureDefinition-mii-pr-mikrobio-bartlett-score.md)
 * [MII PR Mikrobio Molekulare Pathogenlast (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast)](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.md)
 * [MII PR Mikrobio Resistenzmechanismen Determinanten (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten)](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md)
 * [MII PR Mikrobio Virulenzfaktor (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor)](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md)
@@ -139,17 +148,18 @@ This structure refers to these other structures:
 
 * [MII PR Mikrobio Allgemeine Kultur (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur)](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md)
 * [MII PR Mikrobio Spezifische Kultur (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur)](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md)
-* [MII PR Mikrobio Allgemeine Bestimmung (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
+* [MII PR Mikrobio Allgemeine Bestimmung (Identifizierung) (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
 * [MII PR Mikrobio Spezifische Bestimmung (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung)](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md)
 * [MII PR Mikrobio Keimzahl (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl)](StructureDefinition-mii-pr-mikrobio-keimzahl.md)
 * [MII PR Mikrobio Empfindlichkeit (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit)](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md)
-* [MII PR Mikrobio Mikroskopie (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie)](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)
+* [MII PR Mikrobio Allgemeine Mikroskopie (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie)](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)
+* [MII PR Mikrobio Spezifische Mikroskopie (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie)](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md)
 * [MII PR Mikrobio Antigen Antikoerper Quantitativ (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ)](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md)
 * [MII PR Mikrobio Aviditaet (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet)](StructureDefinition-mii-pr-mikrobio-aviditaet.md)
 * [MII PR Mikrobio CT Wert (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert)](StructureDefinition-mii-pr-mikrobio-ct-wert.md)
 * [MII PR Mikrobio Titer (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer)](StructureDefinition-mii-pr-mikrobio-titer.md)
 * [MII PR Mikrobio Nugent Score (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score)](StructureDefinition-mii-pr-mikrobio-nugent-score.md)
-* [MII PR Mikrobio Barlett Score (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score)](StructureDefinition-mii-pr-mikrobio-barlett-score.md)
+* [MII PR Mikrobio Bartlett Score (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-bartlett-score)](StructureDefinition-mii-pr-mikrobio-bartlett-score.md)
 * [MII PR Mikrobio Molekulare Pathogenlast (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast)](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.md)
 * [MII PR Mikrobio Resistenzmechanismen Determinanten (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten)](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md)
 * [MII PR Mikrobio Virulenzfaktor (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor)](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md)
@@ -302,7 +312,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Diagnostic Report",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:55:32+00:00",
+  "date" : "2026-09-10T12:50:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -401,12 +411,13 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
+        "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score",
-        "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score",
+        "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-bartlett-score",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor",
@@ -414,6 +425,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"]
       }]
+    },
+    {
+      "id" : "DiagnosticReport.conclusion",
+      "path" : "DiagnosticReport.conclusion",
+      "short" : "Zusammenfassende Beurteilung des Labors im Freitext. Fuer serologische Befunde die tragende Stelle, weil sich die Diagnose dort erst aus der Zusammenschau mehrerer Einzelergebnisse ergibt."
     }]
   }
 }

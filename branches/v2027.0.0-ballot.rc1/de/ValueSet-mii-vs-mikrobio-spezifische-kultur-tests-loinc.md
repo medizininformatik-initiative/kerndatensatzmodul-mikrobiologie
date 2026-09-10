@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC |
+| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC |
 
  
 Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, bei denen das gesuchte Ziel bereits im LOINC-Code benannt ist. 
@@ -42,7 +42,7 @@ Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, 
   "title" : "MII VS Mikrobio Spezifische Kultur Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:55:32+00:00",
+  "date" : "2026-09-10T12:50:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -119,6 +119,26 @@ Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, 
         "property" : "STATUS",
         "op" : "=",
         "value" : "ACTIVE"
+      }]
+    }],
+    "exclude" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "concept" : [{
+        "code" : "44851-4",
+        "display" : "Mycobacterium sp # 2 identified in Specimen by Organism specific culture"
+      },
+      {
+        "code" : "44852-2",
+        "display" : "Mycobacterium sp # 3 identified in Specimen by Organism specific culture"
+      },
+      {
+        "code" : "44854-8",
+        "display" : "Mycobacterium sp # 4 identified in Specimen by Organism specific culture"
+      },
+      {
+        "code" : "44855-5",
+        "display" : "Mycobacterium sp # 5 identified in Specimen by Organism specific culture"
       }]
     }]
   }

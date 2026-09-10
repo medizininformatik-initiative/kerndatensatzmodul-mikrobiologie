@@ -399,6 +399,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><code class="language-plaintext highlighter-rouge">Negative</code> bedeutet, dass ein vorliegender Erreger anhand der relevanten Untersuchungen bewertet wurde und die Kriterien der Kategorie nicht erfüllt. Es ist nicht mit einem negativen Erregernachweis gleichzusetzen; ist keine ausreichende Bewertung möglich, wird <code class="language-plaintext highlighter-rouge">dataAbsentReason</code> verwendet.</li>
   <li>Die Ableitung erfolgt über <code class="language-plaintext highlighter-rouge">Observation.derivedFrom</code> und nicht über die <code class="language-plaintext highlighter-rouge">triggeredBy</code>-Extension. Die zugrunde liegenden Untersuchungen sollten angegeben werden, dürfen aber entfallen, wenn der Status unmittelbar aus einem bereits kategorisierten Laborbefund übernommen wird.</li>
   <li>MRGN bleibt eine eigenständige Klassifikation und wird nicht in Einzelstatus-Aussagen umgebaut. Für den Fall, dass ein bewertetes Isolat keiner MRGN-Klasse zuzuordnen ist, wurde ein Negativwert ergänzt, den die LOINC-AnswerList nicht enthält.</li>
+  <li>Die Profile wurden Artefakt für Artefakt gegen das europäische Terminologie-Workbook, das begleitende Whitepaper und den realen Ergebniskatalog eines deutschen Labors für Gram- und Säurefest-Präparate abgeglichen. Die Ableitungsregel, der das Modul seit 2027.0.0-alpha.1 folgt — ein Profil folgt der Fragestellung und dem Ergebnistyp, nicht dem Verfahren —, wurde von den Quellen bestätigt und nicht revidiert: Das Whitepaper führt sie als Grundsatz, sein Kulturkapitel leitet daraus dieselbe Trennung von Kultur und Identifizierung ab, und sein Empfindlichkeitskapitel trennt Messwert und Kategorie auf dieselbe Weise.</li>
+  <li>Proben haben jetzt ein Profil. Das Modul verlangt <code class="language-plaintext highlighter-rouge">Observation.specimen</code> seit 2027.0.0-alpha.1 für jede Untersuchung, gab der Referenz aber kein Zielprofil, sodass jedes beliebige Specimen genügte. <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-probe</code> leitet von dem Bioproben-Basisprofil ab, das genau dafür existiert, und jedes Untersuchungsprofil verweist nun darauf.</li>
+  <li>Die Mikroskopie ist in eine offene und eine gezielte Hälfte aufgeteilt, wie Kultur und Bestimmung es schon waren. Unterschieden werden sie über den Ergebnisraum: Die allgemeine Mikroskopie antwortet mit der gesehenen morphologischen Gruppe, die spezifische mit der semiquantitativen Stufe, in der ein benanntes Objekt gesehen wurde. LOINC trennt beide über die Skala, nominal gegen ordinal.</li>
+  <li>Die Mikroskopie kann eine Morphologie zusammen mit ihrer Menge tragen. „Wenig grampositive Kokken" braucht zwei Aussagen, <code class="language-plaintext highlighter-rouge">value[x]</code> trägt eine — die Menge steht deshalb in einer Komponente. Ihr Code stammt aus einem Interims-CodeSystem dieses Moduls, bis der vom europäischen Modell angeforderte LOINC-Code existiert.</li>
+  <li>Die Parasitologie ist auf der Ergebnisseite abbildbar geworden. Drei Organismus-Wurzeln fehlten — Würmer, Spinnentiere und Insekten —, sodass ein Wurmei, eine Krätzmilbe oder eine Fliegenlarve keinen Ergebniscode hatte. Auf der Testcodeseite hängt sie weiter an einem LOINC-Code, den es noch nicht gibt.</li>
+  <li>Die Serologie ist von der Specimen-Postkoordination ausgenommen. Das europäische Whitepaper erlaubt dort ein präkoordiniertes Material, weil nur wenige Materialien vorkommen und überwiegend Serum. Die Ausnahme betrifft allein den Untersuchungscode; eine Specimen-Ressource wird weiter erwartet.</li>
+  <li>Empfindlichkeitsergebnisse dürfen als Kategorie angegeben werden, wenn kein Messwert vorliegt — das europäische Modell legt es ausdrücklich so fest. Zwei Invarianten halten das eindeutig, eine dritte verlangt eine Interpretation, wo ein Messwert vorliegt.</li>
+  <li>Punkte, die die Quellen offen lassen oder in denen dieser Leitfaden von ihnen abweicht, stehen jetzt als <strong>Ballotfragen</strong> im Leitfaden statt stillschweigend entschieden zu sein. Sechs sind offen, jede auf der Seite, zu der sie gehört, und gesammelt auf der Startseite. Ihre Antworten hängen davon ab, was Standorte liefern können — deshalb gehen sie ins Ballot und werden nicht hier entschieden.</li>
+  <li>Der Bartlett-Score war durchgängig „Barlett" geschrieben, auch in den Canonicals. Der Score ist nach John G. Bartlett benannt; „Barlett" ist kein Name. Da der Tippfehler drei veröffentlichte Canonicals erreicht hatte, hätte eine Korrektur nur des sichtbaren Textes die URLs dauerhaft falsch gelassen — deshalb wurden auch die Identifier korrigiert. Das ist ein Breaking Change für einen Schreibfehler, bewusst in einer Major-Version mit Ballot vorgenommen statt auf Dauer mitgeschleppt.</li>
 </ul>
 
 <h4 id="detaillierte-änderungen-für-implementierer-pro-artefakt-url--canonical">Detaillierte Änderungen für Implementierer (pro Artefakt-URL / Canonical)</h4>
@@ -440,6 +449,102 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">value[x]</code> gebunden an das für beide Kulturen gemeinsame <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-kultur-ergebnis-snomed</code> (required); der nachgewiesene Organismus wird nicht mehr hier, sondern über die Bestimmung abgebildet</td>
       <td>Ergebniscodes <code class="language-plaintext highlighter-rouge">Positive</code> und <code class="language-plaintext highlighter-rouge">Indeterminate</code> sind nicht mehr gültig</td>
       <td>Ergebnisse auf <code class="language-plaintext highlighter-rouge">365698005</code> bzw. <code class="language-plaintext highlighter-rouge">264868006</code> umstellen, Unbestimmbarkeit über <code class="language-plaintext highlighter-rouge">dataAbsentReason</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-probe</code></td>
+      <td>neu</td>
+      <td>-</td>
+      <td>Specimen-Profil, abgeleitet von <code class="language-plaintext highlighter-rouge">MII_PR_Biobank_Specimen_Bioprobe_Core</code>; behält die geerbte Probenart-Bindung und benennt die mikrobiologischen Erwartungen an <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">collection.collected[x]</code> und <code class="language-plaintext highlighter-rouge">parent</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.specimen</code> hat jetzt ein Zielprofil; eine Probe muss dem Bioproben-Basisprofil genügen, das <code class="language-plaintext highlighter-rouge">status</code>, <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">collection</code> und <code class="language-plaintext highlighter-rouge">collection.collected[x]</code> verpflichtend macht</td>
+      <td>Bestehenden Specimen-Ressourcen <code class="language-plaintext highlighter-rouge">collection.collected[x]</code> ergänzen. Zu beachten ist die geerbte Pflicht einer Temperatur-Extension unter <code class="language-plaintext highlighter-rouge">Specimen.processing</code> — das ist Ballotfrage 3</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-mikroskopie</code></td>
+      <td>neu</td>
+      <td>bisher nicht abbildbar</td>
+      <td>Gezielte Mikroskopie: Ein ordinaler LOINC-Code benennt Objekt und Färbung, <code class="language-plaintext highlighter-rouge">value[x]</code> trägt die semiquantitative Stufe als <code class="language-plaintext highlighter-rouge">CodeableConcept</code> oder eine Zählung je Gesichtsfeld als <code class="language-plaintext highlighter-rouge">Quantity</code> oder <code class="language-plaintext highlighter-rouge">Range</code></td>
+      <td>Säurefeste Färbungen, Wirtszellzählungen und Clue Cells werden kodierbar; sie hatten vorher kein Profil</td>
+      <td>Solche Befunde von der allgemeinen Mikroskopie hierher umstellen, wo die Menge in die <code class="language-plaintext highlighter-rouge">interpretation</code> gezwungen werden musste</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-mikroskopie</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> fest auf <code class="language-plaintext highlighter-rouge">105059-0</code>; keine Komponente; Titel „Mikroskopie"</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> aus <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc</code> (extensible), das auch <code class="language-plaintext highlighter-rouge">664-3</code> zulässt; neue <code class="language-plaintext highlighter-rouge">component[menge]</code> für die semiquantitative Menge; <code class="language-plaintext highlighter-rouge">method</code> benennt die Färbungspräferenz; Titel „Allgemeine Mikroskopie"</td>
+      <td>Der feste Code wird nicht mehr erzwungen; Morphologie und Menge lassen sich zusammen senden</td>
+      <td>Keine Migration nötig. <code class="language-plaintext highlighter-rouge">105059-0</code> bleibt bevorzugt; <code class="language-plaintext highlighter-rouge">664-3</code> hält <code class="language-plaintext highlighter-rouge">Observation.method</code> frei, das <code class="language-plaintext highlighter-rouge">0..1</code> ist und Färbung und Mikroskopieverfahren nicht beide tragen kann</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-allgemeine-kultur</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> fest auf <code class="language-plaintext highlighter-rouge">11475-1</code></td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> aus <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-kultur-tests-loinc</code> (extensible), das auch den methodenneutralen <code class="language-plaintext highlighter-rouge">41852-5</code> zulässt; neues Invariant <code class="language-plaintext highlighter-rouge">allgemeine-kultur-method-with-neutral-code</code> verlangt für diesen Code <code class="language-plaintext highlighter-rouge">Observation.method</code></td>
+      <td>Eine Lockerung: Jede bisher gültige Instanz bleibt gültig. Bei <code class="language-plaintext highlighter-rouge">41852-5</code> wird die Methode zur Pflicht, weil erst sie die Untersuchung als Kultur ausweist</td>
+      <td>Keine Migration nötig. <code class="language-plaintext highlighter-rouge">11475-1</code> bleibt empfohlen: Es benennt das Verfahren selbst und unterscheidet die Kultur damit von der allgemeinen Bestimmung — eine Frage, die die europäischen Quellen nicht adressieren</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-empfindlichkeit</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td><code class="language-plaintext highlighter-rouge">value[x]</code> nur <code class="language-plaintext highlighter-rouge">Quantity</code>; <code class="language-plaintext highlighter-rouge">method</code> ungebunden</td>
+      <td><code class="language-plaintext highlighter-rouge">value[x]</code> nimmt <code class="language-plaintext highlighter-rouge">Quantity</code> oder <code class="language-plaintext highlighter-rouge">CodeableConcept</code>; <code class="language-plaintext highlighter-rouge">method</code> an <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-empfindlichkeit-methode-snomed</code> gebunden (extensible); drei Invarianten: Eine Kategorie verlangt eine Interpretation, beide müssen übereinstimmen, und ein Messwert sollte eine Interpretation tragen (Warnung)</td>
+      <td>Ein Labor, das nur SIR berichtet, muss <code class="language-plaintext highlighter-rouge">value[x]</code> nicht mehr leer lassen. Methodencodes sind jetzt beschränkt, wo sie frei waren</td>
+      <td>Bei jedem kategorialen Wert eine Interpretation angeben; dort hängt die Norm, und eine Kategorie ohne sie sagt nichts</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-voraussichtliche-empfindlichkeit</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>Description: abgeleitet aus Resistenzmechanismen, Genen oder Proteinen</td>
+      <td>Description: abgeleitet aus genotypischen Resistenznachweisen; <code class="language-plaintext highlighter-rouge">code</code> benennt die Abgrenzung zur gemessenen Empfindlichkeit</td>
+      <td>Nur Dokumentation, keine Constraint-Änderung</td>
+      <td>Die weitere Formulierung versprach mehr, als LOINC hergibt: Am 2026-09-10 gemessen gibt es 99 <code class="language-plaintext highlighter-rouge">[Susceptibility]</code>-Codes mit Methode Genotyping und keinen mit einer Immunoassay-Methode — eine proteinbasierte Vorhersage ist nicht kodierbar</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-diagnostic-report</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td><code class="language-plaintext highlighter-rouge">conclusion</code> unerwähnt; <code class="language-plaintext highlighter-rouge">result</code> nahm die spezifische Mikroskopie nicht auf</td>
+      <td><code class="language-plaintext highlighter-rouge">conclusion</code> als tragendes Element serologischer Befunde dokumentiert; <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-mikroskopie</code> als zulässiges Ziel ergänzt</td>
+      <td>Befunde können gezielte Mikroskopie referenzieren; die Konklusion hat einen dokumentierten Zweck</td>
+      <td>keine Migration nötig</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-titer</code>, <code class="language-plaintext highlighter-rouge">-aviditaet</code>, <code class="language-plaintext highlighter-rouge">-antigen-antikoerper-quantitativ</code>, <code class="language-plaintext highlighter-rouge">-spezifische-bestimmung</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>die Specimen-Postkoordinations-Konvention galt ausnahmslos</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> hält fest, dass die Serologie ausgenommen ist: Ein präkoordiniertes Material ist dort zulässig. Bei der spezifischen Bestimmung hängt die Ausnahme an der serologischen Anwendung, weil das Profil auch die molekulare Bank bedient</td>
+      <td>Nur Dokumentation. Die Ausnahme betrifft den Untersuchungscode, nicht <code class="language-plaintext highlighter-rouge">Observation.specimen</code>, das weiter verlangt wird</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-keimzahl</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td><code class="language-plaintext highlighter-rouge">valueQuantity.code</code> dokumentierte nur den nennerlosen Fall</td>
+      <td><code class="language-plaintext highlighter-rouge">valueQuantity.code</code> benennt den Vorrang der KBE-annotierten Einheiten gegenüber <code class="language-plaintext highlighter-rouge">/mL</code>, <code class="language-plaintext highlighter-rouge">/g</code> und <code class="language-plaintext highlighter-rouge">1</code></td>
+      <td>Nur Dokumentation; alle Einheiten bleiben gültig</td>
+      <td><code class="language-plaintext highlighter-rouge">[CFU]/mL</code>, <code class="language-plaintext highlighter-rouge">[CFU]/g</code>, <code class="language-plaintext highlighter-rouge">[CFU]</code> bevorzugen. <code class="language-plaintext highlighter-rouge">/mL</code> ist in UCUM ein reiner Kehrwert und <code class="language-plaintext highlighter-rouge">1</code> die dimensionslose Eins; die Migration ist mechanisch</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-allgemeine-bestimmung</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>Titel „MII PR Mikrobio Allgemeine Bestimmung"</td>
+      <td>Titel „MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)"</td>
+      <td>Nur der Titel; Id und Canonical unverändert</td>
+      <td>„Bestimmung" ist im kulturellen Kontext mehrdeutig, wo das Profil faktisch die MALDI-TOF-Speziesidentifizierung trägt</td>
+    </tr>
+    <tr>
+      <td>alle Observation-Profile des Moduls</td>
+      <td>inhaltlich aktualisiert</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.specimen</code> <code class="language-plaintext highlighter-rouge">1..</code> ohne Zielprofil</td>
+      <td><code class="language-plaintext highlighter-rouge">specimen only Reference(mii-pr-mikrobio-probe)</code></td>
+      <td>Eine referenzierte Probe muss nun dem neuen Profil genügen</td>
+      <td>Bestehende Specimen-Ressourcen gegen <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-probe</code> prüfen, insbesondere auf <code class="language-plaintext highlighter-rouge">collection.collected[x]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-bartlett-score</code></td>
+      <td>ersetzt</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-barlett-score</code></td>
+      <td>dasselbe Profil unter dem korrigierten Identifier; Name, Titel und Description lauten jetzt „Bartlett", wie LOINC <code class="language-plaintext highlighter-rouge">75371-5</code></td>
+      <td>Das alte Canonical löst nicht mehr auf; Referenzen und <code class="language-plaintext highlighter-rouge">meta.profile</code> müssen umgestellt werden</td>
+      <td>Im Canonical <code class="language-plaintext highlighter-rouge">barlett</code> durch <code class="language-plaintext highlighter-rouge">bartlett</code> ersetzen. Außer der Schreibweise ändert sich nichts, eine Datenmigration ist nicht nötig</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-nugent-score</code></td>
@@ -522,6 +627,118 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-cs-mikrobio-mikroskopie-komponenten</code> (CodeSystem)</td>
+      <td>neu</td>
+      <td>-</td>
+      <td>Ein Interimscode, <code class="language-plaintext highlighter-rouge">semiquantitative-menge</code>, für die Mikroskopie-Komponente</td>
+      <td>Macht den Fall Morphologie-plus-Menge abbildbar</td>
+      <td>INTERIM. Zu ersetzen durch den LOINC-Code, den das europäische Modell anfordert (Blatt „Microscopy", Zeile 13); das CodeSystem wird dann retired. Vermerkt in docs/release-checklist.md</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-kultur-tests-loinc</code></td>
+      <td>neu</td>
+      <td>der Code war im Profil fest gesetzt</td>
+      <td><code class="language-plaintext highlighter-rouge">11475-1</code> und <code class="language-plaintext highlighter-rouge">41852-5</code>, extensible</td>
+      <td>Die allgemeine Kultur nimmt den methodenneutralen Code an</td>
+      <td><code class="language-plaintext highlighter-rouge">11475-1</code> bleibt empfohlen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc</code></td>
+      <td>neu</td>
+      <td>der Code war im Profil fest gesetzt</td>
+      <td><code class="language-plaintext highlighter-rouge">105059-0</code> und <code class="language-plaintext highlighter-rouge">664-3</code>, beide nominal</td>
+      <td>Die allgemeine Mikroskopie nimmt einen Code an, der die Färbung trägt</td>
+      <td><code class="language-plaintext highlighter-rouge">105059-0</code> bleibt empfohlen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc</code></td>
+      <td>neu</td>
+      <td>-</td>
+      <td>Ordinale <code class="language-plaintext highlighter-rouge">[Presence]</code>-Codes, je Färbung gefiltert: Gram, säurefest, Auramin, mit <code class="language-plaintext highlighter-rouge">SCALE_TYP</code> <code class="language-plaintext highlighter-rouge">Ord</code></td>
+      <td>Testcodes der gezielten Mikroskopie</td>
+      <td>Die Färbungsliste ist bewusst unvollständig: Sie deckt die Färbungen ab, die ein Labor belegt hat</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed</code></td>
+      <td>neu</td>
+      <td>-</td>
+      <td>Die semiquantitativen Stufen, nach SNOMED-Achse gruppiert: Präsenzbefunde <code class="language-plaintext highlighter-rouge">441614007</code>, <code class="language-plaintext highlighter-rouge">441517005</code>, <code class="language-plaintext highlighter-rouge">441521003</code>; Grad-Deskriptoren <code class="language-plaintext highlighter-rouge">Few</code>, <code class="language-plaintext highlighter-rouge">Moderate number</code>, <code class="language-plaintext highlighter-rouge">Numerous</code>, <code class="language-plaintext highlighter-rouge">Scanty</code>; <code class="language-plaintext highlighter-rouge">None</code>, <code class="language-plaintext highlighter-rouge">No organisms seen</code>; <code class="language-plaintext highlighter-rouge">Present</code>, <code class="language-plaintext highlighter-rouge">Absent</code></td>
+      <td>Ergebnis-ValueSet der gezielten Mikroskopie und der neuen Mikroskopie-Komponente</td>
+      <td>Die beiden Achsen sind nicht austauschbar; welche Familie das europäische Modell bevorzugt, ist noch offen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-empfindlichkeit-methode-snomed</code></td>
+      <td>neu</td>
+      <td><code class="language-plaintext highlighter-rouge">Observation.method</code> war im Empfindlichkeitsprofil ungebunden</td>
+      <td>Die fünf Verfahren, die das Workbook nennt: Bouillondilution, Agardiffusion, Gradientenstreifen, manuelle und automatisierte MHK-Mikrodilution</td>
+      <td>Methodencodes sind beschränkt, wo sie frei waren</td>
+      <td>Das Whitepaper nennt für dieselben fünf Verfahren Prozedur-Konzepte; dieses Modul bleibt bei Qualifier Values, wie seine übrigen neun Methodenlisten. Zurückgemeldet</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-organismen-snomedct</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>sechs Wurzeln</td>
+      <td>neun Wurzeln; ergänzt <code class="language-plaintext highlighter-rouge">441649000</code> Cestoda/Trematoda/Nemata, <code class="language-plaintext highlighter-rouge">76222001</code> Arachnid, <code class="language-plaintext highlighter-rouge">106763003</code> Class insecta</td>
+      <td>Mehrzellige Parasiten werden als Identifikationsergebnis abbildbar</td>
+      <td>Rein additiv. Die vierte Wurzel, Schleimpilze, ist in der Quelle selbst mit „to be confirmed" vermerkt</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-morphologie-ergebnis-snomed</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>15 Codes, alle <code class="language-plaintext highlighter-rouge">(finding)</code>, alle angeordneten Formen</td>
+      <td>27 Codes, nach Achse gruppiert: angeordnete Formen als <code class="language-plaintext highlighter-rouge">(finding)</code>, die nackten Morphologien als <code class="language-plaintext highlighter-rouge">(organism)</code>, weil SNOMED sie nur dort führt, Pilzmorphologie, sowie <code class="language-plaintext highlighter-rouge">No organisms seen</code> / <code class="language-plaintext highlighter-rouge">No cells seen</code> / <code class="language-plaintext highlighter-rouge">Clue cells present</code></td>
+      <td>Die häufigsten Grambefunde werden abbildbar; von den bisherigen 15 Codes verwendete ein realer Laborkatalog drei</td>
+      <td>Die vier nackten bakteriellen Morphologien sind Nachkommen der Bacteria domain und damit auch gültige Werte der allgemeinen Bestimmung. Die Granularität steht im Profil oder im Untersuchungscode, nie in <code class="language-plaintext highlighter-rouge">value[x]</code> allein</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>acht Einheiten, mL und L gemischt ohne Vorrang</td>
+      <td>zehn Einheiten in drei Gruppen; <code class="language-plaintext highlighter-rouge">ng/L</code> und <code class="language-plaintext highlighter-rouge">pg/L</code> ergänzt, Liter als bevorzugter Nenner markiert</td>
+      <td>Alle bisherigen Einheiten bleiben gültig</td>
+      <td>Das europäische Whitepaper empfiehlt für die Serologie den Liter; <code class="language-plaintext highlighter-rouge">[IU]/mL</code> bleibt zulässig als international verbreitete Schreibweise</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-kultur-tests-loinc</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>nur Filter</td>
+      <td>vier Ausschlüsse: <code class="language-plaintext highlighter-rouge">44851-4</code>, <code class="language-plaintext highlighter-rouge">44852-2</code>, <code class="language-plaintext highlighter-rouge">44854-8</code>, <code class="language-plaintext highlighter-rouge">44855-5</code></td>
+      <td>Die durchnummerierten Mykobakterien-Codes verlassen die Menge</td>
+      <td>Das Workbook markiert sie mit „Remove"; gemessen sind alle vier noch <code class="language-plaintext highlighter-rouge">STATUS = ACTIVE</code>, der Statusfilter wirft sie also nicht heraus</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-bestimmung-methode-snomed</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>zehn Verfahren</td>
+      <td>elf; ergänzt <code class="language-plaintext highlighter-rouge">702675006</code> sondenbasierte Zielamplifikation</td>
+      <td>Die häufigste moderne gezielte PCR wird kodierbar</td>
+      <td>Neben <code class="language-plaintext highlighter-rouge">258066000</code>, nicht statt dessen: Nicht jede Amplifikation ist sondenbasiert</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-kultur-methode-snomed</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>aerobe und anaerobe Kultur</td>
+      <td>zusätzlich <code class="language-plaintext highlighter-rouge">702658000</code> Microbial culture technique</td>
+      <td>Ein Labor, das aerob und anaerob nicht unterscheidet, hat einen Methodencode</td>
+      <td>Nötig geworden, weil der methodenneutrale Testcode jetzt eine Methode verlangt</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>nur Filter</td>
+      <td>zusätzlich <code class="language-plaintext highlighter-rouge">106843-6</code> und <code class="language-plaintext highlighter-rouge">103673-0</code>, aufgezählt</td>
+      <td>Zwei echte Empfindlichkeitstests gelangen in die Menge</td>
+      <td>Beide tragen <code class="language-plaintext highlighter-rouge">PROPERTY</code> <code class="language-plaintext highlighter-rouge">Susc</code>, liegen aber in <code class="language-plaintext highlighter-rouge">CLASS</code> MICRO und DRUG/TOX; das Workbook bittet Regenstrief selbst um Korrektur</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-bartlett-score-loinc</code></td>
+      <td>ersetzt</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-barlett-score-loinc</code></td>
+      <td>dasselbe ValueSet unter dem korrigierten Identifier</td>
+      <td>Das alte Canonical löst nicht mehr auf</td>
+      <td>Im Canonical <code class="language-plaintext highlighter-rouge">barlett</code> durch <code class="language-plaintext highlighter-rouge">bartlett</code> ersetzen</td>
+    </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-kultur-ergebnis-snomed</code></td>
       <td>neu</td>
@@ -699,6 +916,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Neues Artefakt im Informationsmodell</td>
       <td>Ausprägungsspezifische Elemente hiergegen mappen</td>
     </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-lm-mikrobio-untersuchungsarten</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>ein <code class="language-plaintext highlighter-rouge">Mikroskopie</code>-Element; <code class="language-plaintext highlighter-rouge">Empfindlichkeit.Ergebnis</code> als <code class="language-plaintext highlighter-rouge">Quantity</code>; <code class="language-plaintext highlighter-rouge">BarlettScore</code></td>
+      <td><code class="language-plaintext highlighter-rouge">AllgemeineMikroskopie</code> und <code class="language-plaintext highlighter-rouge">SpezifischeMikroskopie</code>; <code class="language-plaintext highlighter-rouge">Empfindlichkeit.Ergebnis[x]</code> als <code class="language-plaintext highlighter-rouge">Quantity</code> oder <code class="language-plaintext highlighter-rouge">CodeableConcept</code>; <code class="language-plaintext highlighter-rouge">BartlettScore</code></td>
+      <td>Die Elementnamen des logischen Modells ändern sich</td>
+      <td>Das Modell spiegelt die Profile; die Änderung folgt der Mikroskopie-Aufteilung, dem geweiteten Empfindlichkeitsergebnis und der Bartlett-Korrektur</td>
+    </tr>
   </tbody>
 </table>
 
@@ -723,6 +948,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-kultur</code> in <code class="language-plaintext highlighter-rouge">supportedProfile</code> ergänzt; <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-mre-klasse</code> durch <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-resistenzkategorie-status</code> ersetzt; Suchparameter <code class="language-plaintext highlighter-rouge">titer</code> für <code class="language-plaintext highlighter-rouge">Observation</code> deklariert</td>
       <td>Server deklarieren das neue Profil mit; die Canonical der MRE-Klasse wird nicht mehr geführt</td>
       <td><code class="language-plaintext highlighter-rouge">/metadata</code>-Ausgabe und Conformance-Tests gegen das geänderte Profilset prüfen</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-cps-mikrobio-metadata</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td>19 unterstützte Observation-Profile</td>
+      <td>20; <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-mikroskopie</code> ergänzt, <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-barlett-score</code> zu <code class="language-plaintext highlighter-rouge">-bartlett-score</code> korrigiert</td>
+      <td>Server, die Konformität erklären, führen das neue Profil</td>
+      <td>Die Profilliste anpassen</td>
     </tr>
   </tbody>
 </table>
@@ -755,6 +988,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h5 id="beispiele--ig-seitenstruktur">Beispiele &amp; IG-Seitenstruktur</h5>
 
 <ul>
+  <li>Sechs neue Beispiele, jedes für einen Fall, der vorher nicht abbildbar war: <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-allgemeine-kultur-methodenneutral</code> (der methodenneutrale Kulturcode mit seiner Pflichtmethode), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-mikroskopie-gram-kokken-wenig</code> (Morphologie plus Menge als Komponente), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ</code> und <code class="language-plaintext highlighter-rouge">-kinyoun-zweiplus</code> (säurefeste Stufen), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld</code> (eine Zählung je Gesichtsfeld) sowie <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-empfindlichkeit-nur-kategorie</code> (eine Kategorie ohne Messwert). Die Mikroskopie-Beispiele stammen aus einem realen Laborkatalog.</li>
+  <li>Sechs Ballotfragen stehen im Leitfaden, jede auf der Seite, zu der sie gehört, und gesammelt auf der Startseite. Neue Abschnitte erklären Granularität gegen Achse, die Methodenachse, die Ausnahme der Serologie von der Specimen-Postkoordination, das Panel-Muster zur Gruppierung mehrerer Ergebnisse und den Testcode, den allgemeine Kultur und allgemeine Bestimmung teilen. Der Release-Hinweis nennt das Modul nicht mehr Alpha-Release.</li>
   <li><code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-kultur</code> liegt jetzt auf <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-kultur</code> statt auf <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-bestimmung</code>; Code und Ergebnis wurden auf einen erregerspezifischen Kulturcode und <code class="language-plaintext highlighter-rouge">365698005 Organism growth</code> umgestellt.</li>
   <li>Neue Seite <em>Technische Implementierung → Profilauswahl und Abgrenzung</em> grenzt zielgerichteten Erregernachweis, Empfindlichkeitstestung, MRGN-Klassifikation und Resistenzkategorie-Status voneinander ab und beschreibt die diagnostische Kette.</li>
   <li>Neue Profilseite <em>Kultur → Spezifische Kultur</em>; die Seite <em>MRE Klasse</em> wurde durch <em>Resistenzkategorie Status</em> ersetzt.</li>
@@ -1822,7 +2057,7 @@ Die <code class="language-plaintext highlighter-rouge">category</code>-Abbildung
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
+          Erstellt <span title="Thu, Sep 10, 2026 12:50+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

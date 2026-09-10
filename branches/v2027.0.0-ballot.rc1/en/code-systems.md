@@ -9,6 +9,7 @@ This page lists the code systems the **Microbiology** module defines itself (nam
 
 | | |
 | :--- | :--- |
+| [MII CS Mikrobio Mikroskopie Komponenten](CodeSystem-mii-cs-mikrobio-mikroskopie-komponenten.md) | Interims-CodeSystem für Komponenten des mikroskopischen Befunds, für die noch kein LOINC-Code existiert. Der enthaltene Code wird ersetzt, sobald der im EU-Datenmodell angeforderte LOINC-Code verfügbar ist. |
 | [MII CS Mikrobio MRGN Ergebnis](CodeSystem-mii-cs-mikrobio-mrgn-ergebnis.md) | CodeSystem für Ergebnisse der MRGN-Klassifikation, die sich nicht über LOINC abbilden lassen. Die LOINC-AnswerList LL6195-3 zu 99780-9 enthält ausschließlich 2MRGN, 3MRGN und 4MRGN und damit keinen Negativwert. |
 | [MII CS Mikrobio Resistenzkategorie](CodeSystem-mii-cs-mikrobio-resistenzkategorie.md) | Untersuchungscodes (Observation.code) für die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie. Jeder Code benennt die bewertete Kategorie; das Ergebnis der Bewertung steht in Observation.value. |
 | [MII CS Mikrobio Susceptibility Norm](CodeSystem-mii-cs-mikrobio-susceptibility-norm.md) | CodeSystem zur Kodierung von Normen für die Interpretation der Empfindlichkeit von Mikroorganismen gegenüber antimikrobiellen Substanzen. |

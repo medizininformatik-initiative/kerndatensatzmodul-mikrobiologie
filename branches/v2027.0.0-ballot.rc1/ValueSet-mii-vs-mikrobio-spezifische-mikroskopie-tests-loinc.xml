@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc</b></p><a name="mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"> </a><a name="hcmii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.82"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP6301-8 (Gram stain) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.82"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP6094-9 (Acid fast stain) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.82"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP262570-7 (Auramine fluorochrome stain) and STATUS  = ACTIVE</li></ul></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc</b></p><a name="de-mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"> </a><a name="de-hcmii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.82"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP6301-8 (Gram stain) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.82"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP6094-9 (Acid fast stain) and STATUS  = ACTIVE</li><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.82"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP262570-7 (Auramine fluorochrome stain) and STATUS  = ACTIVE</li></ul></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC"/>
+  <title value="MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-10T12:50:06+00:00"/>
+  <publisher value="Medizininformatik Initiative">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="de"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medizininformatik Initiative"/>
+      </extension>
+    </extension>
+  </publisher>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <version value="2.82"/>
+      <filter>
+        <property value="PROPERTY"/>
+        <op value="="/>
+        <value value="LP217195-9"/>
+      </filter>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7751-3"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP6301-8"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <version value="2.82"/>
+      <filter>
+        <property value="PROPERTY"/>
+        <op value="="/>
+        <value value="LP217195-9"/>
+      </filter>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7751-3"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP6094-9"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://loinc.org"/>
+      <version value="2.82"/>
+      <filter>
+        <property value="PROPERTY"/>
+        <op value="="/>
+        <value value="LP217195-9"/>
+      </filter>
+      <filter>
+        <property value="SCALE_TYP"/>
+        <op value="="/>
+        <value value="LP7751-3"/>
+      </filter>
+      <filter>
+        <property value="METHOD_TYP"/>
+        <op value="="/>
+        <value value="LP262570-7"/>
+      </filter>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

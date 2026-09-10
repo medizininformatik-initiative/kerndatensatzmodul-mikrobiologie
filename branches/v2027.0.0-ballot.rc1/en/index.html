@@ -351,7 +351,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           
 
             as of 
-2026-09-09
+2026-09-10
 
           
         
@@ -379,6 +379,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#ballot-questions" id="markdown-toc-ballot-questions">Ballot questions</a></li>
   <li><a href="#target-audience" id="markdown-toc-target-audience">Target audience</a></li>
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
   <li><a href="#related-guides" id="markdown-toc-related-guides">Related guides</a></li>
@@ -406,17 +407,22 @@ basis for a common investigation of infectious diseases and antibiotic resistanc
 global health emergencies and are among the main priorities of the <a href="http://www.who.int" title="WHO">WHO</a>.</p>
 
 <div class="ig-highlight ig-highlight-orange">
-  <p><strong>Note.</strong> In the course of a harmonisation process between the RKI, MIO42 and the MII, the
-microbiology data model was fundamentally revised. The agreements were additionally extended to the
-European context (EHDS). This alpha release reflects the current state of the agreements reached. An
-officially balloted release is planned for the end of the year.</p>
+  <p><strong>Note on the state of the underlying model.</strong> In the course of a harmonisation process between the
+RKI, MIO42 and the MII, the microbiology data model was fundamentally revised, and the agreements
+were extended to the European context (EHDS).</p>
+
+  <p>That European model is <strong>not yet final</strong>. This release represents its current state as faithfully as
+an implementable specification allows: where the underlying agreements leave a question open, this
+guide states the decision it took and why. Points deliberately left open are listed under
+<a href="#ballot-questions">Ballot questions</a>, and we ask for comment on them. Implementers should expect
+changes in the areas concerned.</p>
 </div>
 
 <p>The Microbiology 2027 extension module models microbiological findings as standalone Observations.
 The main domains are:</p>
 
 <ul>
-  <li>Culture (general, microscopy including Barlett/Nugent score, colony count, susceptibility)</li>
+  <li>Culture (general, microscopy including Bartlett/Nugent score, colony count, susceptibility)</li>
   <li>Determination (general/specific, Ct value)</li>
   <li>Quantitative tests (antigen/antibody, titre, molecular pathogen load)</li>
   <li>Further properties (virulence, resistance mechanism, MRGN, predicted susceptibility, resistance
@@ -451,6 +457,32 @@ category status, avidity)</li>
     </tr>
   </tbody>
 </table>
+
+<h3 id="ballot-questions">Ballot questions</h3>
+
+<p>This is a ballot candidate. The points below are deliberately left open, and we
+ask for comment on them during the ballot. Each is stated in full on the page it
+belongs to.</p>
+
+<ol>
+  <li><strong><a href="probe.html">Is a Specimen resource always available?</a></strong> — every
+investigation profile in this module requires <code class="language-plaintext highlighter-rouge">Observation.specimen</code>.</li>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Can the staining technique be represented via <code class="language-plaintext highlighter-rouge">Specimen</code> alone?</a></strong>
+— the European data model places it in <code class="language-plaintext highlighter-rouge">Specimen.processing</code>; we ask whether
+that is implementable.</li>
+  <li><strong><a href="probe.html">Mandatory storage temperature conditions on <code class="language-plaintext highlighter-rouge">Specimen.processing</code></a></strong>
+— inherited from the biobank base profile, without meaning for microbiological
+processing.</li>
+  <li><strong><a href="probe.html">Is incubation duration and temperature representable via <code class="language-plaintext highlighter-rouge">Specimen.processing</code>?</a></strong>
+— FHIR and the MII provide the pieces; the question is whether sites can supply
+them.</li>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Component or <code class="language-plaintext highlighter-rouge">hasMember</code> for a semiquantitative amount?</a></strong>
+— the European data model leaves this open; a component reverses a decision of
+this release cycle.</li>
+  <li><strong><a href="profilauswahl-und-abgrenzung.html">Can you supply <code class="language-plaintext highlighter-rouge">Observation.method</code> for every result?</a></strong>
+— the white paper asks for it always; this guide only recommends it, and your
+answer decides more than one question.</li>
+</ol>
 
 <h3 id="target-audience">Target audience</h3>
 
@@ -588,7 +620,7 @@ the content of this specification.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
+          Generated <span title="Thu, Sep 10, 2026 12:50+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

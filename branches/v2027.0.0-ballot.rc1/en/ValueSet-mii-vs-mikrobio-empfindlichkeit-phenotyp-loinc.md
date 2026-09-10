@@ -91,6 +91,18 @@ Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der 
         "op" : "=",
         "value" : "ACTIVE"
       }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "concept" : [{
+        "code" : "106843-6",
+        "display" : "Cefotaxime+Cloxacillin [Susceptibility] in Isolate by Broth dilution"
+      },
+      {
+        "code" : "103673-0",
+        "display" : "Isavuconazole [Susceptibility] in Isolate by Gradient strip"
+      }]
     }]
   }
 }

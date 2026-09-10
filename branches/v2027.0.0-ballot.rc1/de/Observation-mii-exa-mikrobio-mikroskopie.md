@@ -1,10 +1,10 @@
-# MII EXA Mikrobio Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Allgemeine Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **MII EXA Mikrobio Mikroskopie**
+* **MII EXA Mikrobio Allgemeine Mikroskopie**
 
-## Beispiel Observation: MII EXA Mikrobio Mikroskopie
+## Beispiel Observation: MII EXA Mikrobio Allgemeine Mikroskopie
 
 -------
 
@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Mikrobio Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)
+Profile: [MII PR Mikrobio Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)
 
 **identifier**: Observation Instance Identifier/mikroskopie-1
 

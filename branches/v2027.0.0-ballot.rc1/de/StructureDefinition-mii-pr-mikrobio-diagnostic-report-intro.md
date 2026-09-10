@@ -26,6 +26,25 @@ Umfasst ein Befund mehrere Studientypen, etwa den Nachweis von Bakterien **und**
 ]
 ```
 
+### Die zusammenfassende Beurteilung
+
+`DiagnosticReport.conclusion` trägt die zusammenfassende Beurteilung des Labors
+als Freitext. Das Element ist Must Support, geerbt aus dem Labor-Basisprofil, und
+in der Serologie ist es der tragende Teil des Befunds und nicht Beigabe.
+
+Der Grund: Eine serologische Diagnose ist oft keine ihrer Einzelmessungen. Bei
+akuter EBV-Infektion erscheint zuerst IgM gegen das Viruskapsid-Antigen, dann
+VCA-IgG, und EBNA-IgG entsteht erst nach sechs bis zwölf Wochen. Jedes der drei
+Ergebnisse ist eine eigene Observation; die Aussage „frische Infektion" oder
+„durchgemachte Infektion" ergibt sich erst aus der Zusammenschau und ist keine von
+ihnen. Das europäische Whitepaper formuliert es als „a serological report is often
+more than the sum of its parts" und verlangt, dass die Beurteilung austauschbar
+ist — „free text to begin with".
+
+`conclusionCode` wird hier bewusst nicht eingeschränkt. Das Whitepaper schlägt für
+den Anfang Freitext vor, und dieses Modul hat kein ValueSet für kodierte
+Gesamtaussagen.
+
 ### Beispiele
 
 Beispiel (minimal):

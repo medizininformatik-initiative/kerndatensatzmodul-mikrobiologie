@@ -10,7 +10,11 @@
 
 ## Befund - Probe
 
-Für die Abbildung von Proben wird auf das Profil [MII_PR_Biobank_Specimen_Bioprobe_Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core) aus dem [MII Modul Biobank](https://simplifier.net/medizininformatikinitiative-modulbiobank) verwiesen.
+**Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?** Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`. Das ist keine Festlegung, die dieser Leitfaden allein getroffen hat: Das europäische Whitepaper hält fest, dass die Probe **immer** ausdrücklich in einer FHIR-Specimen-Ressource abzubilden ist, bevorzugt in `Specimen.type` mit SNOMED CT — und sagt ausdrücklich, dass das auch dann gilt, **wenn der LOINC-Code die Probe bereits trägt**. Die Frage ist also nicht, ob die Anforderung richtig ist, sondern ob sie erfüllbar ist.
+
+Aus der deutschen Laborpraxis kommt die Rückmeldung, dass eine Specimen-Ressource häufig nicht erzeugt wird. **Wir möchten wissen, ob Ihr Standort eine liefern kann.** Wenn das für viele nicht gilt, weisen die beiden Auswege in entgegengesetzte Richtungen: `Observation.specimen` auf `0..1` lockern und präkoordinierte LOINC-Codes das Material tragen lassen, oder die Pflicht beibehalten und hinnehmen, dass manche Sender nicht konform sein können. Wir bitten um Rückmeldung im Ballot.
+
+Proben werden über [Probe](StructureDefinition-mii-pr-mikrobio-probe.md) abgebildet, das von [MII_PR_Biobank_Specimen_Bioprobe_Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core) aus dem [MII Modul Biobank](https://simplifier.net/medizininformatikinitiative-modulbiobank) ableitet — einem Basisprofil, das genau dafür geschrieben ist, dass Module davon ableiten statt es direkt zu implementieren. `Observation.specimen` jedes Untersuchungsprofils verweist darauf.
 
 Für die mikrobiologischen Anwendungsfälle sind dabei insbesondere folgende Elemente relevant:
 
@@ -20,4 +24,19 @@ Für die mikrobiologischen Anwendungsfälle sind dabei insbesondere folgende Ele
  Gibt den Zeitpunkt der Probenentnahme an. Ist dieser nicht bekannt, kann ersatzweise der Zeitpunkt des Probeneingangs dokumentiert werden.
 * **`Specimen.parent`**
  Bildet die Beziehung zu dem Specimen ab, aus dem ein anderes Specimen abgeleitet oder entnommen wurde, z. B. bei weiterverarbeiteten oder aus Primärproben gewonnenen Materialien.
+
+## Aufarbeitung, und was hier nicht abgebildet wird
+
+**Ballotfrage 3 — Pflicht-Temperaturbedingungen an `Specimen.processing`.** Das Basisprofil verlangt die Extension `temperaturbedingungen` an jedem `Specimen.processing`-Element, in `2026.0.1` wie in `2027.0.0-ballot.rc2`. Diese Pflicht stammt aus der Biobank, wo `Specimen.processing` den Lagerprozess einer Bioprobe beschreibt und die Temperatur zur Kernaussage gehört. In der Mikrobiologie beschreibt derselbe Platz die Aufarbeitung — Färbung, Anreicherung, Bebrütung —, und dort ist eine Lagertemperatur entweder unbekannt oder ohne Aussage. Ein abgeleitetes Profil darf nur verengen und nie lockern, dieses Modul kann die Pflicht also nicht auflösen. Wir halten sie in diesem Zusammenhang für fehlplatziert und bringen sie beim Biobank-Modul ein, mit dem Ziel, sie auf den Lagerprozess-Slice `processing:lagerprozess` zu begrenzen, wo sie hingehört. Wir bitten um Rückmeldung im Ballot, falls Sie davon betroffen sind.
+
+Die Färbetechnik wird deshalb **nicht** unter `Specimen.processing.procedure` angegeben, wie das europäische Datenmodell es vorschlägt, sondern in `Observation.method` — siehe [Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), wo Ballotfrage 2 die Begründung enthält.
+
+## Bebrütungsdauer und -temperatur
+
+**Ballotfrage 4 — ist die Bebrütung über `Specimen.processing` darstellbar?** FHIR sieht sie dort vor, und die MII hat die Bausteine bereits. Gemessen an R4 Core und am Biobank-Modul am 2026-09-10:
+
+* **Dauer** — `Specimen.processing.time[x]` als `Period`. `Specimen.processing` hat kein eigenes `Duration`-Element (`Specimen.collection.duration` meint die Entnahme), Start und Ende sind also die FHIR-eigene Form. Genau das verlangt das europäische Datenmodell, wenn es zu seinem Kandidaten-Code `80581-2` vermerkt „mandates for start/enddate" — mit einem `Period` ist die Anforderung erfüllt und kein neuer LOINC-Code nötig.
+* **Temperatur** — die Extension `MII_EX_Biobank_Temperaturbedingungen`, deren Context `Specimen.processing` ist und deren Wert ein `Range` ist. Das richtige Element und der richtige Datentyp für „35–37 °C".
+
+**Wir erbitten Rückmeldung, ob das bei Ihnen implementierbar ist.** Die Modellierung ist geklärt, die Umsetzbarkeit nicht. Wird keine Specimen-Ressource erzeugt (Ballotfrage 1), ist `Specimen.processing` unerreichbar, und die Alternative wären Extensions auf `Observation.method`, die das Verfahren in der Ressource qualifizieren, die das Ergebnis berichtet. Dieses Modul bildet die Bebrütung nicht ab, solange die Antwort fehlt.
 

@@ -128,6 +128,33 @@ No Expansion for this valueset (Unsupported Code System Version)
         "op" : "is-a",
         "value" : "49872002"
       }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "441649000"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "76222001"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "106763003"
+      }]
     }]
   }
 }

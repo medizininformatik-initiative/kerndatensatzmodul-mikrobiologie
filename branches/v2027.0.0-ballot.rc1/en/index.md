@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_IG_Mikrobiologie |
+| Active as of 2026-09-10 | *Computable Name*:MII_IG_Mikrobiologie |
 
 ### Introduction
 
@@ -16,11 +16,13 @@ This specification describes the FHIR representation of the Core Dataset (CDS) m
 
 The module describes the investigations carried out in laboratories to detect, identify and characterise microorganisms and their properties. It is of decisive importance because it forms the basis for a common investigation of infectious diseases and antibiotic resistance, which lead to global health emergencies and are among the main priorities of the [WHO](http://www.who.int).
 
-**Note.** In the course of a harmonisation process between the RKI, MIO42 and the MII, the microbiology data model was fundamentally revised. The agreements were additionally extended to the European context (EHDS). This alpha release reflects the current state of the agreements reached. An officially balloted release is planned for the end of the year.
+**Note on the state of the underlying model.** In the course of a harmonisation process between the RKI, MIO42 and the MII, the microbiology data model was fundamentally revised, and the agreements were extended to the European context (EHDS).
+
+That European model is **not yet final**. This release represents its current state as faithfully as an implementable specification allows: where the underlying agreements leave a question open, this guide states the decision it took and why. Points deliberately left open are listed under [Ballot questions](#ballot-questions), and we ask for comment on them. Implementers should expect changes in the areas concerned.
 
 The Microbiology 2027 extension module models microbiological findings as standalone Observations. The main domains are:
 
-* Culture (general, microscopy including Barlett/Nugent score, colony count, susceptibility)
+* Culture (general, microscopy including Bartlett/Nugent score, colony count, susceptibility)
 * Determination (general/specific, Ct value)
 * Quantitative tests (antigen/antibody, titre, molecular pathogen load)
 * Further properties (virulence, resistance mechanism, MRGN, predicted susceptibility, resistance category status, avidity)
@@ -33,6 +35,17 @@ Components of Observations were moved into separate profiles in this version.
 | Version | 2027.0.0-ballot.rc1 (CalVer`YYYY.n.n`) |
 | Status | active |
 | Realm | DE |
+
+### Ballot questions
+
+This is a ballot candidate. The points below are deliberately left open, and we ask for comment on them during the ballot. Each is stated in full on the page it belongs to.
+
+1. **[Is a Specimen resource always available?](probe.md)**— every investigation profile in this module requires`Observation.specimen`.
+1. **[Can the staining technique be represented via `Specimen` alone?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)**— the European data model places it in`Specimen.processing`; we ask whether that is implementable.
+1. **[Mandatory storage temperature conditions on `Specimen.processing`](probe.md)**— inherited from the biobank base profile, without meaning for microbiological processing.
+1. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.md)**— FHIR and the MII provide the pieces; the question is whether sites can supply them.
+1. **[Component or `hasMember` for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)**— the European data model leaves this open; a component reverses a decision of this release cycle.
+1. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.md)**— the white paper asks for it always; this guide only recommends it, and your answer decides more than one question.
 
 ### Target audience
 

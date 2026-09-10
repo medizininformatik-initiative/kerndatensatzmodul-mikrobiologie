@@ -10,9 +10,18 @@ A susceptibility result carries two different statements: what was **measured**,
 
 ### Measured value and assessment
 
-`Observation.value[x]` carries the measurement — a minimum inhibitory concentration in mg/L, or an inhibition zone diameter in mm. It is a `Quantity` and nothing else; a bare S/I/R without a measurement does not belong here.
+`Observation.value[x]` carries the measurement — a minimum inhibitory concentration in mg/L, or an inhibition zone diameter in mm.
 
-`Observation.interpretation` carries the assessment: the category the measurement falls into. Consumers therefore have exactly one place to read the category, and the measured value stays comparable across laboratories.
+`Observation.interpretation` carries the assessment: the category the measurement falls into, together with the norm it was derived from.
+
+Not every laboratory measures. Where only the category is available, it is given as a `CodeableConcept` in `value[x]` — the European data model settles this explicitly, and an Observation with no value at all would be the more unusual shape. Two invariants keep that from becoming ambiguous:
+
+* `empfindlichkeit-kategorie-braucht-interpretation` — a category in `value[x]` requires an `interpretation`, because the norm hangs there and a category without its norm says nothing.
+* `empfindlichkeit-kategorie-stimmt-mit-interpretation` — where both are given, every code of the value must also appear among the interpretation codes.
+
+So a consumer reads the category from `interpretation` in every case, and `value[x]` tells it whether a measurement stands behind it.
+
+The reverse — a measured value without a category — is flagged as a **warning** by `empfindlichkeit-messwert-sollte-bewertet-sein` rather than rejected. A bare MIC leaves the assessment to the consumer, who would need the breakpoint tables for it. But a requirement would be wrong: for some organism and agent combinations no breakpoints are defined, and then there is no category to give.
 
 ### The categories
 
@@ -33,8 +42,6 @@ A category is meaningless without the breakpoints it was derived from: the same 
 The norm therefore hangs on the **interpretation**, not on the Observation — `Observation.interpretation.extension`, mandatory. Because `interpretation` is `0..*`, one measured MIC can carry a EUCAST and a CLSI category side by side, each with its own norm. Hanging the norm on the Observation would make that impossible.
 
 The norm is coded from the module's own CodeSystem: `EUCAST`, `CLSI`, `Andere`.
-
-**Open point.** The norm's **version** cannot yet be expressed, although breakpoints change annually. Without a year, a stored MIC cannot be re-interpreted later. See the decision queue in the migration report.
 
 ### Predicted susceptibility is a different statement
 

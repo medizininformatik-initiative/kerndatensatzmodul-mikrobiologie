@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC |
+| Active as of 2026-09-10 | *Computable Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC |
 
  
 Tests-ValueSet fuer die spezifische Bestimmung. 
@@ -42,7 +42,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
   "title" : "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T15:55:32+00:00",
+  "date" : "2026-09-10T12:50:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

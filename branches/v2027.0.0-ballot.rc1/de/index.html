@@ -322,7 +322,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           
 
             Stand: 
-2026-09-09
+2026-09-10
 
           
         
@@ -350,6 +350,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#einleitung" id="markdown-toc-einleitung">Einleitung</a></li>
+  <li><a href="#ballotfragen" id="markdown-toc-ballotfragen">Ballotfragen</a></li>
   <li><a href="#zielgruppe" id="markdown-toc-zielgruppe">Zielgruppe</a></li>
   <li><a href="#inhalt-dieses-leitfadens" id="markdown-toc-inhalt-dieses-leitfadens">Inhalt dieses Leitfadens</a></li>
   <li><a href="#verwandte-leitfäden" id="markdown-toc-verwandte-leitfäden">Verwandte Leitfäden</a></li>
@@ -384,12 +385,18 @@ Antibiotikaresistenzen bildet, die zu globalen Gesundheitsnotfällen führen und
 den Hauptprioritäten der <a href="http://www.who.int" title="WHO">WHO</a> gehören.</p>
 
 <div class="ig-highlight ig-highlight-orange">
-  <p><strong>Hinweis.</strong> Im Rahmen eines Harmonisierungsprozesses zwischen dem RKI, MIO42 und
-der MII wurde das Mikrobiologie-Datenmodell grundlegend überarbeitet. Die
-Abstimmungen wurden zusätzlich auf den europäischen Kontext (EHDS) ausgeweitet.
-Der vorliegende Alpha-Release bildet den aktuellen Stand der erzielten
-Abstimmungsergebnisse ab. Ein offiziell ballotiertes Release ist für Ende des
-Jahres vorgesehen.</p>
+  <p><strong>Hinweis zum Stand des zugrunde liegenden Modells.</strong> Im Rahmen eines
+Harmonisierungsprozesses zwischen dem RKI, MIO42 und der MII wurde das
+Mikrobiologie-Datenmodell grundlegend überarbeitet; die Abstimmungen wurden auf
+den europäischen Kontext (EHDS) ausgeweitet.</p>
+
+  <p>Dieses europäische Modell ist <strong>noch nicht final</strong>. Der vorliegende Release bildet
+seinen aktuellen Stand so genau ab, wie es eine implementierbare Spezifikation
+zulässt: Wo die zugrunde liegenden Abstimmungen eine Frage offen lassen, benennt
+dieser Leitfaden die getroffene Entscheidung und ihre Begründung. Bewusst offen
+gelassene Punkte stehen unter <a href="#ballotfragen">Ballotfragen</a>, zu denen wir um
+Rückmeldung bitten. Implementierende sollten in den betroffenen Bereichen mit
+Änderungen rechnen.</p>
 </div>
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Beschreibung-Modul-Mikrobiologie.page.md  -->
@@ -397,7 +404,7 @@ Jahres vorgesehen.</p>
 eigenständige Observationen. Die wichtigsten Domänen sind:</p>
 
 <ul>
-  <li>Kultur (allgemein, Mikroskopie inkl. Barlett-/Nugent-Score, Keimzahl, Empfindlichkeit)</li>
+  <li>Kultur (allgemein, Mikroskopie inkl. Bartlett-/Nugent-Score, Keimzahl, Empfindlichkeit)</li>
   <li>Bestimmung (allgemein/spezifisch, Ct-Wert)</li>
   <li>Quantitative tests (Antigen/Antikoerper, Titer, molekulare Pathogenlast)</li>
   <li>Weitere Eigenschaften (Virulenz, Resistenzmechanismus, MRGN, voraussichtliche Empfindlichkeit, MRE Klasse, Aviditaet)</li>
@@ -432,6 +439,32 @@ Profile überführt.</p>
     </tr>
   </tbody>
 </table>
+
+<h3 id="ballotfragen">Ballotfragen</h3>
+
+<p>Dies ist ein Ballot-Kandidat. Die folgenden Punkte sind bewusst offen gelassen;
+wir bitten während des Ballots um Rückmeldung dazu. Jeder ist auf der Seite
+vollständig dargestellt, zu der er gehört.</p>
+
+<ol>
+  <li><strong><a href="probe.html">Entsteht immer eine Specimen-Ressource?</a></strong> — jedes
+Untersuchungsprofil dieses Moduls verlangt <code class="language-plaintext highlighter-rouge">Observation.specimen</code>.</li>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Ist die Färbetechnik allein über <code class="language-plaintext highlighter-rouge">Specimen</code> darstellbar?</a></strong>
+— das europäische Datenmodell legt sie nach <code class="language-plaintext highlighter-rouge">Specimen.processing</code>; wir fragen,
+ob das implementierbar ist.</li>
+  <li><strong><a href="probe.html">Pflicht-Temperaturbedingungen an <code class="language-plaintext highlighter-rouge">Specimen.processing</code></a></strong> — aus
+dem Bioproben-Basisprofil geerbt, ohne Aussage für die mikrobiologische
+Aufarbeitung.</li>
+  <li><strong><a href="probe.html">Sind Bebrütungsdauer und -temperatur über <code class="language-plaintext highlighter-rouge">Specimen.processing</code> darstellbar?</a></strong>
+— FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie
+befüllen können.</li>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Komponente oder <code class="language-plaintext highlighter-rouge">hasMember</code> für eine semiquantitative Menge?</a></strong>
+— das europäische Datenmodell lässt es offen; eine Komponente dreht eine
+Entscheidung dieses Zyklus zurück.</li>
+  <li><strong><a href="profilauswahl-und-abgrenzung.html">Können Sie zu jedem Befund <code class="language-plaintext highlighter-rouge">Observation.method</code> liefern?</a></strong>
+— das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre
+Antwort entscheidet mehr als eine Frage.</li>
+</ol>
 
 <h3 id="zielgruppe">Zielgruppe</h3>
 
@@ -574,7 +607,7 @@ aus dem Inhalt dieser Spezifikation entstehen könnten.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
+          Erstellt <span title="Thu, Sep 10, 2026 12:50+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

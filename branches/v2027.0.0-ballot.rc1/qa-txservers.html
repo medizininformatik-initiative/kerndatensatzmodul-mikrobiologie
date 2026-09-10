@@ -12,7 +12,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for MII_IG_Mikrobiologie</h1>
- <p>Generated Wed Sep 09 16:00:58 UTC 2026, FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 (canonical = <a href="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio">https://www.medizininformatik-initiative.de/fhir/modul-mikrobio</a> (<a href="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html">history</a>))</p>
+ <p>Generated Thu Sep 10 12:58:32 UTC 2026, FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 (canonical = <a href="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio">https://www.medizininformatik-initiative.de/fhir/modul-mikrobio</a> (<a href="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -90,6 +90,10 @@
   </li>
   <li>
     <b>default-canonical-version</b>
+:     <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie|2027.0.0-ballot.rc1</code>
+  </li>
+  <li>
+    <b>default-canonical-version</b>
 :     <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ|2027.0.0-ballot.rc1</code>
   </li>
   <li>
@@ -110,7 +114,7 @@
   </li>
   <li>
     <b>default-canonical-version</b>
-:     <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score|2027.0.0-ballot.rc1</code>
+:     <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-bartlett-score|2027.0.0-ballot.rc1</code>
   </li>
   <li>
     <b>default-canonical-version</b>
@@ -284,6 +288,10 @@
     <b>default-canonical-version</b>
 :     <code>http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-implementationguide|2.0.0</code>
   </li>
+  <li>
+    <b>default-canonical-version</b>
+:     <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe|2027.0.0-ballot.rc1</code>
+  </li>
 </ul>
 <h2>Tx Manager report for 'https://tx.fhir.org/tx-reg'</h2>
 <p>
@@ -427,11 +435,32 @@
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
   <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
     <td></td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -602,6 +631,20 @@
     <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://unitsofmeasure.org</td>
     <td>https://tx.fhir.org/r4</td>
     <td></td>
@@ -623,6 +666,13 @@
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
   <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://unitsofmeasure.org</td>
     <td>https://tx.fhir.org/r4</td>
     <td></td>
@@ -744,6 +794,27 @@
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en, en-US]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en, en-US]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en, en-US]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
     <td></td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
@@ -754,6 +825,13 @@
     <td>null</td>
     <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -810,6 +888,41 @@
     <td></td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -849,7 +962,7 @@
   <tr>
     <td>Use primary server for urn:ietf:bcp:47</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>urn:uuid:7bf84d58-10cd-4322-808a-9e9c4f238ade|1</td>
+    <td>urn:uuid:9e2ecc7c-668c-4a41-a2c5-fcd965ac998f|1</td>
     <td>urn:ietf:bcp:47</td>
     <td>[urn:ietf:bcp:47 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4</td>
   </tr>
@@ -887,6 +1000,48 @@
     <td>null</td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
   </tr>
   <tr>
     <td>Use primary server for http://unitsofmeasure.org</td>
@@ -998,13 +1153,6 @@
     <td>https://tx.fhir.org/r4</td>
     <td>null</td>
     <td>http://loinc.org|2.82</td>
-    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
@@ -1092,6 +1240,20 @@
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://unitsofmeasure.org</td>
     <td>https://tx.fhir.org/r4</td>
     <td>null</td>
@@ -1232,6 +1394,27 @@
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
   <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>https://tx.fhir.org/r4</td>
     <td>null</td>
@@ -1244,6 +1427,27 @@
     <td>null</td>
     <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -1272,6 +1476,48 @@
     <td>null</td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -1325,7 +1571,7 @@
   <tr>
     <td>Use primary server for urn:ietf:bcp:47</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>urn:uuid:7bf84d58-10cd-4322-808a-9e9c4f238ade|1</td>
+    <td>urn:uuid:9e2ecc7c-668c-4a41-a2c5-fcd965ac998f|1</td>
     <td>urn:ietf:bcp:47</td>
     <td>[urn:ietf:bcp:47 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4</td>
   </tr>
@@ -1339,7 +1585,7 @@
   <tr>
     <td>Use primary server for urn:ietf:bcp:47</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>urn:uuid:7bf84d58-10cd-4322-808a-9e9c4f238ade|1</td>
+    <td>urn:uuid:9e2ecc7c-668c-4a41-a2c5-fcd965ac998f|1</td>
     <td>urn:ietf:bcp:47</td>
     <td>[urn:ietf:bcp:47 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4</td>
   </tr>
@@ -1349,20 +1595,6 @@
     <td>http://hl7.org/fhir/ValueSet/all-languages|4.0.1</td>
     <td>urn:ietf:bcp:47</td>
     <td>[urn:ietf:bcp:47 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -1421,16 +1653,23 @@
     <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Use primary server for http://loinc.org</td>
+    <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
     <td>null</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie</td>
     <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for urn:ietf:bcp:13</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>urn:uuid:766302b3-ae23-4005-8139-d58ba3ffe91d|1</td>
+    <td>urn:uuid:7548e0f4-b243-4f3e-929a-29db789b2ad3|1</td>
     <td>urn:ietf:bcp:13</td>
     <td>[urn:ietf:bcp:13 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.hl7.cz/r4</td>
   </tr>
@@ -1444,7 +1683,7 @@
   <tr>
     <td>Use primary server for urn:ietf:bcp:13</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>urn:uuid:766302b3-ae23-4005-8139-d58ba3ffe91d|1</td>
+    <td>urn:uuid:7548e0f4-b243-4f3e-929a-29db789b2ad3|1</td>
     <td>urn:ietf:bcp:13</td>
     <td>[urn:ietf:bcp:13 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.hl7.cz/r4</td>
   </tr>
@@ -1528,7 +1767,7 @@
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc|2027.0.0-ballot.rc1</td>
     <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
@@ -1563,7 +1802,35 @@
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc|2027.0.0-ballot.rc1</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed|2027.0.0-ballot.rc1</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
     <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed|2027.0.0-ballot.rc1</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc|2027.0.0-ballot.rc1</td>
     <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
@@ -1654,7 +1921,7 @@
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-barlett-score-loinc|2027.0.0-ballot.rc1</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-bartlett-score-loinc|2027.0.0-ballot.rc1</td>
     <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
@@ -1766,7 +2033,7 @@
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc|2027.0.0-ballot.rc1</td>
     <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
@@ -1790,6 +2057,34 @@
     <td>null</td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed|2027.0.0-ballot.rc1</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc|2027.0.0-ballot.rc1</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips|2.0.1</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -2004,20 +2299,6 @@
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed|2027.0.0-ballot.rc1</td>
-    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
-    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
-    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
-    <td>https://tx.fhir.org/r4</td>
     <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed|2027.0.0-ballot.rc1</td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
@@ -2035,6 +2316,90 @@
     <td>http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips|2.0.1</td>
     <td>[http://loinc.org, http://loinc.org|2.82]</td>
     <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc|2027.0.0-ballot.rc1</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips|2.0.1</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed|2027.0.0-ballot.rc1</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc|2027.0.0-ballot.rc1</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips|2.0.1</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed|2027.0.0-ballot.rc1</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed|2027.0.0-ballot.rc1</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc|2027.0.0-ballot.rc1</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips|2.0.1</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4, [http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unitsofmeasure.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://unitsofmeasure.org</td>
+    <td>[http://unitsofmeasure.org|3.0.1 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -2137,8 +2502,22 @@
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-probenart-sct|2027.0.0-ballot.rc2</td>
+    <td>http://snomed.info/sct</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
     <td>null</td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-probenart-sct|2027.0.0-ballot.rc2</td>
+    <td>http://snomed.info/sct</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701 in en]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
   <tr>
@@ -2156,20 +2535,6 @@
     <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
-  </tr>
-  <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
     <td>null</td>
@@ -2203,26 +2568,12 @@
     <td>null</td>
     <td>http://loinc.org</td>
     <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in en, en-US]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>https://tx.fhir.org/r4</td>
     <td></td>
-    <td>http://loinc.org</td>
+    <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
@@ -2303,13 +2654,6 @@
     <td>[http://loinc.org|2.82 in de]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in de]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
-  </tr>
-  <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
     <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed|2027.0.0-ballot.rc1</td>
@@ -2319,9 +2663,9 @@
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -2336,13 +2680,6 @@
     <td></td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in de]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -2434,6 +2771,13 @@
     <td>null</td>
     <td>http://loinc.org</td>
     <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -2499,11 +2843,25 @@
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://unitsofmeasure.org</td>
     <td>https://tx.fhir.org/r4</td>
     <td></td>
     <td>http://unitsofmeasure.org</td>
     <td>[http://unitsofmeasure.org|3.0.1]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4|https://tx.hl7.cz/r4|https://nzhts.digital.health.nz/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -2550,9 +2908,9 @@
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in en]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -2569,11 +2927,11 @@
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://loinc.org</td>
+    <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://loinc.org</td>
-    <td>[http://loinc.org|2.82 in de]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+    <td></td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -2665,6 +3023,13 @@
     <td></td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -2863,11 +3228,39 @@
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>https://tx.fhir.org/r4</td>
     <td></td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>https://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://tx.fhir.org/r4|https://tx.hl7.org.au/fhir|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://178.104.103.200.sslip.io/tx/r4|http://tx.hl7europe.eu/r4|https://tx.fhir.ch/r4|https://tx.hl7chile.cl/r4|https://tx.fhir.de/fhir|https://tx.hl7.cz/r4</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -2961,7 +3354,7 @@
 </table>
 <h2>Primary Server: https://tx.fhir.org/r4</h2>
 <a href="https://tx.fhir.org/r4"></a>
-<p>Use Count: 382. Code Systems used: </p>
+<p>Use Count: 443. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -2990,7 +3383,7 @@
     <td>0</td>
     <td>2</td>
     <td>
-      <a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-nciThesaurus.html">NCI Thesaurus</a>
+      <a href="http://terminology.hl7.org/6.3.0/CodeSystem-v3-nciThesaurus.html">NCI Thesaurus</a>
     </td>
   </tr>
   <tr>
@@ -3014,16 +3407,19 @@
     <td>1</td>
     <td>0</td>
     <td>
-      <a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-iso3166-2.html">ISO 3166-2 Codes for the representation of names of countries and their subdivisions — Part 2: Country subdivision code</a>
+      <a href="http://terminology.hl7.org/6.3.0/CodeSystem-v3-iso3166-2.html">ISO 3166-2 Codes for the representation of names of countries and their subdivisions — Part 2: Country subdivision code</a>
     </td>
   </tr>
 </table>
 <p>ValueSets fetched:</p>
 <ul>
+  <li>http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank</li>
   <li>http://snomed.info/sct</li>
   <li>http://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor</li>
+  <li>http://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie</li>
   <li>http://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5</li>
   <li>https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor</li>
+  <li>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie</li>
   <li>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5</li>
 </ul>
 <h2>Server: https://tx.fhir.org/r4</h2>

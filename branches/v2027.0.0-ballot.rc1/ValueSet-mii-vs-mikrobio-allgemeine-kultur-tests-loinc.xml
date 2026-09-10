@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-allgemeine-kultur-tests-loinc"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-allgemeine-kultur-tests-loinc</b></p><a name="mii-vs-mikrobio-allgemeine-kultur-tests-loinc"> </a><a name="hcmii-vs-mikrobio-allgemeine-kultur-tests-loinc"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.82"> version &#x1F4CD;2.82</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/11475-1/">11475-1</a></td><td>Microorganism identified in Specimen by Culture</td></tr><tr><td><a href="https://loinc.org/41852-5/">41852-5</a></td><td>Microorganism or agent identified in Specimen</td></tr></table></li></ul></div><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-allgemeine-kultur-tests-loinc</b></p><a name="de-mii-vs-mikrobio-allgemeine-kultur-tests-loinc"> </a><a name="de-hcmii-vs-mikrobio-allgemeine-kultur-tests-loinc"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.82"> version &#x1F4CD;2.82</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/11475-1/">11475-1</a></td><td>Microorganism identified in Specimen by Culture</td></tr><tr><td><a href="https://loinc.org/41852-5/">41852-5</a></td><td>Microorganism or agent identified in Specimen</td></tr></table></li></ul></div></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII_VS_Mikrobio_Allgemeine_Kultur_Tests_LOINC"/>
+  <title value="MII VS Mikrobio Allgemeine Kultur Tests [LOINC]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-10T12:50:06+00:00"/>
+  <publisher value="Medizininformatik Initiative">
+    <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+      <extension url="lang">
+        <valueCode value="de"/>
+      </extension>
+      <extension url="content">
+        <valueString value="Medizininformatik Initiative"/>
+      </extension>
+    </extension>
+  </publisher>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Tests-ValueSet für die allgemeine Kultur: LOINC-Codes für die ungerichtete kulturelle Untersuchung. Bevorzugt wird 11475-1, weil der Code das Verfahren selbst benennt; 41852-5 ist gleichwertig zulässig."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <version value="2.82"/>
+      <concept>
+        <code value="11475-1"/>
+        <display value="Microorganism identified in Specimen by Culture"/>
+      </concept>
+      <concept>
+        <code value="41852-5"/>
+        <display value="Microorganism or agent identified in Specimen"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:ObservationInterpretation |
+| Active as of 2026-09-10 | *Computable Name*:ObservationInterpretation |
 
  
 Suche nach der Interpretation einer mikrobiologischen Observation. 
@@ -26,7 +26,7 @@ Suche nach der Interpretation einer mikrobiologischen Observation.
   "version" : "2027.0.0-ballot.rc1",
   "name" : "ObservationInterpretation",
   "status" : "active",
-  "date" : "2026-09-09T15:55:32+00:00",
+  "date" : "2026-09-10T12:50:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

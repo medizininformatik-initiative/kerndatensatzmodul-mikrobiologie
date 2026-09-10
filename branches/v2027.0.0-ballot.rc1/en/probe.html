@@ -334,15 +334,38 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
-</div>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#report---specimen" id="markdown-toc-report---specimen">Report - Specimen</a></li>
+  <li><a href="#processing-and-what-is-not-represented-here" id="markdown-toc-processing-and-what-is-not-represented-here">Processing, and what is not represented here</a></li>
+  <li><a href="#incubation-duration-and-temperature" id="markdown-toc-incubation-duration-and-temperature">Incubation duration and temperature</a></li>
+</ul>
 
+</div>
 <h3 id="report---specimen">Report - Specimen</h3>
 
-<p>For representing specimens, the profile
+<p class="bg-warning"><strong>Ballot question 1 — can you supply a Specimen resource for every result?</strong>
+Every investigation profile in this module requires <code class="language-plaintext highlighter-rouge">Observation.specimen</code>. That
+is not a choice this guide made on its own: the European white paper states that
+the specimen <strong>shall always</strong> be represented explicitly in a FHIR Specimen
+resource, preferably in <code class="language-plaintext highlighter-rouge">Specimen.type</code> using SNOMED CT — and expressly says this
+holds <em>even where the LOINC code already carries the specimen</em>. So the question
+is not whether the requirement is right, but whether it is deliverable.</p>
+
+<p>Feedback from German laboratory practice is that a Specimen resource is
+frequently not produced. <strong>We would like to know whether your site can supply
+one.</strong> If a substantial number cannot, the two ways out point in opposite
+directions: relax <code class="language-plaintext highlighter-rouge">Observation.specimen</code> to <code class="language-plaintext highlighter-rouge">0..1</code> and let pre-coordinated LOINC
+codes carry the material, or keep the requirement and accept that some senders
+cannot conform. Please comment during the ballot.</p>
+
+<p>Specimens are represented by <a href="StructureDefinition-mii-pr-mikrobio-probe.html">Specimen</a>,
+which derives from
 <a href="https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core">MII_PR_Biobank_Specimen_Bioprobe_Core</a>
-from the <a href="https://simplifier.net/medizininformatikinitiative-modulbiobank">MII Biobank module</a> is referenced.</p>
+of the <a href="https://simplifier.net/medizininformatikinitiative-modulbiobank">MII Biobank module</a> —
+a base profile written for exactly this purpose, which modules derive from rather
+than implement directly. <code class="language-plaintext highlighter-rouge">Observation.specimen</code> of every investigation profile
+references it.</p>
 
 <p>The following elements are particularly relevant for the microbiological use cases:</p>
 
@@ -364,6 +387,52 @@ Represents the relationship to the specimen from which another specimen was deri
 e.g. for further-processed materials or materials obtained from primary specimens.</p>
   </li>
 </ul>
+
+<h3 id="processing-and-what-is-not-represented-here">Processing, and what is not represented here</h3>
+
+<p class="bg-warning"><strong>Ballot question 3 — mandatory storage temperature conditions on <code class="language-plaintext highlighter-rouge">Specimen.processing</code>.</strong>
+The base profile requires the extension <code class="language-plaintext highlighter-rouge">temperaturbedingungen</code> on every
+<code class="language-plaintext highlighter-rouge">Specimen.processing</code> element, in <code class="language-plaintext highlighter-rouge">2026.0.1</code> as in <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code>. That
+requirement comes from the biobank, where <code class="language-plaintext highlighter-rouge">Specimen.processing</code> describes the
+storage process of a biosample and the temperature is a core statement. In
+microbiology the same place describes laboratory processing — staining,
+enrichment, incubation — where a storage temperature is either unknown or
+without meaning. A derived profile can only narrow, never relax, so this module
+cannot resolve it. We consider the requirement misplaced in this context and are
+raising it with the biobank module, with a view to confining it to the storage
+slice <code class="language-plaintext highlighter-rouge">processing:lagerprozess</code>, where it belongs. Please comment during the
+ballot if you are affected.</p>
+
+<p>The staining technique is consequently <strong>not</strong> given under
+<code class="language-plaintext highlighter-rouge">Specimen.processing.procedure</code>, as the European data model proposes, but in
+<code class="language-plaintext highlighter-rouge">Observation.method</code> — see
+<a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Microscopy</a>, where ballot
+question 2 sets out the reasoning.</p>
+
+<h3 id="incubation-duration-and-temperature">Incubation duration and temperature</h3>
+
+<p class="bg-warning"><strong>Ballot question 4 — is incubation representable via <code class="language-plaintext highlighter-rouge">Specimen.processing</code>?</strong>
+FHIR provides for it there, and the MII already has the pieces. Measured against
+R4 core and the biobank module on 2026-09-10:</p>
+
+<ul>
+  <li><strong>Duration</strong> — <code class="language-plaintext highlighter-rouge">Specimen.processing.time[x]</code> as a <code class="language-plaintext highlighter-rouge">Period</code>. <code class="language-plaintext highlighter-rouge">Specimen.processing</code>
+has no <code class="language-plaintext highlighter-rouge">Duration</code> element of its own (<code class="language-plaintext highlighter-rouge">Specimen.collection.duration</code> refers to
+collection), so start and end are the FHIR-native form. That is precisely what
+the European data model asks for when it notes that its candidate LOINC code
+<code class="language-plaintext highlighter-rouge">80581-2</code> "mandates for start/enddate" — with a <code class="language-plaintext highlighter-rouge">Period</code> the requirement is met
+and no new LOINC code is needed.</li>
+  <li><strong>Temperature</strong> — the extension <code class="language-plaintext highlighter-rouge">MII_EX_Biobank_Temperaturbedingungen</code>, whose
+context is <code class="language-plaintext highlighter-rouge">Specimen.processing</code> and whose value is a <code class="language-plaintext highlighter-rouge">Range</code>. The right element
+and the right datatype for "35-37 degrees C".</li>
+</ul>
+
+<p><strong>We ask whether that is implementable at your site.</strong> The modelling is settled;
+the deployment reality is not. If no Specimen resource is produced (ballot
+question 1), <code class="language-plaintext highlighter-rouge">Specimen.processing</code> is out of reach, and the alternative would be
+extensions on <code class="language-plaintext highlighter-rouge">Observation.method</code>, which qualify the technique in the resource
+that reports the result. This module does not represent incubation until the
+answer is in.</p>
 
 
 
@@ -390,7 +459,7 @@ e.g. for further-processed materials or materials obtained from primary specimen
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 9, 2026 15:55+0000">2026-09-09</span>
+          Generated <span title="Thu, Sep 10, 2026 12:50+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
