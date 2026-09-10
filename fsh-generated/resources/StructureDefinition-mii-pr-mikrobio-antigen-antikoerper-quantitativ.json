@@ -214,6 +214,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
+        "short": "In der Serologie ist ein praekoordiniertes Specimen ausdruecklich zulaessig — anders als in den uebrigen Bereichen dieses Moduls gilt die Konvention 'System = XXX' hier NICHT. Das europaeische Whitepaper begruendet die Ausnahme damit, dass in der Serologie nur wenige Materialien vorkommen, ueberwiegend Serum, und ein Code-Wildwuchs deshalb nicht droht.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"
@@ -241,6 +242,7 @@
       {
         "id": "Observation.value[x]:valueQuantity.code",
         "path": "Observation.value[x].code",
+        "short": "Bevorzugt eine Einheit mit LITER als Nenner — ng/L, pg/L, ug/L, [IU]/L, [arb'U]/L. Das europaeische Whitepaper empfiehlt fuer die Serologie den Liter, weil das NPU-System ihn durchgaengig verwendet. Die mL-Varianten bleiben zulaessig, weil [IU]/mL international verbreitet ist.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"
@@ -265,7 +267,15 @@
       {
         "id": "Observation.specimen",
         "path": "Observation.specimen",
-        "min": 1
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
+            ]
+          }
+        ]
       }
     ]
   }

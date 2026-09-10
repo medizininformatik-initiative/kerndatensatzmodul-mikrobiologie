@@ -1,29 +1,34 @@
-// TODO (2026-09-03) — MIGRATION/Gate B, aus Anwenderrückmeldung Labor:
-// ASYMMETRIE zwischen qualitativen und quantitativen Ergebnissen prüfen.
+// WARUM QUALITATIVE NACHWEISE ZUSAMMENLIEGEN UND QUANTITATIVE NICHT — beantwortet
+// am 2026-09-10. Die Frage kam aus einer Anwenderrueckmeldung aus dem Labor und
+// ist berechtigt, denn die Aufteilung sieht auf den ersten Blick inkonsequent aus:
 //
-// Bei QUANTITATIVEN Ergebnissen trennt das Modell nach Verfahren:
-//   MII_PR_Mikrobio_Molekulare_Pathogenlast (molekular)
-//   MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ (serologisch)
-// Bei QUALITATIVEN Ergebnissen liegen molekulare und serologische Nachweise
-// dagegen zusammen in DIESEM Profil. Die Spezifische Kultur ist wiederum
-// eigenständig. Für Anwender im Labor wirkt das inkonsequent.
+//   quantitativ   MII_PR_Mikrobio_Molekulare_Pathogenlast          (molekular)
+//                 MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ  (serologisch)
+//   qualitativ    DIESES Profil                     (molekular UND serologisch)
+//   kulturell     MII_PR_Mikrobio_Spezifische_Kultur (eigenstaendig)
 //
-// Die Begründung, die das Modell trägt: ein Profil folgt der Fragestellung und
-// dem ERGEBNISTYP, nicht dem Verfahren. Qualitativ gibt es einen Ergebnisraum
-// (Detected/Not detected), quantitativ mehrere (Kopien/mL, Konzentration,
-// Verdünnungsstufe), kulturell einen dritten (Wachstum/kein Wachstum). Das
-// Verfahren steht in Observation.method.
-// Diese Regel ist seit 2026-09-03 auf profilauswahl-und-abgrenzung dokumentiert.
+// Die Regel ist jedes Mal dieselbe: Ein Profil folgt der FRAGESTELLUNG und dem
+// ERGEBNISRAUM, nicht dem Verfahren. Nur die Zahl der unterscheidbaren
+// Ergebnisraeume ist verschieden. Qualitativ gibt es einen — Detected /
+// Not detected, gleich ob per PCR oder Immunoassay gefunden. Quantitativ mehrere:
+// Kopien je Volumen, eine Konzentration, eine Verduennungsstufe sind verschiedene
+// Raeume mit verschiedenen Einheiten. Kulturell einen dritten: Wachstum oder kein
+// Wachstum. Das Verfahren steht in Observation.method.
 //
-// OFFEN bleibt trotzdem die fachliche Bestätigung: Trägt die Regel auch aus
-// Sicht der Laborpraxis, oder soll der qualitative Fall wie der quantitative
-// nach Verfahren getrennt werden? Eine Trennung wäre eine Modelländerung mit
-// neuen Canonicals, keine Redaktion.
+// Der Whitepaper-Durchgang vom 2026-09-10 hat diese Regel an vier unabhaengigen
+// Stellen bestaetigt:
+//   - "Culture and Detection by Culture", Prinzip 1 "Separate Culture from
+//     Identification": Kombinierte Codes erzeugen Unsinn wie "culture by means of
+//     MALDI-TOF" — der Ergebnisraum, nicht das Verfahren, trennt.
+//   - Das Empfindlichkeitskapitel trennt Messwert und Kategorie nach
+//     Ergebnistyp, nicht nach Geraet.
+//   - Die Serologie wird eigens behandelt, weil ihre Rahmenbedingungen andere
+//     sind — nicht weil ihre Verfahren andere sind.
+//   - "Recommended Patterns & Conventions": Postkoordination, Verfahren nach
+//     Observation.method.
 //
-// Aus derselben Rückmeldung, separat zu entscheiden: den TITLE der Allgemeinen
-// Bestimmung um "Identifizierung" ergänzen — "Bestimmung" ist im kulturellen
-// Kontext missverständlich, wo es faktisch die MALDI-TOF-Speziesidentifizierung
-// ist. Ein Title ändert weder Id noch Canonical.
+// Was die Rueckmeldung anzweifelt, ist damit europaeisch abgestimmt. Die Regel
+// steht seit 2026-09-03 auf profilauswahl-und-abgrenzung, jetzt mit den Belegen.
 Profile: MII_PR_Mikrobio_Spezifische_Bestimmung
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-spezifische-bestimmung
@@ -32,7 +37,7 @@ Description: "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines 
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "Dieses Profil beschreibt den zielgerichteten, nicht kulturbasierten Nachweis. Es bildet auch das negative Ergebnis eines zielgerichteten Erregernachweises ab, z. B. einen negativen VRE-Nachweis über 105904-7 mit dem Wert 'Not detected'."
 * code from MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC (extensible)
-* code ^short = "Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert."
+* code ^short = "Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert. AUSNAHME fuer die serologische Anwendung dieses Profils — qualitativer Antigen- oder Antikoerpernachweis: Dort ist ein praekoordiniertes Specimen zulaessig, weil in der Serologie nur wenige Materialien vorkommen, ueberwiegend Serum."
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED (extensible)

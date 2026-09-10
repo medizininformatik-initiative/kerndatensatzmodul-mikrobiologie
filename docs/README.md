@@ -12,6 +12,7 @@ map of everything else.
 | Understand how the pieces fit together | [concepts.md](concepts.md) |
 | Know what CI runs, and which variable turns it off | [workflows.md](workflows.md) |
 | Release a version of my module | [release.md](release.md) · [recipes/cut-a-release.md](recipes/cut-a-release.md) |
+| Re-verify this module's outside dependencies before a release | [release-checklist.md](release-checklist.md) |
 | Enable the terminology server or release announcements | [secrets.md](secrets.md) |
 | Keep the toolchain and dependencies current | [maintenance.md](maintenance.md) |
 | Check my IG against the published guidance | [ig-best-practices-checklist.md](ig-best-practices-checklist.md) |

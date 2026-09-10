@@ -21,6 +21,7 @@ Description: "Methoden für den Nachweis von Resistenzmechanismen und Determinan
 * $sct#1303992007 "Digital polymerase chain reaction technique (qualifier value)"
 * $sct#1303998006 "Multiplex polymerase chain reaction technique (qualifier value)"
 * $sct#1304048000 "Transcription mediated amplification technique (qualifier value)"
+* $sct#1259932009 "Loop-mediated isothermal amplification technique (qualifier value)"
 * $sct#1304162005 "Nucleic acid sequencing technique (qualifier value)"
 
 // Immunologisch — Proteinnachweis, allen voran der Lateral-Flow-Schnelltest für
@@ -38,3 +39,15 @@ Description: "Methoden für den Nachweis von Resistenzmechanismen und Determinan
 // Carbapenemase-Nachweis empfehlen; der ursprüngliche CIM ist seine ältere
 // Variante und hat keinen eigenen Code.
 * $sct#782518009 "Modified carbapenem inactivation technique (qualifier value)"
+
+// Phänotypisch — dieselben Verfahren wie in der Empfindlichkeitstestung, hier
+// aber auf eine andere FRAGE angewandt: Die ESBL-Bestätigung per
+// Doppelplättchen fragt „liegt ein ESBL vor?" und antwortet mit Detected,
+// während die Empfindlichkeitstestung „wie empfindlich ist das Isolat gegen X?"
+// fragt und einen Hemmhofdurchmesser liefert. Dasselbe Verfahren, zwei Fragen,
+// zwei Profile — genau dafür ist Observation.method postkoordiniert. Aus dem
+// EU-Blatt "Phenotypic resistence" übernommen.
+* $sct#1303975003 "Disk diffusion technique (qualifier value)"
+* $sct#703442003 "Gradient strip susceptibility test technique (qualifier value)"
+* $sct#260111000146108 "Manual minimum inhibitory concentration microdilution susceptibility test technique (qualifier value)"
+* $sct#260101000146106 "Automated minimum inhibitory concentration microdilution susceptibility test technique (qualifier value)"

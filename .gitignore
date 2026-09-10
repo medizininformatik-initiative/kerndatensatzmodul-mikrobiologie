@@ -47,3 +47,17 @@ node_modules/
 migration-log/*.log
 !migration-log/run.log
 migration-log/*.prev.log
+
+# Quellmaterial fuer den Modellabgleich: EU-Workbook und Whitepaper der
+# Arbeitsgruppe, zugeschickte Laborkataloge, und die daraus entstandene
+# Ableitungsanalyse. Bleibt LOKAL.
+#
+# Zwei Gruende. Die fremden Dokumente sind Arbeitsstaende Dritter mit
+# Reviewer-Kommentaren und Namen im Text; dieses Repository ist oeffentlich, und
+# ihre Veroeffentlichung ist nicht unsere Entscheidung. Die Laborkataloge
+# enthalten Betriebsinterna eines Standorts, der sie zur Durchsicht geschickt
+# hat.
+#
+# Die PlantUML-Quellen lagen hier doppelt und sind entfernt: Der Publisher liest
+# input/images-source/, und die Kopien liefen bei jeder Aenderung auseinander.
+materials/

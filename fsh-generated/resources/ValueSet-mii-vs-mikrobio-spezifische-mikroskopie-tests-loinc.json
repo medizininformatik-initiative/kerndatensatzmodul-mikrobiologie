@@ -1,0 +1,104 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC",
+  "id": "mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc",
+  "title": "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]",
+  "description": "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc",
+  "version": "2027.0.0-ballot.rc1",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "PROPERTY",
+            "op": "=",
+            "value": "LP217195-9"
+          },
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6301-8"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "PROPERTY",
+            "op": "=",
+            "value": "LP217195-9"
+          },
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6094-9"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "PROPERTY",
+            "op": "=",
+            "value": "LP217195-9"
+          },
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP262570-7"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -11,12 +11,31 @@ wurde und wie diese Messung **bewertet** wird. Das Modul hält beides auseinande
 ### Messwert und Bewertung
 
 `Observation.value[x]` trägt die Messung — eine minimale Hemmkonzentration in
-mg/L oder einen Hemmhofdurchmesser in mm. Es ist eine `Quantity` und nichts
-sonst; ein bloßes S/I/R ohne Messwert gehört nicht hierher.
+mg/L oder einen Hemmhofdurchmesser in mm.
 
 `Observation.interpretation` trägt die Bewertung: die Kategorie, in die der
-Messwert fällt. Konsumenten haben damit genau eine Stelle, an der die Kategorie
-steht, und der Messwert bleibt laborübergreifend vergleichbar.
+Messwert fällt, zusammen mit der Norm, aus der sie abgeleitet wurde.
+
+Nicht jedes Labor misst. Liegt nur die Kategorie vor, wird sie als
+`CodeableConcept` in `value[x]` angegeben — das europäische Datenmodell legt das
+ausdrücklich so fest, und eine Observation ganz ohne Wert wäre die unüblichere
+Gestalt. Zwei Invarianten halten das eindeutig:
+
+- `empfindlichkeit-kategorie-braucht-interpretation` — eine Kategorie in
+  `value[x]` verlangt eine `interpretation`, weil die Norm dort hängt und eine
+  Kategorie ohne ihre Norm nichts aussagt.
+- `empfindlichkeit-kategorie-stimmt-mit-interpretation` — sind beide angegeben,
+  muss jeder Code des Werts auch unter den Interpretations-Codes vorkommen.
+
+Ein Konsument liest die Kategorie damit in jedem Fall aus `interpretation`, und
+`value[x]` sagt ihm, ob ein Messwert dahintersteht.
+
+Der umgekehrte Fall — ein Messwert ohne Kategorie — wird von
+`empfindlichkeit-messwert-sollte-bewertet-sein` als **Warnung** gemeldet und
+nicht abgelehnt. Eine nackte MHK lässt die Bewertung beim Konsumenten, der dafür
+die Grenzwerttabellen bräuchte. Eine Pflicht wäre aber falsch: Für manche
+Erreger-Substanz-Kombinationen sind keine Grenzwerte definiert, und dann gibt es
+keine Kategorie, die man angeben könnte.
 
 ### Die Kategorien
 
@@ -46,12 +65,6 @@ wäre das nicht möglich.
 
 Die Norm wird aus dem moduleigenen CodeSystem kodiert: `EUCAST`, `CLSI`,
 `Andere`.
-
-{:.bg-warning}
-**Offener Punkt.** Die *Version* der Norm ist bisher nicht ausdrückbar, obwohl
-sich Grenzwerte jährlich ändern. Ohne Jahresangabe lässt sich eine gespeicherte
-MHK später nicht reinterpretieren. Siehe die Entscheidungsliste im
-Migrationsreport.
 
 ### Die voraussichtliche Empfindlichkeit ist eine andere Aussage
 

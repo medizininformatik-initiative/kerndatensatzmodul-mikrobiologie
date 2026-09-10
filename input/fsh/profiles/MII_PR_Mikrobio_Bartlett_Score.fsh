@@ -1,0 +1,11 @@
+Profile: MII_PR_Mikrobio_Bartlett_Score
+Parent: MII_PR_Labor_Laboruntersuchung
+Id: mii-pr-mikrobio-bartlett-score
+Title: "MII PR Mikrobio Bartlett Score"
+Description: "Bartlett-Score beschreibt die qualitative mikroskopische Beurteilung der Eignung von Sputumproben für die mikrobiologische Kultur anhand des Verhältnisses von Entzündungs- zu Epithelzellen."
+* insert MIKRO_OBSERVATION_COMMON
+* code = $loinc-no-ver#75371-5
+* value[x] only CodeableConcept
+* valueCodeableConcept
+* valueCodeableConcept from MII_VS_Mikrobio_Bartlett_Score_LOINC (extensible)
+* method = $sct-no-ver#702661004

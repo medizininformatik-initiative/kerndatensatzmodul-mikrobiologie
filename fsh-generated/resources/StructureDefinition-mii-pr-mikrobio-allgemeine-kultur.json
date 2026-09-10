@@ -162,6 +162,19 @@
   "differential": {
     "element": [
       {
+        "id": "Observation",
+        "path": "Observation",
+        "constraint": [
+          {
+            "key": "allgemeine-kultur-method-with-neutral-code",
+            "severity": "error",
+            "human": "If the method-neutral code 41852-5 is used, Observation.method SHALL be present, because only the method identifies the investigation as a culture.",
+            "expression": "code.coding.where(system = 'http://loinc.org' and code = '41852-5').exists() implies method.exists()",
+            "source": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+          }
+        ]
+      },
+      {
         "id": "Observation.extension:triggeredBy-r5",
         "path": "Observation.extension",
         "sliceName": "triggeredBy-r5",
@@ -215,13 +228,10 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "11475-1",
-              "system": "http://loinc.org"
-            }
-          ]
+        "short": "Bevorzugt 11475-1 'Microorganism identified in Specimen by Culture'. 41852-5 'Microorganism or agent identified in Specimen' ist gleichwertig zulaessig, weil das EU-Datenmodell die Methode nach Observation.method auslagert; derselbe Code steht auch bei der Allgemeinen Bestimmung, dort mit einem Organismus als Ergebnis. Bei 41852-5 ist Observation.method deshalb Pflicht (allgemeine-kultur-method-with-neutral-code). Siehe die Seite 'Profilauswahl und Abgrenzung'.",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc"
         }
       },
       {
@@ -266,7 +276,15 @@
       {
         "id": "Observation.specimen",
         "path": "Observation.specimen",
-        "min": 1
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
+            ]
+          }
+        ]
       }
     ]
   }

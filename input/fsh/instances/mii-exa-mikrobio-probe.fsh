@@ -10,8 +10,13 @@
 // Empfindlichkeitstestung. Ein konkreter Typ — Urin, Blutkultur, Abstrich — würde
 // zu den meisten davon nicht passen. Beispiele, bei denen der Probentyp fachlich
 // trägt, sollten eine eigene Specimen-Instanz mitbringen.
+//
+// Der Typ 123038009 |Specimen| liegt AUSSERHALB des geerbten Typ-ValueSets, das
+// `descendent-of 123038009` ist und den Wurzelcode damit ausschliesst. Die
+// Bindung ist extensible, es bleibt also eine Warnung — und sie zeigt genau die
+// Luecke, die MII_PR_Mikrobio_Probe im Kommentar festhaelt.
 Instance: mii-exa-mikrobio-probe
-InstanceOf: Specimen
+InstanceOf: MII_PR_Mikrobio_Probe
 Usage: #example
 Title: "MII EXA Mikrobio Probe"
 Description: "Generisches Probenmaterial für die Beispiele dieses Moduls. Der Typ ist bewusst unspezifisch, weil dieselbe Probe Beispiele unterschiedlicher Untersuchungsarten trägt."
@@ -21,3 +26,4 @@ Description: "Generisches Probenmaterial für die Beispiele dieses Moduls. Der T
 * type = $sct#123038009 "Specimen"
 * subject = Reference(mii-exa-mikrobio-patient)
 * receivedTime = "2026-04-02T08:30:00+01:00"
+* collection.collectedDateTime = "2026-04-02T08:00:00+01:00"

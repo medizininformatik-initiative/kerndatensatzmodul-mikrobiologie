@@ -21,3 +21,17 @@ Description: "Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kul
       METHOD_TYP = "LP6429-7" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
+
+// AUSSCHLUeSSE. Das EU-Datenmodell markiert diese vier im Blatt "Culture
+// Specific" (Zeilen 50-53, Spalte F) mit "Remove", und zu Recht: Eine
+// durchnummerierte Mykobakterienart ist kein benanntes Ziel, "Mycobacterium sp
+// # 3" sagt einem Auswerter nichts.
+//
+// Gemessen am 2026-09-10: Alle vier sind in LOINC noch STATUS = ACTIVE, der
+// Filter oben wirft sie also NICHT heraus — sie muessen einzeln ausgeschlossen
+// werden. Ihre uebrigen Achsen (CLASS MICRO, PROPERTY Prid, METHOD_TYP Organism
+// specific culture) treffen den Filter vollstaendig.
+* exclude $loinc#44851-4 "Mycobacterium sp # 2 identified in Specimen by Organism specific culture"
+* exclude $loinc#44852-2 "Mycobacterium sp # 3 identified in Specimen by Organism specific culture"
+* exclude $loinc#44854-8 "Mycobacterium sp # 4 identified in Specimen by Organism specific culture"
+* exclude $loinc#44855-5 "Mycobacterium sp # 5 identified in Specimen by Organism specific culture"

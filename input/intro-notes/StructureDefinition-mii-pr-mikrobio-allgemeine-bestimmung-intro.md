@@ -1,5 +1,9 @@
 General determination describes the identification of a microorganism or infectious agent in a specimen, without restriction to a predefined target.
 
+### Test code
+
+Preferred is `41852-5 |Microorganism or agent identified in Specimen|`. The same code is also valid in [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html), so it does not by itself identify which of the two statements is being made; [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) sets out how the two profiles stay distinguishable.
+
 ### Result
 
 The result is the identified microorganism from `mii-vs-mikrobio-organismen-snomedct`. If the specimen was examined but no pathogen was identified, `260415000 |Not detected|` is given - not the omission of the Observation.

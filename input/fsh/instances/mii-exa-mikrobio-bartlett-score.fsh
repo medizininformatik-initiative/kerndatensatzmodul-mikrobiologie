@@ -1,10 +1,10 @@
-Instance: mii-exa-mikrobio-barlett-score
-InstanceOf: MII_PR_Mikrobio_Barlett_Score
+Instance: mii-exa-mikrobio-bartlett-score
+InstanceOf: MII_PR_Mikrobio_Bartlett_Score
 Usage: #example
-Title: "MII EXA Mikrobio Barlett Score"
-Description: "Barlett-Score einer Sputumprobe zur Beurteilung, ob sie für die Kultur geeignet ist."
+Title: "MII EXA Mikrobio Bartlett Score"
+Description: "Bartlett-Score einer Sputumprobe zur Beurteilung, ob sie für die Kultur geeignet ist."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
-* identifier[analyseBefundCode].value = "barlett-1"
+* identifier[analyseBefundCode].value = "bartlett-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
 * status = #final
 * category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"

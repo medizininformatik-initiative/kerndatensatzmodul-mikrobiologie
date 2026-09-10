@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung",
   "version": "2027.0.0-ballot.rc1",
   "name": "MII_PR_Mikrobio_Allgemeine_Bestimmung",
-  "title": "MII PR Mikrobio Allgemeine Bestimmung",
+  "title": "MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -214,13 +214,10 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "41852-5",
-              "system": "http://loinc.org"
-            }
-          ]
+        "short": "Bevorzugt 41852-5 'Microorganism or agent identified in Specimen'. Benennt das Labor die Erregergruppe (Bakterien, Pilze, Viren) oder das Sequenzierziel (16S, 18S rRNA) im Code, sind die entsprechenden Codes gleichwertig zulaessig. Es werden bevorzugt LOINC-Codes ohne praekoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat ueber Specimen.type kodiert.",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc"
         }
       },
       {
@@ -266,7 +263,15 @@
       {
         "id": "Observation.specimen",
         "path": "Observation.specimen",
-        "min": 1
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
+            ]
+          }
+        ]
       }
     ]
   }

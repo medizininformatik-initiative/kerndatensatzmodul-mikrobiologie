@@ -371,6 +371,13 @@ dependencies:
   # Version gilt.
   hl7.fhir.uv.extensions.r4: 5.2.0
   hl7.terminology.r4: 7.1.0
+  # 2026-09-10 neu: Traeger von MII_PR_Biobank_Specimen_Bioprobe_Core, dem Parent
+  # von MII_PR_Mikrobio_Probe. Die Seite probe.md verwies schon vorher auf dieses
+  # Profil, ohne dass das Modul es aufloesen konnte. Version rc2 statt der
+  # Registry-`latest` 2026.0.1, weil sie zum Ballot-Zyklus dieses Moduls und zu
+  # laborbefund rc4 passt; sie bringt hl7.fhir.eu.laboratory 2.0.0 und
+  # hl7.terminology.r4 7.1.0 mit, letzteres in derselben Version wie oben.
+  de.medizininformatikinitiative.kerndatensatz.biobank: 2027.0.0-ballot.rc2
   # ---- template pins NOT adopted (① decide at Gate A) ----
   # Each would change what this already-published module resolves against.
   # de.basisprofil.r4: 1.5.4                      # source pins it only transitively, via modul-labor
