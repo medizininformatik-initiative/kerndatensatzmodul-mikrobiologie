@@ -25,6 +25,26 @@ guide states the decision it took and why. Points deliberately left open are lis
 changes in the areas concerned.
 </div>
 
+### Target audience
+
+<div class="ig-highlight ig-highlight-blue" markdown="1">
+<h5>Implementers</h5>
+For data management and integration in data integration centres (DIC), software developers and system architects building FHIR-based solutions.
+
+* → [Profiles](profiles.html) — the normative constraints
+* → [Guidance for Implementers](implementer-guidance.html) — conformance, artifacts, validation
+* → [Logical Models](logical-models.html) and [UML Diagrams](uml-diagrams.html) — the conceptual view
+</div>
+
+<div class="ig-highlight ig-highlight-green" markdown="1">
+<h5>Researchers</h5>
+For scientists working with MII data.
+
+* → [Guidance for Researchers](researcher-guidance.html) — where to start
+* → [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) — which profile carries which statement, and what a negative result means
+* → [Examples](examples.html) — what the data looks like in practice
+</div>
+
 The Microbiology 2027 extension module models microbiological findings as standalone Observations.
 The main domains are:
 
@@ -49,37 +69,23 @@ This is a ballot candidate. The points below are deliberately left open, and we
 ask for comment on them during the ballot. Each is stated in full on the page it
 belongs to.
 
-1. **[Is a Specimen resource always available?](probe.html)** — every
+1. **[Is a Specimen resource always available?](probe.html#ballot-question-1)** — every
    investigation profile in this module requires `Observation.specimen`.
-2. **[Can the staining technique be represented via `Specimen` alone?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html)**
+2. **[Can the staining technique be represented via `Specimen` alone?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2)**
    — the European data model places it in `Specimen.processing`; we ask whether
    that is implementable.
-3. **[Mandatory storage temperature conditions on `Specimen.processing`](probe.html)**
+3. **[Mandatory storage temperature conditions on `Specimen.processing`](probe.html#ballot-question-3)**
    — inherited from the biobank base profile, without meaning for microbiological
    processing.
-4. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.html)**
+4. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.html#ballot-question-4)**
    — FHIR and the MII provide the pieces; the question is whether sites can supply
    them.
-5. **[Component or `hasMember` for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html)**
+5. **[Component or `hasMember` for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5)**
    — the European data model leaves this open; a component reverses a decision of
    this release cycle.
-6. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.html)**
+6. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.html#ballot-question-6)**
    — the white paper asks for it always; this guide only recommends it, and your
    answer decides more than one question.
-
-### Target audience
-
-<div class="ig-highlight ig-highlight-blue">
-<h5>Implementers</h5>
-<p>Data Integration Centers (DIC), software developers and system architects building FHIR-based solutions.<br/>
-→ see <a href="profiles.html">Profiles</a> and <a href="logical-models.html">Logical Models</a>.</p>
-</div>
-
-<div class="ig-highlight ig-highlight-green">
-<h5>Researchers</h5>
-<p>Scientists using KDS data for medical research.<br/>
-→ see <a href="guidance.html">Guidance</a>.</p>
-</div>
 
 ### Contents
 
@@ -107,10 +113,6 @@ This module builds on the
 formal dependency is declared as `de.medizininformatikinitiative.kerndatensatz.laborbefund` in
 `sushi-config.yaml`. The relations to the Molecular genetic report, Biobank, Case and Structural data
 modules are described on [Guidance for Implementers](implementer-guidance.html).
-
-More FHIR implementation guides can be found in the official
-**[FHIR IG Registry](https://fhir.org/guides/registry/)** (source:
-[`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)).
 
 ### Imprint
 

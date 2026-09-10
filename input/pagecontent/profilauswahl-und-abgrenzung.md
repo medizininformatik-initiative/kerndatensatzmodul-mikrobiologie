@@ -157,16 +157,15 @@ conformant data that exists today. The one place it is enforced is where the
 statement is otherwise ambiguous: General culture with the method-neutral code
 `41852-5`.
 
+<a id="ballot-question-6"></a>
+
 {:.bg-warning}
 **Ballot question 6 — can you supply `Observation.method` for every result?**
-The white paper asks for it always, this guide only recommends it. **We would
-like to know whether making it mandatory would be deliverable at your site.** If
+The white paper asks for it always, this guide only recommends it. We ask whether making it mandatory would be deliverable at your site. If
 it would, a later version can raise `Observation.method` to `1..1` and the
-special-case invariant on General culture becomes unnecessary. Note what else
-follows: if the method is always present, `41852-5` plus a method is
+special-case invariant on General culture becomes unnecessary. A second consequence follows: if the method is always present, `41852-5` plus a method is
 unambiguous everywhere, and the reason this guide recommends the method-bearing
-codes `11475-1` and `664-3` largely falls away. Your answer therefore decides
-more than one question. Please comment during the ballot.
+codes `11475-1` and `664-3` largely falls away. The answer therefore bears on both questions. Please comment during the ballot.
 
 ### Two granularities on the same axis
 
