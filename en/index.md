@@ -20,6 +20,24 @@ The module describes the investigations carried out in laboratories to detect, i
 
 That European model is **not yet final**. This release represents its current state as faithfully as an implementable specification allows: where the underlying agreements leave a question open, this guide states the decision it took and why. Points deliberately left open are listed under [Ballot questions](#ballot-questions), and we ask for comment on them. Implementers should expect changes in the areas concerned.
 
+### Target audience
+
+##### Implementers
+
+For data management and integration in data integration centres (DIC), software developers and system architects building FHIR-based solutions.
+
+* → [Profiles](profiles.md) — the normative constraints
+* → [Guidance for Implementers](implementer-guidance.md) — conformance, artifacts, validation
+* → [Logical Models](logical-models.md) and [UML Diagrams](uml-diagrams.md) — the conceptual view
+
+##### Researchers
+
+For scientists working with MII data.
+
+* → [Guidance for Researchers](researcher-guidance.md) — where to start
+* → [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md) — which profile carries which statement, and what a negative result means
+* → [Examples](examples.md) — what the data looks like in practice
+
 The Microbiology 2027 extension module models microbiological findings as standalone Observations. The main domains are:
 
 * Culture (general, microscopy including Bartlett/Nugent score, colony count, susceptibility)
@@ -40,24 +58,12 @@ Components of Observations were moved into separate profiles in this version.
 
 This is a ballot candidate. The points below are deliberately left open, and we ask for comment on them during the ballot. Each is stated in full on the page it belongs to.
 
-1. **[Is a Specimen resource always available?](probe.md)**— every investigation profile in this module requires`Observation.specimen`.
-1. **[Can the staining technique be represented via `Specimen` alone?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)**— the European data model places it in`Specimen.processing`; we ask whether that is implementable.
-1. **[Mandatory storage temperature conditions on `Specimen.processing`](probe.md)**— inherited from the biobank base profile, without meaning for microbiological processing.
-1. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.md)**— FHIR and the MII provide the pieces; the question is whether sites can supply them.
-1. **[Component or `hasMember` for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)**— the European data model leaves this open; a component reverses a decision of this release cycle.
-1. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.md)**— the white paper asks for it always; this guide only recommends it, and your answer decides more than one question.
-
-### Target audience
-
-##### Implementers
-
-Data Integration Centers (DIC), software developers and system architects building FHIR-based solutions.
- → see [Profiles](profiles.md) and [Logical Models](logical-models.md).
-
-##### Researchers
-
-Scientists using KDS data for medical research.
- → see [Guidance](guidance.md).
+1. **[Is a Specimen resource always available?](probe.md#ballot-question-1)**— every investigation profile in this module requires`Observation.specimen`.
+1. **[Can the staining technique be represented via `Specimen` alone?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-2)**— the European data model places it in`Specimen.processing`; we ask whether that is implementable.
+1. **[Mandatory storage temperature conditions on `Specimen.processing`](probe.md#ballot-question-3)**— inherited from the biobank base profile, without meaning for microbiological processing.
+1. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.md#ballot-question-4)**— FHIR and the MII provide the pieces; the question is whether sites can supply them.
+1. **[Component or `hasMember` for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-5)**— the European data model leaves this open; a component reverses a decision of this release cycle.
+1. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.md#ballot-question-6)**— the white paper asks for it always; this guide only recommends it, and your answer decides more than one question.
 
 ### Contents
 
@@ -72,8 +78,6 @@ Scientists using KDS data for medical research.
 This module is part of the MII Core Dataset; the other KDS modules and their dependencies are described at [medizininformatik-initiative.de](https://www.medizininformatik-initiative.de/).
 
 This module builds on the [KDS module Laboratory report](https://simplifier.net/medizininformatikinitiative-modullabor); the formal dependency is declared as `de.medizininformatikinitiative.kerndatensatz.laborbefund` in `sushi-config.yaml`. The relations to the Molecular genetic report, Biobank, Case and Structural data modules are described on [Guidance for Implementers](implementer-guidance.md).
-
-More FHIR implementation guides can be found in the official **[FHIR IG Registry](https://fhir.org/guides/registry/)** (source: [`FHIR/ig-registry`](https://github.com/FHIR/ig-registry)).
 
 ### Imprint
 

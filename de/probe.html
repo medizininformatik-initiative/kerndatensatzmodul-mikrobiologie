@@ -67,8 +67,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.6"}
-    h3,h4,h5,h6{--heading-prefix:"2.6"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.7"}
+    h3,h4,h5,h6{--heading-prefix:"2.7"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -181,6 +181,7 @@
     <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Anleitung</a></li>
+      <li><a href="researcher-guidance.html">Anleitung für Forschende</a></li>
       <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
       <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
       <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
@@ -318,22 +319,22 @@ Diese Seite enthält Übersetzungen aus der Originalsprache, in der der Leitfade
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md  -->
 <h2 id="befund---probe">Befund - Probe</h2>
 
+<p><a id="ballot-question-1"></a></p>
+
 <p class="bg-warning"><strong>Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?</strong>
-Jedes Untersuchungsprofil dieses Moduls verlangt <code class="language-plaintext highlighter-rouge">Observation.specimen</code>. Das ist
-keine Festlegung, die dieser Leitfaden allein getroffen hat: Das europäische
-Whitepaper hält fest, dass die Probe <strong>immer</strong> ausdrücklich in einer
+Jedes Untersuchungsprofil dieses Moduls verlangt <code class="language-plaintext highlighter-rouge">Observation.specimen</code>. Die
+Anforderung stammt nicht allein aus diesem Leitfaden: Das europäische Whitepaper
+hält fest, dass die Probe <strong>immer</strong> ausdrücklich in einer
 FHIR-Specimen-Ressource abzubilden ist, bevorzugt in <code class="language-plaintext highlighter-rouge">Specimen.type</code> mit SNOMED
 CT — und sagt ausdrücklich, dass das auch dann gilt, <em>wenn der LOINC-Code die
-Probe bereits trägt</em>. Die Frage ist also nicht, ob die Anforderung richtig ist,
-sondern ob sie erfüllbar ist.</p>
+Probe bereits trägt</em>.</p>
 
-<p>Aus der deutschen Laborpraxis kommt die Rückmeldung, dass eine Specimen-Ressource
-häufig nicht erzeugt wird. <strong>Wir möchten wissen, ob Ihr Standort eine liefern
-kann.</strong> Wenn das für viele nicht gilt, weisen die beiden Auswege in
-entgegengesetzte Richtungen: <code class="language-plaintext highlighter-rouge">Observation.specimen</code> auf <code class="language-plaintext highlighter-rouge">0..1</code> lockern und
-präkoordinierte LOINC-Codes das Material tragen lassen, oder die Pflicht
-beibehalten und hinnehmen, dass manche Sender nicht konform sein können. Wir
-bitten um Rückmeldung im Ballot.</p>
+<p>Aus der deutschen Laborpraxis kommt die Rückmeldung, dass eine
+Specimen-Ressource häufig nicht erzeugt wird. Trifft das breit zu, weisen die
+beiden Auswege in entgegengesetzte Richtungen: <code class="language-plaintext highlighter-rouge">Observation.specimen</code> auf <code class="language-plaintext highlighter-rouge">0..1</code>
+lockern und präkoordinierte LOINC-Codes das Material tragen lassen, oder die
+Pflicht beibehalten und hinnehmen, dass manche Sender nicht konform sein können.
+Wir bitten um Rückmeldung im Ballot.</p>
 
 <p>Proben werden über <a href="StructureDefinition-mii-pr-mikrobio-probe.html">Probe</a>
 abgebildet, das von
@@ -371,6 +372,8 @@ weiterverarbeiteten oder aus Primärproben gewonnenen Materialien.</p>
 
 <h2 id="aufarbeitung-und-was-hier-nicht-abgebildet-wird">Aufarbeitung, und was hier nicht abgebildet wird</h2>
 
+<p><a id="ballot-question-3"></a></p>
+
 <p class="bg-warning"><strong>Ballotfrage 3 — Pflicht-Temperaturbedingungen an <code class="language-plaintext highlighter-rouge">Specimen.processing</code>.</strong>
 Das Basisprofil verlangt die Extension <code class="language-plaintext highlighter-rouge">temperaturbedingungen</code> an jedem
 <code class="language-plaintext highlighter-rouge">Specimen.processing</code>-Element, in <code class="language-plaintext highlighter-rouge">2026.0.1</code> wie in <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code>. Diese
@@ -391,6 +394,8 @@ vorschlägt, sondern in <code class="language-plaintext highlighter-rouge">Obser
 Ballotfrage 2 die Begründung enthält.</p>
 
 <h2 id="bebrütungsdauer-und--temperatur">Bebrütungsdauer und -temperatur</h2>
+
+<p><a id="ballot-question-4"></a></p>
 
 <p class="bg-warning"><strong>Ballotfrage 4 — ist die Bebrütung über <code class="language-plaintext highlighter-rouge">Specimen.processing</code> darstellbar?</strong>
 FHIR sieht sie dort vor, und die MII hat die Bausteine bereits. Gemessen an R4
@@ -440,7 +445,7 @@ Bebrütung nicht ab, solange die Antwort fehlt.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Sep 10, 2026 16:03+0000">2026-09-10</span>
+          Erstellt <span title="Thu, Sep 10, 2026 16:53+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

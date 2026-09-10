@@ -20,7 +20,7 @@ It is the open half of microscopy: the code asks what is there to see, and the a
 
 ### Staining
 
-**Ballot question 2 — can the staining technique be represented via `Specimen` alone?** The European data model places the staining technique in `Specimen.processing.procedure`. **We ask whether a Specimen-only representation is implementable at your site** — that is the question, not our preference. Where the profile puts it is only part of the answer.
+**Ballot question 2 — can the staining technique be represented via `Specimen` alone?** The European data model places the staining technique in `Specimen.processing.procedure`. We ask whether a Specimen-only representation is implementable at your site. The answer determines whether this module continues to carry the stain in `Observation.method`.
 
 Two things speak against `Specimen` being the only place. It presupposes a Specimen resource, which ballot question 1 puts in doubt. And the parent of [Specimen](StructureDefinition-mii-pr-mikrobio-probe.md) currently makes storage temperature conditions mandatory below `processing` (ballot question 3), which a stain has no way of supplying.
 
@@ -203,7 +203,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T16:03:25+00:00",
+  "date" : "2026-09-10T16:53:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
