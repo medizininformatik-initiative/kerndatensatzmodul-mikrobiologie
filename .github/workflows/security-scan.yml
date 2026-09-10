@@ -8,7 +8,7 @@
 #            (Code scanning), categories "osv-scanner", "trivy-fs" and
 #            "trivy-image". A module created from this template inherits
 #            this workflow unchanged (see docs/maintenance.md).
-# Triggers:  schedule (Mondays 07:00 UTC) + pull_request targeting dev +
+# Triggers:  schedule (Mondays 07:00 UTC) + pull_request targeting main +
 #            workflow_dispatch.
 # Toggle:    vars.ENABLE_SECURITY_SCAN — ON by default; set the repo variable
 #            to 'false' to skip all three jobs (shown as "skipped", not failed).
@@ -25,8 +25,13 @@ name: Security scan
 on:
   schedule:
     - cron: "0 7 * * 1" # Mondays 07:00 UTC
+  # `main` is this repository's default branch; the scaffold's `dev` does not
+  # exist here, so this trigger never fired. Note also that the schedule above
+  # only fires once this file is on the DEFAULT branch — scheduled workflows are
+  # read from there, not from a working branch, which is why this workflow has
+  # no runs at all so far.
   pull_request:
-    branches: [dev]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -45,7 +50,7 @@ jobs:
       # SUBDIRECTORY of google/osv-scanner-action (the repo-root action.yml has
       # no runnable definition — verified upstream at v2.3.8).
       - name: OSV-Scanner
-        uses: google/osv-scanner-action/osv-scanner-action@8deb546fdb875b9996d27d4950be7312dac076a1 # v2.5.0
+        uses: google/osv-scanner-action/osv-scanner-action@6e4298ebc4db23e847df9b2e2de2939d6f066c67 # v2.5.1
         # osv-scanner exits non-zero when it finds vulnerabilities (1) or when
         # the repo has no scannable package sources yet (128). Neither must
         # block the SARIF upload, so the step tolerates failure.
@@ -59,7 +64,7 @@ jobs:
 
       - name: Upload OSV SARIF
         if: ${{ always() && hashFiles('osv.sarif') != '' }}
-        uses: github/codeql-action/upload-sarif@ff2f1c621b7f889edc0d3c761ac2e6a3f8cdb0dd # v4.37.7
+        uses: github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
         with:
           sarif_file: osv.sarif
           category: osv-scanner
@@ -80,7 +85,7 @@ jobs:
 
       - name: Upload Trivy SARIF
         if: ${{ always() && hashFiles('trivy.sarif') != '' }}
-        uses: github/codeql-action/upload-sarif@ff2f1c621b7f889edc0d3c761ac2e6a3f8cdb0dd # v4.37.7
+        uses: github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
         with:
           sarif_file: trivy.sarif
           category: trivy-fs
@@ -124,7 +129,7 @@ jobs:
 
       - name: Upload Trivy image SARIF
         if: ${{ always() && hashFiles('trivy-image.sarif') != '' }}
-        uses: github/codeql-action/upload-sarif@ff2f1c621b7f889edc0d3c761ac2e6a3f8cdb0dd # v4.37.7
+        uses: github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
         with:
           sarif_file: trivy-image.sarif
           category: trivy-image

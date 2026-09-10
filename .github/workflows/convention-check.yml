@@ -34,10 +34,12 @@
 name: convention-check
 
 on:
+  # `dev` was in the scaffold list and does not exist in this repository; the
+  # trigger worked only because `main` was listed beside it.
   push:
-    branches: [dev, main, "release/**"]
+    branches: [main, "release/**"]
   pull_request:
-    branches: [dev, main, "release/**"]
+    branches: [main, "release/**"]
   workflow_dispatch:
     inputs:
       strict:
