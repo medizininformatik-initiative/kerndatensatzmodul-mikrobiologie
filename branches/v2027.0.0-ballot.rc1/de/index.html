@@ -181,6 +181,7 @@
     <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Anleitung<b class="caret"> </b></a>
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Anleitung</a></li>
+      <li><a href="researcher-guidance.html">Anleitung für Forschende</a></li>
       <li><a href="implementer-guidance.html">Anleitung für Implementierende</a></li>
       <!-- Nur-Link-Eintrag: die Seite "Logische Modelle" (Begründung im Quell-Menü) -->
       <li><a href="logical-models.html">Datensätze und Beschreibungen</a></li>
@@ -350,8 +351,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#einleitung" id="markdown-toc-einleitung">Einleitung</a></li>
-  <li><a href="#ballotfragen" id="markdown-toc-ballotfragen">Ballotfragen</a></li>
   <li><a href="#zielgruppe" id="markdown-toc-zielgruppe">Zielgruppe</a></li>
+  <li><a href="#ballotfragen" id="markdown-toc-ballotfragen">Ballotfragen</a></li>
   <li><a href="#inhalt-dieses-leitfadens" id="markdown-toc-inhalt-dieses-leitfadens">Inhalt dieses Leitfadens</a></li>
   <li><a href="#verwandte-leitfäden" id="markdown-toc-verwandte-leitfäden">Verwandte Leitfäden</a></li>
   <li><a href="#impressum" id="markdown-toc-impressum">Impressum</a></li>
@@ -400,6 +401,32 @@ Rückmeldung bitten. Implementierende sollten in den betroffenen Bereichen mit
 </div>
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Beschreibung-Modul-Mikrobiologie.page.md  -->
+<h3 id="zielgruppe">Zielgruppe</h3>
+
+<p>Dieser Implementierungsleitfaden richtet sich an:</p>
+
+<div class="ig-highlight ig-highlight-blue">
+  <h5>Implementierende</h5>
+  <p>Für Datenmanagement und Integration in Datenintegrationszentren (DIZ), Software-Entwickelnde und System-Architekt:innen, die FHIR-basierte Lösungen umsetzen.</p>
+
+  <ul>
+    <li>→ <a href="profiles.html">Profile</a> — die verbindlichen Einschränkungen</li>
+    <li>→ <a href="implementer-guidance.html">Anleitung für Implementierende</a> — Konformität, Artefakte, Validierung</li>
+    <li>→ <a href="logical-models.html">Logische Modelle</a> und <a href="uml-diagrams.html">UML-Diagramme</a> — die konzeptuelle Sicht</li>
+  </ul>
+</div>
+
+<div class="ig-highlight ig-highlight-green">
+  <h5>Forschende</h5>
+  <p>Für Wissenschaftler:innen, die mit MII-Daten arbeiten.</p>
+
+  <ul>
+    <li>→ <a href="researcher-guidance.html">Anleitung für Forschende</a> — wo die Auswertung beginnt</li>
+    <li>→ <a href="profilauswahl-und-abgrenzung.html">Profilauswahl und Abgrenzung</a> — welches Profil welche Aussage trägt und was ein negatives Ergebnis bedeutet</li>
+    <li>→ <a href="examples.html">Beispiele</a> — wie die Daten in der Praxis aussehen</li>
+  </ul>
+</div>
+
 <p>Das Erweiterungsmodul Mikrobiologie 2027 modelliert mikrobiologische Befunde als
 eigenständige Observationen. Die wichtigsten Domänen sind:</p>
 
@@ -447,40 +474,24 @@ wir bitten während des Ballots um Rückmeldung dazu. Jeder ist auf der Seite
 vollständig dargestellt, zu der er gehört.</p>
 
 <ol>
-  <li><strong><a href="probe.html">Entsteht immer eine Specimen-Ressource?</a></strong> — jedes
+  <li><strong><a href="probe.html#ballot-question-1">Entsteht immer eine Specimen-Ressource?</a></strong> — jedes
 Untersuchungsprofil dieses Moduls verlangt <code class="language-plaintext highlighter-rouge">Observation.specimen</code>.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Ist die Färbetechnik allein über <code class="language-plaintext highlighter-rouge">Specimen</code> darstellbar?</a></strong>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2">Ist die Färbetechnik allein über <code class="language-plaintext highlighter-rouge">Specimen</code> darstellbar?</a></strong>
 — das europäische Datenmodell legt sie nach <code class="language-plaintext highlighter-rouge">Specimen.processing</code>; wir fragen,
 ob das implementierbar ist.</li>
-  <li><strong><a href="probe.html">Pflicht-Temperaturbedingungen an <code class="language-plaintext highlighter-rouge">Specimen.processing</code></a></strong> — aus
+  <li><strong><a href="probe.html#ballot-question-3">Pflicht-Temperaturbedingungen an <code class="language-plaintext highlighter-rouge">Specimen.processing</code></a></strong> — aus
 dem Bioproben-Basisprofil geerbt, ohne Aussage für die mikrobiologische
 Aufarbeitung.</li>
-  <li><strong><a href="probe.html">Sind Bebrütungsdauer und -temperatur über <code class="language-plaintext highlighter-rouge">Specimen.processing</code> darstellbar?</a></strong>
+  <li><strong><a href="probe.html#ballot-question-4">Sind Bebrütungsdauer und -temperatur über <code class="language-plaintext highlighter-rouge">Specimen.processing</code> darstellbar?</a></strong>
 — FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie
 befüllen können.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Komponente oder <code class="language-plaintext highlighter-rouge">hasMember</code> für eine semiquantitative Menge?</a></strong>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5">Komponente oder <code class="language-plaintext highlighter-rouge">hasMember</code> für eine semiquantitative Menge?</a></strong>
 — das europäische Datenmodell lässt es offen; eine Komponente dreht eine
 Entscheidung dieses Zyklus zurück.</li>
-  <li><strong><a href="profilauswahl-und-abgrenzung.html">Können Sie zu jedem Befund <code class="language-plaintext highlighter-rouge">Observation.method</code> liefern?</a></strong>
+  <li><strong><a href="profilauswahl-und-abgrenzung.html#ballot-question-6">Können Sie zu jedem Befund <code class="language-plaintext highlighter-rouge">Observation.method</code> liefern?</a></strong>
 — das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre
 Antwort entscheidet mehr als eine Frage.</li>
 </ol>
-
-<h3 id="zielgruppe">Zielgruppe</h3>
-
-<p>Dieser Implementierungsleitfaden richtet sich an:</p>
-
-<div class="ig-highlight ig-highlight-blue">
-<h5>Implementierende</h5>
-<p>Datenintegrationszentren (DIZ), Software-Entwickelnde und System-Architekt:innen, die FHIR-basierte Lösungen umsetzen.<br />
-→ siehe <a href="profiles.html">Profile</a> und <a href="logical-models.html">Logische Modelle</a>.</p>
-</div>
-
-<div class="ig-highlight ig-highlight-green">
-<h5>Forschende</h5>
-<p>Wissenschaftler:innen, die KDS-Daten für die medizinische Forschung nutzen.<br />
-→ siehe <a href="guidance.html">Anleitung</a>.</p>
-</div>
 
 <h3 id="inhalt-dieses-leitfadens">Inhalt dieses Leitfadens</h3>
 
@@ -513,10 +524,6 @@ auf; die formale Abhängigkeit steht als <code class="language-plaintext highlig
 in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>. Die Bezüge zu den Modulen Molekulargenetischer
 Befundbericht, Biobank, Fall und Strukturdaten beschreibt die Seite
 <a href="implementer-guidance.html">Anleitung für Implementierende</a>.</p>
-
-<p>Weitere FHIR-Implementierungsleitfäden finden Sie im offiziellen
-<strong><a href="https://fhir.org/guides/registry/">FHIR IG Registry</a></strong> (Quelle:
-<a href="https://github.com/FHIR/ig-registry"><code class="language-plaintext highlighter-rouge">FHIR/ig-registry</code></a>).</p>
 
 <h3 id="impressum">Impressum</h3>
 
@@ -607,7 +614,7 @@ aus dem Inhalt dieser Spezifikation entstehen könnten.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Sep 10, 2026 13:47+0000">2026-09-10</span>
+          Erstellt <span title="Thu, Sep 10, 2026 16:40+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

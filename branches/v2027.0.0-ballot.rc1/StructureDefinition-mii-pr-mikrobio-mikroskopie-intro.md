@@ -7,12 +7,14 @@ the test code and the answer is how much of it was seen, the profile is
 
 ### Staining
 
+<a id="ballot-question-2"></a>
+
 {:.bg-warning}
 **Ballot question 2 — can the staining technique be represented via `Specimen` alone?**
 The European data model places the staining technique in
-`Specimen.processing.procedure`. **We ask whether a Specimen-only representation
-is implementable at your site** — that is the question, not our preference.
-Where the profile puts it is only part of the answer.
+`Specimen.processing.procedure`. We ask whether a Specimen-only representation is implementable at your site.
+The answer determines whether this module continues to carry the stain in
+`Observation.method`.
 
 Two things speak against `Specimen` being the only place. It presupposes a
 Specimen resource, which ballot question 1 puts in doubt. And the parent of
@@ -46,6 +48,8 @@ Its code comes from an interim CodeSystem of this module. The European data mode
 requests a LOINC code for it ("Microscopy" sheet, row 13, "new LOINC —
 Semiquantitive value for microscopy finding"); until that exists, the interim code
 stands in and will be replaced by it.
+
+<a id="ballot-question-5"></a>
 
 {:.bg-warning}
 **Ballot question 5 — component or `hasMember` for the amount?**

@@ -67,8 +67,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"2.6"}
-    h3,h4,h5,h6{--heading-prefix:"2.6"}</style>
+    <style type="text/css">h2{--heading-prefix:"2.7"}
+    h3,h4,h5,h6{--heading-prefix:"2.7"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -209,6 +209,7 @@
     <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Guidance</a></li>
+      <li><a href="researcher-guidance.html">Guidance for Researchers</a></li>
       <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
       <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
       <li><a href="logical-models.html">Datasets and Descriptions</a></li>
@@ -218,8 +219,11 @@
            section tree. That section's index page carried no content of its own, so
            the level was navigation rather than a page. They are guidance about the
            profiles, not artefact listings, so Artifacts stays a pure artefact index
-           and these live here. Budget after the change: 7 top-level (limit 8),
-           7 children here (limit 10), depth 2 (limit 2), 26 entries (limit 33). -->
+           and these live here. -->
+      <!-- Budget, recounted from this file on 2026-09-10 after "Guidance for
+           Researchers" was added: 7 top-level (limit 8), 9 children here
+           (limit 10), depth 2 (limit 2), 32 entries in total (limit 33). The
+           figures recorded here before were stale by one addition. -->
       <li><a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a></li>
       <li><a href="interpretation.html">Interpretation</a></li>
       <li><a href="fhir-profile.html">FHIR Profiles - Modelling Notes</a></li>
@@ -344,20 +348,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="report---specimen">Report - Specimen</h3>
 
+<p><a id="ballot-question-1"></a></p>
+
 <p class="bg-warning"><strong>Ballot question 1 — can you supply a Specimen resource for every result?</strong>
-Every investigation profile in this module requires <code class="language-plaintext highlighter-rouge">Observation.specimen</code>. That
-is not a choice this guide made on its own: the European white paper states that
-the specimen <strong>shall always</strong> be represented explicitly in a FHIR Specimen
-resource, preferably in <code class="language-plaintext highlighter-rouge">Specimen.type</code> using SNOMED CT — and expressly says this
-holds <em>even where the LOINC code already carries the specimen</em>. So the question
-is not whether the requirement is right, but whether it is deliverable.</p>
+Every investigation profile in this module requires <code class="language-plaintext highlighter-rouge">Observation.specimen</code>. The
+requirement does not originate with this guide alone: the European white paper
+states that the specimen <strong>shall always</strong> be represented explicitly in a FHIR
+Specimen resource, preferably in <code class="language-plaintext highlighter-rouge">Specimen.type</code> using SNOMED CT — and expressly
+says this holds <em>even where the LOINC code already carries the specimen</em>.</p>
 
 <p>Feedback from German laboratory practice is that a Specimen resource is
-frequently not produced. <strong>We would like to know whether your site can supply
-one.</strong> If a substantial number cannot, the two ways out point in opposite
-directions: relax <code class="language-plaintext highlighter-rouge">Observation.specimen</code> to <code class="language-plaintext highlighter-rouge">0..1</code> and let pre-coordinated LOINC
-codes carry the material, or keep the requirement and accept that some senders
-cannot conform. Please comment during the ballot.</p>
+frequently not produced. If that holds widely, the two ways out point in
+opposite directions: relax <code class="language-plaintext highlighter-rouge">Observation.specimen</code> to <code class="language-plaintext highlighter-rouge">0..1</code> and let
+pre-coordinated LOINC codes carry the material, or keep the requirement and
+accept that some senders cannot conform. Please comment during the ballot.</p>
 
 <p>Specimens are represented by <a href="StructureDefinition-mii-pr-mikrobio-probe.html">Specimen</a>,
 which derives from
@@ -390,6 +394,8 @@ e.g. for further-processed materials or materials obtained from primary specimen
 
 <h3 id="processing-and-what-is-not-represented-here">Processing, and what is not represented here</h3>
 
+<p><a id="ballot-question-3"></a></p>
+
 <p class="bg-warning"><strong>Ballot question 3 — mandatory storage temperature conditions on <code class="language-plaintext highlighter-rouge">Specimen.processing</code>.</strong>
 The base profile requires the extension <code class="language-plaintext highlighter-rouge">temperaturbedingungen</code> on every
 <code class="language-plaintext highlighter-rouge">Specimen.processing</code> element, in <code class="language-plaintext highlighter-rouge">2026.0.1</code> as in <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code>. That
@@ -410,6 +416,8 @@ ballot if you are affected.</p>
 question 2 sets out the reasoning.</p>
 
 <h3 id="incubation-duration-and-temperature">Incubation duration and temperature</h3>
+
+<p><a id="ballot-question-4"></a></p>
 
 <p class="bg-warning"><strong>Ballot question 4 — is incubation representable via <code class="language-plaintext highlighter-rouge">Specimen.processing</code>?</strong>
 FHIR provides for it there, and the MII already has the pieces. Measured against
@@ -459,7 +467,7 @@ answer is in.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Sep 10, 2026 13:47+0000">2026-09-10</span>
+          Generated <span title="Thu, Sep 10, 2026 16:40+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

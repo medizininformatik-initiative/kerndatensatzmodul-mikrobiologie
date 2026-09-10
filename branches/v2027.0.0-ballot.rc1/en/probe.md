@@ -8,9 +8,9 @@
 
 ### Report - Specimen
 
-**Ballot question 1 — can you supply a Specimen resource for every result?** Every investigation profile in this module requires `Observation.specimen`. That is not a choice this guide made on its own: the European white paper states that the specimen **shall always** be represented explicitly in a FHIR Specimen resource, preferably in `Specimen.type` using SNOMED CT — and expressly says this holds **even where the LOINC code already carries the specimen**. So the question is not whether the requirement is right, but whether it is deliverable.
+**Ballot question 1 — can you supply a Specimen resource for every result?** Every investigation profile in this module requires `Observation.specimen`. The requirement does not originate with this guide alone: the European white paper states that the specimen **shall always** be represented explicitly in a FHIR Specimen resource, preferably in `Specimen.type` using SNOMED CT — and expressly says this holds **even where the LOINC code already carries the specimen**.
 
-Feedback from German laboratory practice is that a Specimen resource is frequently not produced. **We would like to know whether your site can supply one.** If a substantial number cannot, the two ways out point in opposite directions: relax `Observation.specimen` to `0..1` and let pre-coordinated LOINC codes carry the material, or keep the requirement and accept that some senders cannot conform. Please comment during the ballot.
+Feedback from German laboratory practice is that a Specimen resource is frequently not produced. If that holds widely, the two ways out point in opposite directions: relax `Observation.specimen` to `0..1` and let pre-coordinated LOINC codes carry the material, or keep the requirement and accept that some senders cannot conform. Please comment during the ballot.
 
 Specimens are represented by [Specimen](StructureDefinition-mii-pr-mikrobio-probe.md), which derives from [MII_PR_Biobank_Specimen_Bioprobe_Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core) of the [MII Biobank module](https://simplifier.net/medizininformatikinitiative-modulbiobank) — a base profile written for exactly this purpose, which modules derive from rather than implement directly. `Observation.specimen` of every investigation profile references it.
 

@@ -21,6 +21,7 @@ Die ausführlich behandelten Themen haben eigene Seiten:
 * **[Probe](probe.md)** — wie das Probenmaterial abgebildet wird und welches Modul es verantwortet
 * **[Datensätze und Beschreibungen](logical-models.md)** — die Datenelemente des Moduls als logische Modelle
 * **[UML-Diagramme](uml-diagrams.md)** — die Datenmodelle und ihre Beziehungen
+* **[Anleitung für Forschende](researcher-guidance.md)** — wo die Auswertung der Daten dieses Moduls beginnt und worauf dabei zu achten ist
 * **[Anleitung für Implementierende](implementer-guidance.md)** — technische Hinweise für DIZ-Implementierende und die Bezüge zu anderen KDS-Modulen
 
 -------

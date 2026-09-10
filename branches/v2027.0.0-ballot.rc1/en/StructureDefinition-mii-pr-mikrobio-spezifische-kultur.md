@@ -191,7 +191,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Kultur",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:47:44+00:00",
+  "date" : "2026-09-10T16:40:19+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

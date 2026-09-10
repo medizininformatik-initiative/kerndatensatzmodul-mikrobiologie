@@ -19,6 +19,7 @@ The subjects treated in detail have their own pages:
 * **[Specimen](probe.md)** — how the specimen is represented and which module owns it
 * **[Datasets and Descriptions](logical-models.md)** — the module's data elements as logical models
 * **[UML Diagrams](uml-diagrams.md)** — the data models and their relationships
+* **[Guidance for Researchers](researcher-guidance.md)** — where to start when analysing this module's data, and what to watch out for
 * **[Guidance for Implementers](implementer-guidance.md)** — technical guidance for DIC implementers, and the module's relations to other KDS modules
 
 -------

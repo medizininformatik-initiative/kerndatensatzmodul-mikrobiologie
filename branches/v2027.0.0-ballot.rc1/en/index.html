@@ -209,6 +209,7 @@
     <a data-toggle="dropdown" href="guidance.html" class="dropdown-toggle">Guidance<b class="caret"> </b></a>
     <ul class="dropdown-menu">
       <li><a href="guidance.html">Guidance</a></li>
+      <li><a href="researcher-guidance.html">Guidance for Researchers</a></li>
       <li><a href="implementer-guidance.html">Guidance for Implementers</a></li>
       <!-- link-only entry: Logical-Models section of the Artifacts Summary (see header note) -->
       <li><a href="logical-models.html">Datasets and Descriptions</a></li>
@@ -218,8 +219,11 @@
            section tree. That section's index page carried no content of its own, so
            the level was navigation rather than a page. They are guidance about the
            profiles, not artefact listings, so Artifacts stays a pure artefact index
-           and these live here. Budget after the change: 7 top-level (limit 8),
-           7 children here (limit 10), depth 2 (limit 2), 26 entries (limit 33). -->
+           and these live here. -->
+      <!-- Budget, recounted from this file on 2026-09-10 after "Guidance for
+           Researchers" was added: 7 top-level (limit 8), 9 children here
+           (limit 10), depth 2 (limit 2), 32 entries in total (limit 33). The
+           figures recorded here before were stale by one addition. -->
       <li><a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a></li>
       <li><a href="interpretation.html">Interpretation</a></li>
       <li><a href="fhir-profile.html">FHIR Profiles - Modelling Notes</a></li>
@@ -379,8 +383,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-  <li><a href="#ballot-questions" id="markdown-toc-ballot-questions">Ballot questions</a></li>
   <li><a href="#target-audience" id="markdown-toc-target-audience">Target audience</a></li>
+  <li><a href="#ballot-questions" id="markdown-toc-ballot-questions">Ballot questions</a></li>
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
   <li><a href="#related-guides" id="markdown-toc-related-guides">Related guides</a></li>
   <li><a href="#imprint" id="markdown-toc-imprint">Imprint</a></li>
@@ -416,6 +420,30 @@ an implementable specification allows: where the underlying agreements leave a q
 guide states the decision it took and why. Points deliberately left open are listed under
 <a href="#ballot-questions">Ballot questions</a>, and we ask for comment on them. Implementers should expect
 changes in the areas concerned.</p>
+</div>
+
+<h3 id="target-audience">Target audience</h3>
+
+<div class="ig-highlight ig-highlight-blue">
+  <h5>Implementers</h5>
+  <p>For data management and integration in data integration centres (DIC), software developers and system architects building FHIR-based solutions.</p>
+
+  <ul>
+    <li>→ <a href="profiles.html">Profiles</a> — the normative constraints</li>
+    <li>→ <a href="implementer-guidance.html">Guidance for Implementers</a> — conformance, artifacts, validation</li>
+    <li>→ <a href="logical-models.html">Logical Models</a> and <a href="uml-diagrams.html">UML Diagrams</a> — the conceptual view</li>
+  </ul>
+</div>
+
+<div class="ig-highlight ig-highlight-green">
+  <h5>Researchers</h5>
+  <p>For scientists working with MII data.</p>
+
+  <ul>
+    <li>→ <a href="researcher-guidance.html">Guidance for Researchers</a> — where to start</li>
+    <li>→ <a href="profilauswahl-und-abgrenzung.html">Profile Selection and Delimitation</a> — which profile carries which statement, and what a negative result means</li>
+    <li>→ <a href="examples.html">Examples</a> — what the data looks like in practice</li>
+  </ul>
 </div>
 
 <p>The Microbiology 2027 extension module models microbiological findings as standalone Observations.
@@ -465,38 +493,24 @@ ask for comment on them during the ballot. Each is stated in full on the page it
 belongs to.</p>
 
 <ol>
-  <li><strong><a href="probe.html">Is a Specimen resource always available?</a></strong> — every
+  <li><strong><a href="probe.html#ballot-question-1">Is a Specimen resource always available?</a></strong> — every
 investigation profile in this module requires <code class="language-plaintext highlighter-rouge">Observation.specimen</code>.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Can the staining technique be represented via <code class="language-plaintext highlighter-rouge">Specimen</code> alone?</a></strong>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2">Can the staining technique be represented via <code class="language-plaintext highlighter-rouge">Specimen</code> alone?</a></strong>
 — the European data model places it in <code class="language-plaintext highlighter-rouge">Specimen.processing</code>; we ask whether
 that is implementable.</li>
-  <li><strong><a href="probe.html">Mandatory storage temperature conditions on <code class="language-plaintext highlighter-rouge">Specimen.processing</code></a></strong>
+  <li><strong><a href="probe.html#ballot-question-3">Mandatory storage temperature conditions on <code class="language-plaintext highlighter-rouge">Specimen.processing</code></a></strong>
 — inherited from the biobank base profile, without meaning for microbiological
 processing.</li>
-  <li><strong><a href="probe.html">Is incubation duration and temperature representable via <code class="language-plaintext highlighter-rouge">Specimen.processing</code>?</a></strong>
+  <li><strong><a href="probe.html#ballot-question-4">Is incubation duration and temperature representable via <code class="language-plaintext highlighter-rouge">Specimen.processing</code>?</a></strong>
 — FHIR and the MII provide the pieces; the question is whether sites can supply
 them.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Component or <code class="language-plaintext highlighter-rouge">hasMember</code> for a semiquantitative amount?</a></strong>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5">Component or <code class="language-plaintext highlighter-rouge">hasMember</code> for a semiquantitative amount?</a></strong>
 — the European data model leaves this open; a component reverses a decision of
 this release cycle.</li>
-  <li><strong><a href="profilauswahl-und-abgrenzung.html">Can you supply <code class="language-plaintext highlighter-rouge">Observation.method</code> for every result?</a></strong>
+  <li><strong><a href="profilauswahl-und-abgrenzung.html#ballot-question-6">Can you supply <code class="language-plaintext highlighter-rouge">Observation.method</code> for every result?</a></strong>
 — the white paper asks for it always; this guide only recommends it, and your
 answer decides more than one question.</li>
 </ol>
-
-<h3 id="target-audience">Target audience</h3>
-
-<div class="ig-highlight ig-highlight-blue">
-<h5>Implementers</h5>
-<p>Data Integration Centers (DIC), software developers and system architects building FHIR-based solutions.<br />
-→ see <a href="profiles.html">Profiles</a> and <a href="logical-models.html">Logical Models</a>.</p>
-</div>
-
-<div class="ig-highlight ig-highlight-green">
-<h5>Researchers</h5>
-<p>Scientists using KDS data for medical research.<br />
-→ see <a href="guidance.html">Guidance</a>.</p>
-</div>
 
 <h3 id="contents">Contents</h3>
 
@@ -526,10 +540,6 @@ dependencies are described at
 formal dependency is declared as <code class="language-plaintext highlighter-rouge">de.medizininformatikinitiative.kerndatensatz.laborbefund</code> in
 <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>. The relations to the Molecular genetic report, Biobank, Case and Structural data
 modules are described on <a href="implementer-guidance.html">Guidance for Implementers</a>.</p>
-
-<p>More FHIR implementation guides can be found in the official
-<strong><a href="https://fhir.org/guides/registry/">FHIR IG Registry</a></strong> (source:
-<a href="https://github.com/FHIR/ig-registry"><code class="language-plaintext highlighter-rouge">FHIR/ig-registry</code></a>).</p>
 
 <h3 id="imprint">Imprint</h3>
 
@@ -620,7 +630,7 @@ the content of this specification.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Thu, Sep 10, 2026 13:47+0000">2026-09-10</span>
+          Generated <span title="Thu, Sep 10, 2026 16:40+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

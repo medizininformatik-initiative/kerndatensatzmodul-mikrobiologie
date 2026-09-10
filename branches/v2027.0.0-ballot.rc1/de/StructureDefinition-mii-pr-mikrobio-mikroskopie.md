@@ -20,7 +20,7 @@ Sie ist die offene Hälfte der Mikroskopie: Der Code fragt, was zu sehen ist, un
 
 ### Färbung
 
-**Ballotfrage 2 — ist die Färbetechnik allein über `Specimen` darstellbar?** Das europäische Datenmodell legt die Färbetechnik nach `Specimen.processing.procedure`. **Wir erbitten Rückmeldung, ob eine Abbildung allein über `Specimen` bei Ihnen implementierbar ist** — das ist die Frage, nicht unsere Präferenz. Wo das Profil sie führt, ist nur ein Teil der Antwort.
+**Ballotfrage 2 — ist die Färbetechnik allein über `Specimen` darstellbar?** Das europäische Datenmodell legt die Färbetechnik nach `Specimen.processing.procedure`. Wir bitten um Rückmeldung, ob eine Abbildung allein über `Specimen` an Ihrem Standort umsetzbar ist. Die Antwort entscheidet, ob dieses Modul die Färbung weiterhin in `Observation.method` führt.
 
 Zwei Dinge sprechen dagegen, dass `Specimen` der einzige Ort ist. Es setzt eine Specimen-Ressource voraus, und die stellt Ballotfrage 1 in Zweifel. Und der Parent von [Probe](StructureDefinition-mii-pr-mikrobio-probe.md) macht unter `processing` derzeit Lagertemperaturbedingungen verpflichtend (Ballotfrage 3), die eine Färbung nicht liefern kann.
 
@@ -289,7 +289,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T13:47:44+00:00",
+  "date" : "2026-09-10T16:40:19+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

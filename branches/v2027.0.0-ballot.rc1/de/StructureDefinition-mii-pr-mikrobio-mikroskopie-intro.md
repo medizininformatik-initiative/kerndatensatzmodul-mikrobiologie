@@ -9,12 +9,14 @@ das richtige Profil.
 
 ### Färbung
 
+<a id="ballot-question-2"></a>
+
 {:.bg-warning}
 **Ballotfrage 2 — ist die Färbetechnik allein über `Specimen` darstellbar?**
 Das europäische Datenmodell legt die Färbetechnik nach
-`Specimen.processing.procedure`. **Wir erbitten Rückmeldung, ob eine Abbildung
-allein über `Specimen` bei Ihnen implementierbar ist** — das ist die Frage, nicht
-unsere Präferenz. Wo das Profil sie führt, ist nur ein Teil der Antwort.
+`Specimen.processing.procedure`. Wir bitten um Rückmeldung, ob eine Abbildung allein über `Specimen` an Ihrem
+Standort umsetzbar ist. Die Antwort entscheidet, ob dieses Modul die Färbung
+weiterhin in `Observation.method` führt.
 
 Zwei Dinge sprechen dagegen, dass `Specimen` der einzige Ort ist. Es setzt eine
 Specimen-Ressource voraus, und die stellt Ballotfrage 1 in Zweifel. Und der
@@ -51,6 +53,8 @@ Ihr Code stammt aus einem Interims-CodeSystem dieses Moduls. Das europäische
 Datenmodell fordert dafür einen LOINC-Code an (Blatt „Microscopy", Zeile 13, „new
 LOINC — Semiquantitive value for microscopy finding"); solange es ihn nicht gibt,
 steht der Interimscode dafür und wird durch ihn ersetzt.
+
+<a id="ballot-question-5"></a>
 
 {:.bg-warning}
 **Ballotfrage 5 — Komponente oder `hasMember` für die Menge?**
