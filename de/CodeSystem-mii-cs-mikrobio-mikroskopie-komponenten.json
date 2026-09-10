@@ -1,0 +1,40 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-mikrobio-mikroskopie-komponenten",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-mikrobio-mikroskopie-komponenten</b></p><a name=\"de-mii-cs-mikrobio-mikroskopie-komponenten\"> </a><a name=\"de-hcmii-cs-mikrobio-mikroskopie-komponenten\"> </a><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">semiquantitative-menge<a name=\"de-mii-cs-mikrobio-mikroskopie-komponenten-semiquantitative-menge\"> </a></td><td>Semiquantitative Menge</td><td>Die semiquantitative Menge, in der der im Ergebnis benannte mikroskopische Befund gesehen wurde. INTERIMSCODE: ersetzt den im EU-Datenmodell (Blatt 'Microscopy', Zeile 13) angeforderten LOINC-Code 'Semiquantitive value for microscopy finding', solange dieser nicht existiert.</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_CS_Mikrobio_Mikroskopie_Komponenten",
+  "title" : "MII CS Mikrobio Mikroskopie Komponenten",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-10T13:00:57+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Interims-CodeSystem für Komponenten des mikroskopischen Befunds, für die noch kein LOINC-Code existiert. Der enthaltene Code wird ersetzt, sobald der im EU-Datenmodell angeforderte LOINC-Code verfügbar ist.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 1,
+  "concept" : [{
+    "code" : "semiquantitative-menge",
+    "display" : "Semiquantitative Menge",
+    "definition" : "Die semiquantitative Menge, in der der im Ergebnis benannte mikroskopische Befund gesehen wurde. INTERIMSCODE: ersetzt den im EU-Datenmodell (Blatt 'Microscopy', Zeile 13) angeforderten LOINC-Code 'Semiquantitive value for microscopy finding', solange dieser nicht existiert."
+  }]
+}

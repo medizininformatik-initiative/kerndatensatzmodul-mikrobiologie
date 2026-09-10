@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED |
+| Active as of 2026-09-10 | *Computable Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED |
 
  
 Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahren des zielgerichteten Erregernachweises, etwa Amplifikation, Immunoassay oder Agglutination. 
@@ -44,7 +44,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -79,6 +79,10 @@ No Expansion for this valueset (Unsupported Code System Version)
       "system" : "http://snomed.info/sct",
       "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
+        "code" : "702675006",
+        "display" : "Probe with target amplification technique (qualifier value)"
+      },
+      {
         "code" : "258066000",
         "display" : "Polymerase chain reaction technique (qualifier value)"
       },
@@ -109,6 +113,14 @@ No Expansion for this valueset (Unsupported Code System Version)
       {
         "code" : "703444002",
         "display" : "Fluorescent immunoassay (qualifier value)"
+      },
+      {
+        "code" : "1259932009",
+        "display" : "Loop-mediated isothermal amplification technique (qualifier value)"
+      },
+      {
+        "code" : "1304162005",
+        "display" : "Nucleic acid sequencing technique (qualifier value)"
       }]
     }]
   }

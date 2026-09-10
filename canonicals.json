@@ -13,6 +13,13 @@
   "name" : "MII_CPS_Mikrobio_Metadata"
 },
 {
+  "id" : "mii-cs-mikrobio-mikroskopie-komponenten",
+  "type" : "CodeSystem",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_CS_Mikrobio_Mikroskopie_Komponenten"
+},
+{
   "id" : "mii-cs-mikrobio-mrgn-ergebnis",
   "type" : "CodeSystem",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis",
@@ -125,11 +132,11 @@
   "name" : "MII_PR_Mikrobio_Aviditaet"
 },
 {
-  "id" : "mii-pr-mikrobio-barlett-score",
+  "id" : "mii-pr-mikrobio-bartlett-score",
   "type" : "StructureDefinition",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-bartlett-score",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "MII_PR_Mikrobio_Barlett_Score"
+  "name" : "MII_PR_Mikrobio_Bartlett_Score"
 },
 {
   "id" : "mii-pr-mikrobio-ct-wert",
@@ -164,7 +171,7 @@
   "type" : "StructureDefinition",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "MII_PR_Mikrobio_Mikroskopie"
+  "name" : "MII_PR_Mikrobio_Allgemeine_Mikroskopie"
 },
 {
   "id" : "mii-pr-mikrobio-molekulare-pathogenlast",
@@ -186,6 +193,13 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Mikrobio_Nugent_Score"
+},
+{
+  "id" : "mii-pr-mikrobio-probe",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Mikrobio_Probe"
 },
 {
   "id" : "mii-pr-mikrobio-resistenzkategorie-status",
@@ -214,6 +228,13 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Mikrobio_Spezifische_Kultur"
+},
+{
+  "id" : "mii-pr-mikrobio-spezifische-mikroskopie",
+  "type" : "StructureDefinition",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_PR_Mikrobio_Spezifische_Mikroskopie"
 },
 {
   "id" : "mii-pr-mikrobio-titer",
@@ -258,11 +279,32 @@
   "name" : "MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED"
 },
 {
+  "id" : "mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Mikrobio_Allgemeine_Bestimmung_Tests_LOINC"
+},
+{
   "id" : "mii-vs-mikrobio-allgemeine-kultur-methode-snomed",
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED"
+},
+{
+  "id" : "mii-vs-mikrobio-allgemeine-kultur-tests-loinc",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Mikrobio_Allgemeine_Kultur_Tests_LOINC"
+},
+{
+  "id" : "mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC"
 },
 {
   "id" : "mii-vs-mikrobio-antigen-antikoerper-methode-snomed",
@@ -300,11 +342,11 @@
   "name" : "MII_VS_Mikrobio_Aviditaet_Tests_LOINC"
 },
 {
-  "id" : "mii-vs-mikrobio-barlett-score-loinc",
+  "id" : "mii-vs-mikrobio-bartlett-score-loinc",
   "type" : "ValueSet",
-  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-barlett-score-loinc",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-bartlett-score-loinc",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "MII_VS_Mikrobio_Barlett_Score_LOINC"
+  "name" : "MII_VS_Mikrobio_Bartlett_Score_LOINC"
 },
 {
   "id" : "mii-vs-mikrobio-befundtyp-loinc",
@@ -349,6 +391,13 @@
   "name" : "MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC"
 },
 {
+  "id" : "mii-vs-mikrobio-empfindlichkeit-methode-snomed",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-methode-snomed",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Mikrobio_Empfindlichkeit_Methode_SNOMED"
+},
+{
   "id" : "mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc",
   "type" : "ValueSet",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc",
@@ -375,6 +424,13 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED"
+},
+{
+  "id" : "mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED"
 },
 {
   "id" : "mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum",
@@ -487,6 +543,13 @@
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC"
+},
+{
+  "id" : "mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc",
+  "type" : "ValueSet",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC"
 },
 {
   "id" : "mii-vs-mikrobio-susceptibility",

@@ -1,20 +1,44 @@
-# MII PR Mikrobio Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII PR Mikrobio Allgemeine Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **MII PR Mikrobio Mikroskopie**
+* **MII PR Mikrobio Allgemeine Mikroskopie**
 
-## Ressourcenprofil: MII PR Mikrobio Mikroskopie 
+## Ressourcenprofil: MII PR Mikrobio Allgemeine Mikroskopie 
 
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Mikroskopie |
+| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Allgemeine_Mikroskopie |
 
  
-Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung), ohne taxonomische Identifikation. 
+Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies. 
 
-Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung), ohne taxonomische Identifikation.
+Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies.
+
+Sie ist die offene Hälfte der Mikroskopie: Der Code fragt, was zu sehen ist, und die Antwort ist die beobachtete Morphologie. Steht das gesuchte Objekt bereits im Untersuchungscode und ist die Antwort, wie viel davon gesehen wurde, ist [Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md) das richtige Profil.
+
+### Färbung
+
+**Ballotfrage 2 — ist die Färbetechnik allein über `Specimen` darstellbar?** Das europäische Datenmodell legt die Färbetechnik nach `Specimen.processing.procedure`. **Wir erbitten Rückmeldung, ob eine Abbildung allein über `Specimen` bei Ihnen implementierbar ist** — das ist die Frage, nicht unsere Präferenz. Wo das Profil sie führt, ist nur ein Teil der Antwort.
+
+Zwei Dinge sprechen dagegen, dass `Specimen` der einzige Ort ist. Es setzt eine Specimen-Ressource voraus, und die stellt Ballotfrage 1 in Zweifel. Und der Parent von [Probe](StructureDefinition-mii-pr-mikrobio-probe.md) macht unter `processing` derzeit Lagertemperaturbedingungen verpflichtend (Ballotfrage 3), die eine Färbung nicht liefern kann.
+
+Dieses Modul führt die Färbung deshalb vorläufig in `Observation.method`. `Observation.method` ist im Labor-Basisprofil `0..1`, eine Decke, die ein Profil nicht anheben darf, und in SNOMED CT sind Färbung und Mikroskopie Geschwisterzweige — `278289002 |Microscopy techniques|` subsumiert `708061008 |Gram stain|` nicht, dessen Elternkonzept ist `703857004 |Staining technique|`. Es passt also nur eines von beiden hinein, und die Färbung ist die informative Wahl, weil `105059-0` mit „Microscopic observation" das Verfahren schon nennt. Wer stattdessen `664-3` wählt, hat die Färbung im Code und den Methodenplatz ganz frei.
+
+Bitte teilen Sie uns im Ballot mit, welchen dieser Wege Sie tatsächlich umsetzen können.
+
+Bei nativer Mikroskopie ohne Färbung wird stattdessen das Mikroskopieverfahren angegeben.
+
+## Morphologie zusammen mit ihrer Menge
+
+Der häufigste Grambefund braucht zwei Aussagen auf einmal — **wenig** grampositive Kokken —, und `value[x]` kann nur eine davon tragen. Die Morphologie ist der Wert, die Menge eine Komponente: `component[menge]`, aus derselben semiquantitativen Liste, die die [Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md) als Wert verwendet.
+
+Ihr Code stammt aus einem Interims-CodeSystem dieses Moduls. Das europäische Datenmodell fordert dafür einen LOINC-Code an (Blatt „Microscopy", Zeile 13, „new LOINC — Semiquantitive value for microscopy finding"); solange es ihn nicht gibt, steht der Interimscode dafür und wird durch ihn ersetzt.
+
+**Ballotfrage 5 — Komponente oder `hasMember` für die Menge?** Das europäische Datenmodell lässt das selbst offen und fragt „Component Procedure **or has member?**". Eine Komponente hält eine Untersuchung als eine Ressource zusammen, so wie ein Labor sie berichtet. `hasMember` machte die Menge zu einer eigenen, referenzierbaren Observation — die Richtung, die dieses Modul in `2027.0.0-alpha.1` eingeschlagen hat, als die Komponenten aus genau diesem Profil entfernt und in eigenständige Observations überführt wurden. Die Komponente dreht hier also eine Entscheidung dieses Zyklus zurück, bewusst und für einen einzelnen engen Fall. Bitte teilen Sie uns im Ballot mit, welche der beiden Formen Sie verarbeiten können.
+
+Ein zusammenfassendes Urteil über das Präparat — „unauffällig" — ist weder der Wert noch die Komponente, sondern `Observation.interpretation` mit `N` „Normal". Es ist die eine Stelle in diesem Modul, an der `interpretation` das richtige Element ist: Sie trägt eine Beurteilung, niemals eine Menge.
 
 ### Beispiele
 
@@ -25,7 +49,7 @@ Beispiel (minimal):
 **Usages:**
 
 * Refer to this Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
-* Examples for this Profile: [Observation/mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.md)
+* Examples for this Profile: [Observation/mii-exa-mikrobio-mikroskopie-gram-kokken-wenig](Observation-mii-exa-mikrobio-mikroskopie-gram-kokken-wenig.md) and [Observation/mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.md)
 * CapabilityStatements using this Profile: [MII CPS Mikrobio Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-mikroskopie.json)
@@ -57,13 +81,25 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 ** Summary **
 
 Mandatory: 2 elements
- Must-Support: 2 elements
+ Must-Support: 3 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Mikrobio Probe (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe)](StructureDefinition-mii-pr-mikrobio-probe.md)
 
 **Extensions**
 
 This structure refers to these extensions:
 
 * [http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy](StructureDefinition-ext-R5-Observation.triggeredBy.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.component
 
  **Schlüsselelemente-Ansicht** 
 
@@ -88,13 +124,25 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 ** Summary **
 
 Mandatory: 2 elements
- Must-Support: 2 elements
+ Must-Support: 3 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Mikrobio Probe (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe)](StructureDefinition-mii-pr-mikrobio-probe.md)
 
 **Extensions**
 
 This structure refers to these extensions:
 
 * [http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy](StructureDefinition-ext-R5-Observation.triggeredBy.md)
+
+**Slices**
+
+This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.html#slices):
+
+* The element 1 is sliced based on the value of Observation.component
 
  
 
@@ -237,11 +285,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
   "version" : "2027.0.0-ballot.rc1",
-  "name" : "MII_PR_Mikrobio_Mikroskopie",
-  "title" : "MII PR Mikrobio Mikroskopie",
+  "name" : "MII_PR_Mikrobio_Allgemeine_Mikroskopie",
+  "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -263,7 +311,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung), ohne taxonomische Identifikation.",
+  "description" : "Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -331,11 +379,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "105059-0"
-        }]
+      "short" : "Bevorzugt 105059-0 'Microscopic observation [Identifier] in Specimen', weil es die Faerbung nach Observation.method auslagert. 664-3 '... by Gram stain' ist gleichwertig zulaessig und hat den Vorteil, dass Observation.method frei bleibt — das Element ist 0..1 und kann Faerbung und Mikroskopieverfahren nicht beide tragen.",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc"
       }
     },
     {
@@ -349,6 +396,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "id" : "Observation.value[x]:valueCodeableConcept",
       "path" : "Observation.value[x]",
       "sliceName" : "valueCodeableConcept",
+      "short" : "Die beobachtete morphologische GRUPPE — grampositive Kokken, gramnegative Staebchen, Hyphen. KEINE Spezies: Eine Speziesidentifizierung gehoert in die Allgemeine Bestimmung, auch wenn sie mikroskopisch gestellt wurde. Ein Teil der Gruppen liegt in SNOMED in der Organismus-Hierarchie, weil es sie dort nur so gibt; das macht die Aussage nicht praeziser.",
       "type" : [{
         "code" : "CodeableConcept"
       }],
@@ -366,8 +414,14 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       }
     },
     {
+      "id" : "Observation.interpretation",
+      "path" : "Observation.interpretation",
+      "short" : "Ein zusammenfassendes Urteil ueber das Praeparat — 'unauffaellig' als N 'Normal'. NICHT fuer die Menge des Gesehenen: die steht in component[menge]."
+    },
+    {
       "id" : "Observation.method",
       "path" : "Observation.method",
+      "short" : "Bevorzugt die Faerbetechnik, z. B. 708061008 'Gram stain'; bei nativer Mikroskopie ohne Faerbung das Mikroskopieverfahren. Beides zugleich ist nicht moeglich, weil Observation.method 0..1 ist.",
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"
@@ -376,7 +430,53 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
+    },
+    {
+      "id" : "Observation.component",
+      "path" : "Observation.component",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "code"
+        }],
+        "description" : "Slicing nach dem Komponenten-Code.",
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Observation.component:menge",
+      "path" : "Observation.component",
+      "sliceName" : "menge",
+      "short" : "Semiquantitative Menge des in value[x] benannten Befunds",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:menge.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten",
+          "code" : "semiquantitative-menge"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:menge.value[x]",
+      "path" : "Observation.component.value[x]",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"
+      }
     }]
   }
 }

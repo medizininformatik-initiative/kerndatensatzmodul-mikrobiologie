@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed</b></p><a name="mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"> </a><a name="hcmii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is explicitly stated to be http://snomed.info/sct/900000000000207008/version/20260701"> version &#x1F4CD;http://snomed.info/sct/900000000000207008/version/20260701</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/441614007">441614007</a></td><td>Present one plus out of three plus</td></tr><tr><td><a href="http://snomed.info/id/441517005">441517005</a></td><td>Present two plus out of three plus</td></tr><tr><td><a href="http://snomed.info/id/441521003">441521003</a></td><td>Present three plus out of three plus</td></tr><tr><td><a href="http://snomed.info/id/57176003">57176003</a></td><td>Few</td></tr><tr><td><a href="http://snomed.info/id/260354000">260354000</a></td><td>Moderate number</td></tr><tr><td><a href="http://snomed.info/id/260396001">260396001</a></td><td>Numerous</td></tr><tr><td><a href="http://snomed.info/id/263865001">263865001</a></td><td>Scanty</td></tr><tr><td><a href="http://snomed.info/id/260413007">260413007</a></td><td>None</td></tr><tr><td><a href="http://snomed.info/id/27863008">27863008</a></td><td>No organisms seen (finding)</td></tr><tr><td><a href="http://snomed.info/id/52101004">52101004</a></td><td>Present</td></tr><tr><td><a href="http://snomed.info/id/2667000">2667000</a></td><td>Absent</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED"/>
+  <title value="MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-10T13:00:57+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, in der das im Code benannte Objekt gesehen wurde."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/900000000000207008/version/20260701"/>
+      <concept>
+        <code value="441614007"/>
+        <display value="Present one plus out of three plus"/>
+      </concept>
+      <concept>
+        <code value="441517005"/>
+        <display value="Present two plus out of three plus"/>
+      </concept>
+      <concept>
+        <code value="441521003"/>
+        <display value="Present three plus out of three plus"/>
+      </concept>
+      <concept>
+        <code value="57176003"/>
+        <display value="Few"/>
+      </concept>
+      <concept>
+        <code value="260354000"/>
+        <display value="Moderate number"/>
+      </concept>
+      <concept>
+        <code value="260396001"/>
+        <display value="Numerous"/>
+      </concept>
+      <concept>
+        <code value="263865001"/>
+        <display value="Scanty"/>
+      </concept>
+      <concept>
+        <code value="260413007"/>
+        <display value="None"/>
+      </concept>
+      <concept>
+        <code value="27863008"/>
+        <display value="No organisms seen (finding)"/>
+      </concept>
+      <concept>
+        <code value="52101004"/>
+        <display value="Present"/>
+      </concept>
+      <concept>
+        <code value="2667000"/>
+        <display value="Absent"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

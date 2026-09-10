@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ |
+| Active as of 2026-09-10 | *Computable Name*:MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ |
 
  
 Quantitative Antigen-/Antikörperantwort beschreibt die quantitative Messung erregerspezifischer Antigene oder Antikörper in einer Probe, bestimmt mittels immunologischer Verfahren. 
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
   "title" : "MII PR Mikrobio Antigen Antikoerper Quantitativ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -268,6 +268,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
+      "short" : "In der Serologie ist ein praekoordiniertes Specimen ausdruecklich zulaessig — anders als in den uebrigen Bereichen dieses Moduls gilt die Konvention 'System = XXX' hier NICHT. Das europaeische Whitepaper begruendet die Ausnahme damit, dass in der Serologie nur wenige Materialien vorkommen, ueberwiegend Serum, und ein Code-Wildwuchs deshalb nicht droht.",
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"
@@ -291,6 +292,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
     {
       "id" : "Observation.value[x]:valueQuantity.code",
       "path" : "Observation.value[x].code",
+      "short" : "Bevorzugt eine Einheit mit LITER als Nenner — ng/L, pg/L, ug/L, [IU]/L, [arb'U]/L. Das europaeische Whitepaper empfiehlt fuer die Serologie den Liter, weil das NPU-System ihn durchgaengig verwendet. Die mL-Varianten bleiben zulaessig, weil [IU]/mL international verbreitet ist.",
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"
@@ -315,7 +317,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
     {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
     }]
   }
 }

@@ -4,7 +4,7 @@
   <id value="mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"/>
   <language value="de"/>
   <text>
-    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum</b></p><a name="de-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"> </a><a name="de-hcmii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"> </a><ul><li>Include these codes as defined in <a href="http://unitsofmeasure.org"><code>http://unitsofmeasure.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>ng/mL</td><td/></tr><tr><td>pg/mL</td><td/></tr><tr><td>ug/L</td><td/></tr><tr><td>[IU]/mL</td><td/></tr><tr><td>[IU]/L</td><td/></tr><tr><td>[arb'U]/mL</td><td/></tr><tr><td>[arb'U]/L</td><td/></tr><tr><td>[arb'U]</td><td/></tr></table></li></ul></div>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum</b></p><a name="de-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"> </a><a name="de-hcmii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"> </a><ul><li>Include these codes as defined in <a href="http://unitsofmeasure.org"><code>http://unitsofmeasure.org</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>ng/L</td><td/></tr><tr><td>pg/L</td><td/></tr><tr><td>ug/L</td><td/></tr><tr><td>[IU]/L</td><td/></tr><tr><td>[arb'U]/L</td><td/></tr><tr><td>ng/mL</td><td/></tr><tr><td>pg/mL</td><td/></tr><tr><td>[IU]/mL</td><td/></tr><tr><td>[arb'U]/mL</td><td/></tr><tr><td>[arb'U]</td><td/></tr></table></li></ul></div>
   </text>
   <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"/>
   <version value="2027.0.0-ballot.rc1"/>
@@ -12,7 +12,7 @@
   <title value="MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-09T16:03:21+00:00"/>
+  <date value="2026-09-10T13:00:57+00:00"/>
   <publisher value="Medizininformatik Initiative"/>
   <contact>
     <name value="Medizininformatik Initiative"/>
@@ -33,25 +33,31 @@
     <include>
       <system value="http://unitsofmeasure.org"/>
       <concept>
+        <code value="ng/L"/>
+      </concept>
+      <concept>
+        <code value="pg/L"/>
+      </concept>
+      <concept>
+        <code value="ug/L"/>
+      </concept>
+      <concept>
+        <code value="[IU]/L"/>
+      </concept>
+      <concept>
+        <code value="[arb'U]/L"/>
+      </concept>
+      <concept>
         <code value="ng/mL"/>
       </concept>
       <concept>
         <code value="pg/mL"/>
       </concept>
       <concept>
-        <code value="ug/L"/>
-      </concept>
-      <concept>
         <code value="[IU]/mL"/>
       </concept>
       <concept>
-        <code value="[IU]/L"/>
-      </concept>
-      <concept>
         <code value="[arb'U]/mL"/>
-      </concept>
-      <concept>
-        <code value="[arb'U]/L"/>
       </concept>
       <concept>
         <code value="[arb'U]"/>

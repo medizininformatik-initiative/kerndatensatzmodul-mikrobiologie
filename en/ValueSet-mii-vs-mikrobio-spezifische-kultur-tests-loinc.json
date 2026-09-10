@@ -4,7 +4,7 @@
   "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-spezifische-kultur-tests-loinc</b></p><a name=\"mii-vs-mikrobio-spezifische-kultur-tests-loinc\"> </a><a name=\"hcmii-vs-mikrobio-spezifische-kultur-tests-loinc\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span> where PROPERTY  = LP6850-4 (Prid), METHOD_TYP  = LP6429-7 (Organism specific culture), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), METHOD_TYP  = LP6429-7 (Organism specific culture), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li></ul></div>"
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-spezifische-kultur-tests-loinc</b></p><a name=\"mii-vs-mikrobio-spezifische-kultur-tests-loinc\"> </a><a name=\"hcmii-vs-mikrobio-spezifische-kultur-tests-loinc\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span> where PROPERTY  = LP6850-4 (Prid), METHOD_TYP  = LP6429-7 (Organism specific culture), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), METHOD_TYP  = LP6429-7 (Organism specific culture), CLASS  = LP7819-8 (MICRO) and STATUS  = ACTIVE</li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/44851-4/\">44851-4</a></td><td>Mycobacterium sp # 2 identified in Specimen by Organism specific culture</td></tr><tr><td><a href=\"https://loinc.org/44852-2/\">44852-2</a></td><td>Mycobacterium sp # 3 identified in Specimen by Organism specific culture</td></tr><tr><td><a href=\"https://loinc.org/44854-8/\">44854-8</a></td><td>Mycobacterium sp # 4 identified in Specimen by Organism specific culture</td></tr><tr><td><a href=\"https://loinc.org/44855-5/\">44855-5</a></td><td>Mycobacterium sp # 5 identified in Specimen by Organism specific culture</td></tr></table></li></ul></div>"
   },
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc",
   "version" : "2027.0.0-ballot.rc1",
@@ -12,7 +12,7 @@
   "title" : "MII VS Mikrobio Spezifische Kultur Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -76,6 +76,26 @@
         "property" : "STATUS",
         "op" : "=",
         "value" : "ACTIVE"
+      }]
+    }],
+    "exclude" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "concept" : [{
+        "code" : "44851-4",
+        "display" : "Mycobacterium sp # 2 identified in Specimen by Organism specific culture"
+      },
+      {
+        "code" : "44852-2",
+        "display" : "Mycobacterium sp # 3 identified in Specimen by Organism specific culture"
+      },
+      {
+        "code" : "44854-8",
+        "display" : "Mycobacterium sp # 4 identified in Specimen by Organism specific culture"
+      },
+      {
+        "code" : "44855-5",
+        "display" : "Mycobacterium sp # 5 identified in Specimen by Organism specific culture"
       }]
     }]
   }

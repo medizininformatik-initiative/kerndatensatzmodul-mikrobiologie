@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc</b></p><a name="de-mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc"> </a><a name="de-hcmii-vs-mikrobio-allgemeine-bestimmung-tests-loinc"> </a><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.82"> version &#x1F4CD;2.82</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/41852-5/">41852-5</a></td><td>Microorganism or agent identified in Specimen</td></tr><tr><td><a href="https://loinc.org/23667-9/">23667-9</a></td><td>Bacteria identified in Specimen</td></tr><tr><td><a href="https://loinc.org/42805-2/">42805-2</a></td><td>Fungus identified in Specimen</td></tr><tr><td><a href="https://loinc.org/41461-5/">41461-5</a></td><td>Virus identified in Specimen</td></tr><tr><td><a href="https://loinc.org/66885-5/">66885-5</a></td><td>Bacteria identified based on 16S rRNA gene [Identifier] in Specimen by Sequencing</td></tr><tr><td><a href="https://loinc.org/101534-6/">101534-6</a></td><td>Fungal 18s rRNA gene [Identifier] in Specimen by Sequencing</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc"/>
+  <version value="2027.0.0-ballot.rc1"/>
+  <name value="MII_VS_Mikrobio_Allgemeine_Bestimmung_Tests_LOINC"/>
+  <title value="MII VS Mikrobio Allgemeine Bestimmung Tests [LOINC]"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-10T13:00:57+00:00"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Tests-ValueSet für die allgemeine Bestimmung: LOINC-Codes für die ungerichtete Identifizierung eines Mikroorganismus. Bevorzugt wird 41852-5; die übrigen Codes sind gleichwertig zulässig, wo das Labor die Erregergruppe oder das Sequenzierziel im Code benennt."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <version value="2.82"/>
+      <concept>
+        <code value="41852-5"/>
+        <display value="Microorganism or agent identified in Specimen"/>
+      </concept>
+      <concept>
+        <code value="23667-9"/>
+        <display value="Bacteria identified in Specimen"/>
+      </concept>
+      <concept>
+        <code value="42805-2"/>
+        <display value="Fungus identified in Specimen"/>
+      </concept>
+      <concept>
+        <code value="41461-5"/>
+        <display value="Virus identified in Specimen"/>
+      </concept>
+      <concept>
+        <code value="66885-5"/>
+        <display value="Bacteria identified based on 16S rRNA gene [Identifier] in Specimen by Sequencing"/>
+      </concept>
+      <concept>
+        <code value="101534-6"/>
+        <display value="Fungal 18s rRNA gene [Identifier] in Specimen by Sequencing"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

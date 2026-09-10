@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-labor-laborergebnis-semiquantitativ | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_VS_Labor_Laborergebnis_Semiquantitativ |
+| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_VS_Labor_Laborergebnis_Semiquantitativ |
 
  
 Kodierung für semi-quantitative Laborergebnisse 
@@ -44,7 +44,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Labor Laborergebnis Semiquantitativ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

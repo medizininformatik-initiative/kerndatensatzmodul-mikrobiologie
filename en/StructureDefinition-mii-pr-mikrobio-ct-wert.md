@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Mikrobio_Ct_Wert |
+| Active as of 2026-09-10 | *Computable Name*:MII_PR_Mikrobio_Ct_Wert |
 
  
 CT-Wert beschreibt die Quantifizierung des Zyklusschwellenwerts bei Nukleinsäurenachweisen (z. B. Echtzeit-PCR) in einer Probe. 
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-c
   "title" : "MII PR Mikrobio CT Wert",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -315,7 +315,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-c
     {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
     },
     {
       "id" : "Observation.derivedFrom",

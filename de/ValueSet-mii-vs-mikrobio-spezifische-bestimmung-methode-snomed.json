@@ -4,7 +4,7 @@
   "language" : "de",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-spezifische-bestimmung-methode-snomed</b></p><a name=\"de-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed\"> </a><a name=\"de-hcmii-vs-mikrobio-spezifische-bestimmung-methode-snomed\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/900000000000207008/version/20260701\"> version &#x1F4CD;http://snomed.info/sct/900000000000207008/version/20260701</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/258066000\">258066000</a></td><td>Polymerase chain reaction technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/1303992007\">1303992007</a></td><td>Digital polymerase chain reaction technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/70601000052104\">70601000052104</a></td><td>Real-time polymerase chain reaction technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/1303998006\">1303998006</a></td><td>Multiplex polymerase chain reaction technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/1304048000\">1304048000</a></td><td>Transcription mediated amplification technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/708104000\">708104000</a></td><td>Agglutination technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/726449005\">726449005</a></td><td>Immunoassay technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/703444002\">703444002</a></td><td>Fluorescent immunoassay (qualifier value)</td></tr></table></li></ul></div>"
+    "div" : "<div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-spezifische-bestimmung-methode-snomed</b></p><a name=\"de-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed\"> </a><a name=\"de-hcmii-vs-mikrobio-spezifische-bestimmung-methode-snomed\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/900000000000207008/version/20260701\"> version &#x1F4CD;http://snomed.info/sct/900000000000207008/version/20260701</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/702675006\">702675006</a></td><td>Probe with target amplification technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/258066000\">258066000</a></td><td>Polymerase chain reaction technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/1303992007\">1303992007</a></td><td>Digital polymerase chain reaction technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/70601000052104\">70601000052104</a></td><td>Real-time polymerase chain reaction technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/1303998006\">1303998006</a></td><td>Multiplex polymerase chain reaction technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/1304048000\">1304048000</a></td><td>Transcription mediated amplification technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/708104000\">708104000</a></td><td>Agglutination technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/726449005\">726449005</a></td><td>Immunoassay technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/703444002\">703444002</a></td><td>Fluorescent immunoassay (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/1259932009\">1259932009</a></td><td>Loop-mediated isothermal amplification technique (qualifier value)</td></tr><tr><td><a href=\"http://snomed.info/id/1304162005\">1304162005</a></td><td>Nucleic acid sequencing technique (qualifier value)</td></tr></table></li></ul></div>"
   },
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed",
   "version" : "2027.0.0-ballot.rc1",
@@ -12,7 +12,7 @@
   "title" : "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -34,6 +34,10 @@
       "system" : "http://snomed.info/sct",
       "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
+        "code" : "702675006",
+        "display" : "Probe with target amplification technique (qualifier value)"
+      },
+      {
         "code" : "258066000",
         "display" : "Polymerase chain reaction technique (qualifier value)"
       },
@@ -64,6 +68,14 @@
       {
         "code" : "703444002",
         "display" : "Fluorescent immunoassay (qualifier value)"
+      },
+      {
+        "code" : "1259932009",
+        "display" : "Loop-mediated isothermal amplification technique (qualifier value)"
+      },
+      {
+        "code" : "1304162005",
+        "display" : "Nucleic acid sequencing technique (qualifier value)"
       }]
     }]
   }

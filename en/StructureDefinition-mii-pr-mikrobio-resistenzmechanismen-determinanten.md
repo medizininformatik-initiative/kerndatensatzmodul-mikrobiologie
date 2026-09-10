@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Mikrobio_Resistenzmechanismen_Determinanten |
+| Active as of 2026-09-10 | *Computable Name*:MII_PR_Mikrobio_Resistenzmechanismen_Determinanten |
 
  
 Resistenzmechanismen/Determinanten beschreibt den Nachweis von Resistenzgenen, Resistenzmutationen, Proteinen oder funktionalen Test (z.B. CIM-Test) in einer Probe oder Isolat als Hinweis auf spezifische Resistenzmechanismen. 
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-r
   "title" : "MII PR Mikrobio Resistenzmechanismen Determinanten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -312,7 +312,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-r
     {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
     }]
   }
 }

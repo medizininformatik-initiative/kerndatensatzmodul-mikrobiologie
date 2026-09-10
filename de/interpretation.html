@@ -328,12 +328,33 @@ wurde und wie diese Messung <strong>bewertet</strong> wird. Das Modul hält beid
 <h3 id="messwert-und-bewertung">Messwert und Bewertung</h3>
 
 <p><code class="language-plaintext highlighter-rouge">Observation.value[x]</code> trägt die Messung — eine minimale Hemmkonzentration in
-mg/L oder einen Hemmhofdurchmesser in mm. Es ist eine <code class="language-plaintext highlighter-rouge">Quantity</code> und nichts
-sonst; ein bloßes S/I/R ohne Messwert gehört nicht hierher.</p>
+mg/L oder einen Hemmhofdurchmesser in mm.</p>
 
 <p><code class="language-plaintext highlighter-rouge">Observation.interpretation</code> trägt die Bewertung: die Kategorie, in die der
-Messwert fällt. Konsumenten haben damit genau eine Stelle, an der die Kategorie
-steht, und der Messwert bleibt laborübergreifend vergleichbar.</p>
+Messwert fällt, zusammen mit der Norm, aus der sie abgeleitet wurde.</p>
+
+<p>Nicht jedes Labor misst. Liegt nur die Kategorie vor, wird sie als
+<code class="language-plaintext highlighter-rouge">CodeableConcept</code> in <code class="language-plaintext highlighter-rouge">value[x]</code> angegeben — das europäische Datenmodell legt das
+ausdrücklich so fest, und eine Observation ganz ohne Wert wäre die unüblichere
+Gestalt. Zwei Invarianten halten das eindeutig:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">empfindlichkeit-kategorie-braucht-interpretation</code> — eine Kategorie in
+<code class="language-plaintext highlighter-rouge">value[x]</code> verlangt eine <code class="language-plaintext highlighter-rouge">interpretation</code>, weil die Norm dort hängt und eine
+Kategorie ohne ihre Norm nichts aussagt.</li>
+  <li><code class="language-plaintext highlighter-rouge">empfindlichkeit-kategorie-stimmt-mit-interpretation</code> — sind beide angegeben,
+muss jeder Code des Werts auch unter den Interpretations-Codes vorkommen.</li>
+</ul>
+
+<p>Ein Konsument liest die Kategorie damit in jedem Fall aus <code class="language-plaintext highlighter-rouge">interpretation</code>, und
+<code class="language-plaintext highlighter-rouge">value[x]</code> sagt ihm, ob ein Messwert dahintersteht.</p>
+
+<p>Der umgekehrte Fall — ein Messwert ohne Kategorie — wird von
+<code class="language-plaintext highlighter-rouge">empfindlichkeit-messwert-sollte-bewertet-sein</code> als <strong>Warnung</strong> gemeldet und
+nicht abgelehnt. Eine nackte MHK lässt die Bewertung beim Konsumenten, der dafür
+die Grenzwerttabellen bräuchte. Eine Pflicht wäre aber falsch: Für manche
+Erreger-Substanz-Kombinationen sind keine Grenzwerte definiert, und dann gibt es
+keine Kategorie, die man angeben könnte.</p>
 
 <h3 id="die-kategorien">Die Kategorien</h3>
 
@@ -387,11 +408,6 @@ wäre das nicht möglich.</p>
 <p>Die Norm wird aus dem moduleigenen CodeSystem kodiert: <code class="language-plaintext highlighter-rouge">EUCAST</code>, <code class="language-plaintext highlighter-rouge">CLSI</code>,
 <code class="language-plaintext highlighter-rouge">Andere</code>.</p>
 
-<p class="bg-warning"><strong>Offener Punkt.</strong> Die <em>Version</em> der Norm ist bisher nicht ausdrückbar, obwohl
-sich Grenzwerte jährlich ändern. Ohne Jahresangabe lässt sich eine gespeicherte
-MHK später nicht reinterpretieren. Siehe die Entscheidungsliste im
-Migrationsreport.</p>
-
 <h3 id="die-voraussichtliche-empfindlichkeit-ist-eine-andere-aussage">Die voraussichtliche Empfindlichkeit ist eine andere Aussage</h3>
 
 <p>Eine aus einem Resistenzmechanismus abgeleitete Empfindlichkeit — ein Gen, eine
@@ -439,7 +455,7 @@ bleibt gemessen, die Bewertung bleibt getrennt.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 16:03+0000">2026-09-09</span>
+          Erstellt <span title="Thu, Sep 10, 2026 13:00+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -70,6 +70,18 @@
     "http://hl7.org/fhir/R4/valueset-resource-types.html" : "ResourceType"
   },
   {
+    "url" : "http://hl7.org/fhir/specimen-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SpecimenStatus",
+    "title" : "SpecimenStatus",
+    "description" : "Codes providing the status/availability of a specimen.",
+    "oids" : ["2.16.840.1.113883.4.642.4.472"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-specimen-status.html" : "SpecimenStatus"
+  },
+  {
     "url" : "http://loinc.org",
     "version" : "3.1.0",
     "status" : "active",
@@ -79,24 +91,28 @@
     "oids" : ["2.16.840.1.113883.6.1"],
     "uses" : {
     },
-    "ValueSet-mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc.html" : "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]",
-    "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
-    "ValueSet-mii-vs-mikrobio-spezifische-bestimmung-tests-loinc.html" : "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]",
-    "ValueSet-mii-vs-mikrobio-empfindlichkeit-genotyp-loinc.html" : "MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]",
-    "ValueSet-mii-vs-mikrobio-barlett-score-loinc.html" : "MII VS Mikrobio Barlett Score [LOINC]",
+    "ValueSet-mii-vs-mikrobio-allgemeine-kultur-tests-loinc.html" : "MII VS Mikrobio Allgemeine Kultur Tests [LOINC]",
     "ValueSet-mii-vs-mikrobio-mrgn-klasse-loinc.html" : "MII VS Mikrobio MRGN Klasse [LOINC]",
-    "ValueSet-mii-vs-mikrobio-virulenz-loinc.html" : "MII VS Mikrobio Virulenz [LOINC]",
-    "ValueSet-mii-vs-mikrobio-aviditaet-tests-loinc.html" : "MII VS Mikrobio Aviditaet Tests [LOINC]",
-    "ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html" : "MII VS Mikrobio Spezifische Kultur Tests [LOINC]",
-    "ValueSet-mii-vs-mikrobio-ct-wert-loinc.html" : "MII VS Mikrobio CT Wert [LOINC]",
-    "ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc.html" : "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]",
-    "ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc.html" : "MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]",
-    "http://hl7.org/fhir/R4/valueset-report-codes.html" : "LOINC Diagnostic Report Codes",
+    "ValueSet-mii-vs-mikrobio-bartlett-score-loinc.html" : "MII VS Mikrobio Bartlett Score [LOINC]",
+    "ValueSet-mii-vs-mikrobio-befundtyp-loinc.html" : "MII VS Mikrobio Befundtyp [LOINC]",
     "ValueSet-mii-vs-mikrobio-keimzahl-loinc.html" : "MII VS Mikrobio Keimzahl [LOINC]",
     "file:///web/publishing/work/task-89/draft/output/ValueSet-results-laboratory-pathology-observations-uv-ips.html" : "Results Laboratory/Pathology Observation - IPS",
+    "ValueSet-mii-vs-mikrobio-virulenz-loinc.html" : "MII VS Mikrobio Virulenz [LOINC]",
+    "ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc.html" : "MII VS Mikrobio Allgemeine Bestimmung Tests [LOINC]",
+    "ValueSet-mii-vs-mikrobio-aviditaet-tests-loinc.html" : "MII VS Mikrobio Aviditaet Tests [LOINC]",
+    "ValueSet-mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc.html" : "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]",
     "ValueSet-mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc.html" : "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]",
+    "ValueSet-mii-vs-mikrobio-spezifische-bestimmung-tests-loinc.html" : "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]",
+    "ValueSet-mii-vs-mikrobio-empfindlichkeit-genotyp-loinc.html" : "MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]",
+    "http://hl7.org/fhir/R4/valueset-report-codes.html" : "LOINC Diagnostic Report Codes",
+    "ValueSet-mii-vs-mikrobio-ct-wert-loinc.html" : "MII VS Mikrobio CT Wert [LOINC]",
     "ValueSet-mii-vs-mikrobio-titer-tests-loinc.html" : "MII VS Mikrobio Titer Tests [LOINC]",
-    "ValueSet-mii-vs-mikrobio-befundtyp-loinc.html" : "MII VS Mikrobio Befundtyp [LOINC]"
+    "ValueSet-mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc.html" : "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]",
+    "ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc.html" : "MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]",
+    "ValueSet-mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc.html" : "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]",
+    "http://hl7.org/fhir/R4/valueset-observation-codes.html" : "LOINC Codes",
+    "ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html" : "MII VS Mikrobio Spezifische Kultur Tests [LOINC]",
+    "ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc.html" : "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
   },
   {
     "url" : "http://snomed.info/sct",
@@ -108,29 +124,36 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html" : "MII VS Mikrobio Resistenzkategorie Status Ergebnis",
+    "ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html" : "MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]",
     "ValueSet-mii-vs-mikrobio-organismen-snomedct.html" : "MII VS Mikrobio Organismen [SNOMED CT]",
+    "ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html" : "MII VS Mikrobio Resistenzkategorie Status Ergebnis",
+    "ValueSet-mii-vs-mikrobio-data-absent-reason.html" : "MII VS Mikrobio Data Absent Reason",
+    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-probenart-sct" : "MII VS Biobank Probenart SCT",
+    "http://hl7.org/fhir/R4/valueset-specimen-collection-method.html" : "FHIR Specimen Collection Method",
+    "ValueSet-mii-vs-mikrobio-susceptibility.html" : "MII VS Mikrobio Susceptibility",
+    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+    "ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html" : "MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]",
+    "ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html" : "MII VS Mikrobio Morphologie Ergebnis [SNOMED]",
+    "ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html" : "MII VS Mikrobio Morphologie Methode [SNOMED]",
+    "ValueSet-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed.html" : "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]",
+    "ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html" : "MII VS Mikrobio Spezifische Kultur Methode [SNOMED]",
+    "ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html" : "MII VS Mikrobio Antigen Antikoerper Methode [SNOMED]",
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-body-structures-sct" : "MII VS Biobank BodyStructures SCT",
+    "ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html" : "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
     "ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.html" : "MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]",
     "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
-    "ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
-    "ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html" : "MII VS Mikrobio Antigen Antikoerper Methode [SNOMED]",
-    "ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html" : "MII VS Mikrobio Morphologie Ergebnis [SNOMED]",
-    "ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html" : "MII VS Labor Laborergebnis Semiquantitativ",
     "ValueSet-mii-vs-mikrobio-titer-methode-snomed.html" : "MII VS Mikrobio Titer Methode [SNOMED]",
-    "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-laboratory-procedure-sct" : "MII VS Biobank Laboratory Procedure SCT",
+    "ValueSet-mii-vs-mikrobio-empfindlichkeit-methode-snomed.html" : "MII VS Mikrobio Empfindlichkeit Methode [SNOMED]",
+    "ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html" : "MII VS Mikrobio Detected Not Detected [SNOMED]",
     "ValueSet-mii-vs-mikrobio-resistenzmechanismen-methode-snomed.html" : "MII VS Mikrobio Resistenzmechanismen Methode [SNOMED]",
     "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
-    "ValueSet-mii-vs-mikrobio-data-absent-reason.html" : "MII VS Mikrobio Data Absent Reason",
-    "ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html" : "MII VS Mikrobio Spezifische Kultur Methode [SNOMED]",
-    "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-    "ValueSet-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed.html" : "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]",
-    "ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html" : "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
-    "ValueSet-mii-vs-mikrobio-susceptibility.html" : "MII VS Mikrobio Susceptibility",
     "ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed.html" : "MII VS Mikrobio Allgemeine Bestimmung Ergebnis [SNOMED]",
-    "ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html" : "MII VS Mikrobio Morphologie Methode [SNOMED]",
-    "ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html" : "MII VS Mikrobio Detected Not Detected [SNOMED]",
-    "ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed.html" : "MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]",
-    "ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html" : "MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]"
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.biobank@2027.0.0-ballot.rc2&canonical=https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-containertyp-sct" : "MII VS Biobank Containertyp SCT",
+    "ValueSet-mii-vs-labor-laborergebnis-semiquantitativ.html" : "MII VS Labor Laborergebnis Semiquantitativ",
+    "ValueSet-mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed.html" : "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]",
+    "ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
@@ -202,8 +225,68 @@
     "oids" : ["2.16.840.1.113883.18.108"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType",
-    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/mii-vs-labor-identifier-type-codes" : "MII VS Labor Identifier Type Codes"
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/mii-vs-labor-identifier-type-codes" : "MII VS Labor Identifier Type Codes",
+    "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0371",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "AdditivePreservative",
+    "title" : "additivePreservative",
+    "description" : "HL7-defined code system of concepts specifying any additive introduced to the specimen before or at the time of collection.  These additives may be introduced in order to preserve, maintain or enhance the particular nature or component of the specimen.  Used in HL7 Version 2.x messaging in the SPM and SAC segments.",
+    "oids" : ["2.16.840.1.113883.18.229"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.2.0/ValueSet-v2-0371.html" : "hl7VS-additivePreservative"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0373",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "Treatment",
+    "title" : "treatment",
+    "description" : "Code system of concepts that identify the specimen treatment performed during lab processing.  Used in the Interaction Specimen Container Detail (SAC) segment in HL7 Version 2.x messaging.",
+    "oids" : ["2.16.840.1.113883.18.231"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-specimen-processing-procedure.html" : "Specimen processing procedure"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "SpecimenType",
+    "title" : "specimenType",
+    "description" : "HL7-defined code system of concepts that describe the precise nature of an entity that may be used as the source material for an observation.  This is one of two code systems that are used instead of table 0070 (code system 2.16.840.1.113883.18.28) which conflated specimen types and specimen collection methods.   Used in HL7 Version 2.x messaging in the SPM segment.",
+    "oids" : ["2.16.840.1.113883.18.311"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.2.0/ValueSet-v2-0487.html" : "hl7VS-specimenType"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0493",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "SpecimenCondition",
+    "title" : "specimenCondition",
+    "description" : "Code system of concepts specifying a mode or state of being that describes the nature of the specimen.  Used in HL7 Version 2.x messaging in the SPM segment.",
+    "oids" : ["2.16.840.1.113883.18.317"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.2.0/ValueSet-v2-0493.html" : "hl7VS-specimenCondition"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0916",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "RelevantClincialInformation",
+    "title" : "relevantClincialInformation",
+    "description" : "Code system of concepts specifying additional clinical information about the patient or specimen to report the supporting and/or suspected diagnosis and clinical findings on requests for interpreted diagnostic studies. Used in HL7 Version 2.x messaging in the OBR segment.",
+    "oids" : ["2.16.840.1.113883.18.422"],
+    "uses" : {
+    },
+    "http://terminology.hl7.org/7.2.0/ValueSet-v2-0916.html" : "hl7VS-relevantClincialInformation"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
@@ -215,11 +298,11 @@
     "oids" : ["2.16.840.1.113883.5.83"],
     "uses" : {
     },
-    "ValueSet-mii-vs-mikrobio-susceptibility.html" : "MII VS Mikrobio Susceptibility",
-    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Interpretation" : "MII VS Labor Interpretation",
     "http://hl7.org/fhir/R4/valueset-observation-interpretation.html" : "Observation Interpretation Codes",
     "ValueSet-mii-vs-mikrobio-aviditaet-ergebnis.html" : "MII VS Mikrobio Aviditaet Ergebnis",
-    "ValueSet-mii-vs-mikrobio-voraussichtliche-empfindlichkeit.html" : "MII VS Mikrobio Voraussichtliche Empfindlichkeit"
+    "ValueSet-mii-vs-mikrobio-voraussichtliche-empfindlichkeit.html" : "MII VS Mikrobio Voraussichtliche Empfindlichkeit",
+    "ValueSet-mii-vs-mikrobio-susceptibility.html" : "MII VS Mikrobio Susceptibility",
+    "https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Interpretation" : "MII VS Labor Interpretation"
   },
   {
     "url" : "http://unitsofmeasure.org",
@@ -231,9 +314,9 @@
     "uses" : {
     },
     "ValueSet-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum.html" : "MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]",
-    "ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html" : "MII VS Mikrobio Keimzahl Einheiten [UCUM]",
+    "ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum.html" : "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]",
     "ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html" : "MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]",
-    "ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum.html" : "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]"
+    "ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html" : "MII VS Mikrobio Keimzahl Einheiten [UCUM]"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis",

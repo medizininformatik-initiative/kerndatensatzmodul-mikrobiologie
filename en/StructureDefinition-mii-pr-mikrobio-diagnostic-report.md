@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Mikrobio_Diagnostic_Report |
+| Active as of 2026-09-10 | *Computable Name*:MII_PR_Mikrobio_Diagnostic_Report |
 
  
 Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextualisierung zugehöriger mikrobiologischer Untersuchungsergebnisse. 
@@ -41,6 +41,14 @@ If a report covers several study types, for instance detection of bacteria **and
 ]
 
 ```
+
+### The summarising conclusion
+
+`DiagnosticReport.conclusion` carries the laboratory's summarising assessment as free text. It is Must Support, inherited from the laboratory base profile, and in serology it is the load-bearing part of the report rather than an addition.
+
+The reason is that a serological diagnosis is often not any one of its measurements. In acute EBV infection, IgM against the viral capsid antigen appears first, VCA IgG follows, and EBNA IgG arises only after six to twelve weeks. Each of the three results is an Observation of its own; the statement "acute infection" or "past infection" follows from reading them together and is none of them. The European white paper puts it as "a serological report is often more than the sum of its parts" and asks that the conclusion be exchangeable, "free text to begin with".
+
+`conclusionCode` is deliberately not constrained here. The white paper proposes free text for the time being, and this module has no value set for coded overall assessments.
 
 ### Examples
 
@@ -204,7 +212,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-d
   "title" : "MII PR Mikrobio Diagnostic Report",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -303,12 +311,13 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-d
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
+        "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score",
-        "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score",
+        "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-bartlett-score",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor",
@@ -316,6 +325,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-d
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"]
       }]
+    },
+    {
+      "id" : "DiagnosticReport.conclusion",
+      "path" : "DiagnosticReport.conclusion",
+      "short" : "Zusammenfassende Beurteilung des Labors im Freitext. Fuer serologische Befunde die tragende Stelle, weil sich die Diagnose dort erst aus der Zusammenschau mehrerer Einzelergebnisse ergibt."
     }]
   }
 }

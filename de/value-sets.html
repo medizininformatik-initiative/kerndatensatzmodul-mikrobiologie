@@ -364,8 +364,20 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
       <td>Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren zur Identifikation eines Erregers ohne vordefiniertes Ziel, etwa Mikroskopie oder MALDI-TOF.</td>
     </tr>
     <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc.html">MII VS Mikrobio Allgemeine Bestimmung Tests LOINC</a></td>
+      <td>Tests-ValueSet für die allgemeine Bestimmung: LOINC-Codes für die ungerichtete Identifizierung eines Mikroorganismus. Bevorzugt wird 41852-5; die übrigen Codes sind gleichwertig zulässig, wo das Labor die Erregergruppe oder das Sequenzierziel im Code benennt.</td>
+    </tr>
+    <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-allgemeine-kultur-methode-snomed.html">MII VS Mikrobio Allgemeine Kultur Methode SNOMED</a></td>
       <td>Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkung auf einen vordefinierten Erreger, einschließlich aerober und anaerober Bebrütung.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-allgemeine-kultur-tests-loinc.html">MII VS Mikrobio Allgemeine Kultur Tests LOINC</a></td>
+      <td>Tests-ValueSet für die allgemeine Kultur: LOINC-Codes für die ungerichtete kulturelle Untersuchung. Bevorzugt wird 11475-1, weil der Code das Verfahren selbst benennt; 41852-5 ist gleichwertig zulässig.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc.html">MII VS Mikrobio Allgemeine Mikroskopie Tests LOINC</a></td>
+      <td>Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0; 664-3 ist gleichwertig zulässig, wenn die Färbung im Code stehen soll.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html">MII VS Mikrobio Antigen Antikoerper Methode SNOMED</a></td>
@@ -388,8 +400,8 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
       <td>Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests einschließlich des Zielantigens.</td>
     </tr>
     <tr>
-      <td><a href="ValueSet-mii-vs-mikrobio-barlett-score-loinc.html">MII VS Mikrobio Barlett Score LOINC</a></td>
-      <td>Ergebnis-ValueSet für den Barlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten.</td>
+      <td><a href="ValueSet-mii-vs-mikrobio-bartlett-score-loinc.html">MII VS Mikrobio Bartlett Score LOINC</a></td>
+      <td>Ergebnis-ValueSet für den Bartlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-befundtyp-loinc.html">MII VS Mikrobio Befundtyp LOINC</a></td>
@@ -416,6 +428,10 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
       <td>Tests-ValueSet für die voraussichtliche Empfindlichkeit: LOINC-Codes für die aus dem Genotyp abgeleitete erwartete Wirksamkeit einer antimikrobiellen Substanz.</td>
     </tr>
     <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-methode-snomed.html">MII VS Mikrobio Empfindlichkeit Methode SNOMED</a></td>
+      <td>Methoden-ValueSet für die phänotypische Empfindlichkeitstestung: die Verfahren, mit denen eine minimale Hemmkonzentration oder ein Hemmhofdurchmesser gemessen wird.</td>
+    </tr>
+    <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc.html">MII VS Mikrobio Empfindlichkeit Phenotyp LOINC</a></td>
       <td>Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der getesteten antimikrobiellen Substanz.</td>
     </tr>
@@ -432,6 +448,10 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
       <td>Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</td>
     </tr>
     <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed.html">MII VS Mikrobio Mikroskopie Semiquantitativ SNOMED</a></td>
+      <td>Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, in der das im Code benannte Objekt gesehen wurde.</td>
+    </tr>
+    <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html">MII VS Mikrobio Molekulare Diagnostik Einheiten UCUM</a></td>
       <td>Einheiten-ValueSet für die molekulare Pathogenlast (UCUM): Konzentrationsangaben wie Kopien pro Milliliter.</td>
     </tr>
@@ -445,7 +465,7 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html">MII VS Mikrobio Morphologie Ergebnis SNOMED</a></td>
-      <td>Ergebnis-ValueSet für die Mikroskopie: mikroskopisch beobachtete Morphologie ohne taxonomische Zuordnung, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen.</td>
+      <td>Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologische Gruppe, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen. Eine Speziesidentifizierung gehört nicht hierher, auch wenn sie mikroskopisch gestellt wurde.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html">MII VS Mikrobio Morphologie Methode SNOMED</a></td>
@@ -494,6 +514,10 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html">MII VS Mikrobio Spezifische Kultur Tests LOINC</a></td>
       <td>Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, bei denen das gesuchte Ziel bereits im LOINC-Code benannt ist.</td>
+    </tr>
+    <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc.html">MII VS Mikrobio Spezifische Mikroskopie Tests LOINC</a></td>
+      <td>Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-susceptibility-norm.html">MII VS Mikrobio Susceptibility Norm</a></td>
@@ -547,7 +571,7 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Wed, Sep 9, 2026 16:03+0000">2026-09-09</span>
+          Erstellt <span title="Thu, Sep 10, 2026 13:00+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

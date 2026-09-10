@@ -16,10 +16,11 @@ Dass ein Profil unter mehreren Bereichen auftaucht, ist Absicht. Das Modell ist 
 
 **Kultur**
 
-* [Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md) — Morphologie ohne taxonomische Zuordnung 
-* [Barlett-Score](StructureDefinition-mii-pr-mikrobio-barlett-score.md) — ist eine Sputumprobe für die Kultur geeignet?
+* [Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md) — die gesehene morphologische Gruppe, keine Spezies 
+* [Bartlett-Score](StructureDefinition-mii-pr-mikrobio-bartlett-score.md) — ist eine Sputumprobe für die Kultur geeignet?
 * [Nugent-Score](StructureDefinition-mii-pr-mikrobio-nugent-score.md) — Gramfärbungs-Score für die bakterielle Vaginose
  
+* [Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md) — das Objekt steht im Code, das Ergebnis ist seine semiquantitative Stufe
 * [Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md) — Wachstum oder kein Wachstum, ungerichtet
 * [Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md) — Wachstum oder kein Wachstum, gerichtet, z. B. MRSA-Screening
 * [Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.md) — lebensfähige Keime je Volumen oder Masse
@@ -65,6 +66,65 @@ Ein Profil wird durch die **Fragestellung und den Ergebnistyp** bestimmt, nicht 
 * **Kultur** ist aus demselben Grund eigenständig: ihr Ergebnis ist weder ein Organismus noch nachgewiesen/nicht nachgewiesen, sondern Wachstum oder kein Wachstum.
 
 Die Regel ist also jedes Mal dieselbe; nur die Zahl der unterscheidbaren Ergebnisräume ist verschieden.
+
+### Ein Testcode, zwei Profile
+
+`41852-5 |Microorganism or agent identified in Specimen|` ist in der [Allgemeinen Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md) ebenso zulässig wie in der [Allgemeinen Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md), und das europäische Datenmodell führt ihn für beide als **preferred**. Das ist kein Versehen, sondern folgt aus dessen Grundsatz: Das Verfahren gehört nach `Observation.method`, ein Testcode sagt daher, wonach gesucht wurde, und schweigt darüber, wie. Ein methodenneutraler Code passt dann auf den kulturellen und den nicht kulturellen Weg gleichermaßen.
+
+Unterscheidbar bleiben die beiden Profile über zwei voneinander unabhängige Achsen, von denen keine einen einzigen Code mit der anderen teilt:
+
+| | | |
+| :--- | :--- | :--- |
+| Die Fragestellung | wächst überhaupt etwas? | welcher Organismus ist es? |
+| `value[x]` | `365698005 Organism growth`,`264868006 No growth`,`280414007 Equivocal result`,`required`gebunden | ein Organismus aus dem Organismen-ValueSet oder`260415000 Not detected` |
+| `Observation.method` | `703750006`aerobe,`703751005`anaerobe,`702658000`nicht näher bestimmte Kultur | `278289002`Mikroskopie,`83581000052107`MALDI-TOF,`258083009`visuelle Einschätzung,`1304162005`Sequenzierung |
+
+Beide Elemente sind im Labor-Basisprofil optional. Die Allgemeine Kultur macht die Methode deshalb genau für den Code zur Pflicht, der sie braucht: Das Invariant `allgemeine-kultur-method-with-neutral-code` verlangt `Observation.method`, sobald `code` gleich `41852-5` ist. Die Pflicht hängt am Code, der die Mehrdeutigkeit auslöst, und nicht am Element — bei `11475-1` nennt der Code das Verfahren selbst, die Methode fügt nichts hinzu. Die Allgemeine Bestimmung braucht kein Gegenstück, weil die Asymmetrie bereits entscheidet: Eine Untersuchung mit `41852-5` und ohne Methode kann keine gültige Kultur sein, also ist sie eine Bestimmung.
+
+Darüber hinaus empfiehlt dieses Modul den Code, der seine Methode mitführt, wo es einen gibt: `11475-1 |Microorganism identified in Specimen by Culture|` für die Kultur, `41852-5` für die Bestimmung. Ein Empfänger liest die Art der Aussage dann am Code ab und muss nicht erst Ergebnis oder Methode auswerten. Diese Empfehlung steht am `code`-Element des jeweiligen Profils und wird, anders als das Invariant, nicht erzwungen.
+
+### Die Serologie ist die Ausnahme von der Specimen-Postkoordination
+
+Überall sonst bevorzugt dieses Modul Untersuchungscodes, die das Material weglassen, und lässt es von `Specimen.type` tragen. Die Serologie ist davon bewusst ausgenommen. Das europäische Whitepaper nennt den Grund:
+
+> In comparison with culture techniques, far fewer specimen types are involved in serology. The majority of specimens are serum-based. Therefore, we allow pre-coordination of the specimen in the code.
+
+Das Argument gegen Präkoordination ist die Codeexplosion — ein Kulturcode multipliziert mit jeder Körperstelle. In der Serologie fehlt dieser Multiplikator, der Preis entfällt also, und die Konvention kauft nichts mehr ein.
+
+Die Ausnahme gilt für [Titer](StructureDefinition-mii-pr-mikrobio-titer.md), [Avidität](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [Antigen/Antikörper quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md) und die **serologische Anwendung** der [Spezifischen Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md) — jenes Profil bedient auch die molekulare Bank, wo die Konvention weiter gilt, die Ausnahme hängt dort also an der Anwendung und nicht am Profil.
+
+Eine Specimen-Ressource wird trotzdem in jedem Fall erwartet; Ballotfrage 1 bleibt davon unberührt. Die Ausnahme erlaubt einen Untersuchungscode, der Serum benennt — sie erlaubt nicht, `Observation.specimen` leer zu lassen.
+
+Eine weitere Eigenheit der serologischen Befundung ist zu kennen: Die Diagnose ergibt sich häufig erst aus mehreren Ergebnissen zusammen und nicht aus einem einzelnen. Diese Aussage gehört in `DiagnosticReport.conclusion` — siehe [Befundbericht](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md).
+
+### Die Methode gehört in Observation.method
+
+Das europäische Whitepaper führt das als Grundsatz und formuliert es schärfer, als man erwarten würde:
+
+> The LOINC-axis "method" should be omitted completely. […] Even if the method is pre-coordinated in the LOINC-Code the recommendation is to **always** represent the method consistently in `Observation.method` using SNOMED CT.
+
+Die Methode ist also auch dann anzugeben, wenn der Untersuchungscode sie bereits trägt — eine Kultur unter `11475-1 |… by Culture|` soll trotzdem sagen, ob aerob oder anaerob bebrütet wurde, und ein Grampräparat unter `664-3 |… by Gram stain|` soll trotzdem die Färbung nennen.
+
+Dieser Leitfaden hält das als **Empfehlung** fest, nicht als Pflicht. `Observation.method` ist im Labor-Basisprofil `0..1` Must Support, und eine modulweite Pflicht würde heute konforme Daten ungültig machen. Erzwungen wird sie an der einen Stelle, an der die Aussage sonst mehrdeutig ist: bei der Allgemeinen Kultur mit dem methodenneutralen Code `41852-5`.
+
+**Ballotfrage 6 — können Sie zu jedem Befund `Observation.method` liefern?** Das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur. **Wir möchten wissen, ob eine Pflicht an Ihrem Standort erfüllbar wäre.** Wenn ja, kann eine spätere Version `Observation.method` auf `1..1` heben, und das Sonderinvariant der Allgemeinen Kultur wird überflüssig. Beachten Sie, was daraus noch folgt: Ist die Methode immer vorhanden, ist `41852-5` samt Methode überall eindeutig, und der Grund, aus dem dieser Leitfaden die methodentragenden Codes `11475-1` und `664-3` empfiehlt, entfällt weitgehend. Ihre Antwort entscheidet also mehr als eine Frage. Wir bitten um Rückmeldung im Ballot.
+
+### Zwei Granularitätsstufen auf derselben Achse
+
+Mikroskopie und Bestimmung beantworten beide „welcher Organismus", kreisen ihn aber unterschiedlich eng ein. „Grampositive Kokken gesehen" **ist** eine taxonomische Aussage — sie schränkt den Organismus auf eine Klasse ein, statt ihn zu benennen. Was [Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md) und [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) trennt, ist deshalb die Granularität und nicht die Achse.
+
+Das ist kein Bild. In SNOMED CT ist die Antwort der Mikroskopie buchstäblich ein Vorfahre der Antwort der Bestimmung — am 2026-09-10 nachgemessen:
+
+```
+59206002 |Gram-positive coccus|  subsumiert  3092008 |Staphylococcus aureus|
+
+```
+
+Daraus folgt eine Konsequenz, die man kennen sollte. SNOMED führt `(finding)`-Codes nur für die **angeordneten** Formen — in chains, in clusters, in pairs —, während die nackten Morphologien nur als `(organism)` existieren: `59206002`, `18383003 |Gram-negative coccus|`, `83514008`, `87172008`. Diese vier sind Nachkommen von `409822003 |Bacteria domain|` und damit auch Mitglieder des Organismen-ValueSets — sie sind also **ebenso gültige Werte der Allgemeinen Bestimmung**.
+
+Für einen Konsumenten folgt daraus eine Regel: **Die Granularität steht im Profil oder im Untersuchungscode, nie in `value[x]` allein.** Eine Abfrage nach identifizierten Organismen, die nur den Wert filtert, bekommt auch Morphologiegruppen aus der Mikroskopie. Die Untersuchungscodes sind disjunkt — `105059-0` und `664-3` gegen `41852-5` —, eine Mehrdeutigkeit entsteht also nicht; nur eine nachlässig geschriebene Abfrage bekommt mehr, als sie erfragt hat.
+
+Eine Speziesidentifizierung gehört nie in die Mikroskopie, auch wenn sie am Mikroskop gestellt wurde.
 
 ### Abgrenzung der drei Aussagetypen
 
@@ -129,6 +189,30 @@ Der Resistenzkategorie-Status bewertet immer **eine** benannte Kategorie. Die Au
 | `lvre-status` | LVRE | **Enterococcus**+ Linezolid-**und**Vancomycinresistenz |
 
 Für gramnegative Erreger mit einer MRGN-Klassifikation erfolgt die Abbildung über die [MRGN-Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.md). Dort wird das Ergebnis der MRGN-Bewertung als `2MRGN`, `3MRGN`, `4MRGN` oder `keine-mrgn-klasse` angegeben.
+
+### Mehrere Ergebnisse zusammenfassen: das Panel
+
+Ein Antibiogramm ist kein Ergebnis, sondern viele — je getestete Substanz eine Observation. Das europäische Whitepaper empfiehlt, sie über eine **Organizer-Observation** zusammenzuhalten: eine Observation, die den Panel-Code `29576-6 |Bacterial susceptibility panel|` trägt und selbst kein `value[x]` hat und die über `Observation.hasMember` auf die Einzelergebnisse zeigt. Der Organizer verweist seinerseits über die `triggeredBy`-Extension auf die Identifizierung, der er gefolgt ist.
+
+```
+Observation: Bacterial susceptibility panel (29576-6), ohne Wert
+  triggeredBy → Observation: Erreger identifiziert
+  hasMember   → Observation: Meropenem [Susceptibility], MHK 0,5 mg/L, S
+  hasMember   → Observation: Ciprofloxacin [Susceptibility], MHK 4 mg/L, R
+
+```
+
+Die drei Mechanismen haben verschiedene Aufgaben und sind nicht gegeneinander austauschbar:
+
+| | |
+| :--- | :--- |
+| `hasMember` | Gruppierung — ein Panel, das ein Organizer zusammenhält |
+| `triggeredBy` | Reflex — die spätere Untersuchung verweist zurück auf ihren Auslöser |
+| `derivedFrom` | Ableitung — ein Ergebnis, das aus einem anderen berechnet oder interpretiert wurde |
+
+`triggeredBy` ist insbesondere **kein** Gruppierungsmechanismus. Und `derivedFrom` läuft vom abgeleiteten Ergebnis zu seiner Grundlage, nicht umgekehrt: Ein qualitativer Nachweis trägt `derivedFrom` auf den [Ct-Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.md), aus dem er abgelesen wurde, niemals andersherum.
+
+Dieser Leitfaden beschreibt das Muster, profiliert es aber nicht. `Observation.hasMember` steht unbeschränkt aus dem Labor-Basisprofil zur Verfügung, und ein Organizer-Profil erzeugte ein eigenes Canonical für etwas, das FHIR bereits regelt.
 
 ### Diagnostische Kette bei positivem Nachweis
 

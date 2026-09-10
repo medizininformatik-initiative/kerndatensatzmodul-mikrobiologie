@@ -1,20 +1,24 @@
-# MII PR Mikrobio Allgemeine Bestimmung - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII PR Mikrobio Allgemeine Bestimmung (Identifizierung) - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **MII PR Mikrobio Allgemeine Bestimmung**
+* **MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)**
 
-## Ressourcenprofil: MII PR Mikrobio Allgemeine Bestimmung 
+## Ressourcenprofil: MII PR Mikrobio Allgemeine Bestimmung (Identifizierung) 
 
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Allgemeine_Bestimmung |
+| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Allgemeine_Bestimmung |
 
  
 Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorganismus oder infektiösen Agens in einer Probe, ohne Einschränkung auf ein vordefiniertes Ziel. 
 
 Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorganismus oder infektiösen Agens in einer Probe, ohne Einschränkung auf ein vordefiniertes Ziel.
+
+### Testcode
+
+Bevorzugt wird `41852-5 |Microorganism or agent identified in Specimen|`. Derselbe Code ist auch in der [Allgemeinen Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md) zulässig, benennt also für sich genommen nicht, welche der beiden Aussagen gemeint ist; wie die Profile unterscheidbar bleiben, steht unter [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.md).
 
 ### Ergebnis
 
@@ -73,6 +77,12 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 Mandatory: 2 elements
  Must-Support: 2 elements
 
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Mikrobio Probe (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe)](StructureDefinition-mii-pr-mikrobio-probe.md)
+
 **Extensions**
 
 This structure refers to these extensions:
@@ -103,6 +113,12 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 Mandatory: 2 elements
  Must-Support: 2 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Mikrobio Probe (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe)](StructureDefinition-mii-pr-mikrobio-probe.md)
 
 **Extensions**
 
@@ -252,10 +268,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung",
   "version" : "2027.0.0-ballot.rc1",
   "name" : "MII_PR_Mikrobio_Allgemeine_Bestimmung",
-  "title" : "MII PR Mikrobio Allgemeine Bestimmung",
+  "title" : "MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -344,11 +360,10 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "41852-5"
-        }]
+      "short" : "Bevorzugt 41852-5 'Microorganism or agent identified in Specimen'. Benennt das Labor die Erregergruppe (Bakterien, Pilze, Viren) oder das Sequenzierziel (16S, 18S rRNA) im Code, sind die entsprechenden Codes gleichwertig zulaessig. Es werden bevorzugt LOINC-Codes ohne praekoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat ueber Specimen.type kodiert.",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc"
       }
     },
     {
@@ -390,7 +405,11 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
     }]
   }
 }

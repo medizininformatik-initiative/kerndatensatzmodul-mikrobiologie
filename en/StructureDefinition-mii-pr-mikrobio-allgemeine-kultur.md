@@ -9,12 +9,16 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Mikrobio_Allgemeine_Kultur |
+| Active as of 2026-09-10 | *Computable Name*:MII_PR_Mikrobio_Allgemeine_Kultur |
 
  
 Allgemeine Kultur beschreibt das Ergebnis einer nicht zielgerichteten mikrobiologischen Kultur, die prüft, ob in der Probe irgendein Mikroorganismus wächst, ohne die Analyse auf einen vordefinierten Erreger zu beschränken. 
 
 General culture describes the result of a non-targeted microbiological culture that tests whether any microorganism grows in the specimen, without restricting the analysis to a predefined pathogen.
+
+### Test code
+
+Preferred is `11475-1 |Microorganism identified in Specimen by Culture|`, which names the technique itself. `41852-5 |Microorganism or agent identified in Specimen|` is equally valid: the European data model prefers it here because it keeps the technique out of the test code and in `Observation.method`. It is the same code that [General determination](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) prefers, so an investigation using it is recognisable as a culture only by its method - which the invariant `allgemeine-kultur-method-with-neutral-code` therefore makes mandatory for this one code. Where aerobic and anaerobic incubation are not distinguished, `702658000 |Microbial culture technique|` is available. [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md) sets out how the two profiles stay distinguishable.
 
 ### Examples
 
@@ -25,7 +29,7 @@ Example (minimal):
 **Usages:**
 
 * Refer to this Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
-* Examples for this Profile: [Observation/mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.md)
+* Examples for this Profile: [Observation/mii-exa-mikrobio-allgemeine-kultur-methodenneutral](Observation-mii-exa-mikrobio-allgemeine-kultur-methodenneutral.md) and [Observation/mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.md)
 * CapabilityStatements using this Profile: [MII CPS Mikrobio Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.json)
@@ -179,7 +183,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
   "title" : "MII PR Mikrobio Allgemeine Kultur",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -219,7 +223,14 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "constraint" : [{
+        "key" : "allgemeine-kultur-method-with-neutral-code",
+        "severity" : "error",
+        "human" : "If the method-neutral code 41852-5 is used, Observation.method SHALL be present, because only the method identifies the investigation as a culture.",
+        "expression" : "code.coding.where(system = 'http://loinc.org' and code = '41852-5').exists() implies method.exists()",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+      }]
     },
     {
       "id" : "Observation.extension:triggeredBy-r5",
@@ -269,11 +280,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "patternCodeableConcept" : {
-        "coding" : [{
-          "system" : "http://loinc.org",
-          "code" : "11475-1"
-        }]
+      "short" : "Bevorzugt 11475-1 'Microorganism identified in Specimen by Culture'. 41852-5 'Microorganism or agent identified in Specimen' ist gleichwertig zulaessig, weil das EU-Datenmodell die Methode nach Observation.method auslagert; derselbe Code steht auch bei der Allgemeinen Bestimmung, dort mit einem Organismus als Ergebnis. Bei 41852-5 ist Observation.method deshalb Pflicht (allgemeine-kultur-method-with-neutral-code). Siehe die Seite 'Profilauswahl und Abgrenzung'.",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc"
       }
     },
     {
@@ -314,7 +324,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
     {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
     }]
   }
 }

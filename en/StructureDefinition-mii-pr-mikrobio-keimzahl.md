@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_PR_Mikrobio_Keimzahl |
+| Active as of 2026-09-10 | *Computable Name*:MII_PR_Mikrobio_Keimzahl |
 
  
 Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe. 
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-k
   "title" : "MII PR Mikrobio Keimzahl",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -292,7 +292,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-k
     {
       "id" : "Observation.value[x]:valueQuantity.code",
       "path" : "Observation.value[x].code",
-      "short" : "Bei Probenmaterialien ohne Volumen- oder Massenbezug, etwa Katheterspitzen, wird die nennerlose Einheit [CFU] verwendet; die Bezugsgröße steht in Specimen.type.",
+      "short" : "Bevorzugt eine Einheit MIT der KBE-Annotation: [CFU]/mL je Volumen, [CFU]/g je Masse, [CFU] je Probe. Die unannotierten Formen /mL, /g und 1 sagen weniger — /mL heisst in UCUM woertlich 'pro Milliliter' und nicht, WAS pro Milliliter, und 1 ist die dimensionslose Eins. Sie bleiben zulaessig, weil sie bis 2025.0.2 die einzige Moeglichkeit waren; der Migrationspfad ist mechanisch. Bei Probenmaterialien ohne Volumen- oder Massenbezug, etwa Katheterspitzen, wird [CFU] verwendet und die Bezugsgroesse steht in Specimen.type.",
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"
@@ -327,7 +327,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-k
     {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
     }]
   }
 }

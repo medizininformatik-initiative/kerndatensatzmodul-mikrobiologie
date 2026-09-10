@@ -11,7 +11,7 @@ The 2027 modelling uses standalone Observation profiles instead of `component` r
 
 ### Culture
 
-Culture-related observations (general, microscopy including Barlett/Nugent score, colony count, susceptibility).
+Culture-related observations (general, microscopy including Bartlett/Nugent score, colony count, susceptibility).
 
 ### Determination
 

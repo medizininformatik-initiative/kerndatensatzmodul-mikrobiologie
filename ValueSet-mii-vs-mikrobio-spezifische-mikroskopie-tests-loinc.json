@@ -1,0 +1,118 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc</b></p><a name=\"mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc\"> </a><a name=\"hcmii-vs-mikrobio-spezifische-mikroskopie-tests-loinc\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP6301-8 (Gram stain) and STATUS  = ACTIVE</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP6094-9 (Acid fast stain) and STATUS  = ACTIVE</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP262570-7 (Auramine fluorochrome stain) and STATUS  = ACTIVE</li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc</b></p><a name=\"de-mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc\"> </a><a name=\"de-hcmii-vs-mikrobio-spezifische-mikroskopie-tests-loinc\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP6301-8 (Gram stain) and STATUS  = ACTIVE</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP6094-9 (Acid fast stain) and STATUS  = ACTIVE</li><li>Include codes from<a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.82\"> version &#x1F4CD;2.82</span> where PROPERTY  = LP217195-9 (PrThr), SCALE_TYP  = LP7751-3 (Ord), METHOD_TYP  = LP262570-7 (Auramine fluorochrome stain) and STATUS  = ACTIVE</li></ul></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc",
+  "version" : "2027.0.0-ballot.rc1",
+  "name" : "MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC",
+  "title" : "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-10T13:00:57+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "filter" : [{
+        "property" : "PROPERTY",
+        "op" : "=",
+        "value" : "LP217195-9"
+      },
+      {
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "LP7751-3"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP6301-8"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "filter" : [{
+        "property" : "PROPERTY",
+        "op" : "=",
+        "value" : "LP217195-9"
+      },
+      {
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "LP7751-3"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP6094-9"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "filter" : [{
+        "property" : "PROPERTY",
+        "op" : "=",
+        "value" : "LP217195-9"
+      },
+      {
+        "property" : "SCALE_TYP",
+        "op" : "=",
+        "value" : "LP7751-3"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP262570-7"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    }]
+  }
+}

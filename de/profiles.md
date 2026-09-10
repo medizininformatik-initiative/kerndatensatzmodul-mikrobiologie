@@ -11,7 +11,7 @@ Die 2027er Modellierung verwendet eigenständige Observation-Profile statt `comp
 
 ### Kultur
 
-In diesem Abschnitt werden kulturbezogene Beobachtungen dargestellt (allgemein, Mikroskopie inkl. Barlett-/Nugent-Score, Keimzahl, Empfindlichkeit).
+In diesem Abschnitt werden kulturbezogene Beobachtungen dargestellt (allgemein, Mikroskopie inkl. Bartlett-/Nugent-Score, Keimzahl, Empfindlichkeit).
 
 ### Bestimmung
 

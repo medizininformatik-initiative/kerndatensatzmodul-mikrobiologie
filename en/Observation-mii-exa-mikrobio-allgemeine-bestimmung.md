@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
+Profile: [MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
 
 > **R5: Triggering observation(s) (new)**
 * observation: [Observation Microorganism identified in Specimen by Culture](Observation-mii-exa-mikrobio-allgemeine-kultur.md)

@@ -91,6 +91,10 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie|2027.0.0-ballot.rc1"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ|2027.0.0-ballot.rc1"
   },
   {
@@ -111,7 +115,7 @@
   },
   {
     "name" : "default-canonical-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-bartlett-score|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-canonical-version",
@@ -287,6 +291,10 @@
   },
   {
     "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe|2027.0.0-ballot.rc1"
+  },
+  {
+    "name" : "default-canonical-version",
     "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"
   },
   {
@@ -403,7 +411,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "http://hl7.org/fhir/ValueSet/observation-codes|4.0.1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-valueset-version",
@@ -519,7 +527,15 @@
   },
   {
     "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/observation-codes|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
     "valueCanonical" : "http://hl7.org/fhir/ValueSet/observation-interpretation|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-valueset-version",
@@ -555,7 +571,7 @@
   },
   {
     "name" : "default-valueset-version",
-    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-barlett-score-loinc|2027.0.0-ballot.rc1"
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-bartlett-score-loinc|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-valueset-version",
@@ -627,6 +643,10 @@
   },
   {
     "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-methode-snomed|2027.0.0-ballot.rc1"
+  },
+  {
+    "name" : "default-valueset-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-loinc|2027.0.0-ballot.rc1"
   },
   {
@@ -639,11 +659,19 @@
   },
   {
     "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc|2027.0.0-ballot.rc1"
+  },
+  {
+    "name" : "default-valueset-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed|2027.0.0-ballot.rc1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-valueset-version",
@@ -660,6 +688,90 @@
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc|2027.0.0-ballot.rc1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore|2027.0.0-ballot.rc2"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature|0.1.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-ebene|2027.0.0-ballot.rc2"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/mii-ex-biobank-infektiositaetsstatus|2027.0.0-ballot.rc2"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.eu/fhir/laboratory/StructureDefinition/specimen-focus|2.0.0"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://terminology.hl7.org/ValueSet/v2-0487|3.0.0"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-probenart-sct|2027.0.0-ballot.rc2"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/EinstellungBlutversorgung|2027.0.0-ballot.rc2"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Duration|4.0.1"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation|5.3.0"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/specimen-collection-method|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-body-structures-sct|2027.0.0-ballot.rc2"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://terminology.hl7.org/ValueSet/v2-0916|3.0.0"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Temperaturbedingungen|2027.0.0-ballot.rc2"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://hl7.org/fhir/ValueSet/specimen-processing-procedure|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-laboratory-procedure-sct|2027.0.0-ballot.rc2"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/Substance|2027.0.0-ballot.rc2"
+  },
+  {
+    "name" : "default-canonical-version",
+    "valueCanonical" : "http://hl7.org/fhir/StructureDefinition/Substance|4.0.1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-containertyp-sct|2027.0.0-ballot.rc2"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://terminology.hl7.org/ValueSet/v2-0371|3.0.0"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "http://terminology.hl7.org/ValueSet/v2-0493|3.0.0"
   },
   {
     "name" : "default-valueset-version",
@@ -696,6 +808,10 @@
   {
     "name" : "default-valueset-version",
     "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed|2027.0.0-ballot.rc1"
+  },
+  {
+    "name" : "default-valueset-version",
+    "valueCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc|2027.0.0-ballot.rc1"
   },
   {
     "name" : "default-valueset-version",

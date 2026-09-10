@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM |
+| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM |
 
  
 Einheiten-ValueSet für quantitative Antigen- und Antikörpertests (UCUM). Bindet Observation.valueQuantity.code. 
@@ -44,7 +44,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -78,25 +78,31 @@ No Expansion for this valueset (Unsupported Code System Version)
     "include" : [{
       "system" : "http://unitsofmeasure.org",
       "concept" : [{
+        "code" : "ng/L"
+      },
+      {
+        "code" : "pg/L"
+      },
+      {
+        "code" : "ug/L"
+      },
+      {
+        "code" : "[IU]/L"
+      },
+      {
+        "code" : "[arb'U]/L"
+      },
+      {
         "code" : "ng/mL"
       },
       {
         "code" : "pg/mL"
       },
       {
-        "code" : "ug/L"
-      },
-      {
         "code" : "[IU]/mL"
       },
       {
-        "code" : "[IU]/L"
-      },
-      {
         "code" : "[arb'U]/mL"
-      },
-      {
-        "code" : "[arb'U]/L"
       },
       {
         "code" : "[arb'U]"

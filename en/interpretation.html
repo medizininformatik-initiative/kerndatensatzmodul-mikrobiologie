@@ -358,12 +358,32 @@ and how that measurement is <strong>assessed</strong>. The module keeps them apa
 <h3 id="measured-value-and-assessment">Measured value and assessment</h3>
 
 <p><code class="language-plaintext highlighter-rouge">Observation.value[x]</code> carries the measurement — a minimum inhibitory
-concentration in mg/L, or an inhibition zone diameter in mm. It is a <code class="language-plaintext highlighter-rouge">Quantity</code>
-and nothing else; a bare S/I/R without a measurement does not belong here.</p>
+concentration in mg/L, or an inhibition zone diameter in mm.</p>
 
 <p><code class="language-plaintext highlighter-rouge">Observation.interpretation</code> carries the assessment: the category the measurement
-falls into. Consumers therefore have exactly one place to read the category, and
-the measured value stays comparable across laboratories.</p>
+falls into, together with the norm it was derived from.</p>
+
+<p>Not every laboratory measures. Where only the category is available, it is given
+as a <code class="language-plaintext highlighter-rouge">CodeableConcept</code> in <code class="language-plaintext highlighter-rouge">value[x]</code> — the European data model settles this
+explicitly, and an Observation with no value at all would be the more unusual
+shape. Two invariants keep that from becoming ambiguous:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">empfindlichkeit-kategorie-braucht-interpretation</code> — a category in <code class="language-plaintext highlighter-rouge">value[x]</code>
+requires an <code class="language-plaintext highlighter-rouge">interpretation</code>, because the norm hangs there and a category
+without its norm says nothing.</li>
+  <li><code class="language-plaintext highlighter-rouge">empfindlichkeit-kategorie-stimmt-mit-interpretation</code> — where both are given,
+every code of the value must also appear among the interpretation codes.</li>
+</ul>
+
+<p>So a consumer reads the category from <code class="language-plaintext highlighter-rouge">interpretation</code> in every case, and
+<code class="language-plaintext highlighter-rouge">value[x]</code> tells it whether a measurement stands behind it.</p>
+
+<p>The reverse — a measured value without a category — is flagged as a <strong>warning</strong>
+by <code class="language-plaintext highlighter-rouge">empfindlichkeit-messwert-sollte-bewertet-sein</code> rather than rejected. A bare
+MIC leaves the assessment to the consumer, who would need the breakpoint tables
+for it. But a requirement would be wrong: for some organism and agent
+combinations no breakpoints are defined, and then there is no category to give.</p>
 
 <h3 id="the-categories">The categories</h3>
 
@@ -416,10 +436,6 @@ impossible.</p>
 
 <p>The norm is coded from the module's own CodeSystem: <code class="language-plaintext highlighter-rouge">EUCAST</code>, <code class="language-plaintext highlighter-rouge">CLSI</code>, <code class="language-plaintext highlighter-rouge">Andere</code>.</p>
 
-<p class="bg-warning"><strong>Open point.</strong> The norm's <em>version</em> cannot yet be expressed, although breakpoints
-change annually. Without a year, a stored MIC cannot be re-interpreted later. See
-the decision queue in the migration report.</p>
-
 <h3 id="predicted-susceptibility-is-a-different-statement">Predicted susceptibility is a different statement</h3>
 
 <p>Susceptibility inferred from a resistance mechanism — a gene, a mutation or a
@@ -466,7 +482,7 @@ measured, the assessment stays separate.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Wed, Sep 9, 2026 16:03+0000">2026-09-09</span>
+          Generated <span title="Thu, Sep 10, 2026 13:00+0000">2026-09-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

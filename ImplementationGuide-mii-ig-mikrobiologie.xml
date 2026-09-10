@@ -111,7 +111,7 @@
   <title value="MII Implementation Guide Microbiology"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-09T16:03:21+00:00"/>
+  <date value="2026-09-10T13:00:57+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -169,6 +169,11 @@
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
     <version value="7.1.0"/>
+  </dependsOn>
+  <dependsOn id="de_medizininformatikinitiative_kerndatensatz_biobank">
+    <uri value="http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank"/>
+    <packageId value="de.medizininformatikinitiative.kerndatensatz.biobank"/>
+    <version value="2027.0.0-ballot.rc2"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -1022,6 +1027,17 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
+        <reference value="CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten"/>
+      </reference>
+      <name value="MII CS Mikrobio Mikroskopie Komponenten"/>
+      <description value="Interims-CodeSystem für Komponenten des mikroskopischen Befunds, für die noch kein LOINC-Code existiert. Der enthaltene Code wird ersetzt, sobald der im EU-Datenmodell angeforderte LOINC-Code verfügbar ist."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
         <reference value="CodeSystem/mii-cs-mikrobio-mrgn-ergebnis"/>
       </reference>
       <name value="MII CS Mikrobio MRGN Ergebnis"/>
@@ -1088,6 +1104,39 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/mii-exa-mikrobio-allgemeine-kultur-methodenneutral"/>
+      </reference>
+      <name value="MII EXA Mikrobio Allgemeine Kultur methodenneutraler Code"/>
+      <description value="Ungerichtete kulturelle Anzucht ohne Wachstum mit dem methodenneutralen Untersuchungscode 41852-5: Erst die Methode weist die Untersuchung als Kultur aus."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-mikroskopie"/>
+      </reference>
+      <name value="MII EXA Mikrobio Allgemeine Mikroskopie"/>
+      <description value="Mikroskopischer Befund als morphologische Gruppe: grampositive Kokken in Haufen."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-mikroskopie-gram-kokken-wenig"/>
+      </reference>
+      <name value="MII EXA Mikrobio Allgemeine Mikroskopie wenig grampositive Kokken"/>
+      <description value="Grampräparat mit wenig grampositiven Kokken: die Morphologie als Ergebnis, die semiquantitative Menge als Komponente."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ"/>
       </reference>
       <name value="MII EXA Mikrobio Antigen Antikoerper quantitativ"/>
@@ -1110,11 +1159,11 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
-        <reference value="Observation/mii-exa-mikrobio-barlett-score"/>
+        <reference value="Observation/mii-exa-mikrobio-bartlett-score"/>
       </reference>
-      <name value="MII EXA Mikrobio Barlett Score"/>
-      <description value="Barlett-Score einer Sputumprobe zur Beurteilung, ob sie für die Kultur geeignet ist."/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-barlett-score"/>
+      <name value="MII EXA Mikrobio Bartlett Score"/>
+      <description value="Bartlett-Score einer Sputumprobe zur Beurteilung, ob sie für die Kultur geeignet ist."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-bartlett-score"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1154,6 +1203,17 @@
         <valueString value="Observation"/>
       </extension>
       <reference>
+        <reference value="Observation/mii-exa-mikrobio-empfindlichkeit-nur-kategorie"/>
+      </reference>
+      <name value="MII EXA Mikrobio Empfindlichkeit nur Kategorie"/>
+      <description value="Phänotypische Empfindlichkeitstestung, bei der nur die Kategorie berichtet wird und kein Messwert vorliegt."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
         <reference value="Observation/mii-exa-mikrobio-keimzahl"/>
       </reference>
       <name value="MII EXA Mikrobio Keimzahl"/>
@@ -1181,17 +1241,6 @@
       <name value="MII EXA Mikrobio Labor"/>
       <description value="Durchführendes mikrobiologisches Labor der Beispiele dieses Moduls."/>
       <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/mii-exa-mikrobio-mikroskopie"/>
-      </reference>
-      <name value="MII EXA Mikrobio Mikroskopie"/>
-      <description value="Mikroskopischer Befund ohne taxonomische Zuordnung: grampositive Kokken in Haufen."/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1257,7 +1306,7 @@
       </reference>
       <name value="MII EXA Mikrobio Probe"/>
       <description value="Generisches Probenmaterial für die Beispiele dieses Moduls. Der Typ ist bewusst unspezifisch, weil dieselbe Probe Beispiele unterschiedlicher Untersuchungsarten trägt."/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1268,7 +1317,7 @@
       </reference>
       <name value="MII EXA Mikrobio Probe Katheterspitze"/>
       <description value="Katheterspitze als Probenmaterial. Sie hat weder Volumen noch Masse und ist damit selbst die Bezugsgröße der Keimzahl."/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1346,6 +1395,39 @@
       <name value="MII EXA Mikrobio Spezifische Kultur VRE negativ"/>
       <description value="Negativer VRE-Nachweis mittels erregerspezifischer Kultur: kein Wachstum vancomycinresistenter Enterokokken."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ"/>
+      </reference>
+      <name value="MII EXA Mikrobio Spezifische Mikroskopie Auramin negativ"/>
+      <description value="Auraminfärbung ohne Nachweis säurefester Stäbchen: der negative Fall der spezifischen Mikroskopie."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus"/>
+      </reference>
+      <name value="MII EXA Mikrobio Spezifische Mikroskopie Kinyoun zwei plus"/>
+      <description value="Kinyounfärbung mit säurefesten Stäbchen in der Stufe zwei von drei, entsprechend 1–10 pro Gesichtsfeld."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld"/>
+      </reference>
+      <name value="MII EXA Mikrobio Spezifische Mikroskopie Leukozyten je Gesichtsfeld"/>
+      <description value="Leukozyten im Grampräparat als Zählung je Gesichtsfeld, 10 bis 25, statt als semiquantitative Stufe."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1453,7 +1535,7 @@
       <reference>
         <reference value="StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"/>
       </reference>
-      <name value="MII PR Mikrobio Allgemeine Bestimmung"/>
+      <name value="MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)"/>
       <description value="Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorganismus oder infektiösen Agens in einer Probe, ohne Einschränkung auf ein vordefiniertes Ziel."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -1466,6 +1548,17 @@
       </reference>
       <name value="MII PR Mikrobio Allgemeine Kultur"/>
       <description value="Allgemeine Kultur beschreibt das Ergebnis einer nicht zielgerichteten mikrobiologischen Kultur, die prüft, ob in der Probe irgendein Mikroorganismus wächst, ohne die Analyse auf einen vordefinierten Erreger zu beschränken."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-mikrobio-mikroskopie"/>
+      </reference>
+      <name value="MII PR Mikrobio Allgemeine Mikroskopie"/>
+      <description value="Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1495,10 +1588,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/mii-pr-mikrobio-barlett-score"/>
+        <reference value="StructureDefinition/mii-pr-mikrobio-bartlett-score"/>
       </reference>
-      <name value="MII PR Mikrobio Barlett Score"/>
-      <description value="Barlett-Score beschreibt die qualitative mikroskopische Beurteilung der Eignung von Sputumproben für die mikrobiologische Kultur anhand des Verhältnisses von Entzündungs- zu Epithelzellen."/>
+      <name value="MII PR Mikrobio Bartlett Score"/>
+      <description value="Bartlett-Score beschreibt die qualitative mikroskopische Beurteilung der Eignung von Sputumproben für die mikrobiologische Kultur anhand des Verhältnisses von Entzündungs- zu Epithelzellen."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1550,17 +1643,6 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/mii-pr-mikrobio-mikroskopie"/>
-      </reference>
-      <name value="MII PR Mikrobio Mikroskopie"/>
-      <description value="Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung), ohne taxonomische Identifikation."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
         <reference value="StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast"/>
       </reference>
       <name value="MII PR Mikrobio Molekulare Pathogenlast"/>
@@ -1587,6 +1669,17 @@
       </reference>
       <name value="MII PR Mikrobio Nugent Score"/>
       <description value="Nugent-Score beschreibt ein Gramfärbungs-basiertes semiquantitatives Punktesystem zur Beurteilung vaginaler Mikrobiotamuster bei bakterieller Vaginose."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-pr-mikrobio-probe"/>
+      </reference>
+      <name value="MII PR Mikrobio Probe"/>
+      <description value="Probe beschreibt das mikrobiologisch untersuchte Material. Das Profil leitet vom Bioproben-Basisprofil der MII-Biobank ab und ergaenzt die Erwartungen der mikrobiologischen Diagnostik."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1638,6 +1731,17 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"/>
+      </reference>
+      <name value="MII PR Mikrobio Spezifische Mikroskopie"/>
+      <description value="Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/mii-pr-mikrobio-titer"/>
       </reference>
       <name value="MII PR Mikrobio Titer"/>
@@ -1663,7 +1767,7 @@
         <reference value="StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"/>
       </reference>
       <name value="MII PR Mikrobio Voraussichtliche Empfindlichkeit"/>
-      <description value="Voraussichtliche Empfindlichkeit beschreibt die aus dem Nachweis von Resistenzmechanismen/Genen/Proteinen abgeleitete erwartete Suszeptibilität oder Resistenz gegenüber antimikrobiellen Substanzen."/>
+      <description value="Voraussichtliche Empfindlichkeit beschreibt die aus genotypischen Resistenznachweisen abgeleitete erwartete Suszeptibilität oder Resistenz gegenüber antimikrobiellen Substanzen."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1704,10 +1808,43 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc"/>
+      </reference>
+      <name value="MII VS Mikrobio Allgemeine Bestimmung Tests [LOINC]"/>
+      <description value="Tests-ValueSet für die allgemeine Bestimmung: LOINC-Codes für die ungerichtete Identifizierung eines Mikroorganismus. Bevorzugt wird 41852-5; die übrigen Codes sind gleichwertig zulässig, wo das Labor die Erregergruppe oder das Sequenzierziel im Code benennt."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]"/>
       <description value="Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkung auf einen vordefinierten Erreger, einschließlich aerober und anaerober Bebrütung."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc"/>
+      </reference>
+      <name value="MII VS Mikrobio Allgemeine Kultur Tests [LOINC]"/>
+      <description value="Tests-ValueSet für die allgemeine Kultur: LOINC-Codes für die ungerichtete kulturelle Untersuchung. Bevorzugt wird 11475-1, weil der Code das Verfahren selbst benennt; 41852-5 ist gleichwertig zulässig."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc"/>
+      </reference>
+      <name value="MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]"/>
+      <description value="Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0; 664-3 ist gleichwertig zulässig, wenn die Färbung im Code stehen soll."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1770,10 +1907,10 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="ValueSet/mii-vs-mikrobio-barlett-score-loinc"/>
+        <reference value="ValueSet/mii-vs-mikrobio-bartlett-score-loinc"/>
       </reference>
-      <name value="MII VS Mikrobio Barlett Score [LOINC]"/>
-      <description value="Ergebnis-ValueSet für den Barlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten."/>
+      <name value="MII VS Mikrobio Bartlett Score [LOINC]"/>
+      <description value="Ergebnis-ValueSet für den Bartlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1836,6 +1973,17 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/mii-vs-mikrobio-empfindlichkeit-methode-snomed"/>
+      </reference>
+      <name value="MII VS Mikrobio Empfindlichkeit Methode [SNOMED]"/>
+      <description value="Methoden-ValueSet für die phänotypische Empfindlichkeitstestung: die Verfahren, mit denen eine minimale Hemmkonzentration oder ein Hemmhofdurchmesser gemessen wird."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]"/>
@@ -1891,6 +2039,17 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"/>
+      </reference>
+      <name value="MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]"/>
+      <description value="Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, in der das im Code benannte Objekt gesehen wurde."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum"/>
       </reference>
       <name value="MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]"/>
@@ -1927,7 +2086,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Morphologie Ergebnis [SNOMED]"/>
-      <description value="Ergebnis-ValueSet für die Mikroskopie: mikroskopisch beobachtete Morphologie ohne taxonomische Zuordnung, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen."/>
+      <description value="Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologische Gruppe, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen. Eine Speziesidentifizierung gehört nicht hierher, auch wenn sie mikroskopisch gestellt wurde."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2060,6 +2219,17 @@
       </reference>
       <name value="MII VS Mikrobio Spezifische Kultur Tests [LOINC]"/>
       <description value="Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, bei denen das gesuchte Ziel bereits im LOINC-Code benannt ist."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"/>
+      </reference>
+      <name value="MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]"/>
+      <description value="Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

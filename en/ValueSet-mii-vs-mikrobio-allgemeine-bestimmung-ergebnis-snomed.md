@@ -9,14 +9,14 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED |
+| Active as of 2026-09-10 | *Computable Name*:MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED |
 
  
 Ergebnis-ValueSet fuer die allgemeine Bestimmung: der identifizierte Mikroorganismus oder das negative Ergebnis, wenn kein Erreger identifiziert wurde. 
 
  **References** 
 
-* [MII PR Mikrobio Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
+* [MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
 
 ### Logical Definition (CLD)
 
@@ -44,7 +44,7 @@ No Expansion for this valueset (Unsupported Code System Version)
   "title" : "MII VS Mikrobio Allgemeine Bestimmung Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

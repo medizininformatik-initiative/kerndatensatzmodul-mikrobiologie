@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchungsarten | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-09 | *Computable Name*:MII_LM_Mikrobio_Untersuchungsarten |
+| Active as of 2026-09-10 | *Computable Name*:MII_LM_Mikrobio_Untersuchungsarten |
 
  
 Fachliche Ausprägungen der mikrobiologischen Untersuchung für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE] 
@@ -46,7 +46,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
   "title" : "MII LM Mikrobio Untersuchungsarten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -189,10 +189,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Mikroskopie",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Mikroskopie",
-      "short" : "Mikroskopie",
-      "definition" : "Morphologische Beobachtung von Mikroorganismen mittels mikroskopischer Untersuchung, ohne taxonomische Identifikation.",
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie",
+      "short" : "Allgemeine Mikroskopie",
+      "definition" : "Morphologische Beobachtung von Mikroorganismen mittels mikroskopischer Untersuchung. Das Ergebnis ist eine morphologische Gruppe, keine Spezies.",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -200,8 +200,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Mikroskopie.Untersuchungscode",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Mikroskopie.Untersuchungscode",
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungscode",
       "short" : "Untersuchungscode",
       "definition" : "Kodierung der Untersuchung; mikroskopische Beobachtung (LOINC).",
       "min" : 1,
@@ -211,8 +211,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Mikroskopie.Ergebnis",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Mikroskopie.Ergebnis",
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Ergebnis",
       "short" : "Ergebnis",
       "definition" : "Beobachtete Morphologie (SNOMED CT).",
       "min" : 0,
@@ -222,8 +222,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Mikroskopie.Untersuchungsmethode",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Mikroskopie.Untersuchungsmethode",
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungsmethode",
       "short" : "Untersuchungsmethode",
       "definition" : "Eingesetztes mikroskopisches Verfahren einschließlich Färbetechnik, z. B. Gramfärbung (SNOMED CT).",
       "min" : 0,
@@ -233,9 +233,53 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BarlettScore",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BarlettScore",
-      "short" : "Barlett Score",
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie",
+      "short" : "Spezifische Mikroskopie",
+      "definition" : "Mikroskopischer Nachweis eines im Untersuchungscode benannten Objekts mit der semiquantitativen Stufe als Ergebnis.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Untersuchungscode",
+      "short" : "Untersuchungscode",
+      "definition" : "Kodierung des gesuchten Objekts und der Färbetechnik (LOINC, ordinale Skala).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Ergebnis",
+      "short" : "Ergebnis",
+      "definition" : "Semiquantitative Stufe, in der das gesuchte Objekt gesehen wurde (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Untersuchungsmethode",
+      "short" : "Untersuchungsmethode",
+      "definition" : "Eingesetzte Färbetechnik, entbehrlich wenn sie bereits im Untersuchungscode steht (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore",
+      "short" : "Bartlett Score",
       "definition" : "Qualitative mikroskopische Beurteilung der Eignung von Sputumproben für die Kultur anhand des Verhältnisses von Entzündungs- zu Epithelzellen.",
       "min" : 0,
       "max" : "*",
@@ -244,10 +288,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BarlettScore.Untersuchungscode",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BarlettScore.Untersuchungscode",
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Untersuchungscode",
       "short" : "Untersuchungscode",
-      "definition" : "Kodierung der Untersuchung; hier fest: Barlett-Score (LOINC).",
+      "definition" : "Kodierung der Untersuchung; hier fest: Bartlett-Score (LOINC).",
       "min" : 1,
       "max" : "1",
       "type" : [{
@@ -255,8 +299,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BarlettScore.Ergebnis",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BarlettScore.Ergebnis",
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Ergebnis",
       "short" : "Ergebnis",
       "definition" : "Score-Kategorie und daraus abgeleitete Eignung der Probe (LOINC).",
       "min" : 0,
@@ -266,8 +310,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BarlettScore.Untersuchungsmethode",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BarlettScore.Untersuchungsmethode",
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Untersuchungsmethode",
       "short" : "Untersuchungsmethode",
       "definition" : "Eingesetztes Verfahren; hier fest: Mikroskopie (SNOMED CT).",
       "min" : 0,
@@ -398,14 +442,17 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Ergebnis",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Ergebnis",
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Ergebnis[x]",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Ergebnis[x]",
       "short" : "Ergebnis",
-      "definition" : "Gemessener Wert der Empfindlichkeitstestung, z. B. minimale Hemmkonzentration in mg/L oder Hemmhofdurchmesser in mm (UCUM).",
+      "definition" : "Gemessener Wert der Empfindlichkeitstestung, z. B. minimale Hemmkonzentration in mg/L oder Hemmhofdurchmesser in mm (UCUM) — oder, wenn nicht gemessen wurde, die Empfindlichkeitskategorie.",
       "min" : 0,
       "max" : "1",
       "type" : [{
         "code" : "Quantity"
+      },
+      {
+        "code" : "CodeableConcept"
       }]
     },
     {

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-09 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Empfindlichkeit |
+| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Empfindlichkeit |
 
  
 Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung eines Erregers gegenüber antimikrobiellen Substanzen unter Bezug auf ein Normsystem. 
@@ -27,7 +27,7 @@ Beispiel (minimal):
 **Usages:**
 
 * Refer to this Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
-* Examples for this Profile: [Observation/mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.md) and [Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md)
+* Examples for this Profile: [Observation/mii-exa-mikrobio-empfindlichkeit-nur-kategorie](Observation-mii-exa-mikrobio-empfindlichkeit-nur-kategorie.md), [Observation/mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.md) and [Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.md)
 * CapabilityStatements using this Profile: [MII CPS Mikrobio Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-empfindlichkeit.json)
@@ -50,6 +50,8 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 #### Terminology Bindings (Differential)
 
+#### Constraints
+
 #### Terminology Bindings
 
 #### Constraints
@@ -60,6 +62,12 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 Mandatory: 2 elements(2 nested mandatory elements)
  Must-Support: 3 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Mikrobio Probe (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe)](StructureDefinition-mii-pr-mikrobio-probe.md)
 
 **Extensions**
 
@@ -80,6 +88,8 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 #### Terminology Bindings (Differential)
 
+#### Constraints
+
  **Snapshot-AnsichtView** 
 
 #### Terminology Bindings
@@ -92,6 +102,12 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 Mandatory: 2 elements(2 nested mandatory elements)
  Must-Support: 3 elements
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII PR Mikrobio Probe (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe)](StructureDefinition-mii-pr-mikrobio-probe.md)
 
 **Extensions**
 
@@ -245,7 +261,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Empfindlichkeit",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-09T16:03:21+00:00",
+  "date" : "2026-09-10T13:00:57+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -285,7 +301,28 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "differential" : {
     "element" : [{
       "id" : "Observation",
-      "path" : "Observation"
+      "path" : "Observation",
+      "constraint" : [{
+        "key" : "empfindlichkeit-kategorie-braucht-interpretation",
+        "severity" : "error",
+        "human" : "If the result is given as a susceptibility category rather than a measured value, Observation.interpretation SHALL be present, because the norm it was derived from is carried there.",
+        "expression" : "value.ofType(CodeableConcept).exists() implies interpretation.exists()",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "key" : "empfindlichkeit-kategorie-stimmt-mit-interpretation",
+        "severity" : "error",
+        "human" : "Where both a categorical result value and an interpretation are given, every code of the value SHALL also appear among the interpretation codes.",
+        "expression" : "value.ofType(CodeableConcept).coding.code.subsetOf(interpretation.coding.code)",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "key" : "empfindlichkeit-messwert-sollte-bewertet-sein",
+        "severity" : "warning",
+        "human" : "Where the result is a measured value, an interpretation SHOULD be given. It may be absent where no breakpoints are defined for the organism and agent.",
+        "expression" : "value.ofType(Quantity).exists() implies interpretation.exists()",
+        "source" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      }]
     },
     {
       "id" : "Observation.extension:triggeredBy-r5",
@@ -335,7 +372,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "short" : "Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert.",
+      "short" : "Bevorzugt LOINC-Codes OHNE praekoordiniertes Verfahren, z. B. 100044-7 'Cefcapene [Susceptibility]' und nicht die '... by Broth dilution'-Variante — das Verfahren gehoert nach Observation.method. Das EU-Datenmodell markiert diese methodenfreie Menge als 'methodless:true' und Preferred. Ebenso bevorzugt ohne praekoordinierte Specimentype-Angabe (System = XXX); der Specimentype wird separat ueber Specimen.type kodiert. NICHT hierher gehoeren Codes mit der Methode 'Genotyping', etwa 103958-5 'Ofloxacin [Susceptibility] by Genotype': Dieses Profil verlangt ein Grenzwert-Regelwerk in interpretation.extension[Norm], und eine genotypische Vorhersage beruht auf keinem. Sie gehoert nach MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit.",
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"
@@ -346,6 +383,9 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "path" : "Observation.value[x]",
       "type" : [{
         "code" : "Quantity"
+      },
+      {
+        "code" : "CodeableConcept"
       }]
     },
     {
@@ -362,6 +402,19 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum"
+      }
+    },
+    {
+      "id" : "Observation.value[x]:valueCodeableConcept",
+      "path" : "Observation.value[x]",
+      "sliceName" : "valueCodeableConcept",
+      "short" : "Die Empfindlichkeitskategorie, wenn kein Messwert vorliegt. Aus derselben Liste wie interpretation, weil beide dasselbe aussagen — sind beide angegeben, muessen sie uebereinstimmen (empfindlichkeit-kategorie-stimmt-mit-interpretation).",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility"
       }
     },
     {
@@ -398,9 +451,21 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "mustSupport" : true
     },
     {
+      "id" : "Observation.method",
+      "path" : "Observation.method",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-methode-snomed"
+      }
+    },
+    {
       "id" : "Observation.specimen",
       "path" : "Observation.specimen",
-      "min" : 1
+      "min" : 1,
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
     }]
   }
 }
