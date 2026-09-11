@@ -86,6 +86,9 @@ belongs to.
 6. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.html#ballot-question-6)**
    — the white paper asks for it always; this guide only recommends it, and your
    answer decides more than one question.
+7. **[Should specific culture and specific determination be one profile?](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html#ballot-question-7)**
+   — they were until `2027.0.0-alpha.5`, the European discussion is open, and
+   merging is free only until this release is published.
 
 ### Contents
 

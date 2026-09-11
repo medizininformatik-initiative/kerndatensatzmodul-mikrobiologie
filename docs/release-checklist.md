@@ -59,6 +59,22 @@ entry names the condition, how to check it, and what to do if it has changed.
   state on `probe.md` that pre-coordinated LOINC codes then carry the material.
   This affects all investigation profiles at once.
 
+### Ballot question 7 — one profile or two for targeted detection
+
+- **Condition we rely on:** specific culture and specific determination stay two
+  profiles, which follows this module's derivation rule (the question asked and
+  the type of its answer) and keeps the `required` result binding on the culture
+  half.
+- **Why it matters, and why it is time-critical:** measured on 2026-09-11,
+  `mii-pr-mikrobio-spezifische-kultur` has appeared in **no** release — not
+  `2025.0.2`, not `2027.0.0-alpha.2`, `-alpha.4` or `-alpha.5`. Merging the two is
+  therefore free until this release is published. Afterwards it means withdrawing
+  a published canonical, which is a breaking change for every consumer. The
+  European discussion on the point is open.
+- **How to check:** before publication, look at whether the ballot or the European
+  group has answered. If the answer is "one profile", merge before the release
+  rather than after; if it is "two", nothing to do.
+
 ### Interim code for the semiquantitative microscopy component
 
 - **Condition we relied on:** LOINC has no code for "semiquantitative value for

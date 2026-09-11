@@ -99,6 +99,10 @@ vollständig dargestellt, zu der er gehört.
 6. **[Können Sie zu jedem Befund `Observation.method` liefern?](profilauswahl-und-abgrenzung.html#ballot-question-6)**
    — das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre
    Antwort entscheidet mehr als eine Frage.
+7. **[Sollten spezifische Kultur und spezifische Bestimmung ein Profil sein?](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html#ballot-question-7)**
+   — bis `2027.0.0-alpha.5` waren sie es, die europäische Diskussion ist offen,
+   und ein Zusammenlegen ist nur bis zur Veröffentlichung dieses Releases
+   kostenlos.
 
 ### Inhalt dieses Leitfadens
 
