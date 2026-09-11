@@ -42,7 +42,7 @@ Methoden-ValueSet für die molekulare Pathogenlast: Amplifikationsverfahren zur 
   "title" : "MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T11:07:28+00:00",
+  "date" : "2026-09-11T11:48:22+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
