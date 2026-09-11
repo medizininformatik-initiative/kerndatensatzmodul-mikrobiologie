@@ -104,6 +104,30 @@ entry names the condition, how to check it, and what to do if it has changed.
 - **If the fallback line appears:** the secret names have drifted again. Compare
   against the labor module, which carries the same mapping.
 
+### Artifact topics inherited from the Laboratory module
+
+- **Condition we rely on:** the Laboratory parent profiles carry exactly **two**
+  `artifact-topic` entries (`C36292` Laboratory Test Result, `C25294` Laboratory
+  Procedure). SUSHI copies a parent StructureDefinition's root extensions into
+  the child, and the two `insert CRMIArtifactTopic` rules in
+  `input/fsh/rulesets/mikrobio-observation-common.fsh` overwrite exactly those
+  two with this module's own topics.
+- **Why it matters:** `[+]` is a soft index that overwrites while inherited
+  entries exist and appends beyond them. Measured on 2026-09-11: one insert
+  against that parent leaves the parent's second topic in place, three inserts
+  append a third. So if the Laboratory module ever declares a **third** topic, it
+  appears silently as a third entry in all 22 profiles of this module — no error,
+  no warning.
+- **How to check:** after every bump of the `laborbefund` dependency, run
+  `python3 -c "import json;d=json.load(open('fsh-generated/resources/StructureDefinition-mii-pr-mikrobio-keimzahl.json'));print([e['valueCodeableConcept']['coding'][0]['code'] for e in d['extension'] if e['url'].endswith('artifact-topic')])"`
+  and confirm it prints exactly `['C16851', 'C217438']`.
+- **The underlying question is upstream:** whether this propagation should happen
+  at all is raised as
+  medizininformatik-initiative/mii-kds-module-template#34. Neither FHIR nor CRMI
+  defines inheritance for an artefact's own metadata; measured, SUSHI carries the
+  extension array and nothing else — not `publisher`, `contact`, `jurisdiction`,
+  `copyright` or `meta`.
+
 ### Terminology pins
 
 - **Condition:** SNOMED CT `http://snomed.info/sct/900000000000207008/version/20260701`
