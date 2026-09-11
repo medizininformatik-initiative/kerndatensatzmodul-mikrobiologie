@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED |
 
  
 Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologische Gruppe, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen. Eine Speziesidentifizierung gehört nicht hierher, auch wenn sie mikroskopisch gestellt wurde. 
@@ -42,7 +42,7 @@ Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologi
   "title" : "MII VS Mikrobio Morphologie Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T18:06:33+00:00",
+  "date" : "2026-09-11T06:33:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

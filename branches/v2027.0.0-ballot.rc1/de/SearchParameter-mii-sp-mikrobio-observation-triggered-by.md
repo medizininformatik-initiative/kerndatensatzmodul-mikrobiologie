@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-triggered-by | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_SP_Mikrobio_Observation_TriggeredBy |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_SP_Mikrobio_Observation_TriggeredBy |
 
  
 Suche nach der Observation, die eine mikrobiologische Observation ausgelöst hat. 
@@ -27,7 +27,7 @@ Suche nach der Observation, die eine mikrobiologische Observation ausgelöst hat
   "name" : "MII_SP_Mikrobio_Observation_TriggeredBy",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T18:06:33+00:00",
+  "date" : "2026-09-11T06:33:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

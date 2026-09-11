@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_CS_Mikrobio_Mikroskopie_Komponenten |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_CS_Mikrobio_Mikroskopie_Komponenten |
 
  
 Interims-CodeSystem für Komponenten des mikroskopischen Befunds, für die noch kein LOINC-Code existiert. Der enthaltene Code wird ersetzt, sobald der im EU-Datenmodell angeforderte LOINC-Code verfügbar ist. 
@@ -36,7 +36,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
   "title" : "MII CS Mikrobio Mikroskopie Komponenten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T18:06:33+00:00",
+  "date" : "2026-09-11T06:33:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

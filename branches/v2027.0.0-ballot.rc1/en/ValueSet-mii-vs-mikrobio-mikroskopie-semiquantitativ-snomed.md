@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-10 | *Computable Name*:MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED |
+| Active as of 2026-09-11 | *Computable Name*:MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED |
 
  
 Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, in der das im Code benannte Objekt gesehen wurde. 
@@ -43,7 +43,7 @@ Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, 
   "title" : "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T18:06:33+00:00",
+  "date" : "2026-09-11T06:33:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

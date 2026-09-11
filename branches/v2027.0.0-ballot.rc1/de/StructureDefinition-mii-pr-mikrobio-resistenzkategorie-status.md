@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Resistenzkategorie_Status |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Resistenzkategorie_Status |
 
  
 Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value. 
@@ -224,7 +224,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C36292"
+        "code" : "C16851"
       }]
     }
   },
@@ -233,7 +233,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C25294"
+        "code" : "C217438"
       }]
     }
   },
@@ -312,7 +312,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Resistenzkategorie Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T18:06:33+00:00",
+  "date" : "2026-09-11T06:33:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

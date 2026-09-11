@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Allgemeine_Mikroskopie |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Allgemeine_Mikroskopie |
 
  
 Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies. 
@@ -201,7 +201,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C36292"
+        "code" : "C16851"
       }]
     }
   },
@@ -210,7 +210,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C25294"
+        "code" : "C217438"
       }]
     }
   },
@@ -289,7 +289,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T18:06:33+00:00",
+  "date" : "2026-09-11T06:33:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

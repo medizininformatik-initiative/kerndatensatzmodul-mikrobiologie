@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-bartlett-score | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-10 | *Computable Name*:MII_PR_Mikrobio_Bartlett_Score |
+| Active as of 2026-09-11 | *Computable Name*:MII_PR_Mikrobio_Bartlett_Score |
 
  
 Bartlett-Score beschreibt die qualitative mikroskopische Beurteilung der Eignung von Sputumproben für die mikrobiologische Kultur anhand des Verhältnisses von Entzündungs- zu Epithelzellen. 
@@ -91,7 +91,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-b
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C36292"
+        "code" : "C16851"
       }]
     }
   },
@@ -100,7 +100,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-b
     "valueCodeableConcept" : {
       "coding" : [{
         "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-        "code" : "C25294"
+        "code" : "C217438"
       }]
     }
   },
@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-b
   "title" : "MII PR Mikrobio Bartlett Score",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T18:06:33+00:00",
+  "date" : "2026-09-11T06:33:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

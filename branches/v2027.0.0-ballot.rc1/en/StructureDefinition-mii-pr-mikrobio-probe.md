@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-10 | *Computable Name*:MII_PR_Mikrobio_Probe |
+| Active as of 2026-09-11 | *Computable Name*:MII_PR_Mikrobio_Probe |
 
  
 Probe beschreibt das mikrobiologisch untersuchte Material. Das Profil leitet vom Bioproben-Basisprofil der MII-Biobank ab und ergaenzt die Erwartungen der mikrobiologischen Diagnostik. 
@@ -56,6 +56,24 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-p
         "display" : "Creative Commons Attribution 4.0 International"
       }]
     }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C16851"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-topic",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+        "code" : "C217438"
+      }]
+    }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe",
   "version" : "2027.0.0-ballot.rc1",
@@ -63,7 +81,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-p
   "title" : "MII PR Mikrobio Probe",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T18:06:33+00:00",
+  "date" : "2026-09-11T06:33:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
