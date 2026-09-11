@@ -17,6 +17,9 @@ Description: "Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbas
 // Er steht bewusst NEBEN 258066000: Nicht jede PCR ist sondenbasiert, und
 // 258066000 bleibt fuer Verfahren ohne Sonde die richtige Angabe. Die Frage des
 // Workbooks, ob es solche noch gibt, ist keine, die dieses Modul entscheidet.
+// Kulturell: am 2026-09-11 hierher zurueckgeholt, siehe den Kommentar im
+// Tests-ValueSet und Ballotfrage 7.
+* $sct#703752003 "Organism specific culture"
 * $sct#702675006 "Probe with target amplification technique (qualifier value)"
 * $sct#258066000 "Polymerase chain reaction technique (qualifier value)"
 * $sct#1303992007 "Digital polymerase chain reaction technique (qualifier value)"

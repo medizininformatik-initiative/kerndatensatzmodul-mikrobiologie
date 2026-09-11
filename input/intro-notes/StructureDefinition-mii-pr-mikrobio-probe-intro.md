@@ -6,8 +6,8 @@ references it.
 
 {:.bg-warning}
 **Ballot question 1 — can you supply a Specimen resource for every result?**
-Every investigation profile here requires `Observation.specimen`. The European
-white paper states that the specimen shall always be represented explicitly in a
+Every investigation profile here requires `Observation.specimen`. The HL7 EU Lab Semantic Workgroup
+states that the specimen shall always be represented explicitly in a
 Specimen resource, even where the LOINC code already carries it, so the question
 is deliverability rather than principle. Feedback from German laboratory practice
 is that one is frequently not produced. Full statement of the question on

@@ -18,7 +18,7 @@ derivations, not triggered follow-up investigations.
 ### Grouping an antibiogram
 
 An antibiogram is not one result but many — one Observation of this profile per
-substance tested. The European white paper binds them together with an
+substance tested. The HL7 EU Lab Semantic Workgroup binds them together with an
 **organizer Observation**: one Observation carrying the panel code
 `29576-6 |Bacterial susceptibility panel|` and no `value[x]` of its own, which
 points at the individual results through `Observation.hasMember` and at the

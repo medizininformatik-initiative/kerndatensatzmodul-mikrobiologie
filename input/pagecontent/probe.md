@@ -5,7 +5,7 @@
 {:.bg-warning}
 **Ballot question 1 — can you supply a Specimen resource for every result?**
 Every investigation profile in this module requires `Observation.specimen`. The
-requirement does not originate with this guide alone: the European white paper
+requirement does not originate with this guide alone: the HL7 EU Lab Semantic Workgroup
 states that the specimen **shall always** be represented explicitly in a FHIR
 Specimen resource, preferably in `Specimen.type` using SNOMED CT — and expressly
 says this holds *even where the LOINC code already carries the specimen*.

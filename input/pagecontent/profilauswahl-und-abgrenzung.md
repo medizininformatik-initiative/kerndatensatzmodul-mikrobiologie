@@ -107,7 +107,7 @@ invariant, is not enforced.
 
 Everywhere else this module prefers test codes that leave the specimen out, with
 `Specimen.type` carrying it instead. Serology is deliberately exempt. The
-European white paper states the reason:
+HL7 EU Lab Semantic Workgroup states the reason:
 
 > In comparison with culture techniques, far fewer specimen types are involved in
 > serology. The majority of specimens are serum-based. Therefore, we allow
@@ -138,7 +138,7 @@ statement belongs in `DiagnosticReport.conclusion` — see
 
 ### The method belongs in `Observation.method`
 
-The European white paper puts this as a core principle and states it more
+The HL7 EU Lab Semantic Workgroup puts this as a core principle and states it more
 strongly than one might expect:
 
 > The LOINC-axis "method" should be omitted completely. […] Even if the method is
@@ -161,7 +161,7 @@ statement is otherwise ambiguous: General culture with the method-neutral code
 
 {:.bg-warning}
 **Ballot question 6 — can you supply `Observation.method` for every result?**
-The white paper asks for it always, this guide only recommends it. We ask whether making it mandatory would be deliverable at your site. If
+The HL7 EU Lab Semantic Workgroup asks for it always, this guide only recommends it. We ask whether making it mandatory would be deliverable at your site. If
 it would, a later version can raise `Observation.method` to `1..1` and the
 special-case invariant on General culture becomes unnecessary. A second consequence follows: if the method is always present, `41852-5` plus a method is
 unambiguous everywhere, and the reason this guide recommends the method-bearing
@@ -267,7 +267,7 @@ For Gram-negative pathogens with an MRGN classification, the representation is v
 ### Grouping several results: the panel
 
 An antibiogram is not one result but many — one Observation per antimicrobial
-tested. The European white paper recommends binding them together with an
+tested. The HL7 EU Lab Semantic Workgroup recommends binding them together with an
 **organizer Observation**: one Observation carrying the panel code
 `29576-6 |Bacterial susceptibility panel|` and no `value[x]` of its own, which
 points at the individual results through `Observation.hasMember`. The organizer

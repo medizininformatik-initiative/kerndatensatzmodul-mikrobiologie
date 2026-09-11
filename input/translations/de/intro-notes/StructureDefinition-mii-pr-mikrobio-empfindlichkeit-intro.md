@@ -19,7 +19,7 @@ Ableitungen und keine ausgelöste Folgediagnostik.
 ### Ein Antibiogramm zusammenfassen
 
 Ein Antibiogramm ist nicht ein Ergebnis, sondern viele — je getestete Substanz
-eine Observation dieses Profils. Das europäische Whitepaper bindet sie über eine
+eine Observation dieses Profils. Die HL7 EU Lab Semantic Workgroup bindet sie über eine
 **Organizer-Observation** zusammen: eine Observation, die den Panel-Code
 `29576-6 |Bacterial susceptibility panel|` trägt und selbst kein `value[x]`, und
 die über `Observation.hasMember` auf die Einzelergebnisse und über `triggeredBy`

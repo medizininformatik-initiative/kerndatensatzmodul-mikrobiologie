@@ -37,11 +37,11 @@ akuter EBV-Infektion erscheint zuerst IgM gegen das Viruskapsid-Antigen, dann
 VCA-IgG, und EBNA-IgG entsteht erst nach sechs bis zwölf Wochen. Jedes der drei
 Ergebnisse ist eine eigene Observation; die Aussage „frische Infektion" oder
 „durchgemachte Infektion" ergibt sich erst aus der Zusammenschau und ist keine von
-ihnen. Das europäische Whitepaper formuliert es als „a serological report is often
+ihnen. Die HL7 EU Lab Semantic Workgroup formuliert es als „a serological report is often
 more than the sum of its parts" und verlangt, dass die Beurteilung austauschbar
 ist — „free text to begin with".
 
-`conclusionCode` wird hier bewusst nicht eingeschränkt. Das Whitepaper schlägt für
+`conclusionCode` wird hier bewusst nicht eingeschränkt. Die HL7 EU Lab Semantic Workgroup schlägt für
 den Anfang Freitext vor, und dieses Modul hat kein ValueSet für kodierte
 Gesamtaussagen.
 

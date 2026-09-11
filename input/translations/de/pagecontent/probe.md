@@ -6,7 +6,7 @@
 {:.bg-warning}
 **Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?**
 Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`. Die
-Anforderung stammt nicht allein aus diesem Leitfaden: Das europäische Whitepaper
+Anforderung stammt nicht allein aus diesem Leitfaden: Die HL7 EU Lab Semantic Workgroup
 hält fest, dass die Probe **immer** ausdrücklich in einer
 FHIR-Specimen-Ressource abzubilden ist, bevorzugt in `Specimen.type` mit SNOMED
 CT — und sagt ausdrücklich, dass das auch dann gilt, *wenn der LOINC-Code die

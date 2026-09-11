@@ -111,7 +111,7 @@ erzwungen.
 
 Überall sonst bevorzugt dieses Modul Untersuchungscodes, die das Material
 weglassen, und lässt es von `Specimen.type` tragen. Die Serologie ist davon
-bewusst ausgenommen. Das europäische Whitepaper nennt den Grund:
+bewusst ausgenommen. Die HL7 EU Lab Semantic Workgroup nennt den Grund:
 
 > In comparison with culture techniques, far fewer specimen types are involved in
 > serology. The majority of specimens are serum-based. Therefore, we allow
@@ -141,7 +141,7 @@ einzelnen. Diese Aussage gehört in `DiagnosticReport.conclusion` — siehe
 
 ### Die Methode gehört in `Observation.method`
 
-Das europäische Whitepaper führt das als Grundsatz und formuliert es schärfer,
+Die HL7 EU Lab Semantic Workgroup führt das als Grundsatz und formuliert es schärfer,
 als man erwarten würde:
 
 > The LOINC-axis "method" should be omitted completely. […] Even if the method is
@@ -163,7 +163,7 @@ Kultur mit dem methodenneutralen Code `41852-5`.
 
 {:.bg-warning}
 **Ballotfrage 6 — können Sie zu jedem Befund `Observation.method` liefern?**
-Das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur. Wir bitten um Rückmeldung, ob eine Pflicht an Ihrem Standort erfüllbar wäre. Wenn ja, kann eine
+Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur. Wir bitten um Rückmeldung, ob eine Pflicht an Ihrem Standort erfüllbar wäre. Wenn ja, kann eine
 spätere Version `Observation.method` auf `1..1` heben, und das Sonderinvariant
 der Allgemeinen Kultur wird überflüssig. Daraus folgt ein Zweites: Ist
 die Methode immer vorhanden, ist `41852-5` samt Methode überall eindeutig, und
@@ -271,7 +271,7 @@ Für gramnegative Erreger mit einer MRGN-Klassifikation erfolgt die Abbildung ü
 ### Mehrere Ergebnisse zusammenfassen: das Panel
 
 Ein Antibiogramm ist kein Ergebnis, sondern viele — je getestete Substanz eine
-Observation. Das europäische Whitepaper empfiehlt, sie über eine
+Observation. Die HL7 EU Lab Semantic Workgroup empfiehlt, sie über eine
 **Organizer-Observation** zusammenzuhalten: eine Observation, die den Panel-Code
 `29576-6 |Bacterial susceptibility panel|` trägt und selbst kein `value[x]` hat
 und die über `Observation.hasMember` auf die Einzelergebnisse zeigt. Der Organizer
