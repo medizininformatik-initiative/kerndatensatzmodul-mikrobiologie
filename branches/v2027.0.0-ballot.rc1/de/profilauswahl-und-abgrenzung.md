@@ -122,7 +122,7 @@ Das ist kein Bild. In SNOMED CT ist die Antwort der Mikroskopie buchstäblich ei
 
 Daraus folgt eine Konsequenz, die man kennen sollte. SNOMED führt `(finding)`-Codes nur für die **angeordneten** Formen — in chains, in clusters, in pairs —, während die nackten Morphologien nur als `(organism)` existieren: `59206002`, `18383003 |Gram-negative coccus|`, `83514008`, `87172008`. Diese vier sind Nachkommen von `409822003 |Bacteria domain|` und damit auch Mitglieder des Organismen-ValueSets — sie sind also **ebenso gültige Werte der Allgemeinen Bestimmung**.
 
-Für einen Konsumenten folgt daraus eine Regel: **Die Granularität steht im Profil oder im Untersuchungscode, nie in `value[x]` allein.** Eine Abfrage nach identifizierten Organismen, die nur den Wert filtert, bekommt auch Morphologiegruppen aus der Mikroskopie. Die Untersuchungscodes sind disjunkt — `105059-0` und `664-3` gegen `41852-5` —, eine Mehrdeutigkeit entsteht also nicht; nur eine nachlässig geschriebene Abfrage bekommt mehr, als sie erfragt hat.
+Für einen Konsumenten folgt daraus eine Regel: **Die Granularität steht im Profil oder im Untersuchungscode, nie in `value[x]` allein.** Eine Abfrage nach identifizierten Organismen, die nur den Wert filtert, bekommt auch Morphologiegruppen aus der Mikroskopie. Die Untersuchungscodes sind disjunkt — die Mikroskopiecodes gegen `41852-5` —, eine Mehrdeutigkeit entsteht also nicht; nur eine nachlässig geschriebene Abfrage bekommt mehr, als sie erfragt hat.
 
 Eine Speziesidentifizierung gehört nie in die Mikroskopie, auch wenn sie am Mikroskop gestellt wurde.
 

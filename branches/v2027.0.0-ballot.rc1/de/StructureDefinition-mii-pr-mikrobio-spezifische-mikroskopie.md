@@ -23,8 +23,10 @@ Beide Hälften sind Mikroskopie; getrennt sind sie durch die Fragestellung und d
 | | | |
 | :--- | :--- | :--- |
 | Die Fragestellung | was ist zu sehen? | ist X da, und wie viel? |
-| `Observation.code` | `105059-0`, LOINC-Skala`Nom` | ein ordinaler Code, LOINC-Skala`Ord` |
+| `Observation.code` | ein Code, der höchstens die Färbung nennt | ein Code, der das gesuchte Objekt nennt |
 | `value[x]` | die beobachtete Morphologie | die semiquantitative Stufe |
+
+LOINC spiegelt diese Unterscheidung meist in der Skala — nominal, wo die Antwort das Objekt ist, ordinal, wo sie eine Stufe ist —, aber nicht zuverlässig. Für manche Färbungen existiert nur die nominale Form: Rhodamin-Auramin hat gar keinen ordinalen Code. Ein solcher Befund gehört in die allgemeine Mikroskopie, obwohl die Färbung zielgerichtet ist, denn die Antwort ist dann das gesehene Objekt und keine Stufe. Die Skala folgt der Unterscheidung, sie begründet sie nicht.
 
 Es ist deshalb nicht dieselbe Aussage wie die [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), obwohl beide zielgerichtet sind: Jene antwortet `Detected` / `Not detected`, diese eine Stufe. Aus demselben Grund steckt die Keimzahl nicht im Kulturprofil.
 
@@ -275,7 +277,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Spezifische Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T11:48:22+00:00",
+  "date" : "2026-09-11T12:41:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

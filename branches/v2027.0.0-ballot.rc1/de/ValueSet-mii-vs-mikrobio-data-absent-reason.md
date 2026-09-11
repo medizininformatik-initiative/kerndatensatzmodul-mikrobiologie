@@ -61,7 +61,7 @@ Gruende fuer ein fehlendes Untersuchungsergebnis. Ergaenzt die FHIR-Basiscodes u
   "title" : "MII VS Mikrobio Data Absent Reason",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T11:48:22+00:00",
+  "date" : "2026-09-11T12:41:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

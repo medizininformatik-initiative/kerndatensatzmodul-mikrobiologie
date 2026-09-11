@@ -12,7 +12,7 @@
 | Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC |
 
  
-Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0; 664-3 ist gleichwertig zulässig, wenn die Färbung im Code stehen soll. 
+Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei. 
 
  **References** 
 
@@ -42,7 +42,7 @@ Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikrosk
   "title" : "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T11:48:22+00:00",
+  "date" : "2026-09-11T12:41:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -64,7 +64,7 @@ Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikrosk
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0; 664-3 ist gleichwertig zulässig, wenn die Färbung im Code stehen soll.",
+  "description" : "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -83,6 +83,14 @@ Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikrosk
       {
         "code" : "664-3",
         "display" : "Microscopic observation [Identifier] in Specimen by Gram stain"
+      },
+      {
+        "code" : "11545-1",
+        "display" : "Microscopic observation [Identifier] in Specimen by Acid fast stain"
+      },
+      {
+        "code" : "676-7",
+        "display" : "Microscopic observation [Identifier] in Specimen by Rhodamine-auramine fluorochrome stain"
       }]
     }]
   }

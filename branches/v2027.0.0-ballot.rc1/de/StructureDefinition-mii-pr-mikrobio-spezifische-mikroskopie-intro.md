@@ -10,8 +10,15 @@ Typ ihrer Antwort — die Regel, die dieses Modul durchgängig anwendet.
 | | [Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html) | Spezifische Mikroskopie |
 |---|---|---|
 | Die Fragestellung | was ist zu sehen? | ist X da, und wie viel? |
-| `Observation.code` | `105059-0`, LOINC-Skala `Nom` | ein ordinaler Code, LOINC-Skala `Ord` |
+| `Observation.code` | ein Code, der höchstens die Färbung nennt | ein Code, der das gesuchte Objekt nennt |
 | `value[x]` | die beobachtete Morphologie | die semiquantitative Stufe |
+
+LOINC spiegelt diese Unterscheidung meist in der Skala — nominal, wo die Antwort
+das Objekt ist, ordinal, wo sie eine Stufe ist —, aber nicht zuverlässig. Für
+manche Färbungen existiert nur die nominale Form: Rhodamin-Auramin hat gar keinen
+ordinalen Code. Ein solcher Befund gehört in die allgemeine Mikroskopie, obwohl
+die Färbung zielgerichtet ist, denn die Antwort ist dann das gesehene Objekt und
+keine Stufe. Die Skala folgt der Unterscheidung, sie begründet sie nicht.
 
 Es ist deshalb nicht dieselbe Aussage wie die
 [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html),

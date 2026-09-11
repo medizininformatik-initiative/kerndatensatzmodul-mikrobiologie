@@ -122,7 +122,7 @@ That is not a metaphor. In SNOMED CT the microscopy answer is literally an ances
 
 From that follows a consequence worth knowing. SNOMED holds `(finding)` codes only for the **arranged** forms — in chains, in clusters, in pairs — while the bare morphologies exist only as `(organism)`: `59206002`, `18383003 |Gram-negative coccus|`, `83514008`, `87172008`. Those four are descendants of `409822003 |Bacteria domain|` and therefore also members of the organism ValueSet, which means **they are valid values of General determination as well**.
 
-For a consumer that means one rule: **read the granularity from the profile or the test code, never from `value[x]` alone.** A query for identified organisms that filters only on the value will also return morphological groups from microscopy. The test codes are disjoint — `105059-0` and `664-3` against `41852-5` — so no ambiguity arises; only a query written carelessly gets more than it asked for.
+For a consumer that means one rule: **read the granularity from the profile or the test code, never from `value[x]` alone.** A query for identified organisms that filters only on the value will also return morphological groups from microscopy. The test codes are disjoint — the microscopy codes against `41852-5` — so no ambiguity arises; only a query written carelessly gets more than it asked for.
 
 A species identification never belongs in microscopy, even when it was made down a microscope.
 

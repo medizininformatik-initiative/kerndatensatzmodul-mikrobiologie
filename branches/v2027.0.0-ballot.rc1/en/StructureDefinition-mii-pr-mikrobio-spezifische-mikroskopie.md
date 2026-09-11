@@ -23,8 +23,10 @@ Both halves are microscopy; what separates them is the question and the type of 
 | | | |
 | :--- | :--- | :--- |
 | The question | what is there to see? | is X there, and how much? |
-| `Observation.code` | `105059-0`, LOINC scale`Nom` | an ordinal code, LOINC scale`Ord` |
+| `Observation.code` | a code that names at most the stain | a code that names the object sought |
 | `value[x]` | the morphology observed | the semiquantitative grade |
+
+LOINC usually mirrors that distinction in the scale — nominal where the answer is the object, ordinal where it is a grade — but not reliably. For some stains only the nominal form exists: rhodamine-auramine has no ordinal code at all. Such a finding belongs in general microscopy even though the stain is targeted, because the answer is then the object seen and not a grade. The scale follows the distinction; it does not define it.
 
 This is therefore not the same statement as [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), even though both are targeted: that profile answers `Detected` / `Not detected`, this one answers a grade. The same reason keeps colony count out of the culture profile.
 
@@ -201,7 +203,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T11:48:22+00:00",
+  "date" : "2026-09-11T12:41:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -42,7 +42,7 @@ Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologi
   "title" : "MII VS Mikrobio Morphologie Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T11:48:22+00:00",
+  "date" : "2026-09-11T12:41:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -133,16 +133,24 @@ Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologi
         "display" : "Gram-positive diplococcus (organism)"
       },
       {
-        "code" : "115199003",
-        "display" : "Subclass Irregular Non-Sporing Gram Positive Rods (organism)"
-      },
-      {
         "code" : "116442009",
         "display" : "Coryneform bacteria (organism)"
       },
       {
         "code" : "62093005",
         "display" : "Yeast (organism)"
+      },
+      {
+        "code" : "243365003",
+        "display" : "Acid-fast bacillus (organism)"
+      },
+      {
+        "code" : "243366002",
+        "display" : "Partially acid-fast bacillus (organism)"
+      },
+      {
+        "code" : "243367006",
+        "display" : "Acid and alcohol-fast bacillus (organism)"
       },
       {
         "code" : "404507002",

@@ -11,8 +11,8 @@
     "sources" : ["2.16.840.1.113883.4.642.3.5"],
     "uses" : {
     },
-    "ValueSet-mii-vs-mikrobio-data-absent-reason.html" : "MII VS Mikrobio Data Absent Reason",
     "StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html" : "MII PR Mikrobio Virulenzfaktor",
+    "ValueSet-mii-vs-mikrobio-data-absent-reason.html" : "MII VS Mikrobio Data Absent Reason",
     "StructureDefinition-mii-pr-mikrobio-keimzahl.html" : "MII PR Mikrobio Keimzahl",
     "StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html" : "MII PR Mikrobio Resistenzkategorie Status",
     "StructureDefinition-mii-pr-mikrobio-ct-wert.html" : "MII PR Mikrobio CT Wert",
@@ -143,7 +143,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC",
     "title" : "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]",
-    "description" : "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0; 664-3 ist gleichwertig zulässig, wenn die Färbung im Code stehen soll.",
+    "description" : "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },

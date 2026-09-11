@@ -10,8 +10,15 @@ its answer, which is the rule this module applies throughout.
 | | [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html) | Specific microscopy |
 |---|---|---|
 | The question | what is there to see? | is X there, and how much? |
-| `Observation.code` | `105059-0`, LOINC scale `Nom` | an ordinal code, LOINC scale `Ord` |
+| `Observation.code` | a code that names at most the stain | a code that names the object sought |
 | `value[x]` | the morphology observed | the semiquantitative grade |
+
+LOINC usually mirrors that distinction in the scale — nominal where the answer is
+the object, ordinal where it is a grade — but not reliably. For some stains only
+the nominal form exists: rhodamine-auramine has no ordinal code at all. Such a
+finding belongs in general microscopy even though the stain is targeted, because
+the answer is then the object seen and not a grade. The scale follows the
+distinction; it does not define it.
 
 This is therefore not the same statement as
 [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html),

@@ -678,7 +678,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc</code></td>
       <td>new</td>
       <td>the code was fixed in the profile</td>
-      <td><code class="language-plaintext highlighter-rouge">105059-0</code> and <code class="language-plaintext highlighter-rouge">664-3</code>, both nominal</td>
+      <td><code class="language-plaintext highlighter-rouge">105059-0</code> plus the nominal codes that carry a stain: <code class="language-plaintext highlighter-rouge">664-3</code> Gram, <code class="language-plaintext highlighter-rouge">11545-1</code> acid fast, <code class="language-plaintext highlighter-rouge">676-7</code> rhodamine-auramine</td>
       <td>General microscopy accepts a code that carries the stain</td>
       <td><code class="language-plaintext highlighter-rouge">105059-0</code> stays recommended</td>
     </tr>
@@ -718,7 +718,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-morphologie-ergebnis-snomed</code></td>
       <td>content updated</td>
       <td>15 codes, all <code class="language-plaintext highlighter-rouge">(finding)</code>, all arranged forms</td>
-      <td>27 codes grouped by axis: arranged forms as <code class="language-plaintext highlighter-rouge">(finding)</code>, bare morphologies as <code class="language-plaintext highlighter-rouge">(organism)</code> because SNOMED carries them only there, fungal morphology, and <code class="language-plaintext highlighter-rouge">No organisms seen</code> / <code class="language-plaintext highlighter-rouge">No cells seen</code> / <code class="language-plaintext highlighter-rouge">Clue cells present</code></td>
+      <td>29 codes grouped by axis: arranged forms as <code class="language-plaintext highlighter-rouge">(finding)</code>, bare morphologies as <code class="language-plaintext highlighter-rouge">(organism)</code> because SNOMED carries them only there, fungal morphology, and <code class="language-plaintext highlighter-rouge">No organisms seen</code> / <code class="language-plaintext highlighter-rouge">No cells seen</code> / <code class="language-plaintext highlighter-rouge">Clue cells present</code></td>
       <td>The commonest Gram findings become expressible; of the previous 15 codes a real laboratory catalogue used three</td>
       <td>The four bare bacterial morphologies are descendants of the bacteria domain and therefore also valid values of general determination. Read the granularity from the profile or the test code, never from <code class="language-plaintext highlighter-rouge">value[x]</code> alone</td>
     </tr>
@@ -2138,7 +2138,7 @@ The <code class="language-plaintext highlighter-rouge">category</code> represent
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 11, 2026 11:48+0000">2026-09-11</span>
+          Generated <span title="Fri, Sep 11, 2026 12:41+0000">2026-09-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
