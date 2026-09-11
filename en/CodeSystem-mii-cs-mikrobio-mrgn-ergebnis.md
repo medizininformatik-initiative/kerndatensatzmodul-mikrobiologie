@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-10 | *Computable Name*:MII_CS_Mikrobio_MRGN_Ergebnis |
+| Active as of 2026-09-11 | *Computable Name*:MII_CS_Mikrobio_MRGN_Ergebnis |
 
  
 CodeSystem für Ergebnisse der MRGN-Klassifikation, die sich nicht über LOINC abbilden lassen. Die LOINC-AnswerList LL6195-3 zu 99780-9 enthält ausschließlich 2MRGN, 3MRGN und 4MRGN und damit keinen Negativwert. 
@@ -36,7 +36,7 @@ This Code system is referenced in the definition of the following value sets:
   "title" : "MII CS Mikrobio MRGN Ergebnis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T17:52:15+00:00",
+  "date" : "2026-09-11T12:05:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

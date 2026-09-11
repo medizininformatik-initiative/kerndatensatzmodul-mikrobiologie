@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-10 | *Computable Name*:MII_VS_Mikrobio_Allgemeine_Bestimmung_Tests_LOINC |
+| Active as of 2026-09-11 | *Computable Name*:MII_VS_Mikrobio_Allgemeine_Bestimmung_Tests_LOINC |
 
  
 Tests-ValueSet für die allgemeine Bestimmung: LOINC-Codes für die ungerichtete Identifizierung eines Mikroorganismus. Bevorzugt wird 41852-5; die übrigen Codes sind gleichwertig zulässig, wo das Labor die Erregergruppe oder das Sequenzierziel im Code benennt. 
@@ -42,7 +42,7 @@ Tests-ValueSet für die allgemeine Bestimmung: LOINC-Codes für die ungerichtete
   "title" : "MII VS Mikrobio Allgemeine Bestimmung Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T17:52:15+00:00",
+  "date" : "2026-09-11T12:05:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

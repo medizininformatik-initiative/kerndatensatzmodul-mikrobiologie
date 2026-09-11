@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-10 | *Maschinenlesbarer Name*:MII_IG_Mikrobiologie |
+| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_IG_Mikrobiologie |
 
 ### Einleitung
 

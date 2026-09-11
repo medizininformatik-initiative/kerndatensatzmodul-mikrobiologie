@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-10 | *Computable Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED |
+| Active as of 2026-09-11 | *Computable Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED |
 
  
 Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet. 
@@ -42,7 +42,7 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des 
   "title" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-10T17:52:15+00:00",
+  "date" : "2026-09-11T12:05:40+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
