@@ -61,13 +61,31 @@ RuleSet: CRMIApprovalDateInstance(approvalDate)
 //   insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, {{TOPIC_NCI_CODE}})
 // Repeat the insert for each topic of the module.
 
+// VERERBUNGSFEST ueber die URL adressiert, nicht ueber `^extension[+]`. Gemessen
+// am 2026-09-11: Ein Profil, dessen Parent selbst CRMI-Metadaten an seiner
+// Wurzel traegt, erbt diese — SUSHI kopiert die Wurzel-Extensions des Parents in
+// das Kind (ein regelloses Kind von mii-pr-labor-laboruntersuchung erhaelt 14).
+// `^extension[+]` rechnet dann gegen das leere DIFFERENTIAL, landet auf Index 0
+// und trifft dort eine geerbte Extension mit anderem value[x]:
+// "contains multiple choice value assignments for choice element
+// StructureDefinition.extension.value[x]", 21 Fehler bei 21 Profilen.
+//
+// `^extension[<url>][+]` adressiert stattdessen die Gruppe gleicher URL, und der
+// Soft-Index laeuft ueber mehrere Inserts hinweg weiter. Nachgemessen liefert
+// dieselbe Regel bei einem Parent MIT zwei geerbten Themen und bei einem Parent
+// OHNE Themen dasselbe Ergebnis, ohne Fehler und ohne null-Luecken im Array. Ein
+// absoluter Index waere keine Alternative: er haengt an der Zahl der geerbten
+// Eintraege, die man nirgends ablesen kann (der Parent fuehrt 17, im Kind
+// erscheinen 14), und ein zu hoher Index erzeugt null-Luecken.
+//
+// Dieselbe Falle steckt latent in CRMIArtifactContributors weiter unten; dort
+// wird sie nicht akut, weil dieser RuleSet in diesem Modul nirgends eingefuegt
+// wird.
 RuleSet: CRMIArtifactTopic(system, code)
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-topic"
-* ^extension[=].valueCodeableConcept.coding[+] = {system}#{code}
+* ^extension[$artifact-topic][+].valueCodeableConcept.coding[0] = {system}#{code}
 
 RuleSet: CRMIArtifactTopicInstance(system, code)
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/artifact-topic"
-* extension[=].valueCodeableConcept.coding[+] = {system}#{code}
+* extension[$artifact-topic][+].valueCodeableConcept.coding[0] = {system}#{code}
 
 // ── Artifact contributors ────────────────────────────────────────────────────
 // Author = the module author ({{MODULE_AUTHOR_EMAIL}}). Editor / reviewer /

@@ -5,6 +5,10 @@ Title: "MII PR Mikrobio Diagnostic Report"
 Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextualisierung zugehöriger mikrobiologischer Untersuchungsergebnisse."
 * insert PR_CS_VS_Version
 * insert Publisher
+// Modulthema, ersetzt die vom Parent geerbten Labor-Themen — Begruendung in
+// input/fsh/rulesets/mikrobio-observation-common.fsh.
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C16851)
+* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C217438)
 * ^purpose = "Dieses Profil beschreibt den mikrobiologischen DiagnosticReport."
 * basedOn ..1
 // Der Parent slict DiagnosticReport.category selbst (Slice `v2-lab`,

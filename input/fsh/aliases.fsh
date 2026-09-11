@@ -91,6 +91,16 @@ Alias: $ags = http://fhir.de/sid/destatis/ags
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $MII-Reference = https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference
 
+// ── FHIR artifact metadata (R4 core extensions, used by the CRMI RuleSets) ───
+// Addressed inside the slice brackets of input/fsh/rulesets/crmi.fsh, which is
+// why they are aliases: `^extension[$artifact-topic][+]` reads, the full URL in
+// the same position does not.
+Alias: $artifact-topic = http://hl7.org/fhir/StructureDefinition/artifact-topic
+Alias: $artifact-author = http://hl7.org/fhir/StructureDefinition/artifact-author
+Alias: $artifact-editor = http://hl7.org/fhir/StructureDefinition/artifact-editor
+Alias: $artifact-reviewer = http://hl7.org/fhir/StructureDefinition/artifact-reviewer
+Alias: $artifact-endorser = http://hl7.org/fhir/StructureDefinition/artifact-endorser
+
 // ── CRMI (hl7.fhir.uv.crmi, a pinned dependency) ─────────────────────────────
 // The full basis block. The profiles are claimed via the RuleSets in
 // input/fsh/rulesets/crmi.fsh; these aliases let you reference them directly.

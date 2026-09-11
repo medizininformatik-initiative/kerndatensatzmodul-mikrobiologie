@@ -1,13 +1,15 @@
 == Suppressed Messages ==
 
-# Add warning and/or information messages here after you've confirmed that they aren't really a problem
-# (And include comments like this justifying why)
-# See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+# FORMAT, gemessen an output/qa.html am 2026-09-10: Der Publisher nimmt die
+# LETZTE Kommentarzeile vor einem Muster als Begruendung und zeigt sie im
+# Abschnitt "Suppressed Messages" der qa.html. Mehrzeilige Kommentare landen
+# deshalb als Satzfragment dort ("45 Meldungen.", "Labor, dort aus demselben
+# Grund."), und eine Zeile, die nur "#" enthaelt, wird als MUSTER geparst und
+# erscheint als "# (0 uses)". Also: je Filtergruppe genau eine Zeile, die fuer
+# sich verstaendlich ist, und keine leeren Kommentarzeilen. Diese Kopfzeilen sind
+# unschaedlich, weil eine Leerzeile zwischen ihnen und dem ersten Muster steht.
 
-# Imported from kerndatensatz-basis (main). Temporary: the terminology server
-# used for publication currently has an incomplete expansion for
-# http://hl7.org/fhir/ValueSet/all-languages, which affects every bilingual
-# (de/en) module built from this template.
+# Der Terminologieserver hat fuer http://hl7.org/fhir/ValueSet/all-languages eine unvollstaendige Expansion; betrifft jedes zweisprachige Modul dieses Templates. Uebernommen aus kerndatensatz-basis.
 The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
 The System URI could not be determined for the code 'de-DE' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
 The System URI could not be determined for the code 'en' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
@@ -17,92 +19,49 @@ The value provided ('de-DE') was not found in the value set 'All Languages' (htt
 The value provided ('en') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'en' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#en' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
 The value provided ('en-US') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'en-US' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#en-US' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
 
-# Die Elementnamen der Logical Models folgen dem abgenommenen ART-DECOR-Modell
-# (deutsche CamelCase-Begriffe). eld-20 ist eine Empfehlung fuer
-# Codegeneratoren, keine Konformitaetsanforderung; die Namen sind fachlich
-# abgestimmt und werden nicht umbenannt. Betrifft 315 Meldungen, davon 256 aus
-# mii-lm-mikrobio-untersuchungsarten. Wortgleich mit dem Eintrag im Basismodul
-# Labor, dort aus demselben Grund.
+# Die Elementnamen der Logical Models folgen dem abgenommenen ART-DECOR-Modell (deutsches CamelCase); eld-20 ist eine Empfehlung fuer Codegeneratoren und keine Konformitaetsanforderung. 315 Meldungen, wortgleich im Basismodul Labor unterdrueckt.
 Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 
-# Quittung fuer pin-canonicals: pin-all (sushi-config.yaml) — der Publisher
-# meldet jede Referenz, die er auf eine Version festlegt. 5866 Meldungen.
+# Quittung fuer pin-canonicals: pin-all in sushi-config.yaml — der Publisher meldet jede Referenz, die er auf eine Version festlegt. 5866 Meldungen.
 %Pinned the version of%
 
-# Die xver-Extension wird als eigene Kopie mitgefuehrt, weil Simplifier die
-# xver-Pakete nicht unterstuetzt; das Paket ist zugleich als Abhaengigkeit
-# gesetzt. Beide Definitionen derselben Canonical kollidieren zwangslaeufig.
-# Siehe den Kommentar in input/fsh/extensions/ExtensionObservation_TriggeredBy.fsh.
+# Die xver-Extension wird als eigene Kopie mitgefuehrt, weil Simplifier die xver-Pakete nicht unterstuetzt, und ist zugleich als Abhaengigkeit gesetzt; beide Definitionen derselben Canonical kollidieren zwangslaeufig. Begruendung in input/fsh/extensions/ExtensionObservation_TriggeredBy.fsh.
 %potential matches for the url 'http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy'%
 
-# OIDs fuer ValueSets und CodeSystems sind eine Empfehlung fuer OID-basierte
-# Systeme (CDA). Der Parameter auto-oid-root braucht einen zugewiesenen
-# MII-Wurzel-OID, der nicht vorliegt; das Basismodul Labor haelt es genauso.
-# 45 Meldungen.
+# OIDs fuer ValueSets und CodeSystems sind eine Empfehlung fuer OID-basierte Systeme (CDA); auto-oid-root braucht einen zugewiesenen MII-Wurzel-OID, der nicht vorliegt. Das Basismodul Labor haelt es genauso.
 %should have an OID assigned%
 
-# Der Diskriminator stammt aus dem Elternprofil; dieses Modul ist R4. Der
-# Hinweis betrifft eine kuenftige R5-Migration und ist hier nicht handelbar.
+# Der Diskriminator stammt aus dem Elternprofil und betrifft eine kuenftige R5-Migration; dieses Modul ist R4 und kann ihn nicht handeln.
 %The discriminator type 'pattern' is deprecated%
 
-# Folge der Mehrfach-Profilierung gegen die CRMI-Profile: jede Extension trifft
-# einen Slice, aber nur in einem der deklarierten Profile.
+# Folge der Mehrfach-Profilierung gegen die CRMI-Profile: jede Extension trifft einen Slice, aber nur in einem der deklarierten Profile.
 %does not match any known slice defined in the profile http://hl7.org/fhir/uv/crmi/%
 
-# Der zweite category-Eintrag traegt absichtlich die Mikrobiologie-Kategorie MB;
-# die HL7-Basisbindung (preferred) erfuellt der erste Eintrag mit `laboratory`.
+# Der zweite category-Eintrag traegt absichtlich die Mikrobiologie-Kategorie MB; die HL7-Basisbindung (preferred) erfuellt der erste Eintrag mit `laboratory`.
 %None of the codings provided are in the value set 'Observation Category Codes'%
 
-# artifact-topic verweist auf den NCI Thesaurus, den der Publisher nicht
-# aufloesen kann; dieselbe Wurzel wie die Unknown-Code-Meldungen.
+# artifact-topic verweist auf den NCI Thesaurus, den der Publisher nicht aufloesen kann; dieselbe Wurzel wie die Unknown-Code-Meldungen.
 %Reference to draft CodeSystem%
 
-# ext-R5-Observation.triggeredBy ist eine unveraenderte Kopie der HL7-Extension
-# (siehe den Kommentar dort). publisher, contact und structuredefinition-wg sind
-# zeichengleich mit xver 0.1.0; die Meldung verlangt eine neuere HL7-Hausregel,
-# die das Originalpaket selbst nicht erfuellt.
+# ext-R5-Observation.triggeredBy ist eine zeichengleiche Kopie der HL7-Extension aus xver 0.1.0; die Meldung verlangt eine neuere HL7-Hausregel, die das Originalpaket selbst nicht erfuellt.
 %The nominated WG 'fhir' means that%
 
-# Die Resource-Id folgt der MII-Namenskonvention (mii-ig-mikrobiologie), nicht
-# der packageId. Das Basismodul Labor haelt es genauso.
+# Die Resource-Id folgt der MII-Namenskonvention (mii-ig-mikrobiologie) und nicht der packageId; das Basismodul Labor haelt es genauso.
 The Implementation Guide Resource id should be de.medizininformatikinitiative.kerndatensatz.mikrobiologie
 
-# artifact-topic kodiert die Modulthemen mit dem NCI Thesaurus, den der
-# Publisher nicht aufloesen kann und auch nicht wird -- er ist kein
-# FHIR-Terminologieserver. Die drei Codes sind am 2026-09-10 gegen die
-# NCI-EVS-API geprueft: C16851 = "Microbiology", C217438 = "Diagnostic
-# Microbiology Testing", C25294 = "Laboratory Procedure".
-#
-# KORREKTUR am 2026-09-10: Hier standen bis dahin C36292 "Laboratory Test Result"
-# und C25294 als die Codes DIESES Moduls. Das waren die Codes des Labormoduls;
-# in unserer sushi-config.yaml war artifact-topic zu diesem Zeitpunkt gar nicht
-# gesetzt (nachgemessen: C36292 kommt in ihrer Historie nicht vor). Diese
-# Unterdrueckung war damit vorsorglich und ist erst mit dem Setzen der Extension
-# scharf geworden. C25294 fuehrt das Labormodul ebenfalls -- das ist gewollt und
-# haelt fest, dass dieses Modul seine Erweiterung ist.
+# artifact-topic kodiert die Modulthemen mit dem NCI Thesaurus, der kein FHIR-Terminologieserver ist: C16851 Microbiology, C217438 Diagnostic Microbiology Testing, C25294 Laboratory Procedure, alle am 2026-09-10 gegen die NCI-EVS-API geprueft.
 %in the CodeSystem 'http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl'%
 
-# Verweise auf FREMDE experimentelle CodeSystems. Bewusst je System gefiltert
-# und nicht pauschal ueber den Meldungstext: Waere eines unserer eigenen
-# CodeSystems experimental, soll die Meldung sichtbar bleiben.
-#   NCI Thesaurus  -> artifact-topic (siehe oben)
-#   observation-triggeredbytype -> die mitgefuehrte R5-Extension
+# Verweis auf ein FREMDES experimentelles CodeSystem: der NCI Thesaurus aus artifact-topic. Bewusst je System gefiltert, damit ein eigenes experimentelles CodeSystem sichtbar bliebe.
 %Reference to experimental CodeSystem http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl%
+
+# Verweis auf ein FREMDES experimentelles CodeSystem: observation-triggeredbytype aus der mitgefuehrten R5-Extension.
 %Reference to experimental CodeSystem http://hl7.org/fhir/observation-triggeredbytype%
 
-# Das ValueSet `jurisdiction` setzt sich aus ISO 3166, ISO 3166-2 und M49
-# zusammen. Fuer -2 liefert KEINE THO-Version eine Definition mit Inhalt
-# (7.1.0/7.2.0/7.3.0 gar nicht, 6.2.0 nur einen leeren Stummel, gemessen
-# 2026-09-09), weshalb der Publisher die Pruefung nicht abschliessen kann und
-# die Meldung an unser Element haengt. Unsere eigene Kodierung ist korrekt:
-# urn:iso:std:iso:3166#DE, das System fuer ein Land.
+# Das ValueSet jurisdiction umfasst ISO 3166-2, fuer das keine THO-Version eine Definition mit Inhalt liefert (7.1.0/7.2.0/7.3.0 gar nicht, 6.2.0 nur einen leeren Stummel, gemessen 2026-09-09); unsere eigene Kodierung urn:iso:std:iso:3166#DE ist korrekt.
 %A definition for CodeSystem 'urn:iso:std:iso:3166:-2' could not be found%
 
-# UCUM ist auf beiden Terminologieservern nur ohne Codeliste vorhanden
-# (SU-TermServ fuehrt 2024.7.1, tx.fhir.org 2.2, der Build fragt nach 3.0.1).
-# Die dritte Fassung nennt das System 'null' — das ist die Darstellung des
-# Publishers bei nicht aufloesbarem System, nicht ein fehlendes system in
-# unseren Daten: die Quantities tragen durchweg http://unitsofmeasure.org.
+# UCUM liegt auf beiden Terminologieservern nur ohne Codeliste vor (SU-TermServ 2024.7.1, tx.fhir.org 2.2, angefragt wird 3.0.1); 'null' ist die Publisher-Darstellung eines nicht aufloesbaren Systems und kein fehlendes system in unseren Daten.
 %Resolved system http://unitsofmeasure.org%
 %A definition for CodeSystem 'http://unitsofmeasure.org' could not be found%
 %A definition for CodeSystem 'null' could not be found%
