@@ -8,8 +8,8 @@ RuleSet: MIKRO_OBSERVATION_COMMON
 // Mikrobiologie deklariert. Die beiden Inserts ersetzen sie durch die Themen
 // dieses Moduls; der Laborbezug bleibt ueber C25294 an der IG-Ressource. Zur
 // Adressierung ueber die URL siehe den Kommentar an CRMIArtifactTopic.
-* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C16851)
-* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C217438)
+* insert CRMIArtifactTopic(0, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C16851)
+* insert CRMIArtifactTopic(+, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C217438)
 * extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
 * extension[triggeredBy-r5] MS
 * extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."

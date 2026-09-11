@@ -81,11 +81,25 @@ RuleSet: CRMIApprovalDateInstance(approvalDate)
 // Dieselbe Falle steckt latent in CRMIArtifactContributors weiter unten; dort
 // wird sie nicht akut, weil dieser RuleSet in diesem Modul nirgends eingefuegt
 // wird.
-RuleSet: CRMIArtifactTopic(system, code)
-* ^extension[$artifact-topic][+].valueCodeableConcept.coding[0] = {system}#{code}
+// ANCHORED AT [0], FURTHER ENTRIES WITH [+]. `[+]` alone is a soft index relative
+// to the preceding reference in the FSH, so its first use lands on group position
+// 0 only as long as nothing else in the same definition touched the group before
+// it. Passing the position explicitly makes the first entry deterministic and
+// leaves the rest to the soft index, which needs no knowledge of how many entries
+// the parent brought.
+//
+// CALL PATTERN: `0` for the module's first topic, `+` for each further one.
+//   insert CRMIArtifactTopic(0, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, Cxxxxx)
+//   insert CRMIArtifactTopic(+, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, Cyyyyy)
+// Do not pass an absolute position above the end of the group: SUSHI pads the gap
+// with extensions carrying a url and no value, which violates ext-1, and reports
+// no error while doing it (measured 2026-09-11: index 5 against two inherited
+// topics produced three empty artifact-topic entries).
+RuleSet: CRMIArtifactTopic(index, system, code)
+* ^extension[$artifact-topic][{index}].valueCodeableConcept.coding[0] = {system}#{code}
 
-RuleSet: CRMIArtifactTopicInstance(system, code)
-* extension[$artifact-topic][+].valueCodeableConcept.coding[0] = {system}#{code}
+RuleSet: CRMIArtifactTopicInstance(index, system, code)
+* extension[$artifact-topic][{index}].valueCodeableConcept.coding[0] = {system}#{code}
 
 // ── Artifact contributors ────────────────────────────────────────────────────
 // Author = the module author ({{MODULE_AUTHOR_EMAIL}}). Editor / reviewer /

@@ -7,8 +7,8 @@ Description: "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextual
 * insert Publisher
 // Modulthema, ersetzt die vom Parent geerbten Labor-Themen — Begruendung in
 // input/fsh/rulesets/mikrobio-observation-common.fsh.
-* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C16851)
-* insert CRMIArtifactTopic(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C217438)
+* insert CRMIArtifactTopic(0, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C16851)
+* insert CRMIArtifactTopic(+, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C217438)
 * ^purpose = "Dieses Profil beschreibt den mikrobiologischen DiagnosticReport."
 * basedOn ..1
 // Der Parent slict DiagnosticReport.category selbst (Slice `v2-lab`,
