@@ -194,8 +194,7 @@ as well**.
 For a consumer that means one rule: **read the granularity from the profile or
 the test code, never from `value[x]` alone.** A query for identified organisms
 that filters only on the value will also return morphological groups from
-microscopy. The test codes are disjoint — `105059-0` and `664-3` against
-`41852-5` — so no ambiguity arises; only a query written carelessly gets more
+microscopy. The test codes are disjoint — the microscopy codes against `41852-5` — so no ambiguity arises; only a query written carelessly gets more
 than it asked for.
 
 A species identification never belongs in microscopy, even when it was made down

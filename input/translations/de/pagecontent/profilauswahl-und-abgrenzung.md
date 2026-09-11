@@ -198,8 +198,7 @@ Bestimmung**.
 Für einen Konsumenten folgt daraus eine Regel: **Die Granularität steht im Profil
 oder im Untersuchungscode, nie in `value[x]` allein.** Eine Abfrage nach
 identifizierten Organismen, die nur den Wert filtert, bekommt auch
-Morphologiegruppen aus der Mikroskopie. Die Untersuchungscodes sind disjunkt —
-`105059-0` und `664-3` gegen `41852-5` —, eine Mehrdeutigkeit entsteht also
+Morphologiegruppen aus der Mikroskopie. Die Untersuchungscodes sind disjunkt — die Mikroskopiecodes gegen `41852-5` —, eine Mehrdeutigkeit entsteht also
 nicht; nur eine nachlässig geschriebene Abfrage bekommt mehr, als sie erfragt hat.
 
 Eine Speziesidentifizierung gehört nie in die Mikroskopie, auch wenn sie am
