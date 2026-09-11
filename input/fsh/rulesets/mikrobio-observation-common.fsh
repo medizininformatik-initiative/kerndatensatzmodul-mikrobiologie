@@ -1,6 +1,15 @@
 RuleSet: MIKRO_OBSERVATION_COMMON
 * insert PR_CS_VS_Version
 * insert Publisher
+// MODULTHEMA. Die Profile erben die Wurzel-Extensions ihres Parents, und der
+// Labor-Parent traegt dort artifact-topic mit C36292 "Laboratory Test Result"
+// und C25294 "Laboratory Procedure" — 21 unserer 22 Profile deklarierten damit
+// bis zum 2026-09-11 ausschliesslich LABOR-Themen, waehrend die IG-Ressource
+// Mikrobiologie deklariert. Die beiden Inserts ersetzen sie durch die Themen
+// dieses Moduls; der Laborbezug bleibt ueber C25294 an der IG-Ressource. Zur
+// Adressierung ueber die URL siehe den Kommentar an CRMIArtifactTopic.
+* insert CRMIArtifactTopic(0, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C16851)
+* insert CRMIArtifactTopic(+, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C217438)
 * extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
 * extension[triggeredBy-r5] MS
 * extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."

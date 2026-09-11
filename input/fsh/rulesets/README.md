@@ -59,7 +59,7 @@ IG until you do:
 | `{{COPYRIGHT_START_YEAR}}` | `crmi.fsh` (`artifact-copyrightLabel`) |
 | `{{MODULE_AUTHOR_EMAIL}}` | `crmi.fsh` (`artifact-author`) |
 | `{{APPROVAL_DATE}}` | passed in at the call site: `insert CRMIApprovalDate({{APPROVAL_DATE}})` |
-| `{{TOPIC_NCI_CODE}}` | passed in at the call site: `insert CRMIArtifactTopic(…, {{TOPIC_NCI_CODE}})` |
+| `{{TOPIC_NCI_CODE}}` | passed in at the call site: `insert CRMIArtifactTopic(0, …, {{TOPIC_NCI_CODE}})` — `0` for the first topic, `+` for each further one |
 
 `input/fsh/profiles/example-patient.fsh` and
 `input/fsh/instances/example-patient-instance.fsh` show the full insert block for
