@@ -20,6 +20,14 @@ This profile therefore also represents the negative result of a culture-based ta
 
 Non-culture-based targeted detection is represented via [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md).
 
+### One profile or two?
+
+**Ballot question 7 — should specific culture and specific determination be one profile?** Up to `2027.0.0-alpha.5` they were, and the European discussion on the point is not settled. This guide separates them because the result spaces are disjoint — `365698005 Organism growth` and `264868006 No growth` against `260373001 Detected` and `260415000 Not detected` — and this module derives a profile from the question asked and the type of its answer, not from the technique.
+
+A merged profile could not keep the `required` binding on the result: a nucleic acid test would then be free to report `No growth`. Telling culture from non-culture would fall to `Observation.method`, whose availability is ballot question 6, and there is no method-neutral code here to anchor an invariant on, as [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md) has.
+
+We ask whether one profile would serve you better. The answer can still change the model: this profile has appeared in no release, so merging is free until publication, while withdrawing a published canonical afterwards is not. Please comment during the ballot.
+
 ### Position in the diagnostic chain
 
 A positive targeted culture can start a chain: further identification of the isolate, susceptibility testing and a derived assessment such as a resistance category may follow. Each of those points back here through the `triggeredBy` extension with `type = reflex` — the reference sits on the later investigation, never on this one. A negative result ends the chain. [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md) shows the chain as a whole.
@@ -191,7 +199,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Kultur",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:41:50+00:00",
+  "date" : "2026-09-11T12:56:10+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

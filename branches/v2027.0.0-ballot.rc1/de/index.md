@@ -68,6 +68,7 @@ Dies ist ein Ballot-Kandidat. Die folgenden Punkte sind bewusst offen gelassen; 
 1. **[Sind Bebrütungsdauer und -temperatur über `Specimen.processing` darstellbar?](probe.md#ballot-question-4)**— FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie befüllen können.
 1. **[Komponente oder `hasMember` für eine semiquantitative Menge?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-5)**— das europäische Datenmodell lässt es offen; eine Komponente dreht eine Entscheidung dieses Zyklus zurück.
 1. **[Können Sie zu jedem Befund `Observation.method` liefern?](profilauswahl-und-abgrenzung.md#ballot-question-6)**— das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre Antwort entscheidet mehr als eine Frage.
+1. **[Sollten spezifische Kultur und spezifische Bestimmung ein Profil sein?](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md#ballot-question-7)**— bis`2027.0.0-alpha.5`waren sie es, die europäische Diskussion ist offen, und ein Zusammenlegen ist nur bis zur Veröffentlichung dieses Releases kostenlos.
 
 ### Inhalt dieses Leitfadens
 

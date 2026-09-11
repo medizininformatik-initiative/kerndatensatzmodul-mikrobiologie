@@ -42,7 +42,7 @@ Tests-ValueSet für die allgemeine Kultur: LOINC-Codes für die ungerichtete kul
   "title" : "MII VS Mikrobio Allgemeine Kultur Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:41:50+00:00",
+  "date" : "2026-09-11T12:56:10+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

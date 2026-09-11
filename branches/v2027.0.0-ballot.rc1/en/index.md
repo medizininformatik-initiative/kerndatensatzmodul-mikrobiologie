@@ -64,6 +64,7 @@ This is a ballot candidate. The points below are deliberately left open, and we 
 1. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.md#ballot-question-4)**— FHIR and the MII provide the pieces; the question is whether sites can supply them.
 1. **[Component or `hasMember` for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-5)**— the European data model leaves this open; a component reverses a decision of this release cycle.
 1. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.md#ballot-question-6)**— the white paper asks for it always; this guide only recommends it, and your answer decides more than one question.
+1. **[Should specific culture and specific determination be one profile?](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md#ballot-question-7)**— they were until`2027.0.0-alpha.5`, the European discussion is open, and merging is free only until this release is published.
 
 ### Contents
 
