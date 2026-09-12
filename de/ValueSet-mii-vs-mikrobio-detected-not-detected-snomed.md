@@ -18,6 +18,7 @@ Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder n
 
 * Included into [MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]](ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.md)
 * [MII PR Mikrobio Resistenzmechanismen Determinanten](StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.md)
+* [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md)
 * [MII PR Mikrobio Virulenzfaktor](StructureDefinition-mii-pr-mikrobio-virulenzfaktor.md)
 
 ### Logical Definition (CLD)
@@ -44,7 +45,7 @@ Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder n
   "title" : "MII VS Mikrobio Detected Not Detected [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T16:32:25+00:00",
+  "date" : "2026-09-12T17:28:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

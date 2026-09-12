@@ -30,9 +30,16 @@ Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mi
 
 **performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
-**value**: Present two plus out of three plus
+**value**: Detected (qualifier value)
 
 **specimen**: [Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100](Specimen-mii-exa-mikrobio-probe.md)
+
+### Components
+
+| | | |
+| :--- | :--- | :--- |
+| - | **Code** | **Value[x]** |
+| * | Semi-quantitative value | Present two plus out of three plus |
 
 
 
@@ -108,13 +115,31 @@ Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mi
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
-      "code" : "441517005",
-      "display" : "Present two plus out of three plus"
+      "code" : "260373001",
+      "display" : "Detected (qualifier value)"
     }]
   },
   "specimen" : {
     "reference" : "Specimen/mii-exa-mikrobio-probe"
-  }
+  },
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+        "code" : "103392008",
+        "display" : "Semi-quantitative value"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+        "code" : "441517005",
+        "display" : "Present two plus out of three plus"
+      }]
+    }
+  }]
 }
 
 ```

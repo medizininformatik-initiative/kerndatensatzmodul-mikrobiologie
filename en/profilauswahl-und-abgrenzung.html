@@ -376,7 +376,7 @@ therefore serves the molecular bench and the serology bench alike.</p>
       <li><a href="StructureDefinition-mii-pr-mikrobio-nugent-score.html">Nugent score</a> — Gram-stain score for bacterial vaginosis</li>
     </ul>
   </li>
-  <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html">Specific microscopy</a> — the object is named in the code, the result is its semiquantitative grade</li>
+  <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html">Specific microscopy</a> — the object is named in the code, the result is its detection, with the amount alongside</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">General culture</a> — growth or no growth, untargeted</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">Colony count</a> — viable count per volume or mass</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">General determination</a> — species identification, typically MALDI-TOF MS</li>
@@ -564,11 +564,13 @@ statement is otherwise ambiguous: General culture with the method-neutral code
 <p><a id="ballot-question-6"></a></p>
 
 <p class="bg-warning"><strong>Ballot question 6 — can you supply <code class="language-plaintext highlighter-rouge">Observation.method</code> for every result?</strong>
-The HL7 EU Lab Semantic Workgroup asks for it always, this guide only recommends it. We ask whether making it mandatory would be deliverable at your site. If
-it would, a later version can raise <code class="language-plaintext highlighter-rouge">Observation.method</code> to <code class="language-plaintext highlighter-rouge">1..1</code> and the
-special-case invariant on General culture becomes unnecessary. A second consequence follows: if the method is always present, <code class="language-plaintext highlighter-rouge">41852-5</code> plus a method is
-unambiguous everywhere, and the reason this guide recommends the method-bearing
-codes <code class="language-plaintext highlighter-rouge">11475-1</code> and <code class="language-plaintext highlighter-rouge">664-3</code> largely falls away. The answer therefore bears on both questions. Please comment during the ballot.</p>
+The HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends
+it. Would making it mandatory be deliverable at your site?</p>
+
+<p>Two things follow from a yes. A later version can raise <code class="language-plaintext highlighter-rouge">Observation.method</code> to
+<code class="language-plaintext highlighter-rouge">1..1</code>, and the special-case invariant on General culture becomes unnecessary —
+<code class="language-plaintext highlighter-rouge">41852-5</code> plus a method is then unambiguous everywhere, so the recommendation to
+prefer the method-bearing <code class="language-plaintext highlighter-rouge">11475-1</code> largely falls away.</p>
 
 <h3 id="two-granularities-on-the-same-axis">Two granularities on the same axis</h3>
 
@@ -878,7 +880,7 @@ Resistance category status
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Sat, Sep 12, 2026 16:32+0000">2026-09-12</span>
+          Generated <span title="Sat, Sep 12, 2026 17:28+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

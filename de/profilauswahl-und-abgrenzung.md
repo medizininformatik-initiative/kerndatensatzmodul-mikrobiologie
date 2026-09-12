@@ -20,7 +20,7 @@ Dass ein Profil unter mehreren Bereichen auftaucht, ist Absicht. Das Modell ist 
 * [Bartlett-Score](StructureDefinition-mii-pr-mikrobio-bartlett-score.md) — ist eine Sputumprobe für die Kultur geeignet?
 * [Nugent-Score](StructureDefinition-mii-pr-mikrobio-nugent-score.md) — Gramfärbungs-Score für die bakterielle Vaginose
  
-* [Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md) — das Objekt steht im Code, das Ergebnis ist seine semiquantitative Stufe
+* [Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md) — das Objekt steht im Code, das Ergebnis ist sein Nachweis, die Menge steht daneben
 * [Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md) — Wachstum oder kein Wachstum, ungerichtet
 * [Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.md) — lebensfähige Keime je Volumen oder Masse
 * [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) — Speziesidentifizierung, typischerweise MALDI-TOF-MS
@@ -106,7 +106,9 @@ Die Methode ist also auch dann anzugeben, wenn der Untersuchungscode sie bereits
 
 Dieser Leitfaden hält das als **Empfehlung** fest, nicht als Pflicht. `Observation.method` ist im Labor-Basisprofil `0..1` Must Support, und eine modulweite Pflicht würde heute konforme Daten ungültig machen. Erzwungen wird sie an der einen Stelle, an der die Aussage sonst mehrdeutig ist: bei der Allgemeinen Kultur mit dem methodenneutralen Code `41852-5`.
 
-**Ballotfrage 6 — können Sie zu jedem Befund `Observation.method` liefern?** Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur. Wir bitten um Rückmeldung, ob eine Pflicht an Ihrem Standort erfüllbar wäre. Wenn ja, kann eine spätere Version `Observation.method` auf `1..1` heben, und das Sonderinvariant der Allgemeinen Kultur wird überflüssig. Daraus folgt ein Zweites: Ist die Methode immer vorhanden, ist `41852-5` samt Methode überall eindeutig, und der Grund, aus dem dieser Leitfaden die methodentragenden Codes `11475-1` und `664-3` empfiehlt, entfällt weitgehend. Die Antwort wirkt damit auf beide Fragen. Wir bitten um Rückmeldung im Ballot.
+**Ballotfrage 6 — können Sie zu jedem Befund `Observation.method` liefern?** Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur. Wäre eine Pflicht an Ihrem Standort erfüllbar?
+
+Aus einem Ja folgt zweierlei. Eine spätere Version kann `Observation.method` auf `1..1` heben, und das Sonderinvariant der Allgemeinen Kultur wird überflüssig — `41852-5` samt Methode ist dann überall eindeutig, und die Empfehlung, den methodentragenden `11475-1` zu bevorzugen, entfällt weitgehend.
 
 ### Zwei Granularitätsstufen auf derselben Achse
 

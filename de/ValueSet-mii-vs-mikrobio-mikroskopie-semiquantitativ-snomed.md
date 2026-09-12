@@ -12,7 +12,7 @@
 | Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED |
 
  
-Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, in der das im Code benannte Objekt gesehen wurde. 
+Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in der ein mikroskopischer Befund gesehen wurde. 
 
  **References** 
 
@@ -43,7 +43,7 @@ Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, 
   "title" : "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T16:32:25+00:00",
+  "date" : "2026-09-12T17:28:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -65,7 +65,7 @@ Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, 
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, in der das im Code benannte Objekt gesehen wurde.",
+  "description" : "Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in der ein mikroskopischer Befund gesehen wurde.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -104,22 +104,6 @@ Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, 
       {
         "code" : "263865001",
         "display" : "Scanty"
-      },
-      {
-        "code" : "260413007",
-        "display" : "None"
-      },
-      {
-        "code" : "27863008",
-        "display" : "No organisms seen (finding)"
-      },
-      {
-        "code" : "52101004",
-        "display" : "Present"
-      },
-      {
-        "code" : "2667000",
-        "display" : "Absent"
       }]
     }]
   }

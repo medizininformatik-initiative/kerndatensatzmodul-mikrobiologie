@@ -26,7 +26,7 @@ Investigations without a predefined target, where the result is the naming of th
 
 ### One profile or two?
 
-**Ballot question 7 — is `Detected` / `Not detected` enough for a targeted culture, or do you need `Organism growth` / `No growth`?** This module represents targeted detection in one profile whatever the technique: the question and the type of its answer are the same. The HL7 EU Lab Semantic Workgroup keeps targeted culture separate and binds growth there; this guide deviates. The culture is already stated by the test code, whose method axis carries `Organism specific culture`.
+**Ballot question 7 — is `Detected` / `Not detected` enough for a targeted culture, or do you need `Organism growth` / `No growth`?** This module deviates from the HL7 EU Lab Semantic Workgroup, which keeps targeted culture separate and binds growth codes there: one profile covers targeted detection whatever the technique, because the culture is already stated by the test code, whose method axis carries `Organism specific culture`.
 
 If you need the growth codes, the binding comes back. Please comment during the ballot.
 
@@ -203,7 +203,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Bestimmung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T16:32:25+00:00",
+  "date" : "2026-09-12T17:28:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

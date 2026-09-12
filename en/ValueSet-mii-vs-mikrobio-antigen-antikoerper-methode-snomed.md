@@ -43,7 +43,7 @@ Methoden-ValueSet für quantitative Antigen- und Antikörpertests sowie für die
   "title" : "MII VS Mikrobio Antigen Antikoerper Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T16:32:25+00:00",
+  "date" : "2026-09-12T17:28:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -46,7 +46,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
   "title" : "MII LM Mikrobio Untersuchungsarten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T16:32:25+00:00",
+  "date" : "2026-09-12T17:28:38+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -178,10 +178,27 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Menge[x]",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Menge[x]",
+      "short" : "Menge",
+      "definition" : "Wie viel des berichteten Befunds gesehen wurde: als semiquantitative Stufe (SNOMED CT) oder als Zählung je Gesichtsfeld (UCUM).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      },
+      {
+        "code" : "Quantity"
+      },
+      {
+        "code" : "Range"
+      }]
+    },
+    {
       "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungsmethode",
       "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungsmethode",
       "short" : "Untersuchungsmethode",
-      "definition" : "Eingesetztes mikroskopisches Verfahren einschließlich Färbetechnik, z. B. Gramfärbung (SNOMED CT).",
+      "definition" : "Eingesetztes mikroskopisches Verfahren (SNOMED CT). Die Färbetechnik wird daneben angegeben.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -192,7 +209,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie",
       "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie",
       "short" : "Spezifische Mikroskopie",
-      "definition" : "Mikroskopischer Nachweis eines im Untersuchungscode benannten Objekts mit der semiquantitativen Stufe als Ergebnis.",
+      "definition" : "Mikroskopischer Nachweis eines im Untersuchungscode benannten Objekts; die Menge des Gesehenen wird daneben angegeben.",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -214,7 +231,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Ergebnis",
       "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Ergebnis",
       "short" : "Ergebnis",
-      "definition" : "Semiquantitative Stufe, in der das gesuchte Objekt gesehen wurde (SNOMED CT).",
+      "definition" : "Nachweis oder Ausschluss des gesuchten Objekts (SNOMED CT).",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -222,10 +239,27 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
       }]
     },
     {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Menge[x]",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Menge[x]",
+      "short" : "Menge",
+      "definition" : "Wie viel des nachgewiesenen Objekts gesehen wurde: als semiquantitative Stufe (SNOMED CT) oder als Zählung je Gesichtsfeld (UCUM).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      },
+      {
+        "code" : "Quantity"
+      },
+      {
+        "code" : "Range"
+      }]
+    },
+    {
       "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Untersuchungsmethode",
       "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Untersuchungsmethode",
       "short" : "Untersuchungsmethode",
-      "definition" : "Eingesetzte Färbetechnik, entbehrlich wenn sie bereits im Untersuchungscode steht (SNOMED CT).",
+      "definition" : "Eingesetztes mikroskopisches Verfahren (SNOMED CT).",
       "min" : 0,
       "max" : "1",
       "type" : [{

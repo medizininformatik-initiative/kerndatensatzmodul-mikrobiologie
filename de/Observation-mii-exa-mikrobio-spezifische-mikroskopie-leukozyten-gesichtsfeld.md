@@ -30,9 +30,16 @@ Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mi
 
 **performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
-**value**: 10-25 je Gesichtsfeld
+**value**: Detected (qualifier value)
 
 **specimen**: [Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100](Specimen-mii-exa-mikrobio-probe.md)
+
+### Components
+
+| | | |
+| :--- | :--- | :--- |
+| - | **Code** | **Value[x]** |
+| * | Semi-quantitative value | 10-25 je Gesichtsfeld |
 
 
 
@@ -104,23 +111,41 @@ Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mi
   "performer" : [{
     "reference" : "Organization/mii-exa-mikrobio-labor"
   }],
-  "valueRange" : {
-    "low" : {
-      "value" : 10,
-      "unit" : "je Gesichtsfeld",
-      "system" : "http://unitsofmeasure.org",
-      "code" : "/[HPF]"
-    },
-    "high" : {
-      "value" : 25,
-      "unit" : "je Gesichtsfeld",
-      "system" : "http://unitsofmeasure.org",
-      "code" : "/[HPF]"
-    }
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+      "code" : "260373001",
+      "display" : "Detected (qualifier value)"
+    }]
   },
   "specimen" : {
     "reference" : "Specimen/mii-exa-mikrobio-probe"
-  }
+  },
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+        "code" : "103392008",
+        "display" : "Semi-quantitative value"
+      }]
+    },
+    "valueRange" : {
+      "low" : {
+        "value" : 10,
+        "unit" : "je Gesichtsfeld",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "/[HPF]"
+      },
+      "high" : {
+        "value" : 25,
+        "unit" : "je Gesichtsfeld",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "/[HPF]"
+      }
+    }
+  }]
 }
 
 ```
