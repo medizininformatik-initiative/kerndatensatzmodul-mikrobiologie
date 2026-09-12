@@ -60,7 +60,7 @@ scaffold gives you the place and a prompt) · ➖ not applicable.
 
 | Check | State | Evidence / what to do |
 |---|---|---|
-| Diagram sources are checked in, tool is free/widely used | ✅ | `input/images-source/` exists for editable sources (e.g. PlantUML); rendered files go to `input/images/` |
+| Diagram sources are checked in, tool is free/widely used | ✅ | `input/images-source/` holds the editable sources (PlantUML); the publisher renders them into `temp/pages/_includes/` and inlines them where a page includes them — nothing rendered is committed |
 | Consistent colour scheme | ✅ | Provided by the MII IG template; use the `ig-highlight-*` classes for callouts |
 | Graphics are licence-clean | 📝 | Only add images you may redistribute under the IG's CC-BY-4.0 |
 

@@ -4,17 +4,25 @@
 still maintainable in five years.
 
 **Prerequisites.** A module that builds ([create a new module](create-a-new-module.md)),
-and Graphviz for PlantUML rendering — the dev container has it.
+and Graphviz for PlantUML class diagrams. The dev container has it, all three
+workflows install it (`apt-get install -y graphviz`), and locally `which dot`
+must find something.
 
 ## Where files go
 
 ```text
 input/images-source/<name>.plantuml   # the EDITABLE source — commit this
-input/images/<name>.svg               # the rendered image the pages reference
+temp/pages/_includes/<name>.svg       # what the publisher renders — build artefact, not committed
+input/images/<name>.svg|png           # only for images you did NOT generate from a source
 ```
 
-The IG Publisher renders PlantUML sources automatically when Graphviz is
-available (the dev container has it). Keep the source in the repository: HL7's
+**The rendered SVG never lands in `input/images/`.** The IG Publisher renders
+each PlantUML source into `temp/pages/_includes/` and inlines it into the page
+that includes it; measured on 2026-09-12, `input/images/` held nothing but its
+`.gitkeep` while both diagrams rendered correctly. Committing a rendered copy
+there is how this module carried two stale PNGs for a while.
+
+Keep the source in the repository: HL7's
 [IG best-practice guidance](https://build.fhir.org/ig/FHIR/ig-guidance/best-practice.html)
 asks that a diagram's source be checked in and its tool be free or widely used,
 so that the picture can still be changed after its author has moved on. This
@@ -22,18 +30,30 @@ scaffold treats that as the default and gives you `input/images-source/` for it.
 
 ## Steps
 
-1. Write the source, e.g. `input/images-source/module-overview.plantuml`.
-2. Reference the rendered image from a page:
+1. Write the source as `input/images-source/<name>.plantuml`. **The extension
+   must be `.plantuml`** — a `.puml` file is silently ignored, with no warning
+   and no rendered output.
+2. Reference it from a page with a Jekyll include, naming the SVG the publisher
+   will produce:
 
    ```markdown
-   <img src="module-overview.svg" alt="Overview of the {{MODULE_TITLE}} module" style="max-width:100%">
+   <figure>
+   {% include module-overview.svg %}
+   <figcaption>Overview of the {{MODULE_TITLE}} module: what it shows, in one sentence.</figcaption>
+   </figure>
    ```
 
-3. Always write a meaningful `alt` text — it is what screen readers and search
-   engines get, and the checklist expects it.
-4. Reference the same image from the German mirror page; images are shared, only
-   the surrounding prose is translated.
-5. Build and check the page.
+   **The include is what triggers the rendering.** Without a page that includes
+   `<name>.svg`, the publisher does not render the source at all — an
+   `<img src="module-overview.svg">` reference leaves the page empty and produces
+   no SVG.
+3. Describe the diagram in the `<figcaption>`. The include *inlines* the SVG, so
+   there is no `<img>` and no `alt` attribute to write — the caption is what a
+   reader and a screen reader get. (An image you bring yourself, referenced with
+   `<img>`, still needs an `alt` text; the checklist expects one.)
+4. Reference the same include from the German mirror page. The SVG is shared,
+   only the caption is translated.
+5. Build and check both language versions.
 
 ## Choosing what to draw
 
@@ -45,14 +65,18 @@ scaffold treats that as the default and gives you `input/images-source/` for it.
 
 ## Expected result
 
-The diagram renders in both language versions, its source sits beside it in the
-repository, and the alt text describes it.
+The diagram appears in both language versions as an inline `<svg>` element — not
+as an `<img>` — its source sits in `input/images-source/`, and the caption
+describes it. Measured on this module: `output/en/uml-diagrams.html` and
+`output/de/uml-diagrams.html` each carry two `<svg>` tags and no image tags.
 
 ## Common errors & fixes
 
 | Symptom | Cause | Fix |
 | --- | --- | --- |
-| Image missing in the built IG | Referenced from `images-source/` instead of `images/`, or the file name differs | Reference the rendered file in `input/images/` |
-| PlantUML not rendered | Graphviz missing in the build environment | Use the dev container; CI already installs Graphviz |
-| Image looks fine locally, broken on `/de/` | An absolute or `../`-relative path | Use the plain file name — the publisher resolves it per language folder |
+| No SVG anywhere, no error either | The source is named `.puml` | Rename to `.plantuml` |
+| Source unchanged but nothing rendered | No page includes `<name>.svg` | Add `{% include <name>.svg %}`; an `<img src>` does not trigger rendering |
+| Empty space where the diagram should be | The page references the image with `<img src="…svg">` | Use the include form |
+| PlantUML not rendered, build log mentions dot | Graphviz missing in the build environment | Use the dev container; the workflows already install Graphviz |
+| A rendered SVG or PNG sits in `input/images/` beside a source | Someone committed build output | Delete it — it goes stale silently while the source moves on |
 | Licence concern | The image embeds third-party material | Only add images you may redistribute under the IG's CC-BY-4.0 |
