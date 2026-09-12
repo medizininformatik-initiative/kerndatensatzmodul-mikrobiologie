@@ -42,7 +42,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-l
   "title" : "MII LM Mikrobio Befund",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T17:28:38+00:00",
+  "date" : "2026-09-12T20:31:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -42,7 +42,7 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des 
   "title" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T17:28:38+00:00",
+  "date" : "2026-09-12T20:31:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
