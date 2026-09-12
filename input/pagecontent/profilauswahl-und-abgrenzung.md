@@ -14,7 +14,7 @@ therefore serves the molecular bench and the serology bench alike.
 * [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html) — the morphological group seen, not a species
   * [Bartlett score](StructureDefinition-mii-pr-mikrobio-bartlett-score.html) — is a sputum specimen fit for culture?
   * [Nugent score](StructureDefinition-mii-pr-mikrobio-nugent-score.html) — Gram-stain score for bacterial vaginosis
-* [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html) — the object is named in the code, the result is its semiquantitative grade
+* [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html) — the object is named in the code, the result is its detection, with the amount alongside
 * [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html) — growth or no growth, untargeted
 * [Colony count](StructureDefinition-mii-pr-mikrobio-keimzahl.html) — viable count per volume or mass
 * [General determination](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html) — species identification, typically MALDI-TOF MS
@@ -163,11 +163,13 @@ statement is otherwise ambiguous: General culture with the method-neutral code
 
 {:.bg-warning}
 **Ballot question 6 — can you supply `Observation.method` for every result?**
-The HL7 EU Lab Semantic Workgroup asks for it always, this guide only recommends it. We ask whether making it mandatory would be deliverable at your site. If
-it would, a later version can raise `Observation.method` to `1..1` and the
-special-case invariant on General culture becomes unnecessary. A second consequence follows: if the method is always present, `41852-5` plus a method is
-unambiguous everywhere, and the reason this guide recommends the method-bearing
-codes `11475-1` and `664-3` largely falls away. The answer therefore bears on both questions. Please comment during the ballot.
+The HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends
+it. Would making it mandatory be deliverable at your site?
+
+Two things follow from a yes. A later version can raise `Observation.method` to
+`1..1`, and the special-case invariant on General culture becomes unnecessary —
+`41852-5` plus a method is then unambiguous everywhere, so the recommendation to
+prefer the method-bearing `11475-1` largely falls away.
 
 ### Two granularities on the same axis
 

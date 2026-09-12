@@ -18,27 +18,35 @@ Id: mii-pr-mikrobio-spezifische-mikroskopie
 Title: "MII PR Mikrobio Spezifische Mikroskopie"
 Description: "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis."
 * insert MIKRO_OBSERVATION_COMMON
-* ^purpose = "Dieses Profil beschreibt die zielgerichtete Mikroskopie, bei der das gesuchte Objekt und die Färbetechnik im Untersuchungscode stehen und das Ergebnis die Menge des Gesehenen ist."
+* ^purpose = "Dieses Profil beschreibt die zielgerichtete Mikroskopie, bei der das gesuchte Objekt im Untersuchungscode steht und das Ergebnis der Nachweis oder Ausschluss dieses Objekts ist; wie viel davon gesehen wurde, steht in der Mengenkomponente."
 * code from MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC (extensible)
 * code ^short = "Ordinaler LOINC-Code, der das gesuchte Objekt und die Faerbung benennt, z. B. 87243-2 'Microscopic observation [Presence] in Specimen by Auramine fluorochrome stain'. Steht das Objekt NICHT im Code, sondern soll als Ergebnis berichtet werden, ist die Allgemeine Mikroskopie das richtige Profil."
-// DREI ERGEBNISFORMEN FUER DIESELBE FRAGE. Das Labor, dessen Katalog diesem
-// Profil zugrunde liegt, berichtet dasselbe Analyt in zwei Formaten: leu1-leu3
-// kategorial ("wenig", "maessig viel"), leu4-leu6 als Zaehlung je Gesichtsfeld
-// ("<10/GF", "10-25/GF"). Dieselbe Frage, zwei Antwortformate — deshalb sind
-// beide zugelassen und nicht nur das kategoriale.
+// DER WERT IST DER NACHWEIS, NICHT DIE STUFE. Bis 2026-09-12 stand hier die
+// semiquantitative Stufe, mit der Begruendung, ein ordinaler Code mache die
+// Stufe zur Antwort. Das haelt der Messung nicht stand: 72357-7, 87243-2 und
+// 72163-9 sind SCALE_TYP LP7751-3 (Ord) mit PROPERTY LP217195-9 (PrThr,
+// "Presence or Threshold") — LOINC-Ord heisst "geordnete Antworten", und
+// Present/Absent ist genauso ordinal wie eine Stufenskala. Die Frage des Codes
+// ist der Nachweis.
 //
-// /[HPF] ("per high power field") ist ein gueltiger UCUM-Code, am 2026-09-10
-// gegen UCUM 2.2 nachgemessen. Die Gesichtsfeldangabe braucht also keine
-// Hilfskonstruktion.
+// Das Modellblatt "Microscopy" sagt dasselbe, und zwar zweimal: Ergebniszeile
+// "present/absent for specific", Interpretationszeile "no intepretation". Die
+// Stufe steht deshalb in component[menge], die Interpretation bleibt leer.
 //
-// Das EU-Datenmodell kennt nur die kategoriale Form (Blatt "Microscopy",
-// Zeile 15); die Zaehlung je Gesichtsfeld fehlt dort und ist zurueckgemeldet.
-* value[x] only CodeableConcept or Quantity or Range
+// Dieselbe Liste wie bei der Spezifischen Bestimmung, weil es dieselbe Frage
+// ist. Getrennt bleiben die beiden Profile durch das Subjekt — hier ein
+// mikroskopisch sichtbares Objekt, Wirtszellen oder ein Parasit, dort eine
+// benannte Erregerspezies — und durch die Mengenkomponente.
+* value[x] only CodeableConcept
 * valueCodeableConcept
-* valueCodeableConcept from MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED (extensible)
-* valueCodeableConcept ^short = "Semiquantitative Stufe des im Code benannten Objekts. Weil der Untersuchungscode ordinal ist, ist die Stufe der Wert — nicht die Interpretation und keine Komponente. Wurde untersucht und nichts gesehen, wird 'None' oder 'No organisms seen' berichtet; liefert die Untersuchung gar keine verwertbare Aussage, dataAbsentReason."
-* valueQuantity ^short = "Zaehlung je Gesichtsfeld, UCUM-Einheit /[HPF]. Fuer offene Grenzen wird Quantity.comparator verwendet, z. B. '<10/GF' als comparator = '<', value = 10."
-* valueRange ^short = "Zaehlung je Gesichtsfeld als Intervall, UCUM-Einheit /[HPF] — z. B. '10-25/GF' als low = 10, high = 25."
+* valueCodeableConcept from MII_VS_Mikrobio_Detected_Not_Detected_SNOMED (extensible)
+* valueCodeableConcept ^short = "Nachweis oder Ausschluss des im Code benannten Objekts. Die Menge des Gesehenen gehoert NICHT hierher, sondern in component[menge]. Liefert die Untersuchung gar keine verwertbare Aussage, dataAbsentReason."
+
+// MENGE. Definition in MIKRO_MENGE_KOMPONENTE, gemeinsam mit der Allgemeinen
+// Mikroskopie: dieselbe Aussage, deshalb dieselben Regeln. Sie traegt die
+// semiquantitative Stufe und die Zaehlung je Gesichtsfeld.
+* insert MIKRO_MENGE_KOMPONENTE
+
 // FAERBUNG. Die Codes dieses Profils nennen die Faerbung meist selbst — 87243-2
 // und 72357-7 tun es. Sie wird trotzdem angegeben: nur so ist sie unabhaengig
 // von der Codewahl auswertbar, und nur so ist die konkrete Variante zu sehen,

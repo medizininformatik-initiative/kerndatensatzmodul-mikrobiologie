@@ -34,23 +34,27 @@ move changes the element and nothing else.
 
 The most common Gram finding needs two statements at once — *few* Gram-positive
 cocci — and `value[x]` can carry only one of them. The morphology is the value
-and the amount is a component, `component[menge]`, taken from the semiquantitative
-set that [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html)
-uses as its value.
+and the amount is a component, `component[menge]`. The same component, with the
+same code and the same answers, carries the amount in [Specific
+microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html).
 
 Its code is `103392008 |Semi-quantitative value|`, the concept the HL7 EU Lab
 Semantic Workgroup proposes for this component. A LOINC code has been requested
-for the same purpose and will take its place once it exists.
+for the same purpose and will take its place once it exists. Besides the
+semiquantitative grade the component takes a count per high power field, as a
+`Quantity` or as a `Range`.
 
 <a id="ballot-question-5"></a>
 
 {:.bg-warning}
 **Ballot question 5 — can you process a component for the amount?**
-The HL7 EU Lab Semantic Workgroup uses a component for the amount of a single
-finding and `hasMember` to group several findings of one examination; this module
-follows that. The component nevertheless reverses a decision of this release
-cycle: `2027.0.0-alpha.1` removed components from this very profile and moved
-them into standalone Observations.
+Both microscopy profiles carry the amount in `component[menge]`, following the
+HL7 EU Lab Semantic Workgroup, which uses a component for the amount of a single
+finding and `hasMember` to group several findings of one examination.
+
+The component reverses a decision of this release cycle: `2027.0.0-alpha.1`
+removed components from this very profile and moved them into standalone
+Observations.
 
 ### Examples
 

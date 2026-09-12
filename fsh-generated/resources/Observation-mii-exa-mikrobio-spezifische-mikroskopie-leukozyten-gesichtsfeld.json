@@ -68,20 +68,34 @@
       "reference": "Organization/mii-exa-mikrobio-labor"
     }
   ],
-  "valueRange": {
-    "low": {
-      "value": 10,
-      "unit": "je Gesichtsfeld",
-      "system": "http://unitsofmeasure.org",
-      "code": "/[HPF]"
-    },
-    "high": {
-      "value": 25,
-      "unit": "je Gesichtsfeld",
-      "system": "http://unitsofmeasure.org",
-      "code": "/[HPF]"
+  "component": [
+    {
+      "valueRange": {
+        "low": {
+          "value": 10,
+          "unit": "je Gesichtsfeld",
+          "system": "http://unitsofmeasure.org",
+          "code": "/[HPF]"
+        },
+        "high": {
+          "value": 25,
+          "unit": "je Gesichtsfeld",
+          "system": "http://unitsofmeasure.org",
+          "code": "/[HPF]"
+        }
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "103392008",
+            "system": "http://snomed.info/sct",
+            "version": "http://snomed.info/sct/900000000000207008/version/20260701",
+            "display": "Semi-quantitative value"
+          }
+        ]
+      }
     }
-  },
+  ],
   "status": "final",
   "code": {
     "coding": [
@@ -97,6 +111,16 @@
     "reference": "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime": "2026-04-02T10:00:00+01:00",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "260373001",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20260701",
+        "display": "Detected (qualifier value)"
+      }
+    ]
+  },
   "specimen": {
     "reference": "Specimen/mii-exa-mikrobio-probe"
   }
