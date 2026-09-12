@@ -9,10 +9,10 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_VS_Mikrobio_Morphologie_Methode_SNOMED |
+| Active as of 2026-09-12 | *Computable Name*:MII_VS_Mikrobio_Morphologie_Methode_SNOMED |
 
  
-Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich der eingesetzten Färbetechnik. 
+Methoden-ValueSet für die Mikroskopie: die eingesetzten mikroskopischen Verfahren. Die Färbung wird nicht hier, sondern in der Extension MII_EX_Mikrobio_Faerbung angegeben. 
 
  **References** 
 
@@ -43,7 +43,7 @@ Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich
   "title" : "MII VS Mikrobio Morphologie Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:56:10+00:00",
+  "date" : "2026-09-12T16:17:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -65,7 +65,7 @@ Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich der eingesetzten Färbetechnik.",
+  "description" : "Methoden-ValueSet für die Mikroskopie: die eingesetzten mikroskopischen Verfahren. Die Färbung wird nicht hier, sondern in der Extension MII_EX_Mikrobio_Faerbung angegeben.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -81,15 +81,6 @@ Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich
         "property" : "concept",
         "op" : "is-a",
         "value" : "278289002"
-      }]
-    },
-    {
-      "system" : "http://snomed.info/sct",
-      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
-      "filter" : [{
-        "property" : "concept",
-        "op" : "is-a",
-        "value" : "703857004"
       }]
     }]
   }

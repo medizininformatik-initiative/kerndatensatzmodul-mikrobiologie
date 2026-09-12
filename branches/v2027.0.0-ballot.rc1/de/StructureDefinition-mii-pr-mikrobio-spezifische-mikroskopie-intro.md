@@ -25,6 +25,15 @@ Es ist deshalb nicht dieselbe Aussage wie die
 obwohl beide zielgerichtet sind: Jene antwortet `Detected` / `Not detected`,
 diese eine Stufe. Aus demselben Grund steckt die Keimzahl nicht im Kulturprofil.
 
+### Färbung
+
+Die Codes dieses Profils nennen die Färbung meist selbst, und sie wird trotzdem
+in `extension[faerbung]` angegeben — dort liest sie ein Verarbeitender,
+unabhängig davon, welchen Code das Labor gewählt hat, und dort steht die konkrete
+Variante, wo der Code nur die Klasse nennt („Acid fast stain" gegenüber Kinyoun).
+Wohin sie gehört, ist
+[Ballotfrage 2](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2).
+
 ### Warum die Stufe der Wert ist
 
 Weil der Untersuchungscode ordinal ist, **ist** die Stufe die Antwort auf die

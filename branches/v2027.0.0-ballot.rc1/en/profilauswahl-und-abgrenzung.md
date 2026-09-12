@@ -8,7 +8,7 @@
 
 Detection, susceptibility testing and classification are different diagnostic statements and are represented in this module by different profiles. This page describes the delimitation, the representation of negative results, and the linking of investigations into a diagnostic chain.
 
-> **Key statement:** a negative result of a targeted pathogen detection is represented via Specific determination or Specific culture. MRGN classification and resistance category status, by contrast, presuppose an already detected pathogen and do not replace a detection test.
+> **Key statement:** a negative result of a targeted pathogen detection is represented via Specific determination, whatever the technique. MRGN classification and resistance category status, by contrast, presuppose an already detected pathogen and do not replace a detection test.
 
 ### Which profiles belong to my laboratory area
 
@@ -22,7 +22,6 @@ A profile appears under more than one area on purpose. The model is method-neutr
  
 * [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md) — the object is named in the code, the result is its semiquantitative grade
 * [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md) — growth or no growth, untargeted
-* [Specific culture](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md) — growth or no growth, targeted, e.g. MRSA screening
 * [Colony count](StructureDefinition-mii-pr-mikrobio-keimzahl.md) — viable count per volume or mass
 * [General determination](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) — species identification, typically MALDI-TOF MS
 * [Susceptibility](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.md) — phenotypic testing, S/I/R with MIC or zone diameter
@@ -85,7 +84,7 @@ Beyond that, this module recommends the code that carries its method wherever on
 
 ### Serology is the exception to post-coordinating the specimen
 
-Everywhere else this module prefers test codes that leave the specimen out, with `Specimen.type` carrying it instead. Serology is deliberately exempt. The European white paper states the reason:
+Everywhere else this module prefers test codes that leave the specimen out, with `Specimen.type` carrying it instead. Serology is deliberately exempt. The HL7 EU Lab Semantic Workgroup states the reason:
 
 > In comparison with culture techniques, far fewer specimen types are involved in serology. The majority of specimens are serum-based. Therefore, we allow pre-coordination of the specimen in the code.
 
@@ -99,15 +98,15 @@ One further trait of serological reporting is worth knowing: the diagnosis often
 
 ### The method belongs in Observation.method
 
-The European white paper puts this as a core principle and states it more strongly than one might expect:
+The HL7 EU Lab Semantic Workgroup puts this as a core principle and states it more strongly than one might expect:
 
 > The LOINC-axis "method" should be omitted completely. […] Even if the method is pre-coordinated in the LOINC-Code the recommendation is to **always** represent the method consistently in `Observation.method` using SNOMED CT.
 
-So the method is to be given even where the test code already carries it — a culture reported under `11475-1 |… by Culture|` should still name whether it was aerobic or anaerobic, and a Gram preparation under `664-3 |… by Gram stain|` should still name the stain.
+So the method is to be given even where the test code already carries it — a culture reported under `11475-1 |… by Culture|` should still name whether it was aerobic or anaerobic. In microscopy the stain is not part of the method: it is given in [`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.md), also where the test code names it, and `Observation.method` keeps the microscopy technique.
 
 This guide states that as a **recommendation**, not as a requirement. `Observation.method` is `0..1` Must Support in the laboratory base profile, and making it mandatory across every investigation profile would invalidate conformant data that exists today. The one place it is enforced is where the statement is otherwise ambiguous: General culture with the method-neutral code `41852-5`.
 
-**Ballot question 6 — can you supply `Observation.method` for every result?** The white paper asks for it always, this guide only recommends it. We ask whether making it mandatory would be deliverable at your site. If it would, a later version can raise `Observation.method` to `1..1` and the special-case invariant on General culture becomes unnecessary. A second consequence follows: if the method is always present, `41852-5` plus a method is unambiguous everywhere, and the reason this guide recommends the method-bearing codes `11475-1` and `664-3` largely falls away. The answer therefore bears on both questions. Please comment during the ballot.
+**Ballot question 6 — can you supply `Observation.method` for every result?** The HL7 EU Lab Semantic Workgroup asks for it always, this guide only recommends it. We ask whether making it mandatory would be deliverable at your site. If it would, a later version can raise `Observation.method` to `1..1` and the special-case invariant on General culture becomes unnecessary. A second consequence follows: if the method is always present, `41852-5` plus a method is unambiguous everywhere, and the reason this guide recommends the method-bearing codes `11475-1` and `664-3` largely falls away. The answer therefore bears on both questions. Please comment during the ballot.
 
 ### Two granularities on the same axis
 
@@ -131,7 +130,7 @@ A species identification never belongs in microscopy, even when it was made down
 | | | | |
 | :--- | :--- | :--- | :--- |
 | Is a predefined target detectable? (non-culture) | Specific determination | LOINC detection test, e.g.`105904-7` | `Detected`/`Not detected` |
-| Does a predefined microorganism grow? | Specific culture | LOINC culture test, e.g.`13316-5` | `Organism growth`/`No growth` |
+| Is a predefined microorganism there, sought by culture? | Specific determination | LOINC culture test, e.g.`13316-5` | `Detected`/`Not detected` |
 | Is a resistance gene detectable? | Resistance mechanisms / determinants | LOINC determinant, e.g.`48813-0` | `Detected`/`Not detected` |
 | How susceptible is an identified isolate to a substance? | Susceptibility | LOINC`[Susceptibility]`, e.g.`29258-1` | MIC as`Quantity`, assessment in`interpretation`(S / I / R) |
 | Which MRGN class does an identified Gram-negative isolate belong to? | MRGN class | `99780-9` | Classification value, e.g.`3MRGN`, or`keine-mrgn-klasse` |
@@ -173,7 +172,7 @@ The three cases in direct comparison, each for VRE:
 
 | | | | |
 | :--- | :--- | :--- | :--- |
-| VRE was sought and not found | Specific culture | `13316-5` | `No growth` |
+| VRE was sought by culture and not found | Specific determination | `13316-5` | `Not detected` |
 | VRE was sought and not found (molecular) | Specific determination | `105904-7` | `Not detected` |
 | An**Enterococcus**present is not a VRE | Resistance category status | `vre-status` | `Negative` |
 
@@ -192,7 +191,7 @@ For Gram-negative pathogens with an MRGN classification, the representation is v
 
 ### Grouping several results: the panel
 
-An antibiogram is not one result but many — one Observation per antimicrobial tested. The European white paper recommends binding them together with an **organizer Observation**: one Observation carrying the panel code `29576-6 |Bacterial susceptibility panel|` and no `value[x]` of its own, which points at the individual results through `Observation.hasMember`. The organizer in turn references the identification it followed through the `triggeredBy` extension.
+An antibiogram is not one result but many — one Observation per antimicrobial tested. The HL7 EU Lab Semantic Workgroup recommends binding them together with an **organizer Observation**: one Observation carrying the panel code `29576-6 |Bacterial susceptibility panel|` and no `value[x]` of its own, which points at the individual results through `Observation.hasMember`. The organizer in turn references the identification it followed through the `triggeredBy` extension.
 
 ```
 Observation: Bacterial susceptibility panel (29576-6), no value
@@ -220,7 +219,7 @@ A positive targeted detection can trigger follow-up diagnostics:
 
 ```
 Positive targeted detection
-(Specific determination or Specific culture)
+(Specific determination, any technique)
         │
         │ triggeredBy (reflex)
         ▼

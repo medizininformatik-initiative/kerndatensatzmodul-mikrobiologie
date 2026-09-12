@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Spezifische_Mikroskopie |
+| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Spezifische_Mikroskopie |
 
  
 Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis. 
@@ -29,6 +29,10 @@ Beide Hälften sind Mikroskopie; getrennt sind sie durch die Fragestellung und d
 LOINC spiegelt diese Unterscheidung meist in der Skala — nominal, wo die Antwort das Objekt ist, ordinal, wo sie eine Stufe ist —, aber nicht zuverlässig. Für manche Färbungen existiert nur die nominale Form: Rhodamin-Auramin hat gar keinen ordinalen Code. Ein solcher Befund gehört in die allgemeine Mikroskopie, obwohl die Färbung zielgerichtet ist, denn die Antwort ist dann das gesehene Objekt und keine Stufe. Die Skala folgt der Unterscheidung, sie begründet sie nicht.
 
 Es ist deshalb nicht dieselbe Aussage wie die [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), obwohl beide zielgerichtet sind: Jene antwortet `Detected` / `Not detected`, diese eine Stufe. Aus demselben Grund steckt die Keimzahl nicht im Kulturprofil.
+
+### Färbung
+
+Die Codes dieses Profils nennen die Färbung meist selbst, und sie wird trotzdem in `extension[faerbung]` angegeben — dort liest sie ein Verarbeitender, unabhängig davon, welchen Code das Labor gewählt hat, und dort steht die konkrete Variante, wo der Code nur die Klasse nennt („Acid fast stain" gegenüber Kinyoun). Wohin sie gehört, ist [Ballotfrage 2](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-2).
 
 ### Warum die Stufe der Wert ist
 
@@ -81,7 +85,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 ** Summary **
 
 Mandatory: 2 elements
- Must-Support: 2 elements
+ Must-Support: 3 elements
 
 **Structures**
 
@@ -94,6 +98,7 @@ This structure refers to these other structures:
 This structure refers to these extensions:
 
 * [http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy](StructureDefinition-ext-R5-Observation.triggeredBy.md)
+* [https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung](StructureDefinition-mii-ex-mikrobio-faerbung.md)
 
  **Schlüsselelemente-Ansicht** 
 
@@ -118,7 +123,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 ** Summary **
 
 Mandatory: 2 elements
- Must-Support: 2 elements
+ Must-Support: 3 elements
 
 **Structures**
 
@@ -131,6 +136,7 @@ This structure refers to these other structures:
 This structure refers to these extensions:
 
 * [http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy](StructureDefinition-ext-R5-Observation.triggeredBy.md)
+* [https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung](StructureDefinition-mii-ex-mikrobio-faerbung.md)
 
  
 
@@ -277,7 +283,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Spezifische Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:56:10+00:00",
+  "date" : "2026-09-12T16:17:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -342,6 +348,19 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "path" : "Observation.extension.extension",
       "sliceName" : "type",
       "short" : "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+    },
+    {
+      "id" : "Observation.extension:faerbung",
+      "path" : "Observation.extension",
+      "sliceName" : "faerbung",
+      "short" : "Eingesetzte Faerbung. Immer angeben, wenn gefaerbt wurde — auch wenn der Untersuchungscode sie schon nennt.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "Observation.category",
@@ -428,7 +447,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     {
       "id" : "Observation.method",
       "path" : "Observation.method",
-      "short" : "Entbehrlich, wo die Faerbung bereits im Untersuchungscode steht. Sonst wie bei der Allgemeinen Mikroskopie: bevorzugt die Faerbetechnik, weil Observation.method 0..1 ist und nur eines von Faerbung und Mikroskopieverfahren hineinpasst.",
+      "short" : "Das mikroskopische Verfahren. Die Faerbung gehoert NICHT hierher, sondern in extension[faerbung].",
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"

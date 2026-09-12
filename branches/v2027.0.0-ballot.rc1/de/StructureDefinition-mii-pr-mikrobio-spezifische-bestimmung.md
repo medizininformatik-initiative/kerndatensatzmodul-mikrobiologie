@@ -9,12 +9,12 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Spezifische_Bestimmung |
+| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Spezifische_Bestimmung |
 
  
-Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis wird über MII_PR_Mikrobio_Spezifische_Kultur abgebildet. 
+Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis liegt ebenfalls hier; das Verfahren steht im Untersuchungscode und in Observation.method. 
 
-Spezifische Bestimmung beschreibt den gezielten qualitativen Nachweis eines vordefinierten mikrobiellen Ziels (z. B. Mikroorganismus, Nukleinsäure, Antigen, Antikörper oder biochemischer Marker) in einer Probe mittels direkter molekularer, immunologischer oder biochemischer Nachweismethoden sowie mittels methodenneutral kodierter Nachweistests. Der kulturbasierte zielgerichtete Nachweis wird über [Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md) abgebildet.
+Spezifische Bestimmung beschreibt den gezielten qualitativen Nachweis eines vordefinierten mikrobiellen Ziels (z. B. Mikroorganismus, Nukleinsäure, Antigen, Antikörper oder biochemischer Marker) in einer Probe mittels direkter molekularer, immunologischer oder biochemischer Nachweismethoden sowie mittels methodenneutral kodierter Nachweistests. Der kulturbasierte zielgerichtete Nachweis liegt ebenfalls hier: Das Verfahren steht im Untersuchungscode und in `Observation.method`, nicht im Ergebnis.
 
 Das Ergebnis ist die Aussage über den Nachweis des im Code benannten Ziels (`Detected` bzw. `Not detected`); ein unbestimmbares Ergebnis wird nicht über `value`, sondern über `dataAbsentReason` angegeben. Damit bildet dieses Profil auch das negative Ergebnis eines zielgerichteten Erregernachweises ab, etwa einen negativen VRE-Nachweis.
 
@@ -23,6 +23,12 @@ Die verwendete Methode soll grundsätzlich über `Observation.method` angegeben 
 Zur Abgrenzung gegenüber Empfindlichkeitstestung und Klassifikation sowie zur Codeauswahl siehe [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.md).
 
 Untersuchungen ohne vordefiniertes Ziel, bei denen das Ergebnis die Nennung des identifizierten Erregers ist, werden über [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) abgebildet.
+
+### Ein Profil oder zwei?
+
+**Ballotfrage 7 — genügt `Detected` / `Not detected` für eine zielgerichtete Kultur, oder brauchen Sie `Organism growth` / `No growth`?** Dieses Modul bildet den zielgerichteten Nachweis unabhängig vom Verfahren in einem Profil ab: Fragestellung und Ergebnistyp sind dieselben. Die HL7 EU Lab Semantic Workgroup führt die zielgerichtete Kultur getrennt und bindet dort Wachstum; dieser Leitfaden weicht davon ab. Die Kultur steht bereits im Untersuchungscode, dessen Methodenachse `Organism specific culture` trägt.
+
+Brauchen Sie die Wachstumscodes, kommt die Bindung zurück. Wir bitten um Rückmeldung im Ballot.
 
 ### Stellung in der diagnostischen Kette
 
@@ -43,7 +49,7 @@ Positiver Nachweis mit dem Ct-Wert, aus dem er abgelesen wurde — zeigt die Ric
 **Usages:**
 
 * Refer to this Profile: [MII PR Mikrobio Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
-* Examples for this Profile: [Observation/mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv](Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md) and [Observation/mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md)
+* Examples for this Profile: [Observation/mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv](Observation-mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ](Observation-mii-exa-mikrobio-spezifische-bestimmung-vre-negativ.md), [Observation/mii-exa-mikrobio-spezifische-bestimmung](Observation-mii-exa-mikrobio-spezifische-bestimmung.md), [Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ](Observation-mii-exa-mikrobio-spezifische-kultur-vre-negativ.md)... Show 2 more, [Observation/mii-exa-mikrobio-spezifische-kultur](Observation-mii-exa-mikrobio-spezifische-kultur.md) and [Observation/mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.md)
 * CapabilityStatements using this Profile: [MII CPS Mikrobio Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.json)
@@ -271,7 +277,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Spezifische Bestimmung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:56:10+00:00",
+  "date" : "2026-09-12T16:17:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -293,7 +299,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis wird über MII_PR_Mikrobio_Spezifische_Kultur abgebildet.",
+  "description" : "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis liegt ebenfalls hier; das Verfahren steht im Untersuchungscode und in Observation.method.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -301,7 +307,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "display" : "Germany"
     }]
   }],
-  "purpose" : "Dieses Profil beschreibt den zielgerichteten, nicht kulturbasierten Nachweis. Es bildet auch das negative Ergebnis eines zielgerichteten Erregernachweises ab, z. B. einen negativen VRE-Nachweis über 105904-7 mit dem Wert 'Not detected'.",
+  "purpose" : "Dieses Profil beschreibt den zielgerichteten Nachweis, unabhaengig davon, ob er molekular, immunologisch, biochemisch oder kulturell erfolgt. Es bildet auch das negative Ergebnis eines zielgerichteten Erregernachweises ab, z. B. einen negativen VRE-Nachweis über 105904-7 mit dem Wert 'Not detected'.",
   "fhirVersion" : "4.0.1",
   "kind" : "resource",
   "abstract" : false,
@@ -378,7 +384,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "id" : "Observation.value[x]:valueCodeableConcept",
       "path" : "Observation.value[x]",
       "sliceName" : "valueCodeableConcept",
-      "short" : "Nachweis oder Ausschluss des im Code benannten Ziels. Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet.",
+      "short" : "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 7). Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet.",
       "type" : [{
         "code" : "CodeableConcept"
       }],

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_VS_Mikrobio_Keimzahl_LOINC |
+| Active as of 2026-09-12 | *Computable Name*:MII_VS_Mikrobio_Keimzahl_LOINC |
 
  
 Tests-ValueSet für die Keimzahlbestimmung: LOINC-Codes für die quantitative Bestimmung lebensfähiger Mikroorganismen. 
@@ -42,7 +42,7 @@ Tests-ValueSet für die Keimzahlbestimmung: LOINC-Codes für die quantitative Be
   "title" : "MII VS Mikrobio Keimzahl [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:56:10+00:00",
+  "date" : "2026-09-12T16:17:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

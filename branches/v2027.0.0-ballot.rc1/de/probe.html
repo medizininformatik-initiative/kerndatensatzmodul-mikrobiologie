@@ -321,7 +321,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p class="bg-warning"><strong>Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?</strong>
 Jedes Untersuchungsprofil dieses Moduls verlangt <code class="language-plaintext highlighter-rouge">Observation.specimen</code>. Die
-Anforderung stammt nicht allein aus diesem Leitfaden: Das europäische Whitepaper
+Anforderung stammt nicht allein aus diesem Leitfaden: Die HL7 EU Lab Semantic Workgroup
 hält fest, dass die Probe <strong>immer</strong> ausdrücklich in einer
 FHIR-Specimen-Ressource abzubilden ist, bevorzugt in <code class="language-plaintext highlighter-rouge">Specimen.type</code> mit SNOMED
 CT — und sagt ausdrücklich, dass das auch dann gilt, <em>wenn der LOINC-Code die
@@ -386,8 +386,10 @@ Lagerprozess-Slice <code class="language-plaintext highlighter-rouge">processing
 bitten um Rückmeldung im Ballot, falls Sie davon betroffen sind.</p>
 
 <p>Die Färbetechnik wird deshalb <strong>nicht</strong> unter
-<code class="language-plaintext highlighter-rouge">Specimen.processing.procedure</code> angegeben, wie das europäische Datenmodell es
-vorschlägt, sondern in <code class="language-plaintext highlighter-rouge">Observation.method</code> — siehe
+<code class="language-plaintext highlighter-rouge">Specimen.processing.procedure</code> angegeben, wie die HL7 EU Lab Semantic Workgroup
+es vorschlägt, sondern in einer Extension an der Observation,
+<a href="StructureDefinition-mii-ex-mikrobio-faerbung.html"><code class="language-plaintext highlighter-rouge">extension[faerbung]</code></a>, mit
+denselben Codes — siehe
 <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Mikroskopie</a>, wo
 Ballotfrage 2 die Begründung enthält.</p>
 
@@ -443,7 +445,7 @@ Bebrütung nicht ab, solange die Antwort fehlt.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 11, 2026 12:56+0000">2026-09-11</span>
+          Erstellt <span title="Sat, Sep 12, 2026 16:17+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

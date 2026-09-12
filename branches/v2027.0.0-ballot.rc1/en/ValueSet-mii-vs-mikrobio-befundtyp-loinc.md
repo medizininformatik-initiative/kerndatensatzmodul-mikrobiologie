@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-befundtyp-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_VS_Mikrobio_Befundtyp_LOINC |
+| Active as of 2026-09-12 | *Computable Name*:MII_VS_Mikrobio_Befundtyp_LOINC |
 | **Copyright/Legal**: This content LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use | |
 
  
@@ -43,7 +43,7 @@ Sepzalisierte Kodierung von mikrobiologischen Befunden
   "title" : "MII VS Mikrobio Befundtyp [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:56:10+00:00",
+  "date" : "2026-09-12T16:17:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

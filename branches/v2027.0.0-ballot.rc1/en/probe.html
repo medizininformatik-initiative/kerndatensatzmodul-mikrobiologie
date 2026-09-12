@@ -352,7 +352,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p class="bg-warning"><strong>Ballot question 1 — can you supply a Specimen resource for every result?</strong>
 Every investigation profile in this module requires <code class="language-plaintext highlighter-rouge">Observation.specimen</code>. The
-requirement does not originate with this guide alone: the European white paper
+requirement does not originate with this guide alone: the HL7 EU Lab Semantic Workgroup
 states that the specimen <strong>shall always</strong> be represented explicitly in a FHIR
 Specimen resource, preferably in <code class="language-plaintext highlighter-rouge">Specimen.type</code> using SNOMED CT — and expressly
 says this holds <em>even where the LOINC code already carries the specimen</em>.</p>
@@ -410,8 +410,10 @@ slice <code class="language-plaintext highlighter-rouge">processing:lagerprozess
 ballot if you are affected.</p>
 
 <p>The staining technique is consequently <strong>not</strong> given under
-<code class="language-plaintext highlighter-rouge">Specimen.processing.procedure</code>, as the European data model proposes, but in
-<code class="language-plaintext highlighter-rouge">Observation.method</code> — see
+<code class="language-plaintext highlighter-rouge">Specimen.processing.procedure</code>, as the HL7 EU Lab Semantic Workgroup proposes,
+but in an extension on the Observation,
+<a href="StructureDefinition-mii-ex-mikrobio-faerbung.html"><code class="language-plaintext highlighter-rouge">extension[faerbung]</code></a>, with
+the same codes — see
 <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">Microscopy</a>, where ballot
 question 2 sets out the reasoning.</p>
 
@@ -467,7 +469,7 @@ answer is in.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 11, 2026 12:56+0000">2026-09-11</span>
+          Generated <span title="Sat, Sep 12, 2026 16:17+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -12,7 +12,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for MII_IG_Mikrobiologie</h1>
- <p>Generated Fri Sep 11 13:06:10 UTC 2026, FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 (canonical = <a href="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio">https://www.medizininformatik-initiative.de/fhir/modul-mikrobio</a> (<a href="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html">history</a>))</p>
+ <p>Generated Sat Sep 12 16:29:50 UTC 2026, FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 (canonical = <a href="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio">https://www.medizininformatik-initiative.de/fhir/modul-mikrobio</a> (<a href="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -63,10 +63,6 @@
   <li>
     <b>default-canonical-version</b>
 :     <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur|2027.0.0-ballot.rc1</code>
-  </li>
-  <li>
-    <b>default-canonical-version</b>
-:     <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur|2027.0.0-ballot.rc1</code>
   </li>
   <li>
     <b>default-canonical-version</b>
@@ -673,6 +669,13 @@
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://unitsofmeasure.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td></td>
@@ -764,13 +767,6 @@
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td>null</td>
-    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
-    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td></td>
@@ -906,21 +902,14 @@
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td></td>
+    <td>null</td>
     <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td></td>
-    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
-    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>null</td>
+    <td></td>
     <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
@@ -990,7 +979,7 @@
   <tr>
     <td>Use primary server for urn:ietf:bcp:47</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>urn:uuid:9e3682b0-051a-483f-b584-2a782c7b5f9e|1</td>
+    <td>urn:uuid:5b6f7791-3a33-49a0-b1cd-ff835d197c22|1</td>
     <td>urn:ietf:bcp:47</td>
     <td>[urn:ietf:bcp:47]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
@@ -1007,13 +996,6 @@
     <td>null</td>
     <td>urn:iso:std:iso:3166</td>
     <td>[urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
-    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
   </tr>
   <tr>
     <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
@@ -1534,6 +1516,20 @@
     <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
   </tr>
   <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
+    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
+    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://unitsofmeasure.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td>null</td>
@@ -1730,13 +1726,6 @@
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td>null</td>
-    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
-    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
     <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
@@ -1992,36 +1981,15 @@
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td>null</td>
-    <td>[http://loinc.org, http://loinc.org|2.82]</td>
-    <td>[[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
-    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td>null</td>
-    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
-    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
-    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td>null</td>
-    <td>http://loinc.org|2.82</td>
-    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
@@ -2141,6 +2109,13 @@
     <td>null</td>
     <td>[http://loinc.org, http://loinc.org|2.82]</td>
     <td>[[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
+    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
+    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
   </tr>
   <tr>
     <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
@@ -2208,7 +2183,7 @@
   <tr>
     <td>Use primary server for urn:ietf:bcp:47</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>urn:uuid:9e3682b0-051a-483f-b584-2a782c7b5f9e|1</td>
+    <td>urn:uuid:5b6f7791-3a33-49a0-b1cd-ff835d197c22|1</td>
     <td>urn:ietf:bcp:47</td>
     <td>[urn:ietf:bcp:47]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
@@ -2222,7 +2197,7 @@
   <tr>
     <td>Use primary server for urn:ietf:bcp:47</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>urn:uuid:9e3682b0-051a-483f-b584-2a782c7b5f9e|1</td>
+    <td>urn:uuid:5b6f7791-3a33-49a0-b1cd-ff835d197c22|1</td>
     <td>urn:ietf:bcp:47</td>
     <td>[urn:ietf:bcp:47]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
@@ -2339,6 +2314,13 @@
     <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
   </tr>
   <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
@@ -2386,13 +2368,6 @@
     <td>null</td>
     <td>http://snomed.info/sct</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
-    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
   </tr>
   <tr>
     <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
@@ -2481,7 +2456,7 @@
   <tr>
     <td>Use primary server for urn:ietf:bcp:13</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>urn:uuid:97773ea1-e581-440e-a815-3d58a4a76fa8|1</td>
+    <td>urn:uuid:66213777-252f-4525-ba0e-d057bf4ea1bd|1</td>
     <td>urn:ietf:bcp:13</td>
     <td>[urn:ietf:bcp:13]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
@@ -2495,7 +2470,7 @@
   <tr>
     <td>Use primary server for urn:ietf:bcp:13</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>urn:uuid:97773ea1-e581-440e-a815-3d58a4a76fa8|1</td>
+    <td>urn:uuid:66213777-252f-4525-ba0e-d057bf4ea1bd|1</td>
     <td>urn:ietf:bcp:13</td>
     <td>[urn:ietf:bcp:13]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
@@ -2941,6 +2916,20 @@
     <td>[http://unitsofmeasure.org|3.0.1]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-faerbung-snomed|2027.0.0-ballot.rc1</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc|2027.0.0-ballot.rc1</td>
@@ -3244,7 +3233,7 @@
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc|2027.0.0-ballot.rc1</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc|2027.0.0-ballot.rc1</td>
     <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
@@ -3258,28 +3247,14 @@
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed|2027.0.0-ballot.rc1</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed|2027.0.0-ballot.rc1</td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc|2027.0.0-ballot.rc1</td>
-    <td>http://loinc.org|2.82</td>
-    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td>http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips|2.0.1</td>
-    <td>[http://loinc.org, http://loinc.org|2.82]</td>
-    <td>[[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc|2027.0.0-ballot.rc1</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc|2027.0.0-ballot.rc1</td>
     <td>http://loinc.org|2.82</td>
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
@@ -3293,7 +3268,7 @@
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed|2027.0.0-ballot.rc1</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-faerbung-snomed|2027.0.0-ballot.rc1</td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
@@ -3335,7 +3310,42 @@
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed|2027.0.0-ballot.rc1</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-faerbung-snomed|2027.0.0-ballot.rc1</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc|2027.0.0-ballot.rc1</td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips|2.0.1</td>
+    <td>[http://loinc.org, http://loinc.org|2.82]</td>
+    <td>[[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed|2027.0.0-ballot.rc1</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>null</td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
@@ -3550,6 +3560,13 @@
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td>null</td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td>null</td>
@@ -3998,13 +4015,6 @@
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td></td>
-    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
-    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td></td>
@@ -4264,20 +4274,6 @@
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td></td>
-    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
-    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://snomed.info/sct</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td></td>
-    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
-    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
     <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
     <td></td>
@@ -4304,34 +4300,6 @@
     <td></td>
     <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
     <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td></td>
-    <td>http://loinc.org|2.82</td>
-    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td></td>
-    <td>http://loinc.org|2.82</td>
-    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td></td>
-    <td>http://loinc.org|2.82</td>
-    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
-  </tr>
-  <tr>
-    <td>Use primary server for http://loinc.org</td>
-    <td>http://127.0.0.1:8090/fhir</td>
-    <td></td>
-    <td>http://loinc.org|2.82</td>
-    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://snomed.info/sct</td>
@@ -4362,32 +4330,46 @@
     <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
-    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>Use primary server for http://snomed.info/sct</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
-    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
+    <td></td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
-    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
-    <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
+    <td>Use primary server for http://loinc.org</td>
     <td>http://127.0.0.1:8090/fhir</td>
-    <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
-    <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
-    <td>[[http://unstats.un.org/unsd/methods/m49/m49.htm]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166]: authoritative = , candidates=http://127.0.0.1:8090/fhir, [urn:iso:std:iso:3166:-2]: authoritative = , candidates=http://127.0.0.1:8090/fhir]</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://loinc.org</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td></td>
+    <td>http://loinc.org|2.82</td>
+    <td>[http://loinc.org|2.82]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
+  </tr>
+  <tr>
+    <td>Use primary server for http://snomed.info/sct</td>
+    <td>http://127.0.0.1:8090/fhir</td>
+    <td></td>
+    <td>http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701</td>
+    <td>[http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701]: authoritative = , candidates=http://127.0.0.1:8090/fhir</td>
   </tr>
   <tr>
     <td>Use primary server for http://unstats.un.org/unsd/methods/m49/m49.htm</td>
@@ -5567,7 +5549,7 @@
   <tr>
     <td>http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Ffhir.org%2Fpackages%2Fde.medizininformatikinitiative.kerndatensatz.biobank%2FImplementationGuide%2Fde.medizininformatikinitiative.kerndatensatz.biobank&amp;usage=publication">Error resolving valueSet http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Ffhir.org%2Fpackages%2Fde.medizininformatikinitiative.kerndatensatz.biobank%2FImplementationGuide%2Fde.medizininformatikinitiative.kerndatensatz.biobank&amp;usage=publication&amp;nocache=1789131586490</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Ffhir.org%2Fpackages%2Fde.medizininformatikinitiative.kerndatensatz.biobank%2FImplementationGuide%2Fde.medizininformatikinitiative.kerndatensatz.biobank&amp;usage=publication">Error resolving valueSet http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Ffhir.org%2Fpackages%2Fde.medizininformatikinitiative.kerndatensatz.biobank%2FImplementationGuide%2Fde.medizininformatikinitiative.kerndatensatz.biobank&amp;usage=publication&amp;nocache=1789230136854</span>
     </td>
   </tr>
   <tr>
@@ -5575,10 +5557,10 @@
     <td style="background-color: #ffe3e3">
       <ul>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org&amp;usage=publication">Error resolving CodeSystem http://loinc.org: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org&amp;usage=publication&amp;nocache=1789131464700</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org&amp;usage=publication">Error resolving CodeSystem http://loinc.org: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org&amp;usage=publication&amp;nocache=1789229974111</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Floinc.org&amp;usage=publication">Error resolving valueSet http://loinc.org: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Floinc.org&amp;usage=publication&amp;nocache=1789131495811</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Floinc.org&amp;usage=publication">Error resolving valueSet http://loinc.org: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Floinc.org&amp;usage=publication&amp;nocache=1789230016786</span>
         </li>
       </ul>
     </td>
@@ -5588,31 +5570,31 @@
     <td style="background-color: #ffe3e3">
       <ul>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;nocache=1789131464707</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;nocache=1789229974119</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en%2C+en-US">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en%2C+en-US&amp;nocache=1789131466699</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en%2C+en-US">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en%2C+en-US&amp;nocache=1789229976904</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en&amp;nocache=1789131496149</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en&amp;nocache=1789230017259</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en&amp;nocache=1789131496473</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en&amp;nocache=1789230017736</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;nocache=1789131564548</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;nocache=1789230109263</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en%2C+en-US">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en%2C+en-US&amp;nocache=1789131657883</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en%2C+en-US">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=en%2C+en-US&amp;nocache=1789230229821</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=de">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=de&amp;nocache=1789131679828</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=de">Error resolving system http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;language=de&amp;nocache=1789230260824</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication">Error resolving CodeSystem http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;nocache=1789131739692</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication">Error resolving CodeSystem http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;nocache=1789230331269</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication">Error resolving valueSet http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;nocache=1789131739697</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication">Error resolving valueSet http://loinc.org|2.82: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Floinc.org%7C2.82&amp;usage=publication&amp;nocache=1789230331274</span>
         </li>
       </ul>
     </td>
@@ -5620,7 +5602,7 @@
   <tr>
     <td>http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl&amp;usage=publication&amp;language=en">Error resolving system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl&amp;usage=publication&amp;language=en&amp;nocache=1789131554161</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl&amp;usage=publication&amp;language=en">Error resolving system http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl&amp;usage=publication&amp;language=en&amp;nocache=1789230096466</span>
     </td>
   </tr>
   <tr>
@@ -5628,10 +5610,10 @@
     <td style="background-color: #ffe3e3">
       <ul>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct&amp;usage=publication">Error resolving CodeSystem http://snomed.info/sct: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct&amp;usage=publication&amp;nocache=1789131463552</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct&amp;usage=publication">Error resolving CodeSystem http://snomed.info/sct: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct&amp;usage=publication&amp;nocache=1789229972626</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fsnomed.info%2Fsct&amp;usage=publication">Error resolving valueSet http://snomed.info/sct: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fsnomed.info%2Fsct&amp;usage=publication&amp;nocache=1789131492557</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fsnomed.info%2Fsct&amp;usage=publication">Error resolving valueSet http://snomed.info/sct: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fsnomed.info%2Fsct&amp;usage=publication&amp;nocache=1789230012193</span>
         </li>
       </ul>
     </td>
@@ -5641,31 +5623,31 @@
     <td style="background-color: #ffe3e3">
       <ul>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;nocache=1789131463566</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;nocache=1789229972641</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en%2C+en-US">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en%2C+en-US&amp;nocache=1789131478397</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en%2C+en-US">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en%2C+en-US&amp;nocache=1789229987982</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en&amp;nocache=1789131492879</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en&amp;nocache=1789230012673</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en&amp;nocache=1789131493228</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en&amp;nocache=1789230013143</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en%2C+en-US">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en%2C+en-US&amp;nocache=1789131658610</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en%2C+en-US">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=en%2C+en-US&amp;nocache=1789230230736</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;nocache=1789131692225</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;nocache=1789230276003</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=de">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=de&amp;nocache=1789131694715</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=de">Error resolving system http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;language=de&amp;nocache=1789230279079</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication">Error resolving CodeSystem http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;nocache=1789131740013</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication">Error resolving CodeSystem http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;nocache=1789230331728</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication">Error resolving valueSet http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;nocache=1789131740018</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication">Error resolving valueSet http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fsnomed.info%2Fsct%7Chttp%3A%2F%2Fsnomed.info%2Fsct%2F900000000000207008%2Fversion%2F20260701&amp;usage=publication&amp;nocache=1789230331733</span>
         </li>
       </ul>
     </td>
@@ -5673,13 +5655,13 @@
   <tr>
     <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fobservation-category&amp;usage=publication&amp;language=en">Error resolving system http://terminology.hl7.org/CodeSystem/observation-category: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fobservation-category&amp;usage=publication&amp;language=en&amp;nocache=1789131597177</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fobservation-category&amp;usage=publication&amp;language=en">Error resolving system http://terminology.hl7.org/CodeSystem/observation-category: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fobservation-category&amp;usage=publication&amp;language=en&amp;nocache=1789230150201</span>
     </td>
   </tr>
   <tr>
     <td>http://terminology.hl7.org/CodeSystem/v2-0074</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fv2-0074&amp;usage=publication&amp;language=en">Error resolving system http://terminology.hl7.org/CodeSystem/v2-0074: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fv2-0074&amp;usage=publication&amp;language=en&amp;nocache=1789131595715</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fv2-0074&amp;usage=publication&amp;language=en">Error resolving system http://terminology.hl7.org/CodeSystem/v2-0074: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Fterminology.hl7.org%2FCodeSystem%2Fv2-0074&amp;usage=publication&amp;language=en&amp;nocache=1789230148125</span>
     </td>
   </tr>
   <tr>
@@ -5687,16 +5669,16 @@
     <td style="background-color: #ffe3e3">
       <ul>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;language=en">Error resolving system http://unitsofmeasure.org|3.0.1: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;language=en&amp;nocache=1789131454923</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;language=en">Error resolving system http://unitsofmeasure.org|3.0.1: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;language=en&amp;nocache=1789229962621</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;language=de">Error resolving system http://unitsofmeasure.org|3.0.1: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;language=de&amp;nocache=1789131455259</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;language=de">Error resolving system http://unitsofmeasure.org|3.0.1: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;language=de&amp;nocache=1789229963074</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication">Error resolving system http://unitsofmeasure.org|3.0.1: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;nocache=1789131466304</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication">Error resolving system http://unitsofmeasure.org|3.0.1: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;nocache=1789229976448</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication">Error resolving system http://unitsofmeasure.org|3.0.1: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;nocache=1789131501223</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication">Error resolving system http://unitsofmeasure.org|3.0.1: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funitsofmeasure.org%7C3.0.1&amp;usage=publication&amp;nocache=1789230024403</span>
         </li>
       </ul>
     </td>
@@ -5706,10 +5688,10 @@
     <td style="background-color: #ffe3e3">
       <ul>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49.htm&amp;usage=publication&amp;language=en">Error resolving system http://unstats.un.org/unsd/methods/m49/m49.htm: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49.htm&amp;usage=publication&amp;language=en&amp;nocache=1789131490215</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49.htm&amp;usage=publication&amp;language=en">Error resolving system http://unstats.un.org/unsd/methods/m49/m49.htm: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49.htm&amp;usage=publication&amp;language=en&amp;nocache=1789230009715</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49.htm&amp;usage=publication&amp;language=en-US">Error resolving system http://unstats.un.org/unsd/methods/m49/m49.htm: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49.htm&amp;usage=publication&amp;language=en-US&amp;nocache=1789131755897</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49.htm&amp;usage=publication&amp;language=en-US">Error resolving system http://unstats.un.org/unsd/methods/m49/m49.htm: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=http%3A%2F%2Funstats.un.org%2Funsd%2Fmethods%2Fm49%2Fm49.htm&amp;usage=publication&amp;language=en-US&amp;nocache=1789230348877</span>
         </li>
       </ul>
     </td>
@@ -5717,49 +5699,49 @@
   <tr>
     <td>http://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fcore%2Fmodul-labor%2FImplementationGuide%2Fmii-ig-labor&amp;usage=publication">Error resolving valueSet http://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fcore%2Fmodul-labor%2FImplementationGuide%2Fmii-ig-labor&amp;usage=publication&amp;nocache=1789131586171</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fcore%2Fmodul-labor%2FImplementationGuide%2Fmii-ig-labor&amp;usage=publication">Error resolving valueSet http://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fcore%2Fmodul-labor%2FImplementationGuide%2Fmii-ig-labor&amp;usage=publication&amp;nocache=1789230136386</span>
     </td>
   </tr>
   <tr>
     <td>http://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FImplementationGuide%7C2027.0.0-alpha.5&amp;usage=publication">Error resolving valueSet http://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FImplementationGuide%7C2027.0.0-alpha.5&amp;usage=publication&amp;nocache=1789131584166</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FImplementationGuide%7C2027.0.0-alpha.5&amp;usage=publication">Error resolving valueSet http://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=http%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FImplementationGuide%7C2027.0.0-alpha.5&amp;usage=publication&amp;nocache=1789230133583</span>
     </td>
   </tr>
   <tr>
     <td>https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fcore%2Fmodul-labor%2FImplementationGuide%2Fmii-ig-labor&amp;usage=publication">Error resolving valueSet https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fcore%2Fmodul-labor%2FImplementationGuide%2Fmii-ig-labor&amp;usage=publication&amp;nocache=1789131585832</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fcore%2Fmodul-labor%2FImplementationGuide%2Fmii-ig-labor&amp;usage=publication">Error resolving valueSet https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fcore%2Fmodul-labor%2FImplementationGuide%2Fmii-ig-labor&amp;usage=publication&amp;nocache=1789230135936</span>
     </td>
   </tr>
   <tr>
     <td>https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fext%2Fmodul-onko%2FValueSet%2Fmii-vs-onko-icdo3-topographie&amp;usage=publication">Error resolving valueSet https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fext%2Fmodul-onko%2FValueSet%2Fmii-vs-onko-icdo3-topographie&amp;usage=publication&amp;nocache=1789131572136</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fext%2Fmodul-onko%2FValueSet%2Fmii-vs-onko-icdo3-topographie&amp;usage=publication">Error resolving valueSet https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-icdo3-topographie: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fext%2Fmodul-onko%2FValueSet%2Fmii-vs-onko-icdo3-topographie&amp;usage=publication&amp;nocache=1789230119009</span>
     </td>
   </tr>
   <tr>
     <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis|2027.0.0-ballot.rc1</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FCodeSystem%2Fmii-cs-mikrobio-mrgn-ergebnis%7C2027.0.0-ballot.rc1&amp;usage=publication&amp;language=en">Error resolving system https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis|2027.0.0-ballot.rc1: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FCodeSystem%2Fmii-cs-mikrobio-mrgn-ergebnis%7C2027.0.0-ballot.rc1&amp;usage=publication&amp;language=en&amp;nocache=1789131618383</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FCodeSystem%2Fmii-cs-mikrobio-mrgn-ergebnis%7C2027.0.0-ballot.rc1&amp;usage=publication&amp;language=en">Error resolving system https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis|2027.0.0-ballot.rc1: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FCodeSystem%2Fmii-cs-mikrobio-mrgn-ergebnis%7C2027.0.0-ballot.rc1&amp;usage=publication&amp;language=en&amp;nocache=1789230180446</span>
     </td>
   </tr>
   <tr>
     <td>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FImplementationGuide%7C2027.0.0-alpha.5&amp;usage=publication">Error resolving valueSet https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FImplementationGuide%7C2027.0.0-alpha.5&amp;usage=publication&amp;nocache=1789131583852</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FImplementationGuide%7C2027.0.0-alpha.5&amp;usage=publication">Error resolving valueSet https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;valueSet=https%3A%2F%2Fwww.medizininformatik-initiative.de%2Ffhir%2Fmodul-mikrobio%2FImplementationGuide%7C2027.0.0-alpha.5&amp;usage=publication&amp;nocache=1789230133112</span>
     </td>
   </tr>
   <tr>
     <td>urn:ietf:bcp:13</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aietf%3Abcp%3A13&amp;usage=publication&amp;language=en">Error resolving system urn:ietf:bcp:13: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aietf%3Abcp%3A13&amp;usage=publication&amp;language=en&amp;nocache=1789131582551</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aietf%3Abcp%3A13&amp;usage=publication&amp;language=en">Error resolving system urn:ietf:bcp:13: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aietf%3Abcp%3A13&amp;usage=publication&amp;language=en&amp;nocache=1789230131263</span>
     </td>
   </tr>
   <tr>
     <td>urn:ietf:bcp:47</td>
     <td style="background-color: #ffe3e3">
-      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aietf%3Abcp%3A47&amp;usage=publication&amp;language=en">Error resolving system urn:ietf:bcp:47: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aietf%3Abcp%3A47&amp;usage=publication&amp;language=en&amp;nocache=1789131489568</span>
+      <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aietf%3Abcp%3A47&amp;usage=publication&amp;language=en">Error resolving system urn:ietf:bcp:47: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aietf%3Abcp%3A47&amp;usage=publication&amp;language=en&amp;nocache=1789230008778</span>
     </td>
   </tr>
   <tr>
@@ -5767,13 +5749,13 @@
     <td style="background-color: #ffe3e3">
       <ul>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication">Error resolving system urn:iso:std:iso:3166: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication&amp;nocache=1789131490203</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication">Error resolving system urn:iso:std:iso:3166: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication&amp;nocache=1789230009705</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication&amp;language=en">Error resolving system urn:iso:std:iso:3166: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication&amp;language=en&amp;nocache=1789131490220</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication&amp;language=en">Error resolving system urn:iso:std:iso:3166: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication&amp;language=en&amp;nocache=1789230009721</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication&amp;language=en-US">Error resolving system urn:iso:std:iso:3166: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication&amp;language=en-US&amp;nocache=1789131755904</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication&amp;language=en-US">Error resolving system urn:iso:std:iso:3166: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166&amp;usage=publication&amp;language=en-US&amp;nocache=1789230348883</span>
         </li>
       </ul>
     </td>
@@ -5783,10 +5765,10 @@
     <td style="background-color: #ffe3e3">
       <ul>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166%3A-2&amp;usage=publication&amp;language=en">Error resolving system urn:iso:std:iso:3166:-2: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166%3A-2&amp;usage=publication&amp;language=en&amp;nocache=1789131490226</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166%3A-2&amp;usage=publication&amp;language=en">Error resolving system urn:iso:std:iso:3166:-2: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166%3A-2&amp;usage=publication&amp;language=en&amp;nocache=1789230009726</span>
         </li>
         <li>
-          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166%3A-2&amp;usage=publication&amp;language=en-US">Error resolving system urn:iso:std:iso:3166:-2: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166%3A-2&amp;usage=publication&amp;language=en-US&amp;nocache=1789131755907</span>
+          <span title="http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166%3A-2&amp;usage=publication&amp;language=en-US">Error resolving system urn:iso:std:iso:3166:-2: Refusing to fetch from non-https URL: http://127.0.0.1:8090/tx-reg/resolve?fhirVersion=4.0&amp;url=urn%3Aiso%3Astd%3Aiso%3A3166%3A-2&amp;usage=publication&amp;language=en-US&amp;nocache=1789230348888</span>
         </li>
       </ul>
     </td>
@@ -5794,7 +5776,7 @@
 </table>
 <h2>Primary Server: http://127.0.0.1:8090/fhir</h2>
 <a href="http://127.0.0.1:8090/fhir"></a>
-<p>Use Count: 765. Code Systems used: </p>
+<p>Use Count: 763. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>

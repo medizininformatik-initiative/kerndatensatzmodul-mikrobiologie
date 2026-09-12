@@ -420,8 +420,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>The logical model used to be a directory of the FHIR profiles: its leaf elements were typed with the canonical URLs of the profiles and contained no domain data elements. The information model now describes the data elements with FHIR data types (<code class="language-plaintext highlighter-rouge">CodeableConcept</code>, <code class="language-plaintext highlighter-rouge">Quantity</code>, <code class="language-plaintext highlighter-rouge">Ratio</code>, <code class="language-plaintext highlighter-rouge">dateTime</code>, <code class="language-plaintext highlighter-rouge">Coding</code>, <code class="language-plaintext highlighter-rouge">Reference</code>).</li>
   <li>The model is split across three logical models. This allows relations between the classes to be expressed as <code class="language-plaintext highlighter-rouge">Reference</code>, and the statements that apply to every investigation are defined once on an abstract base class and inherited, instead of being repeated for every investigation type.</li>
   <li>Purely FHIR-technical statements without domain content are not part of the information model; this includes the category slices and the extensions for alternative unit representation and numeric precision.</li>
-  <li>Targeted culture-based detection has been given its own profile and is no longer part of specific determination. The basis is the agreement in HL7 Europe on a uniform microbiology representation in the EHDS context, in which the separation of culture and determination was decided. The delimitation is by method: pathogen-specific culture (LOINC <code class="language-plaintext highlighter-rouge">METHOD_TYP</code> <code class="language-plaintext highlighter-rouge">LP6429-7</code>, SNOMED <code class="language-plaintext highlighter-rouge">703752003</code>) belongs to specific culture, the direct molecular, immunological and biochemical procedures to specific determination.</li>
-  <li>The two axes therefore run cleanly separated: culture answers whether something grows, determination which pathogen it is. Culture results are uniformly growth or no growth, determination results detection or exclusion.</li>
+  <li>Targeted detection stays in one profile whatever the technique - culture, molecular, immunological or biochemical. The question and the type of its answer are the same: is the named target there, <code class="language-plaintext highlighter-rouge">Detected</code> or <code class="language-plaintext highlighter-rouge">Not detected</code>. The culture is stated by the test code, whose method axis carries <code class="language-plaintext highlighter-rouge">Organism specific culture</code>, so it is not repeated in the result. The HL7 EU Lab Semantic Workgroup keeps targeted culture separate and binds growth codes there; this guide deviates and asks about it as ballot question 7.</li>
+  <li>General culture and general determination stay cleanly separated: culture answers whether something grows, determination which pathogen it is. Growth codes are therefore bound on general culture only.</li>
   <li>An indeterminate result is no longer coded via <code class="language-plaintext highlighter-rouge">value[x]</code> but via <code class="language-plaintext highlighter-rouge">Observation.dataAbsentReason</code>.</li>
   <li>The MRE modelling was changed from an organism classification to a category-based status. Previously <code class="language-plaintext highlighter-rouge">valueCodeableConcept</code> carried the concrete resistant organism (e.g. MRSA, VRE) and thereby duplicated information from identification, susceptibility and resistance mechanisms. In addition, the underlying SNOMED subtree was broader than "MRE": single-substance resistances such as <code class="language-plaintext highlighter-rouge">838510005 Linezolid resistant Enterococcus</code> are not automatically multi-resistance.</li>
   <li>Every Observation now expresses the status of <strong>one</strong> named resistance category: <code class="language-plaintext highlighter-rouge">MRSA status = Positive</code>, <code class="language-plaintext highlighter-rouge">VRE status = Negative</code> and so on.</li>
@@ -432,10 +432,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
   <li>Specimens now have a profile. The module required <code class="language-plaintext highlighter-rouge">Observation.specimen</code> for every investigation but gave the reference no target profile, so any Specimen satisfied it. <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-probe</code> derives from the biobank base profile that exists for exactly this purpose, and every investigation profile now points at it.</li>
   <li>Microscopy was split into an open and a targeted half, as culture and determination already were. The distinction is the result space: general microscopy answers with the morphological group seen, targeted microscopy with the semiquantitative grade in which a named object was seen. LOINC separates the two by scale, nominal against ordinal.</li>
-  <li>Microscopy can now carry a morphology together with its amount. "Few Gram-positive cocci" needs two statements and <code class="language-plaintext highlighter-rouge">value[x]</code> carries one, so the amount is a component. Its code comes from an interim CodeSystem of this module until the LOINC code the European model requests exists.</li>
+  <li>Microscopy can now carry a morphology together with its amount. "Few Gram-positive cocci" needs two statements and <code class="language-plaintext highlighter-rouge">value[x]</code> carries one, so the amount is a component. Its code is <code class="language-plaintext highlighter-rouge">103392008 |Semi-quantitative value|</code>, the concept the HL7 EU Lab Semantic Workgroup proposes for it.</li>
+  <li>The staining technique left <code class="language-plaintext highlighter-rouge">Observation.method</code> for an extension of its own, <code class="language-plaintext highlighter-rouge">extension[faerbung]</code>. The element is <code class="language-plaintext highlighter-rouge">0..1</code> and SNOMED CT holds staining and microscopy in separate hierarchies, so only one of the two could be stated; now both can. The extension binds the hierarchy the HL7 EU Lab Semantic Workgroup uses for the stain, <code class="language-plaintext highlighter-rouge">37926009 |Microbial stain method (procedure)|</code>, and is given whenever a stain was used, including where the test code names it. The Workgroup places the stain on <code class="language-plaintext highlighter-rouge">Specimen.processing.procedure</code>; this guide deviates and asks about it as ballot question 2.</li>
   <li>Parasitology became expressible on the result side. Three organism roots were missing — helminths, arachnids and insects — so a worm egg, a scabies mite or a fly larva had no result code. The test code side still depends on a LOINC code that does not yet exist.</li>
-  <li>Serology is exempt from post-coordinating the specimen. The European white paper allows the specimen to stay pre-coordinated there, because few materials are involved and most are serum. The exemption covers the test code only; a Specimen resource is still expected.</li>
-  <li>Susceptibility results may now be given as a category where no measurement exists, which the European model settles explicitly. Two invariants keep that unambiguous, and a third asks for an interpretation where a measurement is given.</li>
+  <li>Serology is exempt from post-coordinating the specimen. The HL7 EU Lab Semantic Workgroup allows the specimen to stay pre-coordinated there, because few materials are involved and most are serum. The exemption covers the test code only; a Specimen resource is still expected.</li>
+  <li>Susceptibility results may now be given as a category where no measurement exists, which the European model settles explicitly. One invariant remains, asking as a warning that a measured value carry an interpretation.</li>
   <li>Points that the sources leave open, or where this guide deviates from them, are now stated as <strong>ballot questions</strong> rather than resolved silently. Seven are open, each on the page it belongs to and collected on the index page. Their answers depend on what sites can deliver, which is why they are put to the ballot rather than decided here.</li>
   <li>The Bartlett score was spelled "Barlett" throughout, in the canonical URLs as well. The score is named after John G. Bartlett; "Barlett" is not a name. Since the misspelling had reached three published canonicals, correcting only the visible text would have left the URLs permanently wrong, so the identifiers were corrected too. This is a breaking change for a typing error, taken deliberately in a major version with a ballot rather than carried forward indefinitely.</li>
   <li>The diagnostic chain is now documented where it is used: every profile that takes part in one states its own position in it, rather than the relations being described only on the profile-selection page.</li>
@@ -458,28 +459,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-kultur</code></td>
-      <td>new</td>
-      <td>since 2027.0.0-alpha.1 represented via <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-bestimmung</code>; up to 2025.0.2 part of <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-kultur-nachweis</code> (binding <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-kulturtests-loinc</code>)</td>
-      <td>Own profile for pathogen-specific culture detection; <code class="language-plaintext highlighter-rouge">code</code> from <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-kultur-tests-loinc</code> (extensible), <code class="language-plaintext highlighter-rouge">value[x]</code> as <code class="language-plaintext highlighter-rouge">CodeableConcept</code> from <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-kultur-ergebnis-snomed</code> (required), <code class="language-plaintext highlighter-rouge">method</code> from <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-kultur-methode-snomed</code> (extensible)</td>
-      <td>Culture-based targeted detections must be moved to the new profile</td>
-      <td>Re-point existing resources with method <code class="language-plaintext highlighter-rouge">703752003</code> or LOINC culture codes to the new profile and change the result from <code class="language-plaintext highlighter-rouge">Positive</code> to <code class="language-plaintext highlighter-rouge">365698005 Organism growth</code>. Anyone migrating directly from 2025.0.2 moves pathogen-specific culture detections from <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-kultur-nachweis</code> straight here and not via specific determination</td>
-    </tr>
-    <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-bestimmung</code></td>
       <td>content updated</td>
-      <td>per its description also covered culture-based procedures; the result ValueSet additionally contained <code class="language-plaintext highlighter-rouge">Positive</code>, <code class="language-plaintext highlighter-rouge">No growth</code> and the full organism ValueSet</td>
-      <td>Restricted to direct molecular, immunological and biochemical detection procedures; result now only detection or exclusion</td>
-      <td>Culture-based instances and results with organism or growth codes are no longer conformant</td>
-      <td>Move culture cases to <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-kultur</code>; represent organism statements via <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-allgemeine-bestimmung</code></td>
+      <td>the result ValueSet additionally contained <code class="language-plaintext highlighter-rouge">Positive</code>, <code class="language-plaintext highlighter-rouge">No growth</code> and the full organism ValueSet</td>
+      <td>still covers targeted detection by any technique, culture included; the result is now only detection or exclusion, and the test and method ValueSets name the culture codes explicitly</td>
+      <td>Results carrying organism or growth codes are no longer conformant</td>
+      <td>Change a targeted culture result from <code class="language-plaintext highlighter-rouge">Organism growth</code> / <code class="language-plaintext highlighter-rouge">No growth</code> to <code class="language-plaintext highlighter-rouge">Detected</code> / <code class="language-plaintext highlighter-rouge">Not detected</code>; represent organism statements via <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-allgemeine-bestimmung</code></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-allgemeine-kultur</code></td>
       <td>content updated</td>
-      <td><code class="language-plaintext highlighter-rouge">value[x]</code> bound to <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-kultur-ergebnis-snomed</code></td>
-      <td><code class="language-plaintext highlighter-rouge">value[x]</code> bound to <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-kultur-ergebnis-snomed</code>, shared by both cultures (required); the detected organism is no longer represented here but via determination</td>
-      <td>The result codes <code class="language-plaintext highlighter-rouge">Positive</code> and <code class="language-plaintext highlighter-rouge">Indeterminate</code> are no longer valid</td>
-      <td>Change results to <code class="language-plaintext highlighter-rouge">365698005</code> or <code class="language-plaintext highlighter-rouge">264868006</code>, indeterminacy via <code class="language-plaintext highlighter-rouge">dataAbsentReason</code></td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> fixed to <code class="language-plaintext highlighter-rouge">11475-1</code>; <code class="language-plaintext highlighter-rouge">value[x]</code> bound to <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-kultur-ergebnis-snomed</code></td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> from <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-kultur-tests-loinc</code> (extensible), which also admits the method-neutral <code class="language-plaintext highlighter-rouge">41852-5</code>, with the new invariant <code class="language-plaintext highlighter-rouge">allgemeine-kultur-method-with-neutral-code</code> requiring <code class="language-plaintext highlighter-rouge">Observation.method</code> for that code; <code class="language-plaintext highlighter-rouge">value[x]</code> bound to <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-kultur-ergebnis-snomed</code>, shared by both cultures (required); the detected organism is no longer represented here but via determination</td>
+      <td>The code binding is a relaxation, every previously valid instance stays valid - but with <code class="language-plaintext highlighter-rouge">41852-5</code> the method becomes mandatory, because only it identifies the investigation as a culture. The result codes <code class="language-plaintext highlighter-rouge">Positive</code> and <code class="language-plaintext highlighter-rouge">Indeterminate</code> are no longer valid</td>
+      <td>Change results to <code class="language-plaintext highlighter-rouge">365698005</code> or <code class="language-plaintext highlighter-rouge">264868006</code>, indeterminacy via <code class="language-plaintext highlighter-rouge">dataAbsentReason</code>. <code class="language-plaintext highlighter-rouge">11475-1</code> remains recommended: it names the technique itself and so distinguishes the culture from general identification, which the European sources leave unaddressed</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-probe</code></td>
@@ -493,7 +486,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-mikroskopie</code></td>
       <td>new</td>
       <td>previously not representable</td>
-      <td>Targeted microscopy: an ordinal LOINC code names the object and the stain, <code class="language-plaintext highlighter-rouge">value[x]</code> carries the semiquantitative grade as <code class="language-plaintext highlighter-rouge">CodeableConcept</code>, or a count per high power field as <code class="language-plaintext highlighter-rouge">Quantity</code> or <code class="language-plaintext highlighter-rouge">Range</code></td>
+      <td>Targeted microscopy: an ordinal LOINC code names the object and the stain, <code class="language-plaintext highlighter-rouge">value[x]</code> carries the semiquantitative grade as <code class="language-plaintext highlighter-rouge">CodeableConcept</code>, or a count per high power field as <code class="language-plaintext highlighter-rouge">Quantity</code> or <code class="language-plaintext highlighter-rouge">Range</code>, and <code class="language-plaintext highlighter-rouge">extension[faerbung]</code> states the stain</td>
       <td>Acid-fast stains, host cell counts and clue cells become codeable; they had no profile before</td>
       <td>Move such findings here from general microscopy, where the amount had to be forced into <code class="language-plaintext highlighter-rouge">interpretation</code></td>
     </tr>
@@ -501,41 +494,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-mikroskopie</code></td>
       <td>content updated</td>
       <td><code class="language-plaintext highlighter-rouge">code</code> fixed to <code class="language-plaintext highlighter-rouge">105059-0</code>; no component; title "Mikroskopie"</td>
-      <td><code class="language-plaintext highlighter-rouge">code</code> from <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc</code> (extensible), which also admits <code class="language-plaintext highlighter-rouge">664-3</code>; new <code class="language-plaintext highlighter-rouge">component[menge]</code> for the semiquantitative amount; <code class="language-plaintext highlighter-rouge">method</code> documents the stain preference; title "Allgemeine Mikroskopie"</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> from <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc</code> (extensible), which also admits <code class="language-plaintext highlighter-rouge">664-3</code>; new <code class="language-plaintext highlighter-rouge">component[menge]</code> for the semiquantitative amount; the stain moves into <code class="language-plaintext highlighter-rouge">extension[faerbung]</code> and <code class="language-plaintext highlighter-rouge">method</code> keeps the microscopy technique; title "Allgemeine Mikroskopie"</td>
       <td>The fixed code is no longer enforced; a morphology and its amount can be sent together</td>
-      <td>No migration needed. <code class="language-plaintext highlighter-rouge">105059-0</code> remains preferred; <code class="language-plaintext highlighter-rouge">664-3</code> frees <code class="language-plaintext highlighter-rouge">Observation.method</code>, which is <code class="language-plaintext highlighter-rouge">0..1</code> and cannot carry stain and microscopy technique at once</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-allgemeine-kultur</code></td>
-      <td>content updated</td>
-      <td><code class="language-plaintext highlighter-rouge">code</code> fixed to <code class="language-plaintext highlighter-rouge">11475-1</code></td>
-      <td><code class="language-plaintext highlighter-rouge">code</code> from <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-kultur-tests-loinc</code> (extensible), which also admits the method-neutral <code class="language-plaintext highlighter-rouge">41852-5</code>; new invariant <code class="language-plaintext highlighter-rouge">allgemeine-kultur-method-with-neutral-code</code> requires <code class="language-plaintext highlighter-rouge">Observation.method</code> for that code</td>
-      <td>A relaxation: every previously valid instance stays valid. With <code class="language-plaintext highlighter-rouge">41852-5</code> the method becomes mandatory, because only it identifies the investigation as a culture</td>
-      <td>No migration needed. <code class="language-plaintext highlighter-rouge">11475-1</code> remains recommended: it names the technique itself and so distinguishes the culture from general identification, which the European sources leave unaddressed</td>
+      <td><code class="language-plaintext highlighter-rouge">105059-0</code> remains preferred. Move stain codes out of <code class="language-plaintext highlighter-rouge">Observation.method</code> into <code class="language-plaintext highlighter-rouge">extension[faerbung]</code>, taking the procedure code instead of the qualifier value - <code class="language-plaintext highlighter-rouge">62777006</code> for <code class="language-plaintext highlighter-rouge">708061008</code></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-empfindlichkeit</code></td>
       <td>content updated</td>
-      <td><code class="language-plaintext highlighter-rouge">value[x]</code> only <code class="language-plaintext highlighter-rouge">Quantity</code>; <code class="language-plaintext highlighter-rouge">method</code> unbound</td>
-      <td><code class="language-plaintext highlighter-rouge">value[x]</code> takes <code class="language-plaintext highlighter-rouge">Quantity</code> or <code class="language-plaintext highlighter-rouge">CodeableConcept</code>; <code class="language-plaintext highlighter-rouge">method</code> bound to <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-empfindlichkeit-methode-snomed</code> (extensible); three invariants: a category requires an interpretation, both must agree, and a measured value should carry an interpretation (warning)</td>
-      <td>A laboratory that reports only SIR no longer has to leave <code class="language-plaintext highlighter-rouge">value[x]</code> empty. Method codes are now constrained where they were free</td>
-      <td>Give an interpretation wherever a categorical value is sent; the norm hangs there and a category without it says nothing</td>
+      <td><code class="language-plaintext highlighter-rouge">value[x]</code> only <code class="language-plaintext highlighter-rouge">Quantity</code>; <code class="language-plaintext highlighter-rouge">method</code> unbound; <code class="language-plaintext highlighter-rouge">^purpose</code> without a delimitation note</td>
+      <td><code class="language-plaintext highlighter-rouge">value[x]</code> takes <code class="language-plaintext highlighter-rouge">Quantity</code> or <code class="language-plaintext highlighter-rouge">CodeableConcept</code>; <code class="language-plaintext highlighter-rouge">method</code> bound to <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-empfindlichkeit-methode-snomed</code> (extensible); the norm is required wherever the category stands - <code class="language-plaintext highlighter-rouge">valueCodeableConcept.extension[Norm]</code> and <code class="language-plaintext highlighter-rouge">interpretation.extension[Norm]</code> are both <code class="language-plaintext highlighter-rouge">1..1</code>; one invariant left, asking as a warning that a measured value carry an interpretation; <code class="language-plaintext highlighter-rouge">^purpose</code> now states that single-substance resistances of an identified pathogen are represented here (e.g. <code class="language-plaintext highlighter-rouge">29258-1</code> with <code class="language-plaintext highlighter-rouge">interpretation</code> R or S) and that targeted detection of a resistant pathogen belongs to specific determination</td>
+      <td>A laboratory that reports only SIR no longer has to leave <code class="language-plaintext highlighter-rouge">value[x]</code> empty, and no longer has to repeat the category in <code class="language-plaintext highlighter-rouge">interpretation</code> to give the norm a place. Method codes are now constrained where they were free</td>
+      <td>State the norm beside the category, wherever you put the category</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-voraussichtliche-empfindlichkeit</code></td>
       <td>content updated</td>
-      <td>description: derived from resistance mechanisms, genes or proteins</td>
+      <td>description: expected susceptibility derived from genotypic findings</td>
       <td>description: derived from genotypic resistance detections; <code class="language-plaintext highlighter-rouge">code</code> documents the boundary against measured susceptibility</td>
       <td>Documentation only, no constraint change</td>
-      <td>The wider wording promised more than LOINC delivers: measured on 2026-09-10 there are 99 <code class="language-plaintext highlighter-rouge">[Susceptibility]</code> codes with method Genotyping and none with an immunoassay method, so a protein-based prediction is not codeable</td>
+      <td>The scope stays genotypic on purpose: measured on 2026-09-10 LOINC has 99 <code class="language-plaintext highlighter-rouge">[Susceptibility]</code> codes with method Genotyping and none with an immunoassay method, so a protein-based prediction is not codeable</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-diagnostic-report</code></td>
       <td>content updated</td>
-      <td><code class="language-plaintext highlighter-rouge">conclusion</code> unmentioned; <code class="language-plaintext highlighter-rouge">result</code> did not accept specific microscopy</td>
-      <td><code class="language-plaintext highlighter-rouge">conclusion</code> documented as the load-bearing element for serological reports; <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-mikroskopie</code> added as a permitted target</td>
-      <td>Reports may reference targeted microscopy; the conclusion has a documented purpose</td>
-      <td>no migration needed</td>
+      <td><code class="language-plaintext highlighter-rouge">result</code> referenced 18 investigation profiles; <code class="language-plaintext highlighter-rouge">category[mibi-sub-category]</code> was <code class="language-plaintext highlighter-rouge">0..1</code>; <code class="language-plaintext highlighter-rouge">conclusion</code> unmentioned</td>
+      <td><code class="language-plaintext highlighter-rouge">result</code> now names the 2027 profile set including targeted microscopy; <code class="language-plaintext highlighter-rouge">category[mibi-sub-category]</code> widened to <code class="language-plaintext highlighter-rouge">0..*</code>; <code class="language-plaintext highlighter-rouge">conclusion</code> documented as the load-bearing element for serological reports</td>
+      <td>Reports covering several study types - e.g. bacteriological and mycological - can give all applicable report types, and may reference targeted microscopy</td>
+      <td>no migration needed; single values transmitted so far remain valid</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-titer</code>, <code class="language-plaintext highlighter-rouge">-aviditaet</code>, <code class="language-plaintext highlighter-rouge">-antigen-antikoerper-quantitativ</code>, <code class="language-plaintext highlighter-rouge">-spezifische-bestimmung</code></td>
@@ -556,10 +541,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-allgemeine-bestimmung</code></td>
       <td>content updated</td>
-      <td>title "MII PR Mikrobio Allgemeine Bestimmung"</td>
-      <td>title "MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)"</td>
-      <td>Title only; id and canonical unchanged</td>
-      <td>"Bestimmung" is ambiguous in a culture context, where the profile in fact carries the MALDI-TOF species identification</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> fixed to <code class="language-plaintext highlighter-rouge">41852-5</code>; title "MII PR Mikrobio Allgemeine Bestimmung"</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> from <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc</code> (extensible); title "MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)"</td>
+      <td>The fixed code is no longer enforced; id and canonical unchanged</td>
+      <td><code class="language-plaintext highlighter-rouge">41852-5</code> stays valid and is part of the new value set. "Bestimmung" is ambiguous in a culture context, where the profile in fact carries the MALDI-TOF species identification</td>
     </tr>
     <tr>
       <td>all Observation profiles of the module</td>
@@ -594,20 +579,28 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Check functional resistance tests previously represented elsewhere against this profile</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-voraussichtliche-empfindlichkeit</code></td>
-      <td>content updated</td>
-      <td>description: expected susceptibility derived from genotypic findings</td>
-      <td>description: derived from the detection of resistance mechanisms, genes or proteins</td>
-      <td>No longer restricted to genotypic findings</td>
-      <td>-</td>
-    </tr>
-    <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-virulenzfaktor</code></td>
       <td>content updated</td>
       <td>description: detection in a specimen</td>
       <td>description: detection in a specimen or an isolate</td>
       <td>Clarification of the investigation material</td>
       <td>-</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-resistenzkategorie-status</code></td>
+      <td>new</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-mre-klasse</code> carried the concrete resistant organism (MRSA, VRE) in <code class="language-plaintext highlighter-rouge">valueCodeableConcept</code></td>
+      <td>one Observation per named resistance category, <code class="language-plaintext highlighter-rouge">Positive</code> / <code class="language-plaintext highlighter-rouge">Negative</code> as the value, the category in <code class="language-plaintext highlighter-rouge">Observation.code</code>, and <code class="language-plaintext highlighter-rouge">derivedFrom</code> <code class="language-plaintext highlighter-rouge">0..*</code> Must Support for the investigations it rests on</td>
+      <td>The MRE statement is no longer an organism classification. <code class="language-plaintext highlighter-rouge">Negative</code> means the pathogen was assessed against the category's criteria and does not meet them - it is not a negative pathogen detection</td>
+      <td>Split organism-valued MRE instances: the category status goes here, the organism into <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-allgemeine-bestimmung</code>, the underlying susceptibility findings into <code class="language-plaintext highlighter-rouge">derivedFrom</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-mre-klasse</code></td>
+      <td>removed/deprecated</td>
+      <td>the MRE class as an organism classification</td>
+      <td>replaced by <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-resistenzkategorie-status</code></td>
+      <td>The canonical no longer resolves; <code class="language-plaintext highlighter-rouge">meta.profile</code> and references must be re-pointed</td>
+      <td>See the row above. The underlying SNOMED subtree was also broader than "MRE": single-substance resistances such as <code class="language-plaintext highlighter-rouge">838510005 Linezolid resistant Enterococcus</code> are not automatically multi-resistance</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-mrgn-klasse</code></td>
@@ -618,28 +611,36 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Move negative cases previously transmitted as a missing Observation or via <code class="language-plaintext highlighter-rouge">dataAbsentReason</code> to <code class="language-plaintext highlighter-rouge">keine-mrgn-klasse</code></td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-empfindlichkeit</code></td>
-      <td>content updated</td>
-      <td><code class="language-plaintext highlighter-rouge">^purpose</code> without a delimitation note</td>
-      <td><code class="language-plaintext highlighter-rouge">^purpose</code> states that single-substance resistances of an identified pathogen are represented here (e.g. <code class="language-plaintext highlighter-rouge">29258-1</code> with <code class="language-plaintext highlighter-rouge">interpretation</code> R or S) and that targeted detection of a resistant pathogen belongs to specific determination or specific culture</td>
-      <td>Documentation only, no constraint change</td>
-      <td>-</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-diagnostic-report</code></td>
-      <td>content updated</td>
-      <td><code class="language-plaintext highlighter-rouge">result</code> referenced 18 investigation profiles; <code class="language-plaintext highlighter-rouge">category[mibi-sub-category]</code> was <code class="language-plaintext highlighter-rouge">0..1</code></td>
-      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-kultur</code> added as a permitted target; <code class="language-plaintext highlighter-rouge">category[mibi-sub-category]</code> widened to <code class="language-plaintext highlighter-rouge">0..*</code></td>
-      <td>Reports can reference specific cultures; reports covering several study types - e.g. bacteriological and mycological - can give all applicable report types</td>
-      <td>no migration needed; single values transmitted so far remain valid</td>
-    </tr>
-    <tr>
       <td>all Observation profiles of the module</td>
       <td>content updated</td>
       <td><code class="language-plaintext highlighter-rouge">dataAbsentReason</code> inherited unbound from the laboratory base</td>
       <td>bound via the shared RuleSet to <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-data-absent-reason</code> (extensible)</td>
       <td>Indeterminate results are represented here instead of via <code class="language-plaintext highlighter-rouge">value[x]</code></td>
       <td>Move occurrences of <code class="language-plaintext highlighter-rouge">82334004</code> from <code class="language-plaintext highlighter-rouge">value[x]</code> to <code class="language-plaintext highlighter-rouge">dataAbsentReason</code></td>
+    </tr>
+    <tr>
+      <td>all Observation profiles of the module</td>
+      <td>content updated</td>
+      <td>each profile sliced <code class="language-plaintext highlighter-rouge">Observation.category</code> itself, and the microbiology category was one CodeableConcept carrying <code class="language-plaintext highlighter-rouge">MB</code>, <code class="language-plaintext highlighter-rouge">26436-6</code>, <code class="language-plaintext highlighter-rouge">laboratory</code> and <code class="language-plaintext highlighter-rouge">18725-2</code> together</td>
+      <td>the slicing comes from the laboratory base profile; the module adds only <code class="language-plaintext highlighter-rouge">category[mibi-category] = MB</code>, while <code class="language-plaintext highlighter-rouge">laboratory</code> and <code class="language-plaintext highlighter-rouge">26436-6</code> sit in the base profile's own <code class="language-plaintext highlighter-rouge">observation-category</code> slice and <code class="language-plaintext highlighter-rouge">18725-2</code> is dropped</td>
+      <td>An instance now carries TWO category entries instead of one with four codings</td>
+      <td>Split the category: <code class="language-plaintext highlighter-rouge">observation-category</code> with <code class="language-plaintext highlighter-rouge">laboratory</code> and <code class="language-plaintext highlighter-rouge">26436-6</code>, plus a separate entry with <code class="language-plaintext highlighter-rouge">MB</code>. See any example</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-ex-mikrobio-faerbung</code></td>
+      <td>new</td>
+      <td>the stain was carried in <code class="language-plaintext highlighter-rouge">Observation.method</code></td>
+      <td>Extension on <code class="language-plaintext highlighter-rouge">Observation</code> with a <code class="language-plaintext highlighter-rouge">CodeableConcept</code> bound to <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-faerbung-snomed</code> (extensible)</td>
+      <td>Stain and microscopy technique can now be stated together, which <code class="language-plaintext highlighter-rouge">Observation.method</code> could not at <code class="language-plaintext highlighter-rouge">0..1</code>; the stain is readable in one place whichever test code a laboratory picks</td>
+      <td>Move stain codes from <code class="language-plaintext highlighter-rouge">method</code> to the extension and take the procedure code instead of the qualifier value, e.g. <code class="language-plaintext highlighter-rouge">62777006</code> for <code class="language-plaintext highlighter-rouge">708061008</code>. Give the extension also where the test code names the stain</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-ex-mikrobio-empfindlichkeit-norm</code></td>
+      <td>content updated</td>
+      <td>context <code class="language-plaintext highlighter-rouge">Observation.interpretation</code> only</td>
+      <td>context additionally <code class="language-plaintext highlighter-rouge">Observation.value[x]</code></td>
+      <td>The norm can now be stated where the category stands, so a categorical result no longer has to be repeated in <code class="language-plaintext highlighter-rouge">interpretation</code> just to give the norm a place</td>
+      <td>No migration: widening the context is additive, and instances carrying the norm on <code class="language-plaintext highlighter-rouge">interpretation</code> stay valid</td>
     </tr>
   </tbody>
 </table>
@@ -659,12 +660,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-cs-mikrobio-mikroskopie-komponenten</code> (CodeSystem)</td>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc</code></td>
       <td>new</td>
-      <td>-</td>
-      <td>One interim code, <code class="language-plaintext highlighter-rouge">semiquantitative-menge</code>, for the microscopy component</td>
-      <td>Makes the morphology-plus-amount case expressible</td>
-      <td>INTERIM. To be replaced by the LOINC code the European model requests ("Microscopy" sheet, row 13); the CodeSystem is then retired. Recorded in docs/release-checklist.md</td>
+      <td>the code was fixed in the profile</td>
+      <td>six codes: <code class="language-plaintext highlighter-rouge">41852-5</code>, <code class="language-plaintext highlighter-rouge">23667-9</code>, <code class="language-plaintext highlighter-rouge">42805-2</code>, <code class="language-plaintext highlighter-rouge">41461-5</code>, <code class="language-plaintext highlighter-rouge">66885-5</code>, <code class="language-plaintext highlighter-rouge">101534-6</code>, extensible</td>
+      <td>General determination accepts the identification codes a laboratory actually sends, not one fixed code</td>
+      <td><code class="language-plaintext highlighter-rouge">41852-5</code> stays valid</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-kultur-tests-loinc</code></td>
@@ -702,9 +703,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-empfindlichkeit-methode-snomed</code></td>
       <td>new</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.method</code> was unbound on the susceptibility profile</td>
-      <td>The five techniques the workbook names: broth dilution, disk diffusion, gradient strip, manual and automated MIC microdilution</td>
+      <td>The five techniques the HL7 EU Lab Semantic Workgroup names: broth dilution, disk diffusion, gradient strip, manual and automated MIC microdilution</td>
       <td>Method codes are constrained where they were free</td>
-      <td>The white paper names procedure concepts for the same five techniques; this module keeps qualifier values, as its other nine method lists do. Reported back</td>
+      <td>The HL7 EU Lab Semantic Workgroup names procedure concepts for the same five techniques; this module keeps qualifier values, as its other nine method lists do. Reported back</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-faerbung-snomed</code></td>
+      <td>new</td>
+      <td>-</td>
+      <td>The descendants of <code class="language-plaintext highlighter-rouge">37926009 Microbial stain method (procedure)</code></td>
+      <td>Stains are coded with the same hierarchy the HL7 EU Lab Semantic Workgroup uses, so the value can move to the Specimen later without being recoded</td>
+      <td>The procedure axis, not the qualifier axis used before: <code class="language-plaintext highlighter-rouge">62777006</code> instead of <code class="language-plaintext highlighter-rouge">708061008</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-morphologie-methode-snomed</code></td>
+      <td>content updated</td>
+      <td>microscopy techniques below <code class="language-plaintext highlighter-rouge">278289002</code> and staining techniques below <code class="language-plaintext highlighter-rouge">703857004</code></td>
+      <td><code class="language-plaintext highlighter-rouge">278289002</code> alone</td>
+      <td>Stain codes are no longer valid in <code class="language-plaintext highlighter-rouge">Observation.method</code></td>
+      <td>Move them to <code class="language-plaintext highlighter-rouge">extension[faerbung]</code>, see the extension row above</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-organismen-snomedct</code></td>
@@ -728,22 +745,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>eight units, mL and L mixed without preference</td>
       <td>ten units in three groups; <code class="language-plaintext highlighter-rouge">ng/L</code> and <code class="language-plaintext highlighter-rouge">pg/L</code> added, litre marked as preferred</td>
       <td>All previous units stay valid</td>
-      <td>The European white paper recommends litre for serology; <code class="language-plaintext highlighter-rouge">[IU]/mL</code> remains permitted as the internationally common notation</td>
+      <td>The HL7 EU Lab Semantic Workgroup recommends litre for serology; <code class="language-plaintext highlighter-rouge">[IU]/mL</code> remains permitted as the internationally common notation</td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-kultur-tests-loinc</code></td>
+      <td>all ValueSets and examples of the module</td>
       <td>content updated</td>
-      <td>filter only</td>
-      <td>four excludes: <code class="language-plaintext highlighter-rouge">44851-4</code>, <code class="language-plaintext highlighter-rouge">44852-2</code>, <code class="language-plaintext highlighter-rouge">44854-8</code>, <code class="language-plaintext highlighter-rouge">44855-5</code></td>
-      <td>The numbered Mycobacterium codes leave the set</td>
-      <td>The workbook flags them "Remove"; measured, all four are still <code class="language-plaintext highlighter-rouge">STATUS = ACTIVE</code>, so the status filter does not drop them</td>
+      <td>LOINC and SNOMED CT were referenced without a version</td>
+      <td>LOINC pinned to <code class="language-plaintext highlighter-rouge">2.82</code>, SNOMED CT to the 2026-07-01 international release, in every ValueSet composition and in <code class="language-plaintext highlighter-rouge">Coding.version</code> of the examples</td>
+      <td>Expansions become reproducible for this release line; consumers validating <code class="language-plaintext highlighter-rouge">Coding.version</code> see a value where there was none</td>
+      <td>No migration: the version is additive. A server expanding against another release may return a different expansion</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-bestimmung-methode-snomed</code></td>
       <td>content updated</td>
-      <td>ten techniques</td>
-      <td>eleven; added <code class="language-plaintext highlighter-rouge">702675006</code> probe with target amplification</td>
-      <td>The commonest modern targeted PCR becomes codeable</td>
+      <td>nine techniques</td>
+      <td>twelve; added <code class="language-plaintext highlighter-rouge">702675006</code> probe with target amplification, <code class="language-plaintext highlighter-rouge">1259932009</code> loop-mediated isothermal amplification and <code class="language-plaintext highlighter-rouge">1304162005</code> nucleic acid sequencing</td>
+      <td>The commonest modern targeted PCR, isothermal amplification and sequencing become codeable</td>
       <td>Beside <code class="language-plaintext highlighter-rouge">258066000</code>, not instead of it: not every amplification is probe-based</td>
     </tr>
     <tr>
@@ -760,7 +777,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>filter only</td>
       <td>additionally <code class="language-plaintext highlighter-rouge">106843-6</code> and <code class="language-plaintext highlighter-rouge">103673-0</code>, enumerated</td>
       <td>Two genuine susceptibility tests enter the set</td>
-      <td>Both carry <code class="language-plaintext highlighter-rouge">PROPERTY</code> <code class="language-plaintext highlighter-rouge">Susc</code> but sit in <code class="language-plaintext highlighter-rouge">CLASS</code> MICRO and DRUG/TOX; the workbook itself asks Regenstrief to correct them</td>
+      <td>Both carry <code class="language-plaintext highlighter-rouge">PROPERTY</code> <code class="language-plaintext highlighter-rouge">Susc</code> but sit in <code class="language-plaintext highlighter-rouge">CLASS</code> MICRO and DRUG/TOX; the HL7 EU Lab Semantic Workgroup itself asks Regenstrief to correct them</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-bartlett-score-loinc</code></td>
@@ -787,22 +804,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Move to the new canonical; <code class="language-plaintext highlighter-rouge">Positive</code> to <code class="language-plaintext highlighter-rouge">365698005</code>, <code class="language-plaintext highlighter-rouge">Indeterminate</code> to <code class="language-plaintext highlighter-rouge">dataAbsentReason</code></td>
     </tr>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-kultur-tests-loinc</code></td>
-      <td>new</td>
-      <td>culture codes were part of <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-bestimmung-tests-loinc</code></td>
-      <td>LOINC codes with <code class="language-plaintext highlighter-rouge">METHOD_TYP</code> <code class="language-plaintext highlighter-rouge">LP6429-7</code> (pathogen-specific culture), both with <code class="language-plaintext highlighter-rouge">PROPERTY</code> <code class="language-plaintext highlighter-rouge">LP6850-4</code> (Prid, "[Identifier]") and <code class="language-plaintext highlighter-rouge">LP217195-9</code> (PrThr, "[Presence]")</td>
-      <td>Culture test codes are bound separately. The PrThr terms contain the pathogen-specific detection codes, among them <code class="language-plaintext highlighter-rouge">13316-5</code> (VRE) and <code class="language-plaintext highlighter-rouge">13317-3</code> (MRSA), and are a prerequisite for negative detection results</td>
-      <td>no migration needed provided the profile is changed</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-kultur-methode-snomed</code></td>
-      <td>new</td>
-      <td>-</td>
-      <td><code class="language-plaintext highlighter-rouge">703752003 Microorganism-specific culture technique</code></td>
-      <td>Method coding for specific culture</td>
-      <td>no migration needed</td>
-    </tr>
-    <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-data-absent-reason</code></td>
       <td>new</td>
       <td>-</td>
@@ -825,14 +826,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>nine method types without <code class="language-plaintext highlighter-rouge">LP6429-7</code>, each additionally with <code class="language-plaintext highlighter-rouge">PROPERTY</code> <code class="language-plaintext highlighter-rouge">LP217195-9</code> (PrThr); extended by the individual codes <code class="language-plaintext highlighter-rouge">105904-7</code> (method-neutral VRE detection, <code class="language-plaintext highlighter-rouge">METHOD_TYP</code> empty) and <code class="language-plaintext highlighter-rouge">35492-8</code> (MRSA PCR, listed by LOINC under <code class="language-plaintext highlighter-rouge">CLASS</code> <code class="language-plaintext highlighter-rouge">LP7755-4</code>)</td>
       <td>Culture codes are no longer contained here. The PrThr terms are a prerequisite for negative detection results; the individual codes are not caught by the filters and are therefore included explicitly</td>
       <td>Move culture cases to the new profile and test ValueSet</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-bestimmung-methode-snomed</code></td>
-      <td>content updated</td>
-      <td>contained <code class="language-plaintext highlighter-rouge">703752003</code></td>
-      <td>without the culture method</td>
-      <td>Method <code class="language-plaintext highlighter-rouge">703752003</code> is no longer valid here</td>
-      <td>see above</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed</code></td>
@@ -943,17 +936,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">mii-lm-mikrobio-untersuchungsarten</code></td>
       <td>new</td>
       <td>-</td>
-      <td>The domain variants including specific culture, derived from <code class="language-plaintext highlighter-rouge">mii-lm-mikrobio-untersuchung</code></td>
+      <td>The domain variants, derived from <code class="language-plaintext highlighter-rouge">mii-lm-mikrobio-untersuchung</code>, with <code class="language-plaintext highlighter-rouge">AllgemeineMikroskopie</code> and <code class="language-plaintext highlighter-rouge">SpezifischeMikroskopie</code> as separate variants, <code class="language-plaintext highlighter-rouge">Empfindlichkeit.Ergebnis[x]</code> as <code class="language-plaintext highlighter-rouge">Quantity</code> or <code class="language-plaintext highlighter-rouge">CodeableConcept</code> and <code class="language-plaintext highlighter-rouge">BartlettScore</code> in the corrected spelling</td>
       <td>New artefact in the information model</td>
       <td>Map variant-specific elements against this</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-lm-mikrobio-untersuchungsarten</code></td>
-      <td>content updated</td>
-      <td>one <code class="language-plaintext highlighter-rouge">Mikroskopie</code> element; <code class="language-plaintext highlighter-rouge">Empfindlichkeit.Ergebnis</code> typed <code class="language-plaintext highlighter-rouge">Quantity</code>; <code class="language-plaintext highlighter-rouge">BarlettScore</code></td>
-      <td><code class="language-plaintext highlighter-rouge">AllgemeineMikroskopie</code> and <code class="language-plaintext highlighter-rouge">SpezifischeMikroskopie</code>; <code class="language-plaintext highlighter-rouge">Empfindlichkeit.Ergebnis[x]</code> as <code class="language-plaintext highlighter-rouge">Quantity</code> or <code class="language-plaintext highlighter-rouge">CodeableConcept</code>; <code class="language-plaintext highlighter-rouge">BartlettScore</code></td>
-      <td>The element names of the logical model change</td>
-      <td>The model mirrors the profiles; the change follows the microscopy split, the widened susceptibility result and the Bartlett correction</td>
     </tr>
   </tbody>
 </table>
@@ -975,17 +960,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-cps-mikrobio-metadata</code></td>
       <td>content updated</td>
-      <td>19 supported Observation profiles</td>
-      <td>20; <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-mikroskopie</code> added, <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-barlett-score</code> corrected to <code class="language-plaintext highlighter-rouge">-bartlett-score</code></td>
-      <td>Servers declaring conformance list the new profile</td>
-      <td>Adjust the profile list</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">mii-cps-mikrobio-metadata</code></td>
-      <td>content updated</td>
       <td>18 supported Observation profiles; search parameters without <code class="language-plaintext highlighter-rouge">titer</code></td>
-      <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-kultur</code> added to <code class="language-plaintext highlighter-rouge">supportedProfile</code>; <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-mre-klasse</code> replaced by <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-resistenzkategorie-status</code>; search parameter <code class="language-plaintext highlighter-rouge">titer</code> declared for <code class="language-plaintext highlighter-rouge">Observation</code></td>
-      <td>Servers declare the new profile as well; the canonical of the MRE class is no longer listed</td>
+      <td>19 profiles: <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-mre-klasse</code> replaced by <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-resistenzkategorie-status</code>, <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-mikroskopie</code> added and <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-barlett-score</code> corrected to <code class="language-plaintext highlighter-rouge">-bartlett-score</code>; search parameter <code class="language-plaintext highlighter-rouge">titer</code> declared for <code class="language-plaintext highlighter-rouge">Observation</code></td>
+      <td>Servers declaring conformance list a changed profile set, and the canonical of the MRE class is no longer among them</td>
       <td>Check the <code class="language-plaintext highlighter-rouge">/metadata</code> output and conformance tests against the changed profile set</td>
     </tr>
   </tbody>
@@ -1006,7 +983,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td><code class="language-plaintext highlighter-rouge">Observation-titer</code></td>
+      <td><code class="language-plaintext highlighter-rouge">mii-sp-mikrobio-observation-titer</code></td>
       <td>new</td>
       <td>Titres were not searchable: <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-titer</code> represents the value as a <code class="language-plaintext highlighter-rouge">Ratio</code>, but the base parameter <code class="language-plaintext highlighter-rouge">Observation-value-quantity</code> covers only <code class="language-plaintext highlighter-rouge">Quantity</code> and <code class="language-plaintext highlighter-rouge">SampledData</code></td>
       <td>local SearchParameter <code class="language-plaintext highlighter-rouge">titer</code> (<code class="language-plaintext highlighter-rouge">quantity</code>) on <code class="language-plaintext highlighter-rouge">Observation.value.ofType(Ratio).denominator</code>, included in the CapabilityStatement</td>
@@ -1019,13 +996,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h5 id="examples-and-ig-page-structure">Examples and IG page structure</h5>
 
 <ul>
-  <li>Six new examples, each documenting a case that was not representable before: <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-allgemeine-kultur-methodenneutral</code> (the method-neutral culture code with its mandatory method), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-mikroskopie-gram-kokken-wenig</code> (morphology plus amount as a component), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ</code> and <code class="language-plaintext highlighter-rouge">-kinyoun-zweiplus</code> (acid-fast grades), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld</code> (a count per high power field), and <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-empfindlichkeit-nur-kategorie</code> (a category without a measurement). The microscopy examples are taken from a real laboratory result catalogue.</li>
+  <li>New examples, each documenting a case that was not representable before: <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-allgemeine-kultur-methodenneutral</code> (the method-neutral culture code with its mandatory method), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-mikroskopie-gram-kokken-wenig</code> (morphology plus amount as a component), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ</code> and <code class="language-plaintext highlighter-rouge">-kinyoun-zweiplus</code> (acid-fast grades), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld</code> (a count per high power field), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-empfindlichkeit-nur-kategorie</code> (a category without a measurement) and <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv</code>, which shows the direction of <code class="language-plaintext highlighter-rouge">derivedFrom</code>: the detection points at the Ct value it was read from, where the reference previously sat on <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-ct-wert</code> and ran the other way. The microscopy examples are taken from a real laboratory result catalogue.</li>
+  <li>The examples now share supporting resources instead of inlining them: <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-patient</code>, <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-labor</code> as the performing laboratory, and <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-probe</code> with <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-probe-katheterspitze</code> as specimens against the new Specimen profile.</li>
   <li>Seven ballot questions are stated in the guide, each on the page it belongs to and collected on the index page. New sections explain granularity against axis, the method axis, the serology exemption from specimen post-coordination, the panel pattern for grouping several results, and the test code shared by general culture and general identification.</li>
-  <li><code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-kultur</code> is now based on <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-kultur</code> instead of <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-bestimmung</code>; code and result were changed to a pathogen-specific culture code and <code class="language-plaintext highlighter-rouge">365698005 Organism growth</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-kultur</code> reports <code class="language-plaintext highlighter-rouge">Detected</code> instead of <code class="language-plaintext highlighter-rouge">Organism growth</code>: a targeted culture answers whether the named target is there, and the culture itself is already stated by the test code.</li>
   <li>New page <em>Technical Implementation → Profile Selection and Delimitation</em> delimits targeted pathogen detection, susceptibility testing, MRGN classification and resistance category status against each other and describes the diagnostic chain.</li>
-  <li>New profile page <em>Culture → Specific Culture</em>; the page <em>MRE class</em> was replaced by <em>Resistance category status</em>.</li>
+  <li>The page <em>MRE class</em> was replaced by <em>Resistance category status</em>.</li>
   <li><code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-mre-klasse</code> is dropped. New are two examples for the resistance category status (VRE positive and negative, representative of all categories), negative examples for specific determination and specific culture, an example for <code class="language-plaintext highlighter-rouge">keine-mrgn-klasse</code>, and a three-part example chain (culture → identification → susceptibility) as the basis of the derivation.</li>
-  <li>A seventh example, <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv</code>, shows the direction of <code class="language-plaintext highlighter-rouge">derivedFrom</code>: the detection points at the Ct value it was read from. The reference previously sat on <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-ct-wert</code> and ran the other way.</li>
   <li>New page <em>Guidance for Researchers</em>, and <em>Guidance for Implementers</em> completed. Both follow the structure the Laboratory module uses, and the home page's target-audience boxes route to them.</li>
   <li>The page <em>Use Cases / Information Model → Datasets including descriptions</em> shows all three logical models with their own structure tree and their own element table.</li>
 </ul>
@@ -2138,7 +2115,7 @@ The <code class="language-plaintext highlighter-rouge">category</code> represent
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 11, 2026 12:56+0000">2026-09-11</span>
+          Generated <span title="Sat, Sep 12, 2026 16:17+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

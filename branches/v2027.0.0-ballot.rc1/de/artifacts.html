@@ -668,19 +668,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis wird über MII_PR_Mikrobio_Spezifische_Kultur abgebildet.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html"
-                  title="StructureDefinition/mii-pr-mikrobio-spezifische-kultur">
-                  <span title="StructureDefinition/mii-pr-mikrobio-spezifische-kultur">MII PR Mikrobio Spezifische Kultur
-</span>
-               </a>
-            </td>
-            <td>
-<p>Spezifische Kultur beschreibt das Ergebnis einer zielgerichteten kulturbasierten Untersuchung, die prüft, ob ein vordefinierter Mikroorganismus in der Probe wächst. Das gesuchte Ziel ist bereits im Untersuchungscode benannt; das Ergebnis ist die Aussage über Wachstum.</p>
+<p>Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis liegt ebenfalls hier; das Verfahren steht im Untersuchungscode und in Observation.method.</p>
 </td>
          </tr>
          <tr>
@@ -749,6 +737,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Normative susceptibility interpretation metadata (system, version, category).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-mii-ex-mikrobio-faerbung.html"
+                  title="StructureDefinition/mii-ex-mikrobio-faerbung">
+                  <span title="StructureDefinition/mii-ex-mikrobio-faerbung">MII EX Mikrobio Färbung
+</span>
+               </a>
+            </td>
+            <td>
+<p>Staining technique used for the microscopic examination, coded with the same SNOMED CT hierarchy as the European laboratory coordination.</p>
 </td>
          </tr>
          <tr>
@@ -1025,6 +1025,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-mii-vs-mikrobio-faerbung-snomed.html"
+                  title="ValueSet/mii-vs-mikrobio-faerbung-snomed">
+                  <span title="ValueSet/mii-vs-mikrobio-faerbung-snomed">MII VS Mikrobio Färbung [SNOMED]
+</span>
+               </a>
+            </td>
+            <td>
+<p>Färbeverfahren der mikroskopischen Untersuchung, z. B. Gramfärbung oder Kinyounfärbung.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html"
                   title="ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum">
                   <span title="ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum">MII VS Mikrobio Keimzahl Einheiten [UCUM]
@@ -1140,7 +1152,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich der eingesetzten Färbetechnik.</p>
+<p>Methoden-ValueSet für die Mikroskopie: die eingesetzten mikroskopischen Verfahren. Die Färbung wird nicht hier, sondern in der Extension MII_EX_Mikrobio_Faerbung angegeben.</p>
 </td>
          </tr>
          <tr>
@@ -1237,30 +1249,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Tests-ValueSet fuer die spezifische Bestimmung.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html"
-                  title="ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed">
-                  <span title="ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed">MII VS Mikrobio Spezifische Kultur Methode [SNOMED]
-</span>
-               </a>
-            </td>
-            <td>
-<p>Methoden-ValueSet fuer die spezifische Kultur. Extensible gebunden, damit staerker spezialisierte Kulturverfahren ergaenzt werden koennen.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html"
-                  title="ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc">
-                  <span title="ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc">MII VS Mikrobio Spezifische Kultur Tests [LOINC]
-</span>
-               </a>
-            </td>
-            <td>
-<p>Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, bei denen das gesuchte Ziel bereits im LOINC-Code benannt ist.</p>
 </td>
          </tr>
          <tr>
@@ -1365,18 +1353,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>CodeSystem für Ergebnisse der MRGN-Klassifikation, die sich nicht über LOINC abbilden lassen. Die LOINC-AnswerList LL6195-3 zu 99780-9 enthält ausschließlich 2MRGN, 3MRGN und 4MRGN und damit keinen Negativwert.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-mii-cs-mikrobio-mikroskopie-komponenten.html"
-                  title="CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten">
-                  <span title="CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten">MII CS Mikrobio Mikroskopie Komponenten
-</span>
-               </a>
-            </td>
-            <td>
-<p>Interims-CodeSystem für Komponenten des mikroskopischen Befunds, für die noch kein LOINC-Code existiert. Der enthaltene Code wird ersetzt, sobald der im EU-Datenmodell angeforderte LOINC-Code verfügbar ist.</p>
 </td>
          </tr>
          <tr>
@@ -1552,7 +1528,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Phänotypische Empfindlichkeitstestung, bei der nur die Kategorie berichtet wird und kein Messwert vorliegt.</p>
+<p>Phänotypische Empfindlichkeitstestung, bei der nur die Kategorie berichtet wird und kein Messwert vorliegt; die Norm steht an derselben Stelle wie die Kategorie.</p>
 </td>
          </tr>
          <tr>
@@ -1756,7 +1732,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Zielgerichtete kulturelle Untersuchung auf einen vordefinierten Erreger, hier mit Wachstumsnachweis.</p>
+<p>Zielgerichteter Nachweis eines vordefinierten Erregers, kulturell durchgeführt und hier positiv.</p>
 </td>
          </tr>
          <tr>
@@ -1768,7 +1744,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </a>
             </td>
             <td>
-<p>Negativer VRE-Nachweis mittels erregerspezifischer Kultur: kein Wachstum vancomycinresistenter Enterokokken.</p>
+<p>Negativer VRE-Nachweis mittels erregerspezifischer Kultur.</p>
 </td>
          </tr>
          <tr>
@@ -1925,7 +1901,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 11, 2026 12:56+0000">2026-09-11</span>
+          Erstellt <span title="Sat, Sep 12, 2026 16:17+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

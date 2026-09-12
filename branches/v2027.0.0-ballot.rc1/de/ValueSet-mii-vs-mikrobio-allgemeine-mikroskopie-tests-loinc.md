@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC |
+| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC |
 
  
 Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei. 
@@ -42,7 +42,7 @@ Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikrosk
   "title" : "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:56:10+00:00",
+  "date" : "2026-09-12T16:17:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

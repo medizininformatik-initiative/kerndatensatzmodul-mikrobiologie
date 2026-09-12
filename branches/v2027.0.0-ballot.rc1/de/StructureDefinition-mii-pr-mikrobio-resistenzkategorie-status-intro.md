@@ -48,7 +48,7 @@ Der Kategorienstatus ersetzt keinen zielgerichteten Erregernachweis:
 | Vorgang | Profil | Ergebnis |
 |---|---|---|
 | MRSA-PCR | [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) | `Detected` / `Not detected` |
-| MRSA-Kultur | [Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html) | `Organism growth` / `No growth` |
+| MRSA-Kultur | [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) | `Detected` / `Not detected` |
 | Bewertung eines vorliegenden *S. aureus* als MRSA | Resistenzkategorie-Status | `MRSA-Status` = `Positive` / `Negative` |
 
 Dasselbe Prinzip gilt für VRE und die übrigen Kategorien.

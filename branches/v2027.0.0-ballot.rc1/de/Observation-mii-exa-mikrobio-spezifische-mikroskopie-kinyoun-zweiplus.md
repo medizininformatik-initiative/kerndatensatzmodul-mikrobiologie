@@ -14,6 +14,8 @@
 
 Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md)
 
+**MII EX Mikrobio Färbung**: Acid fast Kinyoun's cold carbolfuchsin stain method
+
 **identifier**: Observation Instance Identifier/spez-mikroskopie-kinyoun-1
 
 **status**: Final
@@ -30,8 +32,6 @@ Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mi
 
 **value**: Present two plus out of three plus
 
-**method**: Acid fast Kinyoun's cold carbolfuchsin stain technique
-
 **specimen**: [Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100](Specimen-mii-exa-mikrobio-probe.md)
 
 
@@ -45,6 +45,17 @@ Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mi
   "meta" : {
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"]
   },
+  "extension" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+        "code" : "36878004",
+        "display" : "Acid fast Kinyoun's cold carbolfuchsin stain method"
+      }]
+    }
+  }],
   "identifier" : [{
     "type" : {
       "coding" : [{
@@ -99,14 +110,6 @@ Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mi
       "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "code" : "441517005",
       "display" : "Present two plus out of three plus"
-    }]
-  },
-  "method" : {
-    "coding" : [{
-      "system" : "http://snomed.info/sct",
-      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
-      "code" : "708128003",
-      "display" : "Acid fast Kinyoun's cold carbolfuchsin stain technique"
     }]
   },
   "specimen" : {

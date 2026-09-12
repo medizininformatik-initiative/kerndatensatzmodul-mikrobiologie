@@ -26,6 +26,14 @@ even though both are targeted: that profile answers `Detected` / `Not detected`,
 this one answers a grade. The same reason keeps colony count out of the culture
 profile.
 
+### Staining
+
+The codes of this profile usually name the stain themselves, and it is given in
+`extension[faerbung]` all the same — that is where a consumer reads it, whichever
+code the laboratory chose, and where the concrete variant appears when the code
+names only the class ("Acid fast stain" against Kinyoun). Where it belongs is
+[ballot question 2](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2).
+
 ### Why the grade is the value
 
 Because the test code is ordinal, the grade **is** the answer to the question the

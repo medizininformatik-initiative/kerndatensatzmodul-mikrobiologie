@@ -326,7 +326,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Nachweis, Empfindlichkeitstestung und Klassifikation sind unterschiedliche diagnostische Aussagen und werden in diesem Modul über unterschiedliche Profile abgebildet. Diese Seite beschreibt die Abgrenzung, die Darstellung negativer Ergebnisse und die Verknüpfung der Untersuchungen zu einer diagnostischen Kette.</p>
 
 <blockquote>
-  <p><strong>Kernsatz:</strong> Ein negatives Ergebnis eines zielgerichteten Erregernachweises wird über Spezifische Bestimmung bzw. Spezifische Kultur abgebildet. MRGN-Klassifikation und Resistenzkategorie-Status setzen dagegen einen bereits nachgewiesenen Erreger voraus und ersetzen keinen Nachweistest.</p>
+  <p><strong>Kernsatz:</strong> Ein negatives Ergebnis eines zielgerichteten Erregernachweises wird unabhängig vom Verfahren über Spezifische Bestimmung bzw. Spezifische Kultur abgebildet. MRGN-Klassifikation und Resistenzkategorie-Status setzen dagegen einen bereits nachgewiesenen Erreger voraus und ersetzen keinen Nachweistest.</p>
 </blockquote>
 
 <h3 id="welche-profile-gehören-zu-meinem-laborbereich">Welche Profile gehören zu meinem Laborbereich?</h3>
@@ -347,7 +347,6 @@ Bestimmung bedient deshalb die molekulare Bank und die Serologie gleichermaßen.
   </li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html">Spezifische Mikroskopie</a> — das Objekt steht im Code, das Ergebnis ist seine semiquantitative Stufe</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">Allgemeine Kultur</a> — Wachstum oder kein Wachstum, ungerichtet</li>
-  <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">Spezifische Kultur</a> — Wachstum oder kein Wachstum, gerichtet, z. B. MRSA-Screening</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">Keimzahl</a> — lebensfähige Keime je Volumen oder Masse</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">Allgemeine Bestimmung</a> — Speziesidentifizierung, typischerweise MALDI-TOF-MS</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">Empfindlichkeit</a> — phänotypische Testung, S/I/R mit MHK oder Hemmhofdurchmesser</li>
@@ -477,7 +476,7 @@ erzwungen.</p>
 
 <p>Überall sonst bevorzugt dieses Modul Untersuchungscodes, die das Material
 weglassen, und lässt es von <code class="language-plaintext highlighter-rouge">Specimen.type</code> tragen. Die Serologie ist davon
-bewusst ausgenommen. Das europäische Whitepaper nennt den Grund:</p>
+bewusst ausgenommen. Die HL7 EU Lab Semantic Workgroup nennt den Grund:</p>
 
 <blockquote>
   <p>In comparison with culture techniques, far fewer specimen types are involved in
@@ -509,7 +508,7 @@ einzelnen. Diese Aussage gehört in <code class="language-plaintext highlighter-
 
 <h3 id="die-methode-gehört-in-observationmethod">Die Methode gehört in <code class="language-plaintext highlighter-rouge">Observation.method</code></h3>
 
-<p>Das europäische Whitepaper führt das als Grundsatz und formuliert es schärfer,
+<p>Die HL7 EU Lab Semantic Workgroup führt das als Grundsatz und formuliert es schärfer,
 als man erwarten würde:</p>
 
 <blockquote>
@@ -520,8 +519,11 @@ the method consistently in <code class="language-plaintext highlighter-rouge">Ob
 
 <p>Die Methode ist also auch dann anzugeben, wenn der Untersuchungscode sie bereits
 trägt — eine Kultur unter <code class="language-plaintext highlighter-rouge">11475-1 |… by Culture|</code> soll trotzdem sagen, ob aerob
-oder anaerob bebrütet wurde, und ein Grampräparat unter <code class="language-plaintext highlighter-rouge">664-3 |… by Gram stain|</code>
-soll trotzdem die Färbung nennen.</p>
+oder anaerob bebrütet wurde. In der Mikroskopie ist die Färbung nicht Teil der
+Methode: Sie steht in
+<a href="StructureDefinition-mii-ex-mikrobio-faerbung.html"><code class="language-plaintext highlighter-rouge">extension[faerbung]</code></a>, auch
+wenn der Untersuchungscode sie nennt, und <code class="language-plaintext highlighter-rouge">Observation.method</code> trägt das
+Mikroskopieverfahren.</p>
 
 <p>Dieser Leitfaden hält das als <strong>Empfehlung</strong> fest, nicht als Pflicht.
 <code class="language-plaintext highlighter-rouge">Observation.method</code> ist im Labor-Basisprofil <code class="language-plaintext highlighter-rouge">0..1</code> Must Support, und eine
@@ -532,7 +534,7 @@ Kultur mit dem methodenneutralen Code <code class="language-plaintext highlighte
 <p><a id="ballot-question-6"></a></p>
 
 <p class="bg-warning"><strong>Ballotfrage 6 — können Sie zu jedem Befund <code class="language-plaintext highlighter-rouge">Observation.method</code> liefern?</strong>
-Das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur. Wir bitten um Rückmeldung, ob eine Pflicht an Ihrem Standort erfüllbar wäre. Wenn ja, kann eine
+Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur. Wir bitten um Rückmeldung, ob eine Pflicht an Ihrem Standort erfüllbar wäre. Wenn ja, kann eine
 spätere Version <code class="language-plaintext highlighter-rouge">Observation.method</code> auf <code class="language-plaintext highlighter-rouge">1..1</code> heben, und das Sonderinvariant
 der Allgemeinen Kultur wird überflüssig. Daraus folgt ein Zweites: Ist
 die Methode immer vorhanden, ist <code class="language-plaintext highlighter-rouge">41852-5</code> samt Methode überall eindeutig, und
@@ -591,8 +593,8 @@ Mikroskop gestellt wurde.</p>
       <td><code class="language-plaintext highlighter-rouge">Detected</code> / <code class="language-plaintext highlighter-rouge">Not detected</code></td>
     </tr>
     <tr>
-      <td>Wächst ein vordefinierter Mikroorganismus?</td>
-      <td>Spezifische Kultur</td>
+      <td>Ist ein vordefinierter Mikroorganismus da, kulturell gesucht?</td>
+      <td>Spezifische Bestimmung</td>
       <td>LOINC-Kulturtest, z. B. <code class="language-plaintext highlighter-rouge">13316-5</code></td>
       <td><code class="language-plaintext highlighter-rouge">Organism growth</code> / <code class="language-plaintext highlighter-rouge">No growth</code></td>
     </tr>
@@ -668,10 +670,10 @@ Mikroskop gestellt wurde.</p>
   </thead>
   <tbody>
     <tr>
-      <td>VRE wurde gesucht und nicht gefunden</td>
-      <td>Spezifische Kultur</td>
+      <td>VRE wurde kulturell gesucht und nicht gefunden</td>
+      <td>Spezifische Bestimmung</td>
       <td><code class="language-plaintext highlighter-rouge">13316-5</code></td>
-      <td><code class="language-plaintext highlighter-rouge">No growth</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Not detected</code></td>
     </tr>
     <tr>
       <td>VRE wurde gesucht und nicht gefunden (molekular)</td>
@@ -729,7 +731,7 @@ Mikroskop gestellt wurde.</p>
 <h3 id="mehrere-ergebnisse-zusammenfassen-das-panel">Mehrere Ergebnisse zusammenfassen: das Panel</h3>
 
 <p>Ein Antibiogramm ist kein Ergebnis, sondern viele — je getestete Substanz eine
-Observation. Das europäische Whitepaper empfiehlt, sie über eine
+Observation. Die HL7 EU Lab Semantic Workgroup empfiehlt, sie über eine
 <strong>Organizer-Observation</strong> zusammenzuhalten: eine Observation, die den Panel-Code
 <code class="language-plaintext highlighter-rouge">29576-6 |Bacterial susceptibility panel|</code> trägt und selbst kein <code class="language-plaintext highlighter-rouge">value[x]</code> hat
 und die über <code class="language-plaintext highlighter-rouge">Observation.hasMember</code> auf die Einzelergebnisse zeigt. Der Organizer
@@ -784,7 +786,7 @@ FHIR bereits regelt.</p>
 <p>Ein positiver zielgerichteter Nachweis kann Folgediagnostik auslösen:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Positiver zielgerichteter Nachweis
-(Spezifische Bestimmung oder Spezifische Kultur)
+(Spezifische Bestimmung, jedes Verfahren)
         │
         │ triggeredBy (reflex)
         ▼
@@ -850,7 +852,7 @@ Resistenzkategorie-Status
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Sep 11, 2026 12:56+0000">2026-09-11</span>
+          Erstellt <span title="Sat, Sep 12, 2026 16:17+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

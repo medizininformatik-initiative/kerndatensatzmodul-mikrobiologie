@@ -14,7 +14,6 @@ Die 2027er Modellierung verwendet eigenständige Observation-Profile statt `comp
 In diesem Abschnitt werden kulturbezogene Beobachtungen dargestellt (allgemein, Mikroskopie inkl. Bartlett-/Nugent-Score, Keimzahl, Empfindlichkeit).
 
 * [Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md)
-* [Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md)
 * [Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)
 * [Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md)
 * [Bartlett-Score](StructureDefinition-mii-pr-mikrobio-bartlett-score.md)

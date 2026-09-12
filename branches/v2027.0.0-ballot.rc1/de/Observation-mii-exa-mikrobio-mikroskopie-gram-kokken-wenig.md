@@ -14,6 +14,8 @@
 
 Profile: [MII PR Mikrobio Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)
 
+**MII EX Mikrobio Färbung**: Gram stain method
+
 **identifier**: Observation Instance Identifier/mikroskopie-gram-1
 
 **status**: Final
@@ -37,7 +39,7 @@ Profile: [MII PR Mikrobio Allgemeine Mikroskopie](StructureDefinition-mii-pr-mik
 | | | |
 | :--- | :--- | :--- |
 | - | **Code** | **Value[x]** |
-| * | Semiquantitative Menge | Few |
+| * | Semi-quantitative value | Few |
 
 
 
@@ -50,6 +52,17 @@ Profile: [MII PR Mikrobio Allgemeine Mikroskopie](StructureDefinition-mii-pr-mik
   "meta" : {
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"]
   },
+  "extension" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+        "code" : "62777006",
+        "display" : "Gram stain method"
+      }]
+    }
+  }],
   "identifier" : [{
     "type" : {
       "coding" : [{
@@ -112,8 +125,10 @@ Profile: [MII PR Mikrobio Allgemeine Mikroskopie](StructureDefinition-mii-pr-mik
   "component" : [{
     "code" : {
       "coding" : [{
-        "system" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten",
-        "code" : "semiquantitative-menge"
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+        "code" : "103392008",
+        "display" : "Semi-quantitative value"
       }]
     },
     "valueCodeableConcept" : {

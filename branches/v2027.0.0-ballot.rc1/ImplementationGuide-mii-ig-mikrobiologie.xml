@@ -146,7 +146,7 @@
   <title value="MII Implementation Guide Microbiology"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-11T12:56:10+00:00"/>
+  <date value="2026-09-12T16:17:49+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -1062,17 +1062,6 @@
         <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten"/>
-      </reference>
-      <name value="MII CS Mikrobio Mikroskopie Komponenten"/>
-      <description value="Interims-CodeSystem für Komponenten des mikroskopischen Befunds, für die noch kein LOINC-Code existiert. Der enthaltene Code wird ersetzt, sobald der im EU-Datenmodell angeforderte LOINC-Code verfügbar ist."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
         <reference value="CodeSystem/mii-cs-mikrobio-mrgn-ergebnis"/>
       </reference>
       <name value="MII CS Mikrobio MRGN Ergebnis"/>
@@ -1110,6 +1099,17 @@
       </reference>
       <name value="MII EX Mikrobio Empfindlichkeit Norm"/>
       <description value="Normative susceptibility interpretation metadata (system, version, category)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/mii-ex-mikrobio-faerbung"/>
+      </reference>
+      <name value="MII EX Mikrobio Färbung"/>
+      <description value="Staining technique used for the microscopic examination, coded with the same SNOMED CT hierarchy as the European laboratory coordination."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1241,7 +1241,7 @@
         <reference value="Observation/mii-exa-mikrobio-empfindlichkeit-nur-kategorie"/>
       </reference>
       <name value="MII EXA Mikrobio Empfindlichkeit nur Kategorie"/>
-      <description value="Phänotypische Empfindlichkeitstestung, bei der nur die Kategorie berichtet wird und kein Messwert vorliegt."/>
+      <description value="Phänotypische Empfindlichkeitstestung, bei der nur die Kategorie berichtet wird und kein Messwert vorliegt; die Norm steht an derselben Stelle wie die Kategorie."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"/>
     </resource>
     <resource>
@@ -1428,8 +1428,8 @@
         <reference value="Observation/mii-exa-mikrobio-spezifische-kultur"/>
       </reference>
       <name value="MII EXA Mikrobio Spezifische Kultur"/>
-      <description value="Zielgerichtete kulturelle Untersuchung auf einen vordefinierten Erreger, hier mit Wachstumsnachweis."/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"/>
+      <description value="Zielgerichteter Nachweis eines vordefinierten Erregers, kulturell durchgeführt und hier positiv."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1439,8 +1439,8 @@
         <reference value="Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ"/>
       </reference>
       <name value="MII EXA Mikrobio Spezifische Kultur VRE negativ"/>
-      <description value="Negativer VRE-Nachweis mittels erregerspezifischer Kultur: kein Wachstum vancomycinresistenter Enterokokken."/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"/>
+      <description value="Negativer VRE-Nachweis mittels erregerspezifischer Kultur."/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1517,7 +1517,7 @@
       </reference>
       <name value="MII EXA Mikrobio Workflow VRE 1 Kultur positiv"/>
       <description value="Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erregerspezifischer Kultur."/>
-      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"/>
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1758,18 +1758,7 @@
         <reference value="StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
       </reference>
       <name value="MII PR Mikrobio Spezifische Bestimmung"/>
-      <description value="Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis wird über MII_PR_Mikrobio_Spezifische_Kultur abgebildet."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/mii-pr-mikrobio-spezifische-kultur"/>
-      </reference>
-      <name value="MII PR Mikrobio Spezifische Kultur"/>
-      <description value="Spezifische Kultur beschreibt das Ergebnis einer zielgerichteten kulturbasierten Untersuchung, die prüft, ob ein vordefinierter Mikroorganismus in der Probe wächst. Das gesuchte Ziel ist bereits im Untersuchungscode benannt; das Ergebnis ist die Aussage über Wachstum."/>
+      <description value="Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis liegt ebenfalls hier; das Verfahren steht im Untersuchungscode und in Observation.method."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2052,6 +2041,17 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/mii-vs-mikrobio-faerbung-snomed"/>
+      </reference>
+      <name value="MII VS Mikrobio Färbung [SNOMED]"/>
+      <description value="Färbeverfahren der mikroskopischen Untersuchung, z. B. Gramfärbung oder Kinyounfärbung."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"/>
       </reference>
       <name value="MII VS Mikrobio Keimzahl Einheiten [UCUM]"/>
@@ -2143,7 +2143,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Morphologie Methode [SNOMED]"/>
-      <description value="Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich der eingesetzten Färbetechnik."/>
+      <description value="Methoden-ValueSet für die Mikroskopie: die eingesetzten mikroskopischen Verfahren. Die Färbung wird nicht hier, sondern in der Extension MII_EX_Mikrobio_Faerbung angegeben."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2243,28 +2243,6 @@
       </reference>
       <name value="MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]"/>
       <description value="Tests-ValueSet fuer die spezifische Bestimmung."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/mii-vs-mikrobio-spezifische-kultur-methode-snomed"/>
-      </reference>
-      <name value="MII VS Mikrobio Spezifische Kultur Methode [SNOMED]"/>
-      <description value="Methoden-ValueSet fuer die spezifische Kultur. Extensible gebunden, damit staerker spezialisierte Kulturverfahren ergaenzt werden koennen."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/mii-vs-mikrobio-spezifische-kultur-tests-loinc"/>
-      </reference>
-      <name value="MII VS Mikrobio Spezifische Kultur Tests [LOINC]"/>
-      <description value="Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, bei denen das gesuchte Ziel bereits im LOINC-Code benannt ist."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

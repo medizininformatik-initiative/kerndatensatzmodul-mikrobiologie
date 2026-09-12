@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_PR_Mikrobio_Spezifische_Mikroskopie |
+| Active as of 2026-09-12 | *Computable Name*:MII_PR_Mikrobio_Spezifische_Mikroskopie |
 
  
 Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis. 
@@ -29,6 +29,10 @@ Both halves are microscopy; what separates them is the question and the type of 
 LOINC usually mirrors that distinction in the scale — nominal where the answer is the object, ordinal where it is a grade — but not reliably. For some stains only the nominal form exists: rhodamine-auramine has no ordinal code at all. Such a finding belongs in general microscopy even though the stain is targeted, because the answer is then the object seen and not a grade. The scale follows the distinction; it does not define it.
 
 This is therefore not the same statement as [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), even though both are targeted: that profile answers `Detected` / `Not detected`, this one answers a grade. The same reason keeps colony count out of the culture profile.
+
+### Staining
+
+The codes of this profile usually name the stain themselves, and it is given in `extension[faerbung]` all the same — that is where a consumer reads it, whichever code the laboratory chose, and where the concrete variant appears when the code names only the class ("Acid fast stain" against Kinyoun). Where it belongs is [ballot question 2](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-2).
 
 ### Why the grade is the value
 
@@ -203,7 +207,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:56:10+00:00",
+  "date" : "2026-09-12T16:17:49+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -268,6 +272,19 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "path" : "Observation.extension.extension",
       "sliceName" : "type",
       "short" : "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+    },
+    {
+      "id" : "Observation.extension:faerbung",
+      "path" : "Observation.extension",
+      "sliceName" : "faerbung",
+      "short" : "Eingesetzte Faerbung. Immer angeben, wenn gefaerbt wurde — auch wenn der Untersuchungscode sie schon nennt.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "Observation.category",
@@ -354,7 +371,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
     {
       "id" : "Observation.method",
       "path" : "Observation.method",
-      "short" : "Entbehrlich, wo die Faerbung bereits im Untersuchungscode steht. Sonst wie bei der Allgemeinen Mikroskopie: bevorzugt die Faerbetechnik, weil Observation.method 0..1 ist und nur eines von Faerbung und Mikroskopieverfahren hineinpasst.",
+      "short" : "Das mikroskopische Verfahren. Die Faerbung gehoert NICHT hierher, sondern in extension[faerbung].",
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"
