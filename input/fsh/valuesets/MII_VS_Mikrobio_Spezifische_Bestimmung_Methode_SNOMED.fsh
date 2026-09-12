@@ -29,13 +29,13 @@ Description: "Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbas
 * $sct#708104000 "Agglutination technique (qualifier value)"
 * $sct#726449005 "Immunoassay technique (qualifier value)"
 * $sct#703444002 "Fluorescent immunoassay (qualifier value)"
-// 703752003 (mikroorganismusspezifische Kulturtechnik) ist nach
-// MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED ausgelagert. Das Blatt
-// "Identification Specific" fuehrt den Code in Zeile 25 und stellt selbst die
-// Frage dazu: "or should this not be allowed, use culture specific profile
-// instead?" — unsere Antwort ist genau das. Ein kulturell durchgefuehrter
-// zielgerichteter Nachweis antwortet mit Wachstum, nicht mit Detected, und hat
-// damit einen anderen Ergebnisraum.
+// 703752003 (mikroorganismusspezifische Kulturtechnik) steht oben in diesem
+// ValueSet. Die HL7 EU Lab Semantic Workgroup stellt zu diesem Code selbst die
+// Frage, ob er hier erlaubt sein soll oder ein eigenes Kulturprofil verlangt.
+// Antwort dieses Moduls seit dem 2026-09-11: Er ist hier erlaubt. Ein kulturell
+// durchgefuehrter zielgerichteter Nachweis antwortet mit Detected oder
+// Not detected wie jeder andere; die Kultur steht im Untersuchungscode. Siehe
+// Ballotfrage 7 im Intro des Profils.
 
 // Aus dem Methodenblock des Blattes "Molecular techniques", der fuer den
 // gezielten wie den allgemeinen Nachweis gilt.

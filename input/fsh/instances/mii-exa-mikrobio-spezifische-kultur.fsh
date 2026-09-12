@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-spezifische-kultur
-InstanceOf: MII_PR_Mikrobio_Spezifische_Kultur
+InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
 Title: "MII EXA Mikrobio Spezifische Kultur"
-Description: "Zielgerichtete kulturelle Untersuchung auf einen vordefinierten Erreger, hier mit Wachstumsnachweis."
+Description: "Zielgerichteter Nachweis eines vordefinierten Erregers, kulturell durchgeführt und hier positiv."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-kultur-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
@@ -13,6 +13,6 @@ Description: "Zielgerichtete kulturelle Untersuchung auf einen vordefinierten Er
 * subject = Reference(mii-exa-mikrobio-patient)
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
-* valueCodeableConcept = $sct#365698005 "Organism growth"
+* valueCodeableConcept = $sct#260373001 "Detected (qualifier value)"
 * method = $sct#703752003 "Organism specific culture"
 * specimen = Reference(mii-exa-mikrobio-probe)

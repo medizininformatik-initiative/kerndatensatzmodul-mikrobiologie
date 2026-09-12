@@ -15,7 +15,7 @@
 // method Real-time PCR - siehe mii-exa-mikrobio-spezifische-bestimmung-vre-negativ
 // fuer den Aufbau dieses Profils.
 Instance: mii-exa-mikrobio-workflow-vre-01-kultur
-InstanceOf: MII_PR_Mikrobio_Spezifische_Kultur
+InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
 Title: "MII EXA Mikrobio Workflow VRE 1 Kultur positiv"
 Description: "Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erregerspezifischer Kultur."
@@ -29,6 +29,6 @@ Description: "Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erre
 * subject = Reference(mii-exa-mikrobio-patient)
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
-* valueCodeableConcept = $sct#365698005 "Organism growth"
+* valueCodeableConcept = $sct#260373001 "Detected (qualifier value)"
 * method = $sct#703752003 "Organism specific culture"
 * specimen = Reference(mii-exa-mikrobio-probe)

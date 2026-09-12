@@ -1,7 +1,7 @@
 // Negativer VRE-Nachweis ueber einen methodenneutralen Nachweistest: 105904-7 legt die
-// Methode nicht fest, daher wird sie ueber Observation.method angegeben. Waere die Methode
-// bereits im Code enthalten (z. B. 13316-5, Organism specific culture), gehoerte der Befund
-// nach MII_PR_Mikrobio_Spezifische_Kultur.
+// Methode nicht fest, daher wird sie ueber Observation.method angegeben. Ein Code, der die
+// Methode selbst nennt — etwa 13316-5, Organism specific culture —, liegt in DEMSELBEN
+// Profil; das Gegenbeispiel dazu ist mii-exa-mikrobio-spezifische-kultur-vre-negativ.
 // Es wird bewusst KEINE Resistenzkategorie-Status-Observation erzeugt: Ein negativer
 // Nachweis bedeutet, dass kein Erreger vorliegt. VRE-Status = Negative setzt dagegen einen
 // vorliegenden, bewertbaren Erreger voraus.

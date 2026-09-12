@@ -22,7 +22,6 @@ Usage: #definition
 * rest.resource.extension.valueCode = #SHALL
 * rest.resource.type = #Observation
 * rest.resource.supportedProfile[0] = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
-* rest.resource.supportedProfile[+] = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"
 * rest.resource.supportedProfile[+] = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
 * rest.resource.supportedProfile[+] = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
 * rest.resource.supportedProfile[+] = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
