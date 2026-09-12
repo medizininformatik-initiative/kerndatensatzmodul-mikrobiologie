@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Allgemeine_Kultur_Tests_LOINC |
+| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Allgemeine_Kultur_Tests_LOINC |
 
  
 Tests-ValueSet für die allgemeine Kultur: LOINC-Codes für die ungerichtete kulturelle Untersuchung. Bevorzugt wird 11475-1, weil der Code das Verfahren selbst benennt; 41852-5 ist gleichwertig zulässig. 
@@ -42,7 +42,7 @@ Tests-ValueSet für die allgemeine Kultur: LOINC-Codes für die ungerichtete kul
   "title" : "MII VS Mikrobio Allgemeine Kultur Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

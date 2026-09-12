@@ -357,7 +357,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Detection, susceptibility testing and classification are different diagnostic statements and are represented in this module by different profiles. This page describes the delimitation, the representation of negative results, and the linking of investigations into a diagnostic chain.</p>
 
 <blockquote>
-  <p><strong>Key statement:</strong> a negative result of a targeted pathogen detection is represented via Specific determination or Specific culture. MRGN classification and resistance category status, by contrast, presuppose an already detected pathogen and do not replace a detection test.</p>
+  <p><strong>Key statement:</strong> a negative result of a targeted pathogen detection is represented via Specific determination, whatever the technique. MRGN classification and resistance category status, by contrast, presuppose an already detected pathogen and do not replace a detection test.</p>
 </blockquote>
 
 <h3 id="which-profiles-belong-to-my-laboratory-area">Which profiles belong to my laboratory area</h3>
@@ -378,7 +378,6 @@ therefore serves the molecular bench and the serology bench alike.</p>
   </li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html">Specific microscopy</a> — the object is named in the code, the result is its semiquantitative grade</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html">General culture</a> — growth or no growth, untargeted</li>
-  <li><a href="StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html">Specific culture</a> — growth or no growth, targeted, e.g. MRSA screening</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-keimzahl.html">Colony count</a> — viable count per volume or mass</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html">General determination</a> — species identification, typically MALDI-TOF MS</li>
   <li><a href="StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html">Susceptibility</a> — phenotypic testing, S/I/R with MIC or zone diameter</li>
@@ -505,7 +504,7 @@ invariant, is not enforced.</p>
 
 <p>Everywhere else this module prefers test codes that leave the specimen out, with
 <code class="language-plaintext highlighter-rouge">Specimen.type</code> carrying it instead. Serology is deliberately exempt. The
-European white paper states the reason:</p>
+HL7 EU Lab Semantic Workgroup states the reason:</p>
 
 <blockquote>
   <p>In comparison with culture techniques, far fewer specimen types are involved in
@@ -538,7 +537,7 @@ statement belongs in <code class="language-plaintext highlighter-rouge">Diagnost
 
 <h3 id="the-method-belongs-in-observationmethod">The method belongs in <code class="language-plaintext highlighter-rouge">Observation.method</code></h3>
 
-<p>The European white paper puts this as a core principle and states it more
+<p>The HL7 EU Lab Semantic Workgroup puts this as a core principle and states it more
 strongly than one might expect:</p>
 
 <blockquote>
@@ -549,8 +548,11 @@ the method consistently in <code class="language-plaintext highlighter-rouge">Ob
 
 <p>So the method is to be given even where the test code already carries it — a
 culture reported under <code class="language-plaintext highlighter-rouge">11475-1 |… by Culture|</code> should still name whether it was
-aerobic or anaerobic, and a Gram preparation under <code class="language-plaintext highlighter-rouge">664-3 |… by Gram stain|</code>
-should still name the stain.</p>
+aerobic or anaerobic. In microscopy the stain is not part of the method: it is
+given in
+<a href="StructureDefinition-mii-ex-mikrobio-faerbung.html"><code class="language-plaintext highlighter-rouge">extension[faerbung]</code></a>, also
+where the test code names it, and <code class="language-plaintext highlighter-rouge">Observation.method</code> keeps the microscopy
+technique.</p>
 
 <p>This guide states that as a <strong>recommendation</strong>, not as a requirement.
 <code class="language-plaintext highlighter-rouge">Observation.method</code> is <code class="language-plaintext highlighter-rouge">0..1</code> Must Support in the laboratory base profile, and
@@ -562,7 +564,7 @@ statement is otherwise ambiguous: General culture with the method-neutral code
 <p><a id="ballot-question-6"></a></p>
 
 <p class="bg-warning"><strong>Ballot question 6 — can you supply <code class="language-plaintext highlighter-rouge">Observation.method</code> for every result?</strong>
-The white paper asks for it always, this guide only recommends it. We ask whether making it mandatory would be deliverable at your site. If
+The HL7 EU Lab Semantic Workgroup asks for it always, this guide only recommends it. We ask whether making it mandatory would be deliverable at your site. If
 it would, a later version can raise <code class="language-plaintext highlighter-rouge">Observation.method</code> to <code class="language-plaintext highlighter-rouge">1..1</code> and the
 special-case invariant on General culture becomes unnecessary. A second consequence follows: if the method is always present, <code class="language-plaintext highlighter-rouge">41852-5</code> plus a method is
 unambiguous everywhere, and the reason this guide recommends the method-bearing
@@ -594,8 +596,7 @@ as well</strong>.</p>
 <p>For a consumer that means one rule: <strong>read the granularity from the profile or
 the test code, never from <code class="language-plaintext highlighter-rouge">value[x]</code> alone.</strong> A query for identified organisms
 that filters only on the value will also return morphological groups from
-microscopy. The test codes are disjoint — <code class="language-plaintext highlighter-rouge">105059-0</code> and <code class="language-plaintext highlighter-rouge">664-3</code> against
-<code class="language-plaintext highlighter-rouge">41852-5</code> — so no ambiguity arises; only a query written carelessly gets more
+microscopy. The test codes are disjoint — the microscopy codes against <code class="language-plaintext highlighter-rouge">41852-5</code> — so no ambiguity arises; only a query written carelessly gets more
 than it asked for.</p>
 
 <p>A species identification never belongs in microscopy, even when it was made down
@@ -620,10 +621,10 @@ a microscope.</p>
       <td><code class="language-plaintext highlighter-rouge">Detected</code> / <code class="language-plaintext highlighter-rouge">Not detected</code></td>
     </tr>
     <tr>
-      <td>Does a predefined microorganism grow?</td>
-      <td>Specific culture</td>
+      <td>Is a predefined microorganism there, sought by culture?</td>
+      <td>Specific determination</td>
       <td>LOINC culture test, e.g. <code class="language-plaintext highlighter-rouge">13316-5</code></td>
-      <td><code class="language-plaintext highlighter-rouge">Organism growth</code> / <code class="language-plaintext highlighter-rouge">No growth</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Detected</code> / <code class="language-plaintext highlighter-rouge">Not detected</code></td>
     </tr>
     <tr>
       <td>Is a resistance gene detectable?</td>
@@ -697,10 +698,10 @@ a microscope.</p>
   </thead>
   <tbody>
     <tr>
-      <td>VRE was sought and not found</td>
-      <td>Specific culture</td>
+      <td>VRE was sought by culture and not found</td>
+      <td>Specific determination</td>
       <td><code class="language-plaintext highlighter-rouge">13316-5</code></td>
-      <td><code class="language-plaintext highlighter-rouge">No growth</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Not detected</code></td>
     </tr>
     <tr>
       <td>VRE was sought and not found (molecular)</td>
@@ -758,7 +759,7 @@ a microscope.</p>
 <h3 id="grouping-several-results-the-panel">Grouping several results: the panel</h3>
 
 <p>An antibiogram is not one result but many — one Observation per antimicrobial
-tested. The European white paper recommends binding them together with an
+tested. The HL7 EU Lab Semantic Workgroup recommends binding them together with an
 <strong>organizer Observation</strong>: one Observation carrying the panel code
 <code class="language-plaintext highlighter-rouge">29576-6 |Bacterial susceptibility panel|</code> and no <code class="language-plaintext highlighter-rouge">value[x]</code> of its own, which
 points at the individual results through <code class="language-plaintext highlighter-rouge">Observation.hasMember</code>. The organizer
@@ -811,7 +812,7 @@ profile would create a canonical of its own for something FHIR already settles.<
 <p>A positive targeted detection can trigger follow-up diagnostics:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Positive targeted detection
-(Specific determination or Specific culture)
+(Specific determination, any technique)
         │
         │ triggeredBy (reflex)
         ▼
@@ -877,7 +878,7 @@ Resistance category status
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 11, 2026 12:05+0000">2026-09-11</span>
+          Generated <span title="Sat, Sep 12, 2026 16:32+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

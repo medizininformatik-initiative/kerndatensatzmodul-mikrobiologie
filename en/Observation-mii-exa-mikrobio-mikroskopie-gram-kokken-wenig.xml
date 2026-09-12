@@ -7,8 +7,18 @@
   </meta>
   <language value="en"/>
   <text>
-    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-mikrobio-mikroskopie-gram-kokken-wenig</b></p><a name="mii-exa-mikrobio-mikroskopie-gram-kokken-wenig"> </a><a name="hcmii-exa-mikrobio-mikroskopie-gram-kokken-wenig"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">MII PR Mikrobio Allgemeine Mikroskopie</a></p></div><p><b>identifier</b>: Observation Instance Identifier/mikroskopie-gram-1</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}, {http://loinc.org 26436-6}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 MB}">Microbiology</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 664-3}">Microscopic observation [Identifier] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href="Patient-mii-exa-mikrobio-patient.html">Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)</a></p><p><b>effective</b>: 2026-04-02 10:00:00+0100</p><p><b>performer</b>: <a href="Organization-mii-exa-mikrobio-labor.html">Organization Universitätsklinikum Musterstadt</a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 70003006}">Gram-positive cocci in clusters (finding)</span></p><p><b>specimen</b>: <a href="Specimen-mii-exa-mikrobio-probe.html">Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100</a></p><h3>Components</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten semiquantitative-menge}">Semiquantitative Menge</span></td><td><span title="Codes:{http://snomed.info/sct 57176003}">Few</span></td></tr></table></div>
+    <status value="extensions"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: Observation mii-exa-mikrobio-mikroskopie-gram-kokken-wenig</b></p><a name="mii-exa-mikrobio-mikroskopie-gram-kokken-wenig"> </a><a name="hcmii-exa-mikrobio-mikroskopie-gram-kokken-wenig"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html">MII PR Mikrobio Allgemeine Mikroskopie</a></p></div><p><b>MII EX Mikrobio Färbung</b>: <span title="Codes:{http://snomed.info/sct 62777006}">Gram stain method</span></p><p><b>identifier</b>: Observation Instance Identifier/mikroskopie-gram-1</p><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}, {http://loinc.org 26436-6}">Laboratory</span>, <span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 MB}">Microbiology</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 664-3}">Microscopic observation [Identifier] in Specimen by Gram stain</span></p><p><b>subject</b>: <a href="Patient-mii-exa-mikrobio-patient.html">Anonymous Patient (no stated gender), DoB Unknown ( https://example.org/fhir/sid/test-patient#111)</a></p><p><b>effective</b>: 2026-04-02 10:00:00+0100</p><p><b>performer</b>: <a href="Organization-mii-exa-mikrobio-labor.html">Organization Universitätsklinikum Musterstadt</a></p><p><b>value</b>: <span title="Codes:{http://snomed.info/sct 70003006}">Gram-positive cocci in clusters (finding)</span></p><p><b>specimen</b>: <a href="Specimen-mii-exa-mikrobio-probe.html">Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100</a></p><h3>Components</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://snomed.info/sct 103392008}">Semi-quantitative value</span></td><td><span title="Codes:{http://snomed.info/sct 57176003}">Few</span></td></tr></table></div>
   </text>
+  <extension url="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <version value="http://snomed.info/sct/900000000000207008/version/20260701"/>
+        <code value="62777006"/>
+        <display value="Gram stain method"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
   <identifier>
     <type>
       <coding>
@@ -71,8 +81,10 @@
   <component>
     <code>
       <coding>
-        <system value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten"/>
-        <code value="semiquantitative-menge"/>
+        <system value="http://snomed.info/sct"/>
+        <version value="http://snomed.info/sct/900000000000207008/version/20260701"/>
+        <code value="103392008"/>
+        <display value="Semi-quantitative value"/>
       </coding>
     </code>
     <valueCodeableConcept>

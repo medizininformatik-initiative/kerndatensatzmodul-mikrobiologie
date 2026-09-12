@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_PR_Mikrobio_Allgemeine_Mikroskopie |
+| Active as of 2026-09-12 | *Computable Name*:MII_PR_Mikrobio_Allgemeine_Mikroskopie |
 
  
 Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies. 
@@ -20,25 +20,19 @@ It is the open half of microscopy: the code asks what is there to see, and the a
 
 ### Staining
 
-**Ballot question 2 — can the staining technique be represented via `Specimen` alone?** The European data model places the staining technique in `Specimen.processing.procedure`. We ask whether a Specimen-only representation is implementable at your site. The answer determines whether this module continues to carry the stain in `Observation.method`.
+The stain is carried in `extension[faerbung]`, coded with the descendants of `37926009 |Microbial stain method (procedure)|` — the same codes the HL7 EU Lab Semantic Workgroup uses. Give it whenever a stain was used, including where the test code already names it: it is then readable in one place, whichever code a laboratory chooses. `Observation.method` carries the microscopy technique only, which for native microscopy without a stain is the one statement to be made.
 
-Two things speak against `Specimen` being the only place. It presupposes a Specimen resource, which ballot question 1 puts in doubt. And the parent of [Specimen](StructureDefinition-mii-pr-mikrobio-probe.md) currently makes storage temperature conditions mandatory below `processing` (ballot question 3), which a stain has no way of supplying.
+**Ballot question 2 — where does the staining technique belong?** This module deviates from the model under discussion in the HL7 EU Lab Semantic Workgroup: it carries the stain in `extension[faerbung]` on the Observation, not in `Specimen.processing.procedure`. The codes are the same. Can your site supply the stain on the Specimen, or do you need the extension?
 
-This module therefore carries the stain in `Observation.method` for now. `Observation.method` is `0..1` in the laboratory base profile, a ceiling a profile cannot raise, and SNOMED CT holds staining and microscopy in sibling branches — `278289002 |Microscopy techniques|` does not subsume `708061008 |Gram stain|`, whose parent is `703857004 |Staining technique|`. So only one of the two fits, and the stain is the informative one, since `105059-0` already says "Microscopic observation". Selecting `664-3` instead puts the stain in the code and frees the method slot altogether.
-
-Please tell us during the ballot which of these routes you can actually implement.
-
-For native microscopy without a stain, the microscopy technique is given instead.
+Two things keep this module from relying on the Specimen alone. It presupposes a Specimen resource, which ballot question 1 puts in doubt, and the parent of [Specimen](StructureDefinition-mii-pr-mikrobio-probe.md) makes storage temperature conditions mandatory below `processing` (ballot question 3), which a stain cannot supply. Because the terminology is the same on either route, a later move changes the element and nothing else.
 
 ### Morphology together with its amount
 
 The most common Gram finding needs two statements at once — **few** Gram-positive cocci — and `value[x]` can carry only one of them. The morphology is the value and the amount is a component, `component[menge]`, taken from the semiquantitative set that [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md) uses as its value.
 
-Its code comes from an interim CodeSystem of this module. The European data model requests a LOINC code for it ("Microscopy" sheet, row 13, "new LOINC — Semiquantitive value for microscopy finding"); until that exists, the interim code stands in and will be replaced by it.
+Its code is `103392008 |Semi-quantitative value|`, the concept the HL7 EU Lab Semantic Workgroup proposes for this component. A LOINC code has been requested for the same purpose and will take its place once it exists.
 
-**Ballot question 5 — component or `hasMember` for the amount?** The European data model leaves this open itself, asking "Component Procedure **or has member?**". A component keeps one investigation as one resource, which is how a laboratory reports it. `hasMember` would make the amount a referenceable Observation of its own, which is the direction this module took in `2027.0.0-alpha.1`, when components were removed from this very profile and moved into standalone Observations. So the component here reverses a decision of this release cycle, deliberately and for one narrow case. Please tell us during the ballot which of the two you can process.
-
-A summary judgement about the preparation — "unremarkable" — is neither the value nor the component but `Observation.interpretation` with `N` "Normal". It is the one place in this module where `interpretation` is the right element: it carries a judgement, never an amount.
+**Ballot question 5 — can you process a component for the amount?** The HL7 EU Lab Semantic Workgroup uses a component for the amount of a single finding and `hasMember` to group several findings of one examination; this module follows that. The component nevertheless reverses a decision of this release cycle: `2027.0.0-alpha.1` removed components from this very profile and moved them into standalone Observations.
 
 ### Examples
 
@@ -203,7 +197,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -270,6 +264,19 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
       "short" : "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
     },
     {
+      "id" : "Observation.extension:faerbung",
+      "path" : "Observation.extension",
+      "sliceName" : "faerbung",
+      "short" : "Eingesetzte Faerbung, z. B. Gramfaerbung. Immer angeben, wenn gefaerbt wurde — auch wenn der Untersuchungscode sie schon nennt.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung"]
+      }],
+      "mustSupport" : true
+    },
+    {
       "id" : "Observation.category",
       "path" : "Observation.category",
       "min" : 2
@@ -293,7 +300,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
     {
       "id" : "Observation.code",
       "path" : "Observation.code",
-      "short" : "Bevorzugt 105059-0 'Microscopic observation [Identifier] in Specimen', weil es die Faerbung nach Observation.method auslagert. 664-3 '... by Gram stain' ist gleichwertig zulaessig und hat den Vorteil, dass Observation.method frei bleibt — das Element ist 0..1 und kann Faerbung und Mikroskopieverfahren nicht beide tragen.",
+      "short" : "Bevorzugt 105059-0 'Microscopic observation [Identifier] in Specimen', weil es die Faerbung nicht in den Code zieht. 664-3 '... by Gram stain' ist gleichwertig zulaessig; die Faerbung wird in beiden Faellen zusaetzlich in extension[faerbung] angegeben, damit sie unabhaengig von der Codewahl an einer Stelle auswertbar ist.",
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc"
@@ -328,14 +335,9 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
       }
     },
     {
-      "id" : "Observation.interpretation",
-      "path" : "Observation.interpretation",
-      "short" : "Ein zusammenfassendes Urteil ueber das Praeparat — 'unauffaellig' als N 'Normal'. NICHT fuer die Menge des Gesehenen: die steht in component[menge]."
-    },
-    {
       "id" : "Observation.method",
       "path" : "Observation.method",
-      "short" : "Bevorzugt die Faerbetechnik, z. B. 708061008 'Gram stain'; bei nativer Mikroskopie ohne Faerbung das Mikroskopieverfahren. Beides zugleich ist nicht moeglich, weil Observation.method 0..1 ist.",
+      "short" : "Das mikroskopische Verfahren, z. B. 278289002 'Microscopy technique' oder eine Verengung davon. Die Faerbung gehoert NICHT hierher, sondern in extension[faerbung].",
       "binding" : {
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"
@@ -356,7 +358,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
       "slicing" : {
         "discriminator" : [{
           "type" : "pattern",
-          "path" : "code"
+          "path" : "$this.code"
         }],
         "description" : "Slicing nach dem Komponenten-Code.",
         "rules" : "open"
@@ -376,8 +378,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
       "path" : "Observation.component.code",
       "patternCodeableConcept" : {
         "coding" : [{
-          "system" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten",
-          "code" : "semiquantitative-menge"
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+          "code" : "103392008",
+          "display" : "Semi-quantitative value"
         }]
       }
     },

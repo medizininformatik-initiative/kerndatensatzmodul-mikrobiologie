@@ -69,6 +69,13 @@
       "types": [
         "CodeableConcept"
       ]
+    },
+    {
+      "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung",
+      "title": "MII EX Mikrobio Färbung",
+      "types": [
+        "CodeableConcept"
+      ]
     }
   ],
   "profiles": {
@@ -84,10 +91,6 @@
       {
         "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung",
         "title": "MII PR Mikrobio Spezifische Bestimmung"
-      },
-      {
-        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
-        "title": "MII PR Mikrobio Spezifische Kultur"
       },
       {
         "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie",
@@ -289,7 +292,12 @@
       "StructureDefinition"
     ],
     "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm": [
-      "Observation.interpretation"
+      "Observation.interpretation",
+      "Observation.valueCodeableConcept",
+      "Observation.value[x]"
+    ],
+    "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung": [
+      "Observation"
     ]
   }
 }

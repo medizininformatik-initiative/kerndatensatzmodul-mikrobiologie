@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-ergebnis | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Aviditaet_Ergebnis |
+| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Aviditaet_Ergebnis |
 
  
 Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, intermediär oder hoch. Niedrige Avidität spricht für eine frische Infektion. 
@@ -42,7 +42,7 @@ Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsind
   "title" : "MII VS Mikrobio Aviditaet Ergebnis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC |
+| Active as of 2026-09-12 | *Computable Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC |
 
  
 Tests-ValueSet fuer die spezifische Bestimmung. 
@@ -42,7 +42,7 @@ Tests-ValueSet fuer die spezifische Bestimmung.
   "title" : "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -508,6 +508,54 @@ Tests-ValueSet fuer die spezifische Bestimmung.
     {
       "system" : "http://loinc.org",
       "version" : "2.82",
+      "filter" : [{
+        "property" : "PROPERTY",
+        "op" : "=",
+        "value" : "LP6850-4"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP6429-7"
+      },
+      {
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7819-8"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "filter" : [{
+        "property" : "PROPERTY",
+        "op" : "=",
+        "value" : "LP217195-9"
+      },
+      {
+        "property" : "METHOD_TYP",
+        "op" : "=",
+        "value" : "LP6429-7"
+      },
+      {
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "LP7819-8"
+      },
+      {
+        "property" : "STATUS",
+        "op" : "=",
+        "value" : "ACTIVE"
+      }]
+    },
+    {
+      "system" : "http://loinc.org",
+      "version" : "2.82",
       "concept" : [{
         "code" : "105904-7",
         "display" : "Vancomycin resistant enterococcus [Presence] in Specimen"
@@ -515,6 +563,26 @@ Tests-ValueSet fuer die spezifische Bestimmung.
       {
         "code" : "35492-8",
         "display" : "Methicillin resistant Staphylococcus aureus (MRSA) DNA [Presence] in Specimen by NAA with probe detection"
+      }]
+    }],
+    "exclude" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "concept" : [{
+        "code" : "44851-4",
+        "display" : "Mycobacterium sp # 2 identified in Specimen by Organism specific culture"
+      },
+      {
+        "code" : "44852-2",
+        "display" : "Mycobacterium sp # 3 identified in Specimen by Organism specific culture"
+      },
+      {
+        "code" : "44854-8",
+        "display" : "Mycobacterium sp # 4 identified in Specimen by Organism specific culture"
+      },
+      {
+        "code" : "44855-5",
+        "display" : "Mycobacterium sp # 5 identified in Specimen by Organism specific culture"
       }]
     }]
   }

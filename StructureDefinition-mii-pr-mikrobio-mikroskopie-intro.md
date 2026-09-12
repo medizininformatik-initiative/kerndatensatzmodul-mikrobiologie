@@ -7,34 +7,28 @@ the test code and the answer is how much of it was seen, the profile is
 
 ### Staining
 
+The stain is carried in `extension[faerbung]`, coded with the descendants of
+`37926009 |Microbial stain method (procedure)|` — the same codes the HL7 EU Lab
+Semantic Workgroup uses. Give it whenever a stain was used, including where the
+test code already names it: it is then readable in one place, whichever code a
+laboratory chooses. `Observation.method` carries the microscopy technique only,
+which for native microscopy without a stain is the one statement to be made.
+
 <a id="ballot-question-2"></a>
 
 {:.bg-warning}
-**Ballot question 2 — can the staining technique be represented via `Specimen` alone?**
-The European data model places the staining technique in
-`Specimen.processing.procedure`. We ask whether a Specimen-only representation is implementable at your site.
-The answer determines whether this module continues to carry the stain in
-`Observation.method`.
+**Ballot question 2 — where does the staining technique belong?**
+This module deviates from the model under discussion in the HL7 EU Lab Semantic
+Workgroup: it carries the stain in `extension[faerbung]` on the Observation, not
+in `Specimen.processing.procedure`. The codes are the same. Can your site supply
+the stain on the Specimen, or do you need the extension?
 
-Two things speak against `Specimen` being the only place. It presupposes a
-Specimen resource, which ballot question 1 puts in doubt. And the parent of
-[Specimen](StructureDefinition-mii-pr-mikrobio-probe.html) currently makes
-storage temperature conditions mandatory below `processing` (ballot question 3),
-which a stain has no way of supplying.
-
-This module therefore carries the stain in `Observation.method` for now.
-`Observation.method` is `0..1` in the laboratory base profile, a ceiling a
-profile cannot raise, and SNOMED CT holds staining and microscopy in sibling
-branches — `278289002 |Microscopy techniques|` does not subsume
-`708061008 |Gram stain|`, whose parent is `703857004 |Staining technique|`. So
-only one of the two fits, and the stain is the informative one, since `105059-0`
-already says "Microscopic observation". Selecting `664-3` instead puts the stain
-in the code and frees the method slot altogether.
-
-Please tell us during the ballot which of these routes you can actually
-implement.
-
-For native microscopy without a stain, the microscopy technique is given instead.
+Two things keep this module from relying on the Specimen alone. It presupposes a
+Specimen resource, which ballot question 1 puts in doubt, and the parent of
+[Specimen](StructureDefinition-mii-pr-mikrobio-probe.html) makes storage
+temperature conditions mandatory below `processing` (ballot question 3), which a
+stain cannot supply. Because the terminology is the same on either route, a later
+move changes the element and nothing else.
 
 ### Morphology together with its amount
 
@@ -44,28 +38,19 @@ and the amount is a component, `component[menge]`, taken from the semiquantitati
 set that [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html)
 uses as its value.
 
-Its code comes from an interim CodeSystem of this module. The European data model
-requests a LOINC code for it ("Microscopy" sheet, row 13, "new LOINC —
-Semiquantitive value for microscopy finding"); until that exists, the interim code
-stands in and will be replaced by it.
+Its code is `103392008 |Semi-quantitative value|`, the concept the HL7 EU Lab
+Semantic Workgroup proposes for this component. A LOINC code has been requested
+for the same purpose and will take its place once it exists.
 
 <a id="ballot-question-5"></a>
 
 {:.bg-warning}
-**Ballot question 5 — component or `hasMember` for the amount?**
-The European data model leaves this open itself, asking "Component Procedure **or
-has member?**". A component keeps one investigation as one resource, which is how
-a laboratory reports it. `hasMember` would make the amount a referenceable
-Observation of its own, which is the direction this module took in
-`2027.0.0-alpha.1`, when components were removed from this very profile and moved
-into standalone Observations. So the component here reverses a decision of this
-release cycle, deliberately and for one narrow case. Please tell us during the
-ballot which of the two you can process.
-
-A summary judgement about the preparation — "unremarkable" — is neither the value
-nor the component but `Observation.interpretation` with `N` "Normal". It is the
-one place in this module where `interpretation` is the right element: it carries a
-judgement, never an amount.
+**Ballot question 5 — can you process a component for the amount?**
+The HL7 EU Lab Semantic Workgroup uses a component for the amount of a single
+finding and `hasMember` to group several findings of one examination; this module
+follows that. The component nevertheless reverses a decision of this release
+cycle: `2027.0.0-alpha.1` removed components from this very profile and moved
+them into standalone Observations.
 
 ### Examples
 

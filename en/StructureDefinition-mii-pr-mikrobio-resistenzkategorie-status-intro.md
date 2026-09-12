@@ -47,7 +47,7 @@ The category status does not replace a targeted pathogen detection:
 | Procedure | Profile | Result |
 |---|---|---|
 | MRSA PCR | [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) | `Detected` / `Not detected` |
-| MRSA culture | [Specific culture](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html) | `Organism growth` / `No growth` |
+| MRSA culture | [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) | `Detected` / `Not detected` |
 | Assessment of a present *S. aureus* as MRSA | Resistance category status | `MRSA status` = `Positive` / `Negative` |
 
 The same principle applies to VRE and the remaining categories.

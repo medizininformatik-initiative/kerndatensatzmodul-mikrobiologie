@@ -8,7 +8,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_IG_Mikrobiologie |
+| Active as of 2026-09-12 | *Computable Name*:MII_IG_Mikrobiologie |
 
 ### Introduction
 
@@ -59,11 +59,12 @@ Components of Observations were moved into separate profiles in this version.
 This is a ballot candidate. The points below are deliberately left open, and we ask for comment on them during the ballot. Each is stated in full on the page it belongs to.
 
 1. **[Is a Specimen resource always available?](probe.md#ballot-question-1)**— every investigation profile in this module requires`Observation.specimen`.
-1. **[Can the staining technique be represented via `Specimen` alone?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-2)**— the European data model places it in`Specimen.processing`; we ask whether that is implementable.
+1. **[Where does the staining technique belong?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-2)**— this module carries it in an extension and deviates from the European coordination, which places it on the Specimen.
 1. **[Mandatory storage temperature conditions on `Specimen.processing`](probe.md#ballot-question-3)**— inherited from the biobank base profile, without meaning for microbiological processing.
 1. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.md#ballot-question-4)**— FHIR and the MII provide the pieces; the question is whether sites can supply them.
-1. **[Component or `hasMember` for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-5)**— the European data model leaves this open; a component reverses a decision of this release cycle.
-1. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.md#ballot-question-6)**— the white paper asks for it always; this guide only recommends it, and your answer decides more than one question.
+1. **[Can you process a component for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-5)**— the module follows the European coordination here, and the component reverses a decision of this release cycle.
+1. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.md#ballot-question-6)**— the HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends it, and your answer decides more than one question.
+1. **[Is `Detected` / `Not detected` enough for a targeted culture?](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md#ballot-question-7)**— one profile now covers targeted detection whatever the technique; the European coordination binds growth codes for culture and this guide deviates.
 
 ### Contents
 

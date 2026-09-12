@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchungsarten | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_LM_Mikrobio_Untersuchungsarten |
+| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_LM_Mikrobio_Untersuchungsarten |
 
  
 Fachliche Ausprägungen der mikrobiologischen Untersuchung für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE] 
@@ -40,7 +40,7 @@ Diese Struktur ist abgeleitet von [MII_LM_Mikrobio_Untersuchung](StructureDefini
 
 ** Summary **
 
-Mandatory: 0 element(22 nested mandatory elements)
+Mandatory: 0 element(21 nested mandatory elements)
 
 **Structures**
 
@@ -64,7 +64,7 @@ Diese Struktur ist abgeleitet von [MII_LM_Mikrobio_Untersuchung](StructureDefini
 
 ** Summary **
 
-Mandatory: 0 element(22 nested mandatory elements)
+Mandatory: 0 element(21 nested mandatory elements)
 
 **Structures**
 
@@ -94,7 +94,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
   "title" : "MII LM Mikrobio Untersuchungsarten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -184,50 +184,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
     {
       "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur.Untersuchungsmethode",
       "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur.Untersuchungsmethode",
-      "short" : "Untersuchungsmethode",
-      "definition" : "Eingesetztes Kulturverfahren (SNOMED CT).",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "CodeableConcept"
-      }]
-    },
-    {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeKultur",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeKultur",
-      "short" : "Spezifische Kultur",
-      "definition" : "Ergebnis einer zielgerichteten mikrobiologischen Kultur, die prüft, ob ein vordefinierter Mikroorganismus in der Probe wächst.",
-      "min" : 0,
-      "max" : "*",
-      "type" : [{
-        "code" : "BackboneElement"
-      }]
-    },
-    {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeKultur.Untersuchungscode",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeKultur.Untersuchungscode",
-      "short" : "Untersuchungscode",
-      "definition" : "Kodierung des gesuchten Mikroorganismus und des Kulturverfahrens (LOINC).",
-      "min" : 1,
-      "max" : "1",
-      "type" : [{
-        "code" : "CodeableConcept"
-      }]
-    },
-    {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeKultur.Ergebnis",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeKultur.Ergebnis",
-      "short" : "Ergebnis",
-      "definition" : "Wachstum oder kein Wachstum des gesuchten Mikroorganismus (SNOMED CT). Ein unbestimmbares Ergebnis wird nicht hier, sondern über den Grund für fehlende Daten abgebildet.",
-      "min" : 0,
-      "max" : "1",
-      "type" : [{
-        "code" : "CodeableConcept"
-      }]
-    },
-    {
-      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeKultur.Untersuchungsmethode",
-      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeKultur.Untersuchungsmethode",
       "short" : "Untersuchungsmethode",
       "definition" : "Eingesetztes Kulturverfahren (SNOMED CT).",
       "min" : 0,
@@ -595,7 +551,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
       "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung",
       "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung",
       "short" : "Spezifische Bestimmung",
-      "definition" : "Qualitativer Nachweis eines vordefinierten mikrobiellen Ziels, kulturbasiert oder mittels molekularer, immunologischer oder biochemischer Verfahren.",
+      "definition" : "Qualitativer Nachweis eines vordefinierten mikrobiellen Ziels, kulturbasiert oder mittels molekularer, immunologischer oder biochemischer Verfahren. Das eingesetzte Verfahren steht im Untersuchungscode und in der Untersuchungsmethode, nicht im Ergebnis.",
       "min" : 0,
       "max" : "*",
       "type" : [{

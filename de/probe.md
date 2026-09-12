@@ -8,7 +8,7 @@
 
 ### Befund - Probe
 
-**Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?** Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`. Die Anforderung stammt nicht allein aus diesem Leitfaden: Das europäische Whitepaper hält fest, dass die Probe **immer** ausdrücklich in einer FHIR-Specimen-Ressource abzubilden ist, bevorzugt in `Specimen.type` mit SNOMED CT — und sagt ausdrücklich, dass das auch dann gilt, **wenn der LOINC-Code die Probe bereits trägt**.
+**Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?** Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`. Die Anforderung stammt nicht allein aus diesem Leitfaden: Die HL7 EU Lab Semantic Workgroup hält fest, dass die Probe **immer** ausdrücklich in einer FHIR-Specimen-Ressource abzubilden ist, bevorzugt in `Specimen.type` mit SNOMED CT — und sagt ausdrücklich, dass das auch dann gilt, **wenn der LOINC-Code die Probe bereits trägt**.
 
 Aus der deutschen Laborpraxis kommt die Rückmeldung, dass eine Specimen-Ressource häufig nicht erzeugt wird. Trifft das breit zu, weisen die beiden Auswege in entgegengesetzte Richtungen: `Observation.specimen` auf `0..1` lockern und präkoordinierte LOINC-Codes das Material tragen lassen, oder die Pflicht beibehalten und hinnehmen, dass manche Sender nicht konform sein können. Wir bitten um Rückmeldung im Ballot.
 
@@ -27,7 +27,7 @@ Für die mikrobiologischen Anwendungsfälle sind dabei insbesondere folgende Ele
 
 **Ballotfrage 3 — Pflicht-Temperaturbedingungen an `Specimen.processing`.** Das Basisprofil verlangt die Extension `temperaturbedingungen` an jedem `Specimen.processing`-Element, in `2026.0.1` wie in `2027.0.0-ballot.rc2`. Diese Pflicht stammt aus der Biobank, wo `Specimen.processing` den Lagerprozess einer Bioprobe beschreibt und die Temperatur zur Kernaussage gehört. In der Mikrobiologie beschreibt derselbe Platz die Aufarbeitung — Färbung, Anreicherung, Bebrütung —, und dort ist eine Lagertemperatur entweder unbekannt oder ohne Aussage. Ein abgeleitetes Profil darf nur verengen und nie lockern, dieses Modul kann die Pflicht also nicht auflösen. Wir halten sie in diesem Zusammenhang für fehlplatziert und bringen sie beim Biobank-Modul ein, mit dem Ziel, sie auf den Lagerprozess-Slice `processing:lagerprozess` zu begrenzen, wo sie hingehört. Wir bitten um Rückmeldung im Ballot, falls Sie davon betroffen sind.
 
-Die Färbetechnik wird deshalb **nicht** unter `Specimen.processing.procedure` angegeben, wie das europäische Datenmodell es vorschlägt, sondern in `Observation.method` — siehe [Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), wo Ballotfrage 2 die Begründung enthält.
+Die Färbetechnik wird deshalb **nicht** unter `Specimen.processing.procedure` angegeben, wie die HL7 EU Lab Semantic Workgroup es vorschlägt, sondern in einer Extension an der Observation, [`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.md), mit denselben Codes — siehe [Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), wo Ballotfrage 2 die Begründung enthält.
 
 ### Bebrütungsdauer und -temperatur
 

@@ -6,8 +6,8 @@ Untersuchungsprofils dieses Moduls verweist darauf.
 
 {:.bg-warning}
 **Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?**
-Jedes Untersuchungsprofil hier verlangt `Observation.specimen`. Das europäische
-Whitepaper hält fest, dass die Probe immer ausdrücklich in einer
+Jedes Untersuchungsprofil hier verlangt `Observation.specimen`. Die HL7 EU Lab
+Semantic Workgroup hält fest, dass die Probe immer ausdrücklich in einer
 Specimen-Ressource abzubilden ist, auch wenn der LOINC-Code sie bereits trägt —
 die Frage ist also die Erfüllbarkeit, nicht der Grundsatz. Aus der deutschen
 Laborpraxis kommt die Rückmeldung, dass sie häufig nicht erzeugt wird. Die Frage

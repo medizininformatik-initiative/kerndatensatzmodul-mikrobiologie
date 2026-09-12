@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED |
+| Active as of 2026-09-12 | *Computable Name*:MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED |
 
  
 Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkung auf einen vordefinierten Erreger, einschließlich aerober und anaerober Bebrütung. 
@@ -42,7 +42,7 @@ Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkun
   "title" : "MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_EX_Mikrobio_Empfindlichkeit_Norm |
+| Active as of 2026-09-12 | *Computable Name*:MII_EX_Mikrobio_Empfindlichkeit_Norm |
 
 Normative susceptibility interpretation metadata (system, version, category).
 
@@ -47,7 +47,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-mikrobio-e
   "title" : "MII EX Mikrobio Empfindlichkeit Norm",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -83,6 +83,10 @@ Other representations of profile: [CSV](../StructureDefinition-mii-ex-mikrobio-e
   "context" : [{
     "type" : "element",
     "expression" : "Observation.interpretation"
+  },
+  {
+    "type" : "element",
+    "expression" : "Observation.value[x]"
   }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",

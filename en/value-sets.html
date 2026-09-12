@@ -405,7 +405,7 @@ ValueSets may not expand completely).</p>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc.html">MII VS Mikrobio Allgemeine Mikroskopie Tests LOINC</a></td>
-      <td>Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0; 664-3 ist gleichwertig zulässig, wenn die Färbung im Code stehen soll.</td>
+      <td>Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-antigen-antikoerper-methode-snomed.html">MII VS Mikrobio Antigen Antikoerper Methode SNOMED</a></td>
@@ -464,6 +464,10 @@ ValueSets may not expand completely).</p>
       <td>Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der getesteten antimikrobiellen Substanz.</td>
     </tr>
     <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-faerbung-snomed.html">MII VS Mikrobio Färbung SNOMED</a></td>
+      <td>Färbeverfahren der mikroskopischen Untersuchung, z. B. Gramfärbung oder Kinyounfärbung.</td>
+    </tr>
+    <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html">MII VS Mikrobio Keimzahl Einheiten UCUM</a></td>
       <td>Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.</td>
     </tr>
@@ -497,7 +501,7 @@ ValueSets may not expand completely).</p>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html">MII VS Mikrobio Morphologie Methode SNOMED</a></td>
-      <td>Methoden-ValueSet für die Mikroskopie: mikroskopische Verfahren einschließlich der eingesetzten Färbetechnik.</td>
+      <td>Methoden-ValueSet für die Mikroskopie: die eingesetzten mikroskopischen Verfahren. Die Färbung wird nicht hier, sondern in der Extension MII_EX_Mikrobio_Faerbung angegeben.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-mrgn-klasse-loinc.html">MII VS Mikrobio MRGN Klasse LOINC</a></td>
@@ -534,14 +538,6 @@ ValueSets may not expand completely).</p>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-tests-loinc.html">MII VS Mikrobio Spezifische Bestimmung Tests LOINC</a></td>
       <td>Tests-ValueSet fuer die spezifische Bestimmung.</td>
-    </tr>
-    <tr>
-      <td><a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html">MII VS Mikrobio Spezifische Kultur Methode SNOMED</a></td>
-      <td>Methoden-ValueSet fuer die spezifische Kultur. Extensible gebunden, damit staerker spezialisierte Kulturverfahren ergaenzt werden koennen.</td>
-    </tr>
-    <tr>
-      <td><a href="ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html">MII VS Mikrobio Spezifische Kultur Tests LOINC</a></td>
-      <td>Tests-ValueSet fuer die spezifische Kultur: erregerspezifische Kulturnachweise, bei denen das gesuchte Ziel bereits im LOINC-Code benannt ist.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc.html">MII VS Mikrobio Spezifische Mikroskopie Tests LOINC</a></td>
@@ -599,7 +595,7 @@ ValueSets may not expand completely).</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 11, 2026 12:05+0000">2026-09-11</span>
+          Generated <span title="Sat, Sep 12, 2026 16:32+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

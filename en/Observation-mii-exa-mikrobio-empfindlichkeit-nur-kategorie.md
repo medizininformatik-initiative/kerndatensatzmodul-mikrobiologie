@@ -30,8 +30,6 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
 
 **value**: Resistant
 
-**interpretation**: Resistant
-
 **specimen**: [Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100](Specimen-mii-exa-mikrobio-probe.md)
 
 
@@ -94,13 +92,6 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
     "reference" : "Organization/mii-exa-mikrobio-labor"
   }],
   "valueCodeableConcept" : {
-    "coding" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-      "code" : "R",
-      "display" : "Resistant"
-    }]
-  },
-  "interpretation" : [{
     "extension" : [{
       "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm",
       "valueCodeableConcept" : {
@@ -116,7 +107,7 @@ Profile: [MII PR Mikrobio Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-e
       "code" : "R",
       "display" : "Resistant"
     }]
-  }],
+  },
   "specimen" : {
     "reference" : "Specimen/mii-exa-mikrobio-probe"
   }

@@ -355,7 +355,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           
 
             as of 
-2026-09-11
+2026-09-12
 
           
         
@@ -495,21 +495,24 @@ belongs to.</p>
 <ol>
   <li><strong><a href="probe.html#ballot-question-1">Is a Specimen resource always available?</a></strong> — every
 investigation profile in this module requires <code class="language-plaintext highlighter-rouge">Observation.specimen</code>.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2">Can the staining technique be represented via <code class="language-plaintext highlighter-rouge">Specimen</code> alone?</a></strong>
-— the European data model places it in <code class="language-plaintext highlighter-rouge">Specimen.processing</code>; we ask whether
-that is implementable.</li>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2">Where does the staining technique belong?</a></strong>
+— this module carries it in an extension and deviates from the European
+coordination, which places it on the Specimen.</li>
   <li><strong><a href="probe.html#ballot-question-3">Mandatory storage temperature conditions on <code class="language-plaintext highlighter-rouge">Specimen.processing</code></a></strong>
 — inherited from the biobank base profile, without meaning for microbiological
 processing.</li>
   <li><strong><a href="probe.html#ballot-question-4">Is incubation duration and temperature representable via <code class="language-plaintext highlighter-rouge">Specimen.processing</code>?</a></strong>
 — FHIR and the MII provide the pieces; the question is whether sites can supply
 them.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5">Component or <code class="language-plaintext highlighter-rouge">hasMember</code> for a semiquantitative amount?</a></strong>
-— the European data model leaves this open; a component reverses a decision of
-this release cycle.</li>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5">Can you process a component for a semiquantitative amount?</a></strong>
+— the module follows the European coordination here, and the component
+reverses a decision of this release cycle.</li>
   <li><strong><a href="profilauswahl-und-abgrenzung.html#ballot-question-6">Can you supply <code class="language-plaintext highlighter-rouge">Observation.method</code> for every result?</a></strong>
-— the white paper asks for it always; this guide only recommends it, and your
+— the HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends it, and your
 answer decides more than one question.</li>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html#ballot-question-7">Is <code class="language-plaintext highlighter-rouge">Detected</code> / <code class="language-plaintext highlighter-rouge">Not detected</code> enough for a targeted culture?</a></strong>
+— one profile now covers targeted detection whatever the technique; the
+European coordination binds growth codes for culture and this guide deviates.</li>
 </ol>
 
 <h3 id="contents">Contents</h3>
@@ -630,7 +633,7 @@ the content of this specification.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Sep 11, 2026 12:05+0000">2026-09-11</span>
+          Generated <span title="Sat, Sep 12, 2026 16:32+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

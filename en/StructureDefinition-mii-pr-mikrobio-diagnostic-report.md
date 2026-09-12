@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_PR_Mikrobio_Diagnostic_Report |
+| Active as of 2026-09-12 | *Computable Name*:MII_PR_Mikrobio_Diagnostic_Report |
 
  
 Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextualisierung zugehöriger mikrobiologischer Untersuchungsergebnisse. 
@@ -46,9 +46,9 @@ If a report covers several study types, for instance detection of bacteria **and
 
 `DiagnosticReport.conclusion` carries the laboratory's summarising assessment as free text. It is Must Support, inherited from the laboratory base profile, and in serology it is the load-bearing part of the report rather than an addition.
 
-The reason is that a serological diagnosis is often not any one of its measurements. In acute EBV infection, IgM against the viral capsid antigen appears first, VCA IgG follows, and EBNA IgG arises only after six to twelve weeks. Each of the three results is an Observation of its own; the statement "acute infection" or "past infection" follows from reading them together and is none of them. The European white paper puts it as "a serological report is often more than the sum of its parts" and asks that the conclusion be exchangeable, "free text to begin with".
+The reason is that a serological diagnosis is often not any one of its measurements. In acute EBV infection, IgM against the viral capsid antigen appears first, VCA IgG follows, and EBNA IgG arises only after six to twelve weeks. Each of the three results is an Observation of its own; the statement "acute infection" or "past infection" follows from reading them together and is none of them. The HL7 EU Lab Semantic Workgroup puts it as "a serological report is often more than the sum of its parts" and asks that the conclusion be exchangeable, "free text to begin with".
 
-`conclusionCode` is deliberately not constrained here. The white paper proposes free text for the time being, and this module has no value set for coded overall assessments.
+`conclusionCode` is deliberately not constrained here. The HL7 EU Lab Semantic Workgroup proposes free text for the time being, and this module has no value set for coded overall assessments.
 
 ### What the report bundles, and what the Observations carry
 
@@ -218,7 +218,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-d
   "title" : "MII PR Mikrobio Diagnostic Report",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -311,7 +311,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-d
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur",
-        "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",

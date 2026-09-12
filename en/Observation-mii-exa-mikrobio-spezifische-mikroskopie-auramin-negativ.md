@@ -14,6 +14,8 @@
 
 Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md)
 
+**MII EX Mikrobio Färbung**: Rhodamine-auramine fluorochrome stain method
+
 **identifier**: Observation Instance Identifier/spez-mikroskopie-auramin-neg-1
 
 **status**: Final
@@ -43,6 +45,17 @@ Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mi
   "meta" : {
     "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"]
   },
+  "extension" : [{
+    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+        "code" : "104220003",
+        "display" : "Rhodamine-auramine fluorochrome stain method"
+      }]
+    }
+  }],
   "identifier" : [{
     "type" : {
       "coding" : [{

@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Diagnostic_Report |
+| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Diagnostic_Report |
 
  
 Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextualisierung zugehöriger mikrobiologischer Untersuchungsergebnisse. 
@@ -46,9 +46,9 @@ Umfasst ein Befund mehrere Studientypen, etwa den Nachweis von Bakterien **und**
 
 `DiagnosticReport.conclusion` trägt die zusammenfassende Beurteilung des Labors als Freitext. Das Element ist Must Support, geerbt aus dem Labor-Basisprofil, und in der Serologie ist es der tragende Teil des Befunds und nicht Beigabe.
 
-Der Grund: Eine serologische Diagnose ist oft keine ihrer Einzelmessungen. Bei akuter EBV-Infektion erscheint zuerst IgM gegen das Viruskapsid-Antigen, dann VCA-IgG, und EBNA-IgG entsteht erst nach sechs bis zwölf Wochen. Jedes der drei Ergebnisse ist eine eigene Observation; die Aussage „frische Infektion" oder „durchgemachte Infektion" ergibt sich erst aus der Zusammenschau und ist keine von ihnen. Das europäische Whitepaper formuliert es als „a serological report is often more than the sum of its parts" und verlangt, dass die Beurteilung austauschbar ist — „free text to begin with".
+Der Grund: Eine serologische Diagnose ist oft keine ihrer Einzelmessungen. Bei akuter EBV-Infektion erscheint zuerst IgM gegen das Viruskapsid-Antigen, dann VCA-IgG, und EBNA-IgG entsteht erst nach sechs bis zwölf Wochen. Jedes der drei Ergebnisse ist eine eigene Observation; die Aussage „frische Infektion" oder „durchgemachte Infektion" ergibt sich erst aus der Zusammenschau und ist keine von ihnen. Die HL7 EU Lab Semantic Workgroup formuliert es als „a serological report is often more than the sum of its parts" und verlangt, dass die Beurteilung austauschbar ist — „free text to begin with".
 
-`conclusionCode` wird hier bewusst nicht eingeschränkt. Das Whitepaper schlägt für den Anfang Freitext vor, und dieses Modul hat kein ValueSet für kodierte Gesamtaussagen.
+`conclusionCode` wird hier bewusst nicht eingeschränkt. Die HL7 EU Lab Semantic Workgroup schlägt für den Anfang Freitext vor, und dieses Modul hat kein ValueSet für kodierte Gesamtaussagen.
 
 ### Was der Befund bündelt und was die Observations tragen
 
@@ -103,7 +103,6 @@ Mandatory: 1 element
 This structure refers to these other structures:
 
 * [MII PR Mikrobio Allgemeine Kultur (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur)](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md)
-* [MII PR Mikrobio Spezifische Kultur (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur)](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md)
 * [MII PR Mikrobio Allgemeine Bestimmung (Identifizierung) (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
 * [MII PR Mikrobio Spezifische Bestimmung (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung)](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md)
 * [MII PR Mikrobio Keimzahl (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl)](StructureDefinition-mii-pr-mikrobio-keimzahl.md)
@@ -153,7 +152,6 @@ Mandatory: 1 element
 This structure refers to these other structures:
 
 * [MII PR Mikrobio Allgemeine Kultur (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur)](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md)
-* [MII PR Mikrobio Spezifische Kultur (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur)](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md)
 * [MII PR Mikrobio Allgemeine Bestimmung (Identifizierung) (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
 * [MII PR Mikrobio Spezifische Bestimmung (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung)](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md)
 * [MII PR Mikrobio Keimzahl (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl)](StructureDefinition-mii-pr-mikrobio-keimzahl.md)
@@ -318,7 +316,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Diagnostic Report",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -411,7 +409,6 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur",
-        "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung",
         "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",

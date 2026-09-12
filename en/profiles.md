@@ -14,7 +14,6 @@ The 2027 modelling uses standalone Observation profiles instead of `component` r
 Culture-related observations (general, microscopy including Bartlett/Nugent score, colony count, susceptibility).
 
 * [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md)
-* [Specific culture](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md)
 * [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)
 * [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md)
 * [Bartlett score](StructureDefinition-mii-pr-mikrobio-bartlett-score.md)

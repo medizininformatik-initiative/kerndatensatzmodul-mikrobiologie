@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_PR_Mikrobio_Empfindlichkeit |
+| Active as of 2026-09-12 | *Computable Name*:MII_PR_Mikrobio_Empfindlichkeit |
 
  
 Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung eines Erregers gegenüber antimikrobiellen Substanzen unter Bezug auf ein Normsystem. 
@@ -17,6 +17,12 @@ Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung ein
 Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to a norm system.
 
 The resistance of an already identified pathogen against a single substance is represented here, for example a linezolid-resistant Enterococcus via `29258-1 |Linezolid [Susceptibility]|` with `interpretation` R; the negative case is `interpretation` S. Targeted detection of a resistant pathogen as such belongs in the detection profiles instead - see [Profile selection and delimitation](profilauswahl-und-abgrenzung.md).
+
+### The category, the norm and the test code
+
+A result may be given as a measured value or as a category. Where it is the category, the norm it was derived from sits on that same element: `valueCodeableConcept.extension[Norm]` is `1..1`. Where the category is given in `Observation.interpretation` instead — the usual case beside a measured MIC — the norm sits there, `interpretation.extension[Norm]`, also `1..1`. Either way the category cannot be reported without stating the rule set it came from, and the category no longer has to be written twice to give the norm a place.
+
+Two deviations from the European coordination are worth naming here. It asks for test codes without a pre-coordinated method, and this guide prefers them too — `100044-7 |Cefcapene [Susceptibility]|` rather than the "… by Broth dilution" variant, because the technique belongs in `Observation.method`. But the method-bearing codes stay admissible, because laboratories already code that way; the `code` short says which are preferred. And a categorical result in `value[x]` is admitted at all, which the coordination settles for the case where no measurement was made.
 
 ### Position in the diagnostic chain
 
@@ -26,7 +32,7 @@ Susceptibility testing follows the identification of the pathogen it assesses an
 
 ### Grouping an antibiogram
 
-An antibiogram is not one result but many — one Observation of this profile per substance tested. The European white paper binds them together with an **organizer Observation**: one Observation carrying the panel code `29576-6 |Bacterial susceptibility panel|` and no `value[x]` of its own, which points at the individual results through `Observation.hasMember` and at the identification it followed through `triggeredBy`.
+An antibiogram is not one result but many — one Observation of this profile per substance tested. The HL7 EU Lab Semantic Workgroup binds them together with an **organizer Observation**: one Observation carrying the panel code `29576-6 |Bacterial susceptibility panel|` and no `value[x]` of its own, which points at the individual results through `Observation.hasMember` and at the identification it followed through `triggeredBy`.
 
 The organizer is not profiled in this module. `Observation.hasMember` is available unconstrained from the laboratory base profile, and an organizer profile would create a canonical of its own for something FHIR already settles. There is accordingly no profile for it among the targets that `DiagnosticReport.result` accepts; the individual results are referenced there directly. [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md) sets out the pattern and the division of labour between `hasMember`, `triggeredBy` and `derivedFrom`.
 
@@ -193,7 +199,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-e
   "title" : "MII PR Mikrobio Empfindlichkeit",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -223,7 +229,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-e
       "display" : "Germany"
     }]
   }],
-  "purpose" : "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung. Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, z. B. ein linezolidresistenter Enterococcus über 29258-1 |Linezolid [Susceptibility]| mit interpretation R; der Negativfall ist interpretation S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen nach MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur.",
+  "purpose" : "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung. Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, z. B. ein linezolidresistenter Enterococcus über 29258-1 |Linezolid [Susceptibility]| mit interpretation R; der Negativfall ist interpretation S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen nach MII_PR_Mikrobio_Spezifische_Bestimmung.",
   "fhirVersion" : "4.0.1",
   "kind" : "resource",
   "abstract" : false,
@@ -235,20 +241,6 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-e
       "id" : "Observation",
       "path" : "Observation",
       "constraint" : [{
-        "key" : "empfindlichkeit-kategorie-braucht-interpretation",
-        "severity" : "error",
-        "human" : "If the result is given as a susceptibility category rather than a measured value, Observation.interpretation SHALL be present, because the norm it was derived from is carried there.",
-        "expression" : "value.ofType(CodeableConcept).exists() implies interpretation.exists()",
-        "source" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
-      },
-      {
-        "key" : "empfindlichkeit-kategorie-stimmt-mit-interpretation",
-        "severity" : "error",
-        "human" : "Where both a categorical result value and an interpretation are given, every code of the value SHALL also appear among the interpretation codes.",
-        "expression" : "value.ofType(CodeableConcept).coding.code.subsetOf(interpretation.coding.code)",
-        "source" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
-      },
-      {
         "key" : "empfindlichkeit-messwert-sollte-bewertet-sein",
         "severity" : "warning",
         "human" : "Where the result is a measured value, an interpretation SHOULD be given. It may be absent where no breakpoints are defined for the organism and agent.",
@@ -340,7 +332,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-e
       "id" : "Observation.value[x]:valueCodeableConcept",
       "path" : "Observation.value[x]",
       "sliceName" : "valueCodeableConcept",
-      "short" : "Die Empfindlichkeitskategorie, wenn kein Messwert vorliegt. Aus derselben Liste wie interpretation, weil beide dasselbe aussagen — sind beide angegeben, muessen sie uebereinstimmen (empfindlichkeit-kategorie-stimmt-mit-interpretation).",
+      "short" : "Die Empfindlichkeitskategorie, wenn kein Messwert vorliegt. Aus derselben Liste wie interpretation, weil beide dasselbe aussagen; sind beide angegeben, muessen sie dieselbe Kategorie nennen. Die Norm steht dann an derjenigen Stelle, an der die Kategorie steht — hier in valueCodeableConcept.extension[Norm].",
       "type" : [{
         "code" : "CodeableConcept"
       }],
@@ -348,6 +340,23 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-e
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility"
       }
+    },
+    {
+      "id" : "Observation.value[x]:valueCodeableConcept.extension",
+      "path" : "Observation.value[x].extension",
+      "min" : 1
+    },
+    {
+      "id" : "Observation.value[x]:valueCodeableConcept.extension:Norm",
+      "path" : "Observation.value[x].extension",
+      "sliceName" : "Norm",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm"]
+      }],
+      "mustSupport" : true
     },
     {
       "id" : "Observation.dataAbsentReason",

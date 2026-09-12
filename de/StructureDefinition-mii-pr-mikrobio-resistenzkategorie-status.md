@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-11 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Resistenzkategorie_Status |
+| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Resistenzkategorie_Status |
 
  
 Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value. 
@@ -64,7 +64,7 @@ Der Kategorienstatus ersetzt keinen zielgerichteten Erregernachweis:
 | | | |
 | :--- | :--- | :--- |
 | MRSA-PCR | [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md) | `Detected`/`Not detected` |
-| MRSA-Kultur | [Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md) | `Organism growth`/`No growth` |
+| MRSA-Kultur | [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md) | `Detected`/`Not detected` |
 | Bewertung eines vorliegenden**S. aureus**als MRSA | Resistenzkategorie-Status | `MRSA-Status`=`Positive`/`Negative` |
 
 Dasselbe Prinzip gilt für VRE und die übrigen Kategorien.
@@ -312,7 +312,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Resistenzkategorie Status",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

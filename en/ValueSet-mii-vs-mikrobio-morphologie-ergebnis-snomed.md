@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-11 | *Computable Name*:MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED |
+| Active as of 2026-09-12 | *Computable Name*:MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED |
 
  
 Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologische Gruppe, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen. Eine Speziesidentifizierung gehört nicht hierher, auch wenn sie mikroskopisch gestellt wurde. 
@@ -42,7 +42,7 @@ Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologi
   "title" : "MII VS Mikrobio Morphologie Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-11T12:05:40+00:00",
+  "date" : "2026-09-12T16:32:25+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -133,16 +133,24 @@ Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologi
         "display" : "Gram-positive diplococcus (organism)"
       },
       {
-        "code" : "115199003",
-        "display" : "Subclass Irregular Non-Sporing Gram Positive Rods (organism)"
-      },
-      {
         "code" : "116442009",
         "display" : "Coryneform bacteria (organism)"
       },
       {
         "code" : "62093005",
         "display" : "Yeast (organism)"
+      },
+      {
+        "code" : "243365003",
+        "display" : "Acid-fast bacillus (organism)"
+      },
+      {
+        "code" : "243366002",
+        "display" : "Partially acid-fast bacillus (organism)"
+      },
+      {
+        "code" : "243367006",
+        "display" : "Acid and alcohol-fast bacillus (organism)"
       },
       {
         "code" : "404507002",

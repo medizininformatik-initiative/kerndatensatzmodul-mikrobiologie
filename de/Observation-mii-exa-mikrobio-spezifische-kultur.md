@@ -12,7 +12,7 @@
 
 -------
 
-Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.md)
+Profile: [MII PR Mikrobio Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md)
 
 **identifier**: Observation Instance Identifier/spez-kultur-1
 
@@ -28,7 +28,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
 
 **performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
-**value**: Organism growth
+**value**: Detected (qualifier value)
 
 **method**: Organism specific culture
 
@@ -43,7 +43,7 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
   "resourceType" : "Observation",
   "id" : "mii-exa-mikrobio-spezifische-kultur",
   "meta" : {
-    "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-kultur"]
+    "profile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"]
   },
   "identifier" : [{
     "type" : {
@@ -97,8 +97,8 @@ Profile: [MII PR Mikrobio Spezifische Kultur](StructureDefinition-mii-pr-mikrobi
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
-      "code" : "365698005",
-      "display" : "Organism growth"
+      "code" : "260373001",
+      "display" : "Detected (qualifier value)"
     }]
   },
   "method" : {
