@@ -39,8 +39,14 @@ Description: "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis ei
 * valueCodeableConcept ^short = "Semiquantitative Stufe des im Code benannten Objekts. Weil der Untersuchungscode ordinal ist, ist die Stufe der Wert — nicht die Interpretation und keine Komponente. Wurde untersucht und nichts gesehen, wird 'None' oder 'No organisms seen' berichtet; liefert die Untersuchung gar keine verwertbare Aussage, dataAbsentReason."
 * valueQuantity ^short = "Zaehlung je Gesichtsfeld, UCUM-Einheit /[HPF]. Fuer offene Grenzen wird Quantity.comparator verwendet, z. B. '<10/GF' als comparator = '<', value = 10."
 * valueRange ^short = "Zaehlung je Gesichtsfeld als Intervall, UCUM-Einheit /[HPF] — z. B. '10-25/GF' als low = 10, high = 25."
+// FAERBUNG. Die Codes dieses Profils nennen die Faerbung meist selbst — 87243-2
+// und 72357-7 tun es. Sie wird trotzdem angegeben: nur so ist sie unabhaengig
+// von der Codewahl auswertbar, und nur so ist die konkrete Variante zu sehen,
+// wo der Code lediglich die Klasse nennt ("Acid fast stain" gegen Kinyoun).
+* extension contains MII_EX_Mikrobio_Faerbung named faerbung 0..1 MS
+* extension[faerbung] ^short = "Eingesetzte Faerbung. Immer angeben, wenn gefaerbt wurde — auch wenn der Untersuchungscode sie schon nennt."
+
 // Bewusst dieselbe Liste wie bei der Allgemeinen Mikroskopie: Es ist dasselbe
-// Verfahren, nur auf eine andere Frage angewandt. Steht die Faerbung schon im
-// Code — bei 87243-2 und 72357-7 ist das der Fall —, ist die Methode entbehrlich.
+// Verfahren, nur auf eine andere Frage angewandt.
 * method from MII_VS_Mikrobio_Morphologie_Methode_SNOMED (extensible)
-* method ^short = "Entbehrlich, wo die Faerbung bereits im Untersuchungscode steht. Sonst wie bei der Allgemeinen Mikroskopie: bevorzugt die Faerbetechnik, weil Observation.method 0..1 ist und nur eines von Faerbung und Mikroskopieverfahren hineinpasst."
+* method ^short = "Das mikroskopische Verfahren. Die Faerbung gehoert NICHT hierher, sondern in extension[faerbung]."

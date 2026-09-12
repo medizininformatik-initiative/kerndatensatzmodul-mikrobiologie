@@ -1,6 +1,6 @@
 Detection, susceptibility testing and classification are different diagnostic statements and are represented in this module by different profiles. This page describes the delimitation, the representation of negative results, and the linking of investigations into a diagnostic chain.
 
-> **Key statement:** a negative result of a targeted pathogen detection is represented via Specific determination or Specific culture. MRGN classification and resistance category status, by contrast, presuppose an already detected pathogen and do not replace a detection test.
+> **Key statement:** a negative result of a targeted pathogen detection is represented via Specific determination, whatever the technique. MRGN classification and resistance category status, by contrast, presuppose an already detected pathogen and do not replace a detection test.
 
 ### Which profiles belong to my laboratory area
 
@@ -16,7 +16,6 @@ therefore serves the molecular bench and the serology bench alike.
   * [Nugent score](StructureDefinition-mii-pr-mikrobio-nugent-score.html) — Gram-stain score for bacterial vaginosis
 * [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html) — the object is named in the code, the result is its semiquantitative grade
 * [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html) — growth or no growth, untargeted
-* [Specific culture](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html) — growth or no growth, targeted, e.g. MRSA screening
 * [Colony count](StructureDefinition-mii-pr-mikrobio-keimzahl.html) — viable count per volume or mass
 * [General determination](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html) — species identification, typically MALDI-TOF MS
 * [Susceptibility](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html) — phenotypic testing, S/I/R with MIC or zone diameter
@@ -147,8 +146,11 @@ strongly than one might expect:
 
 So the method is to be given even where the test code already carries it — a
 culture reported under `11475-1 |… by Culture|` should still name whether it was
-aerobic or anaerobic, and a Gram preparation under `664-3 |… by Gram stain|`
-should still name the stain.
+aerobic or anaerobic. In microscopy the stain is not part of the method: it is
+given in
+[`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.html), also
+where the test code names it, and `Observation.method` keeps the microscopy
+technique.
 
 This guide states that as a **recommendation**, not as a requirement.
 `Observation.method` is `0..1` Must Support in the laboratory base profile, and
@@ -205,7 +207,7 @@ a microscope.
 | Question | Profile | `Observation.code` | `Observation.value` |
 |---|---|---|---|
 | Is a predefined target detectable? (non-culture) | Specific determination | LOINC detection test, e.g. `105904-7` | `Detected` / `Not detected` |
-| Does a predefined microorganism grow? | Specific culture | LOINC culture test, e.g. `13316-5` | `Organism growth` / `No growth` |
+| Is a predefined microorganism there, sought by culture? | Specific determination | LOINC culture test, e.g. `13316-5` | `Detected` / `Not detected` |
 | Is a resistance gene detectable? | Resistance mechanisms / determinants | LOINC determinant, e.g. `48813-0` | `Detected` / `Not detected` |
 | How susceptible is an identified isolate to a substance? | Susceptibility | LOINC `[Susceptibility]`, e.g. `29258-1` | MIC as `Quantity`, assessment in `interpretation` (S / I / R) |
 | Which MRGN class does an identified Gram-negative isolate belong to? | MRGN class | `99780-9` | Classification value, e.g. `3MRGN`, or `keine-mrgn-klasse` |
@@ -247,7 +249,7 @@ The three cases in direct comparison, each for VRE:
 
 | Statement | Profile | `code` | `value` |
 |---|---|---|---|
-| VRE was sought and not found | Specific culture | `13316-5` | `No growth` |
+| VRE was sought by culture and not found | Specific determination | `13316-5` | `Not detected` |
 | VRE was sought and not found (molecular) | Specific determination | `105904-7` | `Not detected` |
 | An *Enterococcus* present is not a VRE | Resistance category status | `vre-status` | `Negative` |
 
@@ -305,7 +307,7 @@ A positive targeted detection can trigger follow-up diagnostics:
 
 ```
 Positive targeted detection
-(Specific determination or Specific culture)
+(Specific determination, any technique)
         │
         │ triggeredBy (reflex)
         ▼

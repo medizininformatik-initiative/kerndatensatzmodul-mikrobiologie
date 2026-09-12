@@ -71,24 +71,24 @@ belongs to.
 
 1. **[Is a Specimen resource always available?](probe.html#ballot-question-1)** — every
    investigation profile in this module requires `Observation.specimen`.
-2. **[Can the staining technique be represented via `Specimen` alone?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2)**
-   — the European data model places it in `Specimen.processing`; we ask whether
-   that is implementable.
+2. **[Where does the staining technique belong?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2)**
+   — this module carries it in an extension and deviates from the European
+   coordination, which places it on the Specimen.
 3. **[Mandatory storage temperature conditions on `Specimen.processing`](probe.html#ballot-question-3)**
    — inherited from the biobank base profile, without meaning for microbiological
    processing.
 4. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.html#ballot-question-4)**
    — FHIR and the MII provide the pieces; the question is whether sites can supply
    them.
-5. **[Component or `hasMember` for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5)**
-   — the European data model leaves this open; a component reverses a decision of
-   this release cycle.
+5. **[Can you process a component for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5)**
+   — the module follows the European coordination here, and the component
+   reverses a decision of this release cycle.
 6. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.html#ballot-question-6)**
    — the HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends it, and your
    answer decides more than one question.
-7. **[Should specific culture and specific determination be one profile?](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html#ballot-question-7)**
-   — they were until `2027.0.0-alpha.5`, the European discussion is open, and
-   merging is free only until this release is published.
+7. **[Is `Detected` / `Not detected` enough for a targeted culture?](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html#ballot-question-7)**
+   — one profile now covers targeted detection whatever the technique; the
+   European coordination binds growth codes for culture and this guide deviates.
 
 ### Contents
 

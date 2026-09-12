@@ -66,8 +66,10 @@ Lagerprozess-Slice `processing:lagerprozess` zu begrenzen, wo sie hingehört. Wi
 bitten um Rückmeldung im Ballot, falls Sie davon betroffen sind.
 
 Die Färbetechnik wird deshalb **nicht** unter
-`Specimen.processing.procedure` angegeben, wie das europäische Datenmodell es
-vorschlägt, sondern in `Observation.method` — siehe
+`Specimen.processing.procedure` angegeben, wie die HL7 EU Lab Semantic Workgroup
+es vorschlägt, sondern in einer Extension an der Observation,
+[`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.html), mit
+denselben Codes — siehe
 [Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html), wo
 Ballotfrage 2 die Begründung enthält.
 

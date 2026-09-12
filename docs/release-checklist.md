@@ -59,35 +59,45 @@ entry names the condition, how to check it, and what to do if it has changed.
   state on `probe.md` that pre-coordinated LOINC codes then carry the material.
   This affects all investigation profiles at once.
 
-### Ballot question 7 — one profile or two for targeted detection
+### Ballot question 7 — the result of a targeted culture
 
-- **Condition we rely on:** specific culture and specific determination stay two
-  profiles, which follows this module's derivation rule (the question asked and
-  the type of its answer) and keeps the `required` result binding on the culture
-  half.
-- **Why it matters, and why it is time-critical:** measured on 2026-09-11,
-  `mii-pr-mikrobio-spezifische-kultur` has appeared in **no** release — not
-  `2025.0.2`, not `2027.0.0-alpha.2`, `-alpha.4` or `-alpha.5`. Merging the two is
-  therefore free until this release is published. Afterwards it means withdrawing
-  a published canonical, which is a breaking change for every consumer. The
-  European discussion on the point is open.
-- **How to check:** before publication, look at whether the ballot or the European
-  group has answered. If the answer is "one profile", merge before the release
-  rather than after; if it is "two", nothing to do.
+- **Condition we rely on:** a targeted culture reports `Detected` / `Not detected`
+  like any other targeted detection, and the growth codes `365698005` /
+  `264868006` stay bound on general culture only. One profile covers targeted
+  detection whatever the technique.
+- **Why it matters:** the HL7 EU Lab Semantic Workgroup keeps targeted culture
+  separate and binds growth codes there, so this is a deliberate deviation, stated
+  as ballot question 7 rather than resolved silently. If sites need the growth
+  vocabulary, the binding has to come back — and with it, possibly, a second
+  profile.
+- **Why it was decided this way:** the culture is already stated by the test code,
+  whose method axis carries `Organism specific culture`, so repeating it in the
+  value duplicates the code. And the sites implement the un-split state; the split
+  was new in 2027.0.0 and had appeared in no release, so keeping it would have
+  imposed rework without gaining a statement.
+- **How to check:** before publication, look at whether the ballot answered. If
+  sites need `Organism growth` / `No growth`, widen
+  `mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed` and reconsider the
+  single profile.
 
 ### Interim code for the semiquantitative microscopy component
 
 - **Condition we relied on:** LOINC has no code for "semiquantitative value for
-  microscopy finding". The European data model requests one ("Microscopy" sheet,
-  row 13). Until it exists, `component[menge].code` in
-  `MII_PR_Mikrobio_Allgemeine_Mikroskopie` uses
-  `mii-cs-mikrobio-mikroskopie-komponenten#semiquantitative-menge`.
+  microscopy finding", and the European coordination has requested one. Until it
+  exists, `component[menge].code` in `MII_PR_Mikrobio_Allgemeine_Mikroskopie`
+  uses the concept the coordination proposes, `103392008 |Semi-quantitative
+  value|`. That concept is a scale-type qualifier: measured on 2026-09-12 it
+  lies under `398195001 |Measurement scales|`, not under `363787002 |Observable
+  entity|`, where a `component.code` belongs. It was chosen anyway, because a
+  roughly fitting SNOMED code is a lower barrier for consumers than a
+  module-specific CodeSystem; the limitation is reported back to the working
+  group.
 - **How to check:** search LOINC for a `Prid`/`PrThr` concept covering a
-  semiquantitative microscopy amount, or ask in the European working group.
-- **If the LOINC code exists:** point `component[menge].code` at it, set
-  `MII_CS_Mikrobio_Mikroskopie_Komponenten` to `retired`, and record the
-  substitution in `changes.md` with a migration note — instances carrying the
-  interim code stay valid data but no longer match the profile.
+  semiquantitative microscopy amount, or ask in the European working group —
+  also whether they now name a genuine observable instead of `103392008`.
+- **If the LOINC code exists:** point `component[menge].code` at it and record
+  the substitution in `changes.md` with a migration note — instances carrying
+  `103392008` stay valid data but no longer match the profile.
 
 ### Terminology-server certificate in CI
 

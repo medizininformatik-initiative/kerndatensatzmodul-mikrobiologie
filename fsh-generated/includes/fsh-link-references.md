@@ -1,10 +1,10 @@
 [mii-param-mikrobio-manifest]: Parameters-mii-param-mikrobio-manifest.html
 [mii-cps-mikrobio-metadata]: CapabilityStatement-mii-cps-mikrobio-metadata.html
-[MII_CS_Mikrobio_Mikroskopie_Komponenten]: CodeSystem-mii-cs-mikrobio-mikroskopie-komponenten.html
 [MII_CS_Mikrobio_MRGN_Ergebnis]: CodeSystem-mii-cs-mikrobio-mrgn-ergebnis.html
 [MII_CS_Mikrobio_Resistenzkategorie]: CodeSystem-mii-cs-mikrobio-resistenzkategorie.html
 [MII_CS_Mikrobio_Susceptibility_NORM]: CodeSystem-mii-cs-mikrobio-susceptibility-norm.html
 [MII_EX_Mikrobio_Empfindlichkeit_Norm]: StructureDefinition-mii-ex-mikrobio-empfindlichkeit-norm.html
+[MII_EX_Mikrobio_Faerbung]: StructureDefinition-mii-ex-mikrobio-faerbung.html
 [mii-exa-mikrobio-allgemeine-bestimmung]: Observation-mii-exa-mikrobio-allgemeine-bestimmung.html
 [mii-exa-mikrobio-allgemeine-kultur]: Observation-mii-exa-mikrobio-allgemeine-kultur.html
 [mii-exa-mikrobio-allgemeine-kultur-methodenneutral]: Observation-mii-exa-mikrobio-allgemeine-kultur-methodenneutral.html
@@ -64,7 +64,6 @@
 [MII_PR_Mikrobio_Resistenzkategorie_Status]: StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html
 [MII_PR_Mikrobio_Resistenzmechanismen_Determinanten]: StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html
 [MII_PR_Mikrobio_Spezifische_Bestimmung]: StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html
-[MII_PR_Mikrobio_Spezifische_Kultur]: StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html
 [MII_PR_Mikrobio_Spezifische_Mikroskopie]: StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html
 [MII_PR_Mikrobio_Titer]: StructureDefinition-mii-pr-mikrobio-titer.html
 [MII_PR_Mikrobio_Virulenzfaktor]: StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html
@@ -90,6 +89,7 @@
 [MII_VS_Mikrobio_Empfindlichkeit_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-empfindlichkeit-methode-snomed.html
 [MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC]: ValueSet-mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc.html
 [MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC]: ValueSet-mii-vs-mikrobio-empfindlichkeit-genotyp-loinc.html
+[MII_VS_Mikrobio_Faerbung_SNOMED]: ValueSet-mii-vs-mikrobio-faerbung-snomed.html
 [MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM]: ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html
 [MII_VS_Mikrobio_Keimzahl_LOINC]: ValueSet-mii-vs-mikrobio-keimzahl-loinc.html
 [MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED]: ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html
@@ -108,8 +108,6 @@
 [MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED]: ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html
 [MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed.html
 [MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC]: ValueSet-mii-vs-mikrobio-spezifische-bestimmung-tests-loinc.html
-[MII_VS_Mikrobio_Spezifische_Kultur_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-spezifische-kultur-methode-snomed.html
-[MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC]: ValueSet-mii-vs-mikrobio-spezifische-kultur-tests-loinc.html
 [MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC]: ValueSet-mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc.html
 [MII_VS_Mikrobio_Susceptibility]: ValueSet-mii-vs-mikrobio-susceptibility.html
 [MII_VS_Mikrobio_Susceptibility_NORM]: ValueSet-mii-vs-mikrobio-susceptibility-norm.html

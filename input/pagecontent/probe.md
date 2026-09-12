@@ -58,8 +58,10 @@ slice `processing:lagerprozess`, where it belongs. Please comment during the
 ballot if you are affected.
 
 The staining technique is consequently **not** given under
-`Specimen.processing.procedure`, as the European data model proposes, but in
-`Observation.method` — see
+`Specimen.processing.procedure`, as the HL7 EU Lab Semantic Workgroup proposes,
+but in an extension on the Observation,
+[`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.html), with
+the same codes — see
 [Microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html), where ballot
 question 2 sets out the reasoning.
 

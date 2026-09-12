@@ -16,6 +16,7 @@ Description: "Leukozyten im Grampräparat als Zählung je Gesichtsfeld, 10 bis 2
 * category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
 * category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#72163-9 "Leukocytes [Presence] in Specimen by Gram stain"
+* extension[faerbung].valueCodeableConcept = $sct#62777006 "Gram stain method"
 * subject = Reference(mii-exa-mikrobio-patient)
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"

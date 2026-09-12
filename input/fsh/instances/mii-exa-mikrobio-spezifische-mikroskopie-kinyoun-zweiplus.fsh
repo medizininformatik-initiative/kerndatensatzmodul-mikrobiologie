@@ -1,6 +1,6 @@
 // Aus demselben Katalog (Analyt PKINNAT, Kinyounfaerbung, Ergebnis "1-10/GF").
 // Hier ist die Faerbung im Code nur als Klasse benannt — "Acid fast stain" —,
-// die konkrete Variante steht deshalb in Observation.method. Und hier zeigt
+// die konkrete Variante steht deshalb in extension[faerbung]. Und hier zeigt
 // sich, warum die Stufe der WERT ist und nicht die Interpretation: Sie ist die
 // Antwort auf die Frage des ordinalen Codes.
 Instance: mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus
@@ -19,5 +19,5 @@ Description: "Kinyounfärbung mit säurefesten Stäbchen in der Stufe zwei von d
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $sct#441517005 "Present two plus out of three plus"
-* method = $sct#708128003 "Acid fast Kinyoun's cold carbolfuchsin stain technique"
+* extension[faerbung].valueCodeableConcept = $sct#36878004 "Acid fast Kinyoun's cold carbolfuchsin stain method"
 * specimen = Reference(mii-exa-mikrobio-probe)

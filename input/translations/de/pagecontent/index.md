@@ -84,25 +84,25 @@ vollständig dargestellt, zu der er gehört.
 
 1. **[Entsteht immer eine Specimen-Ressource?](probe.html#ballot-question-1)** — jedes
    Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`.
-2. **[Ist die Färbetechnik allein über `Specimen` darstellbar?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2)**
-   — das europäische Datenmodell legt sie nach `Specimen.processing`; wir fragen,
-   ob das implementierbar ist.
+2. **[Wohin gehört die Färbetechnik?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2)**
+   — dieses Modul führt sie in einer Extension und weicht damit von der
+   europäischen Abstimmung ab, die sie an die Probe legt.
 3. **[Pflicht-Temperaturbedingungen an `Specimen.processing`](probe.html#ballot-question-3)** — aus
    dem Bioproben-Basisprofil geerbt, ohne Aussage für die mikrobiologische
    Aufarbeitung.
 4. **[Sind Bebrütungsdauer und -temperatur über `Specimen.processing` darstellbar?](probe.html#ballot-question-4)**
    — FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie
    befüllen können.
-5. **[Komponente oder `hasMember` für eine semiquantitative Menge?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5)**
-   — das europäische Datenmodell lässt es offen; eine Komponente dreht eine
-   Entscheidung dieses Zyklus zurück.
+5. **[Können Sie eine Komponente für eine semiquantitative Menge verarbeiten?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5)**
+   — das Modul folgt hier der europäischen Abstimmung, und die Komponente dreht
+   eine Entscheidung dieses Zyklus zurück.
 6. **[Können Sie zu jedem Befund `Observation.method` liefern?](profilauswahl-und-abgrenzung.html#ballot-question-6)**
    — die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre
    Antwort entscheidet mehr als eine Frage.
-7. **[Sollten spezifische Kultur und spezifische Bestimmung ein Profil sein?](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html#ballot-question-7)**
-   — bis `2027.0.0-alpha.5` waren sie es, die europäische Diskussion ist offen,
-   und ein Zusammenlegen ist nur bis zur Veröffentlichung dieses Releases
-   kostenlos.
+7. **[Genügt `Detected` / `Not detected` für eine zielgerichtete Kultur?](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html#ballot-question-7)**
+   — ein Profil deckt jetzt den zielgerichteten Nachweis unabhängig vom Verfahren
+   ab; die europäische Abstimmung bindet für die Kultur Wachstumscodes, dieser
+   Leitfaden weicht davon ab.
 
 ### Inhalt dieses Leitfadens
 

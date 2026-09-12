@@ -190,6 +190,23 @@
         "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
       },
       {
+        "id": "Observation.extension:faerbung",
+        "path": "Observation.extension",
+        "sliceName": "faerbung",
+        "short": "Eingesetzte Faerbung, z. B. Gramfaerbung. Immer angeben, wenn gefaerbt wurde — auch wenn der Untersuchungscode sie schon nennt.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Observation.category",
         "path": "Observation.category",
         "min": 2
@@ -215,7 +232,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Bevorzugt 105059-0 'Microscopic observation [Identifier] in Specimen', weil es die Faerbung nach Observation.method auslagert. 664-3 '... by Gram stain' ist gleichwertig zulaessig und hat den Vorteil, dass Observation.method frei bleibt — das Element ist 0..1 und kann Faerbung und Mikroskopieverfahren nicht beide tragen.",
+        "short": "Bevorzugt 105059-0 'Microscopic observation [Identifier] in Specimen', weil es die Faerbung nicht in den Code zieht. 664-3 '... by Gram stain' ist gleichwertig zulaessig; die Faerbung wird in beiden Faellen zusaetzlich in extension[faerbung] angegeben, damit sie unabhaengig von der Codewahl an einer Stelle auswertbar ist.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc"
@@ -254,14 +271,9 @@
         }
       },
       {
-        "id": "Observation.interpretation",
-        "path": "Observation.interpretation",
-        "short": "Ein zusammenfassendes Urteil ueber das Praeparat — 'unauffaellig' als N 'Normal'. NICHT fuer die Menge des Gesehenen: die steht in component[menge]."
-      },
-      {
         "id": "Observation.method",
         "path": "Observation.method",
-        "short": "Bevorzugt die Faerbetechnik, z. B. 708061008 'Gram stain'; bei nativer Mikroskopie ohne Faerbung das Mikroskopieverfahren. Beides zugleich ist nicht moeglich, weil Observation.method 0..1 ist.",
+        "short": "Das mikroskopische Verfahren, z. B. 278289002 'Microscopy technique' oder eine Verengung davon. Die Faerbung gehoert NICHT hierher, sondern in extension[faerbung].",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"
@@ -287,7 +299,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "code"
+              "path": "$this.code"
             }
           ],
           "rules": "open",
@@ -309,8 +321,10 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "semiquantitative-menge",
-              "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mikroskopie-komponenten"
+              "code": "103392008",
+              "system": "http://snomed.info/sct",
+              "version": "http://snomed.info/sct/900000000000207008/version/20260701",
+              "display": "Semi-quantitative value"
             }
           ]
         }
