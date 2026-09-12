@@ -25,42 +25,18 @@ Description: "Allgemeine Mikroskopie beschreibt die morphologische Beobachtung v
 
 // KOMPONENTE MENGE. Sie loest den haeufigsten Grambefund, der bisher nicht
 // abbildbar war: "wenig grampositive Kokken" braucht die Morphologie UND die
-// Menge, value[x] traegt aber nur eine von beiden. Bei der Spezifischen
-// Mikroskopie stellt sich die Frage nicht, weil der ordinale Code das Objekt
-// benennt und die Stufe damit selbst der Wert ist.
+// Menge, value[x] traegt aber nur eine von beiden.
 //
-// Das ist der Weg, den das EU-Datenmodell im Blatt "Microscopy" vorschlaegt
-// (Zeile 11 "Component Procedure or has member?", Zeile 13 "new LOINC").
-// Zugleich dreht er eine Entscheidung dieses Zyklus zurueck: 2027.0.0-alpha.1
-// hat die Komponenten aus genau diesem Profil entfernt und in eigenstaendige
-// Observations ueberfuehrt (changes.md, Abschnitt 2027.0.0-alpha.1). Deshalb
-// steht als Ballotfrage 5 offen, ob Komponente oder hasMember hier richtig ist
-// — die Frage, die das Blatt selbst offenlaesst.
+// Das ist der Weg, den das Modellblatt "Microscopy" vorschlaegt (Zeile 11
+// "Component Procedure or has member?", Zeile 13 "new LOINC"), und den die
+// Prosa der HL7 EU Lab Semantic Workgroup entscheidet: Komponente fuer die
+// Menge eines einzelnen Befunds, hasMember fuer die Gruppierung mehrerer
+// Befunde einer Untersuchung. Zugleich dreht er eine Entscheidung dieses
+// Zyklus zurueck: 2027.0.0-alpha.1 hat die Komponenten aus genau diesem Profil
+// entfernt und in eigenstaendige Observations ueberfuehrt (changes.md,
+// Abschnitt 2027.0.0-alpha.1). Deshalb fragt Ballotfrage 5, ob Standorte die
+// Komponente verarbeiten koennen.
 //
-// DER KOMPONENTENCODE ist 103392008 |Semi-quantitative value|, den die HL7 EU
-// Lab Semantic Workgroup dafuer vorschlaegt. Ein eigener Interimscode stand hier
-// bis 2026-09-12; ein halbwegs passender SNOMED-Code ist fuer Verarbeitende die
-// kleinere Huerde als ein modulspezifisches CodeSystem.
-//
-// Die Einschraenkung sei benannt, weil sie zurueckgemeldet ist: Gemessen am
-// 2026-09-12 liegt 103392008 NICHT unter 363787002 |Observable entity|, sondern
-// als Qualifier Value unter 398195001 |Measurement scales|, neben
-// 30766002 |Quantitative value| und 117363000 |Ordinal value|. Das Konzept
-// benennt also eine Skalenart und keine Frage, und component.code braucht
-// eigentlich ein Observable. Es hat keine Nachkommen. Wird der im EU-Modell
-// angeforderte LOINC-Code veroeffentlicht, tritt er an diese Stelle.
-// Discriminator-Pfad mit $this.-Praefix, wie die MII-Geschwistermodule ihn
-// schreiben (Biobank: Observation.component -> pattern/$this.code,
-// Specimen.processing -> value/$this.procedure). Semantisch identisch mit "code",
-// aber die explizite FHIRPath-Form. Bare "$this" geht hier NICHT: component ist
-// ein BackboneElement, und pattern[x] kann keines tragen — gemessen am
-// 2026-09-12 tut das auch keines von 36 component-Slicings im Paketcache.
-* component ^slicing.discriminator[0].type = #pattern
-* component ^slicing.discriminator[0].path = "$this.code"
-* component ^slicing.rules = #open
-* component ^slicing.description = "Slicing nach dem Komponenten-Code."
-* component contains menge 0..1 MS
-* component[menge] ^short = "Semiquantitative Menge des in value[x] benannten Befunds"
-* component[menge].code = $sct#103392008 "Semi-quantitative value"
-* component[menge].value[x] only CodeableConcept
-* component[menge].valueCodeableConcept from MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED (extensible)
+// Definition in MIKRO_MENGE_KOMPONENTE, gemeinsam mit der Spezifischen
+// Mikroskopie — dort steht auch die Begruendung fuer Code und Antwortformate.
+* insert MIKRO_MENGE_KOMPONENTE

@@ -87,9 +87,9 @@ vollständig dargestellt, zu der er gehört.
 2. **[Wohin gehört die Färbetechnik?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2)**
    — dieses Modul führt sie in einer Extension und weicht damit von der
    europäischen Abstimmung ab, die sie an die Probe legt.
-3. **[Pflicht-Temperaturbedingungen an `Specimen.processing`](probe.html#ballot-question-3)** — aus
+3. **[Blockiert Sie die Pflicht-Lagertemperatur?](probe.html#ballot-question-3)** — aus
    dem Bioproben-Basisprofil geerbt, ohne Aussage für die mikrobiologische
-   Aufarbeitung.
+   Aufarbeitung, und ein abgeleitetes Profil kann sie nicht lockern.
 4. **[Sind Bebrütungsdauer und -temperatur über `Specimen.processing` darstellbar?](probe.html#ballot-question-4)**
    — FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie
    befüllen können.

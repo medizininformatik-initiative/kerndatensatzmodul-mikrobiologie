@@ -1,6 +1,9 @@
 // Aus dem realen Ergebniskatalog eines deutschen Labors (Analyt PAURA,
 // Auraminfaerbung, Ergebnis "sf neg"). Die Faerbung steht im Code und zusaetzlich
 // in extension[faerbung]; ein Mikroskopieverfahren wird nicht berichtet.
+//
+// Der Negativfall braucht keine Mengenkomponente: Was nicht nachgewiesen ist,
+// hat keine Menge.
 Instance: mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ
 InstanceOf: MII_PR_Mikrobio_Spezifische_Mikroskopie
 Usage: #example
@@ -17,5 +20,5 @@ Description: "Auraminfärbung ohne Nachweis säurefester Stäbchen: der negative
 * subject = Reference(mii-exa-mikrobio-patient)
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
-* valueCodeableConcept = $sct#260413007 "None"
+* valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
 * specimen = Reference(mii-exa-mikrobio-probe)

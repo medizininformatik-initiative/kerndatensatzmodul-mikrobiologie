@@ -1,6 +1,7 @@
 Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im
-Untersuchungscode benannten Objekts — säurefeste Stäbchen, Leukozyten, Clue Cells
-— mit der semiquantitativen Stufe, in der es gesehen wurde, als Ergebnis.
+Untersuchungscode benannten Objekts — säurefeste Stäbchen, Leukozyten, Clue
+Cells. Das Ergebnis ist, ob es nachgewiesen wurde; wie viel davon gesehen wurde,
+steht daneben in einer Komponente.
 
 ### Unterschied zur Allgemeinen Mikroskopie
 
@@ -11,19 +12,21 @@ Typ ihrer Antwort — die Regel, die dieses Modul durchgängig anwendet.
 |---|---|---|
 | Die Fragestellung | was ist zu sehen? | ist X da, und wie viel? |
 | `Observation.code` | ein Code, der höchstens die Färbung nennt | ein Code, der das gesuchte Objekt nennt |
-| `value[x]` | die beobachtete Morphologie | die semiquantitative Stufe |
+| `value[x]` | die beobachtete Morphologie | nachgewiesen oder nicht nachgewiesen |
 
 LOINC spiegelt diese Unterscheidung meist in der Skala — nominal, wo die Antwort
-das Objekt ist, ordinal, wo sie eine Stufe ist —, aber nicht zuverlässig. Für
+das Objekt ist, ordinal, wo sie ein Nachweis ist —, aber nicht zuverlässig. Für
 manche Färbungen existiert nur die nominale Form: Rhodamin-Auramin hat gar keinen
 ordinalen Code. Ein solcher Befund gehört in die allgemeine Mikroskopie, obwohl
-die Färbung zielgerichtet ist, denn die Antwort ist dann das gesehene Objekt und
-keine Stufe. Die Skala folgt der Unterscheidung, sie begründet sie nicht.
+die Färbung zielgerichtet ist, denn die Antwort ist dann das gesehene Objekt. Die
+Skala folgt der Unterscheidung, sie begründet sie nicht.
 
-Es ist deshalb nicht dieselbe Aussage wie die
-[Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html),
-obwohl beide zielgerichtet sind: Jene antwortet `Detected` / `Not detected`,
-diese eine Stufe. Aus demselben Grund steckt die Keimzahl nicht im Kulturprofil.
+Beide Profile antworten `Detected` / `Not detected`, und getrennt bleiben sie
+durch das Subjekt, über das sie sprechen: Die
+[Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html)
+benennt eine Erregerspezies, dieses Profil ein mikroskopisch sichtbares Objekt —
+Wirtszellen, eine morphologische Form, einen Parasiten — und führt die Menge mit,
+in der es gesehen wurde.
 
 ### Färbung
 
@@ -34,14 +37,21 @@ Variante, wo der Code nur die Klasse nennt („Acid fast stain" gegenüber Kinyo
 Wohin sie gehört, ist
 [Ballotfrage 2](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2).
 
-### Warum die Stufe der Wert ist
+### Die Menge
 
-Weil der Untersuchungscode ordinal ist, **ist** die Stufe die Antwort auf die
-Frage, die der Code stellt. Sie ist damit weder eine
-`Observation.interpretation` — die trägt die klinische Bewertung, keine Menge —
-noch eine Komponente noch eine Mitglieds-Observation. Wo LOINC einen solchen
-ordinalen Code anbietet, stellt sich die offene Frage des europäischen
-Datenmodells nach einer Komponente und einem neuen LOINC-Code nicht.
+Die Menge steht in `component[menge]` und nicht in `value[x]`: Der
+Untersuchungscode fragt, ob das Objekt da ist — `72357-7` und `87243-2` sind
+`PrThr`-Codes, „presence or threshold" —, und die Stufe qualifiziert diese
+Antwort, statt sie zu ersetzen. Eine `Observation.interpretation` ist sie
+ebenfalls nicht: Die trägt eine klinische Bewertung und keine Menge.
+
+Die Komponente nimmt drei Antwortformate, weil ein Labor dasselbe Analyt in zwei
+davon berichtet: die semiquantitative Stufe, eine Zählung je Gesichtsfeld als
+`Quantity` und eine solche Zählung als Intervall in einer `Range`. Code und
+Antwortliste teilt sie mit der
+[Allgemeinen Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html),
+wo [Ballotfrage 5](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5)
+fragt, ob Standorte sie verarbeiten können.
 
 Die Stufen stammen aus dem realen Ergebniskatalog eines deutschen Labors und
 liegen auf zwei SNOMED-Achsen: `441614007` / `441517005` / `441521003` sind
@@ -55,6 +65,6 @@ Säurefeste Stäbchen nicht nachgewiesen:
 
 [mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ](Observation-mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ.html)
 
-Säurefeste Stäbchen in Stufe zwei von drei:
+Säurefeste Stäbchen nachgewiesen, in Stufe zwei von drei:
 
 [mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus](Observation-mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus.html)

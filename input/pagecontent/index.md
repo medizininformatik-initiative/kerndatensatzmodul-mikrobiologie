@@ -74,9 +74,9 @@ belongs to.
 2. **[Where does the staining technique belong?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2)**
    — this module carries it in an extension and deviates from the European
    coordination, which places it on the Specimen.
-3. **[Mandatory storage temperature conditions on `Specimen.processing`](probe.html#ballot-question-3)**
+3. **[Does the mandatory storage temperature block you?](probe.html#ballot-question-3)**
    — inherited from the biobank base profile, without meaning for microbiological
-   processing.
+   processing, and a derived profile cannot relax it.
 4. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.html#ballot-question-4)**
    — FHIR and the MII provide the pieces; the question is whether sites can supply
    them.

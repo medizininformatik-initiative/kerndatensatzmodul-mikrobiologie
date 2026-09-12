@@ -15,7 +15,7 @@ Bestimmung bedient deshalb die molekulare Bank und die Serologie gleichermaßen.
 * [Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html) — die gesehene morphologische Gruppe, keine Spezies
   * [Bartlett-Score](StructureDefinition-mii-pr-mikrobio-bartlett-score.html) — ist eine Sputumprobe für die Kultur geeignet?
   * [Nugent-Score](StructureDefinition-mii-pr-mikrobio-nugent-score.html) — Gramfärbungs-Score für die bakterielle Vaginose
-* [Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html) — das Objekt steht im Code, das Ergebnis ist seine semiquantitative Stufe
+* [Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html) — das Objekt steht im Code, das Ergebnis ist sein Nachweis, die Menge steht daneben
 * [Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html) — Wachstum oder kein Wachstum, ungerichtet
 * [Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.html) — lebensfähige Keime je Volumen oder Masse
 * [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html) — Speziesidentifizierung, typischerweise MALDI-TOF-MS
@@ -165,12 +165,13 @@ Kultur mit dem methodenneutralen Code `41852-5`.
 
 {:.bg-warning}
 **Ballotfrage 6 — können Sie zu jedem Befund `Observation.method` liefern?**
-Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur. Wir bitten um Rückmeldung, ob eine Pflicht an Ihrem Standort erfüllbar wäre. Wenn ja, kann eine
-spätere Version `Observation.method` auf `1..1` heben, und das Sonderinvariant
-der Allgemeinen Kultur wird überflüssig. Daraus folgt ein Zweites: Ist
-die Methode immer vorhanden, ist `41852-5` samt Methode überall eindeutig, und
-der Grund, aus dem dieser Leitfaden die methodentragenden Codes `11475-1` und
-`664-3` empfiehlt, entfällt weitgehend. Die Antwort wirkt damit auf beide Fragen. Wir bitten um Rückmeldung im Ballot.
+Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt
+es nur. Wäre eine Pflicht an Ihrem Standort erfüllbar?
+
+Aus einem Ja folgt zweierlei. Eine spätere Version kann `Observation.method` auf
+`1..1` heben, und das Sonderinvariant der Allgemeinen Kultur wird überflüssig —
+`41852-5` samt Methode ist dann überall eindeutig, und die Empfehlung, den
+methodentragenden `11475-1` zu bevorzugen, entfällt weitgehend.
 
 ### Zwei Granularitätsstufen auf derselben Achse
 
