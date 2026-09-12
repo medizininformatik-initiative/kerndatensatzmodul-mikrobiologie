@@ -185,7 +185,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-r
   "title" : "MII PR Mikrobio Resistenzmechanismen Determinanten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T17:15:10+00:00",
+  "date" : "2026-09-12T20:14:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
