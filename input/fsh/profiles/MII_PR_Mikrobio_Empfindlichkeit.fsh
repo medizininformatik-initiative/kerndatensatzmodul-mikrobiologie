@@ -4,7 +4,7 @@ Id: mii-pr-mikrobio-empfindlichkeit
 Title: "MII PR Mikrobio Empfindlichkeit"
 Description: "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung eines Erregers gegenüber antimikrobiellen Substanzen unter Bezug auf ein Normsystem."
 * insert MIKRO_OBSERVATION_COMMON
-* ^purpose = "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung. Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, z. B. ein linezolidresistenter Enterococcus über 29258-1 |Linezolid [Susceptibility]| mit interpretation R; der Negativfall ist interpretation S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen nach MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur."
+* ^purpose = "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung. Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, z. B. ein linezolidresistenter Enterococcus über 29258-1 |Linezolid [Susceptibility]| mit interpretation R; der Negativfall ist interpretation S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen nach MII_PR_Mikrobio_Spezifische_Bestimmung."
 // Terminologische Luecke, nachverfolgt in Issue #92: Fuer den direkten zielgerichteten
 // LRE-Nachweis aus einer Probe fehlt ein geeigneter LOINC-Code; LOINC kennt zu Linezolid
 // nur [Susceptibility]-, Wirkspiegel- und Antikoerpercodes. Fuer MRSA und VRE existieren
@@ -24,44 +24,41 @@ Description: "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resist
 * valueQuantity
   * code from MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM (extensible)
 * valueCodeableConcept from MII_VS_Mikrobio_Susceptibility (extensible)
-* valueCodeableConcept ^short = "Die Empfindlichkeitskategorie, wenn kein Messwert vorliegt. Aus derselben Liste wie interpretation, weil beide dasselbe aussagen — sind beide angegeben, muessen sie uebereinstimmen (empfindlichkeit-kategorie-stimmt-mit-interpretation)."
-* obeys empfindlichkeit-kategorie-braucht-interpretation and empfindlichkeit-kategorie-stimmt-mit-interpretation and empfindlichkeit-messwert-sollte-bewertet-sein
+* valueCodeableConcept ^short = "Die Empfindlichkeitskategorie, wenn kein Messwert vorliegt. Aus derselben Liste wie interpretation, weil beide dasselbe aussagen; sind beide angegeben, muessen sie dieselbe Kategorie nennen. Die Norm steht dann an derjenigen Stelle, an der die Kategorie steht — hier in valueCodeableConcept.extension[Norm]."
+// DIE NORM WIRD STRUKTURELL ERZWUNGEN, nicht ueber eine Invariante. Constraints
+// unter valueCodeableConcept greifen nur, WENN der Wert ein CodeableConcept ist:
+// Eine Kategorie kann damit nicht ohne Norm berichtet werden, ein Messwert
+// (Quantity) braucht am Wert keine — dort steht die Norm an interpretation.
+//
+// Bis zum 2026-09-12 stand hier stattdessen die Invariante
+// empfindlichkeit-kategorie-braucht-interpretation, die `interpretation` verlangte,
+// weil die Norm nur dort haengen konnte. Die Anforderung war aber immer die NORM
+// und nie das Element; die Kardinalitaet sagt das direkt, ist von jedem Validator
+// prueffbar, erscheint in der Differential-Tabelle und braucht kein FHIRPath, das
+// SUSHI nicht prueft. Die Strenge bleibt gleich: Eine Kategorie ohne Norm war auch
+// vorher unzulaessig.
+* valueCodeableConcept.extension contains MII_EX_Mikrobio_Empfindlichkeit_Norm named Norm 1..1 MS
+* obeys empfindlichkeit-messwert-sollte-bewertet-sein
 * method from MII_VS_Mikrobio_Empfindlichkeit_Methode_SNOMED (extensible)
 * interpretation from MII_VS_Mikrobio_Susceptibility (extensible)
 * interpretation.extension contains MII_EX_Mikrobio_Empfindlichkeit_Norm named Norm 1..1 MS
 
-// Die beiden Invarianten fordert das Blatt selbst an: Zeile 20 "add invariant
-// checking valueCC & interpretation are equal" und Zeile 49 "If the result value
-// is just SIR, interpretation SHALL be also provided".
+// ZWEI INVARIANTEN AM 2026-09-12 GESTRICHEN, ersetzt durch Kardinalitaet oben.
 //
-// Der Grund fuer die zweite: Die Norm haengt an interpretation.extension. Ohne
-// interpretation steht eine Kategorie ohne die Angabe, nach welchem Regelwerk
-// sie gebildet wurde — und damit ohne Aussage.
-Invariant: empfindlichkeit-kategorie-braucht-interpretation
-Description: "If the result is given as a susceptibility category rather than a measured value, Observation.interpretation SHALL be present, because the norm it was derived from is carried there."
-Expression: "value.ofType(CodeableConcept).exists() implies interpretation.exists()"
-Severity: #error
-
-// Die erste Fassung dieses Ausdrucks war FALSCH und ist es wert, festgehalten
-// zu werden: Sie lautete
+// empfindlichkeit-kategorie-braucht-interpretation verlangte `interpretation`,
+// weil die Norm nur dort haengen konnte — das ist jetzt die Kardinalitaet an
+// valueCodeableConcept.extension[Norm].
 //
-//   value.ofType(CodeableConcept).coding.all(
-//     %resource.interpretation.coding.where(system = $this.system and
-//                                           code = $this.code).exists())
-//
-// In FHIRPath bindet JEDE iterierende Funktion `$this` neu. Innerhalb des
-// `where()` zeigt `$this` also auf das Interpretations-Coding, nicht auf das
-// Wert-Coding — die Bedingung verglich das Coding mit sich selbst, war immer
-// wahr, und das Invariant prüfte faktisch nur, ob überhaupt ein
-// Interpretations-Coding existiert.
-//
-// `subsetOf` braucht keine Variable: Es vergleicht die Code-Strings direkt.
-// Auf einer leeren Menge liefert es true, der Fall "kein kategorialer Wert"
-// ist also mitgedeckt.
-Invariant: empfindlichkeit-kategorie-stimmt-mit-interpretation
-Description: "Where both a categorical result value and an interpretation are given, every code of the value SHALL also appear among the interpretation codes."
-Expression: "value.ofType(CodeableConcept).coding.code.subsetOf(interpretation.coding.code)"
-Severity: #error
+// empfindlichkeit-kategorie-stimmt-mit-interpretation verglich die Codes von Wert
+// und Interpretation mit `subsetOf`. Sie faellt weg, und zwar aus einem Grund, der
+// festgehalten gehoert: `subsetOf` ist auf einer LEEREN rechten Seite false, wenn
+// links etwas steht. Sobald die Norm am Wert haengen darf, ist genau das der
+// Normalfall — Kategorie in value, kein interpretation —, die Invariante haette ihn
+// also verboten. Eine Fassung mit Schutz waere moeglich gewesen, haette aber
+// `all()` mit `%resource` gebraucht: dieselbe Konstruktion, deren erste Fassung
+// hier eine Tautologie war, weil `$this` in jeder iterierenden Funktion neu bindet.
+// Dass beide Stellen dieselbe Kategorie nennen muessen, wenn beide gefuellt sind,
+// sagt jetzt der ^short. Eine falsche Invariante ist schlechter als keine.
 
 // SOLLTE, nicht MUSS — deshalb `warning`. Ein Messwert ohne Kategorie laesst die
 // Bewertung beim Konsumenten, der dafuer die Grenzwerttabellen braeuchte. Eine

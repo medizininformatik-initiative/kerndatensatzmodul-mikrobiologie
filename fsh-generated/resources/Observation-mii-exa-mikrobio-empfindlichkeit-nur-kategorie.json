@@ -53,31 +53,29 @@
       "reference": "Organization/mii-exa-mikrobio-labor"
     }
   ],
-  "interpretation": [
-    {
-      "extension": [
-        {
-          "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "code": "EUCAST",
-                "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm",
-                "display": "EUCAST"
-              }
-            ]
-          }
+  "valueCodeableConcept": {
+    "extension": [
+      {
+        "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm",
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "EUCAST",
+              "system": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-susceptibility-norm",
+              "display": "EUCAST"
+            }
+          ]
         }
-      ],
-      "coding": [
-        {
-          "code": "R",
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-          "display": "Resistant"
-        }
-      ]
-    }
-  ],
+      }
+    ],
+    "coding": [
+      {
+        "code": "R",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+        "display": "Resistant"
+      }
+    ]
+  },
   "status": "final",
   "code": {
     "coding": [
@@ -93,15 +91,6 @@
     "reference": "Patient/mii-exa-mikrobio-patient"
   },
   "effectiveDateTime": "2026-04-02T10:00:00+01:00",
-  "valueCodeableConcept": {
-    "coding": [
-      {
-        "code": "R",
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-        "display": "Resistant"
-      }
-    ]
-  },
   "specimen": {
     "reference": "Specimen/mii-exa-mikrobio-probe"
   }

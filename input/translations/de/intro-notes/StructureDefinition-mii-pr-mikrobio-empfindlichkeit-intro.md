@@ -3,6 +3,26 @@ Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung ein
 
 Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, etwa ein linezolidresistenter Enterococcus über `29258-1 |Linezolid [Susceptibility]|` mit `interpretation` R; der Negativfall ist `interpretation` S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen in die Nachweisprofile — siehe [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html).
 
+### Kategorie, Norm und Untersuchungscode
+
+Ein Ergebnis kann als Messwert oder als Kategorie angegeben werden. Steht die
+Kategorie im Wert, sitzt die Norm, aus der sie gebildet wurde, an derselben
+Stelle: `valueCodeableConcept.extension[Norm]` ist `1..1`. Steht die Kategorie
+stattdessen in `Observation.interpretation` — der übliche Fall neben einer
+gemessenen MHK —, sitzt die Norm dort, `interpretation.extension[Norm]`, ebenfalls
+`1..1`. So oder so kann eine Kategorie nicht berichtet werden, ohne das Regelwerk
+zu nennen, aus dem sie stammt, und sie muss nicht mehr doppelt geschrieben werden,
+nur damit die Norm einen Platz hat.
+
+Zwei Abweichungen von der europäischen Abstimmung seien hier benannt. Sie verlangt
+Untersuchungscodes ohne präkoordiniertes Verfahren, und dieser Leitfaden bevorzugt
+sie ebenfalls — `100044-7 |Cefcapene [Susceptibility]|` statt der Variante
+„… by Broth dilution", weil das Verfahren nach `Observation.method` gehört. Die
+methodentragenden Codes bleiben aber zulässig, weil Labore bereits so kodieren;
+welche bevorzugt sind, sagt der `code`-Kurztext. Und eine kategoriale Angabe in
+`value[x]` ist überhaupt zugelassen, was die Abstimmung für den Fall regelt, dass
+kein Messwert vorliegt.
+
 ### Stellung in der diagnostischen Kette
 
 Die Empfindlichkeitstestung folgt der Identifizierung des Erregers, den sie

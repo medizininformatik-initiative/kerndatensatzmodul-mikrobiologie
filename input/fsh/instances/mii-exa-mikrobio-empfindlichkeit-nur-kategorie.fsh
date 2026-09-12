@@ -1,13 +1,19 @@
-// Der Fall, den das EU-Datenmodell in Zeile 46 des Blattes "Phenotypic
-// susceptibility" ausdruecklich zulaesst: Das Labor berichtet die Kategorie und
-// hat keine MHK gemessen. Beide Invarianten des Profils greifen hier —
-// interpretation ist vorhanden, und ihr Coding stimmt mit dem des Werts
-// ueberein. Auch keine Methode: Ohne Messung gibt es kein Messverfahren.
+// Der Fall, den die HL7 EU Lab Semantic Workgroup ausdruecklich zulaesst: Das
+// Labor berichtet die Kategorie und hat keine MHK gemessen. Auch keine Methode:
+// Ohne Messung gibt es kein Messverfahren.
+//
+// GEAENDERT AM 2026-09-12. Bis dahin stand die Kategorie hier DOPPELT, in value
+// und in interpretation — nicht weil die Aussage zweimal gebraucht wurde, sondern
+// weil die Norm nur an interpretation haengen konnte. Seit die Norm auch an
+// valueCodeableConcept zulaessig ist, steht sie an derselben Stelle wie die
+// Kategorie, und interpretation entfaellt. Den anderen Weg zeigt
+// mii-exa-mikrobio-empfindlichkeit: Messwert im Wert, Kategorie samt Norm in
+// interpretation.
 Instance: mii-exa-mikrobio-empfindlichkeit-nur-kategorie
 InstanceOf: MII_PR_Mikrobio_Empfindlichkeit
 Usage: #example
 Title: "MII EXA Mikrobio Empfindlichkeit nur Kategorie"
-Description: "Phänotypische Empfindlichkeitstestung, bei der nur die Kategorie berichtet wird und kein Messwert vorliegt."
+Description: "Phänotypische Empfindlichkeitstestung, bei der nur die Kategorie berichtet wird und kein Messwert vorliegt; die Norm steht an derselben Stelle wie die Kategorie."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "empf-nur-kategorie-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
@@ -19,6 +25,5 @@ Description: "Phänotypische Empfindlichkeitstestung, bei der nur die Kategorie 
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $v3-ObservationInterpretation#R "Resistant"
-* interpretation = $v3-ObservationInterpretation#R "Resistant"
-* interpretation.extension[Norm].valueCodeableConcept = MII_CS_Mikrobio_Susceptibility_NORM#EUCAST "EUCAST"
+* valueCodeableConcept.extension[Norm].valueCodeableConcept = MII_CS_Mikrobio_Susceptibility_NORM#EUCAST "EUCAST"
 * specimen = Reference(mii-exa-mikrobio-probe)
