@@ -37,24 +37,28 @@ Färbung nicht liefern kann. Weil die Terminologie auf beiden Wegen dieselbe ist
 
 Der häufigste Grambefund braucht zwei Aussagen auf einmal — *wenig* grampositive
 Kokken —, und `value[x]` kann nur eine davon tragen. Die Morphologie ist der Wert,
-die Menge eine Komponente: `component[menge]`, aus derselben semiquantitativen
-Liste, die die
-[Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html)
-als Wert verwendet.
+die Menge eine Komponente: `component[menge]`. Dieselbe Komponente, mit demselben
+Code und denselben Antworten, trägt die Menge in der
+[Spezifischen Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html).
 
 Ihr Code ist `103392008 |Semi-quantitative value|`, das Konzept, das die HL7 EU
 Lab Semantic Workgroup für diese Komponente vorschlägt. Für denselben Zweck ist
-ein LOINC-Code angefordert; er tritt an diese Stelle, sobald er existiert.
+ein LOINC-Code angefordert; er tritt an diese Stelle, sobald er existiert. Neben
+der semiquantitativen Stufe nimmt die Komponente eine Zählung je Gesichtsfeld,
+als `Quantity` oder als `Range`.
 
 <a id="ballot-question-5"></a>
 
 {:.bg-warning}
 **Ballotfrage 5 — können Sie eine Komponente für die Menge verarbeiten?**
-Die HL7 EU Lab Semantic Workgroup führt die Menge eines einzelnen Befunds in
-einer Komponente und gruppiert mehrere Befunde einer Untersuchung mit
-`hasMember`; dieses Modul folgt dem. Die Komponente dreht dabei eine
-Entscheidung dieses Zyklus zurück: `2027.0.0-alpha.1` hat die Komponenten aus
-genau diesem Profil entfernt und in eigenständige Observations überführt.
+Beide Mikroskopieprofile führen die Menge in `component[menge]` und folgen damit
+der HL7 EU Lab Semantic Workgroup, die die Menge eines einzelnen Befunds in einer
+Komponente führt und mehrere Befunde einer Untersuchung mit `hasMember`
+gruppiert.
+
+Die Komponente dreht eine Entscheidung dieses Zyklus zurück: `2027.0.0-alpha.1`
+hat die Komponenten aus genau diesem Profil entfernt und in eigenständige
+Observations überführt.
 
 ### Beispiele
 

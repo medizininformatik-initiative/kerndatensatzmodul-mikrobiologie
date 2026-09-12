@@ -4,7 +4,7 @@
   "language" : "en",
   "text" : {
     "status" : "generated",
-    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed</b></p><a name=\"mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed\"> </a><a name=\"hcmii-vs-mikrobio-mikroskopie-semiquantitativ-snomed\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/900000000000207008/version/20260701\"> version &#x1F4CD;http://snomed.info/sct/900000000000207008/version/20260701</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/441614007\">441614007</a></td><td>Present one plus out of three plus</td></tr><tr><td><a href=\"http://snomed.info/id/441517005\">441517005</a></td><td>Present two plus out of three plus</td></tr><tr><td><a href=\"http://snomed.info/id/441521003\">441521003</a></td><td>Present three plus out of three plus</td></tr><tr><td><a href=\"http://snomed.info/id/57176003\">57176003</a></td><td>Few</td></tr><tr><td><a href=\"http://snomed.info/id/260354000\">260354000</a></td><td>Moderate number</td></tr><tr><td><a href=\"http://snomed.info/id/260396001\">260396001</a></td><td>Numerous</td></tr><tr><td><a href=\"http://snomed.info/id/263865001\">263865001</a></td><td>Scanty</td></tr><tr><td><a href=\"http://snomed.info/id/260413007\">260413007</a></td><td>None</td></tr><tr><td><a href=\"http://snomed.info/id/27863008\">27863008</a></td><td>No organisms seen (finding)</td></tr><tr><td><a href=\"http://snomed.info/id/52101004\">52101004</a></td><td>Present</td></tr><tr><td><a href=\"http://snomed.info/id/2667000\">2667000</a></td><td>Absent</td></tr></table></li></ul></div>"
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed</b></p><a name=\"mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed\"> </a><a name=\"hcmii-vs-mikrobio-mikroskopie-semiquantitativ-snomed\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/900000000000207008/version/20260701\"> version &#x1F4CD;http://snomed.info/sct/900000000000207008/version/20260701</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/441614007\">441614007</a></td><td>Present one plus out of three plus</td></tr><tr><td><a href=\"http://snomed.info/id/441517005\">441517005</a></td><td>Present two plus out of three plus</td></tr><tr><td><a href=\"http://snomed.info/id/441521003\">441521003</a></td><td>Present three plus out of three plus</td></tr><tr><td><a href=\"http://snomed.info/id/57176003\">57176003</a></td><td>Few</td></tr><tr><td><a href=\"http://snomed.info/id/260354000\">260354000</a></td><td>Moderate number</td></tr><tr><td><a href=\"http://snomed.info/id/260396001\">260396001</a></td><td>Numerous</td></tr><tr><td><a href=\"http://snomed.info/id/263865001\">263865001</a></td><td>Scanty</td></tr></table></li></ul></div>"
   },
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed",
   "version" : "2027.0.0-ballot.rc1",
@@ -12,7 +12,7 @@
   "title" : "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T16:17:49+00:00",
+  "date" : "2026-09-12T17:15:10+00:00",
   "publisher" : "Medizininformatik Initiative",
   "contact" : [{
     "name" : "Medizininformatik Initiative",
@@ -21,7 +21,7 @@
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, in der das im Code benannte Objekt gesehen wurde.",
+  "description" : "Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in der ein mikroskopischer Befund gesehen wurde.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -60,22 +60,6 @@
       {
         "code" : "263865001",
         "display" : "Scanty"
-      },
-      {
-        "code" : "260413007",
-        "display" : "None"
-      },
-      {
-        "code" : "27863008",
-        "display" : "No organisms seen (finding)"
-      },
-      {
-        "code" : "52101004",
-        "display" : "Present"
-      },
-      {
-        "code" : "2667000",
-        "display" : "Absent"
       }]
     }]
   }

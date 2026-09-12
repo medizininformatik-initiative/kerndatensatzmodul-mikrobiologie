@@ -15,12 +15,12 @@ Untersuchungen ohne vordefiniertes Ziel, bei denen das Ergebnis die Nennung des 
 
 {:.bg-warning}
 **Ballotfrage 7 — genügt `Detected` / `Not detected` für eine zielgerichtete
-Kultur, oder brauchen Sie `Organism growth` / `No growth`?** Dieses Modul bildet
-den zielgerichteten Nachweis unabhängig vom Verfahren in einem Profil ab:
-Fragestellung und Ergebnistyp sind dieselben. Die HL7 EU Lab Semantic Workgroup
-führt die zielgerichtete Kultur getrennt und bindet dort Wachstum; dieser
-Leitfaden weicht davon ab. Die Kultur steht bereits im Untersuchungscode, dessen
-Methodenachse `Organism specific culture` trägt.
+Kultur, oder brauchen Sie `Organism growth` / `No growth`?** Dieses Modul weicht
+von der HL7 EU Lab Semantic Workgroup ab, die die zielgerichtete Kultur getrennt
+führt und dort Wachstumscodes bindet: Ein Profil deckt den zielgerichteten
+Nachweis unabhängig vom Verfahren ab, weil die Kultur bereits im
+Untersuchungscode steht, dessen Methodenachse `Organism specific culture`
+trägt.
 
 Brauchen Sie die Wachstumscodes, kommt die Bindung zurück. Wir bitten um
 Rückmeldung im Ballot.

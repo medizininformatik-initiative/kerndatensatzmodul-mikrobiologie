@@ -14,7 +14,7 @@
  
 Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis. 
 
-Specific microscopy describes the microscopic detection of an object named in the test code — acid-fast bacilli, leukocytes, clue cells — where the result is the semiquantitative grade in which it was seen.
+Specific microscopy describes the microscopic detection of an object named in the test code — acid-fast bacilli, leukocytes, clue cells. The result is whether it was detected; how much of it was seen is stated alongside, in a component.
 
 ### How it differs from general microscopy
 
@@ -24,19 +24,21 @@ Both halves are microscopy; what separates them is the question and the type of 
 | :--- | :--- | :--- |
 | The question | what is there to see? | is X there, and how much? |
 | `Observation.code` | a code that names at most the stain | a code that names the object sought |
-| `value[x]` | the morphology observed | the semiquantitative grade |
+| `value[x]` | the morphology observed | detected or not detected |
 
-LOINC usually mirrors that distinction in the scale — nominal where the answer is the object, ordinal where it is a grade — but not reliably. For some stains only the nominal form exists: rhodamine-auramine has no ordinal code at all. Such a finding belongs in general microscopy even though the stain is targeted, because the answer is then the object seen and not a grade. The scale follows the distinction; it does not define it.
+LOINC usually mirrors that distinction in the scale — nominal where the answer is the object, ordinal where it is a presence — but not reliably. For some stains only the nominal form exists: rhodamine-auramine has no ordinal code at all. Such a finding belongs in general microscopy even though the stain is targeted, because the answer is then the object seen. The scale follows the distinction; it does not define it.
 
-This is therefore not the same statement as [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md), even though both are targeted: that profile answers `Detected` / `Not detected`, this one answers a grade. The same reason keeps colony count out of the culture profile.
+Both profiles answer `Detected` / `Not detected`, and they stay apart for the subject they speak about: [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md) names a pathogen species, this one a microscopically visible object — host cells, a morphological form, a parasite — and carries the amount in which it was seen.
 
 ### Staining
 
 The codes of this profile usually name the stain themselves, and it is given in `extension[faerbung]` all the same — that is where a consumer reads it, whichever code the laboratory chose, and where the concrete variant appears when the code names only the class ("Acid fast stain" against Kinyoun). Where it belongs is [ballot question 2](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-2).
 
-### Why the grade is the value
+### The amount
 
-Because the test code is ordinal, the grade **is** the answer to the question the code asks. It is therefore neither an `Observation.interpretation` — which carries clinical significance, not a quantity — nor a component, nor a member observation. Where LOINC offers such an ordinal code, the European data model's open question about a component and a new LOINC code does not arise.
+The amount goes into `component[menge]`, not into `value[x]`: the test code asks whether the object is there — `72357-7` and `87243-2` are `PrThr` codes, "presence or threshold" — and the grade qualifies that answer rather than replacing it. It is not an `Observation.interpretation` either, which carries a clinical assessment and not a quantity.
+
+The component takes three answer forms, because a laboratory reports the same analyte in two of them: the semiquantitative grade, a count per high power field as `Quantity`, and such a count as an interval in a `Range`. Its code and its value set are shared with [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), where [ballot question 5](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-5) asks whether sites can process it.
 
 The grades come from a German laboratory's real result catalogue and span two SNOMED axes: `441614007` / `441517005` / `441521003` are presence findings below `52101004 |Present|`, while `Few`, `Moderate number`, `Numerous` and `Scanty` are degree and number descriptors. Which of the two families should be preferred is still open with the European working group.
 
@@ -46,7 +48,7 @@ Acid-fast bacilli not detected:
 
 [mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ](Observation-mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ.md)
 
-Acid-fast bacilli at grade two of three:
+Acid-fast bacilli detected, at grade two of three:
 
 [mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus](Observation-mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus.md)
 
@@ -207,7 +209,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T16:17:49+00:00",
+  "date" : "2026-09-12T17:15:10+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -237,7 +239,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "display" : "Germany"
     }]
   }],
-  "purpose" : "Dieses Profil beschreibt die zielgerichtete Mikroskopie, bei der das gesuchte Objekt und die Färbetechnik im Untersuchungscode stehen und das Ergebnis die Menge des Gesehenen ist.",
+  "purpose" : "Dieses Profil beschreibt die zielgerichtete Mikroskopie, bei der das gesuchte Objekt im Untersuchungscode steht und das Ergebnis der Nachweis oder Ausschluss dieses Objekts ist; wie viel davon gesehen wurde, steht in der Mengenkomponente.",
   "fhirVersion" : "4.0.1",
   "kind" : "resource",
   "abstract" : false,
@@ -320,45 +322,21 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "id" : "Observation.value[x]",
       "path" : "Observation.value[x]",
       "type" : [{
-        "code" : "Quantity"
-      },
-      {
         "code" : "CodeableConcept"
-      },
-      {
-        "code" : "Range"
-      }]
-    },
-    {
-      "id" : "Observation.value[x]:valueQuantity",
-      "path" : "Observation.value[x]",
-      "sliceName" : "valueQuantity",
-      "short" : "Zaehlung je Gesichtsfeld, UCUM-Einheit /[HPF]. Fuer offene Grenzen wird Quantity.comparator verwendet, z. B. '<10/GF' als comparator = '<', value = 10.",
-      "type" : [{
-        "code" : "Quantity"
       }]
     },
     {
       "id" : "Observation.value[x]:valueCodeableConcept",
       "path" : "Observation.value[x]",
       "sliceName" : "valueCodeableConcept",
-      "short" : "Semiquantitative Stufe des im Code benannten Objekts. Weil der Untersuchungscode ordinal ist, ist die Stufe der Wert — nicht die Interpretation und keine Komponente. Wurde untersucht und nichts gesehen, wird 'None' oder 'No organisms seen' berichtet; liefert die Untersuchung gar keine verwertbare Aussage, dataAbsentReason.",
+      "short" : "Nachweis oder Ausschluss des im Code benannten Objekts. Die Menge des Gesehenen gehoert NICHT hierher, sondern in component[menge]. Liefert die Untersuchung gar keine verwertbare Aussage, dataAbsentReason.",
       "type" : [{
         "code" : "CodeableConcept"
       }],
       "binding" : {
         "strength" : "extensible",
-        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"
       }
-    },
-    {
-      "id" : "Observation.value[x]:valueRange",
-      "path" : "Observation.value[x]",
-      "sliceName" : "valueRange",
-      "short" : "Zaehlung je Gesichtsfeld als Intervall, UCUM-Einheit /[HPF] — z. B. '10-25/GF' als low = 10, high = 25.",
-      "type" : [{
-        "code" : "Range"
-      }]
     },
     {
       "id" : "Observation.dataAbsentReason",
@@ -384,6 +362,98 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "type" : [{
         "code" : "Reference",
         "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"]
+      }]
+    },
+    {
+      "id" : "Observation.component",
+      "path" : "Observation.component",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "pattern",
+          "path" : "$this.code"
+        }],
+        "description" : "Slicing nach dem Komponenten-Code.",
+        "rules" : "open"
+      }
+    },
+    {
+      "id" : "Observation.component:menge",
+      "path" : "Observation.component",
+      "sliceName" : "menge",
+      "short" : "Semiquantitative Menge oder Zaehlung des berichteten Befunds",
+      "definition" : "Wie viel des Befunds gesehen wurde: als semiquantitative Stufe, als Zaehlung je Gesichtsfeld oder als Intervall einer solchen Zaehlung.",
+      "min" : 0,
+      "max" : "1",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Observation.component:menge.code",
+      "path" : "Observation.component.code",
+      "patternCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+          "code" : "103392008",
+          "display" : "Semi-quantitative value"
+        }]
+      }
+    },
+    {
+      "id" : "Observation.component:menge.value[x]",
+      "path" : "Observation.component.value[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
+      "type" : [{
+        "code" : "Quantity"
+      },
+      {
+        "code" : "CodeableConcept"
+      },
+      {
+        "code" : "Range"
+      }]
+    },
+    {
+      "id" : "Observation.component:menge.value[x]:valueCodeableConcept",
+      "path" : "Observation.component.value[x]",
+      "sliceName" : "valueCodeableConcept",
+      "short" : "Semiquantitative Stufe, z. B. 'Few' oder 'Present two plus out of three plus'.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"
+      }
+    },
+    {
+      "id" : "Observation.component:menge.value[x]:valueQuantity",
+      "path" : "Observation.component.value[x]",
+      "sliceName" : "valueQuantity",
+      "short" : "Zaehlung je Gesichtsfeld, UCUM-Einheit /[HPF]. Fuer offene Grenzen wird Quantity.comparator verwendet, z. B. '<10/GF' als comparator = '<', value = 10.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }]
+    },
+    {
+      "id" : "Observation.component:menge.value[x]:valueRange",
+      "path" : "Observation.component.value[x]",
+      "sliceName" : "valueRange",
+      "short" : "Zaehlung je Gesichtsfeld als Intervall, UCUM-Einheit /[HPF] — z. B. '10-25/GF' als low = 10, high = 25.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Range"
       }]
     }]
   }

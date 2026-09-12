@@ -179,7 +179,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-v
   "title" : "MII PR Mikrobio Voraussichtliche Empfindlichkeit",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T16:17:49+00:00",
+  "date" : "2026-09-12T17:15:10+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -30,7 +30,7 @@ Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mi
 
 **performer**: [Organization Universitätsklinikum Musterstadt](Organization-mii-exa-mikrobio-labor.md)
 
-**value**: None
+**value**: Not detected (qualifier value)
 
 **specimen**: [Specimen: identifier = https://example.org/fhir/sid/test-specimen#probe-1; status = available; type = Specimen; receivedTime = 2026-04-02 08:30:00+0100](Specimen-mii-exa-mikrobio-probe.md)
 
@@ -108,8 +108,8 @@ Profile: [MII PR Mikrobio Spezifische Mikroskopie](StructureDefinition-mii-pr-mi
     "coding" : [{
       "system" : "http://snomed.info/sct",
       "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
-      "code" : "260413007",
-      "display" : "None"
+      "code" : "260415000",
+      "display" : "Not detected (qualifier value)"
     }]
   },
   "specimen" : {

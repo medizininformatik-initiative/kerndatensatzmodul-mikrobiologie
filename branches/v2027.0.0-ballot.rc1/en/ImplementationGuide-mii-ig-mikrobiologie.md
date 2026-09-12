@@ -247,7 +247,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   "title" : "MII Implementation Guide Microbiology",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T16:17:49+00:00",
+  "date" : "2026-09-12T17:15:10+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -2076,7 +2076,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus"
       },
       "name" : "MII EXA Mikrobio Spezifische Mikroskopie Kinyoun zwei plus",
-      "description" : "Kinyounfärbung mit säurefesten Stäbchen in der Stufe zwei von drei, entsprechend 1–10 pro Gesichtsfeld.",
+      "description" : "Kinyounfärbung mit Nachweis säurefester Stäbchen, in der Stufe zwei von drei als Mengenkomponente — entsprechend 1–10 pro Gesichtsfeld.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
     },
     {
@@ -2092,7 +2092,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld"
       },
       "name" : "MII EXA Mikrobio Spezifische Mikroskopie Leukozyten je Gesichtsfeld",
-      "description" : "Leukozyten im Grampräparat als Zählung je Gesichtsfeld, 10 bis 25, statt als semiquantitative Stufe.",
+      "description" : "Leukozyten im Grampräparat nachgewiesen, mit der Menge als Zählung je Gesichtsfeld — 10 bis 25 — statt als semiquantitative Stufe.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
     },
     {
@@ -2988,7 +2988,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"
       },
       "name" : "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]",
-      "description" : "Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, in der das im Code benannte Objekt gesehen wurde.",
+      "description" : "Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in der ein mikroskopischer Befund gesehen wurde.",
       "exampleBoolean" : false
     },
     {

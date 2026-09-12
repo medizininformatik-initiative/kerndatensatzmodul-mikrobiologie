@@ -146,7 +146,7 @@
   <title value="MII Implementation Guide Microbiology"/>
   <status value="active"/>
   <experimental value="false"/>
-  <date value="2026-09-12T16:17:49+00:00"/>
+  <date value="2026-09-12T17:15:10+00:00"/>
   <publisher value="Medizininformatik Initiative">
     <extension url="http://hl7.org/fhir/StructureDefinition/translation">
       <extension url="lang">
@@ -1461,7 +1461,7 @@
         <reference value="Observation/mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus"/>
       </reference>
       <name value="MII EXA Mikrobio Spezifische Mikroskopie Kinyoun zwei plus"/>
-      <description value="Kinyounfärbung mit säurefesten Stäbchen in der Stufe zwei von drei, entsprechend 1–10 pro Gesichtsfeld."/>
+      <description value="Kinyounfärbung mit Nachweis säurefester Stäbchen, in der Stufe zwei von drei als Mengenkomponente — entsprechend 1–10 pro Gesichtsfeld."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"/>
     </resource>
     <resource>
@@ -1472,7 +1472,7 @@
         <reference value="Observation/mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld"/>
       </reference>
       <name value="MII EXA Mikrobio Spezifische Mikroskopie Leukozyten je Gesichtsfeld"/>
-      <description value="Leukozyten im Grampräparat als Zählung je Gesichtsfeld, 10 bis 25, statt als semiquantitative Stufe."/>
+      <description value="Leukozyten im Grampräparat nachgewiesen, mit der Menge als Zählung je Gesichtsfeld — 10 bis 25 — statt als semiquantitative Stufe."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"/>
     </resource>
     <resource>
@@ -2088,7 +2088,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]"/>
-      <description value="Ergebnis-ValueSet für die spezifische Mikroskopie: die semiquantitative Stufe, in der das im Code benannte Objekt gesehen wurde."/>
+      <description value="Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in der ein mikroskopischer Befund gesehen wurde."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

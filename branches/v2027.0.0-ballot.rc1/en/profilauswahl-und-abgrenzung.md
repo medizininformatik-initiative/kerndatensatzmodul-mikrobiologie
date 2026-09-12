@@ -20,7 +20,7 @@ A profile appears under more than one area on purpose. The model is method-neutr
 * [Bartlett score](StructureDefinition-mii-pr-mikrobio-bartlett-score.md) — is a sputum specimen fit for culture?
 * [Nugent score](StructureDefinition-mii-pr-mikrobio-nugent-score.md) — Gram-stain score for bacterial vaginosis
  
-* [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md) — the object is named in the code, the result is its semiquantitative grade
+* [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md) — the object is named in the code, the result is its detection, with the amount alongside
 * [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.md) — growth or no growth, untargeted
 * [Colony count](StructureDefinition-mii-pr-mikrobio-keimzahl.md) — viable count per volume or mass
 * [General determination](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) — species identification, typically MALDI-TOF MS
@@ -106,7 +106,9 @@ So the method is to be given even where the test code already carries it — a c
 
 This guide states that as a **recommendation**, not as a requirement. `Observation.method` is `0..1` Must Support in the laboratory base profile, and making it mandatory across every investigation profile would invalidate conformant data that exists today. The one place it is enforced is where the statement is otherwise ambiguous: General culture with the method-neutral code `41852-5`.
 
-**Ballot question 6 — can you supply `Observation.method` for every result?** The HL7 EU Lab Semantic Workgroup asks for it always, this guide only recommends it. We ask whether making it mandatory would be deliverable at your site. If it would, a later version can raise `Observation.method` to `1..1` and the special-case invariant on General culture becomes unnecessary. A second consequence follows: if the method is always present, `41852-5` plus a method is unambiguous everywhere, and the reason this guide recommends the method-bearing codes `11475-1` and `664-3` largely falls away. The answer therefore bears on both questions. Please comment during the ballot.
+**Ballot question 6 — can you supply `Observation.method` for every result?** The HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends it. Would making it mandatory be deliverable at your site?
+
+Two things follow from a yes. A later version can raise `Observation.method` to `1..1`, and the special-case invariant on General culture becomes unnecessary — `41852-5` plus a method is then unambiguous everywhere, so the recommendation to prefer the method-bearing `11475-1` largely falls away.
 
 ### Two granularities on the same axis
 

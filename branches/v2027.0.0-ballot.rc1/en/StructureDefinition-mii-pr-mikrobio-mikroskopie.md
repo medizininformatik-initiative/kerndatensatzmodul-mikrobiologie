@@ -28,11 +28,13 @@ Two things keep this module from relying on the Specimen alone. It presupposes a
 
 ### Morphology together with its amount
 
-The most common Gram finding needs two statements at once — **few** Gram-positive cocci — and `value[x]` can carry only one of them. The morphology is the value and the amount is a component, `component[menge]`, taken from the semiquantitative set that [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md) uses as its value.
+The most common Gram finding needs two statements at once — **few** Gram-positive cocci — and `value[x]` can carry only one of them. The morphology is the value and the amount is a component, `component[menge]`. The same component, with the same code and the same answers, carries the amount in [Specific microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.md).
 
-Its code is `103392008 |Semi-quantitative value|`, the concept the HL7 EU Lab Semantic Workgroup proposes for this component. A LOINC code has been requested for the same purpose and will take its place once it exists.
+Its code is `103392008 |Semi-quantitative value|`, the concept the HL7 EU Lab Semantic Workgroup proposes for this component. A LOINC code has been requested for the same purpose and will take its place once it exists. Besides the semiquantitative grade the component takes a count per high power field, as a `Quantity` or as a `Range`.
 
-**Ballot question 5 — can you process a component for the amount?** The HL7 EU Lab Semantic Workgroup uses a component for the amount of a single finding and `hasMember` to group several findings of one examination; this module follows that. The component nevertheless reverses a decision of this release cycle: `2027.0.0-alpha.1` removed components from this very profile and moved them into standalone Observations.
+**Ballot question 5 — can you process a component for the amount?** Both microscopy profiles carry the amount in `component[menge]`, following the HL7 EU Lab Semantic Workgroup, which uses a component for the amount of a single finding and `hasMember` to group several findings of one examination.
+
+The component reverses a decision of this release cycle: `2027.0.0-alpha.1` removed components from this very profile and moved them into standalone Observations.
 
 ### Examples
 
@@ -197,7 +199,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T16:17:49+00:00",
+  "date" : "2026-09-12T17:15:10+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -368,7 +370,8 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
       "id" : "Observation.component:menge",
       "path" : "Observation.component",
       "sliceName" : "menge",
-      "short" : "Semiquantitative Menge des in value[x] benannten Befunds",
+      "short" : "Semiquantitative Menge oder Zaehlung des berichteten Befunds",
+      "definition" : "Wie viel des Befunds gesehen wurde: als semiquantitative Stufe, als Zaehlung je Gesichtsfeld oder als Intervall einer solchen Zaehlung.",
       "min" : 0,
       "max" : "1",
       "mustSupport" : true
@@ -388,6 +391,31 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
     {
       "id" : "Observation.component:menge.value[x]",
       "path" : "Observation.component.value[x]",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "type",
+          "path" : "$this"
+        }],
+        "ordered" : false,
+        "rules" : "open"
+      },
+      "type" : [{
+        "code" : "Quantity"
+      },
+      {
+        "code" : "CodeableConcept"
+      },
+      {
+        "code" : "Range"
+      }]
+    },
+    {
+      "id" : "Observation.component:menge.value[x]:valueCodeableConcept",
+      "path" : "Observation.component.value[x]",
+      "sliceName" : "valueCodeableConcept",
+      "short" : "Semiquantitative Stufe, z. B. 'Few' oder 'Present two plus out of three plus'.",
+      "min" : 0,
+      "max" : "1",
       "type" : [{
         "code" : "CodeableConcept"
       }],
@@ -395,6 +423,28 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
         "strength" : "extensible",
         "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"
       }
+    },
+    {
+      "id" : "Observation.component:menge.value[x]:valueQuantity",
+      "path" : "Observation.component.value[x]",
+      "sliceName" : "valueQuantity",
+      "short" : "Zaehlung je Gesichtsfeld, UCUM-Einheit /[HPF]. Fuer offene Grenzen wird Quantity.comparator verwendet, z. B. '<10/GF' als comparator = '<', value = 10.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }]
+    },
+    {
+      "id" : "Observation.component:menge.value[x]:valueRange",
+      "path" : "Observation.component.value[x]",
+      "sliceName" : "valueRange",
+      "short" : "Zaehlung je Gesichtsfeld als Intervall, UCUM-Einheit /[HPF] — z. B. '10-25/GF' als low = 10, high = 25.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Range"
+      }]
     }]
   }
 }

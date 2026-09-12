@@ -320,19 +320,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><a id="ballot-question-1"></a></p>
 
 <p class="bg-warning"><strong>Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?</strong>
-Jedes Untersuchungsprofil dieses Moduls verlangt <code class="language-plaintext highlighter-rouge">Observation.specimen</code>. Die
-Anforderung stammt nicht allein aus diesem Leitfaden: Die HL7 EU Lab Semantic Workgroup
-hält fest, dass die Probe <strong>immer</strong> ausdrücklich in einer
-FHIR-Specimen-Ressource abzubilden ist, bevorzugt in <code class="language-plaintext highlighter-rouge">Specimen.type</code> mit SNOMED
-CT — und sagt ausdrücklich, dass das auch dann gilt, <em>wenn der LOINC-Code die
-Probe bereits trägt</em>.</p>
+Jedes Untersuchungsprofil dieses Moduls verlangt <code class="language-plaintext highlighter-rouge">Observation.specimen</code>, wie die
+HL7 EU Lab Semantic Workgroup es auch tut — sie verlangt eine ausdrückliche
+Specimen-Ressource selbst dann, wenn der LOINC-Code das Material bereits trägt.</p>
 
 <p>Aus der deutschen Laborpraxis kommt die Rückmeldung, dass eine
 Specimen-Ressource häufig nicht erzeugt wird. Trifft das breit zu, weisen die
 beiden Auswege in entgegengesetzte Richtungen: <code class="language-plaintext highlighter-rouge">Observation.specimen</code> auf <code class="language-plaintext highlighter-rouge">0..1</code>
 lockern und präkoordinierte LOINC-Codes das Material tragen lassen, oder die
-Pflicht beibehalten und hinnehmen, dass manche Sender nicht konform sein können.
-Wir bitten um Rückmeldung im Ballot.</p>
+Pflicht beibehalten und hinnehmen, dass manche Sender nicht konform sein
+können.</p>
 
 <p>Proben werden über <a href="StructureDefinition-mii-pr-mikrobio-probe.html">Probe</a>
 abgebildet, das von
@@ -372,18 +369,19 @@ weiterverarbeiteten oder aus Primärproben gewonnenen Materialien.</p>
 
 <p><a id="ballot-question-3"></a></p>
 
-<p class="bg-warning"><strong>Ballotfrage 3 — Pflicht-Temperaturbedingungen an <code class="language-plaintext highlighter-rouge">Specimen.processing</code>.</strong>
+<p class="bg-warning"><strong>Ballotfrage 3 — blockiert Sie die Pflicht-Lagertemperatur?</strong>
 Das Basisprofil verlangt die Extension <code class="language-plaintext highlighter-rouge">temperaturbedingungen</code> an jedem
-<code class="language-plaintext highlighter-rouge">Specimen.processing</code>-Element, in <code class="language-plaintext highlighter-rouge">2026.0.1</code> wie in <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code>. Diese
-Pflicht stammt aus der Biobank, wo <code class="language-plaintext highlighter-rouge">Specimen.processing</code> den Lagerprozess einer
-Bioprobe beschreibt und die Temperatur zur Kernaussage gehört. In der
-Mikrobiologie beschreibt derselbe Platz die Aufarbeitung — Färbung, Anreicherung,
-Bebrütung —, und dort ist eine Lagertemperatur entweder unbekannt oder ohne
-Aussage. Ein abgeleitetes Profil darf nur verengen und nie lockern, dieses Modul
-kann die Pflicht also nicht auflösen. Wir halten sie in diesem Zusammenhang für
-fehlplatziert und bringen sie beim Biobank-Modul ein, mit dem Ziel, sie auf den
-Lagerprozess-Slice <code class="language-plaintext highlighter-rouge">processing:lagerprozess</code> zu begrenzen, wo sie hingehört. Wir
-bitten um Rückmeldung im Ballot, falls Sie davon betroffen sind.</p>
+<code class="language-plaintext highlighter-rouge">Specimen.processing</code>-Element, und ein abgeleitetes Profil darf nur verengen und
+nie lockern — dieses Modul kann die Pflicht also nicht auflösen.</p>
+
+<p>Sie stammt aus der Biobank, wo <code class="language-plaintext highlighter-rouge">Specimen.processing</code> den Lagerprozess einer
+Bioprobe beschreibt und die Temperatur zur Kernaussage gehört; sie gilt in
+<code class="language-plaintext highlighter-rouge">2026.0.1</code> wie in <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code>. In der Mikrobiologie beschreibt dasselbe
+Element die Aufarbeitung: Färbung, Anreicherung, Bebrütung, wo eine
+Lagertemperatur entweder unbekannt oder ohne Aussage ist. Wir halten sie in
+diesem Zusammenhang für fehlplatziert und bringen sie beim Biobank-Modul ein, mit
+dem Ziel, sie auf den Lagerprozess-Slice <code class="language-plaintext highlighter-rouge">processing:lagerprozess</code> zu
+begrenzen.</p>
 
 <p>Die Färbetechnik wird deshalb <strong>nicht</strong> unter
 <code class="language-plaintext highlighter-rouge">Specimen.processing.procedure</code> angegeben, wie die HL7 EU Lab Semantic Workgroup
@@ -398,8 +396,9 @@ Ballotfrage 2 die Begründung enthält.</p>
 <p><a id="ballot-question-4"></a></p>
 
 <p class="bg-warning"><strong>Ballotfrage 4 — ist die Bebrütung über <code class="language-plaintext highlighter-rouge">Specimen.processing</code> darstellbar?</strong>
-FHIR sieht sie dort vor, und die MII hat die Bausteine bereits. Gemessen an R4
-Core und am Biobank-Modul am 2026-09-10:</p>
+FHIR sieht sie dort vor und die MII hat die Bausteine, die Modellierung ist also
+geklärt; wir fragen, ob sie an Ihrem Standort umsetzbar ist. Die Elemente,
+gemessen an R4 Core und am Biobank-Modul am 2026-09-10:</p>
 
 <ul>
   <li><strong>Dauer</strong> — <code class="language-plaintext highlighter-rouge">Specimen.processing.time[x]</code> als <code class="language-plaintext highlighter-rouge">Period</code>. <code class="language-plaintext highlighter-rouge">Specimen.processing</code>
@@ -445,7 +444,7 @@ Bebrütung nicht ab, solange die Antwort fehlt.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Sat, Sep 12, 2026 16:17+0000">2026-09-12</span>
+          Erstellt <span title="Sat, Sep 12, 2026 17:15+0000">2026-09-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

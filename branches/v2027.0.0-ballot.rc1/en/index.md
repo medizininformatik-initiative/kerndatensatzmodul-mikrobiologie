@@ -60,7 +60,7 @@ This is a ballot candidate. The points below are deliberately left open, and we 
 
 1. **[Is a Specimen resource always available?](probe.md#ballot-question-1)**— every investigation profile in this module requires`Observation.specimen`.
 1. **[Where does the staining technique belong?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-2)**— this module carries it in an extension and deviates from the European coordination, which places it on the Specimen.
-1. **[Mandatory storage temperature conditions on `Specimen.processing`](probe.md#ballot-question-3)**— inherited from the biobank base profile, without meaning for microbiological processing.
+1. **[Does the mandatory storage temperature block you?](probe.md#ballot-question-3)**— inherited from the biobank base profile, without meaning for microbiological processing, and a derived profile cannot relax it.
 1. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.md#ballot-question-4)**— FHIR and the MII provide the pieces; the question is whether sites can supply them.
 1. **[Can you process a component for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-5)**— the module follows the European coordination here, and the component reverses a decision of this release cycle.
 1. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.md#ballot-question-6)**— the HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends it, and your answer decides more than one question.
