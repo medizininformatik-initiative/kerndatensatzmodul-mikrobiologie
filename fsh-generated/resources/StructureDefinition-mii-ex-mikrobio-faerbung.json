@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "mii-ex-mikrobio-empfindlichkeit-norm",
-  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm",
+  "id": "mii-ex-mikrobio-faerbung",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung",
   "version": "2027.0.0-ballot.rc1",
-  "name": "MII_EX_Mikrobio_Empfindlichkeit_Norm",
-  "title": "MII EX Mikrobio Empfindlichkeit Norm",
+  "name": "MII_EX_Mikrobio_Faerbung",
+  "title": "MII EX Mikrobio Färbung",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -18,18 +18,14 @@
       ]
     }
   ],
-  "description": "Normative susceptibility interpretation metadata (system, version, category).",
+  "description": "Staining technique used for the microscopic examination, coded with the same SNOMED CT hierarchy as the European laboratory coordination.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [
     {
       "type": "element",
-      "expression": "Observation.interpretation"
-    },
-    {
-      "type": "element",
-      "expression": "Observation.value[x]"
+      "expression": "Observation"
     }
   ],
   "type": "Extension",
@@ -45,11 +41,12 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm"
+        "fixedUri": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
+        "short": "Eingesetzte Faerbung, z. B. 62777006 'Gram stain method'. Immer angeben, wenn gefaerbt wurde — auch dann, wenn der Untersuchungscode die Faerbung schon nennt, damit die Angabe unabhaengig von der Codewahl an einer Stelle auswertbar ist.",
         "min": 1,
         "type": [
           {
@@ -58,8 +55,8 @@
         ],
         "mustSupport": true,
         "binding": {
-          "strength": "required",
-          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility-norm"
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-faerbung-snomed"
         }
       }
     ]

@@ -100,9 +100,38 @@ Description: "Tests-ValueSet fuer die spezifische Bestimmung."
       METHOD_TYP = "LP6106-1" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
-// METHOD_TYP LP6429-7 (erregerspezifische Kultur) ist nach
-// MII_VS_Mikrobio_Spezifische_Kultur_Tests_LOINC ausgelagert
+// ERREGERSPEZIFISCHE KULTUR, am 2026-09-11 hierher zurueckgeholt. Bis dahin lag
+// METHOD_TYP LP6429-7 in einem eigenen ValueSet fuer ein eigenes Profil. Die
+// Standorte implementieren den ungetrennten Stand, und Fragestellung wie
+// Ergebnistyp sind dieselben: Ist das im Code benannte Ziel da? Das Verfahren
+// steht dabei im Code selbst — jeder dieser ~68 Codes traegt METHOD_TYP
+// "Organism specific culture" —, es muss also nicht im Ergebnis wiederholt
+// werden. Die Abweichung von der getrennten Fuehrung der HL7 EU Lab Semantic
+// Workgroup steht als Ballotfrage 7 im Profil-Intro.
+* include codes from system $loinc
+    where PROPERTY = "LP6850-4" and
+      METHOD_TYP = "LP6429-7" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where PROPERTY = "LP217195-9" and
+      METHOD_TYP = "LP6429-7" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+
+// AUSSCHLUeSSE aus der erregerspezifischen Kultur. Die HL7 EU Lab Semantic
+// Workgroup markiert diese vier mit "Remove", und zu Recht: Eine
+// durchnummerierte Mykobakterienart ist kein benanntes Ziel, "Mycobacterium sp
+// # 3" sagt einem Auswerter nichts.
 //
+// Gemessen am 2026-09-10: Alle vier sind in LOINC noch STATUS = ACTIVE, der
+// Filter oben wirft sie also NICHT heraus — sie muessen einzeln ausgeschlossen
+// werden. Ihre uebrigen Achsen treffen ihn vollstaendig.
+* exclude $loinc#44851-4 "Mycobacterium sp # 2 identified in Specimen by Organism specific culture"
+* exclude $loinc#44852-2 "Mycobacterium sp # 3 identified in Specimen by Organism specific culture"
+* exclude $loinc#44854-8 "Mycobacterium sp # 4 identified in Specimen by Organism specific culture"
+* exclude $loinc#44855-5 "Mycobacterium sp # 5 identified in Specimen by Organism specific culture"
+
 // Einzelcodes, die von den Filtern oben nicht erfasst werden. Die Zuordnung zum Profil
 // richtet sich nach der Semantik (Nachweis eines vordefinierten Erregers); die LOINC-CLASS
 // ist nur das Werkzeug zur Erzeugung des ValueSets, nicht das Zuordnungskriterium.

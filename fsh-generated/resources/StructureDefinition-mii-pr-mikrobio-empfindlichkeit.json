@@ -152,7 +152,7 @@
     }
   ],
   "description": "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung eines Erregers gegenüber antimikrobiellen Substanzen unter Bezug auf ein Normsystem.",
-  "purpose": "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung. Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, z. B. ein linezolidresistenter Enterococcus über 29258-1 |Linezolid [Susceptibility]| mit interpretation R; der Negativfall ist interpretation S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen nach MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur.",
+  "purpose": "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung. Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, z. B. ein linezolidresistenter Enterococcus über 29258-1 |Linezolid [Susceptibility]| mit interpretation R; der Negativfall ist interpretation S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen nach MII_PR_Mikrobio_Spezifische_Bestimmung.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -165,20 +165,6 @@
         "id": "Observation",
         "path": "Observation",
         "constraint": [
-          {
-            "key": "empfindlichkeit-kategorie-braucht-interpretation",
-            "severity": "error",
-            "human": "If the result is given as a susceptibility category rather than a measured value, Observation.interpretation SHALL be present, because the norm it was derived from is carried there.",
-            "expression": "value.ofType(CodeableConcept).exists() implies interpretation.exists()",
-            "source": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
-          },
-          {
-            "key": "empfindlichkeit-kategorie-stimmt-mit-interpretation",
-            "severity": "error",
-            "human": "Where both a categorical result value and an interpretation are given, every code of the value SHALL also appear among the interpretation codes.",
-            "expression": "value.ofType(CodeableConcept).coding.code.subsetOf(interpretation.coding.code)",
-            "source": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
-          },
           {
             "key": "empfindlichkeit-messwert-sollte-bewertet-sein",
             "severity": "warning",
@@ -282,7 +268,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Die Empfindlichkeitskategorie, wenn kein Messwert vorliegt. Aus derselben Liste wie interpretation, weil beide dasselbe aussagen — sind beide angegeben, muessen sie uebereinstimmen (empfindlichkeit-kategorie-stimmt-mit-interpretation).",
+        "short": "Die Empfindlichkeitskategorie, wenn kein Messwert vorliegt. Aus derselben Liste wie interpretation, weil beide dasselbe aussagen; sind beide angegeben, muessen sie dieselbe Kategorie nennen. Die Norm steht dann an derjenigen Stelle, an der die Kategorie steht — hier in valueCodeableConcept.extension[Norm].",
         "type": [
           {
             "code": "CodeableConcept"
@@ -292,6 +278,27 @@
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-susceptibility"
         }
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.extension",
+        "path": "Observation.value[x].extension",
+        "min": 1
+      },
+      {
+        "id": "Observation.value[x]:valueCodeableConcept.extension:Norm",
+        "path": "Observation.value[x].extension",
+        "sliceName": "Norm",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm"
+            ]
+          }
+        ],
+        "mustSupport": true
       },
       {
         "id": "Observation.dataAbsentReason",

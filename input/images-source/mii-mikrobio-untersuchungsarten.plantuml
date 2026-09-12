@@ -40,11 +40,6 @@ package "Kultur" {
     Ergebnis: CodeableConcept — Kultur_Ergebnis_SNOMED
     Methode: Allgemeine_Kultur_Methode_SNOMED
   }
-  class "Spezifische Kultur" as SpezifischeKultur {
-    Code: Spezifische_Kultur_Tests_LOINC
-    Ergebnis: CodeableConcept — Kultur_Ergebnis_SNOMED
-    Methode: Spezifische_Kultur_Methode_SNOMED
-  }
   class Mikroskopie {
     Code: LOINC 105059-0
     Ergebnis: CodeableConcept — Morphologie_Ergebnis_SNOMED
@@ -73,13 +68,10 @@ package "Kultur" {
     Norm: Susceptibility_NORM
   }
   ' Zeilen
-  AllgemeineKultur -[hidden]right- SpezifischeKultur
-  SpezifischeKultur -[hidden]right- Mikroskopie
   BartlettScore -[hidden]right- NugentScore
   NugentScore -[hidden]right- Keimzahl
   ' Spalten: je eine Kante pro Spalte, sonst wird die naechste Zeile zentriert
   AllgemeineKultur -[hidden]down- BartlettScore
-  SpezifischeKultur -[hidden]down- NugentScore
   Mikroskopie -[hidden]down- Keimzahl
   BartlettScore -[hidden]down- Empfindlichkeit
 }

@@ -1,6 +1,6 @@
 // Aus dem realen Ergebniskatalog eines deutschen Labors (Analyt PAURA,
-// Auraminfaerbung, Ergebnis "sf neg"). Die Faerbung steht im Code, daher keine
-// Methode.
+// Auraminfaerbung, Ergebnis "sf neg"). Die Faerbung steht im Code und zusaetzlich
+// in extension[faerbung]; ein Mikroskopieverfahren wird nicht berichtet.
 Instance: mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ
 InstanceOf: MII_PR_Mikrobio_Spezifische_Mikroskopie
 Usage: #example
@@ -13,6 +13,7 @@ Description: "Auraminfärbung ohne Nachweis säurefester Stäbchen: der negative
 * category[observation-category].coding[0] = $observation-category#laboratory "Laboratory"
 * category[observation-category].coding[1] = $loinc#26436-6 "Laboratory studies (set)"
 * code = $loinc#87243-2 "Microscopic observation [Presence] in Specimen by Auramine fluorochrome stain"
+* extension[faerbung].valueCodeableConcept = $sct#104220003 "Rhodamine-auramine fluorochrome stain method"
 * subject = Reference(mii-exa-mikrobio-patient)
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"

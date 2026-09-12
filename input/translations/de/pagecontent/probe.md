@@ -6,7 +6,7 @@
 {:.bg-warning}
 **Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?**
 Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`. Die
-Anforderung stammt nicht allein aus diesem Leitfaden: Das europäische Whitepaper
+Anforderung stammt nicht allein aus diesem Leitfaden: Die HL7 EU Lab Semantic Workgroup
 hält fest, dass die Probe **immer** ausdrücklich in einer
 FHIR-Specimen-Ressource abzubilden ist, bevorzugt in `Specimen.type` mit SNOMED
 CT — und sagt ausdrücklich, dass das auch dann gilt, *wenn der LOINC-Code die
@@ -66,8 +66,10 @@ Lagerprozess-Slice `processing:lagerprozess` zu begrenzen, wo sie hingehört. Wi
 bitten um Rückmeldung im Ballot, falls Sie davon betroffen sind.
 
 Die Färbetechnik wird deshalb **nicht** unter
-`Specimen.processing.procedure` angegeben, wie das europäische Datenmodell es
-vorschlägt, sondern in `Observation.method` — siehe
+`Specimen.processing.procedure` angegeben, wie die HL7 EU Lab Semantic Workgroup
+es vorschlägt, sondern in einer Extension an der Observation,
+[`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.html), mit
+denselben Codes — siehe
 [Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html), wo
 Ballotfrage 2 die Begründung enthält.
 

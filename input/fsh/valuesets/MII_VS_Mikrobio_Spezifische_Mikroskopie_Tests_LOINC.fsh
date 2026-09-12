@@ -33,6 +33,15 @@ Description: "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Co
 // Katalog des rueckmeldenden Labors vorkommen. LOINC kennt weitere
 // (Tuschepraeparat, KOH, Giemsa, Calcofluor). Sie werden ergaenzt, wenn ein
 // Labor sie belegt — geraten wird hier nichts.
+// NOTIZ, NICHT IM GUIDE SICHTBAR (FSH-Kommentare rendert der Publisher nie):
+// Rueckmeldung vom 2026-09-11 zu 72357-7 "Microscopic observation [Presence] in
+// Specimen by Acid fast stain" — bei diesem ordinalen Code ist nicht erkennbar,
+// welche Frage die Antworten None / few / moderate eigentlich beantworten; eine
+// Antwortliste ist in LOINC nicht hinterlegt, und der nominale Nachbar 11545-1
+// ist deutlich hoeher gerankt. Das ist eine LOINC-Frage und keine dieses Moduls;
+// bewusst NICHT durch eine Modellaenderung verdeckt und bewusst nicht als
+// Ballotfrage aufgenommen. Wird gegebenenfalls als Ballotkommentar oder an die
+// europaeische Gruppe eingebracht.
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       SCALE_TYP = "LP7751-3" and

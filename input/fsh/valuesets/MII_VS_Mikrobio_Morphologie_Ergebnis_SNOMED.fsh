@@ -1,27 +1,17 @@
-// TODO (2026-09-10): ZWEI BEFUNDE AUS DER LABORPRAXIS OHNE CODE. Beide stehen
-// im realen Grampraeparat-Katalog eines deutschen Labors, beide sind hier nicht
-// abbildbar, und beide brauchen eine Entscheidung von aussen.
+// ERLEDIGT am 2026-09-11 durch Rueckmeldung des rueckmeldenden Labors. Hier
+// standen zwei Befunde aus dessen Grampraeparat-Katalog, fuer die kein Code
+// gefunden wurde; beide sind jetzt entschieden, und zwar gegen eine Aufnahme:
 //
-//   "Detritus"                   Naechstliegender Kandidat ist 257159000
-//                                |Debris|. FACHLICH ZU BESTAETIGEN, nicht
-//                                anzunehmen: Der Code ist nicht als
-//                                mikroskopischer Befund gepraegt, und ob er die
-//                                gemeinte Zelltrummer-Beobachtung trifft, muss
-//                                ein Mikrobiologe sagen.
-//   "V. a. Gardnerella vaginalis" Ein VERDACHT, kein Befund. Ein CodeableConcept
-//                                hat keinen "suspected"-Qualifier, und den
-//                                Organismus einfach als Wert zu setzen behauptet
-//                                mehr als gemeint. Im vaginalen Kontext traegt
-//                                der Nugent-Score diese Aussage; ausserhalb
-//                                braucht es eine Modellentscheidung der
-//                                europaeischen Gruppe.
-//
-// Beide sind in der Ableitungsanalyse, Part 2, an die Gruppe formuliert — die
-// liegt AUSSERHALB dieses Repositorys, im lokalen materials/ des Bearbeiters,
-// weil dort Arbeitsstaende Dritter liegen und dieses Repository oeffentlich ist.
-// Dieser Vermerk ist deshalb die einzige Fassung, die im Repository ueberlebt;
-// gefunden wird er von der TODO-Suche ueber input/fsh/, die
-// docs/release-checklist.md vor jedem Release verlangt.
+//   "Detritus"                    Wird dort "so gut wie nicht verwendet"; das
+//                                 Labor erwaegt, den Eintrag aus seiner eigenen
+//                                 Antwortliste zu streichen. Kein Code
+//                                 beantragt, 257159000 |Debris| nicht
+//                                 aufgenommen.
+//   "V. a. Gardnerella vaginalis" Vom Labor als eigener Fehler zurueckgezogen —
+//                                 ein Verdacht gehoert nicht in die
+//                                 Ergebnisliste, die Aussage laeuft ueber den
+//                                 Nugent-Score. Damit bestaetigt die Praxis die
+//                                 Modellierung dieses Moduls.
 ValueSet: MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED
 Id: mii-vs-mikrobio-morphologie-ergebnis-snomed
 Title: "MII VS Mikrobio Morphologie Ergebnis [SNOMED]"
@@ -62,14 +52,28 @@ Description: "Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobacht
 // Morphologische Gruppen, unangeordnete Formen — (organism), weil SNOMED sie
 // nur dort fuehrt. Aus dem realen Ergebniskatalog eines deutschen Labors; es
 // sind die haeufigsten Grambefunde ueberhaupt.
+//
+// ENTFERNT am 2026-09-11: 115199003 |Subclass Irregular Non-Sporing Gram
+// Positive Rods|. Das rueckmeldende Labor bittet ausdruecklich darum und stellt
+// es im Primaersystem ebenfalls um — der Code benennt eine veraltete
+// taxonomische Unterklasse und keinen mikroskopischen Befund.
 * $sct#59206002 "Gram-positive coccus (organism)"
 * $sct#18383003 "Gram-negative coccus (organism)"
 * $sct#83514008 "Gram-positive bacillus (organism)"
 * $sct#87172008 "Gram-negative bacillus (organism)"
 * $sct#11471007 "Gram-positive diplococcus (organism)"
-* $sct#115199003 "Subclass Irregular Non-Sporing Gram Positive Rods (organism)"
 * $sct#116442009 "Coryneform bacteria (organism)"
 * $sct#62093005 "Yeast (organism)"
+
+// Saeurefeste Morphologie — (organism), aus demselben Grund wie die
+// unangeordneten Gramformen darueber. Am 2026-09-11 ergaenzt, weil das
+// allgemeine Test-ValueSet seither die Acid-fast- und die
+// Rhodamin-Auramin-Faerbung fuehrt und deren Ergebnis sonst unbenennbar waere.
+// Der Negativfall braucht nichts Neues: 27863008 |No organisms seen| unten gilt
+// unabhaengig von der Faerbung.
+* $sct#243365003 "Acid-fast bacillus (organism)"
+* $sct#243366002 "Partially acid-fast bacillus (organism)"
+* $sct#243367006 "Acid and alcohol-fast bacillus (organism)"
 
 // Pilzmorphologie — (finding), hier ist die Reihe vollstaendig.
 * $sct#404507002 "Hyphae of kingdom Fungi detected (finding)"

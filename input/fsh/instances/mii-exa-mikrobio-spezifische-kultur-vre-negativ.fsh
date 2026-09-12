@@ -1,11 +1,12 @@
 // Negativer VRE-Nachweis, kulturell durchgefuehrt. Die Methode ist im LOINC-Code
-// enthalten (Organism specific culture), daher wird dieses Profil und nicht
-// MII_PR_Mikrobio_Spezifische_Bestimmung verwendet.
+// enthalten (Organism specific culture); das Ergebnis ist trotzdem "Not detected" und
+// nicht "No growth", weil die Kultur schon im Code steht — siehe Ballotfrage 7 im Intro
+// des Profils.
 Instance: mii-exa-mikrobio-spezifische-kultur-vre-negativ
-InstanceOf: MII_PR_Mikrobio_Spezifische_Kultur
+InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
 Title: "MII EXA Mikrobio Spezifische Kultur VRE negativ"
-Description: "Negativer VRE-Nachweis mittels erregerspezifischer Kultur: kein Wachstum vancomycinresistenter Enterokokken."
+Description: "Negativer VRE-Nachweis mittels erregerspezifischer Kultur."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-kultur-vre-neg-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
@@ -16,6 +17,6 @@ Description: "Negativer VRE-Nachweis mittels erregerspezifischer Kultur: kein Wa
 * subject = Reference(mii-exa-mikrobio-patient)
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
-* valueCodeableConcept = $sct#264868006 "No growth (qualifier value)"
+* valueCodeableConcept = $sct#260415000 "Not detected (qualifier value)"
 * method = $sct#703752003 "Organism specific culture"
 * specimen = Reference(mii-exa-mikrobio-probe)

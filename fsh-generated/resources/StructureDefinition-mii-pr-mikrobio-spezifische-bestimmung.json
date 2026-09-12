@@ -151,8 +151,8 @@
       ]
     }
   ],
-  "description": "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis wird über MII_PR_Mikrobio_Spezifische_Kultur abgebildet.",
-  "purpose": "Dieses Profil beschreibt den zielgerichteten, nicht kulturbasierten Nachweis. Es bildet auch das negative Ergebnis eines zielgerichteten Erregernachweises ab, z. B. einen negativen VRE-Nachweis über 105904-7 mit dem Wert 'Not detected'.",
+  "description": "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis liegt ebenfalls hier; das Verfahren steht im Untersuchungscode und in Observation.method.",
+  "purpose": "Dieses Profil beschreibt den zielgerichteten Nachweis, unabhaengig davon, ob er molekular, immunologisch, biochemisch oder kulturell erfolgt. Es bildet auch das negative Ergebnis eines zielgerichteten Erregernachweises ab, z. B. einen negativen VRE-Nachweis über 105904-7 mit dem Wert 'Not detected'.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -234,7 +234,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Nachweis oder Ausschluss des im Code benannten Ziels. Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet.",
+        "short": "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 7). Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet.",
         "type": [
           {
             "code": "CodeableConcept"

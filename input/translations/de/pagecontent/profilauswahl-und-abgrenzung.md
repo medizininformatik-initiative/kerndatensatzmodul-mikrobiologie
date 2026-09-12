@@ -1,7 +1,7 @@
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/Profilauswahl-und-Abgrenzung.page.md  -->
 Nachweis, Empfindlichkeitstestung und Klassifikation sind unterschiedliche diagnostische Aussagen und werden in diesem Modul über unterschiedliche Profile abgebildet. Diese Seite beschreibt die Abgrenzung, die Darstellung negativer Ergebnisse und die Verknüpfung der Untersuchungen zu einer diagnostischen Kette.
 
-> **Kernsatz:** Ein negatives Ergebnis eines zielgerichteten Erregernachweises wird über Spezifische Bestimmung bzw. Spezifische Kultur abgebildet. MRGN-Klassifikation und Resistenzkategorie-Status setzen dagegen einen bereits nachgewiesenen Erreger voraus und ersetzen keinen Nachweistest.
+> **Kernsatz:** Ein negatives Ergebnis eines zielgerichteten Erregernachweises wird unabhängig vom Verfahren über Spezifische Bestimmung bzw. Spezifische Kultur abgebildet. MRGN-Klassifikation und Resistenzkategorie-Status setzen dagegen einen bereits nachgewiesenen Erreger voraus und ersetzen keinen Nachweistest.
 
 ### Welche Profile gehören zu meinem Laborbereich?
 
@@ -17,7 +17,6 @@ Bestimmung bedient deshalb die molekulare Bank und die Serologie gleichermaßen.
   * [Nugent-Score](StructureDefinition-mii-pr-mikrobio-nugent-score.html) — Gramfärbungs-Score für die bakterielle Vaginose
 * [Spezifische Mikroskopie](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html) — das Objekt steht im Code, das Ergebnis ist seine semiquantitative Stufe
 * [Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html) — Wachstum oder kein Wachstum, ungerichtet
-* [Spezifische Kultur](StructureDefinition-mii-pr-mikrobio-spezifische-kultur.html) — Wachstum oder kein Wachstum, gerichtet, z. B. MRSA-Screening
 * [Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.html) — lebensfähige Keime je Volumen oder Masse
 * [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html) — Speziesidentifizierung, typischerweise MALDI-TOF-MS
 * [Empfindlichkeit](StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html) — phänotypische Testung, S/I/R mit MHK oder Hemmhofdurchmesser
@@ -111,7 +110,7 @@ erzwungen.
 
 Überall sonst bevorzugt dieses Modul Untersuchungscodes, die das Material
 weglassen, und lässt es von `Specimen.type` tragen. Die Serologie ist davon
-bewusst ausgenommen. Das europäische Whitepaper nennt den Grund:
+bewusst ausgenommen. Die HL7 EU Lab Semantic Workgroup nennt den Grund:
 
 > In comparison with culture techniques, far fewer specimen types are involved in
 > serology. The majority of specimens are serum-based. Therefore, we allow
@@ -141,7 +140,7 @@ einzelnen. Diese Aussage gehört in `DiagnosticReport.conclusion` — siehe
 
 ### Die Methode gehört in `Observation.method`
 
-Das europäische Whitepaper führt das als Grundsatz und formuliert es schärfer,
+Die HL7 EU Lab Semantic Workgroup führt das als Grundsatz und formuliert es schärfer,
 als man erwarten würde:
 
 > The LOINC-axis "method" should be omitted completely. […] Even if the method is
@@ -150,8 +149,11 @@ als man erwarten würde:
 
 Die Methode ist also auch dann anzugeben, wenn der Untersuchungscode sie bereits
 trägt — eine Kultur unter `11475-1 |… by Culture|` soll trotzdem sagen, ob aerob
-oder anaerob bebrütet wurde, und ein Grampräparat unter `664-3 |… by Gram stain|`
-soll trotzdem die Färbung nennen.
+oder anaerob bebrütet wurde. In der Mikroskopie ist die Färbung nicht Teil der
+Methode: Sie steht in
+[`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.html), auch
+wenn der Untersuchungscode sie nennt, und `Observation.method` trägt das
+Mikroskopieverfahren.
 
 Dieser Leitfaden hält das als **Empfehlung** fest, nicht als Pflicht.
 `Observation.method` ist im Labor-Basisprofil `0..1` Must Support, und eine
@@ -163,7 +165,7 @@ Kultur mit dem methodenneutralen Code `41852-5`.
 
 {:.bg-warning}
 **Ballotfrage 6 — können Sie zu jedem Befund `Observation.method` liefern?**
-Das Whitepaper verlangt es immer, dieser Leitfaden empfiehlt es nur. Wir bitten um Rückmeldung, ob eine Pflicht an Ihrem Standort erfüllbar wäre. Wenn ja, kann eine
+Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur. Wir bitten um Rückmeldung, ob eine Pflicht an Ihrem Standort erfüllbar wäre. Wenn ja, kann eine
 spätere Version `Observation.method` auf `1..1` heben, und das Sonderinvariant
 der Allgemeinen Kultur wird überflüssig. Daraus folgt ein Zweites: Ist
 die Methode immer vorhanden, ist `41852-5` samt Methode überall eindeutig, und
@@ -198,8 +200,7 @@ Bestimmung**.
 Für einen Konsumenten folgt daraus eine Regel: **Die Granularität steht im Profil
 oder im Untersuchungscode, nie in `value[x]` allein.** Eine Abfrage nach
 identifizierten Organismen, die nur den Wert filtert, bekommt auch
-Morphologiegruppen aus der Mikroskopie. Die Untersuchungscodes sind disjunkt —
-`105059-0` und `664-3` gegen `41852-5` —, eine Mehrdeutigkeit entsteht also
+Morphologiegruppen aus der Mikroskopie. Die Untersuchungscodes sind disjunkt — die Mikroskopiecodes gegen `41852-5` —, eine Mehrdeutigkeit entsteht also
 nicht; nur eine nachlässig geschriebene Abfrage bekommt mehr, als sie erfragt hat.
 
 Eine Speziesidentifizierung gehört nie in die Mikroskopie, auch wenn sie am
@@ -210,7 +211,7 @@ Mikroskop gestellt wurde.
 | Fragestellung | Profil | `Observation.code` | `Observation.value` |
 |---|---|---|---|
 | Ist ein vordefiniertes Ziel nachweisbar? (nicht kulturell) | Spezifische Bestimmung | LOINC-Nachweistest, z. B. `105904-7` | `Detected` / `Not detected` |
-| Wächst ein vordefinierter Mikroorganismus? | Spezifische Kultur | LOINC-Kulturtest, z. B. `13316-5` | `Organism growth` / `No growth` |
+| Ist ein vordefinierter Mikroorganismus da, kulturell gesucht? | Spezifische Bestimmung | LOINC-Kulturtest, z. B. `13316-5` | `Organism growth` / `No growth` |
 | Ist ein Resistenzgen nachweisbar? | Resistenzmechanismen / Determinanten | LOINC-Determinante, z. B. `48813-0` | `Detected` / `Not detected` |
 | Wie empfindlich ist ein identifiziertes Isolat gegen eine Substanz? | Empfindlichkeit | LOINC `[Susceptibility]`, z. B. `29258-1` | MHK als `Quantity`, Bewertung in `interpretation` (S / I / R) |
 | Welcher MRGN-Klasse ist ein identifiziertes gramnegatives Isolat zuzuordnen? | MRGN-Klasse | `99780-9` | Klassifikationswert, z. B. `3MRGN`, oder `keine-mrgn-klasse` |
@@ -252,7 +253,7 @@ Die drei Fälle im direkten Vergleich, jeweils für VRE:
 
 | Aussage | Profil | `code` | `value` |
 |---|---|---|---|
-| VRE wurde gesucht und nicht gefunden | Spezifische Kultur | `13316-5` | `No growth` |
+| VRE wurde kulturell gesucht und nicht gefunden | Spezifische Bestimmung | `13316-5` | `Not detected` |
 | VRE wurde gesucht und nicht gefunden (molekular) | Spezifische Bestimmung | `105904-7` | `Not detected` |
 | Ein vorliegender *Enterococcus* ist kein VRE | Resistenzkategorie-Status | `vre-status` | `Negative` |
 
@@ -272,7 +273,7 @@ Für gramnegative Erreger mit einer MRGN-Klassifikation erfolgt die Abbildung ü
 ### Mehrere Ergebnisse zusammenfassen: das Panel
 
 Ein Antibiogramm ist kein Ergebnis, sondern viele — je getestete Substanz eine
-Observation. Das europäische Whitepaper empfiehlt, sie über eine
+Observation. Die HL7 EU Lab Semantic Workgroup empfiehlt, sie über eine
 **Organizer-Observation** zusammenzuhalten: eine Observation, die den Panel-Code
 `29576-6 |Bacterial susceptibility panel|` trägt und selbst kein `value[x]` hat
 und die über `Observation.hasMember` auf die Einzelergebnisse zeigt. Der Organizer
@@ -312,7 +313,7 @@ Ein positiver zielgerichteter Nachweis kann Folgediagnostik auslösen:
 
 ```
 Positiver zielgerichteter Nachweis
-(Spezifische Bestimmung oder Spezifische Kultur)
+(Spezifische Bestimmung, jedes Verfahren)
         │
         │ triggeredBy (reflex)
         ▼
