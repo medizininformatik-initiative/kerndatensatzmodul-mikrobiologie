@@ -5,19 +5,16 @@
 
 {:.bg-warning}
 **Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?**
-Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`. Die
-Anforderung stammt nicht allein aus diesem Leitfaden: Die HL7 EU Lab Semantic Workgroup
-hält fest, dass die Probe **immer** ausdrücklich in einer
-FHIR-Specimen-Ressource abzubilden ist, bevorzugt in `Specimen.type` mit SNOMED
-CT — und sagt ausdrücklich, dass das auch dann gilt, *wenn der LOINC-Code die
-Probe bereits trägt*.
+Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`, wie die
+HL7 EU Lab Semantic Workgroup es auch tut — sie verlangt eine ausdrückliche
+Specimen-Ressource selbst dann, wenn der LOINC-Code das Material bereits trägt.
 
 Aus der deutschen Laborpraxis kommt die Rückmeldung, dass eine
 Specimen-Ressource häufig nicht erzeugt wird. Trifft das breit zu, weisen die
 beiden Auswege in entgegengesetzte Richtungen: `Observation.specimen` auf `0..1`
 lockern und präkoordinierte LOINC-Codes das Material tragen lassen, oder die
-Pflicht beibehalten und hinnehmen, dass manche Sender nicht konform sein können.
-Wir bitten um Rückmeldung im Ballot.
+Pflicht beibehalten und hinnehmen, dass manche Sender nicht konform sein
+können.
 
 Proben werden über [Probe](StructureDefinition-mii-pr-mikrobio-probe.html)
 abgebildet, das von
@@ -52,18 +49,19 @@ folgende Elemente relevant:
 <a id="ballot-question-3"></a>
 
 {:.bg-warning}
-**Ballotfrage 3 — Pflicht-Temperaturbedingungen an `Specimen.processing`.**
+**Ballotfrage 3 — blockiert Sie die Pflicht-Lagertemperatur?**
 Das Basisprofil verlangt die Extension `temperaturbedingungen` an jedem
-`Specimen.processing`-Element, in `2026.0.1` wie in `2027.0.0-ballot.rc2`. Diese
-Pflicht stammt aus der Biobank, wo `Specimen.processing` den Lagerprozess einer
-Bioprobe beschreibt und die Temperatur zur Kernaussage gehört. In der
-Mikrobiologie beschreibt derselbe Platz die Aufarbeitung — Färbung, Anreicherung,
-Bebrütung —, und dort ist eine Lagertemperatur entweder unbekannt oder ohne
-Aussage. Ein abgeleitetes Profil darf nur verengen und nie lockern, dieses Modul
-kann die Pflicht also nicht auflösen. Wir halten sie in diesem Zusammenhang für
-fehlplatziert und bringen sie beim Biobank-Modul ein, mit dem Ziel, sie auf den
-Lagerprozess-Slice `processing:lagerprozess` zu begrenzen, wo sie hingehört. Wir
-bitten um Rückmeldung im Ballot, falls Sie davon betroffen sind.
+`Specimen.processing`-Element, und ein abgeleitetes Profil darf nur verengen und
+nie lockern — dieses Modul kann die Pflicht also nicht auflösen.
+
+Sie stammt aus der Biobank, wo `Specimen.processing` den Lagerprozess einer
+Bioprobe beschreibt und die Temperatur zur Kernaussage gehört; sie gilt in
+`2026.0.1` wie in `2027.0.0-ballot.rc2`. In der Mikrobiologie beschreibt dasselbe
+Element die Aufarbeitung: Färbung, Anreicherung, Bebrütung, wo eine
+Lagertemperatur entweder unbekannt oder ohne Aussage ist. Wir halten sie in
+diesem Zusammenhang für fehlplatziert und bringen sie beim Biobank-Modul ein, mit
+dem Ziel, sie auf den Lagerprozess-Slice `processing:lagerprozess` zu
+begrenzen.
 
 Die Färbetechnik wird deshalb **nicht** unter
 `Specimen.processing.procedure` angegeben, wie die HL7 EU Lab Semantic Workgroup
@@ -79,8 +77,9 @@ Ballotfrage 2 die Begründung enthält.
 
 {:.bg-warning}
 **Ballotfrage 4 — ist die Bebrütung über `Specimen.processing` darstellbar?**
-FHIR sieht sie dort vor, und die MII hat die Bausteine bereits. Gemessen an R4
-Core und am Biobank-Modul am 2026-09-10:
+FHIR sieht sie dort vor und die MII hat die Bausteine, die Modellierung ist also
+geklärt; wir fragen, ob sie an Ihrem Standort umsetzbar ist. Die Elemente,
+gemessen an R4 Core und am Biobank-Modul am 2026-09-10:
 
 - **Dauer** — `Specimen.processing.time[x]` als `Period`. `Specimen.processing`
   hat kein eigenes `Duration`-Element (`Specimen.collection.duration` meint die
