@@ -9,14 +9,20 @@ Als abstraktere Version des Informationsmodells und zur besseren Verdeutlichung 
 
 Der mikrobiologische Befund fasst Untersuchungen zusammen. Alle Untersuchungen teilen sich eine gemeinsame Basisklasse, die von der Laboruntersuchung des Labor-Moduls abgeleitet ist; die fachlichen Ausprägungen sind in vier Gruppen gegliedert.
 
-![Informationsmodell des Moduls Mikrobiologie](mii-mikrobio-informationsmodell.png)
+<figure>
+{% include mii-mikrobio-informationsmodell.svg %}
+<figcaption>Informationsmodell des Moduls Mikrobiologie: Befund, die abstrakte Untersuchung und die vier Gruppen der Untersuchungsarten.</figcaption>
+</figure>
 
-Zur besseren Lesbarkeit findet sich das vollständige Diagramm nochmal [hier](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/implementation-guides/modulmikrobio-2027/images/mii-mikrobio-informationsmodell.png)
+Das Diagramm ist eine Vektorgrafik und skaliert verlustfrei; seine [Quelle](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/images-source/mii-mikrobio-informationsmodell.plantuml) liegt im Repository.
 
 ### Untersuchungsarten
 
 Die einzelnen Untersuchungsarten mit dem jeweils verwendeten Untersuchungscode, dem Ergebnis und dem Verfahren. Die gemeinsamen Angaben aus der Basisklasse *Untersuchung* sind hier nicht wiederholt.
 
-![Untersuchungsarten im Modul Mikrobiologie](mii-mikrobio-untersuchungsarten.png)
+<figure>
+{% include mii-mikrobio-untersuchungsarten.svg %}
+<figcaption>Untersuchungsarten im Modul Mikrobiologie, jeweils mit Untersuchungscode, Ergebnis und Verfahren.</figcaption>
+</figure>
 
-Zur besseren Lesbarkeit findet sich das vollständige Diagramm nochmal [hier](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/implementation-guides/modulmikrobio-2027/images/mii-mikrobio-untersuchungsarten.png)
+Das Diagramm ist eine Vektorgrafik und skaliert verlustfrei; seine [Quelle](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/blob/main/input/images-source/mii-mikrobio-untersuchungsarten.plantuml) liegt im Repository.
