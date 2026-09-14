@@ -121,7 +121,7 @@ CRMI metadata. The released version and the release workflow are on the
 [Versioning](version-history.html) page.
 
 The module uses calendar versioning in the SemVer-compatible numeric form
-`YYYY.MINOR.PATCH[-label]`, currently `2027.0.0-ballot`. The calendar year
+`YYYY.MINOR.PATCH[-label]`, currently `2027.0.0-ballot2`. The calendar year
 serves as the CRMI `<major>` component; `MINOR` and `PATCH` keep their usual
 additive and corrective semantics. Stable versions can therefore be compared
 using the declared `semver` version algorithm. Labels carry pre-release or build

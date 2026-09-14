@@ -5,7 +5,7 @@
      Englische Quellseite: input/pagecontent/version-history.md. -->
 
 Das Modul folgt der MII-Kalenderversionierung. Die hier veröffentlichte Version
-ist `2027.0.0-ballot`, das Ballot-Release der Linie 2027.0.0; die Änderungen im
+ist `2027.0.0-ballot2`, das Ballot-Release der Linie 2027.0.0; die Änderungen im
 Einzelnen stehen im [Changelog](changes.html), die Abbildung des Schemas als
 CRMI-Metadaten unter [Metadaten-Übersicht](metadata.html).
 

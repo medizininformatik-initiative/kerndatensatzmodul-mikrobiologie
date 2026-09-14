@@ -6,7 +6,7 @@
      German mirror: input/translations/de/pagecontent/version-history.md. -->
 
 The module follows MII calendar versioning. The version published here is
-`2027.0.0-ballot`, the ballot release of the 2027.0.0 line; detailed changes are
+`2027.0.0-ballot2`, the ballot release of the 2027.0.0 line; detailed changes are
 recorded in the [changelog](changes.html), and how the scheme is expressed as
 CRMI metadata is described under [Metadata Overview](metadata.html).
 
