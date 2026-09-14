@@ -17,12 +17,35 @@ Dieses Dokument beschreibt die wesentlichen Änderungen je Release des IGs.
 
 | Version | Datum | Typ | Inhalt                                                                                                                                                                                                                                                                                                                                |
 |---------|-------|-----|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2027.0.0-ballot2 | 2026-09-14 | Neuveröffentlichung ohne inhaltliche Änderung | Die Artefakte sind identisch mit `2027.0.0-ballot`, nur die Version unterscheidet sich. Das veröffentlichte Paket jener Version enthielt 31 in diesem Zyklus entfallene Artefakte und trug für `mii-pr-mikrobio-probe` keinen Snapshot. |
 | 2027.0.0-ballot | 2026-09-14 | Inhaltliche Aktualisierung | Das Informationsmodell wurde verbessert und verwendet FHIR-Datentypen statt Verweisen auf Profil-Canonicals. Es ist auf drei Logical Models aufgeteilt: Befund, abstrakte Untersuchung und Untersuchungsarten. Der zielgerichtete Nachweis bleibt unabhängig vom Verfahren in einem Profil, die Kultur eingeschlossen; die allgemeine Kultur antwortet Wachstum oder kein Wachstum, ein unbestimmbares Ergebnis geht nach `dataAbsentReason`. Die Mikroskopie ist in eine offene und eine gezielte Hälfte geteilt, die Färbetechnik in eine eigene Extension gewandert, und der MRE-Klassenbezug wurde durch einen kategorienbezogenen Resistenzkategorie-Status (MRSA/VRE/LRE/LVRE, Positive/Negative) ersetzt; MRGN bleibt eine eigenständige Klassifikation.                    |
 | 2027.0.0-alpha.5 | 18.06.2026 | Inhaltliche/technische Aktualisierung (Preview) | CapabilityStatement erweitert: `DiagnosticReport` mit Mikrobio-Profil aufgenommen, unterstützte Suchparameter für `Observation` und `DiagnosticReport` vervollständigt, an die SearchParameter des Labor-Moduls angeglichen sowie lokale SearchParameter für `Observation.interpretation` und `triggeredBy` ergänzt.                  |
 | 2027.0.0-alpha.4 | 11.06.2026 | Technische Korrektur (Preview) | Technische Korrekturen ohne inhaltliche Änderungen am IG; insbesondere Vereinheitlichung der Versionskennzeichnung in den Packages.                                                                                                                                                                                                   |
 | 2027.0.0-alpha.3 | 13.05.2026 | Technische Korrektur (Preview) | Re-Release von Packages mit technischen Korrekturen; keine inhaltlichen Änderungen am IG.                                                                                                                                                                                                                                             |
 | 2027.0.0-alpha.2 | 16.04.2026 | Inhaltliche Aktualisierung (Preview) | Bindings in mehreren Profilen von `required` auf `extensible` gelockert, Methodenbindung für Resistenzmechanismen auf neues ValueSet umgestellt, DiagnosticReport-Kategorie auf MB inkl. Coding-Slice und optionalen LOINC-Befundtyp (`mibi-sub-category`) ausgerichtet sowie Terminologieinhalte für Avidität/Morphologie erweitert. |
 | 2027.0.0-alpha.1 | 14.04.2026 | Breaking (Preview) | National und europäisch abgestimmte Neuausrichtung der Mikrobiologie-Modellierung mit neuen/ersetzten Profil-URLs (Canonicals), Observation-orientierter Struktur ohne `Observation.component`, aktualisierten Terminologiebindungen sowie überarbeiteter IG-Navigation.                                                              |
+
+### 2027.0.0-ballot2
+
+Datum: 2026-09-14
+
+**Keine inhaltliche Änderung.** Jedes Artefakt ist identisch mit
+`2027.0.0-ballot`, bis auf die Version, die es trägt. Diese Fassung ist zu
+verwenden; die Verpackung der vorigen war in zweierlei Hinsicht fehlerhaft.
+
+- Das veröffentlichte Paket enthielt **31 Artefakte, die dieser Zyklus entfernt
+  hatte** — fünf Profile, fünf Beispiele und zwanzig ValueSets, alle noch in
+  Version `2025.0.2` —, weil der Veröffentlichungsweg einen Projektstand backte
+  und nicht dieses Repository. Eines davon kollidierte mit einem aktuellen
+  Artefakt: ein zweites CapabilityStatement auf der Canonical
+  `…/CapabilityStatement/metadata`, in `2025.0.2`, neben dem aktuellen. Welches
+  von beiden ein Werkzeug verwendet, hätte seine Ladereihenfolge entschieden.
+- `mii-pr-mikrobio-probe` wurde **ohne Snapshot** ausgeliefert, weil das
+  Biobank-Paket, in dem sein Parent liegt, bei jenem Build nicht auflösbar war.
+
+Beide Ursachen lagen im Veröffentlichungsweg, nicht im Modul. Die Artefakte von
+`2027.0.0-ballot` waren richtig; was unter diesem Namen veröffentlicht wurde,
+war es nicht.
 
 ### 2027.0.0-ballot
 

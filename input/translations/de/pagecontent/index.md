@@ -72,7 +72,7 @@ Profile überführt.
 | Veröffentlichung |               |
 |------------------|---------------|
 | Datum            | noch nicht veröffentlicht |
-| Version          | 2027.0.0-ballot (CalVer `JJJJ.n.n`) |
+| Version          | 2027.0.0-ballot2 (CalVer `JJJJ.n.n`) |
 | Status           | active        |
 | Realm            | DE            |
 

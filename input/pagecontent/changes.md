@@ -12,12 +12,34 @@ This document describes the significant changes per release of the IG.
 
 | Version | Date | Type | Content |
 |---------|------|------|---------|
+| 2027.0.0-ballot2 | 2026-09-14 | Re-release, no content change | The artefacts are identical to `2027.0.0-ballot`; only the version they carry differs. The published package of that version was baked from a project state that still held 31 artefacts retired during this cycle, and it lacked the snapshot of `mii-pr-mikrobio-probe`. |
 | 2027.0.0-ballot | 2026-09-14 | Content update | The information model was improved and uses FHIR data types instead of references to profile canonicals. It is split across three logical models: report, abstract investigation and investigation types. Targeted detection stays in one profile whatever the technique, culture included; general culture answers growth or no growth, and an indeterminate result goes to `dataAbsentReason`. Microscopy was split into an open and a targeted half, the staining technique moved into an extension of its own, and the MRE class reference was replaced by a category-based resistance category status (MRSA/VRE/LRE/LVRE, Positive/Negative); MRGN remains a standalone classification. |
 | 2027.0.0-alpha.5 | 2026-06-18 | Content/technical update (preview) | CapabilityStatement extended: `DiagnosticReport` added with the microbiology profile, supported search parameters for `Observation` and `DiagnosticReport` completed and aligned with the SearchParameters of the Laboratory module, and local SearchParameters for `Observation.interpretation` and `triggeredBy` added. |
 | 2027.0.0-alpha.4 | 2026-06-11 | Technical correction (preview) | Technical corrections without content changes to the IG; in particular, unification of the version labelling in the packages. |
 | 2027.0.0-alpha.3 | 2026-05-13 | Technical correction (preview) | Re-release of packages with technical corrections; no content changes to the IG. |
 | 2027.0.0-alpha.2 | 2026-04-16 | Content update (preview) | Bindings in several profiles relaxed from `required` to `extensible`, method binding for resistance mechanisms moved to a new ValueSet, DiagnosticReport category aligned to MB including a coding slice and an optional LOINC report type (`mibi-sub-category`), and terminology content for avidity/morphology extended. |
 | 2027.0.0-alpha.1 | 2026-04-14 | Breaking (preview) | Nationally and European-agreed realignment of the microbiology modelling with new/replaced profile URLs (canonicals), an Observation-oriented structure without `Observation.component`, updated terminology bindings and a reworked IG navigation. |
+
+### 2027.0.0-ballot2
+
+Date: 2026-09-14
+
+**No content change.** Every artefact is identical to `2027.0.0-ballot` apart from
+the version it carries. Use this version; the packaging of the previous one was
+faulty in two ways.
+
+- The published package contained **31 artefacts that this release cycle had
+  retired** — five profiles, five examples and twenty value sets, all still at
+  version `2025.0.2` — because the publication path baked a project state rather
+  than this repository. One of them collided with a current artefact: a second
+  CapabilityStatement on the canonical
+  `…/CapabilityStatement/metadata`, at `2025.0.2`, beside the current one. Which
+  of the two a tool uses would have been decided by its load order.
+- `mii-pr-mikrobio-probe` shipped **without a snapshot**, because the biobank
+  package its parent lives in was not resolvable during that build.
+
+Both causes sat in the publication path, not in the module. The artefacts of
+`2027.0.0-ballot` were correct; what was published under that name was not.
 
 ### 2027.0.0-ballot
 
