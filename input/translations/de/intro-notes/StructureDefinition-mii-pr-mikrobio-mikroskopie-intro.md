@@ -27,11 +27,9 @@ Observation, nicht in `Specimen.processing.procedure`. Die Codes sind dieselben.
 Können Sie die Färbung an der Probe liefern, oder brauchen Sie die Extension?
 
 Gegen `Specimen` als einzigen Ort spricht, dass er eine Specimen-Ressource
-voraussetzt, und die stellt Ballotfrage 1 in Zweifel. Die geerbte
-Pflicht-Lagertemperatur unter `processing` stand ebenfalls im Weg, bis das
-Bioproben-Basisprofil sie in seinem `2027.0.0-ballot` gelockert hat. Weil die
-Terminologie auf beiden Wegen dieselbe ist, ändert ein späterer Umzug das Element
-und nichts weiter.
+voraussetzt, und die stellt Ballotfrage 1 in Zweifel. Weil die Terminologie auf
+beiden Wegen dieselbe ist, ändert ein späterer Umzug das Element und nichts
+weiter.
 
 ## Morphologie zusammen mit ihrer Menge
 
