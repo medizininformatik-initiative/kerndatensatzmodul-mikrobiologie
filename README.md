@@ -14,7 +14,7 @@ Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Erweiterungsmoduls
 [Package](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2025.0.2)
 
 **Aktuelle Ballot-Fassung: 2027.0.0-ballot** — eingefroren am 2026-09-14
-[Gerenderter Leitfaden](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/branches/v2027.0.0-ballot.rc1/de/index.html) · [Änderungen](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/branches/v2027.0.0-ballot.rc1/de/changes.html) · [Tag](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/releases/tag/v2027.0.0-ballot)
+[Gerenderter Leitfaden](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/branches/release/2027.0.0-ballot/de/index.html) · [Änderungen](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/branches/release/2027.0.0-ballot/de/changes.html) · [Tag](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/releases/tag/v2027.0.0-ballot)
 
 Das Simplifier-Paket folgt mit der Veröffentlichung des Release-Entwurfs;
 publiziert ist bislang [2027.0.0-alpha.5](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2027.0.0-alpha.5).
