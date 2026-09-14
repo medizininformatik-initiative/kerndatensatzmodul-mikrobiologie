@@ -24,7 +24,7 @@ The stain is carried in `extension[faerbung]`, coded with the descendants of `37
 
 **Ballot question 2 — where does the staining technique belong?** This module deviates from the model under discussion in the HL7 EU Lab Semantic Workgroup: it carries the stain in `extension[faerbung]` on the Observation, not in `Specimen.processing.procedure`. The codes are the same. Can your site supply the stain on the Specimen, or do you need the extension?
 
-What keeps this module from relying on the Specimen is that it presupposes a Specimen resource, which ballot question 1 puts in doubt. The inherited requirement for storage temperature conditions below `processing` stood in the way too, until the biobank base profile relaxed it in its `2027.0.0-ballot`. Because the terminology is the same on either route, a later move changes the element and nothing else.
+What keeps this module from relying on the Specimen is that it presupposes a Specimen resource, which ballot question 1 puts in doubt. Because the terminology is the same on either route, a later move changes the element and nothing else.
 
 ### Morphology together with its amount
 
@@ -199,7 +199,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T11:35:30+00:00",
+  "date" : "2026-09-14T12:58:37+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

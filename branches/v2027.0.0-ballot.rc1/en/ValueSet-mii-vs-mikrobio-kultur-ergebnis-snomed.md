@@ -42,7 +42,7 @@ Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein
   "title" : "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T11:35:30+00:00",
+  "date" : "2026-09-14T12:58:37+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
