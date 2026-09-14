@@ -1,4 +1,4 @@
-# MII PR Mikrobio Allgemeine Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII PR Mikrobio Allgemeine Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-12 | *Computable Name*:MII_PR_Mikrobio_Allgemeine_Mikroskopie |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Mikrobio_Allgemeine_Mikroskopie |
 
  
 Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies. 
@@ -24,7 +24,7 @@ The stain is carried in `extension[faerbung]`, coded with the descendants of `37
 
 **Ballot question 2 — where does the staining technique belong?** This module deviates from the model under discussion in the HL7 EU Lab Semantic Workgroup: it carries the stain in `extension[faerbung]` on the Observation, not in `Specimen.processing.procedure`. The codes are the same. Can your site supply the stain on the Specimen, or do you need the extension?
 
-Two things keep this module from relying on the Specimen alone. It presupposes a Specimen resource, which ballot question 1 puts in doubt, and the parent of [Specimen](StructureDefinition-mii-pr-mikrobio-probe.md) makes storage temperature conditions mandatory below `processing` (ballot question 3), which a stain cannot supply. Because the terminology is the same on either route, a later move changes the element and nothing else.
+What keeps this module from relying on the Specimen is that it presupposes a Specimen resource, which ballot question 1 puts in doubt. The inherited requirement for storage temperature conditions below `processing` stood in the way too, until the biobank base profile relaxed it in its `2027.0.0-ballot`. Because the terminology is the same on either route, a later move changes the element and nothing else.
 
 ### Morphology together with its amount
 
@@ -32,7 +32,7 @@ The most common Gram finding needs two statements at once — **few** Gram-posit
 
 Its code is `103392008 |Semi-quantitative value|`, the concept the HL7 EU Lab Semantic Workgroup proposes for this component. A LOINC code has been requested for the same purpose and will take its place once it exists. Besides the semiquantitative grade the component takes a count per high power field, as a `Quantity` or as a `Range`.
 
-**Ballot question 5 — can you process a component for the amount?** Both microscopy profiles carry the amount in `component[menge]`, following the HL7 EU Lab Semantic Workgroup, which uses a component for the amount of a single finding and `hasMember` to group several findings of one examination.
+**Ballot question 4 — can you process a component for the amount?** Both microscopy profiles carry the amount in `component[menge]`, following the HL7 EU Lab Semantic Workgroup, which uses a component for the amount of a single finding and `hasMember` to group several findings of one examination.
 
 The component reverses a decision of this release cycle: `2027.0.0-alpha.1` removed components from this very profile and moved them into standalone Observations.
 
@@ -194,12 +194,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Mikrobio_Allgemeine_Mikroskopie",
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:14:11+00:00",
+  "date" : "2026-09-14T10:47:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

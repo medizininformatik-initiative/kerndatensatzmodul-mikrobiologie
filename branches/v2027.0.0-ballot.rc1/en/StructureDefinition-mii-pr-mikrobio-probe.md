@@ -1,4 +1,4 @@
-# MII PR Mikrobio Probe - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII PR Mikrobio Probe - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-12 | *Computable Name*:MII_PR_Mikrobio_Probe |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Mikrobio_Probe |
 
  
 Probe beschreibt das mikrobiologisch untersuchte Material. Das Profil leitet vom Bioproben-Basisprofil der MII-Biobank ab und ergaenzt die Erwartungen der mikrobiologischen Diagnostik. 
@@ -17,8 +17,6 @@ Probe beschreibt das mikrobiologisch untersuchte Material. Das Profil leitet vom
 Specimen describes the material examined microbiologically. The profile derives from [MII_PR_Biobank_Specimen_Bioprobe_Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core), a base profile written so that modules derive from it rather than implement it directly. `Observation.specimen` of every investigation profile in this module references it.
 
 **Ballot question 1 — can you supply a Specimen resource for every result?** Every investigation profile here requires `Observation.specimen`. The HL7 EU Lab Semantic Workgroup states that the specimen shall always be represented explicitly in a Specimen resource, even where the LOINC code already carries it, so the question is deliverability rather than principle. Feedback from German laboratory practice is that one is frequently not produced. Full statement of the question on [Specimen](probe.md).
-
-**Ballot question 3 — mandatory storage temperature conditions on `Specimen.processing`.** The base profile requires the extension `temperaturbedingungen` on every `Specimen.processing` element. It carries no meaning for microbiological processing, and a derived profile cannot relax it. Full statement of the question on [Specimen](probe.md).
 
 ### Specimen type
 
@@ -48,6 +46,14 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-p
   "resourceType" : "StructureDefinition",
   "id" : "mii-pr-mikrobio-probe",
   "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+    "valueCoding" : {
+      "system" : "http://hl7.org/fhir/version-algorithm",
+      "code" : "semver",
+      "display" : "SemVer"
+    }
+  },
+  {
     "url" : "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
     "valueCodeableConcept" : {
       "coding" : [{
@@ -76,12 +82,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-p
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Mikrobio_Probe",
   "title" : "MII PR Mikrobio Probe",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:14:11+00:00",
+  "date" : "2026-09-14T10:47:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -113,6 +119,16 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-p
   }],
   "purpose" : "Dieses Profil gibt Observation.specimen der mikrobiologischen Untersuchungsprofile ein Zielprofil und benennt die fuer die Mikrobiologie tragenden Angaben.",
   "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "w5",
+    "uri" : "http://hl7.org/fhir/fivews",
+    "name" : "FiveWs Pattern Mapping"
+  },
+  {
+    "identity" : "v2",
+    "uri" : "http://hl7.org/v2",
+    "name" : "HL7 v2 Mapping"
+  }],
   "kind" : "resource",
   "abstract" : false,
   "type" : "Specimen",
@@ -141,7 +157,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-p
     {
       "id" : "Specimen.processing",
       "path" : "Specimen.processing",
-      "comment" : "Der Parent verlangt hier verpflichtend die Extension 'temperaturbedingungen'. Diese Pflicht stammt aus der Beschreibung von Lagerprozessen in der Biobank und traegt fuer die mikrobiologische Aufarbeitung nicht; ein abgeleitetes Profil kann sie nicht loesen. Sie ist als Ballotfrage 3 offen und mit dem Biobank-Modul zu klaeren. Solange sie besteht, wird die Faerbetechnik nicht hier, sondern in Observation.method angegeben."
+      "comment" : "Bis 2027.0.0-ballot.rc2 verlangte der Parent hier verpflichtend die Extension 'temperaturbedingungen', eine Pflicht aus der Lagerung von Bioproben ohne Aussage fuer die mikrobiologische Aufarbeitung. Seit 2027.0.0-ballot ist sie 0..1 und auf den Lagerprozess-Slice begrenzt. Die Faerbetechnik wird trotzdem nicht hier, sondern in Observation.extension[faerbung] angegeben, solange offen ist, ob ueberhaupt eine Specimen-Ressource entsteht."
     }]
   }
 }

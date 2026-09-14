@@ -1,4 +1,4 @@
-# MII PR Mikrobio Spezifische Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII PR Mikrobio Spezifische Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-12 | *Computable Name*:MII_PR_Mikrobio_Spezifische_Mikroskopie |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Mikrobio_Spezifische_Mikroskopie |
 
  
 Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis. 
@@ -38,7 +38,7 @@ The codes of this profile usually name the stain themselves, and it is given in 
 
 The amount goes into `component[menge]`, not into `value[x]`: the test code asks whether the object is there — `72357-7` and `87243-2` are `PrThr` codes, "presence or threshold" — and the grade qualifies that answer rather than replacing it. It is not an `Observation.interpretation` either, which carries a clinical assessment and not a quantity.
 
-The component takes three answer forms, because a laboratory reports the same analyte in two of them: the semiquantitative grade, a count per high power field as `Quantity`, and such a count as an interval in a `Range`. Its code and its value set are shared with [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), where [ballot question 5](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-5) asks whether sites can process it.
+The component takes three answer forms, because a laboratory reports the same analyte in two of them: the semiquantitative grade, a count per high power field as `Quantity`, and such a count as an interval in a `Range`. Its code and its value set are shared with [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), where [ballot question 5](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-4) asks whether sites can process it.
 
 The grades come from a German laboratory's real result catalogue and span two SNOMED axes: `441614007` / `441517005` / `441521003` are presence findings below `52101004 |Present|`, while `Few`, `Moderate number`, `Numerous` and `Scanty` are degree and number descriptors. Which of the two families should be preferred is still open with the European working group.
 
@@ -204,12 +204,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Mikrobio_Spezifische_Mikroskopie",
   "title" : "MII PR Mikrobio Spezifische Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:14:11+00:00",
+  "date" : "2026-09-14T10:47:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

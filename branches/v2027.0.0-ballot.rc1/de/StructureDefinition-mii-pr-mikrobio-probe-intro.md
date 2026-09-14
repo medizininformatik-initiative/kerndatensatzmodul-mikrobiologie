@@ -13,13 +13,6 @@ die Frage ist also die Erfüllbarkeit, nicht der Grundsatz. Aus der deutschen
 Laborpraxis kommt die Rückmeldung, dass sie häufig nicht erzeugt wird. Die Frage
 steht vollständig auf [Probe](probe.html).
 
-{:.bg-warning}
-**Ballotfrage 3 — Pflicht-Temperaturbedingungen an `Specimen.processing`.**
-Das Basisprofil verlangt die Extension `temperaturbedingungen` an jedem
-`Specimen.processing`-Element. Für die mikrobiologische Aufarbeitung trägt sie
-keine Aussage, und ein abgeleitetes Profil kann sie nicht lockern. Die Frage
-steht vollständig auf [Probe](probe.html).
-
 ### Probenart
 
 `Specimen.type.coding:sct` behält die geerbte Bindung an das Probenart-ValueSet

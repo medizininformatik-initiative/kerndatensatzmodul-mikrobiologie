@@ -1,4 +1,4 @@
-# MII VS Mikrobio Aviditaet Tests [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII VS Mikrobio Aviditaet Tests [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-12 | *Computable Name*:MII_VS_Mikrobio_Aviditaet_Tests_LOINC |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_VS_Mikrobio_Aviditaet_Tests_LOINC |
 
  
 Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests einschließlich des Zielantigens. 
@@ -37,12 +37,12 @@ Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests e
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-aviditaet-tests-loinc",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Mikrobio_Aviditaet_Tests_LOINC",
   "title" : "MII VS Mikrobio Aviditaet Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:14:11+00:00",
+  "date" : "2026-09-14T10:47:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -82,19 +82,19 @@ Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests e
       },
       {
         "code" : "81119-0",
-        "display" : "Epstein Barr virus capsid Ab.IgG avidity"
+        "display" : "Epstein Barr virus capsid IgG Ab avidity [Ratio] in Serum by Immunoassay"
       },
       {
         "code" : "104428-8",
-        "display" : "Measles virus Ab.IgG avidity"
+        "display" : "Measles virus IgG Ab avidity [Ratio] in Serum by Immunoassay"
       },
       {
         "code" : "52986-7",
-        "display" : "Rubella virus Ab.IgG avidity"
+        "display" : "Rubella virus IgG Ab avidity [Ratio] in Serum by Immunoassay"
       },
       {
         "code" : "56990-5",
-        "display" : "Toxoplasma gondii Ab.IgG avidity"
+        "display" : "Toxoplasma gondii IgG Ab avidity [Ratio] in Serum by Immunoassay"
       }]
     }]
   }

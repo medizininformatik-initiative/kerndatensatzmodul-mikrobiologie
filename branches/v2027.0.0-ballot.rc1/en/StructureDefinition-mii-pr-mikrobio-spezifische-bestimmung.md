@@ -1,4 +1,4 @@
-# MII PR Mikrobio Spezifische Bestimmung - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII PR Mikrobio Spezifische Bestimmung - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-12 | *Computable Name*:MII_PR_Mikrobio_Spezifische_Bestimmung |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_PR_Mikrobio_Spezifische_Bestimmung |
 
  
 Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis liegt ebenfalls hier; das Verfahren steht im Untersuchungscode und in Observation.method. 
@@ -26,7 +26,7 @@ Investigations without a predefined target, where the result is the naming of th
 
 ### One profile or two?
 
-**Ballot question 7 — is `Detected` / `Not detected` enough for a targeted culture, or do you need `Organism growth` / `No growth`?** This module deviates from the HL7 EU Lab Semantic Workgroup, which keeps targeted culture separate and binds growth codes there: one profile covers targeted detection whatever the technique, because the culture is already stated by the test code, whose method axis carries `Organism specific culture`.
+**Ballot question 6 — is `Detected` / `Not detected` enough for a targeted culture, or do you need `Organism growth` / `No growth`?** This module deviates from the HL7 EU Lab Semantic Workgroup, which keeps targeted culture separate and binds growth codes there: one profile covers targeted detection whatever the technique, because the culture is already stated by the test code, whose method axis carries `Organism specific culture`.
 
 If you need the growth codes, the binding comes back. Please comment during the ballot.
 
@@ -198,12 +198,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Mikrobio_Spezifische_Bestimmung",
   "title" : "MII PR Mikrobio Spezifische Bestimmung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:14:11+00:00",
+  "date" : "2026-09-14T10:47:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -310,7 +310,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "id" : "Observation.value[x]:valueCodeableConcept",
       "path" : "Observation.value[x]",
       "sliceName" : "valueCodeableConcept",
-      "short" : "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 7). Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet.",
+      "short" : "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 6). Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet.",
       "type" : [{
         "code" : "CodeableConcept"
       }],

@@ -1,4 +1,4 @@
-# MII PR Mikrobio Spezifische Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII PR Mikrobio Spezifische Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Spezifische_Mikroskopie |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Spezifische_Mikroskopie |
 
  
 Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis. 
@@ -38,7 +38,7 @@ Die Codes dieses Profils nennen die Färbung meist selbst, und sie wird trotzdem
 
 Die Menge steht in `component[menge]` und nicht in `value[x]`: Der Untersuchungscode fragt, ob das Objekt da ist — `72357-7` und `87243-2` sind `PrThr`-Codes, „presence or threshold" —, und die Stufe qualifiziert diese Antwort, statt sie zu ersetzen. Eine `Observation.interpretation` ist sie ebenfalls nicht: Die trägt eine klinische Bewertung und keine Menge.
 
-Die Komponente nimmt drei Antwortformate, weil ein Labor dasselbe Analyt in zwei davon berichtet: die semiquantitative Stufe, eine Zählung je Gesichtsfeld als `Quantity` und eine solche Zählung als Intervall in einer `Range`. Code und Antwortliste teilt sie mit der [Allgemeinen Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), wo [Ballotfrage 5](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-5) fragt, ob Standorte sie verarbeiten können.
+Die Komponente nimmt drei Antwortformate, weil ein Labor dasselbe Analyt in zwei davon berichtet: die semiquantitative Stufe, eine Zählung je Gesichtsfeld als `Quantity` und eine solche Zählung als Intervall in einer `Range`. Code und Antwortliste teilt sie mit der [Allgemeinen Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), wo [Ballotfrage 4](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-4) fragt, ob Standorte sie verarbeiten können.
 
 Die Stufen stammen aus dem realen Ergebniskatalog eines deutschen Labors und liegen auf zwei SNOMED-Achsen: `441614007` / `441517005` / `441521003` sind Präsenzbefunde unter `52101004 |Present|`, während `Few`, `Moderate number`, `Numerous` und `Scanty` Grad- und Zahl-Deskriptoren sind. Welche der beiden Familien zu bevorzugen ist, ist mit der europäischen Arbeitsgruppe noch offen.
 
@@ -74,7 +74,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 #### Terminology Bindings (Differential)
 
@@ -82,7 +82,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 ** Summary **
 
@@ -117,7 +117,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 #### Terminology Bindings (Differential)
 
@@ -127,7 +127,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 ** Summary **
 
@@ -294,12 +294,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Mikrobio_Spezifische_Mikroskopie",
   "title" : "MII PR Mikrobio Spezifische Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:14:11+00:00",
+  "date" : "2026-09-14T10:47:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

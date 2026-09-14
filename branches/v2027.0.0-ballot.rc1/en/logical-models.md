@@ -1,4 +1,4 @@
-# Logical Models - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# Logical Models - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **Logical Models**

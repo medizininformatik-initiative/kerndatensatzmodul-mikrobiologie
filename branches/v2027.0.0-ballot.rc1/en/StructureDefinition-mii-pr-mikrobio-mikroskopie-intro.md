@@ -23,12 +23,12 @@ Workgroup: it carries the stain in `extension[faerbung]` on the Observation, not
 in `Specimen.processing.procedure`. The codes are the same. Can your site supply
 the stain on the Specimen, or do you need the extension?
 
-Two things keep this module from relying on the Specimen alone. It presupposes a
-Specimen resource, which ballot question 1 puts in doubt, and the parent of
-[Specimen](StructureDefinition-mii-pr-mikrobio-probe.html) makes storage
-temperature conditions mandatory below `processing` (ballot question 3), which a
-stain cannot supply. Because the terminology is the same on either route, a later
-move changes the element and nothing else.
+What keeps this module from relying on the Specimen is that it presupposes a
+Specimen resource, which ballot question 1 puts in doubt. The inherited
+requirement for storage temperature conditions below `processing` stood in the
+way too, until the biobank base profile relaxed it in its `2027.0.0-ballot`.
+Because the terminology is the same on either route, a later move changes the
+element and nothing else.
 
 ### Morphology together with its amount
 
@@ -44,10 +44,10 @@ for the same purpose and will take its place once it exists. Besides the
 semiquantitative grade the component takes a count per high power field, as a
 `Quantity` or as a `Range`.
 
-<a id="ballot-question-5"></a>
+<a id="ballot-question-4"></a>
 
 {:.bg-warning}
-**Ballot question 5 — can you process a component for the amount?**
+**Ballot question 4 — can you process a component for the amount?**
 Both microscopy profiles carry the amount in `component[menge]`, following the
 HL7 EU Lab Semantic Workgroup, which uses a component for the amount of a single
 finding and `hasMember` to group several findings of one examination.

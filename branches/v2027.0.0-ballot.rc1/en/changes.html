@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Changelog - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1</title>
+    <title>Changelog - MII Implementation Guide Microbiology v2027.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII Implementation Guide Microbiology</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot - 
 
 
 
@@ -322,7 +322,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII Implementation Guide Microbiology - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII Implementation Guide Microbiology - Local Development build (v2027.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Changelog</h2>
   
 
@@ -340,7 +340,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#202700" id="markdown-toc-202700">2027.0.0</a></li>
+  <li><a href="#202700-ballot" id="markdown-toc-202700-ballot">2027.0.0-ballot</a></li>
   <li><a href="#202700-alpha5" id="markdown-toc-202700-alpha5">2027.0.0-alpha.5</a></li>
   <li><a href="#202700-alpha4" id="markdown-toc-202700-alpha4">2027.0.0-alpha.4</a></li>
   <li><a href="#202700-alpha3" id="markdown-toc-202700-alpha3">2027.0.0-alpha.3</a></li>
@@ -372,10 +372,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td>2027.0.0</td>
-      <td>tbd</td>
+      <td>2027.0.0-ballot</td>
+      <td>2026-09-14</td>
       <td>Content update</td>
-      <td>The information model was improved and uses FHIR data types instead of references to profile canonicals. It is split across three logical models: report, abstract investigation and investigation types. New profile for specific culture, split out of specific determination; culture results uniformly as growth / no growth, indeterminate results via <code class="language-plaintext highlighter-rouge">dataAbsentReason</code>. The MRE class reference was replaced by a category-based resistance category status (MRSA/VRE/LRE/LVRE, Positive/Negative); MRGN remains a standalone classification.</td>
+      <td>The information model was improved and uses FHIR data types instead of references to profile canonicals. It is split across three logical models: report, abstract investigation and investigation types. Targeted detection stays in one profile whatever the technique, culture included; general culture answers growth or no growth, and an indeterminate result goes to <code class="language-plaintext highlighter-rouge">dataAbsentReason</code>. Microscopy was split into an open and a targeted half, the staining technique moved into an extension of its own, and the MRE class reference was replaced by a category-based resistance category status (MRSA/VRE/LRE/LVRE, Positive/Negative); MRGN remains a standalone classification.</td>
     </tr>
     <tr>
       <td>2027.0.0-alpha.5</td>
@@ -410,9 +410,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<h3 id="202700">2027.0.0</h3>
+<h3 id="202700-ballot">2027.0.0-ballot</h3>
 
-<p>Date: tbd</p>
+<p>Date: 2026-09-14</p>
 
 <h4 id="high-level-what-changed-in-domain-terms">High level (what changed in domain terms?)</h4>
 
@@ -420,7 +420,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>The logical model used to be a directory of the FHIR profiles: its leaf elements were typed with the canonical URLs of the profiles and contained no domain data elements. The information model now describes the data elements with FHIR data types (<code class="language-plaintext highlighter-rouge">CodeableConcept</code>, <code class="language-plaintext highlighter-rouge">Quantity</code>, <code class="language-plaintext highlighter-rouge">Ratio</code>, <code class="language-plaintext highlighter-rouge">dateTime</code>, <code class="language-plaintext highlighter-rouge">Coding</code>, <code class="language-plaintext highlighter-rouge">Reference</code>).</li>
   <li>The model is split across three logical models. This allows relations between the classes to be expressed as <code class="language-plaintext highlighter-rouge">Reference</code>, and the statements that apply to every investigation are defined once on an abstract base class and inherited, instead of being repeated for every investigation type.</li>
   <li>Purely FHIR-technical statements without domain content are not part of the information model; this includes the category slices and the extensions for alternative unit representation and numeric precision.</li>
-  <li>Targeted detection stays in one profile whatever the technique - culture, molecular, immunological or biochemical. The question and the type of its answer are the same: is the named target there, <code class="language-plaintext highlighter-rouge">Detected</code> or <code class="language-plaintext highlighter-rouge">Not detected</code>. The culture is stated by the test code, whose method axis carries <code class="language-plaintext highlighter-rouge">Organism specific culture</code>, so it is not repeated in the result. The HL7 EU Lab Semantic Workgroup keeps targeted culture separate and binds growth codes there; this guide deviates and asks about it as ballot question 7.</li>
+  <li>Targeted detection stays in one profile whatever the technique - culture, molecular, immunological or biochemical. The question and the type of its answer are the same: is the named target there, <code class="language-plaintext highlighter-rouge">Detected</code> or <code class="language-plaintext highlighter-rouge">Not detected</code>. The culture is stated by the test code, whose method axis carries <code class="language-plaintext highlighter-rouge">Organism specific culture</code>, so it is not repeated in the result. The HL7 EU Lab Semantic Workgroup keeps targeted culture separate and binds growth codes there; this guide deviates and asks about it as ballot question 6.</li>
   <li>General culture and general determination stay cleanly separated: culture answers whether something grows, determination which pathogen it is. Growth codes are therefore bound on general culture only.</li>
   <li>An indeterminate result is no longer coded via <code class="language-plaintext highlighter-rouge">value[x]</code> but via <code class="language-plaintext highlighter-rouge">Observation.dataAbsentReason</code>.</li>
   <li>The MRE modelling was changed from an organism classification to a category-based status. Previously <code class="language-plaintext highlighter-rouge">valueCodeableConcept</code> carried the concrete resistant organism (e.g. MRSA, VRE) and thereby duplicated information from identification, susceptibility and resistance mechanisms. In addition, the underlying SNOMED subtree was broader than "MRE": single-substance resistances such as <code class="language-plaintext highlighter-rouge">838510005 Linezolid resistant Enterococcus</code> are not automatically multi-resistance.</li>
@@ -480,7 +480,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>-</td>
       <td>Specimen profile derived from <code class="language-plaintext highlighter-rouge">MII_PR_Biobank_Specimen_Bioprobe_Core</code>; keeps the inherited specimen type binding and documents the microbiological expectations on <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">collection.collected[x]</code> and <code class="language-plaintext highlighter-rouge">parent</code></td>
       <td><code class="language-plaintext highlighter-rouge">Observation.specimen</code> now has a target profile; a Specimen must satisfy the biobank base profile, which makes <code class="language-plaintext highlighter-rouge">status</code>, <code class="language-plaintext highlighter-rouge">type</code>, <code class="language-plaintext highlighter-rouge">subject</code>, <code class="language-plaintext highlighter-rouge">collection</code> and <code class="language-plaintext highlighter-rouge">collection.collected[x]</code> mandatory</td>
-      <td>Add <code class="language-plaintext highlighter-rouge">collection.collected[x]</code> to existing Specimen resources. Note the inherited requirement of a storage temperature extension below <code class="language-plaintext highlighter-rouge">Specimen.processing</code>, which is ballot question 3</td>
+      <td>Add <code class="language-plaintext highlighter-rouge">collection.collected[x]</code> to existing Specimen resources. The storage temperature extension below <code class="language-plaintext highlighter-rouge">Specimen.processing</code> is no longer required: the base profile relaxed it to <code class="language-plaintext highlighter-rouge">0..1</code> in <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code></td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-spezifische-mikroskopie</code></td>
@@ -756,6 +756,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>No migration: the version is additive. A server expanding against another release may return a different expansion</td>
     </tr>
     <tr>
+      <td>dependencies</td>
+      <td>content updated</td>
+      <td><code class="language-plaintext highlighter-rouge">…kerndatensatz.laborbefund</code> <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc4</code>, <code class="language-plaintext highlighter-rouge">…kerndatensatz.biobank</code> <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code></td>
+      <td>both at the final <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code></td>
+      <td>The laboratory parent is differential-identical to rc4, measured on the registry tarballs. The biobank release relaxes <code class="language-plaintext highlighter-rouge">Specimen.processing.extension:temperaturbedingungen</code> from <code class="language-plaintext highlighter-rouge">1..1</code> to <code class="language-plaintext highlighter-rouge">0..1</code> and moves the requirement to the storage slice</td>
+      <td>Nothing to migrate. A Specimen that carried a storage temperature under a processing step only to satisfy the old requirement can drop it</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-spezifische-bestimmung-methode-snomed</code></td>
       <td>content updated</td>
       <td>nine techniques</td>
@@ -998,7 +1006,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li>New examples, each documenting a case that was not representable before: <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-allgemeine-kultur-methodenneutral</code> (the method-neutral culture code with its mandatory method), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-mikroskopie-gram-kokken-wenig</code> (morphology plus amount as a component), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ</code> and <code class="language-plaintext highlighter-rouge">-kinyoun-zweiplus</code> (acid-fast grades), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld</code> (a count per high power field), <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-empfindlichkeit-nur-kategorie</code> (a category without a measurement) and <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv</code>, which shows the direction of <code class="language-plaintext highlighter-rouge">derivedFrom</code>: the detection points at the Ct value it was read from, where the reference previously sat on <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-ct-wert</code> and ran the other way. The microscopy examples are taken from a real laboratory result catalogue.</li>
   <li>The examples now share supporting resources instead of inlining them: <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-patient</code>, <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-labor</code> as the performing laboratory, and <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-probe</code> with <code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-probe-katheterspitze</code> as specimens against the new Specimen profile.</li>
-  <li>Seven ballot questions are stated in the guide, each on the page it belongs to and collected on the index page. New sections explain granularity against axis, the method axis, the serology exemption from specimen post-coordination, the panel pattern for grouping several results, and the test code shared by general culture and general identification.</li>
+  <li>Six ballot questions are stated in the guide, each on the page it belongs to and collected on the index page. New sections explain granularity against axis, the method axis, the serology exemption from specimen post-coordination, the panel pattern for grouping several results, and the test code shared by general culture and general identification.</li>
   <li><code class="language-plaintext highlighter-rouge">mii-exa-mikrobio-spezifische-kultur</code> reports <code class="language-plaintext highlighter-rouge">Detected</code> instead of <code class="language-plaintext highlighter-rouge">Organism growth</code>: a targeted culture answers whether the named target is there, and the culture itself is already stated by the test code.</li>
   <li>New page <em>Technical Implementation → Profile Selection and Delimitation</em> delimits targeted pathogen detection, susceptibility testing, MRGN classification and resistance category status against each other and describes the diagnostic chain.</li>
   <li>The page <em>MRE class</em> was replaced by <em>Resistance category status</em>.</li>
@@ -2114,8 +2122,8 @@ The <code class="language-plaintext highlighter-rouge">category</code> represent
 
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Sat, Sep 12, 2026 20:14+0000">2026-09-12</span>
+          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Mon, Sep 14, 2026 10:47+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

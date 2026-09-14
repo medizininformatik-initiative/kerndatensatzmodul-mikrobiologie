@@ -1,4 +1,4 @@
-# MII VS Mikrobio Virulenz [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII VS Mikrobio Virulenz [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-virulenz-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-12 | *Computable Name*:MII_VS_Mikrobio_Virulenz_LOINC |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-virulenz-loinc | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_VS_Mikrobio_Virulenz_LOINC |
 
  
 Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten. 
@@ -37,12 +37,12 @@ Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschl
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-virulenz-loinc",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-virulenz-loinc",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Mikrobio_Virulenz_LOINC",
   "title" : "MII VS Mikrobio Virulenz [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:14:11+00:00",
+  "date" : "2026-09-14T10:47:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

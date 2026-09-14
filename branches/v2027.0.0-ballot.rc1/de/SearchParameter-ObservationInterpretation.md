@@ -1,4 +1,4 @@
-# ObservationInterpretation - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# ObservationInterpretation - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:ObservationInterpretation |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:ObservationInterpretation |
 
  
 Suche nach der Interpretation einer mikrobiologischen Observation. 
@@ -23,10 +23,10 @@ Suche nach der Interpretation einer mikrobiologischen Observation.
   "resourceType" : "SearchParameter",
   "id" : "ObservationInterpretation",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-interpretation",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "ObservationInterpretation",
   "status" : "active",
-  "date" : "2026-09-12T20:14:11+00:00",
+  "date" : "2026-09-14T10:47:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

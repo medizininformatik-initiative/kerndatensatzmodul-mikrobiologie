@@ -1,4 +1,4 @@
-# MII VS Mikrobio Titer Methode [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII VS Mikrobio Titer Methode [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-methode-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Titer_Methode_SNOMED |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-methode-snomed | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Titer_Methode_SNOMED |
 
  
 Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreihen. 
@@ -37,12 +37,12 @@ Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreih
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-titer-methode-snomed",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-methode-snomed",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Mikrobio_Titer_Methode_SNOMED",
   "title" : "MII VS Mikrobio Titer Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:14:11+00:00",
+  "date" : "2026-09-14T10:47:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

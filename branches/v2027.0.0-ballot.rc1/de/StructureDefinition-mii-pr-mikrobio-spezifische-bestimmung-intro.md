@@ -11,10 +11,10 @@ Untersuchungen ohne vordefiniertes Ziel, bei denen das Ergebnis die Nennung des 
 
 ### Ein Profil oder zwei?
 
-<a id="ballot-question-7"></a>
+<a id="ballot-question-6"></a>
 
 {:.bg-warning}
-**Ballotfrage 7 — genügt `Detected` / `Not detected` für eine zielgerichtete
+**Ballotfrage 6 — genügt `Detected` / `Not detected` für eine zielgerichtete
 Kultur, oder brauchen Sie `Organism growth` / `No growth`?** Dieses Modul weicht
 von der HL7 EU Lab Semantic Workgroup ab, die die zielgerichtete Kultur getrennt
 führt und dort Wachstumscodes bindet: Ein Profil deckt den zielgerichteten

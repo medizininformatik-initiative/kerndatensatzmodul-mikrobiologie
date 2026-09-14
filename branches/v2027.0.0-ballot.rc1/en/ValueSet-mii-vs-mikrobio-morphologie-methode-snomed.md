@@ -1,4 +1,4 @@
-# MII VS Mikrobio Morphologie Methode [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII VS Mikrobio Morphologie Methode [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-12 | *Computable Name*:MII_VS_Mikrobio_Morphologie_Methode_SNOMED |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_VS_Mikrobio_Morphologie_Methode_SNOMED |
 
  
 Methoden-ValueSet für die Mikroskopie: die eingesetzten mikroskopischen Verfahren. Die Färbung wird nicht hier, sondern in der Extension MII_EX_Mikrobio_Faerbung angegeben. 
@@ -38,12 +38,12 @@ Methoden-ValueSet für die Mikroskopie: die eingesetzten mikroskopischen Verfahr
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-morphologie-methode-snomed",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Mikrobio_Morphologie_Methode_SNOMED",
   "title" : "MII VS Mikrobio Morphologie Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:14:11+00:00",
+  "date" : "2026-09-14T10:47:12+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

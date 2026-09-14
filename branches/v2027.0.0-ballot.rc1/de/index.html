@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Startseite - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1</title>
+    <title>Startseite - MII Implementation Guide Microbiology v2027.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII Implementation Guide Microbiology</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot - 
 
 
 
@@ -290,7 +290,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII Implementation Guide Microbiology - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII Implementation Guide Microbiology - Local Development build (v2027.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Startseite</h2>
   
 
@@ -305,7 +305,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td colspan="4"><i>Offizielle URL</i>: <span class="copy-text">https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie<button title="Klicken zum Kopieren der URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">2027.0.0-ballot.rc1<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie|2027.0.0-ballot.rc1"/></span>
+      <span class="copy-text">2027.0.0-ballot<button title="Klicken zum Kopieren der versionierten URL" class="btn-copy" data-clipboard-text="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie|2027.0.0-ballot"/></span>
       </td>
     </tr>
 
@@ -323,7 +323,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           
 
             Stand: 
-2026-09-12
+2026-09-14
 
           
         
@@ -454,7 +454,7 @@ Profile überführt.</p>
     </tr>
     <tr>
       <td>Version</td>
-      <td>2027.0.0-ballot.rc1 (CalVer <code class="language-plaintext highlighter-rouge">JJJJ.n.n</code>)</td>
+      <td>2027.0.0-ballot (CalVer <code class="language-plaintext highlighter-rouge">JJJJ.n.n</code>)</td>
     </tr>
     <tr>
       <td>Status</td>
@@ -479,19 +479,16 @@ Untersuchungsprofil dieses Moduls verlangt <code class="language-plaintext highl
   <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2">Wohin gehört die Färbetechnik?</a></strong>
 — dieses Modul führt sie in einer Extension und weicht damit von der
 europäischen Abstimmung ab, die sie an die Probe legt.</li>
-  <li><strong><a href="probe.html#ballot-question-3">Blockiert Sie die Pflicht-Lagertemperatur?</a></strong> — aus
-dem Bioproben-Basisprofil geerbt, ohne Aussage für die mikrobiologische
-Aufarbeitung, und ein abgeleitetes Profil kann sie nicht lockern.</li>
-  <li><strong><a href="probe.html#ballot-question-4">Sind Bebrütungsdauer und -temperatur über <code class="language-plaintext highlighter-rouge">Specimen.processing</code> darstellbar?</a></strong>
+  <li><strong><a href="probe.html#ballot-question-3">Sind Bebrütungsdauer und -temperatur über <code class="language-plaintext highlighter-rouge">Specimen.processing</code> darstellbar?</a></strong>
 — FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie
 befüllen können.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5">Können Sie eine Komponente für eine semiquantitative Menge verarbeiten?</a></strong>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-4">Können Sie eine Komponente für eine semiquantitative Menge verarbeiten?</a></strong>
 — das Modul folgt hier der europäischen Abstimmung, und die Komponente dreht
 eine Entscheidung dieses Zyklus zurück.</li>
-  <li><strong><a href="profilauswahl-und-abgrenzung.html#ballot-question-6">Können Sie zu jedem Befund <code class="language-plaintext highlighter-rouge">Observation.method</code> liefern?</a></strong>
+  <li><strong><a href="profilauswahl-und-abgrenzung.html#ballot-question-5">Können Sie zu jedem Befund <code class="language-plaintext highlighter-rouge">Observation.method</code> liefern?</a></strong>
 — die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre
 Antwort entscheidet mehr als eine Frage.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html#ballot-question-7">Genügt <code class="language-plaintext highlighter-rouge">Detected</code> / <code class="language-plaintext highlighter-rouge">Not detected</code> für eine zielgerichtete Kultur?</a></strong>
+  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html#ballot-question-6">Genügt <code class="language-plaintext highlighter-rouge">Detected</code> / <code class="language-plaintext highlighter-rouge">Not detected</code> für eine zielgerichtete Kultur?</a></strong>
 — ein Profil deckt jetzt den zielgerichteten Nachweis unabhängig vom Verfahren
 ab; die europäische Abstimmung bindet für die Kultur Wachstumscodes, dieser
 Leitfaden weicht davon ab.</li>
@@ -617,8 +614,8 @@ aus dem Inhalt dieser Spezifikation entstehen könnten.</p>
 
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Sat, Sep 12, 2026 20:14+0000">2026-09-12</span>
+          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Mon, Sep 14, 2026 10:47+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

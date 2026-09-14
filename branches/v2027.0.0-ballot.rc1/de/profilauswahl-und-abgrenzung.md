@@ -1,4 +1,4 @@
-# Profilauswahl und Abgrenzung - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# Profilauswahl und Abgrenzung - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Anleitung**](guidance.md)
@@ -106,7 +106,7 @@ Die Methode ist also auch dann anzugeben, wenn der Untersuchungscode sie bereits
 
 Dieser Leitfaden hält das als **Empfehlung** fest, nicht als Pflicht. `Observation.method` ist im Labor-Basisprofil `0..1` Must Support, und eine modulweite Pflicht würde heute konforme Daten ungültig machen. Erzwungen wird sie an der einen Stelle, an der die Aussage sonst mehrdeutig ist: bei der Allgemeinen Kultur mit dem methodenneutralen Code `41852-5`.
 
-**Ballotfrage 6 — können Sie zu jedem Befund `Observation.method` liefern?** Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur. Wäre eine Pflicht an Ihrem Standort erfüllbar?
+**Ballotfrage 5 — können Sie zu jedem Befund `Observation.method` liefern?** Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur. Wäre eine Pflicht an Ihrem Standort erfüllbar?
 
 Aus einem Ja folgt zweierlei. Eine spätere Version kann `Observation.method` auf `1..1` heben, und das Sonderinvariant der Allgemeinen Kultur wird überflüssig — `41852-5` samt Methode ist dann überall eindeutig, und die Empfehlung, den methodentragenden `11475-1` zu bevorzugen, entfällt weitgehend.
 

@@ -1,4 +1,4 @@
-# Anleitung - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# Anleitung - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Anleitung**
