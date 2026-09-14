@@ -6,7 +6,7 @@
 <html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Änderungshistorie - MII Implementation Guide Microbiology v2027.0.0-ballot</title>
+    <title>Änderungshistorie - MII Implementation Guide Microbiology v2027.0.0-ballot2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII Implementation Guide Microbiology</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot - 
+            <span style="display:inline-block;">2027.0.0-ballot2 - 
 
 
 
@@ -290,7 +290,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII Implementation Guide Microbiology - Local Development build (v2027.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII Implementation Guide Microbiology - Local Development build (v2027.0.0-ballot2) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Änderungshistorie</h2>
   
 
@@ -308,6 +308,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
+  <li><a href="#202700-ballot2" id="markdown-toc-202700-ballot2">2027.0.0-ballot2</a></li>
   <li><a href="#202700-ballot" id="markdown-toc-202700-ballot">2027.0.0-ballot</a></li>
   <li><a href="#202700-alpha5" id="markdown-toc-202700-alpha5">2027.0.0-alpha.5</a></li>
   <li><a href="#202700-alpha4" id="markdown-toc-202700-alpha4">2027.0.0-alpha.4</a></li>
@@ -343,6 +344,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>2027.0.0-ballot2</td>
+      <td>2026-09-14</td>
+      <td>Neuveröffentlichung ohne inhaltliche Änderung</td>
+      <td>Die Artefakte sind identisch mit <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code>, nur die Version unterscheidet sich. Das veröffentlichte Paket jener Version enthielt 31 in diesem Zyklus entfallene Artefakte und trug für <code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-probe</code> keinen Snapshot.</td>
+    </tr>
     <tr>
       <td>2027.0.0-ballot</td>
       <td>2026-09-14</td>
@@ -381,6 +388,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
   </tbody>
 </table>
+
+<h3 id="202700-ballot2">2027.0.0-ballot2</h3>
+
+<p>Datum: 2026-09-14</p>
+
+<p><strong>Keine inhaltliche Änderung.</strong> Jedes Artefakt ist identisch mit
+<code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code>, bis auf die Version, die es trägt. Diese Fassung ist zu
+verwenden; die Verpackung der vorigen war in zweierlei Hinsicht fehlerhaft.</p>
+
+<ul>
+  <li>Das veröffentlichte Paket enthielt <strong>31 Artefakte, die dieser Zyklus entfernt
+hatte</strong> — fünf Profile, fünf Beispiele und zwanzig ValueSets, alle noch in
+Version <code class="language-plaintext highlighter-rouge">2025.0.2</code> —, weil der Veröffentlichungsweg einen Projektstand backte
+und nicht dieses Repository. Eines davon kollidierte mit einem aktuellen
+Artefakt: ein zweites CapabilityStatement auf der Canonical
+<code class="language-plaintext highlighter-rouge">…/CapabilityStatement/metadata</code>, in <code class="language-plaintext highlighter-rouge">2025.0.2</code>, neben dem aktuellen. Welches
+von beiden ein Werkzeug verwendet, hätte seine Ladereihenfolge entschieden.</li>
+  <li><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-probe</code> wurde <strong>ohne Snapshot</strong> ausgeliefert, weil das
+Biobank-Paket, in dem sein Parent liegt, bei jenem Build nicht auflösbar war.</li>
+</ul>
+
+<p>Beide Ursachen lagen im Veröffentlichungsweg, nicht im Modul. Die Artefakte von
+<code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code> waren richtig; was unter diesem Namen veröffentlicht wurde,
+war es nicht.</p>
 
 <h3 id="202700-ballot">2027.0.0-ballot</h3>
 
@@ -2062,8 +2093,8 @@ Die <code class="language-plaintext highlighter-rouge">category</code>-Abbildung
 
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 14, 2026 14:45+0000">2026-09-14</span>
+          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Mon, Sep 14, 2026 16:08+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

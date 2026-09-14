@@ -1,4 +1,4 @@
-# Interpretation - MII Implementation Guide Microbiology v2027.0.0-ballot
+# Interpretation - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * [**Guidance**](guidance.md)

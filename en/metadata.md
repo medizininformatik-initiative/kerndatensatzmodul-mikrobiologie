@@ -1,4 +1,4 @@
-# Metadata Overview - MII Implementation Guide Microbiology v2027.0.0-ballot
+# Metadata Overview - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * **Metadata Overview**
@@ -71,7 +71,7 @@ Where a module publishes CodeSystem supplements, note that the CRMI **ShareableC
 
 This section describes the module's version scheme and how it is expressed as CRMI metadata. The released version and the release workflow are on the [Versioning](version-history.md) page.
 
-The module uses calendar versioning in the SemVer-compatible numeric form `YYYY.MINOR.PATCH[-label]`, currently `2027.0.0-ballot`. The calendar year serves as the CRMI `<major>` component; `MINOR` and `PATCH` keep their usual additive and corrective semantics. Stable versions can therefore be compared using the declared `semver` version algorithm. Labels carry pre-release or build information; following CRMI/FHIR convention, no ordering is inferred among labels.
+The module uses calendar versioning in the SemVer-compatible numeric form `YYYY.MINOR.PATCH[-label]`, currently `2027.0.0-ballot2`. The calendar year serves as the CRMI `<major>` component; `MINOR` and `PATCH` keep their usual additive and corrective semantics. Stable versions can therefore be compared using the declared `semver` version algorithm. Labels carry pre-release or build information; following CRMI/FHIR convention, no ordering is inferred among labels.
 
 | | |
 | :--- | :--- |

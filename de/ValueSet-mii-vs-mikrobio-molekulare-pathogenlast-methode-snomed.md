@@ -1,4 +1,4 @@
-# MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-ballot
+# MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed | *Version*:2027.0.0-ballot |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed | *Version*:2027.0.0-ballot2 |
 | Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED |
 
  
@@ -37,12 +37,12 @@ Methoden-ValueSet für die molekulare Pathogenlast: Amplifikationsverfahren zur 
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED",
   "title" : "MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T14:45:51+00:00",
+  "date" : "2026-09-14T16:08:05+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -1,4 +1,4 @@
-# MII PR Mikrobio Virulenzfaktor - MII Implementation Guide Microbiology v2027.0.0-ballot
+# MII PR Mikrobio Virulenzfaktor - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor | *Version*:2027.0.0-ballot2 |
 | Active as of 2026-09-14 | *Computable Name*:MII_PR_Mikrobio_Virulenzfaktor |
 
  
@@ -174,12 +174,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-v
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_PR_Mikrobio_Virulenzfaktor",
   "title" : "MII PR Mikrobio Virulenzfaktor",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T14:45:51+00:00",
+  "date" : "2026-09-14T16:08:05+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

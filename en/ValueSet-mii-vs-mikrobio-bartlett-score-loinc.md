@@ -1,4 +1,4 @@
-# MII VS Mikrobio Bartlett Score [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot
+# MII VS Mikrobio Bartlett Score [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-bartlett-score-loinc | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-bartlett-score-loinc | *Version*:2027.0.0-ballot2 |
 | Active as of 2023-03-02 | *Computable Name*:MII_VS_Mikrobio_Bartlett_Score_LOINC |
 
  
@@ -37,7 +37,7 @@ Ergebnis-ValueSet für den Bartlett-Score: Punktkategorien von +3 bis -1, die da
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-bartlett-score-loinc",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-bartlett-score-loinc",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_VS_Mikrobio_Bartlett_Score_LOINC",
   "title" : "MII VS Mikrobio Bartlett Score [LOINC]",
   "status" : "active",
