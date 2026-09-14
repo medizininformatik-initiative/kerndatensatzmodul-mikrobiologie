@@ -680,6 +680,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Beide Codes sind gegen UCUM gültig; die Bindung ist extensible, eine weitere Einheit bleibt also möglich</td>
     </tr>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-aviditaet-ergebnis</code></td>
+      <td>inhaltlich aktualisiert</td>
+      <td><code class="language-plaintext highlighter-rouge">L</code>, <code class="language-plaintext highlighter-rouge">I</code>, <code class="language-plaintext highlighter-rouge">H</code> aus <code class="language-plaintext highlighter-rouge">v3-ObservationInterpretation</code></td>
+      <td><code class="language-plaintext highlighter-rouge">L</code> und <code class="language-plaintext highlighter-rouge">H</code> unverändert, <code class="language-plaintext highlighter-rouge">I</code> ersetzt durch <code class="language-plaintext highlighter-rouge">280414007</code> Equivocal result — den Code, den dieser Leitfaden für einen grenzwertigen Befund in Kultur und spezifischer Bestimmung schon führt</td>
+      <td><code class="language-plaintext highlighter-rouge">I</code> war nicht nur unscharf, sondern falsch: THO ordnet ihn dem Empfindlichkeitszweig zu und definiert ihn als Bakterienstamm, der von einem Antibiotikum mit unsicherer therapeutischer Wirkung gehemmt wird, mit Verweis auf CLSI. <code class="language-plaintext highlighter-rouge">L</code> und <code class="language-plaintext highlighter-rouge">H</code> bleiben, weil der Parent <code class="language-plaintext highlighter-rouge">interpretation</code> extensible an eine Liste bindet, die sie enthält, und eine extensible Bindung den Code aus der Liste verlangt, wo einer passt; für die Mitte bietet sie keinen, und genau das lässt einen Fremdcode zu</td>
+      <td><code class="language-plaintext highlighter-rouge">I</code> auf <code class="language-plaintext highlighter-rouge">280414007</code> umstellen. Labore berichten alle drei Kategorien, die Mitte bleibt also</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-empfindlichkeit-methode-snomed</code></td>
       <td>neu</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.method</code> war im Empfindlichkeitsprofil ungebunden</td>
@@ -2055,7 +2063,7 @@ Die <code class="language-plaintext highlighter-rouge">category</code>-Abbildung
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 14, 2026 13:24+0000">2026-09-14</span>
+          Erstellt <span title="Mon, Sep 14, 2026 13:41+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

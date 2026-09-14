@@ -708,6 +708,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Both codes validate against UCUM; the binding is extensible, so a further unit stays possible</td>
     </tr>
     <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-aviditaet-ergebnis</code></td>
+      <td>content updated</td>
+      <td><code class="language-plaintext highlighter-rouge">L</code>, <code class="language-plaintext highlighter-rouge">I</code>, <code class="language-plaintext highlighter-rouge">H</code> from <code class="language-plaintext highlighter-rouge">v3-ObservationInterpretation</code></td>
+      <td><code class="language-plaintext highlighter-rouge">L</code> and <code class="language-plaintext highlighter-rouge">H</code> unchanged, <code class="language-plaintext highlighter-rouge">I</code> replaced by <code class="language-plaintext highlighter-rouge">280414007</code> Equivocal result, the code this guide already uses for a borderline finding in culture and targeted determination</td>
+      <td><code class="language-plaintext highlighter-rouge">I</code> was not merely imprecise but wrong: THO subsumes it under the susceptibility branch and defines it as a bacterial strain inhibited by an antimicrobial agent with uncertain therapeutic effect, citing CLSI. <code class="language-plaintext highlighter-rouge">L</code> and <code class="language-plaintext highlighter-rouge">H</code> stay because the parent binds <code class="language-plaintext highlighter-rouge">interpretation</code> extensibly to a list that holds them, and an extensible binding demands the code from the list wherever one applies; for the middle the list offers none, which is what admits an outside code</td>
+      <td>Map <code class="language-plaintext highlighter-rouge">I</code> to <code class="language-plaintext highlighter-rouge">280414007</code>. Laboratories report all three categories, so the middle one stays</td>
+    </tr>
+    <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-empfindlichkeit-methode-snomed</code></td>
       <td>new</td>
       <td><code class="language-plaintext highlighter-rouge">Observation.method</code> was unbound on the susceptibility profile</td>
@@ -2131,7 +2139,7 @@ The <code class="language-plaintext highlighter-rouge">category</code> represent
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 14, 2026 13:24+0000">2026-09-14</span>
+          Generated <span title="Mon, Sep 14, 2026 13:41+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

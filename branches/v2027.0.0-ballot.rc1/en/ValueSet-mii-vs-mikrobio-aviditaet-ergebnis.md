@@ -12,7 +12,7 @@
 | Active as of 2026-09-14 | *Computable Name*:MII_VS_Mikrobio_Aviditaet_Ergebnis |
 
  
-Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, intermediär oder hoch. Niedrige Avidität spricht für eine frische Infektion. 
+Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, grenzwertig oder hoch. Niedrige Avidität spricht für eine frische Infektion. 
 
  **References** 
 
@@ -42,7 +42,7 @@ Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsind
   "title" : "MII VS Mikrobio Aviditaet Ergebnis",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T13:24:58+00:00",
+  "date" : "2026-09-14T13:41:44+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -64,7 +64,7 @@ Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsind
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, intermediär oder hoch. Niedrige Avidität spricht für eine frische Infektion.",
+  "description" : "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, grenzwertig oder hoch. Niedrige Avidität spricht für eine frische Infektion.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -81,12 +81,16 @@ Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsind
         "display" : "Low"
       },
       {
-        "code" : "I",
-        "display" : "Intermediate"
-      },
-      {
         "code" : "H",
         "display" : "High"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+      "concept" : [{
+        "code" : "280414007",
+        "display" : "Equivocal result"
       }]
     }]
   }

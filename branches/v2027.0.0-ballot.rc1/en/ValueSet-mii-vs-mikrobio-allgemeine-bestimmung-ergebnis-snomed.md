@@ -42,7 +42,7 @@ Ergebnis-ValueSet fuer die allgemeine Bestimmung: der identifizierte Mikroorgani
   "title" : "MII VS Mikrobio Allgemeine Bestimmung Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T13:24:58+00:00",
+  "date" : "2026-09-14T13:41:44+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

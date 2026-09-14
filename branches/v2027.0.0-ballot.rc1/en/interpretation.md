@@ -51,5 +51,5 @@ The same boundary applies to the targeted detection of a resistant organism: an 
 
 ### Other assessments in this module
 
-`interpretation` is not limited to susceptibility. Colony counts carry a semiquantitative assessment of the measured value, and the avidity test carries low, intermediate or high. The pattern is the same in each case: the value stays measured, the assessment stays separate.
+`interpretation` is not limited to susceptibility. Colony counts carry a semiquantitative assessment of the measured value, and the avidity test carries low, equivocal or high — `L` and `H` from the value set the parent binds, and for the middle the same SNOMED code this guide uses for a borderline finding elsewhere. The pattern is the same in each case: the value stays measured, the assessment stays separate.
 
