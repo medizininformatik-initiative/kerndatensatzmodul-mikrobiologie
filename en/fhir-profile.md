@@ -1,4 +1,4 @@
-# FHIR Profiles - Modelling Notes - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# FHIR Profiles - Modelling Notes - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Guidance**](guidance.md)

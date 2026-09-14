@@ -1,4 +1,4 @@
-# MII VS Mikrobio Keimzahl Einheiten [UCUM] - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII VS Mikrobio Keimzahl Einheiten [UCUM] - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum | *Version*:2027.0.0-ballot.rc1 |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum | *Version*:2027.0.0-ballot |
 | Active as of 2023-03-02 | *Computable Name*:MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM |
 
  
@@ -39,7 +39,7 @@ No Expansion for this valueset (Unknown Code System)
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-keimzahl-einheiten-ucum",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM",
   "title" : "MII VS Mikrobio Keimzahl Einheiten [UCUM]",
   "status" : "active",

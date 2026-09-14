@@ -1,4 +1,4 @@
-# MII PR Mikrobio Allgemeine Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII PR Mikrobio Allgemeine Mikroskopie - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Allgemeine_Mikroskopie |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_PR_Mikrobio_Allgemeine_Mikroskopie |
 
  
 Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies. 
@@ -24,7 +24,7 @@ Die Färbung steht in `extension[faerbung]`, codiert mit den Nachkommen von `379
 
 **Ballotfrage 2 — wohin gehört die Färbetechnik?** Dieses Modul weicht von dem Modell ab, das in der HL7 EU Lab Semantic Workgroup diskutiert wird: Es führt die Färbung in `extension[faerbung]` an der Observation, nicht in `Specimen.processing.procedure`. Die Codes sind dieselben. Können Sie die Färbung an der Probe liefern, oder brauchen Sie die Extension?
 
-Zwei Dinge sprechen dagegen, dass `Specimen` der einzige Ort ist. Es setzt eine Specimen-Ressource voraus, und die stellt Ballotfrage 1 in Zweifel; und der Parent von [Probe](StructureDefinition-mii-pr-mikrobio-probe.md) macht unter `processing` Lagertemperaturbedingungen verpflichtend (Ballotfrage 3), die eine Färbung nicht liefern kann. Weil die Terminologie auf beiden Wegen dieselbe ist, ändert ein späterer Umzug das Element und nichts weiter.
+Gegen `Specimen` als einzigen Ort spricht, dass er eine Specimen-Ressource voraussetzt, und die stellt Ballotfrage 1 in Zweifel. Die geerbte Pflicht-Lagertemperatur unter `processing` stand ebenfalls im Weg, bis das Bioproben-Basisprofil sie in seinem `2027.0.0-ballot` gelockert hat. Weil die Terminologie auf beiden Wegen dieselbe ist, ändert ein späterer Umzug das Element und nichts weiter.
 
 ## Morphologie zusammen mit ihrer Menge
 
@@ -32,7 +32,7 @@ Der häufigste Grambefund braucht zwei Aussagen auf einmal — **wenig** grampos
 
 Ihr Code ist `103392008 |Semi-quantitative value|`, das Konzept, das die HL7 EU Lab Semantic Workgroup für diese Komponente vorschlägt. Für denselben Zweck ist ein LOINC-Code angefordert; er tritt an diese Stelle, sobald er existiert. Neben der semiquantitativen Stufe nimmt die Komponente eine Zählung je Gesichtsfeld, als `Quantity` oder als `Range`.
 
-**Ballotfrage 5 — können Sie eine Komponente für die Menge verarbeiten?** Beide Mikroskopieprofile führen die Menge in `component[menge]` und folgen damit der HL7 EU Lab Semantic Workgroup, die die Menge eines einzelnen Befunds in einer Komponente führt und mehrere Befunde einer Untersuchung mit `hasMember` gruppiert.
+**Ballotfrage 4 — können Sie eine Komponente für die Menge verarbeiten?** Beide Mikroskopieprofile führen die Menge in `component[menge]` und folgen damit der HL7 EU Lab Semantic Workgroup, die die Menge eines einzelnen Befunds in einer Komponente führt und mehrere Befunde einer Untersuchung mit `hasMember` gruppiert.
 
 Die Komponente dreht eine Entscheidung dieses Zyklus zurück: `2027.0.0-alpha.1` hat die Komponenten aus genau diesem Profil entfernt und in eigenständige Observations überführt.
 
@@ -64,7 +64,7 @@ You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 #### Terminology Bindings (Differential)
 
@@ -72,7 +72,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 ** Summary **
 
@@ -107,7 +107,7 @@ This structure defines the following [Slices](http://hl7.org/fhir/R4/profiling.h
 
  **Differential-Ansicht** 
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 #### Terminology Bindings (Differential)
 
@@ -117,7 +117,7 @@ Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simpl
 
 #### Constraints
 
-Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot.rc4&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
+Diese Struktur ist abgeleitet von [MII_PR_Labor_Laboruntersuchung](https://simplifier.net/resolve?scope=de.medizininformatikinitiative.kerndatensatz.laborbefund@2027.0.0-ballot&canonical=https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab) 
 
 ** Summary **
 
@@ -284,12 +284,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_PR_Mikrobio_Allgemeine_Mikroskopie",
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:31:09+00:00",
+  "date" : "2026-09-14T10:59:28+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -26,12 +26,12 @@ diskutiert wird: Es führt die Färbung in `extension[faerbung]` an der
 Observation, nicht in `Specimen.processing.procedure`. Die Codes sind dieselben.
 Können Sie die Färbung an der Probe liefern, oder brauchen Sie die Extension?
 
-Zwei Dinge sprechen dagegen, dass `Specimen` der einzige Ort ist. Es setzt eine
-Specimen-Ressource voraus, und die stellt Ballotfrage 1 in Zweifel; und der
-Parent von [Probe](StructureDefinition-mii-pr-mikrobio-probe.html) macht unter
-`processing` Lagertemperaturbedingungen verpflichtend (Ballotfrage 3), die eine
-Färbung nicht liefern kann. Weil die Terminologie auf beiden Wegen dieselbe ist,
-ändert ein späterer Umzug das Element und nichts weiter.
+Gegen `Specimen` als einzigen Ort spricht, dass er eine Specimen-Ressource
+voraussetzt, und die stellt Ballotfrage 1 in Zweifel. Die geerbte
+Pflicht-Lagertemperatur unter `processing` stand ebenfalls im Weg, bis das
+Bioproben-Basisprofil sie in seinem `2027.0.0-ballot` gelockert hat. Weil die
+Terminologie auf beiden Wegen dieselbe ist, ändert ein späterer Umzug das Element
+und nichts weiter.
 
 ## Morphologie zusammen mit ihrer Menge
 
@@ -47,10 +47,10 @@ ein LOINC-Code angefordert; er tritt an diese Stelle, sobald er existiert. Neben
 der semiquantitativen Stufe nimmt die Komponente eine Zählung je Gesichtsfeld,
 als `Quantity` oder als `Range`.
 
-<a id="ballot-question-5"></a>
+<a id="ballot-question-4"></a>
 
 {:.bg-warning}
-**Ballotfrage 5 — können Sie eine Komponente für die Menge verarbeiten?**
+**Ballotfrage 4 — können Sie eine Komponente für die Menge verarbeiten?**
 Beide Mikroskopieprofile führen die Menge in `component[menge]` und folgen damit
 der HL7 EU Lab Semantic Workgroup, die die Menge eines einzelnen Befunds in einer
 Komponente führt und mehrere Befunde einer Untersuchung mit `hasMember`

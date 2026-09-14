@@ -1,4 +1,4 @@
-# MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc | *Version*:2027.0.0-ballot |
 | Active Stand: 2023-03-02 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC |
 
  
@@ -37,7 +37,7 @@ Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der 
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC",
   "title" : "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]",
   "status" : "active",
@@ -97,7 +97,7 @@ Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der 
       "version" : "2.82",
       "concept" : [{
         "code" : "106843-6",
-        "display" : "Cefotaxime+Cloxacillin [Susceptibility] in Isolate by Broth dilution"
+        "display" : "Cefotaxime+Cloxacillin [Susceptibility] in Isolate by Disk diffusion (KB)"
       },
       {
         "code" : "103673-0",

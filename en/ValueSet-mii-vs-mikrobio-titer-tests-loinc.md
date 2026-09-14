@@ -1,4 +1,4 @@
-# MII VS Mikrobio Titer Tests [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII VS Mikrobio Titer Tests [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,8 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-tests-loinc | *Version*:2027.0.0-ballot.rc1 |
-| Active as of 2026-09-12 | *Computable Name*:MII_VS_Mikrobio_Titer_Tests_LOINC |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-tests-loinc | *Version*:2027.0.0-ballot |
+| Active as of 2026-09-14 | *Computable Name*:MII_VS_Mikrobio_Titer_Tests_LOINC |
 
  
 Tests-ValueSet für die Titerbestimmung: LOINC-Codes für semiquantitative Messungen aus Verdünnungsreihen. 
@@ -37,12 +37,12 @@ Tests-ValueSet für die Titerbestimmung: LOINC-Codes für semiquantitative Messu
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-titer-tests-loinc",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-tests-loinc",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Mikrobio_Titer_Tests_LOINC",
   "title" : "MII VS Mikrobio Titer Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:31:09+00:00",
+  "date" : "2026-09-14T10:59:28+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

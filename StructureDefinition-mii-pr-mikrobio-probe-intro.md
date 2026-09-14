@@ -13,13 +13,6 @@ is deliverability rather than principle. Feedback from German laboratory practic
 is that one is frequently not produced. Full statement of the question on
 [Specimen](probe.html).
 
-{:.bg-warning}
-**Ballot question 3 — mandatory storage temperature conditions on `Specimen.processing`.**
-The base profile requires the extension `temperaturbedingungen` on every
-`Specimen.processing` element. It carries no meaning for microbiological
-processing, and a derived profile cannot relax it. Full statement of the question
-on [Specimen](probe.html).
-
 ### Specimen type
 
 `Specimen.type.coding:sct` keeps the inherited binding to the biobank specimen

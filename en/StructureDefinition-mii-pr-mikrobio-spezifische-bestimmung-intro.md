@@ -10,10 +10,10 @@ Investigations without a predefined target, where the result is the naming of th
 
 ### One profile or two?
 
-<a id="ballot-question-7"></a>
+<a id="ballot-question-6"></a>
 
 {:.bg-warning}
-**Ballot question 7 — is `Detected` / `Not detected` enough for a targeted
+**Ballot question 6 — is `Detected` / `Not detected` enough for a targeted
 culture, or do you need `Organism growth` / `No growth`?** This module deviates
 from the HL7 EU Lab Semantic Workgroup, which keeps targeted culture separate and
 binds growth codes there: one profile covers targeted detection whatever the

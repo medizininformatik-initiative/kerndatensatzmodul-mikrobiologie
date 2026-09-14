@@ -1,4 +1,4 @@
-# MII VS Mikrobio Bartlett Score [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII VS Mikrobio Bartlett Score [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-bartlett-score-loinc | *Version*:2027.0.0-ballot.rc1 |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-bartlett-score-loinc | *Version*:2027.0.0-ballot |
 | Active Stand: 2023-03-02 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Bartlett_Score_LOINC |
 
  
@@ -37,7 +37,7 @@ Ergebnis-ValueSet für den Bartlett-Score: Punktkategorien von +3 bis -1, die da
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-bartlett-score-loinc",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-bartlett-score-loinc",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_VS_Mikrobio_Bartlett_Score_LOINC",
   "title" : "MII VS Mikrobio Bartlett Score [LOINC]",
   "status" : "active",
@@ -90,7 +90,7 @@ Ergebnis-ValueSet für den Bartlett-Score: Punktkategorien von +3 bis -1, die da
       },
       {
         "code" : "LA21389-4",
-        "display" : "0 Lack of inflammation and possible contamination with saliva"
+        "display" : "0  Lack of inflammation and possible contamination with saliva"
       },
       {
         "code" : "LA21388-6",

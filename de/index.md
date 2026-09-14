@@ -1,4 +1,4 @@
-# Startseite - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# Startseite - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Inhaltsverzeichnis**](toc.md)
 * **Startseite**
@@ -7,8 +7,8 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie | *Version*:2027.0.0-ballot.rc1 |
-| Active Stand: 2026-09-12 | *Maschinenlesbarer Name*:MII_IG_Mikrobiologie |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie | *Version*:2027.0.0-ballot |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_IG_Mikrobiologie |
 
 ### Einleitung
 
@@ -54,7 +54,7 @@ Komponenten aus Observationen wurden in dieser Version fachlich in separate Prof
 | | |
 | :--- | :--- |
 | Datum | noch nicht veröffentlicht |
-| Version | 2027.0.0-ballot.rc1 (CalVer`JJJJ.n.n`) |
+| Version | 2027.0.0-ballot (CalVer`JJJJ.n.n`) |
 | Status | active |
 | Realm | DE |
 
@@ -64,11 +64,10 @@ Dies ist ein Ballot-Kandidat. Die folgenden Punkte sind bewusst offen gelassen; 
 
 1. **[Entsteht immer eine Specimen-Ressource?](probe.md#ballot-question-1)**— jedes Untersuchungsprofil dieses Moduls verlangt`Observation.specimen`.
 1. **[Wohin gehört die Färbetechnik?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-2)**— dieses Modul führt sie in einer Extension und weicht damit von der europäischen Abstimmung ab, die sie an die Probe legt.
-1. **[Blockiert Sie die Pflicht-Lagertemperatur?](probe.md#ballot-question-3)**— aus dem Bioproben-Basisprofil geerbt, ohne Aussage für die mikrobiologische Aufarbeitung, und ein abgeleitetes Profil kann sie nicht lockern.
-1. **[Sind Bebrütungsdauer und -temperatur über `Specimen.processing` darstellbar?](probe.md#ballot-question-4)**— FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie befüllen können.
-1. **[Können Sie eine Komponente für eine semiquantitative Menge verarbeiten?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-5)**— das Modul folgt hier der europäischen Abstimmung, und die Komponente dreht eine Entscheidung dieses Zyklus zurück.
-1. **[Können Sie zu jedem Befund `Observation.method` liefern?](profilauswahl-und-abgrenzung.md#ballot-question-6)**— die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre Antwort entscheidet mehr als eine Frage.
-1. **[Genügt `Detected` / `Not detected` für eine zielgerichtete Kultur?](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md#ballot-question-7)**— ein Profil deckt jetzt den zielgerichteten Nachweis unabhängig vom Verfahren ab; die europäische Abstimmung bindet für die Kultur Wachstumscodes, dieser Leitfaden weicht davon ab.
+1. **[Sind Bebrütungsdauer und -temperatur über `Specimen.processing` darstellbar?](probe.md#ballot-question-3)**— FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie befüllen können.
+1. **[Können Sie eine Komponente für eine semiquantitative Menge verarbeiten?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-4)**— das Modul folgt hier der europäischen Abstimmung, und die Komponente dreht eine Entscheidung dieses Zyklus zurück.
+1. **[Können Sie zu jedem Befund `Observation.method` liefern?](profilauswahl-und-abgrenzung.md#ballot-question-5)**— die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre Antwort entscheidet mehr als eine Frage.
+1. **[Genügt `Detected` / `Not detected` für eine zielgerichtete Kultur?](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md#ballot-question-6)**— ein Profil deckt jetzt den zielgerichteten Nachweis unabhängig vom Verfahren ab; die europäische Abstimmung bindet für die Kultur Wachstumscodes, dieser Leitfaden weicht davon ab.
 
 ### Inhalt dieses Leitfadens
 

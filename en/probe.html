@@ -6,7 +6,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Specimen - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1</title>
+    <title>Specimen - MII Implementation Guide Microbiology v2027.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -141,7 +141,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">MII Implementation Guide Microbiology</span>
             <br/>
-            <span style="display:inline-block;">2027.0.0-ballot.rc1 - 
+            <span style="display:inline-block;">2027.0.0-ballot - 
 
 
 
@@ -322,7 +322,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">MII Implementation Guide Microbiology - Local Development build (v2027.0.0-ballot.rc1) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">MII Implementation Guide Microbiology - Local Development build (v2027.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Specimen</h2>
   
 
@@ -341,7 +341,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#report---specimen" id="markdown-toc-report---specimen">Report - Specimen</a></li>
-  <li><a href="#specimenprocessing-temperature-conditions-and-staining" id="markdown-toc-specimenprocessing-temperature-conditions-and-staining"><code class="language-plaintext highlighter-rouge">Specimen.processing</code>: temperature conditions and staining</a></li>
+  <li><a href="#specimenprocessing-staining" id="markdown-toc-specimenprocessing-staining"><code class="language-plaintext highlighter-rouge">Specimen.processing</code>: staining</a></li>
   <li><a href="#incubation-duration-and-temperature" id="markdown-toc-incubation-duration-and-temperature">Incubation duration and temperature</a></li>
 </ul>
 
@@ -390,24 +390,16 @@ e.g. for further-processed materials or materials obtained from primary specimen
   </li>
 </ul>
 
-<h3 id="specimenprocessing-temperature-conditions-and-staining"><code class="language-plaintext highlighter-rouge">Specimen.processing</code>: temperature conditions and staining</h3>
+<h3 id="specimenprocessing-staining"><code class="language-plaintext highlighter-rouge">Specimen.processing</code>: staining</h3>
 
-<p><a id="ballot-question-3"></a></p>
+<p>Up to <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code> the biobank base profile required the extension
+<code class="language-plaintext highlighter-rouge">temperaturbedingungen</code> on every <code class="language-plaintext highlighter-rouge">Specimen.processing</code> element — a requirement
+from the storage of biosamples, without meaning for laboratory processing, and
+one a derived profile could not relax. This guide raised it as a ballot question;
+the base profile relaxed it to <code class="language-plaintext highlighter-rouge">0..1</code> in its <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code>, which this module
+now depends on, and the question is settled.</p>
 
-<p class="bg-warning"><strong>Ballot question 3 — does the mandatory storage temperature block you?</strong>
-The base profile requires the extension <code class="language-plaintext highlighter-rouge">temperaturbedingungen</code> on every
-<code class="language-plaintext highlighter-rouge">Specimen.processing</code> element, and a derived profile can only narrow, never
-relax, so this module cannot resolve it.</p>
-
-<p>The requirement comes from the biobank, where <code class="language-plaintext highlighter-rouge">Specimen.processing</code> describes the
-storage of a biosample and the temperature is a core statement — it holds in
-<code class="language-plaintext highlighter-rouge">2026.0.1</code> as in <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code>. In microbiology the same element
-describes laboratory processing: staining, enrichment, incubation, where a
-storage temperature is either unknown or without meaning. We consider it
-misplaced in this context and are raising it with the biobank module, with a view
-to confining it to the storage slice <code class="language-plaintext highlighter-rouge">processing:lagerprozess</code>.</p>
-
-<p>The staining technique is consequently <strong>not</strong> given under
+<p>The staining technique is nevertheless <strong>not</strong> given under
 <code class="language-plaintext highlighter-rouge">Specimen.processing.procedure</code>, as the HL7 EU Lab Semantic Workgroup proposes,
 but in an extension on the Observation,
 <a href="StructureDefinition-mii-ex-mikrobio-faerbung.html"><code class="language-plaintext highlighter-rouge">extension[faerbung]</code></a>, with
@@ -417,12 +409,13 @@ question 2 sets out the reasoning.</p>
 
 <h3 id="incubation-duration-and-temperature">Incubation duration and temperature</h3>
 
-<p><a id="ballot-question-4"></a></p>
+<p><a id="ballot-question-3"></a></p>
 
-<p class="bg-warning"><strong>Ballot question 4 — is incubation representable via <code class="language-plaintext highlighter-rouge">Specimen.processing</code>?</strong>
+<p class="bg-warning"><strong>Ballot question 3 — is incubation representable via <code class="language-plaintext highlighter-rouge">Specimen.processing</code>?</strong>
 FHIR provides for it there and the MII has the pieces, so the modelling is
-settled; we ask whether it is implementable at your site. The elements, measured
-against R4 core and the biobank module on 2026-09-10:</p>
+settled. We ask whether it is implementable at your site.</p>
+
+<p>The elements, measured against R4 core and the biobank module on 2026-09-10:</p>
 
 <ul>
   <li><strong>Duration</strong> — <code class="language-plaintext highlighter-rouge">Specimen.processing.time[x]</code> as a <code class="language-plaintext highlighter-rouge">Period</code>. <code class="language-plaintext highlighter-rouge">Specimen.processing</code>
@@ -433,7 +426,8 @@ the European data model asks for when it notes that its candidate LOINC code
 and no new LOINC code is needed.</li>
   <li><strong>Temperature</strong> — the extension <code class="language-plaintext highlighter-rouge">MII_EX_Biobank_Temperaturbedingungen</code>, whose
 context is <code class="language-plaintext highlighter-rouge">Specimen.processing</code> and whose value is a <code class="language-plaintext highlighter-rouge">Range</code>. The right element
-and the right datatype for "35-37 degrees C".</li>
+and the right datatype for "35-37 degrees C", and optional since the base
+profile's <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code>.</li>
 </ul>
 
 <p>If no Specimen resource is produced (ballot question 1), <code class="language-plaintext highlighter-rouge">Specimen.processing</code> is
@@ -465,8 +459,8 @@ does not represent incubation until the answer is in.</p>
 
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
-          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot.rc1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Sat, Sep 12, 2026 20:31+0000">2026-09-12</span>
+          Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated <span title="Mon, Sep 14, 2026 10:59+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

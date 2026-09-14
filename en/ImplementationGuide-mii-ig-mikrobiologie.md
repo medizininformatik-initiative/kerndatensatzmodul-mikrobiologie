@@ -1,4 +1,4 @@
-# MII ImplementationGuide Resource - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII ImplementationGuide Resource - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * **MII ImplementationGuide Resource**
@@ -124,7 +124,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     },
     {
       "url" : "version",
-      "valueString" : "2027.0.0-ballot.rc1"
+      "valueString" : "2027.0.0-ballot"
     },
     {
       "url" : "uri",
@@ -242,12 +242,12 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie",
-  "version" : "2027.0.0-ballot.rc1",
+  "version" : "2027.0.0-ballot",
   "name" : "MII_IG_Mikrobiologie",
   "title" : "MII Implementation Guide Microbiology",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-12T20:31:09+00:00",
+  "date" : "2026-09-14",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -284,7 +284,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     "id" : "de_medizininformatikinitiative_kerndatensatz_laborbefund",
     "uri" : "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.laborbefund",
-    "version" : "2027.0.0-ballot.rc4"
+    "version" : "2027.0.0-ballot"
   },
   {
     "id" : "hl7_fhir_uv_crmi",
@@ -318,9 +318,9 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
   },
   {
     "id" : "de_medizininformatikinitiative_kerndatensatz_biobank",
-    "uri" : "http://fhir.org/packages/de.medizininformatikinitiative.kerndatensatz.biobank/ImplementationGuide/de.medizininformatikinitiative.kerndatensatz.biobank",
+    "uri" : "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ImplementationGuide/mii-ig-biobank",
     "packageId" : "de.medizininformatikinitiative.kerndatensatz.biobank",
-    "version" : "2027.0.0-ballot.rc2"
+    "version" : "2027.0.0-ballot"
   }],
   "definition" : {
     "extension" : [{

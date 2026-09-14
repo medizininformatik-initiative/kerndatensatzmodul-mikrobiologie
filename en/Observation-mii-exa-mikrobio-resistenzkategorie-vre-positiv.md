@@ -1,4 +1,4 @@
-# MII EXA Mikrobio Resistenzkategorie VRE positiv - MII Implementation Guide Microbiology v2027.0.0-ballot.rc1
+# MII EXA Mikrobio Resistenzkategorie VRE positiv - MII Implementation Guide Microbiology v2027.0.0-ballot
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
