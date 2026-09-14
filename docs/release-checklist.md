@@ -13,42 +13,39 @@ entry names the condition, how to check it, and what to do if it has changed.
 
 ## Open items
 
-### Biobank `temperaturbedingungen` cardinality
+### Biobank `temperaturbedingungen` cardinality — RESOLVED 2026-09-14
 
-- **Condition we relied on:** `MII_EX_Biobank_Temperaturbedingungen` is `1..1` on
+- **Condition we relied on:** `MII_EX_Biobank_Temperaturbedingungen` was `1..1` on
   `Specimen.processing` in `de.medizininformatikinitiative.kerndatensatz.biobank`
   `2027.0.0-ballot.rc2`. Because a derived profile can only narrow, the mandatory
-  extension is inherited by `MII_PR_Mikrobio_Probe` and makes
+  extension was inherited by `MII_PR_Mikrobio_Probe` and made
   `Specimen.processing` unusable for microbiological processing.
-- **What changed:** the biobank module intends to set it to `0..1` in its ballot
-  release.
-- **How to check:**
+- **What happened:** the biobank module relaxed it in `2027.0.0-ballot`. Measured
+  against the registry tarballs of both versions on 2026-09-14:
 
-  ```bash
-  # replace <version> with the biobank version pinned in sushi-config.yaml
-  python3 - <<'EOF'
-  import json, os, glob
-  base = os.path.expanduser('~/.fhir/packages/'
-      'de.medizininformatikinitiative.kerndatensatz.biobank#<version>/package/')
-  d = json.load(open(base + 'StructureDefinition-mii-pr-biobank-specimen-core.json'))
-  for e in d['differential']['element']:
-      if 'temperatur' in e['id'].lower():
-          print(e['id'], f"{e.get('min')}..{e.get('max')}")
-  EOF
-  ```
+  | Element | rc2 | ballot |
+  |---|---|---|
+  | `Specimen.processing.extension` | `1..*` | unconstrained |
+  | `Specimen.processing.extension:temperaturbedingungen` | `1..1` | `0..1` |
+  | `Specimen.processing:lagerprozess.extension` | unconstrained | `1..*` |
+  | `…lagerprozess.extension:temperaturbedingungen` | `1..1` | `0..1` |
 
-- **If it is `0..1`:** three things follow, and all three must be done together.
-  1. Ballot question 3 is resolved — remove the box from `probe.md` and from the
-     `mii-pr-mikrobio-probe` intro, in both languages, and drop entry 3 from the
-     list on `index.md`.
-  2. `Specimen.processing` becomes usable. Re-open ballot questions 2 and 4: the
-     `Specimen.processing` route for the staining technique and for incubation is
-     then blocked only by ballot question 1 (whether a Specimen resource exists at
-     all), not by the inherited requirement.
-  3. Drop the sentence about mandatory temperature conditions from the `processing`
-     `^comment` in `MII_PR_Mikrobio_Probe.fsh`, from the method comment in
-     `MII_PR_Mikrobio_Allgemeine_Mikroskopie.fsh`, and from the incubation TODO in
-     `MII_PR_Mikrobio_Allgemeine_Kultur.fsh`.
+- **What was done:** the pin moved to `2027.0.0-ballot`; the ballot question was
+  removed from `probe.md` and from the `mii-pr-mikrobio-probe` intro in both
+  languages, its entry dropped from `index.md`, and the remaining questions
+  renumbered so the list runs 1 to 6 without a gap. The temperature sentences
+  were removed from the `processing` `^comment` and the TODO block in
+  `MII_PR_Mikrobio_Probe.fsh` and from the rationale in
+  `MII_EX_Mikrobio_Faerbung.fsh`. The one genuine error in the build — "the slice
+  definition for `Specimen.processing:lagerprozess.extension` has a minimum of 0
+  but the slices add up to a minimum of 1" — disappeared with the bump.
+- **What is now open instead:** the `Specimen.processing` route for the staining
+  technique and for incubation is blocked only by ballot question 1, whether a
+  Specimen resource exists at all. If the ballot answers that it does, both
+  decisions should be revisited: the stain could move to
+  `Specimen.processing.procedure` without recoding, since
+  `MII_EX_Mikrobio_Faerbung` already binds the coordination's own value set, and
+  incubation could be represented per ballot question 3.
 
 ### Ballot question 1 — availability of a Specimen resource
 
@@ -59,7 +56,7 @@ entry names the condition, how to check it, and what to do if it has changed.
   state on `probe.md` that pre-coordinated LOINC codes then carry the material.
   This affects all investigation profiles at once.
 
-### Ballot question 7 — the result of a targeted culture
+### Ballot question 6 — the result of a targeted culture
 
 - **Condition we rely on:** a targeted culture reports `Detected` / `Not detected`
   like any other targeted detection, and the growth codes `365698005` /
@@ -67,7 +64,7 @@ entry names the condition, how to check it, and what to do if it has changed.
   detection whatever the technique.
 - **Why it matters:** the HL7 EU Lab Semantic Workgroup keeps targeted culture
   separate and binds growth codes there, so this is a deliberate deviation, stated
-  as ballot question 7 rather than resolved silently. If sites need the growth
+  as ballot question 6 rather than resolved silently. If sites need the growth
   vocabulary, the binding has to come back — and with it, possibly, a second
   profile.
 - **Why it was decided this way:** the culture is already stated by the test code,

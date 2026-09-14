@@ -18,7 +18,7 @@ Description: "Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbas
 // 258066000 bleibt fuer Verfahren ohne Sonde die richtige Angabe. Die Frage des
 // Workbooks, ob es solche noch gibt, ist keine, die dieses Modul entscheidet.
 // Kulturell: am 2026-09-11 hierher zurueckgeholt, siehe den Kommentar im
-// Tests-ValueSet und Ballotfrage 7.
+// Tests-ValueSet und Ballotfrage 6.
 * $sct#703752003 "Organism specific culture"
 * $sct#702675006 "Probe with target amplification technique (qualifier value)"
 * $sct#258066000 "Polymerase chain reaction technique (qualifier value)"
@@ -35,7 +35,7 @@ Description: "Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbas
 // Antwort dieses Moduls seit dem 2026-09-11: Er ist hier erlaubt. Ein kulturell
 // durchgefuehrter zielgerichteter Nachweis antwortet mit Detected oder
 // Not detected wie jeder andere; die Kultur steht im Untersuchungscode. Siehe
-// Ballotfrage 7 im Intro des Profils.
+// Ballotfrage 6 im Intro des Profils.
 
 // Aus dem Methodenblock des Blattes "Molecular techniques", der fuer den
 // gezielten wie den allgemeinen Nachweis gilt.

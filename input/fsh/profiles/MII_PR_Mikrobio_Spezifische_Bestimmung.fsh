@@ -30,7 +30,7 @@
 //
 // Die HL7 EU Lab Semantic Workgroup fuehrt die zielgerichtete Kultur getrennt
 // und bindet dort Wachstum. Diese Abweichung ist NICHT verschwiegen: Sie steht
-// als Ballotfrage 7 im Intro dieses Profils. Die allgemeine Kultur bleibt
+// als Ballotfrage 6 im Intro dieses Profils. Die allgemeine Kultur bleibt
 // unberuehrt — dort IST Wachstum die Antwort auf die Frage "waechst etwas?".
 Profile: MII_PR_Mikrobio_Spezifische_Bestimmung
 Parent: MII_PR_Labor_Laboruntersuchung
@@ -44,5 +44,5 @@ Description: "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines 
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED (extensible)
-* valueCodeableConcept ^short = "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 7). Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet."
+* valueCodeableConcept ^short = "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 6). Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet."
 * method from MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED (extensible)

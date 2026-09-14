@@ -30,7 +30,7 @@
 // OFFEN bleibt die Implementierbarkeit, nicht die Modellierung: Wenn Labore
 // keine Specimen-Ressource erzeugen (Ballotfrage 1), ist Specimen.processing
 // unerreichbar, und dann bleibt nur eine Extension auf Observation.method.
-// Deshalb steht die Frage als Ballotfrage 4 im Leitfaden und wird der
+// Deshalb steht die Frage als Ballotfrage 3 im Leitfaden und wird der
 // europäischen Gruppe gespiegelt.
 //
 // Bis zur Antwort wird die Bebrütung nicht abgebildet.
