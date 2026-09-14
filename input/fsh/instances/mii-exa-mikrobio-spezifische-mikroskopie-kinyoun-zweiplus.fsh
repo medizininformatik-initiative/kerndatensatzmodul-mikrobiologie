@@ -19,6 +19,7 @@ Description: "Kinyounfärbung mit Nachweis säurefester Stäbchen, in der Stufe 
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $sct#260373001 "Detected (qualifier value)"
+* component[menge].code = $sct#103392008 "Semi-quantitative value"
 * component[menge].valueCodeableConcept = $sct#441517005 "Present two plus out of three plus"
 * extension[faerbung].valueCodeableConcept = $sct#36878004 "Acid fast Kinyoun's cold carbolfuchsin stain method"
 * specimen = Reference(mii-exa-mikrobio-probe)

@@ -23,5 +23,6 @@ Description: "Grampräparat mit wenig grampositiven Kokken: die Morphologie als 
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $sct#70003006 "Gram-positive cocci in clusters (finding)"
+* component[menge].code = $sct#103392008 "Semi-quantitative value"
 * component[menge].valueCodeableConcept = $sct#57176003 "Few"
 * specimen = Reference(mii-exa-mikrobio-probe)
