@@ -42,7 +42,7 @@ Kodierung für semi-quantitative Laborergebnisse
   "title" : "MII VS Labor Laborergebnis Semiquantitativ",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T16:08:05+00:00",
+  "date" : "2026-09-14T16:39:15+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
