@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC
 Id: mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc
 Title: "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]"
-Description: "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist."
+Description: "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

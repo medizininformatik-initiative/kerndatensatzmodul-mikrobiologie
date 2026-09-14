@@ -22,6 +22,7 @@ Description: "Leukozyten im Grampräparat nachgewiesen, mit der Menge als Zählu
 * performer = Reference(mii-exa-mikrobio-labor)
 * effectiveDateTime = "2026-04-02T10:00:00+01:00"
 * valueCodeableConcept = $sct#260373001 "Detected (qualifier value)"
+* component[menge].code = $sct#103392008 "Semi-quantitative value"
 * component[menge].valueRange.low.value = 10
 * component[menge].valueRange.low.unit = "je Gesichtsfeld"
 * component[menge].valueRange.low.system = "http://unitsofmeasure.org"

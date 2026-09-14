@@ -93,6 +93,7 @@
 [MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM]: ValueSet-mii-vs-mikrobio-keimzahl-einheiten-ucum.html
 [MII_VS_Mikrobio_Keimzahl_LOINC]: ValueSet-mii-vs-mikrobio-keimzahl-loinc.html
 [MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED]: ValueSet-mii-vs-mikrobio-kultur-ergebnis-snomed.html
+[MII_VS_Mikrobio_Mikroskopie_Gesichtsfeld_Einheiten_UCUM]: ValueSet-mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum.html
 [MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED]: ValueSet-mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed.html
 [MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM]: ValueSet-mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum.html
 [MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.html

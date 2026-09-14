@@ -85,5 +85,7 @@ wie empfindlich er ist, und gehört zu den Bestimmungs- oder Kulturprofilen.
 
 `interpretation` ist nicht auf die Empfindlichkeit beschränkt. Die Keimzahl trägt
 eine semiquantitative Einordnung des Messwerts, die Aviditätsbestimmung trägt
-niedrig, intermediär oder hoch. Das Muster ist jedes Mal dasselbe: der Wert
-bleibt gemessen, die Bewertung bleibt getrennt.
+niedrig, grenzwertig oder hoch — `L` und `H` aus der Liste, die der Parent
+bindet, und für die Mitte derselbe SNOMED-Code, den dieser Leitfaden auch sonst
+für einen grenzwertigen Befund verwendet. Das Muster ist jedes Mal dasselbe: der
+Wert bleibt gemessen, die Bewertung bleibt getrennt.
