@@ -9,6 +9,6 @@ Description: "Ergebnis-ValueSet für den Bartlett-Score: Punktkategorien von +3 
 * $loinc#LA21392-8 "+3 Active inflammation"
 * $loinc#LA21391-0 "+2 Active inflammation"
 * $loinc#LA21390-2 "+1 Active inflammation"
-* $loinc#LA21389-4 "0 Lack of inflammation and possible contamination with saliva"
+* $loinc#LA21389-4 "0  Lack of inflammation and possible contamination with saliva"
 * $loinc#LA21388-6 "-1 Lack of inflammation and possible contamination with saliva"
 * $loinc#LA21387-8 "-2 Lack of inflammation and possible contamination with saliva"
