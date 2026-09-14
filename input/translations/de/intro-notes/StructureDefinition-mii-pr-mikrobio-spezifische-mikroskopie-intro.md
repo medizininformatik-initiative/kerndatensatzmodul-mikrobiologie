@@ -50,7 +50,7 @@ davon berichtet: die semiquantitative Stufe, eine Zählung je Gesichtsfeld als
 `Quantity` und eine solche Zählung als Intervall in einer `Range`. Code und
 Antwortliste teilt sie mit der
 [Allgemeinen Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html),
-wo [Ballotfrage 5](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5)
+wo [Ballotfrage 4](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-4)
 fragt, ob Standorte sie verarbeiten können.
 
 Die Stufen stammen aus dem realen Ergebniskatalog eines deutschen Labors und

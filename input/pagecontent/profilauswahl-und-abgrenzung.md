@@ -159,10 +159,10 @@ conformant data that exists today. The one place it is enforced is where the
 statement is otherwise ambiguous: General culture with the method-neutral code
 `41852-5`.
 
-<a id="ballot-question-6"></a>
+<a id="ballot-question-5"></a>
 
 {:.bg-warning}
-**Ballot question 6 — can you supply `Observation.method` for every result?**
+**Ballot question 5 — can you supply `Observation.method` for every result?**
 The HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends
 it. Would making it mandatory be deliverable at your site?
 

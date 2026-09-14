@@ -2,9 +2,9 @@
 
 ### Übersicht
 
-Aktueller Ballot-Kandidat: **2027.0.0-ballot.rc1**
+Aktuelles Ballot-Release: **2027.0.0-ballot**
 
-Gerenderter Leitfaden, aktueller Build (Stand main, aus dem der Kandidat gebaut wird):
+Gerenderter Leitfaden, aktueller Build (Stand main, aus dem das Release gebaut wird):
 https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/
 
 Gerenderter Leitfaden, Build des Kandidatenbranches `v2027.0.0-ballot.rc1` — enthält
@@ -19,7 +19,7 @@ Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Erweiterungsmoduls
 
 Aktuelle stabile Version: [2025.0.2](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2025.0.2)
 
-Aktueller Ballot-Kandidat: 2027.0.0-ballot.rc1 — [aktueller Build](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/), [Build des Kandidatenbranches](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/branches/v2027.0.0-ballot.rc1/). Simplifier-Paket und GitHub-Release folgen mit dem Tag `v2027.0.0-ballot.rc1`; veröffentlicht ist bislang [2027.0.0-alpha.5](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2027.0.0-alpha.5). Im Zuge eines Harmonisierungsprozesses zwischen RKI, MIO42 und MII wurde das mikrobiologische Datenmodell grundlegend überarbeitet und die Abstimmung auf den europäischen Kontext (EHDS) ausgeweitet. Ein offiziell ballotiertes Release ist für Ende des Jahres geplant.
+Aktuelles Ballot-Release: 2027.0.0-ballot — [aktueller Build](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/), [Build des Kandidatenbranches](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/branches/v2027.0.0-ballot.rc1/). Simplifier-Paket und GitHub-Release folgen mit dem Tag `v2027.0.0-ballot`; veröffentlicht ist bislang [2027.0.0-alpha.5](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2027.0.0-alpha.5). Im Zuge eines Harmonisierungsprozesses zwischen RKI, MIO42 und MII wurde das mikrobiologische Datenmodell grundlegend überarbeitet und die Abstimmung auf den europäischen Kontext (EHDS) ausgeweitet. Ein offiziell ballotiertes Release ist für Ende des Jahres geplant.
 <!-- Reifegrad: -->
 
 Alle veröffentlichten FHIR-Artefakte innerhalb des Projektes verfügen über einen Status, durch welchen der jeweilige Reifegrad abgeleitet werden kann.

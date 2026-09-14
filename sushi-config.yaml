@@ -103,7 +103,7 @@ description: "Core Dataset extension module Microbiology of the Medical Informat
 status: active # draft | active | retired | unknown
 # MII modules use CalVer YYYY.n.n (e.g. 2026.0.1) per the MII Module Release
 # Workflow — NOT SemVer. Only the template tooling repos use SemVer.
-version: "2027.0.0-ballot.rc1"
+version: "2027.0.0-ballot"
 # packageId pattern per the MII naming convention:
 # de.medizininformatikinitiative.kerndatensatz.<slug> (for example,
 # kerndatensatz-basis uses de.medizininformatikinitiative.kerndatensatz.base).
@@ -138,7 +138,7 @@ license: CC-BY-4.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # invented (guardrail 3). The property is omitted rather than filled with a
 # placeholder date. Set it at Gate D, when the publication date is known;
 # go-publish.yml requires it to equal that date.
-# date: "YYYY-MM-DD"   # ① OPEN — set before publication
+date: "2026-09-14"   # Freeze-Datum des Ballot-Kandidaten, identisch mit approvalDate und lastReviewDate
 jurisdiction: urn:iso:std:iso:3166#DE "Germany" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 # NUM-DIZ takes over IG development and maintenance when MII funding ends
 # (end-2026), so NUM-DIZ is the publisher shown in the footer's
@@ -193,7 +193,7 @@ extension:
       - url: packageId
         valueId: de.medizininformatikinitiative.kerndatensatz.mikrobiologie
       - url: version
-        valueString: "2027.0.0-ballot.rc1"
+        valueString: "2027.0.0-ballot"
       - url: uri
         valueUri: https://www.medizininformatik-initiative.de/fhir/modul-mikrobio
   # Year this release sequence became effective
@@ -358,9 +358,20 @@ dependencies:
   # Der Wert ist die Canonical aus der sushi-config.yaml des Labormoduls, um
   # /ImplementationGuide/<ig-id> ergaenzt -- genau die Form, die SUSHI selbst
   # erzeugt, wenn das Manifest vollstaendig ist.
+  #
+  # 2026-09-14: von rc4 auf das finale 2027.0.0-ballot gehoben. Gemessen an den
+  # Registry-Tarballs beider Versionen: die Differentials von
+  # mii-pr-labor-laboruntersuchung und mii-pr-labor-laborbefund sind IDENTISCH
+  # (0 Diffzeilen), die Canonicals ObservationLab und DiagnosticReportLab
+  # unveraendert. Geaendert hat sich nur der eigene Pin des Labormoduls auf
+  # kerndatensatz.meta (rc3 -> 2027.0.0-ballot); IPS 2.0.1, CRMI 2.0.0,
+  # extensions.r4 5.2.0 und THO 7.1.0 sind dieselben wie hier.
+  #
+  # Das Manifest fuehrt WEITERHIN kein `canonical`-Feld (am 2026-09-14 am
+  # Tarball nachgemessen) — der uri-Pin unten bleibt also noetig.
   de.medizininformatikinitiative.kerndatensatz.laborbefund:
     uri: https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ImplementationGuide/mii-ig-labor
-    version: 2027.0.0-ballot.rc4
+    version: 2027.0.0-ballot
   # ---- added by the migration: TEMPLATE MACHINERY, not source identity ----
   # Required by the CRMI profiles this IG now claims under meta.profile above.
   # Without it the three crmi-*implementationguide claims cannot resolve.
@@ -400,7 +411,26 @@ dependencies:
   # Registry-`latest` 2026.0.1, weil sie zum Ballot-Zyklus dieses Moduls und zu
   # laborbefund rc4 passt; sie bringt hl7.fhir.eu.laboratory 2.0.0 und
   # hl7.terminology.r4 7.1.0 mit, letzteres in derselben Version wie oben.
-  de.medizininformatikinitiative.kerndatensatz.biobank: 2027.0.0-ballot.rc2
+  #
+  # 2026-09-14: von rc2 auf das finale 2027.0.0-ballot gehoben. Der Sprung LOCKERT
+  # genau die Stelle, die dieses Modul als Ballotfrage 3 aufgeworfen hat —
+  # gemessen an den Tarballs beider Versionen:
+  #
+  #   Specimen.processing.extension                       1..*  ->  frei
+  #   Specimen.processing.extension:temperaturbedingungen  1..1  ->  0..1
+  #   Specimen.processing:lagerprozess.extension          frei  ->  1..*
+  #   …lagerprozess.extension:temperaturbedingungen        1..1  ->  0..1
+  #
+  # Die Pflicht-Lagertemperatur unter jedem processing-Element ist damit
+  # entfallen. Das Manifest fuehrt jetzt auch ein `canonical`-Feld
+  # (https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank), das rc2
+  # fehlte; ein uri-Pin ist hier also nicht noetig.
+  #
+  # Transitiv bringt der Ballot eu.miabis.r4 1.3.0 (rc2: 0.2.0) und
+  # extensions.r4 5.3.0 mit. Letzteres steht oben ausdruecklich auf 5.2.0, der
+  # Version des Labormoduls; der explizite Pin gewinnt, siehe die Begruendung
+  # dort.
+  de.medizininformatikinitiative.kerndatensatz.biobank: 2027.0.0-ballot
   # ---- template pins NOT adopted (① decide at Gate A) ----
   # Each would change what this already-published module resolves against.
   # de.basisprofil.r4: 1.5.4                      # source pins it only transitively, via modul-labor

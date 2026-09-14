@@ -44,26 +44,17 @@ folgende Elemente relevant:
     Specimen abgeleitet oder entnommen wurde, z. B. bei
     weiterverarbeiteten oder aus Primärproben gewonnenen Materialien.
 
-### `Specimen.processing`: Temperaturbedingungen und Färbung
+### `Specimen.processing`: Färbung
 
-<a id="ballot-question-3"></a>
+Bis `2027.0.0-ballot.rc2` verlangte das Bioproben-Basisprofil die Extension
+`temperaturbedingungen` an jedem `Specimen.processing`-Element — eine Pflicht aus
+der Lagerung von Bioproben, ohne Aussage für die Aufarbeitung im Labor, und eine,
+die ein abgeleitetes Profil nicht lockern konnte. Dieser Leitfaden hat sie als
+Ballotfrage aufgeworfen; das Basisprofil hat sie in seinem `2027.0.0-ballot`, von
+dem dieses Modul jetzt abhängt, auf `0..1` gelockert, und damit ist die Frage
+erledigt.
 
-{:.bg-warning}
-**Ballotfrage 3 — blockiert Sie die Pflicht-Lagertemperatur?**
-Das Basisprofil verlangt die Extension `temperaturbedingungen` an jedem
-`Specimen.processing`-Element, und ein abgeleitetes Profil darf nur verengen und
-nie lockern — dieses Modul kann die Pflicht also nicht auflösen.
-
-Sie stammt aus der Biobank, wo `Specimen.processing` den Lagerprozess einer
-Bioprobe beschreibt und die Temperatur zur Kernaussage gehört; sie gilt in
-`2026.0.1` wie in `2027.0.0-ballot.rc2`. In der Mikrobiologie beschreibt dasselbe
-Element die Aufarbeitung: Färbung, Anreicherung, Bebrütung, wo eine
-Lagertemperatur entweder unbekannt oder ohne Aussage ist. Wir halten sie in
-diesem Zusammenhang für fehlplatziert und bringen sie beim Biobank-Modul ein, mit
-dem Ziel, sie auf den Lagerprozess-Slice `processing:lagerprozess` zu
-begrenzen.
-
-Die Färbetechnik wird deshalb **nicht** unter
+Die Färbetechnik wird dennoch **nicht** unter
 `Specimen.processing.procedure` angegeben, wie die HL7 EU Lab Semantic Workgroup
 es vorschlägt, sondern in einer Extension an der Observation,
 [`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.html), mit
@@ -73,13 +64,14 @@ Ballotfrage 2 die Begründung enthält.
 
 ### Bebrütungsdauer und -temperatur
 
-<a id="ballot-question-4"></a>
+<a id="ballot-question-3"></a>
 
 {:.bg-warning}
-**Ballotfrage 4 — ist die Bebrütung über `Specimen.processing` darstellbar?**
+**Ballotfrage 3 — ist die Bebrütung über `Specimen.processing` darstellbar?**
 FHIR sieht sie dort vor und die MII hat die Bausteine, die Modellierung ist also
-geklärt; wir fragen, ob sie an Ihrem Standort umsetzbar ist. Die Elemente,
-gemessen an R4 Core und am Biobank-Modul am 2026-09-10:
+geklärt. Wir fragen, ob sie an Ihrem Standort umsetzbar ist.
+
+Die Elemente, gemessen an R4 Core und am Biobank-Modul am 2026-09-10:
 
 - **Dauer** — `Specimen.processing.time[x]` als `Period`. `Specimen.processing`
   hat kein eigenes `Duration`-Element (`Specimen.collection.duration` meint die
@@ -89,10 +81,10 @@ gemessen an R4 Core und am Biobank-Modul am 2026-09-10:
   erfüllt und kein neuer LOINC-Code nötig.
 - **Temperatur** — die Extension `MII_EX_Biobank_Temperaturbedingungen`, deren
   Context `Specimen.processing` ist und deren Wert ein `Range` ist. Das richtige
-  Element und der richtige Datentyp für „35–37 °C".
+  Element und der richtige Datentyp für „35–37 °C", und seit dem
+  `2027.0.0-ballot` des Basisprofils optional.
 
-**Wir erbitten Rückmeldung, ob das bei Ihnen implementierbar ist.** Die
-Modellierung ist geklärt, die Umsetzbarkeit nicht. Wird keine Specimen-Ressource
+Wird keine Specimen-Ressource
 erzeugt (Ballotfrage 1), ist `Specimen.processing` unerreichbar, und die
 Alternative wären Extensions auf `Observation.method`, die das Verfahren in der
 Ressource qualifizieren, die das Ergebnis berichtet. Dieses Modul bildet die

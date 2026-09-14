@@ -59,7 +59,7 @@ Components of Observations were moved into separate profiles in this version.
 | Publication |               |
 |-------------|---------------|
 | Date        | not yet published |
-| Version     | 2027.0.0-ballot.rc1 (CalVer `YYYY.n.n`) |
+| Version     | 2027.0.0-ballot (CalVer `YYYY.n.n`) |
 | Status      | active        |
 | Realm       | DE            |
 
@@ -74,19 +74,16 @@ belongs to.
 2. **[Where does the staining technique belong?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2)**
    — this module carries it in an extension and deviates from the European
    coordination, which places it on the Specimen.
-3. **[Does the mandatory storage temperature block you?](probe.html#ballot-question-3)**
-   — inherited from the biobank base profile, without meaning for microbiological
-   processing, and a derived profile cannot relax it.
-4. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.html#ballot-question-4)**
+3. **[Is incubation duration and temperature representable via `Specimen.processing`?](probe.html#ballot-question-3)**
    — FHIR and the MII provide the pieces; the question is whether sites can supply
    them.
-5. **[Can you process a component for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5)**
+4. **[Can you process a component for a semiquantitative amount?](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-4)**
    — the module follows the European coordination here, and the component
    reverses a decision of this release cycle.
-6. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.html#ballot-question-6)**
+5. **[Can you supply `Observation.method` for every result?](profilauswahl-und-abgrenzung.html#ballot-question-5)**
    — the HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends it, and your
    answer decides more than one question.
-7. **[Is `Detected` / `Not detected` enough for a targeted culture?](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html#ballot-question-7)**
+6. **[Is `Detected` / `Not detected` enough for a targeted culture?](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html#ballot-question-6)**
    — one profile now covers targeted detection whatever the technique; the
    European coordination binds growth codes for culture and this guide deviates.
 

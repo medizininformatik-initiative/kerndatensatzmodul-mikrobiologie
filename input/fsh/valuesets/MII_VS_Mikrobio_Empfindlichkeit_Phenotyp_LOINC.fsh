@@ -51,5 +51,5 @@ Description: "Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LO
 // Zeile 4). Die Fehlklassifikation ist an Regenstrief zu melden; bis dahin
 // aufgezaehlt, wie bei den Carbapenemase-Schnelltests in
 // MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC.
-* $loinc#106843-6 "Cefotaxime+Cloxacillin [Susceptibility] in Isolate by Broth dilution"
+* $loinc#106843-6 "Cefotaxime+Cloxacillin [Susceptibility] in Isolate by Disk diffusion (KB)"
 * $loinc#103673-0 "Isavuconazole [Susceptibility] in Isolate by Gradient strip"

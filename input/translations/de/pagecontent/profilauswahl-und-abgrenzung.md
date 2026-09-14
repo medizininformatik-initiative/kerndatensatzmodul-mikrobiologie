@@ -161,10 +161,10 @@ modulweite Pflicht würde heute konforme Daten ungültig machen. Erzwungen wird 
 an der einen Stelle, an der die Aussage sonst mehrdeutig ist: bei der Allgemeinen
 Kultur mit dem methodenneutralen Code `41852-5`.
 
-<a id="ballot-question-6"></a>
+<a id="ballot-question-5"></a>
 
 {:.bg-warning}
-**Ballotfrage 6 — können Sie zu jedem Befund `Observation.method` liefern?**
+**Ballotfrage 5 — können Sie zu jedem Befund `Observation.method` liefern?**
 Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt
 es nur. Wäre eine Pflicht an Ihrem Standort erfüllbar?
 

@@ -16,27 +16,22 @@
 // Bindung ist extensible, der Fall damit nur eine Warnung — an das Biobank-Modul
 // zu melden.
 //
-// TODO (2026-09-10): TEMPERATURBEDINGUNGEN — im Ballot zu kommentieren.
+// TEMPERATURBEDINGUNGEN — ERLEDIGT am 2026-09-14.
 //
-// Specimen.processing.extension:temperaturbedingungen ist im Parent 1..1, in
-// 2026.0.1 wie in 2027.0.0-ballot.rc2. Ein Profil darf nur verengen, wir koennen
-// die Pflicht also nicht loesen: Wer Specimen.processing benutzt, muss
-// Lagertemperaturbedingungen mitliefern.
+// Specimen.processing.extension:temperaturbedingungen war im Parent 1..1 (in
+// 2026.0.1 wie in 2027.0.0-ballot.rc2), und ein Profil darf nur verengen: Wer
+// Specimen.processing benutzte, musste Lagertemperaturbedingungen mitliefern,
+// obwohl die Pflicht aus der Lagerung von Bioproben stammt und fuer die
+// Aufarbeitung im Labor keine Aussage traegt. Das Modul hat die Frage als
+// Ballotfrage im Leitfaden gestellt.
 //
-// Fuer den mikrobiologischen Anwendungsfall ist das nicht relevant. Die Pflicht
-// stammt aus der Biobank, wo Specimen.processing den Lagerprozess einer
-// Bioprobe beschreibt und die Temperatur zur Kernangabe gehoert. In der
-// Mikrobiologie beschreibt derselbe Platz die Aufarbeitung — Faerbung,
-// Anreicherung, Bebruetung —, und dort ist die Lagertemperatur entweder
-// unbekannt oder ohne Aussage.
-//
-// Praktische Folge: Dieses Modul fuehrt die Faerbung in Observation.method und
-// nicht, wie das EU-Datenmodell vorschlaegt, in Specimen.processing.procedure.
-//
-// Zu klaeren mit dem Biobank-Modul, nicht mit der europaeischen Gruppe: ob die
-// Pflicht auf den Lagerprozess-Slice (processing:lagerprozess) begrenzt werden
-// kann, wo sie hingehoert, statt auf jedes processing-Element zu wirken. Bis
-// dahin steht die Frage als Ballotfrage 3 im Leitfaden.
+// Das Biobank-Modul hat sie in 2027.0.0-ballot geloest, an den Tarballs
+// nachgemessen: processing.extension:temperaturbedingungen ist 0..1,
+// processing.extension frei, und die Pflicht ist auf den Lagerprozess-Slice
+// gewandert (processing:lagerprozess.extension 1..*). Die Ballotfrage ist
+// deshalb gestrichen. Der Grund, weshalb dieses Modul die Faerbung dennoch in
+// einer Extension an der Observation fuehrt, ist allein die offene Frage, ob
+// ueberhaupt eine Specimen-Ressource entsteht — siehe MII_EX_Mikrobio_Faerbung.
 Profile: MII_PR_Mikrobio_Probe
 Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
 Id: mii-pr-mikrobio-probe
@@ -51,5 +46,5 @@ Description: "Probe beschreibt das mikrobiologisch untersuchte Material. Das Pro
 * ^purpose = "Dieses Profil gibt Observation.specimen der mikrobiologischen Untersuchungsprofile ein Zielprofil und benennt die fuer die Mikrobiologie tragenden Angaben."
 * type ^short = "Probenart. Auch dann anzugeben, wenn das Material im verwendeten LOINC-Code bereits praekoordiniert ist — nur so steht die Probenart strukturiert und unabhaengig vom Untersuchungscode zur Verfuegung."
 * collection.collected[x] ^short = "Entnahmezeitpunkt. Ist er nicht bekannt, kann stattdessen Specimen.receivedTime dokumentiert werden; der Parent verlangt collected[x] jedoch verpflichtend."
-* processing ^comment = "Der Parent verlangt hier verpflichtend die Extension 'temperaturbedingungen'. Diese Pflicht stammt aus der Beschreibung von Lagerprozessen in der Biobank und traegt fuer die mikrobiologische Aufarbeitung nicht; ein abgeleitetes Profil kann sie nicht loesen. Sie ist als Ballotfrage 3 offen und mit dem Biobank-Modul zu klaeren. Solange sie besteht, wird die Faerbetechnik nicht hier, sondern in Observation.method angegeben."
+* processing ^comment = "Bis 2027.0.0-ballot.rc2 verlangte der Parent hier verpflichtend die Extension 'temperaturbedingungen', eine Pflicht aus der Lagerung von Bioproben ohne Aussage fuer die mikrobiologische Aufarbeitung. Seit 2027.0.0-ballot ist sie 0..1 und auf den Lagerprozess-Slice begrenzt. Die Faerbetechnik wird trotzdem nicht hier, sondern in Observation.extension[faerbung] angegeben, solange offen ist, ob ueberhaupt eine Specimen-Ressource entsteht."
 * parent ^short = "Verweis auf das Material, aus dem diese Probe gewonnen wurde — etwa ein Isolat aus einer Primaerprobe. Traegt die Kette von der Primaerprobe zum Isolat, auf das sich Empfindlichkeitstestung und Resistenzmechanismen beziehen."

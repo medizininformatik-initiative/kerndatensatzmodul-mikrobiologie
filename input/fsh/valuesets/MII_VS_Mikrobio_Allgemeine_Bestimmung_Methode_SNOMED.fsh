@@ -7,7 +7,7 @@ Description: "Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasi
 * ^status = #active
 * $sct#278289002 "Microscopy technique (qualifier value)"
 * $sct#83581000052107 "Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)"
-* $sct#258083009 "Visual estimation technique (qualifier value)"
+* $sct#258083009 "Visual estimation (qualifier value)"
 // Aus dem Blatt "Molecular techniques", Block "Identification Procedure
 // (General sequencing)": Dieselbe Frage, dasselbe Ergebnis, anderes Verfahren —
 // das Blatt sagt es woertlich ("same value set as for Phenotypic

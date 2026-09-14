@@ -10,9 +10,11 @@
 // passt also typmaessig nicht nach Observation.method. Zugleich versteht die
 // Workgroup die Faerbung als Teil der Probenaufbereitung und legt sie nach
 // Specimen.processing.procedure — ein Weg, der hier nicht gangbar ist, weil er
-// eine Specimen-Ressource voraussetzt (Ballotfrage 1) und der Parent von
-// MII_PR_Mikrobio_Probe unter processing Lagertemperaturbedingungen
-// verpflichtend macht (Ballotfrage 3).
+// eine Specimen-Ressource voraussetzt, und ob die entsteht, ist offen
+// (Ballotfrage 1). Bis 2027.0.0-ballot.rc2 kam eine zweite Huerde hinzu: Der
+// Parent von MII_PR_Mikrobio_Probe machte unter processing
+// Lagertemperaturbedingungen verpflichtend. Das Biobank-Modul hat das in
+// 2027.0.0-ballot gelockert, die Huerde ist also weg — die erste bleibt.
 //
 // WARUM KEINE KOMPONENTE: component.value[x] ist ein ERGEBNIS der Untersuchung;
 // die Faerbung ist Metadatum des Verfahrens. Ausserdem gibt es keinen LOINC-Code

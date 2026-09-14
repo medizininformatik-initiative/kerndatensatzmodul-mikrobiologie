@@ -1,6 +1,6 @@
 // Negativer VRE-Nachweis, kulturell durchgefuehrt. Die Methode ist im LOINC-Code
 // enthalten (Organism specific culture); das Ergebnis ist trotzdem "Not detected" und
-// nicht "No growth", weil die Kultur schon im Code steht — siehe Ballotfrage 7 im Intro
+// nicht "No growth", weil die Kultur schon im Code steht — siehe Ballotfrage 6 im Intro
 // des Profils.
 Instance: mii-exa-mikrobio-spezifische-kultur-vre-negativ
 InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung

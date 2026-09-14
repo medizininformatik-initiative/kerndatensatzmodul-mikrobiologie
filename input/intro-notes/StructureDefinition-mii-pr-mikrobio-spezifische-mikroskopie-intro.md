@@ -47,7 +47,7 @@ analyte in two of them: the semiquantitative grade, a count per high power field
 as `Quantity`, and such a count as an interval in a `Range`. Its code and its
 value set are shared with [General
 microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html), where [ballot
-question 5](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-5)
+question 5](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-4)
 asks whether sites can process it.
 
 The grades come from a German laboratory's real result catalogue and span two
