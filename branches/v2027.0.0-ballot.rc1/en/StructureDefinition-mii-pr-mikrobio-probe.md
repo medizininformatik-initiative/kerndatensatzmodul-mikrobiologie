@@ -87,7 +87,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-p
   "title" : "MII PR Mikrobio Probe",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:37+00:00",
+  "date" : "2026-09-14T13:24:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

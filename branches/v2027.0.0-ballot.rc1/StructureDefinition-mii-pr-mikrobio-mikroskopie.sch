@@ -66,4 +66,16 @@
       <sch:assert test="count(f:code) &gt;= 1">code: minimum cardinality of 'code' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:Observation/f:component/f:value[x]/f:low 1</sch:title>
+    <sch:rule context="f:Observation/f:component/f:value[x]/f:low">
+      <sch:assert test="count(f:comparator) &lt;= 0">comparator: maximum cardinality of 'comparator' is 0</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:title>f:Observation/f:component/f:value[x]/f:high 1</sch:title>
+    <sch:rule context="f:Observation/f:component/f:value[x]/f:high">
+      <sch:assert test="count(f:comparator) &lt;= 0">comparator: maximum cardinality of 'comparator' is 0</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>

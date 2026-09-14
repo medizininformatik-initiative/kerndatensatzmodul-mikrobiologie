@@ -494,7 +494,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-mikroskopie</code></td>
       <td>content updated</td>
       <td><code class="language-plaintext highlighter-rouge">code</code> fixed to <code class="language-plaintext highlighter-rouge">105059-0</code>; no component; title "Mikroskopie"</td>
-      <td><code class="language-plaintext highlighter-rouge">code</code> from <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc</code> (extensible), which also admits <code class="language-plaintext highlighter-rouge">664-3</code>; new <code class="language-plaintext highlighter-rouge">component[menge]</code> for the amount, as a grade or as a count per high power field; the stain moves into <code class="language-plaintext highlighter-rouge">extension[faerbung]</code> and <code class="language-plaintext highlighter-rouge">method</code> keeps the microscopy technique; title "Allgemeine Mikroskopie"</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> from <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc</code> (extensible), which also admits <code class="language-plaintext highlighter-rouge">664-3</code>; new <code class="language-plaintext highlighter-rouge">component[menge]</code> for the amount, as a grade or as a count per high power field, its code a pattern of system and code alone and its units bound; the stain moves into <code class="language-plaintext highlighter-rouge">extension[faerbung]</code> and <code class="language-plaintext highlighter-rouge">method</code> keeps the microscopy technique; title "Allgemeine Mikroskopie"</td>
       <td>The fixed code is no longer enforced; a morphology and its amount can be sent together</td>
       <td><code class="language-plaintext highlighter-rouge">105059-0</code> remains preferred. Move stain codes out of <code class="language-plaintext highlighter-rouge">Observation.method</code> into <code class="language-plaintext highlighter-rouge">extension[faerbung]</code>, taking the procedure code instead of the qualifier value - <code class="language-plaintext highlighter-rouge">62777006</code> for <code class="language-plaintext highlighter-rouge">708061008</code></td>
     </tr>
@@ -698,6 +698,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Seven grades on two SNOMED axes: presence findings <code class="language-plaintext highlighter-rouge">441614007</code>, <code class="language-plaintext highlighter-rouge">441517005</code>, <code class="language-plaintext highlighter-rouge">441521003</code> and the degree descriptors <code class="language-plaintext highlighter-rouge">Few</code>, <code class="language-plaintext highlighter-rouge">Moderate number</code>, <code class="language-plaintext highlighter-rouge">Numerous</code>, <code class="language-plaintext highlighter-rouge">Scanty</code></td>
       <td>Amount value set of the component in both microscopy profiles</td>
       <td>The two axes are not interchangeable; which family the European model prefers is still open. Presence codes are not in it: <code class="language-plaintext highlighter-rouge">Present</code>, <code class="language-plaintext highlighter-rouge">Absent</code>, <code class="language-plaintext highlighter-rouge">None</code> and <code class="language-plaintext highlighter-rouge">No organisms seen</code> answer the detection question and belong in <code class="language-plaintext highlighter-rouge">value[x]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum</code></td>
+      <td>new</td>
+      <td>the counted form of the amount had no unit constraint at all</td>
+      <td><code class="language-plaintext highlighter-rouge">/[HPF]</code> and <code class="language-plaintext highlighter-rouge">/[LPF]</code>, extensible, bound on the amount component's <code class="language-plaintext highlighter-rouge">valueQuantity.code</code> and on both <code class="language-plaintext highlighter-rouge">valueRange</code> bounds</td>
+      <td>A count per field is constrained to the field-of-view units, as every other quantitative statement of this module is</td>
+      <td>Both codes validate against UCUM; the binding is extensible, so a further unit stays possible</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-empfindlichkeit-methode-snomed</code></td>
@@ -2123,7 +2131,7 @@ The <code class="language-plaintext highlighter-rouge">category</code> represent
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Mon, Sep 14, 2026 12:58+0000">2026-09-14</span>
+          Generated <span title="Mon, Sep 14, 2026 13:24+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

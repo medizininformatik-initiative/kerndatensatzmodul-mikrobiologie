@@ -43,7 +43,7 @@ Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in der ein mikrosko
   "title" : "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:37+00:00",
+  "date" : "2026-09-14T13:24:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

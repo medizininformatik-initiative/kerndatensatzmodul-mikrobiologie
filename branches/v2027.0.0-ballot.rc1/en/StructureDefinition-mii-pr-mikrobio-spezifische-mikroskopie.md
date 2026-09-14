@@ -209,7 +209,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T12:58:37+00:00",
+  "date" : "2026-09-14T13:24:58+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -392,9 +392,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "patternCodeableConcept" : {
         "coding" : [{
           "system" : "http://snomed.info/sct",
-          "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
-          "code" : "103392008",
-          "display" : "Semi-quantitative value"
+          "code" : "103392008"
         }]
       }
     },
@@ -446,6 +444,14 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       }]
     },
     {
+      "id" : "Observation.component:menge.value[x]:valueQuantity.code",
+      "path" : "Observation.component.value[x].code",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum"
+      }
+    },
+    {
       "id" : "Observation.component:menge.value[x]:valueRange",
       "path" : "Observation.component.value[x]",
       "sliceName" : "valueRange",
@@ -455,6 +461,22 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "type" : [{
         "code" : "Range"
       }]
+    },
+    {
+      "id" : "Observation.component:menge.value[x]:valueRange.low.code",
+      "path" : "Observation.component.value[x].low.code",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum"
+      }
+    },
+    {
+      "id" : "Observation.component:menge.value[x]:valueRange.high.code",
+      "path" : "Observation.component.value[x].high.code",
+      "binding" : {
+        "strength" : "extensible",
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum"
+      }
     }]
   }
 }

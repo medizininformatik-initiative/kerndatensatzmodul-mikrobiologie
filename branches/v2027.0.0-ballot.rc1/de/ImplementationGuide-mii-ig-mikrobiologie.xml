@@ -2075,6 +2075,17 @@
         <valueString value="ValueSet"/>
       </extension>
       <reference>
+        <reference value="ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum"/>
+      </reference>
+      <name value="MII VS Mikrobio Mikroskopie Gesichtsfeld Einheiten [UCUM]"/>
+      <description value="Einheiten für die Zählung je Gesichtsfeld in der Mengenkomponente der Mikroskopie."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
         <reference value="ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"/>
       </reference>
       <name value="MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]"/>
@@ -2243,7 +2254,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]"/>
-      <description value="Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist."/>
+      <description value="Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

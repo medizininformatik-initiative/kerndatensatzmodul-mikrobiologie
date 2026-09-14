@@ -466,7 +466,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td><code class="language-plaintext highlighter-rouge">mii-pr-mikrobio-mikroskopie</code></td>
       <td>inhaltlich aktualisiert</td>
       <td><code class="language-plaintext highlighter-rouge">code</code> fest auf <code class="language-plaintext highlighter-rouge">105059-0</code>; keine Komponente; Titel „Mikroskopie"</td>
-      <td><code class="language-plaintext highlighter-rouge">code</code> aus <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc</code> (extensible), das auch <code class="language-plaintext highlighter-rouge">664-3</code> zulässt; neue <code class="language-plaintext highlighter-rouge">component[menge]</code> für die Menge, als Stufe oder als Zählung je Gesichtsfeld; die Färbung wandert in <code class="language-plaintext highlighter-rouge">extension[faerbung]</code>, <code class="language-plaintext highlighter-rouge">method</code> trägt nur noch das Mikroskopieverfahren; Titel „Allgemeine Mikroskopie"</td>
+      <td><code class="language-plaintext highlighter-rouge">code</code> aus <code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc</code> (extensible), das auch <code class="language-plaintext highlighter-rouge">664-3</code> zulässt; neue <code class="language-plaintext highlighter-rouge">component[menge]</code> für die Menge, als Stufe oder als Zählung je Gesichtsfeld, ihr Code ein Pattern aus System und Code allein und ihre Einheiten gebunden; die Färbung wandert in <code class="language-plaintext highlighter-rouge">extension[faerbung]</code>, <code class="language-plaintext highlighter-rouge">method</code> trägt nur noch das Mikroskopieverfahren; Titel „Allgemeine Mikroskopie"</td>
       <td>Der feste Code wird nicht mehr erzwungen; Morphologie und Menge lassen sich zusammen senden</td>
       <td><code class="language-plaintext highlighter-rouge">105059-0</code> bleibt bevorzugt. Färbecodes aus <code class="language-plaintext highlighter-rouge">Observation.method</code> nach <code class="language-plaintext highlighter-rouge">extension[faerbung]</code> umstellen und dabei den Prozedurcode statt des Qualifier Values nehmen — <code class="language-plaintext highlighter-rouge">62777006</code> für <code class="language-plaintext highlighter-rouge">708061008</code></td>
     </tr>
@@ -670,6 +670,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <td>Sieben Stufen auf zwei SNOMED-Achsen: Präsenzbefunde <code class="language-plaintext highlighter-rouge">441614007</code>, <code class="language-plaintext highlighter-rouge">441517005</code>, <code class="language-plaintext highlighter-rouge">441521003</code> und die Grad-Deskriptoren <code class="language-plaintext highlighter-rouge">Few</code>, <code class="language-plaintext highlighter-rouge">Moderate number</code>, <code class="language-plaintext highlighter-rouge">Numerous</code>, <code class="language-plaintext highlighter-rouge">Scanty</code></td>
       <td>Mengen-ValueSet der Komponente in beiden Mikroskopieprofilen</td>
       <td>Die beiden Achsen sind nicht austauschbar; welche Familie das europäische Modell bevorzugt, ist noch offen. Präsenzcodes stehen nicht darin: <code class="language-plaintext highlighter-rouge">Present</code>, <code class="language-plaintext highlighter-rouge">Absent</code>, <code class="language-plaintext highlighter-rouge">None</code> und <code class="language-plaintext highlighter-rouge">No organisms seen</code> beantworten die Nachweisfrage und gehören in <code class="language-plaintext highlighter-rouge">value[x]</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum</code></td>
+      <td>neu</td>
+      <td>die gezählte Form der Menge hatte gar keine Einheitenbindung</td>
+      <td><code class="language-plaintext highlighter-rouge">/[HPF]</code> und <code class="language-plaintext highlighter-rouge">/[LPF]</code>, extensible, gebunden an <code class="language-plaintext highlighter-rouge">valueQuantity.code</code> der Mengenkomponente und an beide Grenzen des <code class="language-plaintext highlighter-rouge">valueRange</code></td>
+      <td>Eine Zählung je Gesichtsfeld ist auf die Gesichtsfeld-Einheiten beschränkt, wie jede andere quantitative Aussage dieses Moduls</td>
+      <td>Beide Codes sind gegen UCUM gültig; die Bindung ist extensible, eine weitere Einheit bleibt also möglich</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">mii-vs-mikrobio-empfindlichkeit-methode-snomed</code></td>
@@ -2047,7 +2055,7 @@ Die <code class="language-plaintext highlighter-rouge">category</code>-Abbildung
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Mon, Sep 14, 2026 12:58+0000">2026-09-14</span>
+          Erstellt <span title="Mon, Sep 14, 2026 13:24+0000">2026-09-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.
