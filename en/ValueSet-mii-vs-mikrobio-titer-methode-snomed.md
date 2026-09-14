@@ -42,7 +42,7 @@ Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreih
   "title" : "MII VS Mikrobio Titer Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T14:30:50+00:00",
+  "date" : "2026-09-14T14:45:51+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

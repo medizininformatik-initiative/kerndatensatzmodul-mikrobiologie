@@ -83,7 +83,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-ex-mikro
   "title" : "MII EX Mikrobio Färbung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T14:30:50+00:00",
+  "date" : "2026-09-14T14:45:51+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
