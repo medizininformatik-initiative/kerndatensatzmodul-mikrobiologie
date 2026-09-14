@@ -3,6 +3,14 @@
   "id": "mii-pr-mikrobio-probe",
   "extension": [
     {
+      "url": "http://hl7.org/fhir/StructureDefinition/artifact-versionAlgorithm",
+      "valueCoding": {
+        "system": "http://hl7.org/fhir/version-algorithm",
+        "code": "semver",
+        "display": "SemVer"
+      }
+    },
+    {
       "url": "https://www.medizininformatik-initiative.de/fhir/modul-meta/StructureDefinition/mii-ex-meta-license-codeable",
       "valueCodeableConcept": {
         "coding": [
@@ -38,7 +46,7 @@
     }
   ],
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe",
-  "version": "2027.0.0-ballot.rc1",
+  "version": "2027.0.0-ballot",
   "name": "MII_PR_Mikrobio_Probe",
   "title": "MII PR Mikrobio Probe",
   "status": "active",
@@ -82,7 +90,7 @@
       {
         "id": "Specimen.processing",
         "path": "Specimen.processing",
-        "comment": "Der Parent verlangt hier verpflichtend die Extension 'temperaturbedingungen'. Diese Pflicht stammt aus der Beschreibung von Lagerprozessen in der Biobank und traegt fuer die mikrobiologische Aufarbeitung nicht; ein abgeleitetes Profil kann sie nicht loesen. Sie ist als Ballotfrage 3 offen und mit dem Biobank-Modul zu klaeren. Solange sie besteht, wird die Faerbetechnik nicht hier, sondern in Observation.method angegeben."
+        "comment": "Bis 2027.0.0-ballot.rc2 verlangte der Parent hier verpflichtend die Extension 'temperaturbedingungen', eine Pflicht aus der Lagerung von Bioproben ohne Aussage fuer die mikrobiologische Aufarbeitung. Seit 2027.0.0-ballot ist sie 0..1 und auf den Lagerprozess-Slice begrenzt. Die Faerbetechnik wird trotzdem nicht hier, sondern in Observation.extension[faerbung] angegeben, solange offen ist, ob ueberhaupt eine Specimen-Ressource entsteht."
       }
     ]
   }

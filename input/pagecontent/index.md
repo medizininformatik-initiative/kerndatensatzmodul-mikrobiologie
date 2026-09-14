@@ -59,7 +59,7 @@ Components of Observations were moved into separate profiles in this version.
 | Publication |               |
 |-------------|---------------|
 | Date        | not yet published |
-| Version     | 2027.0.0-ballot.rc1 (CalVer `YYYY.n.n`) |
+| Version     | 2027.0.0-ballot (CalVer `YYYY.n.n`) |
 | Status      | active        |
 | Realm       | DE            |
 
