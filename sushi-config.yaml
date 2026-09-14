@@ -1,76 +1,17 @@
-# ╭────────────────────────────── TEMPLATE — READ FIRST ───────────────────────────────╮
-# │ This is the CRMI-profiled metadata contract for an MII KDS module IG,              │
-# │ parameterized from medizininformatik-initiative/kerndatensatz-basis (main).        │
-# │ The file does NOT build until every {{...}} placeholder is replaced.               │
-# │                                                                                    │
-# │ All 19 placeholders this repository uses are listed below — 15 ACTIVE and 4        │
-# │ OPTIONAL. ACTIVE ones sit on lines the build reads today — leaving one             │
-# │ unreplaced ships a bogus artifact. OPTIONAL ones sit inside commented-out          │
-# │ blocks and matter only once you enable that block.                                 │
-# │                                                                                    │
-# │ They occur in: this file, ig.ini, publication-request.json,                        │
-# │ qc/custom.rules.yaml, .github/workflows/go-publish.yml, the narrative pages        │
-# │ (input/pagecontent, input/translations), the FSH sources (input/fsh, incl. the     │
-# │ rulesets library), input/resources and tests/.                                     │
-# │                                                                                    │
-# │ ── ACTIVE ────────────────────────────────────────────────────────────────         │
-# │   {{MODULE_SLUG}}         lowercase module short name, e.g. `base`, `person`,      │
-# │                           `icu`. Drives packageId, id, and the canonical — and     │
-# │                           the resource id inside input/resources/Parameters-       │
-# │                           expansion-manifest.json. It is also the only             │
-# │                           placeholder that appears in FILE NAMES — three:          │
-# │                           input/translations/de/ImplementationGuide-mii-ig-        │
-# │                           {{MODULE_SLUG}}.po and the IG intro page                 │
-# │                           ImplementationGuide-mii-ig-{{MODULE_SLUG}}.md in         │
-# │                           input/pagecontent/ + its German mirror. All three        │
-# │                           must be RENAMED as well as substituted                   │
-# │                           (docs/recipes/create-a-new-module.md step 4; .po         │
-# │                           details: docs/recipes/add-translation.md §5).            │
-# │   {{MODULE_NAME}}         CamelCase computable name part, e.g. `Base` →            │
-# │                           name: MII_IG_Base.                                       │
-# │   {{MODULE_TITLE}}        human-readable title part, e.g.                          │
-# │                           `Core Dataset Base` → title: MII Implementation          │
-# │                           Guide Core Dataset Base.                                 │
-# │   {{MODULE_DESCRIPTION}}  one-sentence English description of the module.          │
-# │   {{CALVER_VERSION}}      MII CalVer YYYY.n.n, e.g. 2026.0.1 (NOT SemVer;          │
-# │                           see the MII Module Release Workflow). Also pins the      │
-# │                           versioned canonicals in input/fsh/rulesets/.             │
-# │   {{CALVER_YEAR}}         the release sequence year, e.g. 2026.                    │
-# │   {{RELEASE_DATE}}        ISO date YYYY-MM-DD; go-publish.yml requires it to       │
-# │                           equal the publication date.                              │
-# │   {{COPYRIGHT_START_YEAR}}  first copyright year, e.g. 2019.                       │
-# │   {{APPROVAL_DATE}}       ISO date this release was approved; see docs/release.md. │
-# │   {{MODULE_AUTHOR_EMAIL}} contact email of the module author.                      │
-# │   {{TOPIC_NCI_CODE}}      NCI Thesaurus code for the module's topic (basis        │
-# │                           declares seven: C15607, C154624, C25218, C16960,         │
-# │                           C25190, C81239, C25717). Read by the artifact-topic      │
-# │                           extension below AND by every profile via                 │
-# │                           `insert CRMIArtifactTopic(...)`. There is no sensible    │
-# │                           default: an unreplaced value ships a bogus code.         │
-# │   {{GITHUB_ORG}} / {{REPO_NAME}}  (publication-request.json, go-publish.yml)       │
-# │                           the org/repo hosting this module; GitHub Pages under     │
-# │                           the creating org is the publication website.             │
-# │   {{RELEASE_DESCRIPTION}} (publication-request.json) one-line description of the   │
-# │                           release being published.                                 │
-# │   {{REGISTRY_DESCRIPTION}}  (publication-request.json) the description shown in    │
-# │                           the FHIR IG registry entry.                              │
-# │                                                                                    │
-# │ ── OPTIONAL (inside commented-out blocks — replace only if you enable them) ──     │
-# │   {{SPECIAL_URL_1}}       one entry of the `special-url` list: a canonical this    │
-# │                           IG defines that does NOT start with the module           │
-# │                           canonical. Regenerate the list per                       │
-# │                           docs/recipes/regenerate-special-url.md.                  │
-# │   {{CITATION_TEXT}}       artifact-relatedArtifact — the module's literature       │
-# │   {{CITATION_URL}}        citation, its URL, and its publication date              │
-# │   {{CITATION_PUBLICATION_DATE}}  (ISO YYYY-MM-DD).                                 │
-# ╰────────────────────────────────────────────────────────────────────────────────────╯
-# ╭──────────────────────────── MIGRATION NOTE ─────────────────────────────╮
-# │ This module was migrated onto the template on 2026-08-25 (skill        │
-# │ mii-ig-migration). The placeholder table ABOVE is the template's own    │
-# │ documentation and is kept verbatim; the values BELOW are the migrated   │
-# │ module's. Lines marked `MIGRATION` record where the source and the      │
-# │ template disagreed and which one was kept (spec §2.2).                  │
-# ╰────────────────────────────────────────────────────────────────────────╯
+# ╭──────────────────────────── ÜBER DIESE DATEI ───────────────────────────╮
+# │ CRMI-profilierter Metadatenvertrag dieses Moduls, parametrisiert aus    │
+# │ medizininformatik-initiative/kerndatensatz-basis (main).                │
+# │                                                                         │
+# │ Das Modul wurde am 2026-08-25 auf die Modulvorlage migriert (Skill      │
+# │ mii-ig-migration). Die Platzhalter-Legende der Vorlage stand hier bis   │
+# │ 2026-09-14 wörtlich und ist entfernt: Der guard-Job von                 │
+# │ .github/workflows/module-release.yml sucht Platzhalterklammern in der   │
+# │ GANZE Datei und hielt die Legende für unersetzte Platzhalter — er       │
+# │ übersprang damit build und release, sodass auf den Tag v2027.0.0-ballot │
+# │ kein Release-Entwurf entstand. Die Legende steht in der Vorlage selbst; │
+# │ wer sie braucht, liest sie dort. Zeilen mit `MIGRATION` halten fest, wo │
+# │ Quelle und Vorlage sich widersprachen und welcher Wert gilt.            │
+# ╰─────────────────────────────────────────────────────────────────────────╯
 # ABOUT THE kerndatensatz-basis CITATIONS BELOW
 # `kerndatensatz-basis` is the MII reference module. Wherever a comment quotes
 # one of its values, that value is an EXAMPLE of the convention in force — not a
@@ -134,7 +75,7 @@ releaseLabel: ballot
 # text in LICENSE is an asserted decision, not an unexamined template artefact.
 license: CC-BY-4.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # Must equal the publication date; go-publish.yml validates this.
-# MIGRATION: {{RELEASE_DATE}} has NO value in the source and none may be
+# MIGRATION: the template placeholder RELEASE_DATE has NO value in the source and none may be
 # invented (guardrail 3). The property is omitted rather than filled with a
 # placeholder date. Set it at Gate D, when the publication date is known;
 # go-publish.yml requires it to equal that date.
@@ -202,7 +143,7 @@ extension:
     valuePeriod:
       start: "2027"
   # Der Modulautor. Die Migration hatte die Extension entfernt, weil
-  # {{MODULE_AUTHOR_EMAIL}} in der Quelle keinen Wert hatte (der Registry-`author`
+  # der Vorlagenplatzhalter MODULE_AUTHOR_EMAIL in der Quelle keinen Wert hatte (der Registry-`author`
   # ist ein Konto, kein Kontakt). RESOLVED am 2026-09-10 auf Entscheidung des
   # Modulverantwortlichen: dieselbe Adresse, die kerndatensatzmodul-labor an
   # derselben Stelle fuehrt.
@@ -248,11 +189,11 @@ extension:
   # - url: http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact
   #   valueRelatedArtifact:
   #     type: citation
-  #     citation: "{{CITATION_TEXT}}"
-  #     url: "{{CITATION_URL}}"
+  #     citation: "<Zitat des Moduls>"
+  #     url: "<URL des Zitats>"
   #     extension:
   #       - url: http://hl7.org/fhir/StructureDefinition/cqf-publicationDate
-  #         valueDate: "{{CITATION_PUBLICATION_DATE}}"
+  #         valueDate: "<ISO-Datum der Veroeffentlichung>"
   #       - url: http://hl7.org/fhir/StructureDefinition/cqf-publicationStatus
   #         valueCode: active
   # The module's expansion-parameters manifest — the pinned code system versions
@@ -278,7 +219,7 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/artifact-purpose
     valueMarkdown: "Provide the computable publication unit for the MII Core Dataset Microbiology module, enabling implementers to discover, validate, version, and apply the specification consistently."
   # Module topic(s), coded with the NCI Thesaurus. The migration had removed this
-  # extension because {{TOPIC_NCI_CODE}} had no value in the source and a guessed
+  # extension because the template placeholder TOPIC_NCI_CODE had no value in the source and a guessed
   # code ships a bogus terminology code that no build error catches. RESOLVED on
   # 2026-09-10: the three codes below were looked up against the NCI EVS API
   # (api-evsrest.nci.nih.gov/api/v1/concept/ncit), not chosen from memory —
