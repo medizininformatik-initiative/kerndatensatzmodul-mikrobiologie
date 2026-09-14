@@ -51,5 +51,5 @@ Dieselbe Grenze gilt für den zielgerichteten Nachweis eines resistenten Erreger
 
 ### Weitere Bewertungen in diesem Modul
 
-`interpretation` ist nicht auf die Empfindlichkeit beschränkt. Die Keimzahl trägt eine semiquantitative Einordnung des Messwerts, die Aviditätsbestimmung trägt niedrig, intermediär oder hoch. Das Muster ist jedes Mal dasselbe: der Wert bleibt gemessen, die Bewertung bleibt getrennt.
+`interpretation` ist nicht auf die Empfindlichkeit beschränkt. Die Keimzahl trägt eine semiquantitative Einordnung des Messwerts, die Aviditätsbestimmung trägt niedrig, grenzwertig oder hoch — `L` und `H` aus der Liste, die der Parent bindet, und für die Mitte derselbe SNOMED-Code, den dieser Leitfaden auch sonst für einen grenzwertigen Befund verwendet. Das Muster ist jedes Mal dasselbe: der Wert bleibt gemessen, die Bewertung bleibt getrennt.
 

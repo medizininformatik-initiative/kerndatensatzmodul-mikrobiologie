@@ -2331,7 +2331,7 @@
         "reference" : "ValueSet/mii-vs-mikrobio-aviditaet-ergebnis"
       },
       "name" : "MII VS Mikrobio Aviditaet Ergebnis",
-      "description" : "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, intermediär oder hoch. Niedrige Avidität spricht für eine frische Infektion.",
+      "description" : "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, grenzwertig oder hoch. Niedrige Avidität spricht für eine frische Infektion.",
       "exampleBoolean" : false
     },
     {
@@ -2500,6 +2500,18 @@
       },
       "name" : "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
       "description" : "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum"
+      },
+      "name" : "MII VS Mikrobio Mikroskopie Gesichtsfeld Einheiten [UCUM]",
+      "description" : "Einheiten für die Zählung je Gesichtsfeld in der Mengenkomponente der Mikroskopie.",
       "exampleBoolean" : false
     },
     {
@@ -2691,7 +2703,7 @@
         "reference" : "ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"
       },
       "name" : "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]",
-      "description" : "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist.",
+      "description" : "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente.",
       "exampleBoolean" : false
     },
     {

@@ -126,8 +126,9 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Aviditaet_Ergebnis",
     "title" : "MII VS Mikrobio Aviditaet Ergebnis",
-    "description" : "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, intermediär oder hoch. Niedrige Avidität spricht für eine frische Infektion.",
-    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"],
+    "description" : "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, grenzwertig oder hoch. Niedrige Avidität spricht für eine frische Infektion.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+    "http://snomed.info/sct"],
     "uses" : {
     },
     "StructureDefinition-mii-pr-mikrobio-aviditaet.html" : "MII PR Mikrobio Aviditaet"
@@ -191,24 +192,24 @@
     "http://terminology.hl7.org/CodeSystem/data-absent-reason"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html" : "MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)",
-    "StructureDefinition-mii-pr-mikrobio-bartlett-score.html" : "MII PR Mikrobio Bartlett Score",
-    "StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html" : "MII PR Mikrobio MRGN Klasse",
-    "StructureDefinition-mii-pr-mikrobio-ct-wert.html" : "MII PR Mikrobio CT Wert",
-    "StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html" : "MII PR Mikrobio Voraussichtliche Empfindlichkeit",
-    "StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html" : "MII PR Mikrobio Spezifische Bestimmung",
     "StructureDefinition-mii-pr-mikrobio-mikroskopie.html" : "MII PR Mikrobio Allgemeine Mikroskopie",
-    "StructureDefinition-mii-pr-mikrobio-nugent-score.html" : "MII PR Mikrobio Nugent Score",
-    "StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html" : "MII PR Mikrobio Molekulare Pathogenlast",
-    "StructureDefinition-mii-pr-mikrobio-keimzahl.html" : "MII PR Mikrobio Keimzahl",
-    "StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html" : "MII PR Mikrobio Spezifische Mikroskopie",
-    "StructureDefinition-mii-pr-mikrobio-titer.html" : "MII PR Mikrobio Titer",
-    "StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html" : "MII PR Mikrobio Antigen Antikoerper Quantitativ",
-    "StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html" : "MII PR Mikrobio Allgemeine Kultur",
+    "StructureDefinition-mii-pr-mikrobio-ct-wert.html" : "MII PR Mikrobio CT Wert",
     "StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html" : "MII PR Mikrobio Resistenzmechanismen Determinanten",
-    "StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html" : "MII PR Mikrobio Virulenzfaktor",
     "StructureDefinition-mii-pr-mikrobio-aviditaet.html" : "MII PR Mikrobio Aviditaet",
     "StructureDefinition-mii-pr-mikrobio-empfindlichkeit.html" : "MII PR Mikrobio Empfindlichkeit",
+    "StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html" : "MII PR Mikrobio Molekulare Pathogenlast",
+    "StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html" : "MII PR Mikrobio Virulenzfaktor",
+    "StructureDefinition-mii-pr-mikrobio-voraussichtliche-empfindlichkeit.html" : "MII PR Mikrobio Voraussichtliche Empfindlichkeit",
+    "StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html" : "MII PR Mikrobio Spezifische Bestimmung",
+    "StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html" : "MII PR Mikrobio Spezifische Mikroskopie",
+    "StructureDefinition-mii-pr-mikrobio-bartlett-score.html" : "MII PR Mikrobio Bartlett Score",
+    "StructureDefinition-mii-pr-mikrobio-titer.html" : "MII PR Mikrobio Titer",
+    "StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.html" : "MII PR Mikrobio Antigen Antikoerper Quantitativ",
+    "StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html" : "MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)",
+    "StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html" : "MII PR Mikrobio MRGN Klasse",
+    "StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html" : "MII PR Mikrobio Allgemeine Kultur",
+    "StructureDefinition-mii-pr-mikrobio-keimzahl.html" : "MII PR Mikrobio Keimzahl",
+    "StructureDefinition-mii-pr-mikrobio-nugent-score.html" : "MII PR Mikrobio Nugent Score",
     "StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html" : "MII PR Mikrobio Resistenzkategorie Status"
   },
   {
@@ -221,10 +222,10 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html" : "MII PR Mikrobio Spezifische Mikroskopie",
-    "StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html" : "MII PR Mikrobio Resistenzmechanismen Determinanten",
     "StructureDefinition-mii-pr-mikrobio-virulenzfaktor.html" : "MII PR Mikrobio Virulenzfaktor",
-    "ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]"
+    "StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html" : "MII PR Mikrobio Spezifische Mikroskopie",
+    "ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
+    "StructureDefinition-mii-pr-mikrobio-resistenzmechanismen-determinanten.html" : "MII PR Mikrobio Resistenzmechanismen Determinanten"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum",
@@ -323,6 +324,19 @@
     "StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html" : "MII PR Mikrobio Allgemeine Kultur"
   },
   {
+    "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum",
+    "version" : "2027.0.0-ballot",
+    "status" : "active",
+    "name" : "MII_VS_Mikrobio_Mikroskopie_Gesichtsfeld_Einheiten_UCUM",
+    "title" : "MII VS Mikrobio Mikroskopie Gesichtsfeld Einheiten [UCUM]",
+    "description" : "Einheiten für die Zählung je Gesichtsfeld in der Mengenkomponente der Mikroskopie.",
+    "systems" : ["http://unitsofmeasure.org"],
+    "uses" : {
+    },
+    "StructureDefinition-mii-pr-mikrobio-mikroskopie.html" : "MII PR Mikrobio Allgemeine Mikroskopie",
+    "StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html" : "MII PR Mikrobio Spezifische Mikroskopie"
+  },
+  {
     "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed",
     "version" : "2027.0.0-ballot",
     "status" : "active",
@@ -332,8 +346,8 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html" : "MII PR Mikrobio Spezifische Mikroskopie",
-    "StructureDefinition-mii-pr-mikrobio-mikroskopie.html" : "MII PR Mikrobio Allgemeine Mikroskopie"
+    "StructureDefinition-mii-pr-mikrobio-mikroskopie.html" : "MII PR Mikrobio Allgemeine Mikroskopie",
+    "StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html" : "MII PR Mikrobio Spezifische Mikroskopie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum",
@@ -393,8 +407,8 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html" : "MII PR Mikrobio Spezifische Mikroskopie",
-    "StructureDefinition-mii-pr-mikrobio-mikroskopie.html" : "MII PR Mikrobio Allgemeine Mikroskopie"
+    "StructureDefinition-mii-pr-mikrobio-mikroskopie.html" : "MII PR Mikrobio Allgemeine Mikroskopie",
+    "StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html" : "MII PR Mikrobio Spezifische Mikroskopie"
   },
   {
     "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc",
@@ -511,7 +525,7 @@
     "status" : "active",
     "name" : "MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC",
     "title" : "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]",
-    "description" : "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist.",
+    "description" : "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente.",
     "systems" : ["http://loinc.org"],
     "uses" : {
     },

@@ -42,7 +42,7 @@ Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests e
   "title" : "MII VS Mikrobio Aviditaet Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T13:10:06+00:00",
+  "date" : "2026-09-14T14:30:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -42,7 +42,7 @@ Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für
   "title" : "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T13:10:06+00:00",
+  "date" : "2026-09-14T14:30:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

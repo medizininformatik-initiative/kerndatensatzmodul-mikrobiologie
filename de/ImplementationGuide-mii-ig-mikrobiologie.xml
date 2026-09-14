@@ -1913,7 +1913,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-aviditaet-ergebnis"/>
       </reference>
       <name value="MII VS Mikrobio Aviditaet Ergebnis"/>
-      <description value="Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, intermediär oder hoch. Niedrige Avidität spricht für eine frische Infektion."/>
+      <description value="Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, grenzwertig oder hoch. Niedrige Avidität spricht für eine frische Infektion."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2068,6 +2068,17 @@
       </reference>
       <name value="MII VS Mikrobio Kultur Ergebnis [SNOMED]"/>
       <description value="Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum"/>
+      </reference>
+      <name value="MII VS Mikrobio Mikroskopie Gesichtsfeld Einheiten [UCUM]"/>
+      <description value="Einheiten für die Zählung je Gesichtsfeld in der Mengenkomponente der Mikroskopie."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2243,7 +2254,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"/>
       </reference>
       <name value="MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]"/>
-      <description value="Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist."/>
+      <description value="Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

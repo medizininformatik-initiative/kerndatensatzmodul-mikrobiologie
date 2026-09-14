@@ -12,7 +12,7 @@
 | Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC |
 
  
-Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist. 
+Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente. 
 
  **References** 
 
@@ -42,7 +42,7 @@ Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen
   "title" : "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T13:10:06+00:00",
+  "date" : "2026-09-14T14:30:50+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -64,7 +64,7 @@ Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind und das Ergebnis die semiquantitative Stufe ist.",
+  "description" : "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
