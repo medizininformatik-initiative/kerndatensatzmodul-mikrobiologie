@@ -24,7 +24,7 @@ Die Färbung steht in `extension[faerbung]`, codiert mit den Nachkommen von `379
 
 **Ballotfrage 2 — wohin gehört die Färbetechnik?** Dieses Modul weicht von dem Modell ab, das in der HL7 EU Lab Semantic Workgroup diskutiert wird: Es führt die Färbung in `extension[faerbung]` an der Observation, nicht in `Specimen.processing.procedure`. Die Codes sind dieselben. Können Sie die Färbung an der Probe liefern, oder brauchen Sie die Extension?
 
-Gegen `Specimen` als einzigen Ort spricht, dass er eine Specimen-Ressource voraussetzt, und die stellt Ballotfrage 1 in Zweifel. Die geerbte Pflicht-Lagertemperatur unter `processing` stand ebenfalls im Weg, bis das Bioproben-Basisprofil sie in seinem `2027.0.0-ballot` gelockert hat. Weil die Terminologie auf beiden Wegen dieselbe ist, ändert ein späterer Umzug das Element und nichts weiter.
+Gegen `Specimen` als einzigen Ort spricht, dass er eine Specimen-Ressource voraussetzt, und die stellt Ballotfrage 1 in Zweifel. Weil die Terminologie auf beiden Wegen dieselbe ist, ändert ein späterer Umzug das Element und nichts weiter.
 
 ## Morphologie zusammen mit ihrer Menge
 
@@ -289,7 +289,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T11:54:38+00:00",
+  "date" : "2026-09-14T13:10:06+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

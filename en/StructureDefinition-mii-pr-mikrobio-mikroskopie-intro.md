@@ -24,11 +24,8 @@ in `Specimen.processing.procedure`. The codes are the same. Can your site supply
 the stain on the Specimen, or do you need the extension?
 
 What keeps this module from relying on the Specimen is that it presupposes a
-Specimen resource, which ballot question 1 puts in doubt. The inherited
-requirement for storage temperature conditions below `processing` stood in the
-way too, until the biobank base profile relaxed it in its `2027.0.0-ballot`.
-Because the terminology is the same on either route, a later move changes the
-element and nothing else.
+Specimen resource, which ballot question 1 puts in doubt. Because the terminology
+is the same on either route, a later move changes the element and nothing else.
 
 ### Morphology together with its amount
 
