@@ -1,4 +1,4 @@
-# MII ImplementationGuide Resource - MII Implementation Guide Microbiology v2027.0.0-ballot
+# MII ImplementationGuide Resource - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * **MII ImplementationGuide Resource**
@@ -124,7 +124,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     },
     {
       "url" : "version",
-      "valueString" : "2027.0.0-ballot"
+      "valueString" : "2027.0.0-ballot2"
     },
     {
       "url" : "uri",
@@ -242,7 +242,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
     }
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide/mii-ig-mikrobiologie",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_IG_Mikrobiologie",
   "title" : "MII Implementation Guide Microbiology",
   "status" : "active",

@@ -1,4 +1,4 @@
-# MII LM Mikrobio Befund - MII Implementation Guide Microbiology v2027.0.0-ballot
+# MII LM Mikrobio Befund - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de | *Version*:2027.0.0-ballot |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de | *Version*:2027.0.0-ballot2 |
 | Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_LM_Mikrobio_Befund |
 
  
@@ -85,12 +85,12 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
   "resourceType" : "StructureDefinition",
   "id" : "mii-lm-mikrobio-logical-model",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_LM_Mikrobio_Befund",
   "title" : "MII LM Mikrobio Befund",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T14:59:48+00:00",
+  "date" : "2026-09-14T15:54:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

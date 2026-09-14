@@ -1,4 +1,4 @@
-# MII LM Mikrobio Untersuchungsarten - MII Implementation Guide Microbiology v2027.0.0-ballot
+# MII LM Mikrobio Untersuchungsarten - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchungsarten | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchungsarten | *Version*:2027.0.0-ballot2 |
 | Active as of 2026-09-14 | *Computable Name*:MII_LM_Mikrobio_Untersuchungsarten |
 
  
@@ -41,12 +41,12 @@ Other representations of profile: [CSV](../StructureDefinition-mii-lm-mikrobio-u
     "valueCode" : "can-be-target"
   }],
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchungsarten",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_LM_Mikrobio_Untersuchungsarten",
   "title" : "MII LM Mikrobio Untersuchungsarten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T14:59:48+00:00",
+  "date" : "2026-09-14T15:54:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

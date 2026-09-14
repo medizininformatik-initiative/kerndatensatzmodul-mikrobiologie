@@ -1,4 +1,4 @@
-# MII VS Mikrobio Empfindlichkeit Einheiten [UCUM] - MII Implementation Guide Microbiology v2027.0.0-ballot
+# MII VS Mikrobio Empfindlichkeit Einheiten [UCUM] - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum | *Version*:2027.0.0-ballot2 |
 | Active as of 2023-03-02 | *Computable Name*:MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM |
 
  
@@ -39,7 +39,7 @@ No Expansion for this valueset (Unknown Code System)
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-empfindlichkeit-einheiten-ucum",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM",
   "title" : "MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]",
   "status" : "active",

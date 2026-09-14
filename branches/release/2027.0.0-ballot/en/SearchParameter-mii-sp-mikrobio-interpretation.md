@@ -1,4 +1,4 @@
-# mii-sp-mikrobio-interpretation - MII Implementation Guide Microbiology v2027.0.0-ballot
+# mii-sp-mikrobio-interpretation - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-norm-kategorie | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-norm-kategorie | *Version*:2027.0.0-ballot2 |
 | Active as of 2026-04-02 | *Computable Name*:MII_SP_Mikrobio_NormKategorie |
 
  
@@ -23,7 +23,7 @@ Suchparameter für die Normkategorie der Empfindlichkeitsextension
   "resourceType" : "SearchParameter",
   "id" : "mii-sp-mikrobio-interpretation",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/SearchParameter/Observation-norm-kategorie",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_SP_Mikrobio_NormKategorie",
   "status" : "active",
   "experimental" : false,

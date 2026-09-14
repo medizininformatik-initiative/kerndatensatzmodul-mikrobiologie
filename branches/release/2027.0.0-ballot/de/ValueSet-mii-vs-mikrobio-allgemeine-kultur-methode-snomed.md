@@ -1,4 +1,4 @@
-# MII VS Mikrobio Allgemeine Kultur Methode [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-ballot
+# MII VS Mikrobio Allgemeine Kultur Methode [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed | *Version*:2027.0.0-ballot |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed | *Version*:2027.0.0-ballot2 |
 | Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED |
 
  
@@ -37,12 +37,12 @@ Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkun
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-allgemeine-kultur-methode-snomed",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED",
   "title" : "MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T14:59:48+00:00",
+  "date" : "2026-09-14T15:54:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

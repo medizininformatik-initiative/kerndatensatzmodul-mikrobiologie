@@ -1,4 +1,4 @@
-# MII VS Mikrobio Organismen [SNOMED CT] - MII Implementation Guide Microbiology v2027.0.0-ballot
+# MII VS Mikrobio Organismen [SNOMED CT] - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-organismen-snomedct | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-organismen-snomedct | *Version*:2027.0.0-ballot2 |
 | Active as of 2023-03-02 | *Computable Name*:MII_VS_Mikrobio_Organismen_SNOMEDCT |
 
  
@@ -37,7 +37,7 @@ Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Er
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-organismen-snomedct",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-organismen-snomedct",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_VS_Mikrobio_Organismen_SNOMEDCT",
   "title" : "MII VS Mikrobio Organismen [SNOMED CT]",
   "status" : "active",

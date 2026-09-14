@@ -1,4 +1,4 @@
-# MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM] - MII Implementation Guide Microbiology v2027.0.0-ballot
+# MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM] - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,7 +8,7 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum | *Version*:2027.0.0-ballot |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum | *Version*:2027.0.0-ballot2 |
 | Active as of 2026-09-14 | *Computable Name*:MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM |
 
  
@@ -39,12 +39,12 @@ No Expansion for this valueset (Unknown Code System)
   "resourceType" : "ValueSet",
   "id" : "mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum",
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum",
-  "version" : "2027.0.0-ballot",
+  "version" : "2027.0.0-ballot2",
   "name" : "MII_VS_Mikrobio_Antigen_Antikoerper_Quantitativ_Einheiten_UCUM",
   "title" : "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T14:59:48+00:00",
+  "date" : "2026-09-14T15:54:45+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
