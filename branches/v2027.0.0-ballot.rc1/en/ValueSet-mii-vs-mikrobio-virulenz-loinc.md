@@ -42,7 +42,7 @@ Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschl
   "title" : "MII VS Mikrobio Virulenz [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T13:41:44+00:00",
+  "date" : "2026-09-14T14:16:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -43,7 +43,7 @@ Methoden-ValueSet für die Mikroskopie: die eingesetzten mikroskopischen Verfahr
   "title" : "MII VS Mikrobio Morphologie Methode [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-09-14T13:41:44+00:00",
+  "date" : "2026-09-14T14:16:09+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
