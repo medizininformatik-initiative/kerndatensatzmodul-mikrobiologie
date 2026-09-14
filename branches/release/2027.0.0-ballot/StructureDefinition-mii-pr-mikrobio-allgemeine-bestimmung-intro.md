@@ -1,0 +1,35 @@
+General determination describes the identification of a microorganism or infectious agent in a specimen, without restriction to a predefined target.
+
+### Test code
+
+Preferred is `41852-5 |Microorganism or agent identified in Specimen|`. The same code is also valid in [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html), so it does not by itself identify which of the two statements is being made; [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) sets out how the two profiles stay distinguishable.
+
+### Result
+
+The result is the identified microorganism from `mii-vs-mikrobio-organismen-snomedct`. If the specimen was examined but no pathogen was identified, `260415000 |Not detected|` is given - not the omission of the Observation.
+
+To be distinguished from the neighbouring negative cases:
+
+| Statement | Profile | Value |
+|---|---|---|
+| No pathogen identified | General determination | `260415000 \|Not detected\|` |
+| No growth in culture | [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html) | `264868006 \|No growth\|` |
+| A specific pathogen was sought and not found | [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) | `260415000 \|Not detected\|` |
+
+`264868006 |No growth|` is tied to growth in culture and therefore remains reserved for the culture profiles. An indeterminate result is represented via `dataAbsentReason`, not via `Not detected`.
+
+### Position in the diagnostic chain
+
+The general determination normally follows a culture whose growth it names, and
+points back at it through the `triggeredBy` extension with `type = reflex`; the
+[example](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html) shows this.
+Susceptibility testing in turn follows the identification and points back here in
+the same way.
+[Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) shows the
+chain as a whole.
+
+### Examples
+
+Example (minimal):
+
+[mii-exa-mikrobio-allgemeine-bestimmung](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html)
