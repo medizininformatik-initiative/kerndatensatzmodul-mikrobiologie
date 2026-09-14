@@ -2,28 +2,31 @@
 
 ### Übersicht
 
-Aktuelles Ballot-Release: **2027.0.0-ballot**
-
-Gerenderter Leitfaden, aktueller Build (Stand main, aus dem das Release gebaut wird):
-https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/
-
-Gerenderter Leitfaden, Build des Kandidatenbranches `v2027.0.0-ballot.rc1` — enthält
-Arbeitsstände, die noch nicht nach main gemergt sind:
-https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/branches/v2027.0.0-ballot.rc1/
-
 [![FHIR Project on GitHub.com](https://img.shields.io/badge/FHIR_project_on_GitHub.com-kerndatensatzmodul--mikrobiologie-green)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie)
+
+[![IG Build](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/actions/workflows/ig-publisher.yml/badge.svg)](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/actions/workflows/ig-publisher.yml)
 
 Das vorliegende Projekt beschreibt die FHIR-Spezifikation des Erweiterungsmoduls 'Mikrobiologie', welches den Kerndatensatz der Medizininformatik-Initiative um die mikrobiologische Diagnostik ergänzt. Die hier veröffentlichten FHIR-Profile und ImplementationGuides dienen als zentrale und verbindliche Spezifikation für die syntaktische und semantische Kodierung der Modulinhalte.
 
 ### Status:
 
-Aktuelle stabile Version: [2025.0.2](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2025.0.2)
+**Aktuelle stabile Version: 2025.0.2**
+[Package](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2025.0.2)
 
-Aktuelles Ballot-Release: 2027.0.0-ballot — [aktueller Build](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/), [Build des Kandidatenbranches](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/branches/v2027.0.0-ballot.rc1/). Simplifier-Paket und GitHub-Release folgen mit dem Tag `v2027.0.0-ballot`; veröffentlicht ist bislang [2027.0.0-alpha.5](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2027.0.0-alpha.5). Im Zuge eines Harmonisierungsprozesses zwischen RKI, MIO42 und MII wurde das mikrobiologische Datenmodell grundlegend überarbeitet und die Abstimmung auf den europäischen Kontext (EHDS) ausgeweitet. Ein offiziell ballotiertes Release ist für Ende des Jahres geplant.
+**Aktuelle Ballot-Fassung: 2027.0.0-ballot** — eingefroren am 2026-09-14
+[Gerenderter Leitfaden](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/de/index.html) · [Änderungen](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/de/changes.html) · [Tag](https://github.com/medizininformatik-initiative/kerndatensatzmodul-mikrobiologie/releases/tag/v2027.0.0-ballot)
+
+Simplifier-Paket und GitHub-Release folgen mit der Veröffentlichung des Release-Entwurfs; publiziert ist bislang [2027.0.0-alpha.5](https://simplifier.net/packages/de.medizininformatikinitiative.kerndatensatz.mikrobiologie/2027.0.0-alpha.5).
+
+**Entwicklungsstand**
+[Gerenderter Leitfaden aus main](https://medizininformatik-initiative.github.io/kerndatensatzmodul-mikrobiologie/) — derzeit deckungsgleich mit der Ballot-Fassung; hier erscheinen Änderungen, bevor sie in einer Version publiziert sind.
+
 <!-- Reifegrad: -->
 
 Alle veröffentlichten FHIR-Artefakte innerhalb des Projektes verfügen über einen Status, durch welchen der jeweilige Reifegrad abgeleitet werden kann.
 Profile mit dem Status 'Draft' wurden noch nicht ballotiert und können noch diversen und substantiellen Änderungen unterliegen. Verpflichtende und ballotierte Ergebnisse sind unter dem Tab 'Packages' zu finden.
+
+Im Zuge eines Harmonisierungsprozesses zwischen RKI, MIO42 und MII wurde das mikrobiologische Datenmodell grundlegend überarbeitet und die Abstimmung auf den europäischen Kontext (EHDS) ausgeweitet. Sechs Punkte sind im Leitfaden bewusst offengelassen und als Ballotfragen zur Kommentierung gestellt; das ballotierte Release 2027.0.0 folgt nach deren Auswertung.
 
 ### Mitwirkungs- und Kommentierungsmöglichkeiten
 
