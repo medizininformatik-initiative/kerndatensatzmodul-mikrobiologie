@@ -1,0 +1,99 @@
+# MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot2
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]**
+
+## ValueSet: MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC] 
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc | *Version*:2027.0.0-ballot2 |
+| Active Stand: 2026-09-14 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC |
+
+ 
+Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei. 
+
+ **References** 
+
+* [MII PR Mikrobio Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.md)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+-------
+
+ [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc",
+  "version" : "2027.0.0-ballot2",
+  "name" : "MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC",
+  "title" : "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-14T16:21:52+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "concept" : [{
+        "code" : "105059-0",
+        "display" : "Microscopic observation [Identifier] in Specimen"
+      },
+      {
+        "code" : "664-3",
+        "display" : "Microscopic observation [Identifier] in Specimen by Gram stain"
+      },
+      {
+        "code" : "11545-1",
+        "display" : "Microscopic observation [Identifier] in Specimen by Acid fast stain"
+      },
+      {
+        "code" : "676-7",
+        "display" : "Microscopic observation [Identifier] in Specimen by Rhodamine-auramine fluorochrome stain"
+      }]
+    }]
+  }
+}
+
+```
