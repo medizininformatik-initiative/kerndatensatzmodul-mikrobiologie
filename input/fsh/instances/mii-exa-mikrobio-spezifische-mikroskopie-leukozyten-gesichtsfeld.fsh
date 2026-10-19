@@ -8,8 +8,8 @@
 Instance: mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld
 InstanceOf: MII_PR_Mikrobio_Spezifische_Mikroskopie
 Usage: #example
-Title: "MII EXA Mikrobio Spezifische Mikroskopie Leukozyten je Gesichtsfeld"
-Description: "Leukozyten im Grampräparat nachgewiesen, mit der Menge als Zählung je Gesichtsfeld — 10 bis 25 — statt als semiquantitative Stufe."
+Title: "MII EXA Microbiology Specific Microscopy Leukocytes per Field of View"
+Description: "Leukocytes detected in the Gram preparation, with the quantity as a count per field of view — 10 to 25 — instead of a semiquantitative grade."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-mikroskopie-leuko-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)
@@ -24,11 +24,11 @@ Description: "Leukozyten im Grampräparat nachgewiesen, mit der Menge als Zählu
 * valueCodeableConcept = $sct#260373001 "Detected (qualifier value)"
 * component[menge].code = $sct#103392008 "Semi-quantitative value"
 * component[menge].valueRange.low.value = 10
-* component[menge].valueRange.low.unit = "je Gesichtsfeld"
+* component[menge].valueRange.low.unit = "per field of view"
 * component[menge].valueRange.low.system = "http://unitsofmeasure.org"
 * component[menge].valueRange.low.code = #/[HPF]
 * component[menge].valueRange.high.value = 25
-* component[menge].valueRange.high.unit = "je Gesichtsfeld"
+* component[menge].valueRange.high.unit = "per field of view"
 * component[menge].valueRange.high.system = "http://unitsofmeasure.org"
 * component[menge].valueRange.high.code = #/[HPF]
 * specimen = Reference(mii-exa-mikrobio-probe)

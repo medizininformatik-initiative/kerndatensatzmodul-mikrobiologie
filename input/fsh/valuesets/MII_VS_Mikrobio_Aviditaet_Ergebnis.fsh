@@ -46,8 +46,8 @@
 // (Display "Equivocal result", Elternkonzept 281296001).
 ValueSet: MII_VS_Mikrobio_Aviditaet_Ergebnis
 Id: mii-vs-mikrobio-aviditaet-ergebnis
-Title: "MII VS Mikrobio Aviditaet Ergebnis"
-Description: "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, grenzwertig oder hoch. Niedrige Avidität spricht für eine frische Infektion."
+Title: "MII VS Microbiology Avidity Result"
+Description: "Assessment ValueSet for avidity: categorical classification of the avidity index as low, borderline or high. Low avidity indicates a recent infection."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

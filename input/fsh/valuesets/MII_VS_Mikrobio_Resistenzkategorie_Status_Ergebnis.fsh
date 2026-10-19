@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis
 Id: mii-vs-mikrobio-resistenzkategorie-status-ergebnis
-Title: "MII VS Mikrobio Resistenzkategorie Status Ergebnis"
-Description: "Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observation.code angegebenen Resistenzkategorie."
+Title: "MII VS Microbiology Resistance Category Status Result"
+Description: "Result of assessing a detected pathogen with regard to the resistance category given in Observation.code."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

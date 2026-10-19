@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-keimzahl
 InstanceOf: MII_PR_Mikrobio_Keimzahl
 Usage: #example
-Title: "MII EXA Mikrobio Keimzahl"
-Description: "Keimzahlbestimmung als koloniebildende Einheiten je Milliliter."
+Title: "MII EXA Microbiology Colony Count"
+Description: "Colony count as colony-forming units per millilitre."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "keimzahl-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

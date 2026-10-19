@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Allgemeine_Kultur_Tests_LOINC
 Id: mii-vs-mikrobio-allgemeine-kultur-tests-loinc
-Title: "MII VS Mikrobio Allgemeine Kultur Tests [LOINC]"
-Description: "Tests-ValueSet für die allgemeine Kultur: LOINC-Codes für die ungerichtete kulturelle Untersuchung. Bevorzugt wird 11475-1, weil der Code das Verfahren selbst benennt; 41852-5 ist gleichwertig zulässig."
+Title: "MII VS Microbiology General Culture Tests [LOINC]"
+Description: "Test ValueSet for general culture: LOINC codes for untargeted culture investigation. 11475-1 is preferred because the code names the procedure itself; 41852-5 is equally permitted."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

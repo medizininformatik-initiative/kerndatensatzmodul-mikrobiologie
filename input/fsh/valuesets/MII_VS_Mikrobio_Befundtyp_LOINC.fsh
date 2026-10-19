@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Befundtyp_LOINC
 Id: mii-vs-mikrobio-befundtyp-loinc
-Title: "MII VS Mikrobio Befundtyp [LOINC]"
-Description: "Sepzalisierte Kodierung von mikrobiologischen Befunden"
+Title: "MII VS Microbiology Report Type [LOINC]"
+Description: "Specialised coding of microbiological reports"
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-mikroskopie
 InstanceOf: MII_PR_Mikrobio_Allgemeine_Mikroskopie
 Usage: #example
-Title: "MII EXA Mikrobio Allgemeine Mikroskopie"
-Description: "Mikroskopischer Befund als morphologische Gruppe: grampositive Kokken in Haufen."
+Title: "MII EXA Microbiology General Microscopy"
+Description: "Microscopic finding as a morphological group: Gram-positive cocci in clusters."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "mikroskopie-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

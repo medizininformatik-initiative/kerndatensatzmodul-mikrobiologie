@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC
 Id: mii-vs-mikrobio-empfindlichkeit-genotyp-loinc
-Title: "MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]"
-Description: "Tests-ValueSet für die voraussichtliche Empfindlichkeit: LOINC-Codes für die aus dem Genotyp abgeleitete erwartete Wirksamkeit einer antimikrobiellen Substanz."
+Title: "MII VS Microbiology Susceptibility Genotype [LOINC]"
+Description: "Test ValueSet for predicted susceptibility: LOINC codes for the expected efficacy of an antimicrobial substance derived from the genotype."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

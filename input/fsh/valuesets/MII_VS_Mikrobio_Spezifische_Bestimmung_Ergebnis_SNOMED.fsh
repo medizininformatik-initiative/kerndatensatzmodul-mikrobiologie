@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED
 Id: mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed
-Title: "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]"
-Description: "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet."
+Title: "MII VS Microbiology Specific Determination Result [SNOMED]"
+Description: "Result ValueSet for specific determination: detection or exclusion of the target already named in the investigation code, including the grey-zone findings weakly positive and equivocal. An indeterminable result is represented not via value[x] but via Observation.dataAbsentReason."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

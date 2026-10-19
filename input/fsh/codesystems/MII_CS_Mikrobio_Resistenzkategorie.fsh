@@ -1,7 +1,7 @@
 CodeSystem: MII_CS_Mikrobio_Resistenzkategorie
 Id: mii-cs-mikrobio-resistenzkategorie
-Title: "MII CS Mikrobio Resistenzkategorie"
-Description: "Untersuchungscodes (Observation.code) für die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie. Jeder Code benennt die bewertete Kategorie; das Ergebnis der Bewertung steht in Observation.value."
+Title: "MII CS Microbiology Resistance Category"
+Description: "Investigation codes (Observation.code) for assessing a detected pathogen with regard to a defined resistance category. Each code names the assessed category; the result of the assessment is in Observation.value."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
@@ -33,7 +33,7 @@ Description: "Untersuchungscodes (Observation.code) für die Bewertung eines nac
 //   838511009 "Linezolid and vancomycin resistant Enterococcus"
 //
 // Ergebnis: Fuer alle vier Kategorien sind MII-eigene Codes erforderlich.
-* #mrsa-status "MRSA-Status" "Erfüllt der nachgewiesene Erreger die Kriterien der Kategorie MRSA (methicillinresistenter Staphylococcus aureus)? Bewertungsgrundlage: Identifikation als Staphylococcus aureus und Nachweis der Methicillin-/Oxacillinresistenz, phänotypisch oder über mecA/mecC."
-* #vre-status "VRE-Status" "Erfüllt der nachgewiesene Erreger die Kriterien der Kategorie VRE (vancomycinresistenter Enterococcus)? Bewertungsgrundlage: Identifikation als Enterococcus und Nachweis der Vancomycinresistenz, phänotypisch oder über vanA/vanB."
-* #lre-status "LRE-Status" "Erfüllt der nachgewiesene Erreger die Kriterien der Kategorie LRE (linezolidresistenter Enterococcus)? Bewertungsgrundlage: Identifikation als Enterococcus und Nachweis der Linezolidresistenz."
-* #lvre-status "LVRE-Status" "Erfüllt der nachgewiesene Erreger die Kriterien der Kategorie LVRE (linezolid- und vancomycinresistenter Enterococcus)? Bewertungsgrundlage: Identifikation als Enterococcus und Nachweis sowohl der Linezolid- als auch der Vancomycinresistenz."
+* #mrsa-status "MRSA-Status" "Does the detected pathogen meet the criteria of the category MRSA (methicillin-resistant Staphylococcus aureus)? Basis of assessment: identification as Staphylococcus aureus and detection of methicillin/oxacillin resistance, phenotypically or via mecA/mecC."
+* #vre-status "VRE-Status" "Does the detected pathogen meet the criteria of the category VRE (vancomycin-resistant Enterococcus)? Basis of assessment: identification as Enterococcus and detection of vancomycin resistance, phenotypically or via vanA/vanB."
+* #lre-status "LRE-Status" "Does the detected pathogen meet the criteria of the category LRE (linezolid-resistant Enterococcus)? Basis of assessment: identification as Enterococcus and detection of linezolid resistance."
+* #lvre-status "LVRE-Status" "Does the detected pathogen meet the criteria of the category LVRE (linezolid- and vancomycin-resistant Enterococcus)? Basis of assessment: identification as Enterococcus and detection of both linezolid and vancomycin resistance."

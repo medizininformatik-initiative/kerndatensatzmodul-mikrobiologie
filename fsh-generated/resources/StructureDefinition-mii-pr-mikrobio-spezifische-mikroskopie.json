@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_Spezifische_Mikroskopie",
-  "title": "MII PR Mikrobio Spezifische Mikroskopie",
+  "title": "MII PR Microbiology Specific Microscopy",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,8 +151,8 @@
       ]
     }
   ],
-  "description": "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis.",
-  "purpose": "Dieses Profil beschreibt die zielgerichtete Mikroskopie, bei der das gesuchte Objekt im Untersuchungscode steht und das Ergebnis der Nachweis oder Ausschluss dieses Objekts ist; wie viel davon gesehen wurde, steht in der Mengenkomponente.",
+  "description": "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast rods or leukocytes — with the semiquantitative grade as the result.",
+  "purpose": "This profile describes targeted microscopy, in which the object sought is in the investigation code and the result is the detection or exclusion of that object; how much of it was seen is in the quantity component.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -187,13 +187,13 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.extension:faerbung",
         "path": "Observation.extension",
         "sliceName": "faerbung",
-        "short": "Eingesetzte Faerbung. Immer angeben, wenn gefaerbt wurde — auch wenn der Untersuchungscode sie schon nennt.",
+        "short": "Staining technique used. Always state it when a stain was applied — even when the investigation code already names it.",
         "min": 0,
         "max": "1",
         "type": [
@@ -215,8 +215,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -232,7 +232,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Ordinaler LOINC-Code, der das gesuchte Objekt und die Faerbung benennt, z. B. 87243-2 'Microscopic observation [Presence] in Specimen by Auramine fluorochrome stain'. Steht das Objekt NICHT im Code, sondern soll als Ergebnis berichtet werden, ist die Allgemeine Mikroskopie das richtige Profil.",
+        "short": "Ordinal LOINC code naming the object sought and the stain, e.g. 87243-2 'Microscopic observation [Presence] in Specimen by Auramine fluorochrome stain'. If the object is NOT in the code but is to be reported as the result, General microscopy is the right profile.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"
@@ -251,7 +251,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Nachweis oder Ausschluss des im Code benannten Objekts. Die Menge des Gesehenen gehoert NICHT hierher, sondern in component[menge]. Liefert die Untersuchung gar keine verwertbare Aussage, dataAbsentReason.",
+        "short": "Detection or exclusion of the object named in the code. The quantity seen does NOT belong here but in component[menge]. If the investigation yields no usable statement at all, dataAbsentReason.",
         "type": [
           {
             "code": "CodeableConcept"
@@ -273,7 +273,7 @@
       {
         "id": "Observation.method",
         "path": "Observation.method",
-        "short": "Das mikroskopische Verfahren. Die Faerbung gehoert NICHT hierher, sondern in extension[faerbung].",
+        "short": "The microscopic procedure. The stain does NOT belong here but in extension[faerbung].",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"
@@ -310,8 +310,8 @@
         "id": "Observation.component:menge",
         "path": "Observation.component",
         "sliceName": "menge",
-        "short": "Semiquantitative Menge oder Zaehlung des berichteten Befunds",
-        "definition": "Wie viel des Befunds gesehen wurde: als semiquantitative Stufe, als Zaehlung je Gesichtsfeld oder als Intervall einer solchen Zaehlung.",
+        "short": "Semiquantitative quantity or count of the reported finding",
+        "definition": "How much of the finding was seen: as a semiquantitative grade, as a count per field of view, or as an interval of such a count.",
         "min": 0,
         "max": "1",
         "mustSupport": true
@@ -357,7 +357,7 @@
         "id": "Observation.component:menge.value[x]:valueCodeableConcept",
         "path": "Observation.component.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Semiquantitative Stufe, z. B. 'Few' oder 'Present two plus out of three plus'.",
+        "short": "Semiquantitative grade, e.g. 'Few' or 'Present two plus out of three plus'.",
         "min": 0,
         "max": "1",
         "type": [
@@ -374,7 +374,7 @@
         "id": "Observation.component:menge.value[x]:valueQuantity",
         "path": "Observation.component.value[x]",
         "sliceName": "valueQuantity",
-        "short": "Zaehlung je Gesichtsfeld, UCUM-Einheit /[HPF]. Fuer offene Grenzen wird Quantity.comparator verwendet, z. B. '<10/GF' als comparator = '<', value = 10.",
+        "short": "Count per field of view, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10.",
         "min": 0,
         "max": "1",
         "type": [
@@ -395,7 +395,7 @@
         "id": "Observation.component:menge.value[x]:valueRange",
         "path": "Observation.component.value[x]",
         "sliceName": "valueRange",
-        "short": "Zaehlung je Gesichtsfeld als Intervall, UCUM-Einheit /[HPF] — z. B. '10-25/GF' als low = 10, high = 25.",
+        "short": "Count per field of view as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25.",
         "min": 0,
         "max": "1",
         "type": [

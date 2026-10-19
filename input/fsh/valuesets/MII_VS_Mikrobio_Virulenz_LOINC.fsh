@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Virulenz_LOINC
 Id: mii-vs-mikrobio-virulenz-loinc
-Title: "MII VS Mikrobio Virulenz [LOINC]"
-Description: "Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten."
+Title: "MII VS Microbiology Virulence [LOINC]"
+Description: "Test ValueSet for virulence factors: LOINC codes for the detection or exclusion of virulence determinants."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
@@ -19,7 +19,7 @@ Description: "Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachwei
 * $loinc#87375-2 "Escherichia coli paa gene [Presence] in Isolate by NAA with probe detection"
 * $loinc#87376-0 "Escherichia coli Stx1 toxin stx1 gene [Presence] in Isolate by NAA with probe detection"
 * $loinc#87377-8 "Escherichia coli Stx2 toxin stx2 gene [Presence] in Isolate by NAA with probe detection"
-* $loinc#87380-2 "Escherichia coli Stx2e-Toxin stx2e-Gen [Nachweis] in Isolat mittels Nukleinsäureamplifikation mit Sondendetektion"
+* $loinc#87380-2 "Escherichia coli stx2e toxin stx2e gene [Presence] in Isolate by NAA with probe detection"
 * $loinc#87304-2 "Clostridium perfringens cpa gene [Presence] in Isolate by NAA with probe detection"
 * $loinc#87397-6 "Clostridium perfringens cpb gene [Presence] in Isolate by NAA with probe detection"
 * $loinc#87305-9 "Clostridium perfringens cpb2 gene [Presence] in Isolate by NAA with probe detection"

@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED
 Id: mii-vs-mikrobio-resistenzmechanismen-methode-snomed
-Title: "MII VS Mikrobio Resistenzmechanismen Methode [SNOMED]"
-Description: "Methoden für den Nachweis von Resistenzmechanismen und Determinanten: molekulare, immunologische und funktionale Verfahren."
+Title: "MII VS Microbiology Resistance Mechanisms Method [SNOMED]"
+Description: "Methods for detecting resistance mechanisms and determinants: molecular, immunological and functional procedures."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

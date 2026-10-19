@@ -5,8 +5,8 @@
 Instance: mii-exa-mikrobio-spezifische-kultur-vre-negativ
 InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
-Title: "MII EXA Mikrobio Spezifische Kultur VRE negativ"
-Description: "Negativer VRE-Nachweis mittels erregerspezifischer Kultur."
+Title: "MII EXA Microbiology Specific Culture VRE Negative"
+Description: "Negative VRE detection by pathogen-specific culture."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-kultur-vre-neg-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

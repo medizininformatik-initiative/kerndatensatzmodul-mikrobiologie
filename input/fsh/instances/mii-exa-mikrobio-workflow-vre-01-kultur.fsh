@@ -17,8 +17,8 @@
 Instance: mii-exa-mikrobio-workflow-vre-01-kultur
 InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
-Title: "MII EXA Mikrobio Workflow VRE 1 Kultur positiv"
-Description: "Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erregerspezifischer Kultur."
+Title: "MII EXA Microbiology Workflow VRE 1 Culture Positive"
+Description: "VRE workflow chain, step 1: positive VRE detection by pathogen-specific culture."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "wf-vre-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

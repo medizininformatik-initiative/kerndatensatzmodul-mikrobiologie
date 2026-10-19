@@ -67,11 +67,11 @@
 Profile: MII_PR_Mikrobio_Ct_Wert
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-ct-wert
-Title: "MII PR Mikrobio CT Wert"
-Description: "CT-Wert beschreibt die Quantifizierung des Zyklusschwellenwerts bei Nukleinsäurenachweisen (z. B. Echtzeit-PCR) in einer Probe."
+Title: "MII PR Microbiology Ct Value"
+Description: "Ct value describes the quantification of the cycle threshold in nucleic acid detection (e.g. real-time PCR) in a specimen."
 * insert MIKRO_OBSERVATION_COMMON
 * code from MII_VS_Mikrobio_CT_Wert_LOINC (extensible)
-* code ^short = "Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert."
+* code ^short = "LOINC codes without a pre-coordinated specimen type are preferred (System = XXX); the specimen type is coded separately via Specimen.type."
 * value[x] only Quantity
 * valueQuantity
   * code = #1

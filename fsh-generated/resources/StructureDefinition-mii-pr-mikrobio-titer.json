@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_Titer",
-  "title": "MII PR Mikrobio Titer",
+  "title": "MII PR Microbiology Titre",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,7 +151,7 @@
       ]
     }
   ],
-  "description": "Titer beschreibt eine semiquantitative Messung aus seriellen Verdünnungsreihen, berichtet als Verhältnis (z. B. 1:160).",
+  "description": "Titre describes a semiquantitative measurement from serial dilution series, reported as a ratio (e.g. 1:160).",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -186,7 +186,7 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.category",
@@ -197,8 +197,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -214,7 +214,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "In der Serologie ist ein praekoordiniertes Specimen ausdruecklich zulaessig — anders als in den uebrigen Bereichen dieses Moduls gilt die Konvention 'System = XXX' hier NICHT. Das europaeische Whitepaper begruendet die Ausnahme damit, dass in der Serologie nur wenige Materialien vorkommen, ueberwiegend Serum, und ein Code-Wildwuchs deshalb nicht droht.",
+        "short": "In serology a pre-coordinated specimen is explicitly permitted — unlike in the other areas of this module, the convention 'System = XXX' does NOT apply here. The European white paper justifies the exception by the fact that only a few materials occur in serology, predominantly serum, so that an uncontrolled growth of codes is not a risk.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-tests-loinc"

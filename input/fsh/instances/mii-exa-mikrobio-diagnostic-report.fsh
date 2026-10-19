@@ -31,8 +31,8 @@
 Instance: mii-exa-mikrobio-diagnostic-report
 InstanceOf: MII_PR_Mikrobio_Diagnostic_Report
 Usage: #example
-Title: "MII EXA Mikrobio Diagnostic Report"
-Description: "Mikrobiologischer Befundbericht, der die zugehörigen Untersuchungen zusammenfasst."
+Title: "MII EXA Microbiology Diagnostic Report"
+Description: "Microbiological report that summarises the associated investigations."
 * identifier[befund].type.coding[fillerV2] = $v2-0203#FILL "Filler Identifier"
 * identifier[befund].system = "https://example.org/fhir/sid/test-befund"
 * identifier[befund].value = "mikrobio-dr-1"

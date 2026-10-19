@@ -11,8 +11,8 @@
 Instance: mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv
 InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
-Title: "MII EXA Mikrobio Spezifische Bestimmung Influenza positiv"
-Description: "Zielgerichteter molekularer Erregernachweis mit positivem Ergebnis, abgeleitet aus dem berichteten Ct-Wert."
+Title: "MII EXA Microbiology Specific Determination Influenza Positive"
+Description: "Targeted molecular pathogen detection with a positive result, derived from the reported Ct value."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-best-2"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

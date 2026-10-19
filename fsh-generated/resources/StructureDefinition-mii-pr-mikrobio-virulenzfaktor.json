@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_Virulenzfaktor",
-  "title": "MII PR Mikrobio Virulenzfaktor",
+  "title": "MII PR Microbiology Virulence Factor",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,8 +151,8 @@
       ]
     }
   ],
-  "description": "Virulenzfaktor beschreibt den qualitativen Nachweis oder Ausschluss von Virulenzdeterminanten in einer Probe oder einem Isolat.",
-  "purpose": "Dieses Profil beschreibt den Nachweis von Virulenzfaktoren.",
+  "description": "Virulence factor describes the qualitative detection or exclusion of virulence determinants in a specimen or an isolate.",
+  "purpose": "This profile describes the detection of virulence factors.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -187,7 +187,7 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.category",
@@ -198,8 +198,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {

@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Titer_Tests_LOINC
 Id: mii-vs-mikrobio-titer-tests-loinc
-Title: "MII VS Mikrobio Titer Tests [LOINC]"
-Description: "Tests-ValueSet für die Titerbestimmung: LOINC-Codes für semiquantitative Messungen aus Verdünnungsreihen."
+Title: "MII VS Microbiology Titre Tests [LOINC]"
+Description: "Test ValueSet for titre determination: LOINC codes for semiquantitative measurements from dilution series."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

@@ -37,13 +37,13 @@
 Profile: MII_PR_Mikrobio_Allgemeine_Kultur
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-allgemeine-kultur
-Title: "MII PR Mikrobio Allgemeine Kultur"
-Description: "Allgemeine Kultur beschreibt das Ergebnis einer nicht zielgerichteten mikrobiologischen Kultur, die prüft, ob in der Probe irgendein Mikroorganismus wächst, ohne die Analyse auf einen vordefinierten Erreger zu beschränken."
+Title: "MII PR Microbiology General Culture"
+Description: "General culture describes the result of an untargeted microbiological culture that checks whether any microorganism grows in the specimen, without restricting the analysis to a predefined pathogen."
 * insert MIKRO_OBSERVATION_COMMON
-* ^purpose = "Dieses Profil beschreibt die allgemeine Kulturdiagnostik ohne vordefiniertes Ziel." 
+* ^purpose = "This profile describes general culture diagnostics without a predefined target." 
 * obeys allgemeine-kultur-method-with-neutral-code
 * code from MII_VS_Mikrobio_Allgemeine_Kultur_Tests_LOINC (extensible)
-* code ^short = "Bevorzugt 11475-1 'Microorganism identified in Specimen by Culture'. 41852-5 'Microorganism or agent identified in Specimen' ist gleichwertig zulaessig, weil das EU-Datenmodell die Methode nach Observation.method auslagert; derselbe Code steht auch bei der Allgemeinen Bestimmung, dort mit einem Organismus als Ergebnis. Bei 41852-5 ist Observation.method deshalb Pflicht (allgemeine-kultur-method-with-neutral-code). Siehe die Seite 'Profilauswahl und Abgrenzung'."
+* code ^short = "Preferably 11475-1 'Microorganism identified in Specimen by Culture'. 41852-5 'Microorganism or agent identified in Specimen' is equally permitted, because the EU data model moves the method out to Observation.method; the same code is also used by General determination, there with an organism as the result. With 41852-5, Observation.method is therefore mandatory (allgemeine-kultur-method-with-neutral-code). See the page 'Profile Selection and Delimitation'."
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED (required)

@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Detected_Not_Detected_SNOMED
 Id: mii-vs-mikrobio-detected-not-detected-snomed
-Title: "MII VS Mikrobio Detected Not Detected [SNOMED]"
-Description: "Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder nicht nachgewiesen. Ein unbestimmbares Ergebnis wird nicht hierüber, sondern über Observation.dataAbsentReason abgebildet."
+Title: "MII VS Microbiology Detected Not Detected [SNOMED]"
+Description: "Result ValueSet for targeted qualitative detections: detected or not detected. An indeterminable result is represented not here but via Observation.dataAbsentReason."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

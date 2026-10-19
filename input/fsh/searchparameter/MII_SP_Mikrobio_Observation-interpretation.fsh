@@ -5,7 +5,7 @@ Usage: #definition
 * insert Version
 * name = "ObservationInterpretation"
 * status = #active
-* description = "Suche nach der Interpretation einer mikrobiologischen Observation."
+* description = "Search by the interpretation of a microbiological Observation."
 * code = #interpretation
 * base = #Observation
 * type = #token

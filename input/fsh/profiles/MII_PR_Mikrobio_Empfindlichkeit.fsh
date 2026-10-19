@@ -1,10 +1,10 @@
 Profile: MII_PR_Mikrobio_Empfindlichkeit
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-empfindlichkeit
-Title: "MII PR Mikrobio Empfindlichkeit"
-Description: "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung eines Erregers gegenüber antimikrobiellen Substanzen unter Bezug auf ein Normsystem."
+Title: "MII PR Microbiology Susceptibility"
+Description: "Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to a norm system."
 * insert MIKRO_OBSERVATION_COMMON
-* ^purpose = "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung. Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, z. B. ein linezolidresistenter Enterococcus über 29258-1 |Linezolid [Susceptibility]| mit interpretation R; der Negativfall ist interpretation S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen nach MII_PR_Mikrobio_Spezifische_Bestimmung."
+* ^purpose = "This profile describes phenotypic susceptibility testing. The resistance of an already identified pathogen to a single substance is represented here, e.g. a linezolid-resistant Enterococcus via 29258-1 |Linezolid [Susceptibility]| with interpretation R; the negative case is interpretation S. The targeted detection of a resistant pathogen as such belongs to MII_PR_Mikrobio_Spezifische_Bestimmung instead."
 // Terminologische Luecke, nachverfolgt in Issue #92: Fuer den direkten zielgerichteten
 // LRE-Nachweis aus einer Probe fehlt ein geeigneter LOINC-Code; LOINC kennt zu Linezolid
 // nur [Susceptibility]-, Wirkspiegel- und Antikoerpercodes. Fuer MRSA und VRE existieren
@@ -14,7 +14,7 @@ Description: "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resist
 // fehlenden Testcode, da Observation.code die Testfrage und nicht den Organismus
 // ausdruecken soll.
 * code from MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC (extensible)
-* code ^short = "Bevorzugt LOINC-Codes OHNE praekoordiniertes Verfahren, z. B. 100044-7 'Cefcapene [Susceptibility]' und nicht die '... by Broth dilution'-Variante — das Verfahren gehoert nach Observation.method. Das EU-Datenmodell markiert diese methodenfreie Menge als 'methodless:true' und Preferred. Ebenso bevorzugt ohne praekoordinierte Specimentype-Angabe (System = XXX); der Specimentype wird separat ueber Specimen.type kodiert. NICHT hierher gehoeren Codes mit der Methode 'Genotyping', etwa 103958-5 'Ofloxacin [Susceptibility] by Genotype': Dieses Profil verlangt ein Grenzwert-Regelwerk in interpretation.extension[Norm], und eine genotypische Vorhersage beruht auf keinem. Sie gehoert nach MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit."
+* code ^short = "Preferably LOINC codes WITHOUT a pre-coordinated method, e.g. 100044-7 'Cefcapene [Susceptibility]' and not the '... by Broth dilution' variant — the method belongs in Observation.method. The EU data model marks this method-free set as 'methodless:true' and Preferred. Likewise preferably without a pre-coordinated specimen type (System = XXX); the specimen type is coded separately via Specimen.type. Codes with the method 'Genotyping', such as 103958-5 'Ofloxacin [Susceptibility] by Genotype', do NOT belong here: this profile requires a breakpoint rule set in interpretation.extension[Norm], and a genotypic prediction is based on none. It belongs to MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit."
 // ZWEI ERGEBNISFORMEN, nach dem Grundsatz des EU-Datenmodells (Blatt
 // "Phenotypic susceptibility", Zeile 46): "Result value will be quantitativ
 // (MIC value or diameter) or codeable (SIR)". Ein Labor, das nur die Kategorie
@@ -24,7 +24,7 @@ Description: "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resist
 * valueQuantity
   * code from MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM (extensible)
 * valueCodeableConcept from MII_VS_Mikrobio_Susceptibility (extensible)
-* valueCodeableConcept ^short = "Die Empfindlichkeitskategorie, wenn kein Messwert vorliegt. Aus derselben Liste wie interpretation, weil beide dasselbe aussagen; sind beide angegeben, muessen sie dieselbe Kategorie nennen. Die Norm steht dann an derjenigen Stelle, an der die Kategorie steht — hier in valueCodeableConcept.extension[Norm]."
+* valueCodeableConcept ^short = "The susceptibility category when no measured value is available. From the same list as interpretation, because both state the same thing; if both are given, they must name the same category. The norm is then in the place where the category is — here in valueCodeableConcept.extension[Norm]."
 // DIE NORM WIRD STRUKTURELL ERZWUNGEN, nicht ueber eine Invariante. Constraints
 // unter valueCodeableConcept greifen nur, WENN der Wert ein CodeableConcept ist:
 // Eine Kategorie kann damit nicht ohne Norm berichtet werden, ein Messwert

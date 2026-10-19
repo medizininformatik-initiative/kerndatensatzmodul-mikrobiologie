@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_CT_Wert_LOINC
 Id: mii-vs-mikrobio-ct-wert-loinc
-Title: "MII VS Mikrobio CT Wert [LOINC]"
-Description: "Tests-ValueSet für den Ct-Wert: LOINC-Codes mit der Eigenschaft Zyklusschwellenwert bei Nukleinsäurenachweisen."
+Title: "MII VS Microbiology Ct Value [LOINC]"
+Description: "Test ValueSet for the Ct value: LOINC codes with the property cycle threshold in nucleic acid detection."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_MRGN_Klasse",
-  "title": "MII PR Mikrobio MRGN Klasse",
+  "title": "MII PR Microbiology MRGN Class",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,8 +151,8 @@
       ]
     }
   ],
-  "description": "MRGN-Klasse beschreibt die Einstufung multiresistenter gramnegativer Erreger entsprechend der RKI-Kategorisierung.",
-  "purpose": "Dieses Profil beschreibt die MRGN-Klasse.",
+  "description": "MRGN class describes the classification of multidrug-resistant Gram-negative pathogens according to the RKI categorisation.",
+  "purpose": "This profile describes the MRGN class.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -165,7 +165,7 @@
         "id": "Observation.extension:triggeredBy-r5",
         "path": "Observation.extension",
         "sliceName": "triggeredBy-r5",
-        "short": "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung der MRGN-Einstufung wird nicht hierüber, sondern über derivedFrom abgebildet.",
+        "short": "Only for follow-up diagnostics that were actually triggered. The clinical derivation of the MRGN classification is represented not here but via derivedFrom.",
         "min": 0,
         "max": "*",
         "type": [
@@ -188,7 +188,7 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.category",
@@ -199,8 +199,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -238,7 +238,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "MRGN-Einstufung nach RKI. Wurde das identifizierte Isolat anhand der Empfindlichkeitsbefunde bewertet und ist keiner MRGN-Klasse zuzuordnen, wird 'Keine MRGN-Klasse' verwendet; dies ist vom negativen Ergebnis eines zielgerichteten Erregernachweises zu unterscheiden.",
+        "short": "MRGN classification according to RKI. If the identified isolate was assessed on the basis of the susceptibility results and cannot be assigned to any MRGN class, 'Keine MRGN-Klasse' (no MRGN class) is used; this is to be distinguished from the negative result of a targeted pathogen detection.",
         "type": [
           {
             "code": "CodeableConcept"
@@ -273,7 +273,7 @@
       {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
-        "short": "Untersuchungen, aus denen die Einstufung abgeleitet wurde: die Empfindlichkeitsbefunde der bewerteten Substanzgruppen, gegebenenfalls zusammen mit der Erregeridentifikation. Diese Untersuchungen SOLLTEN angegeben werden, damit die Grundlage der Einstufung nachvollziehbar ist. Sie dürfen entfallen, wenn die Klasse unmittelbar aus einem bereits eingestuften Laborbefund übernommen wird.",
+        "short": "Investigations from which the classification was derived: the susceptibility results of the assessed substance groups, where applicable together with the pathogen identification. These investigations SHOULD be stated so that the basis of the classification is traceable. They may be omitted if the class is taken directly from an already classified laboratory report.",
         "mustSupport": true
       }
     ]

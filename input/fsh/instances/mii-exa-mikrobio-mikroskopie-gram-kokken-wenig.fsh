@@ -9,8 +9,8 @@
 Instance: mii-exa-mikrobio-mikroskopie-gram-kokken-wenig
 InstanceOf: MII_PR_Mikrobio_Allgemeine_Mikroskopie
 Usage: #example
-Title: "MII EXA Mikrobio Allgemeine Mikroskopie wenig grampositive Kokken"
-Description: "Grampräparat mit wenig grampositiven Kokken: die Morphologie als Ergebnis, die semiquantitative Menge als Komponente."
+Title: "MII EXA Microbiology General Microscopy Few Gram-Positive Cocci"
+Description: "Gram preparation with few Gram-positive cocci: the morphology as the result, the semiquantitative quantity as a component."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "mikroskopie-gram-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Resistenzkategorie_Status
 Id: mii-vs-mikrobio-resistenzkategorie-status
-Title: "MII VS Mikrobio Resistenzkategorie Status"
-Description: "Untersuchungscodes fuer die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie."
+Title: "MII VS Microbiology Resistance Category Status"
+Description: "Investigation codes for assessing a detected pathogen with regard to a defined resistance category."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

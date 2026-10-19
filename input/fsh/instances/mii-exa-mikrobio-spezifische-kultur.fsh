@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-spezifische-kultur
 InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
-Title: "MII EXA Mikrobio Spezifische Kultur"
-Description: "Zielgerichteter Nachweis eines vordefinierten Erregers, kulturell durchgeführt und hier positiv."
+Title: "MII EXA Microbiology Specific Culture"
+Description: "Targeted detection of a predefined pathogen, performed by culture and positive here."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-kultur-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

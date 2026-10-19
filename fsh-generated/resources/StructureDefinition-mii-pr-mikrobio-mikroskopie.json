@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_Allgemeine_Mikroskopie",
-  "title": "MII PR Mikrobio Allgemeine Mikroskopie",
+  "title": "MII PR Microbiology General Microscopy",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,8 +151,8 @@
       ]
     }
   ],
-  "description": "Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies.",
-  "purpose": "Dieses Profil beschreibt mikroskopische Beobachtungen der Morphologie.",
+  "description": "General microscopy describes the morphological observation of microorganisms in a specimen by microscopic examination, optionally with staining techniques (e.g. Gram stain). The result is a morphological group, not a species.",
+  "purpose": "This profile describes microscopic observations of morphology.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -187,13 +187,13 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.extension:faerbung",
         "path": "Observation.extension",
         "sliceName": "faerbung",
-        "short": "Eingesetzte Faerbung, z. B. Gramfaerbung. Immer angeben, wenn gefaerbt wurde — auch wenn der Untersuchungscode sie schon nennt.",
+        "short": "Staining technique used, e.g. Gram stain. Always state it when a stain was applied — even when the investigation code already names it.",
         "min": 0,
         "max": "1",
         "type": [
@@ -215,8 +215,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -232,7 +232,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Bevorzugt 105059-0 'Microscopic observation [Identifier] in Specimen', weil es die Faerbung nicht in den Code zieht. 664-3 '... by Gram stain' ist gleichwertig zulaessig; die Faerbung wird in beiden Faellen zusaetzlich in extension[faerbung] angegeben, damit sie unabhaengig von der Codewahl an einer Stelle auswertbar ist.",
+        "short": "Preferably 105059-0 'Microscopic observation [Identifier] in Specimen', because it does not pull the stain into the code. 664-3 '... by Gram stain' is equally permitted; in both cases the stain is additionally stated in extension[faerbung], so that it can be evaluated in one place independently of the code chosen.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc"
@@ -251,7 +251,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Die beobachtete morphologische GRUPPE — grampositive Kokken, gramnegative Staebchen, Hyphen. KEINE Spezies: Eine Speziesidentifizierung gehoert in die Allgemeine Bestimmung, auch wenn sie mikroskopisch gestellt wurde. Ein Teil der Gruppen liegt in SNOMED in der Organismus-Hierarchie, weil es sie dort nur so gibt; das macht die Aussage nicht praeziser.",
+        "short": "The morphological GROUP observed — Gram-positive cocci, Gram-negative rods, hyphae. NO species: a species identification belongs in General determination, even if it was made microscopically. Some of the groups sit in the organism hierarchy in SNOMED because that is the only place they exist there; this does not make the statement more precise.",
         "type": [
           {
             "code": "CodeableConcept"
@@ -273,7 +273,7 @@
       {
         "id": "Observation.method",
         "path": "Observation.method",
-        "short": "Das mikroskopische Verfahren, z. B. 278289002 'Microscopy technique' oder eine Verengung davon. Die Faerbung gehoert NICHT hierher, sondern in extension[faerbung].",
+        "short": "The microscopic procedure, e.g. 278289002 'Microscopy technique' or a narrowing of it. The stain does NOT belong here but in extension[faerbung].",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"
@@ -310,8 +310,8 @@
         "id": "Observation.component:menge",
         "path": "Observation.component",
         "sliceName": "menge",
-        "short": "Semiquantitative Menge oder Zaehlung des berichteten Befunds",
-        "definition": "Wie viel des Befunds gesehen wurde: als semiquantitative Stufe, als Zaehlung je Gesichtsfeld oder als Intervall einer solchen Zaehlung.",
+        "short": "Semiquantitative quantity or count of the reported finding",
+        "definition": "How much of the finding was seen: as a semiquantitative grade, as a count per field of view, or as an interval of such a count.",
         "min": 0,
         "max": "1",
         "mustSupport": true
@@ -357,7 +357,7 @@
         "id": "Observation.component:menge.value[x]:valueCodeableConcept",
         "path": "Observation.component.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Semiquantitative Stufe, z. B. 'Few' oder 'Present two plus out of three plus'.",
+        "short": "Semiquantitative grade, e.g. 'Few' or 'Present two plus out of three plus'.",
         "min": 0,
         "max": "1",
         "type": [
@@ -374,7 +374,7 @@
         "id": "Observation.component:menge.value[x]:valueQuantity",
         "path": "Observation.component.value[x]",
         "sliceName": "valueQuantity",
-        "short": "Zaehlung je Gesichtsfeld, UCUM-Einheit /[HPF]. Fuer offene Grenzen wird Quantity.comparator verwendet, z. B. '<10/GF' als comparator = '<', value = 10.",
+        "short": "Count per field of view, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10.",
         "min": 0,
         "max": "1",
         "type": [
@@ -395,7 +395,7 @@
         "id": "Observation.component:menge.value[x]:valueRange",
         "path": "Observation.component.value[x]",
         "sliceName": "valueRange",
-        "short": "Zaehlung je Gesichtsfeld als Intervall, UCUM-Einheit /[HPF] — z. B. '10-25/GF' als low = 10, high = 25.",
+        "short": "Count per field of view as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25.",
         "min": 0,
         "max": "1",
         "type": [

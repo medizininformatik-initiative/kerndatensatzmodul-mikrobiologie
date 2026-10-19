@@ -26,7 +26,7 @@
 // Methodenwert erfinden, nur damit die Faerbung einen Traeger hat.
 Extension: MII_EX_Mikrobio_Faerbung
 Id: mii-ex-mikrobio-faerbung
-Title: "MII EX Mikrobio Färbung"
+Title: "MII EX Microbiology Staining"
 Description: "Staining technique used for the microscopic examination, coded with the same SNOMED CT hierarchy as the European laboratory coordination."
 * insert PR_CS_VS_Version
 * insert Publisher
@@ -36,4 +36,4 @@ Description: "Staining technique used for the microscopic examination, coded wit
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from MII_VS_Mikrobio_Faerbung_SNOMED (extensible)
-* valueCodeableConcept ^short = "Eingesetzte Faerbung, z. B. 62777006 'Gram stain method'. Immer angeben, wenn gefaerbt wurde — auch dann, wenn der Untersuchungscode die Faerbung schon nennt, damit die Angabe unabhaengig von der Codewahl an einer Stelle auswertbar ist."
+* valueCodeableConcept ^short = "Staining technique used, e.g. 62777006 'Gram stain method'. Always state it when a stain was applied — even when the investigation code already names the stain — so that the information can be evaluated in one place independently of the code chosen."

@@ -14,8 +14,8 @@
 //                                 Modellierung dieses Moduls.
 ValueSet: MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED
 Id: mii-vs-mikrobio-morphologie-ergebnis-snomed
-Title: "MII VS Mikrobio Morphologie Ergebnis [SNOMED]"
-Description: "Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologische Gruppe, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen. Eine Speziesidentifizierung gehört nicht hierher, auch wenn sie mikroskopisch gestellt wurde."
+Title: "MII VS Microbiology Morphology Result [SNOMED]"
+Description: "Result ValueSet for microscopy: the morphological group observed microscopically, such as Gram-positive cocci in clusters or Gram-negative rods. A species identification does not belong here, even if it was made microscopically."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

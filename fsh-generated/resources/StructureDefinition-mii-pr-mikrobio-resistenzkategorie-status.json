@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_Resistenzkategorie_Status",
-  "title": "MII PR Mikrobio Resistenzkategorie Status",
+  "title": "MII PR Microbiology Resistance Category Status",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,8 +151,8 @@
       ]
     }
   ],
-  "description": "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value.",
-  "purpose": "Dieses Profil bildet die aus den zugrunde liegenden mikrobiologischen Untersuchungen abgeleitete Bewertung eines Erregers hinsichtlich einer definierten Resistenzkategorie ab. Es ersetzt keinen zielgerichteten Erregernachweis: Ob ein Erreger überhaupt vorhanden ist, wird über MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur abgebildet.",
+  "description": "Assessment of a detected pathogen with regard to a defined resistance category, e.g. MRSA, VRE, LRE or LVRE. The assessed category is in Observation.code, the result of the assessment in Observation.value.",
+  "purpose": "This profile represents the assessment of a pathogen with regard to a defined resistance category, derived from the underlying microbiological investigations. It does not replace a targeted pathogen detection: whether a pathogen is present at all is represented via MII_PR_Mikrobio_Spezifische_Bestimmung or MII_PR_Mikrobio_Spezifische_Kultur.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -165,7 +165,7 @@
         "id": "Observation.extension:triggeredBy-r5",
         "path": "Observation.extension",
         "sliceName": "triggeredBy-r5",
-        "short": "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung der Kategorienbewertung wird nicht hierüber, sondern über derivedFrom abgebildet.",
+        "short": "Only for follow-up diagnostics that were actually triggered. The clinical derivation of the category assessment is represented not here but via derivedFrom.",
         "min": 0,
         "max": "*",
         "type": [
@@ -188,7 +188,7 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.category",
@@ -199,8 +199,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -216,7 +216,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Bewertete Resistenzkategorie, z. B. MRSA-Status. Es werden ausschließlich Kategorien dokumentiert, die für den vorliegenden Erreger fachlich anwendbar sind; für einen Enterococcus wird kein MRSA-Status erzeugt.",
+        "short": "Assessed resistance category, e.g. MRSA status. Only categories that are clinically applicable to the pathogen at hand are documented; no MRSA status is generated for an Enterococcus.",
         "binding": {
           "strength": "required",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzkategorie-status"
@@ -236,7 +236,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Positive: Der Erreger erfüllt die Kriterien der in code angegebenen Kategorie. Negative: Der Erreger wurde anhand der relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. Kann die Kategorie nicht ausreichend bewertet werden, wird nicht Negative angegeben, sondern dataAbsentReason gesetzt oder keine Status-Observation erzeugt.",
+        "short": "Positive: the pathogen meets the criteria of the category given in code. Negative: the pathogen was sufficiently assessed on the basis of the relevant investigations and does not meet the criteria. If the category cannot be sufficiently assessed, Negative is not stated; instead dataAbsentReason is set or no status Observation is created.",
         "min": 1,
         "type": [
           {
@@ -272,7 +272,7 @@
       {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
-        "short": "Untersuchungen, aus denen die Bewertung abgeleitet wurde: Erregeridentifikation, Empfindlichkeitstestung und Resistenzmechanismen/Determinanten. Diese Untersuchungen SOLLTEN angegeben werden, damit die Bewertungsgrundlage nachvollziehbar ist. Sie dürfen entfallen, wenn der Status unmittelbar aus einem bereits kategorisierten Laborbefund übernommen wird und die Einzeluntersuchungen nicht als eigene Observations vorliegen.",
+        "short": "Investigations from which the assessment was derived: pathogen identification, susceptibility testing and resistance mechanisms / determinants. These investigations SHOULD be stated so that the basis of the assessment is traceable. They may be omitted if the status is taken directly from an already categorised laboratory report and the individual investigations are not available as separate Observations.",
         "mustSupport": true
       }
     ]

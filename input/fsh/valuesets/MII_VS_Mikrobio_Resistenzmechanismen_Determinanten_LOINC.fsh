@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC
 Id: mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc
-Title: "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]"
-Description: "Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den Nachweis von Resistenzgenen, Resistenzproteinen und funktionalen Resistenztests."
+Title: "MII VS Microbiology Resistance Mechanisms Determinants [LOINC]"
+Description: "Test ValueSet for resistance mechanisms and determinants: LOINC codes for the detection of resistance genes, resistance proteins and functional resistance tests."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

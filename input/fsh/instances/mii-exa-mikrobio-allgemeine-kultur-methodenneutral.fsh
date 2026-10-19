@@ -7,8 +7,8 @@
 Instance: mii-exa-mikrobio-allgemeine-kultur-methodenneutral
 InstanceOf: MII_PR_Mikrobio_Allgemeine_Kultur
 Usage: #example
-Title: "MII EXA Mikrobio Allgemeine Kultur methodenneutraler Code"
-Description: "Ungerichtete kulturelle Anzucht ohne Wachstum mit dem methodenneutralen Untersuchungscode 41852-5: Erst die Methode weist die Untersuchung als Kultur aus."
+Title: "MII EXA Microbiology General Culture Method-Neutral Code"
+Description: "Untargeted culture without growth using the method-neutral investigation code 41852-5: only the method identifies the investigation as a culture."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "allg-kultur-2"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

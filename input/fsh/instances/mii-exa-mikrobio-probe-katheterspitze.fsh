@@ -4,8 +4,8 @@
 Instance: mii-exa-mikrobio-probe-katheterspitze
 InstanceOf: MII_PR_Mikrobio_Probe
 Usage: #example
-Title: "MII EXA Mikrobio Probe Katheterspitze"
-Description: "Katheterspitze als Probenmaterial. Sie hat weder Volumen noch Masse und ist damit selbst die Bezugsgröße der Keimzahl."
+Title: "MII EXA Microbiology Specimen Catheter Tip"
+Description: "Catheter tip as specimen material. It has neither volume nor mass and is therefore itself the reference quantity of the colony count."
 * identifier[0].system = "https://example.org/fhir/sid/test-specimen"
 * identifier[0].value = "probe-katheterspitze-1"
 * status = #available

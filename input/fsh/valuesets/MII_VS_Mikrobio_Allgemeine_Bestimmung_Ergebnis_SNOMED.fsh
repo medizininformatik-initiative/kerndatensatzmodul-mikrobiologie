@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED
 Id: mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed
-Title: "MII VS Mikrobio Allgemeine Bestimmung Ergebnis [SNOMED]"
-Description: "Ergebnis-ValueSet fuer die allgemeine Bestimmung: der identifizierte Mikroorganismus oder das negative Ergebnis, wenn kein Erreger identifiziert wurde."
+Title: "MII VS Microbiology General Determination Result [SNOMED]"
+Description: "Result ValueSet for general determination: the identified microorganism, or the negative result if no pathogen was identified."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

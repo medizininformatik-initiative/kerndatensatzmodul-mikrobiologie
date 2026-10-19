@@ -7,7 +7,7 @@ Usage: #definition
 * name = "MII_SP_Mikrobio_Observation_TriggeredBy"
 * status = #active
 * experimental = false
-* description = "Suche nach der Observation, die eine mikrobiologische Observation ausgelöst hat."
+* description = "Search by the Observation that triggered a microbiological Observation."
 * code = #triggered-by
 * base = #Observation
 * type = #reference

@@ -4,7 +4,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-logical-model-de",
   "version": "2027.0.0-ballot2",
   "name": "MII_LM_Mikrobio_Befund",
-  "title": "MII LM Mikrobio Befund",
+  "title": "MII LM Microbiology Report",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Logical Model des mikrobiologischen Befunds für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE]",
+  "description": "Logical model of the microbiological report for the graphical representation of the 2027 microbiology data model",
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "abstract": false,
@@ -30,14 +30,14 @@
       {
         "id": "mii-lm-mikrobio-logical-model-de",
         "path": "mii-lm-mikrobio-logical-model-de",
-        "short": "Mikrobiologischer Befund",
-        "definition": "Mikrobiologischer Befundbericht, der zusammengehörige mikrobiologische Untersuchungsergebnisse zusammenfasst und kontextualisiert."
+        "short": "Microbiological report",
+        "definition": "Microbiological report that summarises and contextualises related microbiological investigation results."
       },
       {
         "id": "mii-lm-mikrobio-logical-model-de.Identifikation",
         "path": "mii-lm-mikrobio-logical-model-de.Identifikation",
-        "short": "Identifikation",
-        "definition": "Eindeutiger Identifikator des Befunds.",
+        "short": "Identification",
+        "definition": "Unique identifier of the report.",
         "min": 1,
         "max": "*",
         "type": [
@@ -50,7 +50,7 @@
         "id": "mii-lm-mikrobio-logical-model-de.Status",
         "path": "mii-lm-mikrobio-logical-model-de.Status",
         "short": "Status",
-        "definition": "Status des Befunds (z. B. vorläufig, final, korrigiert).",
+        "definition": "Status of the report (e.g. preliminary, final, corrected).",
         "min": 1,
         "max": "1",
         "type": [
@@ -62,8 +62,8 @@
       {
         "id": "mii-lm-mikrobio-logical-model-de.Befundtyp",
         "path": "mii-lm-mikrobio-logical-model-de.Befundtyp",
-        "short": "Befundtyp",
-        "definition": "Fachliche Einordnung des mikrobiologischen Befunds (LOINC). Mehrfachangabe, wenn der Befund mehrere Studientypen umfasst, z. B. bakteriologisch und mykologisch.",
+        "short": "Report type",
+        "definition": "Clinical classification of the microbiological report (LOINC). Multiple entries if the report covers several study types, e.g. bacteriological and mycological.",
         "min": 0,
         "max": "*",
         "type": [
@@ -76,7 +76,7 @@
         "id": "mii-lm-mikrobio-logical-model-de.Patient",
         "path": "mii-lm-mikrobio-logical-model-de.Patient",
         "short": "Patient",
-        "definition": "Patient, auf den sich der Befund bezieht.",
+        "definition": "Patient to whom the report relates.",
         "min": 1,
         "max": "1",
         "type": [
@@ -91,8 +91,8 @@
       {
         "id": "mii-lm-mikrobio-logical-model-de.KlinischerBezugszeitpunkt",
         "path": "mii-lm-mikrobio-logical-model-de.KlinischerBezugszeitpunkt",
-        "short": "Klinischer Bezugszeitpunkt",
-        "definition": "Zeitpunkt, auf den sich der Befund inhaltlich bezieht (in der Regel der Zeitpunkt der Probenentnahme).",
+        "short": "Clinical reference time",
+        "definition": "Time to which the content of the report relates (usually the time of specimen collection).",
         "min": 1,
         "max": "1",
         "type": [
@@ -104,8 +104,8 @@
       {
         "id": "mii-lm-mikrobio-logical-model-de.QuelleKlinischerBezugszeitpunkt",
         "path": "mii-lm-mikrobio-logical-model-de.QuelleKlinischerBezugszeitpunkt",
-        "short": "Quelle des klinischen Bezugszeitpunkts",
-        "definition": "Gibt an, worauf sich der klinische Bezugszeitpunkt bezieht, z. B. Zeitpunkt der Probenentnahme oder Laboreingang.",
+        "short": "Source of the clinical reference time",
+        "definition": "Indicates what the clinical reference time refers to, e.g. time of specimen collection or receipt in the laboratory.",
         "min": 0,
         "max": "1",
         "type": [
@@ -117,8 +117,8 @@
       {
         "id": "mii-lm-mikrobio-logical-model-de.Dokumentationszeitpunkt",
         "path": "mii-lm-mikrobio-logical-model-de.Dokumentationszeitpunkt",
-        "short": "Dokumentationszeitpunkt",
-        "definition": "Zeitpunkt, zu dem der Befund freigegeben bzw. verfügbar gemacht wurde.",
+        "short": "Documentation time",
+        "definition": "Time at which the report was released or made available.",
         "min": 0,
         "max": "1",
         "type": [
@@ -130,8 +130,8 @@
       {
         "id": "mii-lm-mikrobio-logical-model-de.Anforderung",
         "path": "mii-lm-mikrobio-logical-model-de.Anforderung",
-        "short": "Anforderung",
-        "definition": "Zugrunde liegende Laboranforderung.",
+        "short": "Order",
+        "definition": "Underlying laboratory order.",
         "min": 0,
         "max": "1",
         "type": [
@@ -146,8 +146,8 @@
       {
         "id": "mii-lm-mikrobio-logical-model-de.Befundinterpret",
         "path": "mii-lm-mikrobio-logical-model-de.Befundinterpret",
-        "short": "Befundinterpret",
-        "definition": "Person, die den Befund fachlich beurteilt und verantwortet.",
+        "short": "Report interpreter",
+        "definition": "Person who clinically assesses and is responsible for the report.",
         "min": 0,
         "max": "*",
         "type": [
@@ -162,8 +162,8 @@
       {
         "id": "mii-lm-mikrobio-logical-model-de.Probenmaterial",
         "path": "mii-lm-mikrobio-logical-model-de.Probenmaterial",
-        "short": "Probenmaterial",
-        "definition": "Probenmaterialien, auf denen der Befund beruht.",
+        "short": "Specimen material",
+        "definition": "Specimen materials on which the report is based.",
         "min": 0,
         "max": "*",
         "type": [
@@ -178,8 +178,8 @@
       {
         "id": "mii-lm-mikrobio-logical-model-de.Untersuchung",
         "path": "mii-lm-mikrobio-logical-model-de.Untersuchung",
-        "short": "Untersuchung",
-        "definition": "Die im Befund enthaltenen mikrobiologischen Untersuchungen.",
+        "short": "Investigation",
+        "definition": "The microbiological investigations contained in the report.",
         "min": 0,
         "max": "*",
         "type": [

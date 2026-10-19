@@ -18,8 +18,8 @@
 Instance: mii-exa-mikrobio-probe
 InstanceOf: MII_PR_Mikrobio_Probe
 Usage: #example
-Title: "MII EXA Mikrobio Probe"
-Description: "Generisches Probenmaterial für die Beispiele dieses Moduls. Der Typ ist bewusst unspezifisch, weil dieselbe Probe Beispiele unterschiedlicher Untersuchungsarten trägt."
+Title: "MII EXA Microbiology Specimen"
+Description: "Generic specimen material for the examples of this module. The type is deliberately unspecific because the same specimen carries examples of different investigation types."
 * identifier[0].system = "https://example.org/fhir/sid/test-specimen"
 * identifier[0].value = "probe-1"
 * status = #available

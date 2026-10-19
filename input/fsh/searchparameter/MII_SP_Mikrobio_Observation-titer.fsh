@@ -14,7 +14,7 @@ Usage: #definition
 * name = "MII_SP_Mikrobio_Observation_Titer"
 * status = #active
 * experimental = false
-* description = "Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-Werts von MII_PR_Mikrobio_Titer; der Zaehler ist dort fest 1. Ein groesserer Nenner bedeutet einen hoeheren Titer, z. B. findet ?titer=gt160 alle Titer oberhalb von 1:160."
+* description = "Search by the dilution step of a titre. Indexes the denominator of the Ratio value of MII_PR_Mikrobio_Titer; the numerator is fixed at 1 there. A larger denominator means a higher titre, e.g. ?titer=gt160 finds all titres above 1:160."
 * code = #titer
 * base = #Observation
 * type = #quantity

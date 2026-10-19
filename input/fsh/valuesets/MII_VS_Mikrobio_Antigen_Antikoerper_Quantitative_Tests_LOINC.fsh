@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Antigen_Antikoerper_Quantitative_Tests_LOINC
 Id: mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc
-Title: "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]"
-Description: "Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für die Messung erregerspezifischer Antigene oder Antikörper."
+Title: "MII VS Microbiology Antigen Antibody Quantitative Tests [LOINC]"
+Description: "Test ValueSet for quantitative antigen and antibody tests: LOINC codes for measuring pathogen-specific antigens or antibodies."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

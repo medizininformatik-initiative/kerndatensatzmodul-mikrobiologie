@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Bartlett_Score_LOINC
 Id: mii-vs-mikrobio-bartlett-score-loinc
-Title: "MII VS Mikrobio Bartlett Score [LOINC]"
-Description: "Ergebnis-ValueSet für den Bartlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten."
+Title: "MII VS Microbiology Bartlett Score [LOINC]"
+Description: "Result ValueSet for the Bartlett score: score categories from +3 to -1 that rate the ratio of inflammatory to epithelial cells and thus the suitability of a sputum specimen for culture."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

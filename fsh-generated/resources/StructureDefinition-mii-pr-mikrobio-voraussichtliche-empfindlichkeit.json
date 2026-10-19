@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit",
-  "title": "MII PR Mikrobio Voraussichtliche Empfindlichkeit",
+  "title": "MII PR Microbiology Predicted Susceptibility",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,8 +151,8 @@
       ]
     }
   ],
-  "description": "Voraussichtliche Empfindlichkeit beschreibt die aus genotypischen Resistenznachweisen abgeleitete erwartete Suszeptibilität oder Resistenz gegenüber antimikrobiellen Substanzen.",
-  "purpose": "Dieses Profil beschreibt die voraussichtliche Empfindlichkeit.",
+  "description": "Predicted susceptibility describes the expected susceptibility or resistance to antimicrobial substances derived from genotypic resistance detections.",
+  "purpose": "This profile describes predicted susceptibility.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -187,7 +187,7 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.category",
@@ -198,8 +198,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -215,7 +215,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Ein Code mit der Methode 'Genotyping', z. B. 103958-5 'Ofloxacin [Susceptibility] by Genotype'. ABGRENZUNG zur gemessenen Empfindlichkeit: Dieses Profil verlangt KEIN Grenzwert-Regelwerk, weil eine Vorhersage auf einem Genotyp und nicht auf Grenzwerten beruht. MII_PR_Mikrobio_Empfindlichkeit verlangt es dagegen verpflichtend — dort ist ein 'by Genotype'-Code deshalb fehl am Platz, unabhaengig davon, dass die Bindung ihn formal zulaesst.",
+        "short": "A code with the method 'Genotyping', e.g. 103958-5 'Ofloxacin [Susceptibility] by Genotype'. DELIMITATION from measured susceptibility: this profile does NOT require a breakpoint rule set, because a prediction is based on a genotype and not on breakpoints. MII_PR_Mikrobio_Empfindlichkeit, by contrast, requires it mandatorily — a 'by Genotype' code is therefore out of place there, regardless of the fact that the binding formally permits it.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"

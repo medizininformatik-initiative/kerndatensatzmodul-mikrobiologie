@@ -8,8 +8,8 @@
 Instance: mii-exa-mikrobio-labor
 InstanceOf: Organization
 Usage: #example
-Title: "MII EXA Mikrobio Labor"
-Description: "Durchführendes mikrobiologisches Labor der Beispiele dieses Moduls."
+Title: "MII EXA Microbiology Laboratory"
+Description: "Performing microbiology laboratory of the examples of this module."
 * identifier[0].system = "https://example.org/fhir/sid/test-organizations"
 * identifier[0].value = "mibi-labor-1"
 * active = true

@@ -11,7 +11,7 @@
 Instance: mii-exa-mikrobio-patient
 InstanceOf: Patient
 Usage: #example
-Title: "MII EXA Mikrobio Patient"
-Description: "Minimales Subject für die Beispiele dieses Moduls. Kein Profil, keine Demografie — Patient wird vom Personen-Modul verantwortet."
+Title: "MII EXA Microbiology Patient"
+Description: "Minimal subject for the examples of this module. No profile, no demographics — Patient is the responsibility of the Person module."
 * identifier[0].system = "https://example.org/fhir/sid/test-patient"
 * identifier[0].value = "111"

@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Molekulare_Diagnostik_Einheiten_UCUM
 Id: mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum
-Title: "MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]"
-Description: "Einheiten-ValueSet für die molekulare Pathogenlast (UCUM): Konzentrationsangaben wie Kopien pro Milliliter."
+Title: "MII VS Microbiology Molecular Diagnostics Units [UCUM]"
+Description: "Unit ValueSet for molecular pathogen load (UCUM): concentration units such as copies per millilitre."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

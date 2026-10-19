@@ -13,8 +13,8 @@
 // MII_EX_Mikrobio_Faerbung diese Codes und nicht Observation.method.
 ValueSet: MII_VS_Mikrobio_Faerbung_SNOMED
 Id: mii-vs-mikrobio-faerbung-snomed
-Title: "MII VS Mikrobio Färbung [SNOMED]"
-Description: "Färbeverfahren der mikroskopischen Untersuchung, z. B. Gramfärbung oder Kinyounfärbung."
+Title: "MII VS Microbiology Staining [SNOMED]"
+Description: "Staining procedures of the microscopic examination, e.g. Gram stain or Kinyoun stain."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

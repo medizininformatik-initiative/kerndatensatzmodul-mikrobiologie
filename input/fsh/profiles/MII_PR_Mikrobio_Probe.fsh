@@ -35,16 +35,16 @@
 Profile: MII_PR_Mikrobio_Probe
 Parent: https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/StructureDefinition/SpecimenCore
 Id: mii-pr-mikrobio-probe
-Title: "MII PR Mikrobio Probe"
-Description: "Probe beschreibt das mikrobiologisch untersuchte Material. Das Profil leitet vom Bioproben-Basisprofil der MII-Biobank ab und ergaenzt die Erwartungen der mikrobiologischen Diagnostik."
+Title: "MII PR Microbiology Specimen"
+Description: "Specimen describes the material examined microbiologically. The profile derives from the biospecimen base profile of the MII Biobank module and adds the expectations of microbiological diagnostics."
 * insert PR_CS_VS_Version
 * insert Publisher
 // Modulthema. Der Biobank-Parent traegt keine Themen, hier werden sie also neu
 // angelegt — dieselbe Regel, siehe input/fsh/rulesets/crmi.fsh.
 * insert CRMIArtifactTopic(0, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C16851)
 * insert CRMIArtifactTopic(+, http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl, C217438)
-* ^purpose = "Dieses Profil gibt Observation.specimen der mikrobiologischen Untersuchungsprofile ein Zielprofil und benennt die fuer die Mikrobiologie tragenden Angaben."
-* type ^short = "Probenart. Auch dann anzugeben, wenn das Material im verwendeten LOINC-Code bereits praekoordiniert ist — nur so steht die Probenart strukturiert und unabhaengig vom Untersuchungscode zur Verfuegung."
-* collection.collected[x] ^short = "Entnahmezeitpunkt. Ist er nicht bekannt, kann stattdessen Specimen.receivedTime dokumentiert werden; der Parent verlangt collected[x] jedoch verpflichtend."
-* processing ^comment = "Bis 2027.0.0-ballot.rc2 verlangte der Parent hier verpflichtend die Extension 'temperaturbedingungen', eine Pflicht aus der Lagerung von Bioproben ohne Aussage fuer die mikrobiologische Aufarbeitung. Seit 2027.0.0-ballot ist sie 0..1 und auf den Lagerprozess-Slice begrenzt. Die Faerbetechnik wird trotzdem nicht hier, sondern in Observation.extension[faerbung] angegeben, solange offen ist, ob ueberhaupt eine Specimen-Ressource entsteht."
-* parent ^short = "Verweis auf das Material, aus dem diese Probe gewonnen wurde — etwa ein Isolat aus einer Primaerprobe. Traegt die Kette von der Primaerprobe zum Isolat, auf das sich Empfindlichkeitstestung und Resistenzmechanismen beziehen."
+* ^purpose = "This profile gives Observation.specimen of the microbiological investigation profiles a target profile and names the information that matters for microbiology."
+* type ^short = "Specimen type. To be stated even when the material is already pre-coordinated in the LOINC code used — only then is the specimen type available in a structured form, independently of the investigation code."
+* collection.collected[x] ^short = "Collection time. If it is unknown, Specimen.receivedTime can be documented instead; the parent, however, requires collected[x] mandatorily."
+* processing ^comment = "Up to 2027.0.0-ballot.rc2 the parent mandatorily required the extension 'temperaturbedingungen' here, an obligation stemming from biospecimen storage with no relevance to microbiological processing. Since 2027.0.0-ballot it is 0..1 and limited to the storage-process slice. The staining technique is nevertheless stated not here but in Observation.extension[faerbung], as long as it remains open whether a Specimen resource is created at all."
+* parent ^short = "Reference to the material from which this specimen was obtained — for instance an isolate from a primary specimen. Carries the chain from the primary specimen to the isolate to which susceptibility testing and resistance mechanisms refer."

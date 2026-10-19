@@ -32,8 +32,8 @@ RuleSet: MIKRO_MENGE_KOMPONENTE
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slicing nach dem Komponenten-Code."
 * component contains menge 0..1 MS
-* component[menge] ^short = "Semiquantitative Menge oder Zaehlung des berichteten Befunds"
-* component[menge] ^definition = "Wie viel des Befunds gesehen wurde: als semiquantitative Stufe, als Zaehlung je Gesichtsfeld oder als Intervall einer solchen Zaehlung."
+* component[menge] ^short = "Semiquantitative quantity or count of the reported finding"
+* component[menge] ^definition = "How much of the finding was seen: as a semiquantitative grade, as a count per field of view, or as an interval of such a count."
 // KEIN Display und KEINE Version im Pattern: Ein Pattern verlangt
 // Uebereinstimmung in jedem gesetzten Feld, ein Labor mit anderem Display oder
 // ohne Coding.version waere also nicht konform. Deshalb $sct-no-ver und nur der
@@ -42,10 +42,10 @@ RuleSet: MIKRO_MENGE_KOMPONENTE
 * component[menge].code = $sct-no-ver#103392008
 * component[menge].value[x] only CodeableConcept or Quantity or Range
 * component[menge].valueCodeableConcept from MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED (extensible)
-* component[menge].valueCodeableConcept ^short = "Semiquantitative Stufe, z. B. 'Few' oder 'Present two plus out of three plus'."
-* component[menge].valueQuantity ^short = "Zaehlung je Gesichtsfeld, UCUM-Einheit /[HPF]. Fuer offene Grenzen wird Quantity.comparator verwendet, z. B. '<10/GF' als comparator = '<', value = 10."
+* component[menge].valueCodeableConcept ^short = "Semiquantitative grade, e.g. 'Few' or 'Present two plus out of three plus'."
+* component[menge].valueQuantity ^short = "Count per field of view, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10."
 * component[menge].valueQuantity.code from MII_VS_Mikrobio_Mikroskopie_Gesichtsfeld_Einheiten_UCUM (extensible)
-* component[menge].valueRange ^short = "Zaehlung je Gesichtsfeld als Intervall, UCUM-Einheit /[HPF] — z. B. '10-25/GF' als low = 10, high = 25."
+* component[menge].valueRange ^short = "Count per field of view as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25."
 // Range.low und Range.high sind je ein eigenes Quantity, die Bindung muss also
 // zweimal stehen — sonst waere an einer der beiden Grenzen jede Einheit erlaubt.
 * component[menge].valueRange.low.code from MII_VS_Mikrobio_Mikroskopie_Gesichtsfeld_Einheiten_UCUM (extensible)

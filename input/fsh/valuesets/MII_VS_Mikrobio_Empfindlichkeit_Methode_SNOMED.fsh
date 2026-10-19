@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Empfindlichkeit_Methode_SNOMED
 Id: mii-vs-mikrobio-empfindlichkeit-methode-snomed
-Title: "MII VS Mikrobio Empfindlichkeit Methode [SNOMED]"
-Description: "Methoden-ValueSet für die phänotypische Empfindlichkeitstestung: die Verfahren, mit denen eine minimale Hemmkonzentration oder ein Hemmhofdurchmesser gemessen wird."
+Title: "MII VS Microbiology Susceptibility Method [SNOMED]"
+Description: "Method ValueSet for phenotypic susceptibility testing: the procedures used to measure a minimum inhibitory concentration or an inhibition zone diameter."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

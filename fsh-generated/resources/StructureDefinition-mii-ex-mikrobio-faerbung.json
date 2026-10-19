@@ -4,7 +4,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-ex-mikrobio-faerbung",
   "version": "2027.0.0-ballot2",
   "name": "MII_EX_Mikrobio_Faerbung",
-  "title": "MII EX Mikrobio Färbung",
+  "title": "MII EX Microbiology Staining",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -46,7 +46,7 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
-        "short": "Eingesetzte Faerbung, z. B. 62777006 'Gram stain method'. Immer angeben, wenn gefaerbt wurde — auch dann, wenn der Untersuchungscode die Faerbung schon nennt, damit die Angabe unabhaengig von der Codewahl an einer Stelle auswertbar ist.",
+        "short": "Staining technique used, e.g. 62777006 'Gram stain method'. Always state it when a stain was applied — even when the investigation code already names the stain — so that the information can be evaluated in one place independently of the code chosen.",
         "min": 1,
         "type": [
           {

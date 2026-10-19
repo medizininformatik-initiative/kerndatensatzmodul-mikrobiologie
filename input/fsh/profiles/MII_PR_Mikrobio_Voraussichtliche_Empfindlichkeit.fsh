@@ -1,12 +1,12 @@
 Profile: MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-voraussichtliche-empfindlichkeit
-Title: "MII PR Mikrobio Voraussichtliche Empfindlichkeit"
-Description: "Voraussichtliche Empfindlichkeit beschreibt die aus genotypischen Resistenznachweisen abgeleitete erwartete Suszeptibilität oder Resistenz gegenüber antimikrobiellen Substanzen."
+Title: "MII PR Microbiology Predicted Susceptibility"
+Description: "Predicted susceptibility describes the expected susceptibility or resistance to antimicrobial substances derived from genotypic resistance detections."
 * insert MIKRO_OBSERVATION_COMMON
-* ^purpose = "Dieses Profil beschreibt die voraussichtliche Empfindlichkeit." 
+* ^purpose = "This profile describes predicted susceptibility." 
 * code from MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC (extensible)
-* code ^short = "Ein Code mit der Methode 'Genotyping', z. B. 103958-5 'Ofloxacin [Susceptibility] by Genotype'. ABGRENZUNG zur gemessenen Empfindlichkeit: Dieses Profil verlangt KEIN Grenzwert-Regelwerk, weil eine Vorhersage auf einem Genotyp und nicht auf Grenzwerten beruht. MII_PR_Mikrobio_Empfindlichkeit verlangt es dagegen verpflichtend — dort ist ein 'by Genotype'-Code deshalb fehl am Platz, unabhaengig davon, dass die Bindung ihn formal zulaesst."
+* code ^short = "A code with the method 'Genotyping', e.g. 103958-5 'Ofloxacin [Susceptibility] by Genotype'. DELIMITATION from measured susceptibility: this profile does NOT require a breakpoint rule set, because a prediction is based on a genotype and not on breakpoints. MII_PR_Mikrobio_Empfindlichkeit, by contrast, requires it mandatorily — a 'by Genotype' code is therefore out of place there, regardless of the fact that the binding formally permits it."
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit (required)

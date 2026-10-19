@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-allgemeine-kultur
 InstanceOf: MII_PR_Mikrobio_Allgemeine_Kultur
 Usage: #example
-Title: "MII EXA Mikrobio Allgemeine Kultur"
-Description: "Ungerichtete kulturelle Anzucht mit Wachstumsnachweis, aerobe Kultur."
+Title: "MII EXA Microbiology General Culture"
+Description: "Untargeted culture with growth detected, aerobic culture."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "allg-kultur-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

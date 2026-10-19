@@ -1,16 +1,16 @@
 Profile: MII_PR_Mikrobio_Allgemeine_Mikroskopie
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-mikroskopie
-Title: "MII PR Mikrobio Allgemeine Mikroskopie"
-Description: "Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies."
+Title: "MII PR Microbiology General Microscopy"
+Description: "General microscopy describes the morphological observation of microorganisms in a specimen by microscopic examination, optionally with staining techniques (e.g. Gram stain). The result is a morphological group, not a species."
 * insert MIKRO_OBSERVATION_COMMON
-* ^purpose = "Dieses Profil beschreibt mikroskopische Beobachtungen der Morphologie." 
+* ^purpose = "This profile describes microscopic observations of morphology." 
 * code from MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC (extensible)
-* code ^short = "Bevorzugt 105059-0 'Microscopic observation [Identifier] in Specimen', weil es die Faerbung nicht in den Code zieht. 664-3 '... by Gram stain' ist gleichwertig zulaessig; die Faerbung wird in beiden Faellen zusaetzlich in extension[faerbung] angegeben, damit sie unabhaengig von der Codewahl an einer Stelle auswertbar ist."
+* code ^short = "Preferably 105059-0 'Microscopic observation [Identifier] in Specimen', because it does not pull the stain into the code. 664-3 '... by Gram stain' is equally permitted; in both cases the stain is additionally stated in extension[faerbung], so that it can be evaluated in one place independently of the code chosen."
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED (extensible)
-* valueCodeableConcept ^short = "Die beobachtete morphologische GRUPPE — grampositive Kokken, gramnegative Staebchen, Hyphen. KEINE Spezies: Eine Speziesidentifizierung gehoert in die Allgemeine Bestimmung, auch wenn sie mikroskopisch gestellt wurde. Ein Teil der Gruppen liegt in SNOMED in der Organismus-Hierarchie, weil es sie dort nur so gibt; das macht die Aussage nicht praeziser."
+* valueCodeableConcept ^short = "The morphological GROUP observed — Gram-positive cocci, Gram-negative rods, hyphae. NO species: a species identification belongs in General determination, even if it was made microscopically. Some of the groups sit in the organism hierarchy in SNOMED because that is the only place they exist there; this does not make the statement more precise."
 // FAERBUNG UND METHODE waren bis 2026-09-12 dasselbe Element. Observation.method
 // ist im Elternprofil 0..1, und weil 278289002 |Microscopy techniques| das
 // Konzept 708061008 |Gram stain| nicht subsumiert (gemessen 2026-09-10), passte
@@ -19,9 +19,9 @@ Description: "Allgemeine Mikroskopie beschreibt die morphologische Beobachtung v
 // traegt nur noch das Mikroskopieverfahren. Siehe MII_EX_Mikrobio_Faerbung fuer
 // die Begruendung der Elementwahl.
 * extension contains MII_EX_Mikrobio_Faerbung named faerbung 0..1 MS
-* extension[faerbung] ^short = "Eingesetzte Faerbung, z. B. Gramfaerbung. Immer angeben, wenn gefaerbt wurde — auch wenn der Untersuchungscode sie schon nennt."
+* extension[faerbung] ^short = "Staining technique used, e.g. Gram stain. Always state it when a stain was applied — even when the investigation code already names it."
 * method from MII_VS_Mikrobio_Morphologie_Methode_SNOMED (extensible)
-* method ^short = "Das mikroskopische Verfahren, z. B. 278289002 'Microscopy technique' oder eine Verengung davon. Die Faerbung gehoert NICHT hierher, sondern in extension[faerbung]."
+* method ^short = "The microscopic procedure, e.g. 278289002 'Microscopy technique' or a narrowing of it. The stain does NOT belong here but in extension[faerbung]."
 
 // KOMPONENTE MENGE. Sie loest den haeufigsten Grambefund, der bisher nicht
 // abbildbar war: "wenig grampositive Kokken" braucht die Morphologie UND die

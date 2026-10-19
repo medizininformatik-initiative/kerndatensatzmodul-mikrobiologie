@@ -8,8 +8,8 @@
 Instance: mii-exa-mikrobio-spezifische-bestimmung-vre-negativ
 InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
-Title: "MII EXA Mikrobio Spezifische Bestimmung VRE negativ"
-Description: "Negativer VRE-Nachweis: Der Test auf vancomycinresistente Enterokokken ist negativ."
+Title: "MII EXA Microbiology Specific Determination VRE Negative"
+Description: "Negative VRE detection: the test for vancomycin-resistant enterococci is negative."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-best-vre-neg-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

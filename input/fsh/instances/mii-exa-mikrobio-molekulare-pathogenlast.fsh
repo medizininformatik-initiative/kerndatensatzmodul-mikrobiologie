@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-molekulare-pathogenlast
 InstanceOf: MII_PR_Mikrobio_Molekulare_Pathogenlast
 Usage: #example
-Title: "MII EXA Mikrobio Molekulare Pathogenlast"
-Description: "Quantitative molekulare Erregerlast am Beispiel der CMV-DNA in Kopien je Milliliter."
+Title: "MII EXA Microbiology Molecular Pathogen Load"
+Description: "Quantitative molecular pathogen load, using the example of CMV DNA in copies per millilitre."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "pathogenlast-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

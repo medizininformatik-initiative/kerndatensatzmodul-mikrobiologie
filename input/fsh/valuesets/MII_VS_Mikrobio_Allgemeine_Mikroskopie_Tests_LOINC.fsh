@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC
 Id: mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc
-Title: "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]"
-Description: "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei."
+Title: "MII VS Microbiology General Microscopy Tests [LOINC]"
+Description: "Test ValueSet for general microscopy: nominal LOINC codes for microscopic observation whose result is the morphology seen. 105059-0 is preferred because it is method-neutral; the codes with a stain in the name (Gram, acid-fast, rhodamine-auramine) are equally permitted and leave Observation.method free in return."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

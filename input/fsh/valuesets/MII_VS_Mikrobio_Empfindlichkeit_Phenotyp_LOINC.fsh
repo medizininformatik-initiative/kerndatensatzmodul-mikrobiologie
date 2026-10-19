@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Empfindlichkeit_Phenotyp_LOINC
 Id: mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc
-Title: "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]"
-Description: "Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der getesteten antimikrobiellen Substanz."
+Title: "MII VS Microbiology Susceptibility Phenotype [LOINC]"
+Description: "Test ValueSet for phenotypic susceptibility testing: LOINC codes of the antimicrobial substance tested."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

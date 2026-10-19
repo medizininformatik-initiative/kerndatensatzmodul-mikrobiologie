@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Allgemeine_Bestimmung_Tests_LOINC
 Id: mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc
-Title: "MII VS Mikrobio Allgemeine Bestimmung Tests [LOINC]"
-Description: "Tests-ValueSet für die allgemeine Bestimmung: LOINC-Codes für die ungerichtete Identifizierung eines Mikroorganismus. Bevorzugt wird 41852-5; die übrigen Codes sind gleichwertig zulässig, wo das Labor die Erregergruppe oder das Sequenzierziel im Code benennt."
+Title: "MII VS Microbiology General Determination Tests [LOINC]"
+Description: "Test ValueSet for general determination: LOINC codes for the untargeted identification of a microorganism. 41852-5 is preferred; the remaining codes are equally permitted where the laboratory names the pathogen group or the sequencing target in the code."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

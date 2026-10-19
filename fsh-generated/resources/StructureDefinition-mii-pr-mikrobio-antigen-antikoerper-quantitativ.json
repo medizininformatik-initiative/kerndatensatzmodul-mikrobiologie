@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ",
-  "title": "MII PR Mikrobio Antigen Antikoerper Quantitativ",
+  "title": "MII PR Microbiology Antigen Antibody Quantitative",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,7 +151,7 @@
       ]
     }
   ],
-  "description": "Quantitative Antigen-/Antikörperantwort beschreibt die quantitative Messung erregerspezifischer Antigene oder Antikörper in einer Probe, bestimmt mittels immunologischer Verfahren.",
+  "description": "Quantitative antigen/antibody response describes the quantitative measurement of pathogen-specific antigens or antibodies in a specimen, determined by immunological procedures.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -186,7 +186,7 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.category",
@@ -197,8 +197,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -214,7 +214,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "In der Serologie ist ein praekoordiniertes Specimen ausdruecklich zulaessig — anders als in den uebrigen Bereichen dieses Moduls gilt die Konvention 'System = XXX' hier NICHT. Das europaeische Whitepaper begruendet die Ausnahme damit, dass in der Serologie nur wenige Materialien vorkommen, ueberwiegend Serum, und ein Code-Wildwuchs deshalb nicht droht.",
+        "short": "In serology a pre-coordinated specimen is explicitly permitted — unlike in the other areas of this module, the convention 'System = XXX' does NOT apply here. The European white paper justifies the exception by the fact that only a few materials occur in serology, predominantly serum, so that an uncontrolled growth of codes is not a risk.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"
@@ -242,7 +242,7 @@
       {
         "id": "Observation.value[x]:valueQuantity.code",
         "path": "Observation.value[x].code",
-        "short": "Bevorzugt eine Einheit mit LITER als Nenner — ng/L, pg/L, ug/L, [IU]/L, [arb'U]/L. Das europaeische Whitepaper empfiehlt fuer die Serologie den Liter, weil das NPU-System ihn durchgaengig verwendet. Die mL-Varianten bleiben zulaessig, weil [IU]/mL international verbreitet ist.",
+        "short": "Preferably a unit with LITRE as the denominator — ng/L, pg/L, ug/L, [IU]/L, [arb'U]/L. The European white paper recommends the litre for serology because the NPU system uses it consistently. The mL variants remain permitted because [IU]/mL is widespread internationally.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"

@@ -12,8 +12,8 @@
 Instance: mii-exa-mikrobio-empfindlichkeit-nur-kategorie
 InstanceOf: MII_PR_Mikrobio_Empfindlichkeit
 Usage: #example
-Title: "MII EXA Mikrobio Empfindlichkeit nur Kategorie"
-Description: "Phänotypische Empfindlichkeitstestung, bei der nur die Kategorie berichtet wird und kein Messwert vorliegt; die Norm steht an derselben Stelle wie die Kategorie."
+Title: "MII EXA Microbiology Susceptibility Category Only"
+Description: "Phenotypic susceptibility testing in which only the category is reported and no measured value is available; the norm is in the same place as the category."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "empf-nur-kategorie-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

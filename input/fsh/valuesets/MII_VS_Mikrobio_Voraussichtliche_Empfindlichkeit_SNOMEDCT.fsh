@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit
 Id: mii-vs-mikrobio-voraussichtliche-empfindlichkeit
-Title: "MII VS Mikrobio Voraussichtliche Empfindlichkeit"
-Description: "Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypischen Nachweisen abgeleitete erwartete Kategorie sensibel, intermediär oder resistent."
+Title: "MII VS Microbiology Predicted Susceptibility"
+Description: "Result ValueSet for predicted susceptibility: the expected category susceptible, intermediate or resistant derived from genotypic detections."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

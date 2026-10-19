@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_Empfindlichkeit",
-  "title": "MII PR Mikrobio Empfindlichkeit",
+  "title": "MII PR Microbiology Susceptibility",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,8 +151,8 @@
       ]
     }
   ],
-  "description": "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung eines Erregers gegenüber antimikrobiellen Substanzen unter Bezug auf ein Normsystem.",
-  "purpose": "Dieses Profil beschreibt die phänotypische Empfindlichkeitstestung. Die Resistenz eines bereits identifizierten Erregers gegen eine einzelne Substanz wird hier abgebildet, z. B. ein linezolidresistenter Enterococcus über 29258-1 |Linezolid [Susceptibility]| mit interpretation R; der Negativfall ist interpretation S. Der zielgerichtete Nachweis eines resistenten Erregers als solchen gehört dagegen nach MII_PR_Mikrobio_Spezifische_Bestimmung.",
+  "description": "Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to a norm system.",
+  "purpose": "This profile describes phenotypic susceptibility testing. The resistance of an already identified pathogen to a single substance is represented here, e.g. a linezolid-resistant Enterococcus via 29258-1 |Linezolid [Susceptibility]| with interpretation R; the negative case is interpretation S. The targeted detection of a resistant pathogen as such belongs to MII_PR_Mikrobio_Spezifische_Bestimmung instead.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -200,7 +200,7 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.category",
@@ -211,8 +211,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -228,7 +228,7 @@
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "Bevorzugt LOINC-Codes OHNE praekoordiniertes Verfahren, z. B. 100044-7 'Cefcapene [Susceptibility]' und nicht die '... by Broth dilution'-Variante — das Verfahren gehoert nach Observation.method. Das EU-Datenmodell markiert diese methodenfreie Menge als 'methodless:true' und Preferred. Ebenso bevorzugt ohne praekoordinierte Specimentype-Angabe (System = XXX); der Specimentype wird separat ueber Specimen.type kodiert. NICHT hierher gehoeren Codes mit der Methode 'Genotyping', etwa 103958-5 'Ofloxacin [Susceptibility] by Genotype': Dieses Profil verlangt ein Grenzwert-Regelwerk in interpretation.extension[Norm], und eine genotypische Vorhersage beruht auf keinem. Sie gehoert nach MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit.",
+        "short": "Preferably LOINC codes WITHOUT a pre-coordinated method, e.g. 100044-7 'Cefcapene [Susceptibility]' and not the '... by Broth dilution' variant — the method belongs in Observation.method. The EU data model marks this method-free set as 'methodless:true' and Preferred. Likewise preferably without a pre-coordinated specimen type (System = XXX); the specimen type is coded separately via Specimen.type. Codes with the method 'Genotyping', such as 103958-5 'Ofloxacin [Susceptibility] by Genotype', do NOT belong here: this profile requires a breakpoint rule set in interpretation.extension[Norm], and a genotypic prediction is based on none. It belongs to MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"
@@ -268,7 +268,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Die Empfindlichkeitskategorie, wenn kein Messwert vorliegt. Aus derselben Liste wie interpretation, weil beide dasselbe aussagen; sind beide angegeben, muessen sie dieselbe Kategorie nennen. Die Norm steht dann an derjenigen Stelle, an der die Kategorie steht — hier in valueCodeableConcept.extension[Norm].",
+        "short": "The susceptibility category when no measured value is available. From the same list as interpretation, because both state the same thing; if both are given, they must name the same category. The norm is then in the place where the category is — here in valueCodeableConcept.extension[Norm].",
         "type": [
           {
             "code": "CodeableConcept"

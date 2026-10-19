@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_Nugent_Score",
-  "title": "MII PR Mikrobio Nugent Score",
+  "title": "MII PR Microbiology Nugent Score",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,7 +151,7 @@
       ]
     }
   ],
-  "description": "Nugent-Score beschreibt ein Gramfärbungs-basiertes semiquantitatives Punktesystem zur Beurteilung vaginaler Mikrobiotamuster bei bakterieller Vaginose.",
+  "description": "Nugent score describes a Gram-stain-based semiquantitative scoring system for assessing vaginal microbiota patterns in bacterial vaginosis.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -186,7 +186,7 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.category",
@@ -197,8 +197,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -236,7 +236,7 @@
         "id": "Observation.value[x]:valueQuantity",
         "path": "Observation.value[x]",
         "sliceName": "valueQuantity",
-        "comment": "Der Nugent Score ist ein dimensionsloser Score von 0 bis 10. In UCUM wird daher code = \"1\" verwendet. Die menschenlesbare Einheit kann über Quantity.unit, z. B. \"Nugent score\", angegeben werden.",
+        "comment": "The Nugent score is a dimensionless score from 0 to 10. In UCUM, code = \"1\" is therefore used. The human-readable unit can be given via Quantity.unit, e.g. \"Nugent score\".",
         "type": [
           {
             "code": "Quantity"

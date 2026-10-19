@@ -35,14 +35,14 @@
 Profile: MII_PR_Mikrobio_Spezifische_Bestimmung
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-spezifische-bestimmung
-Title: "MII PR Mikrobio Spezifische Bestimmung"
-Description: "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis liegt ebenfalls hier; das Verfahren steht im Untersuchungscode und in Observation.method."
+Title: "MII PR Microbiology Specific Determination"
+Description: "Specific determination describes the qualitative detection of a predefined microbial target in a specimen by direct molecular, immunological or biochemical detection methods and by method-neutrally coded detection tests. Culture-based targeted detection also belongs here; the procedure is stated in the investigation code and in Observation.method."
 * insert MIKRO_OBSERVATION_COMMON
-* ^purpose = "Dieses Profil beschreibt den zielgerichteten Nachweis, unabhaengig davon, ob er molekular, immunologisch, biochemisch oder kulturell erfolgt. Es bildet auch das negative Ergebnis eines zielgerichteten Erregernachweises ab, z. B. einen negativen VRE-Nachweis über 105904-7 mit dem Wert 'Not detected'."
+* ^purpose = "This profile describes targeted detection, regardless of whether it is performed molecularly, immunologically, biochemically or by culture. It also represents the negative result of a targeted pathogen detection, e.g. a negative VRE detection via 105904-7 with the value 'Not detected'."
 * code from MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC (extensible)
-* code ^short = "Es werden bevorzugt LOINC-Codes ohne präkoordinierte Specimentype-Angabe verwendet (System = XXX); der Specimentype wird separat über Specimen.type kodiert. AUSNAHME fuer die serologische Anwendung dieses Profils — qualitativer Antigen- oder Antikoerpernachweis: Dort ist ein praekoordiniertes Specimen zulaessig, weil in der Serologie nur wenige Materialien vorkommen, ueberwiegend Serum."
+* code ^short = "LOINC codes without a pre-coordinated specimen type are preferred (System = XXX); the specimen type is coded separately via Specimen.type. EXCEPTION for the serological use of this profile — qualitative antigen or antibody detection: there a pre-coordinated specimen is permitted, because only a few materials occur in serology, predominantly serum."
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED (extensible)
-* valueCodeableConcept ^short = "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 6). Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet."
+* valueCodeableConcept ^short = "Detection or exclusion of the target named in the code — even when it was performed by culture: a targeted culture reports 'Detected' or 'Not detected' and not 'Organism growth', because the culture is already in the investigation code (ballot question 6). A borderline finding is reported as 'Weakly positive' or 'Equivocal result' — that is a statement and therefore belongs here. An indeterminable result, where the investigation yields no usable statement at all (e.g. inhibited PCR), is represented via dataAbsentReason instead."
 * method from MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED (extensible)

@@ -1,11 +1,11 @@
 Profile: MII_PR_Mikrobio_Aviditaet
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-aviditaet
-Title: "MII PR Mikrobio Aviditaet"
-Description: "Avidität beschreibt die qualitative Beurteilung der Bindungsstärke von Antikörpern an ein spezifisches Antigen, typischerweise zur Unterscheidung frischer von zurückliegenden Infektionen."
+Title: "MII PR Microbiology Avidity"
+Description: "Avidity describes the qualitative assessment of the binding strength of antibodies to a specific antigen, typically to distinguish recent from past infections."
 * insert MIKRO_OBSERVATION_COMMON
 * code from MII_VS_Mikrobio_Aviditaet_Tests_LOINC (extensible)
-* code ^short = "In der Serologie ist ein praekoordiniertes Specimen ausdruecklich zulaessig — anders als in den uebrigen Bereichen dieses Moduls gilt die Konvention 'System = XXX' hier NICHT. Das europaeische Whitepaper begruendet die Ausnahme damit, dass in der Serologie nur wenige Materialien vorkommen, ueberwiegend Serum, und ein Code-Wildwuchs deshalb nicht droht."
+* code ^short = "In serology a pre-coordinated specimen is explicitly permitted — unlike in the other areas of this module, the convention 'System = XXX' does NOT apply here. The European white paper justifies the exception by the fact that only a few materials occur in serology, predominantly serum, so that an uncontrolled growth of codes is not a risk."
 * value[x] only Quantity
 * valueQuantity
   * unit = "%"

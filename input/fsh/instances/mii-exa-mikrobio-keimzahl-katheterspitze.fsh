@@ -22,8 +22,8 @@
 Instance: mii-exa-mikrobio-keimzahl-katheterspitze
 InstanceOf: MII_PR_Mikrobio_Keimzahl
 Usage: #example
-Title: "MII EXA Mikrobio Keimzahl Katheterspitze"
-Description: "Keimzahl einer Katheterspitze in koloniebildenden Einheiten ohne Nenner. Die Bezugsgröße steht in Specimen.type."
+Title: "MII EXA Microbiology Colony Count Catheter Tip"
+Description: "Colony count of a catheter tip in colony-forming units without a denominator. The reference quantity is in Specimen.type."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "keimzahl-katheterspitze-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

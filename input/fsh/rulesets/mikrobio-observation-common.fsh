@@ -13,7 +13,7 @@ RuleSet: MIKRO_OBSERVATION_COMMON
 * extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
 * extension[triggeredBy-r5] MS
 * extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
-* extension[triggeredBy-r5].extension[type] ^short = "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik." 
+* extension[triggeredBy-r5].extension[type] ^short = "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation." 
 // Kein eigenes Slicing auf `category`: das macht der Parent (pattern auf
 // `$this`, offen, unveraendert bis laborbefund@2027.0.0-ballot.rc4). Eine zweite
 // Deklaration muesste exakt uebereinstimmen — SUSHI schluckt Abweichungen, der
@@ -26,8 +26,8 @@ RuleSet: MIKRO_OBSERVATION_COMMON
 // Kategorien brauchen also getrennte category-Eintraege.
 * category contains mibi-category 1..1 MS
 * category[mibi-category] = $v2-0074#MB
-* category[mibi-category] ^short = "Mikrobiologie-Kategorie"
-* category[mibi-category] ^definition = "Kategorie-Slice für mikrobiologische Laboruntersuchungen."
+* category[mibi-category] ^short = "Microbiology category"
+* category[mibi-category] ^definition = "Category slice for microbiological laboratory investigations."
 // Das Zielprofil war bis 2026-09-10 offen: `specimen 1..` verlangte eine Probe,
 // liess aber jede beliebige zu.
 * specimen 1.. MS

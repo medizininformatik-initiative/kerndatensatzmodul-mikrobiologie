@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Keimzahl_Einheiten_UCUM
 Id: mii-vs-mikrobio-keimzahl-einheiten-ucum
-Title: "MII VS Mikrobio Keimzahl Einheiten [UCUM]"
-Description: "Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe."
+Title: "MII VS Microbiology Colony Count Units [UCUM]"
+Description: "Unit ValueSet for colony counting (UCUM): colony-forming units per volume, per mass or as a count per specimen."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

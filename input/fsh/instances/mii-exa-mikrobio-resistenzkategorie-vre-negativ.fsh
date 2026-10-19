@@ -7,8 +7,8 @@
 Instance: mii-exa-mikrobio-resistenzkategorie-vre-negativ
 InstanceOf: MII_PR_Mikrobio_Resistenzkategorie_Status
 Usage: #example
-Title: "MII EXA Mikrobio Resistenzkategorie VRE negativ"
-Description: "Identifizierter Enterococcus ohne Vancomycinresistenz: VRE-Status Negative."
+Title: "MII EXA Microbiology Resistance Category VRE Negative"
+Description: "Identified Enterococcus without vancomycin resistance: VRE status Negative."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "reskat-vre-neg"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

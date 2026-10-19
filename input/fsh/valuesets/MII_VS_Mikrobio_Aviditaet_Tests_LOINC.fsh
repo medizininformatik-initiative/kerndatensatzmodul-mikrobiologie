@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Aviditaet_Tests_LOINC
 Id: mii-vs-mikrobio-aviditaet-tests-loinc
-Title: "MII VS Mikrobio Aviditaet Tests [LOINC]"
-Description: "Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests einschließlich des Zielantigens."
+Title: "MII VS Microbiology Avidity Tests [LOINC]"
+Description: "Test ValueSet for avidity determination: LOINC codes for avidity tests including the target antigen."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

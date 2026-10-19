@@ -5,8 +5,8 @@
 Instance: mii-exa-mikrobio-workflow-vre-03-empfindlichkeit
 InstanceOf: MII_PR_Mikrobio_Empfindlichkeit
 Usage: #example
-Title: "MII EXA Mikrobio Workflow VRE 3 Empfindlichkeit"
-Description: "Workflow-Kette VRE, Schritt 3: Vancomycin-Empfindlichkeitstestung des identifizierten Isolats mit dem Ergebnis resistent."
+Title: "MII EXA Microbiology Workflow VRE 3 Susceptibility"
+Description: "VRE workflow chain, step 3: vancomycin susceptibility testing of the identified isolate with the result resistant."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "wf-vre-3"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

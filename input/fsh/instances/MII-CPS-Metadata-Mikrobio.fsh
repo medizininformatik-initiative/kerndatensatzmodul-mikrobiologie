@@ -11,7 +11,7 @@ Usage: #definition
 * implementationGuide = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5"
 * name = "MII_CPS_Mikrobio_Metadata"
 * title = "MII CPS Mikrobio Metadata"
-* description = "CapabilityStatement für das MII Mikrobiologie Modul 2027."
+* description = "CapabilityStatement for the MII Microbiology module 2027."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
 * fhirVersion = #4.0.1

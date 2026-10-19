@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Kultur_Ergebnis_SNOMED
 Id: mii-vs-mikrobio-kultur-ergebnis-snomed
-Title: "MII VS Mikrobio Kultur Ergebnis [SNOMED]"
-Description: "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet."
+Title: "MII VS Microbiology Culture Result [SNOMED]"
+Description: "Result ValueSet for general and specific culture: growth, no growth or an equivocal result. How much has grown is not stated by this ValueSet but by the colony count. An indeterminable result is represented not via value[x] but via Observation.dataAbsentReason."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

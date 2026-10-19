@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Data_Absent_Reason
 Id: mii-vs-mikrobio-data-absent-reason
-Title: "MII VS Mikrobio Data Absent Reason"
-Description: "Gruende fuer ein fehlendes Untersuchungsergebnis. Ergaenzt die FHIR-Basiscodes um das unbestimmbare Ergebnis, das zuvor ueber value[x] kodiert wurde."
+Title: "MII VS Microbiology Data Absent Reason"
+Description: "Reasons for a missing investigation result. Supplements the FHIR base codes with the indeterminable result that was previously coded via value[x]."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

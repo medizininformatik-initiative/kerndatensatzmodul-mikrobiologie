@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC
 Id: mii-vs-mikrobio-spezifische-bestimmung-tests-loinc
-Title: "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]"
-Description: "Tests-ValueSet fuer die spezifische Bestimmung."
+Title: "MII VS Microbiology Specific Determination Tests [LOINC]"
+Description: "Test ValueSet for specific determination."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

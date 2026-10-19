@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-aviditaet
 InstanceOf: MII_PR_Mikrobio_Aviditaet
 Usage: #example
-Title: "MII EXA Mikrobio Aviditaet"
-Description: "Aviditätsbestimmung von CMV-IgG-Antikörpern; der Messwert bleibt in value, die Einordnung steht in interpretation."
+Title: "MII EXA Microbiology Avidity"
+Description: "Avidity determination of CMV IgG antibodies; the measured value stays in value, the classification is in interpretation."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "avid-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

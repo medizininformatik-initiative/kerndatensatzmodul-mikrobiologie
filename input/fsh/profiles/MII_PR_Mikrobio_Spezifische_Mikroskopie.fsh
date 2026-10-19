@@ -15,12 +15,12 @@
 Profile: MII_PR_Mikrobio_Spezifische_Mikroskopie
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-spezifische-mikroskopie
-Title: "MII PR Mikrobio Spezifische Mikroskopie"
-Description: "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis."
+Title: "MII PR Microbiology Specific Microscopy"
+Description: "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast rods or leukocytes — with the semiquantitative grade as the result."
 * insert MIKRO_OBSERVATION_COMMON
-* ^purpose = "Dieses Profil beschreibt die zielgerichtete Mikroskopie, bei der das gesuchte Objekt im Untersuchungscode steht und das Ergebnis der Nachweis oder Ausschluss dieses Objekts ist; wie viel davon gesehen wurde, steht in der Mengenkomponente."
+* ^purpose = "This profile describes targeted microscopy, in which the object sought is in the investigation code and the result is the detection or exclusion of that object; how much of it was seen is in the quantity component."
 * code from MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC (extensible)
-* code ^short = "Ordinaler LOINC-Code, der das gesuchte Objekt und die Faerbung benennt, z. B. 87243-2 'Microscopic observation [Presence] in Specimen by Auramine fluorochrome stain'. Steht das Objekt NICHT im Code, sondern soll als Ergebnis berichtet werden, ist die Allgemeine Mikroskopie das richtige Profil."
+* code ^short = "Ordinal LOINC code naming the object sought and the stain, e.g. 87243-2 'Microscopic observation [Presence] in Specimen by Auramine fluorochrome stain'. If the object is NOT in the code but is to be reported as the result, General microscopy is the right profile."
 // DER WERT IST DER NACHWEIS, NICHT DIE STUFE. Bis 2026-09-12 stand hier die
 // semiquantitative Stufe, mit der Begruendung, ein ordinaler Code mache die
 // Stufe zur Antwort. Das haelt der Messung nicht stand: 72357-7, 87243-2 und
@@ -40,7 +40,7 @@ Description: "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis ei
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Detected_Not_Detected_SNOMED (extensible)
-* valueCodeableConcept ^short = "Nachweis oder Ausschluss des im Code benannten Objekts. Die Menge des Gesehenen gehoert NICHT hierher, sondern in component[menge]. Liefert die Untersuchung gar keine verwertbare Aussage, dataAbsentReason."
+* valueCodeableConcept ^short = "Detection or exclusion of the object named in the code. The quantity seen does NOT belong here but in component[menge]. If the investigation yields no usable statement at all, dataAbsentReason."
 
 // MENGE. Definition in MIKRO_MENGE_KOMPONENTE, gemeinsam mit der Allgemeinen
 // Mikroskopie: dieselbe Aussage, deshalb dieselben Regeln. Sie traegt die
@@ -52,9 +52,9 @@ Description: "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis ei
 // von der Codewahl auswertbar, und nur so ist die konkrete Variante zu sehen,
 // wo der Code lediglich die Klasse nennt ("Acid fast stain" gegen Kinyoun).
 * extension contains MII_EX_Mikrobio_Faerbung named faerbung 0..1 MS
-* extension[faerbung] ^short = "Eingesetzte Faerbung. Immer angeben, wenn gefaerbt wurde — auch wenn der Untersuchungscode sie schon nennt."
+* extension[faerbung] ^short = "Staining technique used. Always state it when a stain was applied — even when the investigation code already names it."
 
 // Bewusst dieselbe Liste wie bei der Allgemeinen Mikroskopie: Es ist dasselbe
 // Verfahren, nur auf eine andere Frage angewandt.
 * method from MII_VS_Mikrobio_Morphologie_Methode_SNOMED (extensible)
-* method ^short = "Das mikroskopische Verfahren. Die Faerbung gehoert NICHT hierher, sondern in extension[faerbung]."
+* method ^short = "The microscopic procedure. The stain does NOT belong here but in extension[faerbung]."

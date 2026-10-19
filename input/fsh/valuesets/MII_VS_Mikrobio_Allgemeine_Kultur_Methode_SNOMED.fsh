@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Allgemeine_Kultur_Methode_SNOMED
 Id: mii-vs-mikrobio-allgemeine-kultur-methode-snomed
-Title: "MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]"
-Description: "Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkung auf einen vordefinierten Erreger, einschließlich aerober und anaerober Bebrütung."
+Title: "MII VS Microbiology General Culture Method [SNOMED]"
+Description: "Method ValueSet for general culture: culture procedures without restriction to a predefined pathogen, including aerobic and anaerobic incubation."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

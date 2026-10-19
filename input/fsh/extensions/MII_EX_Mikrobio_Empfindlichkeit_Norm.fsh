@@ -1,6 +1,6 @@
 Extension: MII_EX_Mikrobio_Empfindlichkeit_Norm
 Id: mii-ex-mikrobio-empfindlichkeit-norm
-Title: "MII EX Mikrobio Empfindlichkeit Norm"
+Title: "MII EX Microbiology Susceptibility Norm"
 Description: "Normative susceptibility interpretation metadata (system, version, category)."
 * insert PR_CS_VS_Version
 * insert Publisher

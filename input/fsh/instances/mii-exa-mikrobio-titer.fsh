@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-titer
 InstanceOf: MII_PR_Mikrobio_Titer
 Usage: #example
-Title: "MII EXA Mikrobio Titer"
-Description: "Titerbestimmung als Verdünnungsverhältnis am Beispiel von Rötelnvirus-Antikörpern."
+Title: "MII EXA Microbiology Titre"
+Description: "Titre determination as a dilution ratio, using the example of rubella virus antibodies."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "titer-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

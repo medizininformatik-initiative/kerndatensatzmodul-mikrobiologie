@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Molekulare_Pathogenlast_Tests_LOINC
 Id: mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc
-Title: "MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]"
-Description: "Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für die Nukleinsäurekonzentration eines Erregers."
+Title: "MII VS Microbiology Molecular Pathogen Load Tests [LOINC]"
+Description: "Test ValueSet for molecular pathogen load: quantitative LOINC codes for the nucleic acid concentration of a pathogen."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

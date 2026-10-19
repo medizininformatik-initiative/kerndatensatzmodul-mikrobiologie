@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Molekulare_Pathogenlast_Methode_SNOMED
 Id: mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed
-Title: "MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]"
-Description: "Methoden-ValueSet für die molekulare Pathogenlast: Amplifikationsverfahren zur Quantifizierung von Erregernukleinsäure."
+Title: "MII VS Microbiology Molecular Pathogen Load Method [SNOMED]"
+Description: "Method ValueSet for molecular pathogen load: amplification procedures for quantifying pathogen nucleic acid."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

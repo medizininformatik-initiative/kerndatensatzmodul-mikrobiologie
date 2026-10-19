@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-antigen-antikoerper-quantitativ
 InstanceOf: MII_PR_Mikrobio_Antigen_Antikoerper_Quantitativ
 Usage: #example
-Title: "MII EXA Mikrobio Antigen Antikoerper quantitativ"
-Description: "Quantitative Antikörperbestimmung im Serum am Beispiel der Hepatitis-B-Oberflächen-Antikörper."
+Title: "MII EXA Microbiology Antigen Antibody Quantitative"
+Description: "Quantitative antibody determination in serum, using the example of hepatitis B surface antibodies."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "ak-qn-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

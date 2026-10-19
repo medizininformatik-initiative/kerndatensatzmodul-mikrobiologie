@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Organismen_SNOMEDCT
 Id: mii-vs-mikrobio-organismen-snomedct
-Title: "MII VS Mikrobio Organismen [SNOMED CT]"
-Description: "Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Erreger stammen kann. Wird nicht direkt gebunden, sondern in die Ergebnis-ValueSets der Bestimmung eingebunden."
+Title: "MII VS Microbiology Organisms [SNOMED CT]"
+Description: "Organism ValueSet: the SNOMED CT hierarchies from which an identified pathogen may come. Not bound directly, but included in the result ValueSets of the determination profiles."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

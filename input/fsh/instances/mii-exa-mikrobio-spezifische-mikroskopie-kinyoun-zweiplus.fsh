@@ -6,8 +6,8 @@
 Instance: mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus
 InstanceOf: MII_PR_Mikrobio_Spezifische_Mikroskopie
 Usage: #example
-Title: "MII EXA Mikrobio Spezifische Mikroskopie Kinyoun zwei plus"
-Description: "Kinyounfärbung mit Nachweis säurefester Stäbchen, in der Stufe zwei von drei als Mengenkomponente — entsprechend 1–10 pro Gesichtsfeld."
+Title: "MII EXA Microbiology Specific Microscopy Kinyoun Two Plus"
+Description: "Kinyoun stain with detection of acid-fast rods, with grade two of three as the quantity component — corresponding to 1–10 per field of view."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-mikroskopie-kinyoun-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

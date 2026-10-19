@@ -11,8 +11,8 @@
 // uebrigen Einheitenlisten.
 ValueSet: MII_VS_Mikrobio_Mikroskopie_Gesichtsfeld_Einheiten_UCUM
 Id: mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum
-Title: "MII VS Mikrobio Mikroskopie Gesichtsfeld Einheiten [UCUM]"
-Description: "Einheiten für die Zählung je Gesichtsfeld in der Mengenkomponente der Mikroskopie."
+Title: "MII VS Microbiology Microscopy Field of View Units [UCUM]"
+Description: "Units for the count per field of view in the quantity component of microscopy."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

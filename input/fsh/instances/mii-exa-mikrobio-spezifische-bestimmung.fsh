@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-spezifische-bestimmung
 InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
-Title: "MII EXA Mikrobio Spezifische Bestimmung"
-Description: "Zielgerichteter molekularer Erregernachweis mit negativem Ergebnis."
+Title: "MII EXA Microbiology Specific Determination"
+Description: "Targeted molecular pathogen detection with a negative result."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-best-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

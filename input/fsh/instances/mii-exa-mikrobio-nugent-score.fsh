@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-nugent-score
 InstanceOf: MII_PR_Mikrobio_Nugent_Score
 Usage: #example
-Title: "MII EXA Mikrobio Nugent Score"
-Description: "Nugent-Score einer Vaginalprobe zur Beurteilung einer bakteriellen Vaginose."
+Title: "MII EXA Microbiology Nugent Score"
+Description: "Nugent score of a vaginal specimen for assessing bacterial vaginosis."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "nugent-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

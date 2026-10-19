@@ -19,14 +19,18 @@ as the English page); resource translations are `.po` files under
 |---|---|
 | Narrative pages | **23 of 23** mirrored under `input/translations/de/pagecontent/` |
 | IG page titles, guide title, publisher | **26 of 26** units translated in `ImplementationGuide-mii-ig-mikrobiologie.po` |
-| Descriptions of the conformance resources | **not translated — they are written in German** |
+| Descriptions of the conformance resources | **English on this review branch** (`review/2027.0.0-ballot2-en`): titles, descriptions, element shorts/definitions, logical-model labels and search-parameter descriptions were translated in place. The published ballot carries them in German. |
 
 The last row is the one to know about. The MII naming conventions ask for German
-in a conformance resource's `description`, `name` and `title`, so the guide
-carries them in German in **both** renderings: 22 profiles, 42 value sets, 3 code
-systems, 4 search parameters and the capability statement. Three artefacts differ
-— the two extensions are described in English, and the logical model
-`mii-lm-mikrobio-untersuchung` marks its German description with `[DE]`.
+in a conformance resource's `description`, `name` and `title`, so the published
+ballot carries them in German in **both** renderings: 22 profiles, 42 value sets,
+3 code systems, 4 search parameters and the capability statement. **This review
+branch deviates from that convention on purpose**: it replaces the German text
+with English in the FSH sources so that external reviewers can read the
+conformance resources without German. Ids, names, canonical URLs, code system
+concept displays and the German page mirrors are unchanged, so review comments
+map one-to-one onto the ballot artefacts. The branch is a review aid and is not
+merged back.
 
 Supplying English descriptions through the `.po` mechanism is only partly
 possible: translation units are honoured for `StructureDefinition` and

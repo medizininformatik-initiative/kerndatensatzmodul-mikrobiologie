@@ -1,8 +1,8 @@
 Instance: mii-exa-mikrobio-bartlett-score
 InstanceOf: MII_PR_Mikrobio_Bartlett_Score
 Usage: #example
-Title: "MII EXA Mikrobio Bartlett Score"
-Description: "Bartlett-Score einer Sputumprobe zur Beurteilung, ob sie für die Kultur geeignet ist."
+Title: "MII EXA Microbiology Bartlett Score"
+Description: "Bartlett score of a sputum specimen to assess whether it is suitable for culture."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "bartlett-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

@@ -10,7 +10,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung",
   "version": "2027.0.0-ballot2",
   "name": "MII_LM_Mikrobio_Untersuchung",
-  "title": "MII LM Mikrobio Untersuchung",
+  "title": "MII LM Microbiology Investigation",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -24,7 +24,7 @@
       ]
     }
   ],
-  "description": "Gemeinsame Angaben aller mikrobiologischen Untersuchungen [DE]",
+  "description": "Common information of all microbiological investigations",
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "abstract": true,
@@ -36,14 +36,14 @@
       {
         "id": "mii-lm-mikrobio-untersuchung",
         "path": "mii-lm-mikrobio-untersuchung",
-        "short": "Mikrobiologische Untersuchung",
-        "definition": "Abstrakte Basis einer mikrobiologischen Untersuchung. Die fachlichen Ausprägungen (Kultur, Bestimmung, Weitere Eigenschaften, Quantitative Tests) leiten von dieser Klasse ab und ergänzen sie um ihre jeweils spezifischen Attribute."
+        "short": "Microbiological investigation",
+        "definition": "Abstract base of a microbiological investigation. The specialisations (culture, determination, further properties, quantitative tests) derive from this class and add their specific attributes."
       },
       {
         "id": "mii-lm-mikrobio-untersuchung.Identifikation",
         "path": "mii-lm-mikrobio-untersuchung.Identifikation",
-        "short": "Identifikation",
-        "definition": "Eindeutiger Identifikator der Untersuchung.",
+        "short": "Identification",
+        "definition": "Unique identifier of the investigation.",
         "min": 1,
         "max": "*",
         "type": [
@@ -56,7 +56,7 @@
         "id": "mii-lm-mikrobio-untersuchung.Status",
         "path": "mii-lm-mikrobio-untersuchung.Status",
         "short": "Status",
-        "definition": "Status der Untersuchung (z. B. vorläufig, final, korrigiert).",
+        "definition": "Status of the investigation (e.g. preliminary, final, corrected).",
         "min": 1,
         "max": "1",
         "type": [
@@ -69,7 +69,7 @@
         "id": "mii-lm-mikrobio-untersuchung.Patient",
         "path": "mii-lm-mikrobio-untersuchung.Patient",
         "short": "Patient",
-        "definition": "Patient, von dem das untersuchte Probenmaterial stammt.",
+        "definition": "Patient from whom the examined specimen material originates.",
         "min": 1,
         "max": "1",
         "type": [
@@ -84,8 +84,8 @@
       {
         "id": "mii-lm-mikrobio-untersuchung.Probenmaterial",
         "path": "mii-lm-mikrobio-untersuchung.Probenmaterial",
-        "short": "Probenmaterial",
-        "definition": "Untersuchtes Probenmaterial. Die Probenart wird über das Probenmaterial abgebildet und nicht über präkoordinierte Untersuchungscodes.",
+        "short": "Specimen material",
+        "definition": "Examined specimen material. The specimen type is represented via the specimen material and not via pre-coordinated investigation codes.",
         "min": 1,
         "max": "1",
         "type": [
@@ -100,8 +100,8 @@
       {
         "id": "mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt",
         "path": "mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt",
-        "short": "Untersuchungszeitpunkt",
-        "definition": "Klinisch relevanter Zeitpunkt der Untersuchung.",
+        "short": "Investigation time",
+        "definition": "Clinically relevant time of the investigation.",
         "min": 1,
         "max": "1",
         "type": [
@@ -113,8 +113,8 @@
       {
         "id": "mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt",
         "path": "mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt",
-        "short": "Quelle des Untersuchungszeitpunkts",
-        "definition": "Gibt an, worauf sich der Untersuchungszeitpunkt bezieht, z. B. Zeitpunkt der Probenentnahme oder Laboreingang.",
+        "short": "Source of the investigation time",
+        "definition": "Indicates what the investigation time refers to, e.g. time of specimen collection or receipt in the laboratory.",
         "min": 0,
         "max": "1",
         "type": [
@@ -126,8 +126,8 @@
       {
         "id": "mii-lm-mikrobio-untersuchung.Dokumentationszeitpunkt",
         "path": "mii-lm-mikrobio-untersuchung.Dokumentationszeitpunkt",
-        "short": "Dokumentationszeitpunkt",
-        "definition": "Zeitpunkt, zu dem das Untersuchungsergebnis verfügbar gemacht wurde.",
+        "short": "Documentation time",
+        "definition": "Time at which the investigation result was made available.",
         "min": 0,
         "max": "1",
         "type": [
@@ -139,8 +139,8 @@
       {
         "id": "mii-lm-mikrobio-untersuchung.InterpretationsbeeinflussendeEigenschaft",
         "path": "mii-lm-mikrobio-untersuchung.InterpretationsbeeinflussendeEigenschaft",
-        "short": "Interpretationsbeeinflussende Eigenschaft",
-        "definition": "Eigenschaft der Untersuchung oder der Probe, die die Interpretation des Ergebnisses einschränkt oder verändert, z. B. Hämolyse, Lipämie oder unzureichende Probenmenge. Die Angabe verändert die Bedeutung des Ergebnisses und darf nicht ignoriert werden.",
+        "short": "Property affecting interpretation",
+        "definition": "Property of the investigation or the specimen that restricts or changes the interpretation of the result, e.g. haemolysis, lipaemia or insufficient specimen quantity. The information changes the meaning of the result and must not be ignored.",
         "min": 0,
         "max": "*",
         "type": [
@@ -152,8 +152,8 @@
       {
         "id": "mii-lm-mikrobio-untersuchung.Hinweis",
         "path": "mii-lm-mikrobio-untersuchung.Hinweis",
-        "short": "Hinweis",
-        "definition": "Freitextliche Kommentierung der Untersuchung.",
+        "short": "Note",
+        "definition": "Free-text comment on the investigation.",
         "min": 0,
         "max": "*",
         "type": [
@@ -165,8 +165,8 @@
       {
         "id": "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung",
         "path": "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung",
-        "short": "Auslösende Untersuchung",
-        "definition": "Vorangegangene Untersuchung, die diese Untersuchung ausgelöst hat, z. B. eine durch ein Vorergebnis angestoßene Folgediagnostik (Reflextestung).",
+        "short": "Triggering investigation",
+        "definition": "Preceding investigation that triggered this investigation, e.g. follow-up diagnostics initiated by a prior result (reflex testing).",
         "min": 0,
         "max": "*",
         "type": [
@@ -178,8 +178,8 @@
       {
         "id": "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Untersuchung",
         "path": "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Untersuchung",
-        "short": "Untersuchung",
-        "definition": "Die auslösende Untersuchung.",
+        "short": "Investigation",
+        "definition": "The triggering investigation.",
         "min": 1,
         "max": "1",
         "type": [
@@ -194,8 +194,8 @@
       {
         "id": "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Art",
         "path": "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Art",
-        "short": "Art",
-        "definition": "Art der Auslösung: reflex | repeat | re-run.",
+        "short": "Type",
+        "definition": "Type of trigger: reflex | repeat | re-run.",
         "min": 1,
         "max": "1",
         "type": [
@@ -207,8 +207,8 @@
       {
         "id": "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Grund",
         "path": "mii-lm-mikrobio-untersuchung.AusloesendeUntersuchung.Grund",
-        "short": "Grund",
-        "definition": "Begründung, warum diese Untersuchung ausgelöst wurde.",
+        "short": "Reason",
+        "definition": "Reason why this investigation was triggered.",
         "min": 0,
         "max": "1",
         "type": [

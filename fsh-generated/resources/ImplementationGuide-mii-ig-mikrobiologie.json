@@ -275,935 +275,935 @@
           "reference": "CapabilityStatement/mii-cps-mikrobio-metadata"
         },
         "name": "MII CPS Mikrobio Metadata",
-        "description": "CapabilityStatement für das MII Mikrobiologie Modul 2027.",
+        "description": "CapabilityStatement for the MII Microbiology module 2027.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "CodeSystem/mii-cs-mikrobio-mrgn-ergebnis"
         },
-        "name": "MII CS Mikrobio MRGN Ergebnis",
-        "description": "CodeSystem für Ergebnisse der MRGN-Klassifikation, die sich nicht über LOINC abbilden lassen. Die LOINC-AnswerList LL6195-3 zu 99780-9 enthält ausschließlich 2MRGN, 3MRGN und 4MRGN und damit keinen Negativwert.",
+        "name": "MII CS Microbiology MRGN Result",
+        "description": "CodeSystem for results of the MRGN classification that cannot be represented with LOINC. The LOINC answer list LL6195-3 for 99780-9 contains only 2MRGN, 3MRGN and 4MRGN and therefore no negative value.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "CodeSystem/mii-cs-mikrobio-resistenzkategorie"
         },
-        "name": "MII CS Mikrobio Resistenzkategorie",
-        "description": "Untersuchungscodes (Observation.code) für die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie. Jeder Code benennt die bewertete Kategorie; das Ergebnis der Bewertung steht in Observation.value.",
+        "name": "MII CS Microbiology Resistance Category",
+        "description": "Investigation codes (Observation.code) for assessing a detected pathogen with regard to a defined resistance category. Each code names the assessed category; the result of the assessment is in Observation.value.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "CodeSystem/mii-cs-mikrobio-susceptibility-norm"
         },
-        "name": "MII CS Mikrobio Susceptibility Norm",
-        "description": "CodeSystem zur Kodierung von Normen für die Interpretation der Empfindlichkeit von Mikroorganismen gegenüber antimikrobiellen Substanzen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm"
-        },
-        "name": "MII EX Mikrobio Empfindlichkeit Norm",
-        "description": "Normative susceptibility interpretation metadata (system, version, category).",
+        "name": "MII CS Microbiology Susceptibility Norm",
+        "description": "CodeSystem for coding the norms used to interpret the susceptibility of microorganisms to antimicrobial substances.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-ex-mikrobio-faerbung"
         },
-        "name": "MII EX Mikrobio Färbung",
+        "name": "MII EX Microbiology Staining",
         "description": "Staining technique used for the microscopic examination, coded with the same SNOMED CT hierarchy as the European laboratory coordination.",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "Observation/mii-exa-mikrobio-allgemeine-bestimmung"
+          "reference": "StructureDefinition/mii-ex-mikrobio-empfindlichkeit-norm"
         },
-        "name": "MII EXA Mikrobio Allgemeine Bestimmung",
-        "description": "Ungerichtete Erregeridentifizierung aus einer Probe, ausgewiesen als Reflex-Folgeuntersuchung der allgemeinen Kultur.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-allgemeine-kultur"
-        },
-        "name": "MII EXA Mikrobio Allgemeine Kultur",
-        "description": "Ungerichtete kulturelle Anzucht mit Wachstumsnachweis, aerobe Kultur.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-allgemeine-kultur-methodenneutral"
-        },
-        "name": "MII EXA Mikrobio Allgemeine Kultur methodenneutraler Code",
-        "description": "Ungerichtete kulturelle Anzucht ohne Wachstum mit dem methodenneutralen Untersuchungscode 41852-5: Erst die Methode weist die Untersuchung als Kultur aus.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-mikroskopie"
-        },
-        "name": "MII EXA Mikrobio Allgemeine Mikroskopie",
-        "description": "Mikroskopischer Befund als morphologische Gruppe: grampositive Kokken in Haufen.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-mikroskopie-gram-kokken-wenig"
-        },
-        "name": "MII EXA Mikrobio Allgemeine Mikroskopie wenig grampositive Kokken",
-        "description": "Grampräparat mit wenig grampositiven Kokken: die Morphologie als Ergebnis, die semiquantitative Menge als Komponente.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"
+        "name": "MII EX Microbiology Susceptibility Norm",
+        "description": "Normative susceptibility interpretation metadata (system, version, category).",
+        "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-antigen-antikoerper-quantitativ"
         },
-        "name": "MII EXA Mikrobio Antigen Antikoerper quantitativ",
-        "description": "Quantitative Antikörperbestimmung im Serum am Beispiel der Hepatitis-B-Oberflächen-Antikörper.",
+        "name": "MII EXA Microbiology Antigen Antibody Quantitative",
+        "description": "Quantitative antibody determination in serum, using the example of hepatitis B surface antibodies.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-aviditaet"
         },
-        "name": "MII EXA Mikrobio Aviditaet",
-        "description": "Aviditätsbestimmung von CMV-IgG-Antikörpern; der Messwert bleibt in value, die Einordnung steht in interpretation.",
+        "name": "MII EXA Microbiology Avidity",
+        "description": "Avidity determination of CMV IgG antibodies; the measured value stays in value, the classification is in interpretation.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-aviditaet"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-bartlett-score"
         },
-        "name": "MII EXA Mikrobio Bartlett Score",
-        "description": "Bartlett-Score einer Sputumprobe zur Beurteilung, ob sie für die Kultur geeignet ist.",
+        "name": "MII EXA Microbiology Bartlett Score",
+        "description": "Bartlett score of a sputum specimen to assess whether it is suitable for culture.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-bartlett-score"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-ct-wert"
-        },
-        "name": "MII EXA Mikrobio Ct Wert",
-        "description": "Zyklusschwellenwert einer Echtzeit-PCR auf Influenza A H3.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert"
-      },
-      {
-        "reference": {
-          "reference": "DiagnosticReport/mii-exa-mikrobio-diagnostic-report"
-        },
-        "name": "MII EXA Mikrobio Diagnostic Report",
-        "description": "Mikrobiologischer Befundbericht, der die zugehörigen Untersuchungen zusammenfasst.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-empfindlichkeit"
-        },
-        "name": "MII EXA Mikrobio Empfindlichkeit",
-        "description": "Phänotypische Empfindlichkeitstestung mit MHK in mg/L; die Kategorie steht mit ihrer Norm in interpretation.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-empfindlichkeit-nur-kategorie"
-        },
-        "name": "MII EXA Mikrobio Empfindlichkeit nur Kategorie",
-        "description": "Phänotypische Empfindlichkeitstestung, bei der nur die Kategorie berichtet wird und kein Messwert vorliegt; die Norm steht an derselben Stelle wie die Kategorie.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-keimzahl"
         },
-        "name": "MII EXA Mikrobio Keimzahl",
-        "description": "Keimzahlbestimmung als koloniebildende Einheiten je Milliliter.",
+        "name": "MII EXA Microbiology Colony Count",
+        "description": "Colony count as colony-forming units per millilitre.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-keimzahl-katheterspitze"
         },
-        "name": "MII EXA Mikrobio Keimzahl Katheterspitze",
-        "description": "Keimzahl einer Katheterspitze in koloniebildenden Einheiten ohne Nenner. Die Bezugsgröße steht in Specimen.type.",
+        "name": "MII EXA Microbiology Colony Count Catheter Tip",
+        "description": "Colony count of a catheter tip in colony-forming units without a denominator. The reference quantity is in Specimen.type.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-ct-wert"
+        },
+        "name": "MII EXA Microbiology Ct Value",
+        "description": "Cycle threshold of a real-time PCR for influenza A H3.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-ct-wert"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/mii-exa-mikrobio-diagnostic-report"
+        },
+        "name": "MII EXA Microbiology Diagnostic Report",
+        "description": "Microbiological report that summarises the associated investigations.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-diagnostic-report"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-allgemeine-kultur"
+        },
+        "name": "MII EXA Microbiology General Culture",
+        "description": "Untargeted culture with growth detected, aerobic culture.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-allgemeine-kultur-methodenneutral"
+        },
+        "name": "MII EXA Microbiology General Culture Method-Neutral Code",
+        "description": "Untargeted culture without growth using the method-neutral investigation code 41852-5: only the method identifies the investigation as a culture.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-allgemeine-bestimmung"
+        },
+        "name": "MII EXA Microbiology General Determination",
+        "description": "Untargeted pathogen identification from a specimen, declared as a reflex follow-up investigation of the general culture.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-mikroskopie"
+        },
+        "name": "MII EXA Microbiology General Microscopy",
+        "description": "Microscopic finding as a morphological group: Gram-positive cocci in clusters.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-mikroskopie-gram-kokken-wenig"
+        },
+        "name": "MII EXA Microbiology General Microscopy Few Gram-Positive Cocci",
+        "description": "Gram preparation with few Gram-positive cocci: the morphology as the result, the semiquantitative quantity as a component.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"
       },
       {
         "reference": {
           "reference": "Organization/mii-exa-mikrobio-labor"
         },
-        "name": "MII EXA Mikrobio Labor",
-        "description": "Durchführendes mikrobiologisches Labor der Beispiele dieses Moduls.",
+        "name": "MII EXA Microbiology Laboratory",
+        "description": "Performing microbiology laboratory of the examples of this module.",
         "exampleBoolean": true
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-molekulare-pathogenlast"
         },
-        "name": "MII EXA Mikrobio Molekulare Pathogenlast",
-        "description": "Quantitative molekulare Erregerlast am Beispiel der CMV-DNA in Kopien je Milliliter.",
+        "name": "MII EXA Microbiology Molecular Pathogen Load",
+        "description": "Quantitative molecular pathogen load, using the example of CMV DNA in copies per millilitre.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-mrgn-klasse"
         },
-        "name": "MII EXA Mikrobio MRGN Klasse",
-        "description": "MRGN-Klassifikation eines gramnegativen Isolats mit dem Ergebnis 2MRGN.",
+        "name": "MII EXA Microbiology MRGN Class",
+        "description": "MRGN classification of a Gram-negative isolate with the result 2MRGN.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-mrgn-klasse-negativ"
         },
-        "name": "MII EXA Mikrobio MRGN Klasse negativ",
-        "description": "Identifiziertes gramnegatives Isolat, dessen Empfindlichkeitsbefunde bewertet wurden und das keiner MRGN-Klasse zuzuordnen ist.",
+        "name": "MII EXA Microbiology MRGN Class Negative",
+        "description": "Identified Gram-negative isolate whose susceptibility results were assessed and which cannot be assigned to any MRGN class.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-nugent-score"
         },
-        "name": "MII EXA Mikrobio Nugent Score",
-        "description": "Nugent-Score einer Vaginalprobe zur Beurteilung einer bakteriellen Vaginose.",
+        "name": "MII EXA Microbiology Nugent Score",
+        "description": "Nugent score of a vaginal specimen for assessing bacterial vaginosis.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-nugent-score"
       },
       {
         "reference": {
           "reference": "Patient/mii-exa-mikrobio-patient"
         },
-        "name": "MII EXA Mikrobio Patient",
-        "description": "Minimales Subject für die Beispiele dieses Moduls. Kein Profil, keine Demografie — Patient wird vom Personen-Modul verantwortet.",
+        "name": "MII EXA Microbiology Patient",
+        "description": "Minimal subject for the examples of this module. No profile, no demographics — Patient is the responsibility of the Person module.",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Specimen/mii-exa-mikrobio-probe"
+          "reference": "Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit"
         },
-        "name": "MII EXA Mikrobio Probe",
-        "description": "Generisches Probenmaterial für die Beispiele dieses Moduls. Der Typ ist bewusst unspezifisch, weil dieselbe Probe Beispiele unterschiedlicher Untersuchungsarten trägt.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
-      },
-      {
-        "reference": {
-          "reference": "Specimen/mii-exa-mikrobio-probe-katheterspitze"
-        },
-        "name": "MII EXA Mikrobio Probe Katheterspitze",
-        "description": "Katheterspitze als Probenmaterial. Sie hat weder Volumen noch Masse und ist damit selbst die Bezugsgröße der Keimzahl.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
+        "name": "MII EXA Microbiology Predicted Susceptibility",
+        "description": "Expected susceptibility to rifampicin derived from the genotype.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ"
         },
-        "name": "MII EXA Mikrobio Resistenzkategorie VRE negativ",
-        "description": "Identifizierter Enterococcus ohne Vancomycinresistenz: VRE-Status Negative.",
+        "name": "MII EXA Microbiology Resistance Category VRE Negative",
+        "description": "Identified Enterococcus without vancomycin resistance: VRE status Negative.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-resistenzkategorie-vre-positiv"
         },
-        "name": "MII EXA Mikrobio Resistenzkategorie VRE positiv",
-        "description": "Identifizierter Enterococcus faecium mit nachgewiesener Vancomycinresistenz: VRE-Status Positive, abgeleitet aus Identifikation und Empfindlichkeitstestung.",
+        "name": "MII EXA Microbiology Resistance Category VRE Positive",
+        "description": "Identified Enterococcus faecium with detected vancomycin resistance: VRE status Positive, derived from identification and susceptibility testing.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-resistenzmechanismen-determinanten"
         },
-        "name": "MII EXA Mikrobio Resistenzmechanismen Determinanten",
-        "description": "Molekularer Nachweis einer Resistenzdeterminante mittels PCR.",
+        "name": "MII EXA Microbiology Resistance Mechanisms Determinants",
+        "description": "Molecular detection of a resistance determinant by PCR.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-spezifische-bestimmung"
-        },
-        "name": "MII EXA Mikrobio Spezifische Bestimmung",
-        "description": "Zielgerichteter molekularer Erregernachweis mit negativem Ergebnis.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv"
-        },
-        "name": "MII EXA Mikrobio Spezifische Bestimmung Influenza positiv",
-        "description": "Zielgerichteter molekularer Erregernachweis mit positivem Ergebnis, abgeleitet aus dem berichteten Ct-Wert.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ"
-        },
-        "name": "MII EXA Mikrobio Spezifische Bestimmung VRE negativ",
-        "description": "Negativer VRE-Nachweis: Der Test auf vancomycinresistente Enterokokken ist negativ.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-spezifische-kultur"
         },
-        "name": "MII EXA Mikrobio Spezifische Kultur",
-        "description": "Zielgerichteter Nachweis eines vordefinierten Erregers, kulturell durchgeführt und hier positiv.",
+        "name": "MII EXA Microbiology Specific Culture",
+        "description": "Targeted detection of a predefined pathogen, performed by culture and positive here.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ"
         },
-        "name": "MII EXA Mikrobio Spezifische Kultur VRE negativ",
-        "description": "Negativer VRE-Nachweis mittels erregerspezifischer Kultur.",
+        "name": "MII EXA Microbiology Specific Culture VRE Negative",
+        "description": "Negative VRE detection by pathogen-specific culture.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-spezifische-bestimmung"
+        },
+        "name": "MII EXA Microbiology Specific Determination",
+        "description": "Targeted molecular pathogen detection with a negative result.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-spezifische-bestimmung-influenza-positiv"
+        },
+        "name": "MII EXA Microbiology Specific Determination Influenza Positive",
+        "description": "Targeted molecular pathogen detection with a positive result, derived from the reported Ct value.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ"
+        },
+        "name": "MII EXA Microbiology Specific Determination VRE Negative",
+        "description": "Negative VRE detection: the test for vancomycin-resistant enterococci is negative.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ"
         },
-        "name": "MII EXA Mikrobio Spezifische Mikroskopie Auramin negativ",
-        "description": "Auraminfärbung ohne Nachweis säurefester Stäbchen: der negative Fall der spezifischen Mikroskopie.",
+        "name": "MII EXA Microbiology Specific Microscopy Auramine Negative",
+        "description": "Auramine stain without detection of acid-fast rods: the negative case of specific microscopy.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus"
         },
-        "name": "MII EXA Mikrobio Spezifische Mikroskopie Kinyoun zwei plus",
-        "description": "Kinyounfärbung mit Nachweis säurefester Stäbchen, in der Stufe zwei von drei als Mengenkomponente — entsprechend 1–10 pro Gesichtsfeld.",
+        "name": "MII EXA Microbiology Specific Microscopy Kinyoun Two Plus",
+        "description": "Kinyoun stain with detection of acid-fast rods, with grade two of three as the quantity component — corresponding to 1–10 per field of view.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld"
         },
-        "name": "MII EXA Mikrobio Spezifische Mikroskopie Leukozyten je Gesichtsfeld",
-        "description": "Leukozyten im Grampräparat nachgewiesen, mit der Menge als Zählung je Gesichtsfeld — 10 bis 25 — statt als semiquantitative Stufe.",
+        "name": "MII EXA Microbiology Specific Microscopy Leukocytes per Field of View",
+        "description": "Leukocytes detected in the Gram preparation, with the quantity as a count per field of view — 10 to 25 — instead of a semiquantitative grade.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-mikrobio-probe"
+        },
+        "name": "MII EXA Microbiology Specimen",
+        "description": "Generic specimen material for the examples of this module. The type is deliberately unspecific because the same specimen carries examples of different investigation types.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-mikrobio-probe-katheterspitze"
+        },
+        "name": "MII EXA Microbiology Specimen Catheter Tip",
+        "description": "Catheter tip as specimen material. It has neither volume nor mass and is therefore itself the reference quantity of the colony count.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-empfindlichkeit"
+        },
+        "name": "MII EXA Microbiology Susceptibility",
+        "description": "Phenotypic susceptibility testing with MIC in mg/L; the category with its norm is in interpretation.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-empfindlichkeit-nur-kategorie"
+        },
+        "name": "MII EXA Microbiology Susceptibility Category Only",
+        "description": "Phenotypic susceptibility testing in which only the category is reported and no measured value is available; the norm is in the same place as the category.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-titer"
         },
-        "name": "MII EXA Mikrobio Titer",
-        "description": "Titerbestimmung als Verdünnungsverhältnis am Beispiel von Rötelnvirus-Antikörpern.",
+        "name": "MII EXA Microbiology Titre",
+        "description": "Titre determination as a dilution ratio, using the example of rubella virus antibodies.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-titer"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-virulenzfaktor"
         },
-        "name": "MII EXA Mikrobio Virulenzfaktor",
-        "description": "Nachweis eines Virulenzfaktor-Gens mit negativem Ergebnis.",
+        "name": "MII EXA Microbiology Virulence Factor",
+        "description": "Detection of a virulence factor gene with a negative result.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor"
-      },
-      {
-        "reference": {
-          "reference": "Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit"
-        },
-        "name": "MII EXA Mikrobio Voraussichtliche Empfindlichkeit",
-        "description": "Aus dem Genotyp abgeleitete erwartete Empfindlichkeit gegenüber Rifampicin.",
-        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-workflow-vre-01-kultur"
         },
-        "name": "MII EXA Mikrobio Workflow VRE 1 Kultur positiv",
-        "description": "Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erregerspezifischer Kultur.",
+        "name": "MII EXA Microbiology Workflow VRE 1 Culture Positive",
+        "description": "VRE workflow chain, step 1: positive VRE detection by pathogen-specific culture.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-workflow-vre-02-identifikation"
         },
-        "name": "MII EXA Mikrobio Workflow VRE 2 Identifikation",
-        "description": "Workflow-Kette VRE, Schritt 2: weiterführende Identifikation des Isolats als Enterococcus faecium, ausgelöst durch den positiven Nachweis.",
+        "name": "MII EXA Microbiology Workflow VRE 2 Identification",
+        "description": "VRE workflow chain, step 2: further identification of the isolate as Enterococcus faecium, triggered by the positive detection.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
       },
       {
         "reference": {
           "reference": "Observation/mii-exa-mikrobio-workflow-vre-03-empfindlichkeit"
         },
-        "name": "MII EXA Mikrobio Workflow VRE 3 Empfindlichkeit",
-        "description": "Workflow-Kette VRE, Schritt 3: Vancomycin-Empfindlichkeitstestung des identifizierten Isolats mit dem Ergebnis resistent.",
+        "name": "MII EXA Microbiology Workflow VRE 3 Susceptibility",
+        "description": "VRE workflow chain, step 3: vancomycin susceptibility testing of the identified isolate with the result resistant.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-lm-mikrobio-logical-model"
-        },
-        "name": "MII LM Mikrobio Befund",
-        "description": "Logical Model des mikrobiologischen Befunds für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE]",
-        "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-lm-mikrobio-untersuchung"
         },
-        "name": "MII LM Mikrobio Untersuchung",
-        "description": "Gemeinsame Angaben aller mikrobiologischen Untersuchungen [DE]",
+        "name": "MII LM Microbiology Investigation",
+        "description": "Common information of all microbiological investigations",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-lm-mikrobio-untersuchungsarten"
         },
-        "name": "MII LM Mikrobio Untersuchungsarten",
-        "description": "Fachliche Ausprägungen der mikrobiologischen Untersuchung für die grafische Darstellung des Mikrobiologie-Datenmodells 2027 [DE]",
+        "name": "MII LM Microbiology Investigation Types",
+        "description": "Specialisations of the microbiological investigation for the graphical representation of the 2027 microbiology data model",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
+          "reference": "StructureDefinition/mii-lm-mikrobio-logical-model"
         },
-        "name": "MII PR Mikrobio Allgemeine Bestimmung (Identifizierung)",
-        "description": "Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorganismus oder infektiösen Agens in einer Probe, ohne Einschränkung auf ein vordefiniertes Ziel.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
-        },
-        "name": "MII PR Mikrobio Allgemeine Kultur",
-        "description": "Allgemeine Kultur beschreibt das Ergebnis einer nicht zielgerichteten mikrobiologischen Kultur, die prüft, ob in der Probe irgendein Mikroorganismus wächst, ohne die Analyse auf einen vordefinierten Erreger zu beschränken.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-mikroskopie"
-        },
-        "name": "MII PR Mikrobio Allgemeine Mikroskopie",
-        "description": "Allgemeine Mikroskopie beschreibt die morphologische Beobachtung von Mikroorganismen in einer Probe mittels mikroskopischer Untersuchung, optional mit Färbetechniken (z. B. Gramfärbung). Das Ergebnis ist eine morphologische Gruppe, keine Spezies.",
+        "name": "MII LM Microbiology Report",
+        "description": "Logical model of the microbiological report for the graphical representation of the 2027 microbiology data model",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-mikrobio-antigen-antikoerper-quantitativ"
         },
-        "name": "MII PR Mikrobio Antigen Antikoerper Quantitativ",
-        "description": "Quantitative Antigen-/Antikörperantwort beschreibt die quantitative Messung erregerspezifischer Antigene oder Antikörper in einer Probe, bestimmt mittels immunologischer Verfahren.",
+        "name": "MII PR Microbiology Antigen Antibody Quantitative",
+        "description": "Quantitative antigen/antibody response describes the quantitative measurement of pathogen-specific antigens or antibodies in a specimen, determined by immunological procedures.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-mikrobio-aviditaet"
         },
-        "name": "MII PR Mikrobio Aviditaet",
-        "description": "Avidität beschreibt die qualitative Beurteilung der Bindungsstärke von Antikörpern an ein spezifisches Antigen, typischerweise zur Unterscheidung frischer von zurückliegenden Infektionen.",
+        "name": "MII PR Microbiology Avidity",
+        "description": "Avidity describes the qualitative assessment of the binding strength of antibodies to a specific antigen, typically to distinguish recent from past infections.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-mikrobio-bartlett-score"
         },
-        "name": "MII PR Mikrobio Bartlett Score",
-        "description": "Bartlett-Score beschreibt die qualitative mikroskopische Beurteilung der Eignung von Sputumproben für die mikrobiologische Kultur anhand des Verhältnisses von Entzündungs- zu Epithelzellen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-ct-wert"
-        },
-        "name": "MII PR Mikrobio CT Wert",
-        "description": "CT-Wert beschreibt die Quantifizierung des Zyklusschwellenwerts bei Nukleinsäurenachweisen (z. B. Echtzeit-PCR) in einer Probe.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-diagnostic-report"
-        },
-        "name": "MII PR Mikrobio Diagnostic Report",
-        "description": "Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextualisierung zugehöriger mikrobiologischer Untersuchungsergebnisse.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
-        },
-        "name": "MII PR Mikrobio Empfindlichkeit",
-        "description": "Empfindlichkeit beschreibt das Ergebnis der phänotypischen Resistenztestung eines Erregers gegenüber antimikrobiellen Substanzen unter Bezug auf ein Normsystem.",
+        "name": "MII PR Microbiology Bartlett Score",
+        "description": "Bartlett score describes the qualitative microscopic assessment of the suitability of sputum specimens for microbiological culture based on the ratio of inflammatory to epithelial cells.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-mikrobio-keimzahl"
         },
-        "name": "MII PR Mikrobio Keimzahl",
-        "description": "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.",
+        "name": "MII PR Microbiology Colony Count",
+        "description": "Colony count describes the quantitative determination of viable microorganisms in a specimen as colony-forming units per volume, per mass or as a count per specimen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-ct-wert"
+        },
+        "name": "MII PR Microbiology Ct Value",
+        "description": "Ct value describes the quantification of the cycle threshold in nucleic acid detection (e.g. real-time PCR) in a specimen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-diagnostic-report"
+        },
+        "name": "MII PR Microbiology Diagnostic Report",
+        "description": "Microbiological report for summarising and contextualising associated microbiological investigation results.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+        },
+        "name": "MII PR Microbiology General Culture",
+        "description": "General culture describes the result of an untargeted microbiological culture that checks whether any microorganism grows in the specimen, without restricting the analysis to a predefined pathogen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
+        },
+        "name": "MII PR Microbiology General Determination (Identification)",
+        "description": "General determination describes the identification of a microorganism or infectious agent in a specimen, without restriction to a predefined target.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-mikroskopie"
+        },
+        "name": "MII PR Microbiology General Microscopy",
+        "description": "General microscopy describes the morphological observation of microorganisms in a specimen by microscopic examination, optionally with staining techniques (e.g. Gram stain). The result is a morphological group, not a species.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-mikrobio-molekulare-pathogenlast"
         },
-        "name": "MII PR Mikrobio Molekulare Pathogenlast",
-        "description": "Molekulare Pathogenlast beschreibt die quantitative Messung der Nukleinsäurekonzentration eines Erregers in einer Probe, typischerweise als Konzentration pro Volumen.",
+        "name": "MII PR Microbiology Molecular Pathogen Load",
+        "description": "Molecular pathogen load describes the quantitative measurement of the nucleic acid concentration of a pathogen in a specimen, typically as a concentration per volume.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
         },
-        "name": "MII PR Mikrobio MRGN Klasse",
-        "description": "MRGN-Klasse beschreibt die Einstufung multiresistenter gramnegativer Erreger entsprechend der RKI-Kategorisierung.",
+        "name": "MII PR Microbiology MRGN Class",
+        "description": "MRGN class describes the classification of multidrug-resistant Gram-negative pathogens according to the RKI categorisation.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-mikrobio-nugent-score"
         },
-        "name": "MII PR Mikrobio Nugent Score",
-        "description": "Nugent-Score beschreibt ein Gramfärbungs-basiertes semiquantitatives Punktesystem zur Beurteilung vaginaler Mikrobiotamuster bei bakterieller Vaginose.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-probe"
-        },
-        "name": "MII PR Mikrobio Probe",
-        "description": "Probe beschreibt das mikrobiologisch untersuchte Material. Das Profil leitet vom Bioproben-Basisprofil der MII-Biobank ab und ergaenzt die Erwartungen der mikrobiologischen Diagnostik.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
-        },
-        "name": "MII PR Mikrobio Resistenzkategorie Status",
-        "description": "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten"
-        },
-        "name": "MII PR Mikrobio Resistenzmechanismen Determinanten",
-        "description": "Resistenzmechanismen/Determinanten beschreibt den Nachweis von Resistenzgenen, Resistenzmutationen, Proteinen oder funktionalen Test (z.B. CIM-Test) in einer Probe oder Isolat als Hinweis auf spezifische Resistenzmechanismen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
-        },
-        "name": "MII PR Mikrobio Spezifische Bestimmung",
-        "description": "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten mikrobiellen Ziels in einer Probe durch direkte molekulare, immunologische oder biochemische Nachweismethoden sowie durch methodenneutral kodierte Nachweistests. Der kulturbasierte zielgerichtete Nachweis liegt ebenfalls hier; das Verfahren steht im Untersuchungscode und in Observation.method.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
-        },
-        "name": "MII PR Mikrobio Spezifische Mikroskopie",
-        "description": "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-titer"
-        },
-        "name": "MII PR Mikrobio Titer",
-        "description": "Titer beschreibt eine semiquantitative Messung aus seriellen Verdünnungsreihen, berichtet als Verhältnis (z. B. 1:160).",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/mii-pr-mikrobio-virulenzfaktor"
-        },
-        "name": "MII PR Mikrobio Virulenzfaktor",
-        "description": "Virulenzfaktor beschreibt den qualitativen Nachweis oder Ausschluss von Virulenzdeterminanten in einer Probe oder einem Isolat.",
+        "name": "MII PR Microbiology Nugent Score",
+        "description": "Nugent score describes a Gram-stain-based semiquantitative scoring system for assessing vaginal microbiota patterns in bacterial vaginosis.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"
         },
-        "name": "MII PR Mikrobio Voraussichtliche Empfindlichkeit",
-        "description": "Voraussichtliche Empfindlichkeit beschreibt die aus genotypischen Resistenznachweisen abgeleitete erwartete Suszeptibilität oder Resistenz gegenüber antimikrobiellen Substanzen.",
+        "name": "MII PR Microbiology Predicted Susceptibility",
+        "description": "Predicted susceptibility describes the expected susceptibility or resistance to antimicrobial substances derived from genotypic resistance detections.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-resistenzkategorie-status"
+        },
+        "name": "MII PR Microbiology Resistance Category Status",
+        "description": "Assessment of a detected pathogen with regard to a defined resistance category, e.g. MRSA, VRE, LRE or LVRE. The assessed category is in Observation.code, the result of the assessment in Observation.value.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-resistenzmechanismen-determinanten"
+        },
+        "name": "MII PR Microbiology Resistance Mechanisms Determinants",
+        "description": "Resistance mechanisms / determinants describes the detection of resistance genes, resistance mutations, proteins or functional tests (e.g. CIM test) in a specimen or isolate as an indication of specific resistance mechanisms.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
+        },
+        "name": "MII PR Microbiology Specific Determination",
+        "description": "Specific determination describes the qualitative detection of a predefined microbial target in a specimen by direct molecular, immunological or biochemical detection methods and by method-neutrally coded detection tests. Culture-based targeted detection also belongs here; the procedure is stated in the investigation code and in Observation.method.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
+        },
+        "name": "MII PR Microbiology Specific Microscopy",
+        "description": "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast rods or leukocytes — with the semiquantitative grade as the result.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-probe"
+        },
+        "name": "MII PR Microbiology Specimen",
+        "description": "Specimen describes the material examined microbiologically. The profile derives from the biospecimen base profile of the MII Biobank module and adds the expectations of microbiological diagnostics.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+        },
+        "name": "MII PR Microbiology Susceptibility",
+        "description": "Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to a norm system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-titer"
+        },
+        "name": "MII PR Microbiology Titre",
+        "description": "Titre describes a semiquantitative measurement from serial dilution series, reported as a ratio (e.g. 1:160).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/mii-pr-mikrobio-virulenzfaktor"
+        },
+        "name": "MII PR Microbiology Virulence Factor",
+        "description": "Virulence factor describes the qualitative detection or exclusion of virulence determinants in a specimen or an isolate.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-labor-laborergebnis-semiquantitativ"
         },
-        "name": "MII VS Labor Laborergebnis Semiquantitativ",
-        "description": "Kodierung für semi-quantitative Laborergebnisse",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed"
-        },
-        "name": "MII VS Mikrobio Allgemeine Bestimmung Ergebnis [SNOMED]",
-        "description": "Ergebnis-ValueSet fuer die allgemeine Bestimmung: der identifizierte Mikroorganismus oder das negative Ergebnis, wenn kein Erreger identifiziert wurde.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed"
-        },
-        "name": "MII VS Mikrobio Allgemeine Bestimmung Methode [SNOMED]",
-        "description": "Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasierte Verfahren zur Identifikation eines Erregers ohne vordefiniertes Ziel, etwa Mikroskopie oder MALDI-TOF.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc"
-        },
-        "name": "MII VS Mikrobio Allgemeine Bestimmung Tests [LOINC]",
-        "description": "Tests-ValueSet für die allgemeine Bestimmung: LOINC-Codes für die ungerichtete Identifizierung eines Mikroorganismus. Bevorzugt wird 41852-5; die übrigen Codes sind gleichwertig zulässig, wo das Labor die Erregergruppe oder das Sequenzierziel im Code benennt.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed"
-        },
-        "name": "MII VS Mikrobio Allgemeine Kultur Methode [SNOMED]",
-        "description": "Methoden-ValueSet für die allgemeine Kultur: Kulturverfahren ohne Einschränkung auf einen vordefinierten Erreger, einschließlich aerober und anaerober Bebrütung.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc"
-        },
-        "name": "MII VS Mikrobio Allgemeine Kultur Tests [LOINC]",
-        "description": "Tests-ValueSet für die allgemeine Kultur: LOINC-Codes für die ungerichtete kulturelle Untersuchung. Bevorzugt wird 11475-1, weil der Code das Verfahren selbst benennt; 41852-5 ist gleichwertig zulässig.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc"
-        },
-        "name": "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]",
-        "description": "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei.",
+        "name": "MII VS Laboratory Lab Result Semiquantitative",
+        "description": "Coding for semi-quantitative laboratory results",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-antigen-antikoerper-methode-snomed"
         },
-        "name": "MII VS Mikrobio Antigen Antikoerper Methode [SNOMED]",
-        "description": "Methoden-ValueSet für quantitative Antigen- und Antikörpertests sowie für die Aviditätsbestimmung: immunologische Nachweisverfahren.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"
-        },
-        "name": "MII VS Mikrobio Antigen Antikoerper Quantitativ Einheiten [UCUM]",
-        "description": "Einheiten-ValueSet für quantitative Antigen- und Antikörpertests (UCUM). Bindet Observation.valueQuantity.code.",
+        "name": "MII VS Microbiology Antigen Antibody Method [SNOMED]",
+        "description": "Method ValueSet for quantitative antigen and antibody tests and for avidity determination: immunological detection procedures.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc"
         },
-        "name": "MII VS Mikrobio Antigen Antikoerper Quantitative Tests [LOINC]",
-        "description": "Tests-ValueSet für quantitative Antigen- und Antikörpertests: LOINC-Codes für die Messung erregerspezifischer Antigene oder Antikörper.",
+        "name": "MII VS Microbiology Antigen Antibody Quantitative Tests [LOINC]",
+        "description": "Test ValueSet for quantitative antigen and antibody tests: LOINC codes for measuring pathogen-specific antigens or antibodies.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum"
+        },
+        "name": "MII VS Microbiology Antigen Antibody Quantitative Units [UCUM]",
+        "description": "Unit ValueSet for quantitative antigen and antibody tests (UCUM). Bound to Observation.valueQuantity.code.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-aviditaet-ergebnis"
         },
-        "name": "MII VS Mikrobio Aviditaet Ergebnis",
-        "description": "Bewertungs-ValueSet für die Avidität: kategoriale Einordnung des Aviditätsindex als niedrig, grenzwertig oder hoch. Niedrige Avidität spricht für eine frische Infektion.",
+        "name": "MII VS Microbiology Avidity Result",
+        "description": "Assessment ValueSet for avidity: categorical classification of the avidity index as low, borderline or high. Low avidity indicates a recent infection.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc"
         },
-        "name": "MII VS Mikrobio Aviditaet Tests [LOINC]",
-        "description": "Tests-ValueSet für die Aviditätsbestimmung: LOINC-Codes für Aviditätstests einschließlich des Zielantigens.",
+        "name": "MII VS Microbiology Avidity Tests [LOINC]",
+        "description": "Test ValueSet for avidity determination: LOINC codes for avidity tests including the target antigen.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-bartlett-score-loinc"
         },
-        "name": "MII VS Mikrobio Bartlett Score [LOINC]",
-        "description": "Ergebnis-ValueSet für den Bartlett-Score: Punktkategorien von +3 bis -1, die das Verhältnis von Entzündungs- zu Epithelzellen und damit die Eignung einer Sputumprobe für die Kultur bewerten.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-befundtyp-loinc"
-        },
-        "name": "MII VS Mikrobio Befundtyp [LOINC]",
-        "description": "Sepzalisierte Kodierung von mikrobiologischen Befunden",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-ct-wert-loinc"
-        },
-        "name": "MII VS Mikrobio CT Wert [LOINC]",
-        "description": "Tests-ValueSet für den Ct-Wert: LOINC-Codes mit der Eigenschaft Zyklusschwellenwert bei Nukleinsäurenachweisen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-data-absent-reason"
-        },
-        "name": "MII VS Mikrobio Data Absent Reason",
-        "description": "Gruende fuer ein fehlendes Untersuchungsergebnis. Ergaenzt die FHIR-Basiscodes um das unbestimmbare Ergebnis, das zuvor ueber value[x] kodiert wurde.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"
-        },
-        "name": "MII VS Mikrobio Detected Not Detected [SNOMED]",
-        "description": "Ergebnis-ValueSet für zielgerichtete qualitative Nachweise: nachgewiesen oder nicht nachgewiesen. Ein unbestimmbares Ergebnis wird nicht hierüber, sondern über Observation.dataAbsentReason abgebildet.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum"
-        },
-        "name": "MII VS Mikrobio Empfindlichkeit Einheiten [UCUM]",
-        "description": "Einheiten-ValueSet für die phänotypische Empfindlichkeitstestung (UCUM): minimale Hemmkonzentration in mg/L oder Hemmhofdurchmesser in mm.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-empfindlichkeit-methode-snomed"
-        },
-        "name": "MII VS Mikrobio Empfindlichkeit Methode [SNOMED]",
-        "description": "Methoden-ValueSet für die phänotypische Empfindlichkeitstestung: die Verfahren, mit denen eine minimale Hemmkonzentration oder ein Hemmhofdurchmesser gemessen wird.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"
-        },
-        "name": "MII VS Mikrobio Empfindlichkeit Phenotyp [LOINC]",
-        "description": "Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LOINC-Codes der getesteten antimikrobiellen Substanz.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"
-        },
-        "name": "MII VS Mikrobio Empfänglichkeit Genotyp [LOINC]",
-        "description": "Tests-ValueSet für die voraussichtliche Empfindlichkeit: LOINC-Codes für die aus dem Genotyp abgeleitete erwartete Wirksamkeit einer antimikrobiellen Substanz.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-faerbung-snomed"
-        },
-        "name": "MII VS Mikrobio Färbung [SNOMED]",
-        "description": "Färbeverfahren der mikroskopischen Untersuchung, z. B. Gramfärbung oder Kinyounfärbung.",
+        "name": "MII VS Microbiology Bartlett Score [LOINC]",
+        "description": "Result ValueSet for the Bartlett score: score categories from +3 to -1 that rate the ratio of inflammatory to epithelial cells and thus the suitability of a sputum specimen for culture.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"
         },
-        "name": "MII VS Mikrobio Keimzahl Einheiten [UCUM]",
-        "description": "Einheiten-ValueSet für die Keimzahlbestimmung (UCUM): koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.",
+        "name": "MII VS Microbiology Colony Count Units [UCUM]",
+        "description": "Unit ValueSet for colony counting (UCUM): colony-forming units per volume, per mass or as a count per specimen.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-keimzahl-loinc"
         },
-        "name": "MII VS Mikrobio Keimzahl [LOINC]",
-        "description": "Tests-ValueSet für die Keimzahlbestimmung: LOINC-Codes für die quantitative Bestimmung lebensfähiger Mikroorganismen.",
+        "name": "MII VS Microbiology Colony Count [LOINC]",
+        "description": "Test ValueSet for colony counting: LOINC codes for the quantitative determination of viable microorganisms.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-ct-wert-loinc"
+        },
+        "name": "MII VS Microbiology Ct Value [LOINC]",
+        "description": "Test ValueSet for the Ct value: LOINC codes with the property cycle threshold in nucleic acid detection.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-kultur-ergebnis-snomed"
         },
-        "name": "MII VS Mikrobio Kultur Ergebnis [SNOMED]",
-        "description": "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: Wachstum, kein Wachstum oder ein nicht eindeutiges Ergebnis. Wie viel gewachsen ist, sagt nicht dieses ValueSet, sondern die Keimzahl. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
+        "name": "MII VS Microbiology Culture Result [SNOMED]",
+        "description": "Result ValueSet for general and specific culture: growth, no growth or an equivocal result. How much has grown is not stated by this ValueSet but by the colony count. An indeterminable result is represented not via value[x] but via Observation.dataAbsentReason.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-data-absent-reason"
+        },
+        "name": "MII VS Microbiology Data Absent Reason",
+        "description": "Reasons for a missing investigation result. Supplements the FHIR base codes with the indeterminable result that was previously coded via value[x].",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-detected-not-detected-snomed"
+        },
+        "name": "MII VS Microbiology Detected Not Detected [SNOMED]",
+        "description": "Result ValueSet for targeted qualitative detections: detected or not detected. An indeterminable result is represented not here but via Observation.dataAbsentReason.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-kultur-methode-snomed"
+        },
+        "name": "MII VS Microbiology General Culture Method [SNOMED]",
+        "description": "Method ValueSet for general culture: culture procedures without restriction to a predefined pathogen, including aerobic and anaerobic incubation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc"
+        },
+        "name": "MII VS Microbiology General Culture Tests [LOINC]",
+        "description": "Test ValueSet for general culture: LOINC codes for untargeted culture investigation. 11475-1 is preferred because the code names the procedure itself; 41852-5 is equally permitted.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-methode-snomed"
+        },
+        "name": "MII VS Microbiology General Determination Method [SNOMED]",
+        "description": "Method ValueSet for general determination: non-culture-based procedures for identifying a pathogen without a predefined target, such as microscopy or MALDI-TOF.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed"
+        },
+        "name": "MII VS Microbiology General Determination Result [SNOMED]",
+        "description": "Result ValueSet for general determination: the identified microorganism, or the negative result if no pathogen was identified.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc"
+        },
+        "name": "MII VS Microbiology General Determination Tests [LOINC]",
+        "description": "Test ValueSet for general determination: LOINC codes for the untargeted identification of a microorganism. 41852-5 is preferred; the remaining codes are equally permitted where the laboratory names the pathogen group or the sequencing target in the code.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc"
+        },
+        "name": "MII VS Microbiology General Microscopy Tests [LOINC]",
+        "description": "Test ValueSet for general microscopy: nominal LOINC codes for microscopic observation whose result is the morphology seen. 105059-0 is preferred because it is method-neutral; the codes with a stain in the name (Gram, acid-fast, rhodamine-auramine) are equally permitted and leave Observation.method free in return.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum"
         },
-        "name": "MII VS Mikrobio Mikroskopie Gesichtsfeld Einheiten [UCUM]",
-        "description": "Einheiten für die Zählung je Gesichtsfeld in der Mengenkomponente der Mikroskopie.",
+        "name": "MII VS Microbiology Microscopy Field of View Units [UCUM]",
+        "description": "Units for the count per field of view in the quantity component of microscopy.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"
         },
-        "name": "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]",
-        "description": "Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in der ein mikroskopischer Befund gesehen wurde.",
+        "name": "MII VS Microbiology Microscopy Semiquantitative [SNOMED]",
+        "description": "Quantity ValueSet for microscopy: the semiquantitative grade in which a microscopic finding was seen.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum"
         },
-        "name": "MII VS Mikrobio Molekulare Diagnostik Einheiten [UCUM]",
-        "description": "Einheiten-ValueSet für die molekulare Pathogenlast (UCUM): Konzentrationsangaben wie Kopien pro Milliliter.",
+        "name": "MII VS Microbiology Molecular Diagnostics Units [UCUM]",
+        "description": "Unit ValueSet for molecular pathogen load (UCUM): concentration units such as copies per millilitre.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed"
         },
-        "name": "MII VS Mikrobio Molekulare Pathogenlast Methode [SNOMED]",
-        "description": "Methoden-ValueSet für die molekulare Pathogenlast: Amplifikationsverfahren zur Quantifizierung von Erregernukleinsäure.",
+        "name": "MII VS Microbiology Molecular Pathogen Load Method [SNOMED]",
+        "description": "Method ValueSet for molecular pathogen load: amplification procedures for quantifying pathogen nucleic acid.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-tests-loinc"
         },
-        "name": "MII VS Mikrobio Molekulare Pathogenlast Tests [LOINC]",
-        "description": "Tests-ValueSet für die molekulare Pathogenlast: quantitative LOINC-Codes für die Nukleinsäurekonzentration eines Erregers.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed"
-        },
-        "name": "MII VS Mikrobio Morphologie Ergebnis [SNOMED]",
-        "description": "Ergebnis-ValueSet für die Mikroskopie: die mikroskopisch beobachtete morphologische Gruppe, etwa grampositive Kokken in Haufen oder gramnegative Stäbchen. Eine Speziesidentifizierung gehört nicht hierher, auch wenn sie mikroskopisch gestellt wurde.",
+        "name": "MII VS Microbiology Molecular Pathogen Load Tests [LOINC]",
+        "description": "Test ValueSet for molecular pathogen load: quantitative LOINC codes for the nucleic acid concentration of a pathogen.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-morphologie-methode-snomed"
         },
-        "name": "MII VS Mikrobio Morphologie Methode [SNOMED]",
-        "description": "Methoden-ValueSet für die Mikroskopie: die eingesetzten mikroskopischen Verfahren. Die Färbung wird nicht hier, sondern in der Extension MII_EX_Mikrobio_Faerbung angegeben.",
+        "name": "MII VS Microbiology Morphology Method [SNOMED]",
+        "description": "Method ValueSet for microscopy: the microscopic procedures used. The stain is stated not here but in the extension MII_EX_Mikrobio_Faerbung.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed"
+        },
+        "name": "MII VS Microbiology Morphology Result [SNOMED]",
+        "description": "Result ValueSet for microscopy: the morphological group observed microscopically, such as Gram-positive cocci in clusters or Gram-negative rods. A species identification does not belong here, even if it was made microscopically.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc"
         },
-        "name": "MII VS Mikrobio MRGN Klasse [LOINC]",
-        "description": "Ergebnis-ValueSet für die MRGN-Klassifikation: 2MRGN, 3MRGN und 4MRGN nach RKI-Kategorisierung. Die negative Einstufung steht im modul­eigenen CodeSystem, da die LOINC-AnswerList sie nicht führt.",
+        "name": "MII VS Microbiology MRGN Class [LOINC]",
+        "description": "Result ValueSet for the MRGN classification: 2MRGN, 3MRGN and 4MRGN according to the RKI categorisation. The negative classification is in the module's own CodeSystem, because the LOINC answer list does not carry it.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-organismen-snomedct"
         },
-        "name": "MII VS Mikrobio Organismen [SNOMED CT]",
-        "description": "Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Erreger stammen kann. Wird nicht direkt gebunden, sondern in die Ergebnis-ValueSets der Bestimmung eingebunden.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-resistenzkategorie-status"
-        },
-        "name": "MII VS Mikrobio Resistenzkategorie Status",
-        "description": "Untersuchungscodes fuer die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis"
-        },
-        "name": "MII VS Mikrobio Resistenzkategorie Status Ergebnis",
-        "description": "Ergebnis der Bewertung eines nachgewiesenen Erregers hinsichtlich der in Observation.code angegebenen Resistenzkategorie.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc"
-        },
-        "name": "MII VS Mikrobio Resistenzmechanismen Determinanten [LOINC]",
-        "description": "Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-Codes für den Nachweis von Resistenzgenen, Resistenzproteinen und funktionalen Resistenztests.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-resistenzmechanismen-methode-snomed"
-        },
-        "name": "MII VS Mikrobio Resistenzmechanismen Methode [SNOMED]",
-        "description": "Methoden für den Nachweis von Resistenzmechanismen und Determinanten: molekulare, immunologische und funktionale Verfahren.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed"
-        },
-        "name": "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
-        "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed"
-        },
-        "name": "MII VS Mikrobio Spezifische Bestimmung Methode [SNOMED]",
-        "description": "Methoden-ValueSet für die spezifische Bestimmung: nicht kulturbasierte Verfahren des zielgerichteten Erregernachweises, etwa Amplifikation, Immunoassay oder Agglutination.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc"
-        },
-        "name": "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]",
-        "description": "Tests-ValueSet fuer die spezifische Bestimmung.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"
-        },
-        "name": "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]",
-        "description": "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-susceptibility"
-        },
-        "name": "MII VS Mikrobio Susceptibility",
-        "description": "Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategorien sensibel, intermediär, sensibel bei erhöhter Exposition, resistent und nicht sensibel.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-susceptibility-norm"
-        },
-        "name": "MII VS Mikrobio Susceptibility Norm",
-        "description": "Norm-ValueSet für die Empfindlichkeitstestung: das Normsystem, auf dessen Grenzwerten eine Kategorie beruht. Gebunden an die Extension MII_EX_Mikrobio_Empfindlichkeit_Norm.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-titer-methode-snomed"
-        },
-        "name": "MII VS Mikrobio Titer Methode [SNOMED]",
-        "description": "Methoden-ValueSet für die Titerbestimmung: Verfahren serieller Verdünnungsreihen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-titer-tests-loinc"
-        },
-        "name": "MII VS Mikrobio Titer Tests [LOINC]",
-        "description": "Tests-ValueSet für die Titerbestimmung: LOINC-Codes für semiquantitative Messungen aus Verdünnungsreihen.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/mii-vs-mikrobio-virulenz-loinc"
-        },
-        "name": "MII VS Mikrobio Virulenz [LOINC]",
-        "description": "Tests-ValueSet für Virulenzfaktoren: LOINC-Codes für den Nachweis oder Ausschluss von Virulenzdeterminanten.",
+        "name": "MII VS Microbiology Organisms [SNOMED CT]",
+        "description": "Organism ValueSet: the SNOMED CT hierarchies from which an identified pathogen may come. Not bound directly, but included in the result ValueSets of the determination profiles.",
         "exampleBoolean": false
       },
       {
         "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit"
         },
-        "name": "MII VS Mikrobio Voraussichtliche Empfindlichkeit",
-        "description": "Ergebnis-ValueSet für die voraussichtliche Empfindlichkeit: die aus genotypischen Nachweisen abgeleitete erwartete Kategorie sensibel, intermediär oder resistent.",
+        "name": "MII VS Microbiology Predicted Susceptibility",
+        "description": "Result ValueSet for predicted susceptibility: the expected category susceptible, intermediate or resistant derived from genotypic detections.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-befundtyp-loinc"
+        },
+        "name": "MII VS Microbiology Report Type [LOINC]",
+        "description": "Specialised coding of microbiological reports",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-resistenzkategorie-status"
+        },
+        "name": "MII VS Microbiology Resistance Category Status",
+        "description": "Investigation codes for assessing a detected pathogen with regard to a defined resistance category.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-resistenzkategorie-status-ergebnis"
+        },
+        "name": "MII VS Microbiology Resistance Category Status Result",
+        "description": "Result of assessing a detected pathogen with regard to the resistance category given in Observation.code.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc"
+        },
+        "name": "MII VS Microbiology Resistance Mechanisms Determinants [LOINC]",
+        "description": "Test ValueSet for resistance mechanisms and determinants: LOINC codes for the detection of resistance genes, resistance proteins and functional resistance tests.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-resistenzmechanismen-methode-snomed"
+        },
+        "name": "MII VS Microbiology Resistance Mechanisms Method [SNOMED]",
+        "description": "Methods for detecting resistance mechanisms and determinants: molecular, immunological and functional procedures.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed"
+        },
+        "name": "MII VS Microbiology Specific Determination Method [SNOMED]",
+        "description": "Method ValueSet for specific determination: non-culture-based procedures for targeted pathogen detection, such as amplification, immunoassay or agglutination.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed"
+        },
+        "name": "MII VS Microbiology Specific Determination Result [SNOMED]",
+        "description": "Result ValueSet for specific determination: detection or exclusion of the target already named in the investigation code, including the grey-zone findings weakly positive and equivocal. An indeterminable result is represented not via value[x] but via Observation.dataAbsentReason.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc"
+        },
+        "name": "MII VS Microbiology Specific Determination Tests [LOINC]",
+        "description": "Test ValueSet for specific determination.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"
+        },
+        "name": "MII VS Microbiology Specific Microscopy Tests [LOINC]",
+        "description": "Test ValueSet for specific microscopy: ordinal LOINC codes in which the object sought and the staining technique are named in the code; the result is the detection, the quantity is in the quantity component.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-faerbung-snomed"
+        },
+        "name": "MII VS Microbiology Staining [SNOMED]",
+        "description": "Staining procedures of the microscopic examination, e.g. Gram stain or Kinyoun stain.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-susceptibility"
+        },
+        "name": "MII VS Microbiology Susceptibility",
+        "description": "Assessment ValueSet for phenotypic susceptibility testing: the categories susceptible, intermediate, susceptible at increased exposure, resistant and non-susceptible.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"
+        },
+        "name": "MII VS Microbiology Susceptibility Genotype [LOINC]",
+        "description": "Test ValueSet for predicted susceptibility: LOINC codes for the expected efficacy of an antimicrobial substance derived from the genotype.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-empfindlichkeit-methode-snomed"
+        },
+        "name": "MII VS Microbiology Susceptibility Method [SNOMED]",
+        "description": "Method ValueSet for phenotypic susceptibility testing: the procedures used to measure a minimum inhibitory concentration or an inhibition zone diameter.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-susceptibility-norm"
+        },
+        "name": "MII VS Microbiology Susceptibility Norm",
+        "description": "Norm ValueSet for susceptibility testing: the norm system on whose breakpoints a category is based. Bound to the extension MII_EX_Mikrobio_Empfindlichkeit_Norm.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc"
+        },
+        "name": "MII VS Microbiology Susceptibility Phenotype [LOINC]",
+        "description": "Test ValueSet for phenotypic susceptibility testing: LOINC codes of the antimicrobial substance tested.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum"
+        },
+        "name": "MII VS Microbiology Susceptibility Units [UCUM]",
+        "description": "Unit ValueSet for phenotypic susceptibility testing (UCUM): minimum inhibitory concentration in mg/L or inhibition zone diameter in mm.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-titer-methode-snomed"
+        },
+        "name": "MII VS Microbiology Titre Method [SNOMED]",
+        "description": "Method ValueSet for titre determination: serial dilution procedures.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-titer-tests-loinc"
+        },
+        "name": "MII VS Microbiology Titre Tests [LOINC]",
+        "description": "Test ValueSet for titre determination: LOINC codes for semiquantitative measurements from dilution series.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-virulenz-loinc"
+        },
+        "name": "MII VS Microbiology Virulence [LOINC]",
+        "description": "Test ValueSet for virulence factors: LOINC codes for the detection or exclusion of virulence determinants.",
         "exampleBoolean": false
       },
       {
@@ -1211,7 +1211,7 @@
           "reference": "SearchParameter/mii-sp-mikrobio-interpretation"
         },
         "name": "mii-sp-mikrobio-interpretation",
-        "description": "Suchparameter für die Normkategorie der Empfindlichkeitsextension",
+        "description": "Search parameter for the norm category of the susceptibility extension",
         "exampleBoolean": false
       },
       {
@@ -1219,7 +1219,7 @@
           "reference": "SearchParameter/mii-sp-mikrobio-observation-titer"
         },
         "name": "mii-sp-mikrobio-observation-titer",
-        "description": "Suche nach der Verduennungsstufe eines Titers. Indiziert den Nenner des Ratio-Werts von MII_PR_Mikrobio_Titer; der Zaehler ist dort fest 1. Ein groesserer Nenner bedeutet einen hoeheren Titer, z. B. findet ?titer=gt160 alle Titer oberhalb von 1:160.",
+        "description": "Search by the dilution step of a titre. Indexes the denominator of the Ratio value of MII_PR_Mikrobio_Titer; the numerator is fixed at 1 there. A larger denominator means a higher titre, e.g. ?titer=gt160 finds all titres above 1:160.",
         "exampleBoolean": false
       },
       {
@@ -1227,7 +1227,7 @@
           "reference": "SearchParameter/mii-sp-mikrobio-observation-triggered-by"
         },
         "name": "mii-sp-mikrobio-observation-triggered-by",
-        "description": "Suche nach der Observation, die eine mikrobiologische Observation ausgelöst hat.",
+        "description": "Search by the Observation that triggered a microbiological Observation.",
         "exampleBoolean": false
       },
       {
@@ -1235,7 +1235,7 @@
           "reference": "SearchParameter/ObservationInterpretation"
         },
         "name": "ObservationInterpretation",
-        "description": "Suche nach der Interpretation einer mikrobiologischen Observation.",
+        "description": "Search by the interpretation of a microbiological Observation.",
         "exampleBoolean": false
       },
       {

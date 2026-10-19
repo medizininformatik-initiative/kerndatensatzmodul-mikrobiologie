@@ -7,8 +7,8 @@
 Instance: mii-exa-mikrobio-mrgn-klasse-negativ
 InstanceOf: MII_PR_Mikrobio_MRGN_Klasse
 Usage: #example
-Title: "MII EXA Mikrobio MRGN Klasse negativ"
-Description: "Identifiziertes gramnegatives Isolat, dessen Empfindlichkeitsbefunde bewertet wurden und das keiner MRGN-Klasse zuzuordnen ist."
+Title: "MII EXA Microbiology MRGN Class Negative"
+Description: "Identified Gram-negative isolate whose susceptibility results were assessed and which cannot be assigned to any MRGN class."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "mrgn-neg-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

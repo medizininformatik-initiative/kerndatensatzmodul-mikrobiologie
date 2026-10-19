@@ -10,8 +10,8 @@
 Instance: mii-exa-mikrobio-resistenzkategorie-vre-positiv
 InstanceOf: MII_PR_Mikrobio_Resistenzkategorie_Status
 Usage: #example
-Title: "MII EXA Mikrobio Resistenzkategorie VRE positiv"
-Description: "Identifizierter Enterococcus faecium mit nachgewiesener Vancomycinresistenz: VRE-Status Positive, abgeleitet aus Identifikation und Empfindlichkeitstestung."
+Title: "MII EXA Microbiology Resistance Category VRE Positive"
+Description: "Identified Enterococcus faecium with detected vancomycin resistance: VRE status Positive, derived from identification and susceptibility testing."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "reskat-vre-pos"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

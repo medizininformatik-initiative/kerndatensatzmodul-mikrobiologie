@@ -137,7 +137,7 @@
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl",
   "version": "2027.0.0-ballot2",
   "name": "MII_PR_Mikrobio_Keimzahl",
-  "title": "MII PR Mikrobio Keimzahl",
+  "title": "MII PR Microbiology Colony Count",
   "status": "active",
   "experimental": false,
   "publisher": "Medizininformatik Initiative",
@@ -151,8 +151,8 @@
       ]
     }
   ],
-  "description": "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.",
-  "purpose": "Dieses Profil beschreibt die Keimzahlbestimmung.",
+  "description": "Colony count describes the quantitative determination of viable microorganisms in a specimen as colony-forming units per volume, per mass or as a count per specimen.",
+  "purpose": "This profile describes colony counting.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -187,7 +187,7 @@
         "id": "Observation.extension:triggeredBy-r5.extension:type",
         "path": "Observation.extension.extension",
         "sliceName": "type",
-        "short": "Beschreibt die Art der Auslösung einer Untersuchung im diagnostischen Zusammenhang; insbesondere kennzeichnet der Wert „reflex“ eine durch das Ergebnis einer vorangegangenen Untersuchung ausgelöste Folgediagnostik."
+        "short": "Describes how an investigation was triggered in the diagnostic context; in particular, the value “reflex” marks follow-up diagnostics triggered by the result of a preceding investigation."
       },
       {
         "id": "Observation.category",
@@ -198,8 +198,8 @@
         "id": "Observation.category:mibi-category",
         "path": "Observation.category",
         "sliceName": "mibi-category",
-        "short": "Mikrobiologie-Kategorie",
-        "definition": "Kategorie-Slice für mikrobiologische Laboruntersuchungen.",
+        "short": "Microbiology category",
+        "definition": "Category slice for microbiological laboratory investigations.",
         "min": 1,
         "max": "1",
         "patternCodeableConcept": {
@@ -242,7 +242,7 @@
       {
         "id": "Observation.value[x]:valueQuantity.code",
         "path": "Observation.value[x].code",
-        "short": "Bevorzugt eine Einheit MIT der KBE-Annotation: [CFU]/mL je Volumen, [CFU]/g je Masse, [CFU] je Probe. Die unannotierten Formen /mL, /g und 1 sagen weniger — /mL heisst in UCUM woertlich 'pro Milliliter' und nicht, WAS pro Milliliter, und 1 ist die dimensionslose Eins. Sie bleiben zulaessig, weil sie bis 2025.0.2 die einzige Moeglichkeit waren; der Migrationspfad ist mechanisch. Bei Probenmaterialien ohne Volumen- oder Massenbezug, etwa Katheterspitzen, wird [CFU] verwendet und die Bezugsgroesse steht in Specimen.type.",
+        "short": "Preferably a unit WITH the CFU annotation: [CFU]/mL per volume, [CFU]/g per mass, [CFU] per specimen. The unannotated forms /mL, /g and 1 say less — in UCUM /mL literally means 'per millilitre' and not WHAT per millilitre, and 1 is the dimensionless unity. They remain permitted because up to 2025.0.2 they were the only option; the migration path is mechanical. For specimen materials without a volume or mass reference, such as catheter tips, [CFU] is used and the reference quantity is in Specimen.type.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum"

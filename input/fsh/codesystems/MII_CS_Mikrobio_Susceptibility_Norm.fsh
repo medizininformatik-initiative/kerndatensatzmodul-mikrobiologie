@@ -1,7 +1,7 @@
 CodeSystem: MII_CS_Mikrobio_Susceptibility_NORM
 Id: mii-cs-mikrobio-susceptibility-norm
-Title: "MII CS Mikrobio Susceptibility Norm"
-Description: "CodeSystem zur Kodierung von Normen für die Interpretation der Empfindlichkeit von Mikroorganismen gegenüber antimikrobiellen Substanzen."
+Title: "MII CS Microbiology Susceptibility Norm"
+Description: "CodeSystem for coding the norms used to interpret the susceptibility of microorganisms to antimicrobial substances."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

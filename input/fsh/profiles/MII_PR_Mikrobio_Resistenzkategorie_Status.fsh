@@ -1,8 +1,8 @@
 Profile: MII_PR_Mikrobio_Resistenzkategorie_Status
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-resistenzkategorie-status
-Title: "MII PR Mikrobio Resistenzkategorie Status"
-Description: "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie, z. B. MRSA, VRE, LRE oder LVRE. Die bewertete Kategorie steht in Observation.code, das Ergebnis der Bewertung in Observation.value."
+Title: "MII PR Microbiology Resistance Category Status"
+Description: "Assessment of a detected pathogen with regard to a defined resistance category, e.g. MRSA, VRE, LRE or LVRE. The assessed category is in Observation.code, the result of the assessment in Observation.value."
 // Loest das bisherige Profil mii-pr-mikrobio-mre-klasse ab. Dort war der Wert der
 // konkrete resistente Organismus (z. B. MRSA, VRE) aus dem SNOMED-Unterbaum
 // "antimicrobial resistant organism". Das duplizierte Erreger- und Resistenzinformationen,
@@ -10,14 +10,14 @@ Description: "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definie
 // sind, und war semantisch breiter als "MRE": Einzelsubstanzresistenzen wie
 // 838510005 "Linezolid resistant Enterococcus" bedeuten nicht automatisch Multiresistenz.
 * insert MIKRO_OBSERVATION_COMMON
-* ^purpose = "Dieses Profil bildet die aus den zugrunde liegenden mikrobiologischen Untersuchungen abgeleitete Bewertung eines Erregers hinsichtlich einer definierten Resistenzkategorie ab. Es ersetzt keinen zielgerichteten Erregernachweis: Ob ein Erreger überhaupt vorhanden ist, wird über MII_PR_Mikrobio_Spezifische_Bestimmung bzw. MII_PR_Mikrobio_Spezifische_Kultur abgebildet."
+* ^purpose = "This profile represents the assessment of a pathogen with regard to a defined resistance category, derived from the underlying microbiological investigations. It does not replace a targeted pathogen detection: whether a pathogen is present at all is represented via MII_PR_Mikrobio_Spezifische_Bestimmung or MII_PR_Mikrobio_Spezifische_Kultur."
 * code 1..1 MS
 * code from MII_VS_Mikrobio_Resistenzkategorie_Status (required)
-* code ^short = "Bewertete Resistenzkategorie, z. B. MRSA-Status. Es werden ausschließlich Kategorien dokumentiert, die für den vorliegenden Erreger fachlich anwendbar sind; für einen Enterococcus wird kein MRSA-Status erzeugt."
+* code ^short = "Assessed resistance category, e.g. MRSA status. Only categories that are clinically applicable to the pathogen at hand are documented; no MRSA status is generated for an Enterococcus."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1 MS
 * valueCodeableConcept from MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis (required)
-* valueCodeableConcept ^short = "Positive: Der Erreger erfüllt die Kriterien der in code angegebenen Kategorie. Negative: Der Erreger wurde anhand der relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. Kann die Kategorie nicht ausreichend bewertet werden, wird nicht Negative angegeben, sondern dataAbsentReason gesetzt oder keine Status-Observation erzeugt."
+* valueCodeableConcept ^short = "Positive: the pathogen meets the criteria of the category given in code. Negative: the pathogen was sufficiently assessed on the basis of the relevant investigations and does not meet the criteria. If the category cannot be sufficiently assessed, Negative is not stated; instead dataAbsentReason is set or no status Observation is created."
 // Die Kategorienbewertung ist eine abgeleitete fachliche Aussage: Sie entsteht durch
 // Bewertung mehrerer Untersuchungen, nicht durch eine ausgeloeste Folgeuntersuchung. Deshalb
 // derivedFrom und nicht die triggeredBy-Extension.
@@ -27,5 +27,5 @@ Description: "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definie
 // System ggf. nicht als eigene Observations vor. Die Angabe ist deshalb SHOULD und
 // nicht SHALL.
 * derivedFrom 0..* MS
-* derivedFrom ^short = "Untersuchungen, aus denen die Bewertung abgeleitet wurde: Erregeridentifikation, Empfindlichkeitstestung und Resistenzmechanismen/Determinanten. Diese Untersuchungen SOLLTEN angegeben werden, damit die Bewertungsgrundlage nachvollziehbar ist. Sie dürfen entfallen, wenn der Status unmittelbar aus einem bereits kategorisierten Laborbefund übernommen wird und die Einzeluntersuchungen nicht als eigene Observations vorliegen."
-* extension[triggeredBy-r5] ^short = "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung der Kategorienbewertung wird nicht hierüber, sondern über derivedFrom abgebildet."
+* derivedFrom ^short = "Investigations from which the assessment was derived: pathogen identification, susceptibility testing and resistance mechanisms / determinants. These investigations SHOULD be stated so that the basis of the assessment is traceable. They may be omitted if the status is taken directly from an already categorised laboratory report and the individual investigations are not available as separate Observations."
+* extension[triggeredBy-r5] ^short = "Only for follow-up diagnostics that were actually triggered. The clinical derivation of the category assessment is represented not here but via derivedFrom."

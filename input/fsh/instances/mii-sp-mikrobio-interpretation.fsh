@@ -8,7 +8,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2026-04-02"
-* description = "Suchparameter für die Normkategorie der Empfindlichkeitsextension"
+* description = "Search parameter for the norm category of the susceptibility extension"
 * code = #norm-kategorie
 * base = #Observation
 * type = #token

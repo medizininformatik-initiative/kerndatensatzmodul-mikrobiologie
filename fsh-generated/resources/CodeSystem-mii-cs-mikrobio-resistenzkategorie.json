@@ -4,29 +4,29 @@
   "content": "complete",
   "name": "MII_CS_Mikrobio_Resistenzkategorie",
   "id": "mii-cs-mikrobio-resistenzkategorie",
-  "title": "MII CS Mikrobio Resistenzkategorie",
-  "description": "Untersuchungscodes (Observation.code) für die Bewertung eines nachgewiesenen Erregers hinsichtlich einer definierten Resistenzkategorie. Jeder Code benennt die bewertete Kategorie; das Ergebnis der Bewertung steht in Observation.value.",
+  "title": "MII CS Microbiology Resistance Category",
+  "description": "Investigation codes (Observation.code) for assessing a detected pathogen with regard to a defined resistance category. Each code names the assessed category; the result of the assessment is in Observation.value.",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-resistenzkategorie",
   "concept": [
     {
       "code": "mrsa-status",
       "display": "MRSA-Status",
-      "definition": "Erfüllt der nachgewiesene Erreger die Kriterien der Kategorie MRSA (methicillinresistenter Staphylococcus aureus)? Bewertungsgrundlage: Identifikation als Staphylococcus aureus und Nachweis der Methicillin-/Oxacillinresistenz, phänotypisch oder über mecA/mecC."
+      "definition": "Does the detected pathogen meet the criteria of the category MRSA (methicillin-resistant Staphylococcus aureus)? Basis of assessment: identification as Staphylococcus aureus and detection of methicillin/oxacillin resistance, phenotypically or via mecA/mecC."
     },
     {
       "code": "vre-status",
       "display": "VRE-Status",
-      "definition": "Erfüllt der nachgewiesene Erreger die Kriterien der Kategorie VRE (vancomycinresistenter Enterococcus)? Bewertungsgrundlage: Identifikation als Enterococcus und Nachweis der Vancomycinresistenz, phänotypisch oder über vanA/vanB."
+      "definition": "Does the detected pathogen meet the criteria of the category VRE (vancomycin-resistant Enterococcus)? Basis of assessment: identification as Enterococcus and detection of vancomycin resistance, phenotypically or via vanA/vanB."
     },
     {
       "code": "lre-status",
       "display": "LRE-Status",
-      "definition": "Erfüllt der nachgewiesene Erreger die Kriterien der Kategorie LRE (linezolidresistenter Enterococcus)? Bewertungsgrundlage: Identifikation als Enterococcus und Nachweis der Linezolidresistenz."
+      "definition": "Does the detected pathogen meet the criteria of the category LRE (linezolid-resistant Enterococcus)? Basis of assessment: identification as Enterococcus and detection of linezolid resistance."
     },
     {
       "code": "lvre-status",
       "display": "LVRE-Status",
-      "definition": "Erfüllt der nachgewiesene Erreger die Kriterien der Kategorie LVRE (linezolid- und vancomycinresistenter Enterococcus)? Bewertungsgrundlage: Identifikation als Enterococcus und Nachweis sowohl der Linezolid- als auch der Vancomycinresistenz."
+      "definition": "Does the detected pathogen meet the criteria of the category LVRE (linezolid- and vancomycin-resistant Enterococcus)? Basis of assessment: identification as Enterococcus and detection of both linezolid and vancomycin resistance."
     }
   ],
   "version": "2027.0.0-ballot2",
