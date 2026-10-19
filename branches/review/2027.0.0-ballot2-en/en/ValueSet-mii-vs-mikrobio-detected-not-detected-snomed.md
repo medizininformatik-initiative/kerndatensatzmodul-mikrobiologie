@@ -45,7 +45,7 @@ Result ValueSet for targeted qualitative detections: detected or not detected. A
   "title" : "MII VS Microbiology Detected Not Detected [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T02:33:36+00:00",
+  "date" : "2026-10-19T02:49:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -14,7 +14,7 @@
  
 Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to an interpretive standard (e.g. EUCAST, CLSI). 
 
-Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to a norm system.
+Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to an interpretive standard (e.g. EUCAST, CLSI).
 
 The resistance of an already identified pathogen against a single substance is represented here, for example a linezolid-resistant Enterococcus via `29258-1 |Linezolid [Susceptibility]|` with `interpretation` R; the negative case is `interpretation` S. Targeted detection of a resistant pathogen as such belongs in the detection profiles instead - see [Profile selection and delimitation](profilauswahl-und-abgrenzung.md).
 
@@ -199,7 +199,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-e
   "title" : "MII PR Microbiology Susceptibility",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T02:33:36+00:00",
+  "date" : "2026-10-19T02:49:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

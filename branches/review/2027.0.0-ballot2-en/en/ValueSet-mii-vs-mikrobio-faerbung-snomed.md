@@ -42,7 +42,7 @@ Staining procedures of the microscopic examination, e.g. Gram stain or Kinyoun s
   "title" : "MII VS Microbiology Staining [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T02:33:36+00:00",
+  "date" : "2026-10-19T02:49:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

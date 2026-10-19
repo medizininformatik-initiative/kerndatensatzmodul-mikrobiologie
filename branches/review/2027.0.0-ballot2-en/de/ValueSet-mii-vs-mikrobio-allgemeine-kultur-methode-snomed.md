@@ -42,7 +42,7 @@ Method ValueSet for general culture: culture procedures without restriction to a
   "title" : "MII VS Microbiology General Culture Method [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T02:33:36+00:00",
+  "date" : "2026-10-19T02:49:08+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
