@@ -20,6 +20,6 @@ Description: "Logical model of the microbiological report for the graphical repr
 * QuelleKlinischerBezugszeitpunkt 0..1 Coding "Source of the clinical reference time" "Indicates what the clinical reference time refers to, e.g. time of specimen collection or receipt in the laboratory."
 * Dokumentationszeitpunkt 0..1 dateTime "Documentation time" "Time at which the report was released or made available."
 * Anforderung 0..1 Reference(ServiceRequest) "Order" "Underlying laboratory order."
-* Befundinterpret 0..* Reference(Practitioner) "Report interpreter" "Person who clinically assesses and is responsible for the report."
-* Probenmaterial 0..* Reference(Specimen) "Specimen material" "Specimen materials on which the report is based."
+* Befundinterpret 0..* Reference(Practitioner) "Results interpreter" "Person who clinically assesses and is responsible for the report."
+* Probenmaterial 0..* Reference(Specimen) "Specimen" "Specimens on which the report is based."
 * Untersuchung 0..* Reference(MII_LM_Mikrobio_Untersuchung) "Investigation" "The microbiological investigations contained in the report."

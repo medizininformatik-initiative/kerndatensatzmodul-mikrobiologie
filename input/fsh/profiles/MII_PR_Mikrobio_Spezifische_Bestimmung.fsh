@@ -36,7 +36,7 @@ Profile: MII_PR_Mikrobio_Spezifische_Bestimmung
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-spezifische-bestimmung
 Title: "MII PR Microbiology Specific Determination"
-Description: "Specific determination describes the qualitative detection of a predefined microbial target in a specimen by direct molecular, immunological or biochemical detection methods and by method-neutrally coded detection tests. Culture-based targeted detection also belongs here; the procedure is stated in the investigation code and in Observation.method."
+Description: "Specific determination describes the qualitative detection of a predefined microbial target in a specimen by direct molecular, immunological or biochemical detection methods and by detection tests with method-neutral codes. Culture-based targeted detection also belongs here; the procedure is stated in the investigation code and in Observation.method."
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "This profile describes targeted detection, regardless of whether it is performed molecularly, immunologically, biochemically or by culture. It also represents the negative result of a targeted pathogen detection, e.g. a negative VRE detection via 105904-7 with the value 'Not detected'."
 * code from MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC (extensible)

@@ -16,7 +16,7 @@ Profile: MII_PR_Mikrobio_Spezifische_Mikroskopie
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-spezifische-mikroskopie
 Title: "MII PR Microbiology Specific Microscopy"
-Description: "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast rods or leukocytes — with the semiquantitative grade as the result."
+Description: "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast bacilli or leukocytes — with the semiquantitative grade as the result."
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "This profile describes targeted microscopy, in which the object sought is in the investigation code and the result is the detection or exclusion of that object; how much of it was seen is in the quantity component."
 * code from MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC (extensible)

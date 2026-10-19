@@ -303,7 +303,7 @@
             }
           ],
           "rules": "open",
-          "description": "Slicing nach dem Komponenten-Code."
+          "description": "Slicing by the component code."
         }
       },
       {
@@ -374,7 +374,7 @@
         "id": "Observation.component:menge.value[x]:valueQuantity",
         "path": "Observation.component.value[x]",
         "sliceName": "valueQuantity",
-        "short": "Count per field of view, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10.",
+        "short": "Count per high-power field, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10.",
         "min": 0,
         "max": "1",
         "type": [
@@ -395,7 +395,7 @@
         "id": "Observation.component:menge.value[x]:valueRange",
         "path": "Observation.component.value[x]",
         "sliceName": "valueRange",
-        "short": "Count per field of view as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25.",
+        "short": "Count per high-power field as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25.",
         "min": 0,
         "max": "1",
         "type": [

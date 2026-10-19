@@ -2,7 +2,7 @@ Profile: MII_PR_Mikrobio_Empfindlichkeit
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-empfindlichkeit
 Title: "MII PR Microbiology Susceptibility"
-Description: "Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to a norm system."
+Description: "Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to an interpretive standard (e.g. EUCAST, CLSI)."
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "This profile describes phenotypic susceptibility testing. The resistance of an already identified pathogen to a single substance is represented here, e.g. a linezolid-resistant Enterococcus via 29258-1 |Linezolid [Susceptibility]| with interpretation R; the negative case is interpretation S. The targeted detection of a resistant pathogen as such belongs to MII_PR_Mikrobio_Spezifische_Bestimmung instead."
 // Terminologische Luecke, nachverfolgt in Issue #92: Fuer den direkten zielgerichteten

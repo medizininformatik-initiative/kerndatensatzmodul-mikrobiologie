@@ -2,7 +2,7 @@ Instance: mii-exa-mikrobio-voraussichtliche-empfindlichkeit
 InstanceOf: MII_PR_Mikrobio_Voraussichtliche_Empfindlichkeit
 Usage: #example
 Title: "MII EXA Microbiology Predicted Susceptibility"
-Description: "Expected susceptibility to rifampicin derived from the genotype."
+Description: "Predicted susceptibility to rifampicin derived from the genotype."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "v-empf-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

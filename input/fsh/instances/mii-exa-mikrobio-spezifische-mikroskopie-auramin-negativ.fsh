@@ -8,7 +8,7 @@ Instance: mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ
 InstanceOf: MII_PR_Mikrobio_Spezifische_Mikroskopie
 Usage: #example
 Title: "MII EXA Microbiology Specific Microscopy Auramine Negative"
-Description: "Auramine stain without detection of acid-fast rods: the negative case of specific microscopy."
+Description: "Auramine stain without detection of acid-fast bacilli: the negative case of specific microscopy."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-mikroskopie-auramin-neg-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

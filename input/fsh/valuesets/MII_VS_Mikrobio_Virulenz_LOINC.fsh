@@ -19,7 +19,7 @@ Description: "Test ValueSet for virulence factors: LOINC codes for the detection
 * $loinc#87375-2 "Escherichia coli paa gene [Presence] in Isolate by NAA with probe detection"
 * $loinc#87376-0 "Escherichia coli Stx1 toxin stx1 gene [Presence] in Isolate by NAA with probe detection"
 * $loinc#87377-8 "Escherichia coli Stx2 toxin stx2 gene [Presence] in Isolate by NAA with probe detection"
-* $loinc#87380-2 "Escherichia coli stx2e toxin stx2e gene [Presence] in Isolate by NAA with probe detection"
+* $loinc#87380-2 "Escherichia coli Stx2e toxin stx2e gene [Presence] in Isolate by NAA with probe detection"
 * $loinc#87304-2 "Clostridium perfringens cpa gene [Presence] in Isolate by NAA with probe detection"
 * $loinc#87397-6 "Clostridium perfringens cpb gene [Presence] in Isolate by NAA with probe detection"
 * $loinc#87305-9 "Clostridium perfringens cpb2 gene [Presence] in Isolate by NAA with probe detection"

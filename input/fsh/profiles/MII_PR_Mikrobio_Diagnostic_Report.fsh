@@ -43,7 +43,7 @@ Description: "Microbiological report for summarising and contextualising associa
 // den Anfang ausdruecklich Freitext vor, und ein ValueSet fuer kodierte
 // Gesamtaussagen hat dieses Modul nicht.
 * conclusion MS
-* conclusion ^short = "Summarising assessment by the laboratory as free text. For serological reports the central place, because there the diagnosis only emerges from the synopsis of several individual results."
+* conclusion ^short = "Summarising assessment by the laboratory as free text. For serological reports this is the key element, because there the diagnosis only emerges from the synopsis of several individual results."
 * specimen ^min = 0
 * result only Reference(
     MII_PR_Mikrobio_Allgemeine_Kultur or

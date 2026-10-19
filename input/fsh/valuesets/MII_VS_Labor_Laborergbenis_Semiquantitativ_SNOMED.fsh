@@ -1,6 +1,6 @@
 ValueSet: MII_VS_Labor_Laborergebnis_Semiquantitativ
 Id: mii-vs-labor-laborergebnis-semiquantitativ
-Title: "MII VS Laboratory Lab Result Semiquantitative"
+Title: "MII VS Laboratory Result Semiquantitative"
 Description: "Coding for semi-quantitative laboratory results"
 * insert PR_CS_VS_Version
 * insert Publisher

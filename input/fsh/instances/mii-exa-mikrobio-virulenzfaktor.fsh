@@ -2,7 +2,7 @@ Instance: mii-exa-mikrobio-virulenzfaktor
 InstanceOf: MII_PR_Mikrobio_Virulenzfaktor
 Usage: #example
 Title: "MII EXA Microbiology Virulence Factor"
-Description: "Detection of a virulence factor gene with a negative result."
+Description: "Test for a virulence factor gene with a negative result."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "virulenz-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

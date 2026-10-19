@@ -151,7 +151,7 @@
       ]
     }
   ],
-  "description": "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast rods or leukocytes — with the semiquantitative grade as the result.",
+  "description": "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast bacilli or leukocytes — with the semiquantitative grade as the result.",
   "purpose": "This profile describes targeted microscopy, in which the object sought is in the investigation code and the result is the detection or exclusion of that object; how much of it was seen is in the quantity component.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -303,7 +303,7 @@
             }
           ],
           "rules": "open",
-          "description": "Slicing nach dem Komponenten-Code."
+          "description": "Slicing by the component code."
         }
       },
       {
@@ -374,7 +374,7 @@
         "id": "Observation.component:menge.value[x]:valueQuantity",
         "path": "Observation.component.value[x]",
         "sliceName": "valueQuantity",
-        "short": "Count per field of view, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10.",
+        "short": "Count per high-power field, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10.",
         "min": 0,
         "max": "1",
         "type": [
@@ -395,7 +395,7 @@
         "id": "Observation.component:menge.value[x]:valueRange",
         "path": "Observation.component.value[x]",
         "sliceName": "valueRange",
-        "short": "Count per field of view as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25.",
+        "short": "Count per high-power field as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25.",
         "min": 0,
         "max": "1",
         "type": [

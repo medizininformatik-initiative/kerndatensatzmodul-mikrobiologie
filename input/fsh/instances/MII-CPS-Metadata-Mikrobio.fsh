@@ -10,7 +10,7 @@ Usage: #definition
 * date = "2027-04-02"
 * implementationGuide = "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ImplementationGuide|2027.0.0-alpha.5"
 * name = "MII_CPS_Mikrobio_Metadata"
-* title = "MII CPS Mikrobio Metadata"
+* title = "MII CPS Microbiology Metadata"
 * description = "CapabilityStatement for the MII Microbiology module 2027."
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
