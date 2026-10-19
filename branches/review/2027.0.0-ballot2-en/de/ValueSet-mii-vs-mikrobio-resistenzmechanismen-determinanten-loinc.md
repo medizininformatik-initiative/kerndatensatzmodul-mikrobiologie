@@ -42,7 +42,7 @@ Test ValueSet for resistance mechanisms and determinants: LOINC codes for the de
   "title" : "MII VS Microbiology Resistance Mechanisms Determinants [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T01:04:27+00:00",
+  "date" : "2026-10-19T02:33:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -48,7 +48,7 @@ Example (minimal):
 
 * Refer to this Profile: [MII PR Microbiology Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
 * Examples for this Profile: [Observation/mii-exa-mikrobio-allgemeine-bestimmung](Observation-mii-exa-mikrobio-allgemeine-bestimmung.md) and [Observation/mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.md)
-* CapabilityStatements using this Profile: [MII CPS Mikrobio Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
+* CapabilityStatements using this Profile: [MII CPS Microbiology Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.json)
 
@@ -201,7 +201,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-a
   "title" : "MII PR Microbiology General Determination (Identification)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T01:04:27+00:00",
+  "date" : "2026-10-19T02:33:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

@@ -39,7 +39,7 @@ Profile: [MII PR Microbiology Specific Microscopy](StructureDefinition-mii-pr-mi
 | | | |
 | :--- | :--- | :--- |
 | - | **Code** | **Value[x]** |
-| * | Semi-quantitative value | 10-25 per field of view |
+| * | Semi-quantitative value | 10-25 per high-power field |
 
 
 
@@ -134,13 +134,13 @@ Profile: [MII PR Microbiology Specific Microscopy](StructureDefinition-mii-pr-mi
     "valueRange" : {
       "low" : {
         "value" : 10,
-        "unit" : "per field of view",
+        "unit" : "per high-power field",
         "system" : "http://unitsofmeasure.org",
         "code" : "/[HPF]"
       },
       "high" : {
         "value" : 25,
-        "unit" : "per field of view",
+        "unit" : "per high-power field",
         "system" : "http://unitsofmeasure.org",
         "code" : "/[HPF]"
       }

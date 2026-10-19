@@ -94,7 +94,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
   "title" : "MII LM Microbiology Investigation Types",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T01:04:27+00:00",
+  "date" : "2026-10-19T02:33:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -461,7 +461,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
       "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit",
       "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit",
       "short" : "Susceptibility",
-      "definition" : "Result of phenotypic resistance testing of a pathogen against an antimicrobial substance with reference to a norm system.",
+      "definition" : "Result of phenotypic resistance testing of a pathogen against an antimicrobial substance with reference to an interpretive standard (e.g. EUCAST, CLSI).",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -519,7 +519,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
       "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Bewertung.Norm",
       "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Bewertung.Norm",
       "short" : "Norm",
-      "definition" : "Norm system including version on whose breakpoints the category is based, e.g. EUCAST or CLSI.",
+      "definition" : "Interpretive standard including version on whose breakpoints the category is based, e.g. EUCAST or CLSI.",
       "min" : 1,
       "max" : "1",
       "type" : [{
@@ -728,7 +728,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
     {
       "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten",
       "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten",
-      "short" : "Resistance mechanism",
+      "short" : "Resistance mechanisms / determinants",
       "definition" : "Detection of resistance genes or resistance mutations as an indication of a specific resistance mechanism.",
       "min" : 0,
       "max" : "*",
@@ -806,7 +806,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
       "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
       "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
       "short" : "Predicted susceptibility",
-      "definition" : "Expected susceptibility or resistance to antimicrobial substances derived from genotypic detections.",
+      "definition" : "Predicted susceptibility or resistance to antimicrobial substances derived from genotypic detections.",
       "min" : 0,
       "max" : "*",
       "type" : [{
@@ -828,7 +828,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
       "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit.Ergebnis",
       "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit.Ergebnis",
       "short" : "Result",
-      "definition" : "Expected susceptibility or resistance.",
+      "definition" : "Predicted susceptibility or resistance.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -948,7 +948,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
     {
       "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.AntigenAntikoerperQuantitativ",
       "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.AntigenAntikoerperQuantitativ",
-      "short" : "Antigen antibody tests",
+      "short" : "Antigen/antibody quantitative",
       "definition" : "Quantitative measurement of pathogen-specific antigens or antibodies by immunological procedures.",
       "min" : 0,
       "max" : "*",

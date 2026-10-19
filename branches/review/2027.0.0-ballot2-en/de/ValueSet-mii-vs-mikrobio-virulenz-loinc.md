@@ -42,7 +42,7 @@ Test ValueSet for virulence factors: LOINC codes for the detection or exclusion 
   "title" : "MII VS Microbiology Virulence [LOINC]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T01:04:27+00:00",
+  "date" : "2026-10-19T02:33:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -134,7 +134,7 @@ Test ValueSet for virulence factors: LOINC codes for the detection or exclusion 
       },
       {
         "code" : "87380-2",
-        "display" : "Escherichia coli stx2e toxin stx2e gene [Presence] in Isolate by NAA with probe detection"
+        "display" : "Escherichia coli Stx2e toxin stx2e gene [Presence] in Isolate by NAA with probe detection"
       },
       {
         "code" : "87304-2",

@@ -1,10 +1,10 @@
-# MII CPS Mikrobio Metadata - MII Implementation Guide Microbiology v2027.0.0-ballot2
+# MII CPS Microbiology Metadata - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Inhaltsverzeichnis**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **MII CPS Mikrobio Metadata**
+* **MII CPS Microbiology Metadata**
 
-## CapabilityStatement: MII CPS Mikrobio Metadata 
+## CapabilityStatement: MII CPS Microbiology Metadata 
 
 | | |
 | :--- | :--- |
@@ -27,7 +27,7 @@ CapabilityStatement for the MII Microbiology module 2027.
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CapabilityStatement/metadata",
   "version" : "2027.0.0-ballot2",
   "name" : "MII_CPS_Mikrobio_Metadata",
-  "title" : "MII CPS Mikrobio Metadata",
+  "title" : "MII CPS Microbiology Metadata",
   "status" : "active",
   "experimental" : false,
   "date" : "2027-04-02",

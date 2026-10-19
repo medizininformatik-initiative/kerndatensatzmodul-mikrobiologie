@@ -27,8 +27,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "mii-lm-mikrobio-logical-model-de.Anforderung","mii-lm-mikrobio-logical-model-de.Anforderung","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/ServiceRequest]]}
 ","Order","Underlying laboratory order.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Anforderung",0,1,"",""
 "mii-lm-mikrobio-logical-model-de.Befundinterpret","mii-lm-mikrobio-logical-model-de.Befundinterpret","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner]]}
-","Report interpreter","Person who clinically assesses and is responsible for the report.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Befundinterpret",0,*,"",""
+","Results interpreter","Person who clinically assesses and is responsible for the report.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Befundinterpret",0,*,"",""
 "mii-lm-mikrobio-logical-model-de.Probenmaterial","mii-lm-mikrobio-logical-model-de.Probenmaterial","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Specimen]]}
-","Specimen material","Specimen materials on which the report is based.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Probenmaterial",0,*,"",""
+","Specimen","Specimens on which the report is based.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Probenmaterial",0,*,"",""
 "mii-lm-mikrobio-logical-model-de.Untersuchung","mii-lm-mikrobio-logical-model-de.Untersuchung","","","",0,*,"","","","Reference {[]} {[CanonicalType[https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung]]}
 ","Investigation","The microbiological investigations contained in the report.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-logical-model-de.Untersuchung",0,*,"",""

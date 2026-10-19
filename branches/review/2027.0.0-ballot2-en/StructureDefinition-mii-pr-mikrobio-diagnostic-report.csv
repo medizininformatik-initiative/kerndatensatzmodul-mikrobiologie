@@ -554,7 +554,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ref-1:SHALL have a contained resource if a local reference is provided {reference.exists() implies (reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids')) or (reference='#' and %rootResource!=%resource))}"
 "DiagnosticReport.conclusion","DiagnosticReport.conclusion","","Report
 ","",0,1,"Y","","","string {[]} {[]}
-","Summarising assessment by the laboratory as free text. For serological reports the central place, because there the diagnosis only emerges from the synopsis of several individual results.","Klinische Schlussfolgerung/Interpretation der Testergebnisse","Note that FHIR strings SHALL NOT exceed 1MB in size","Need to be able to provide a conclusion that is not lost among the basic result data.","","","","","","","",,,,,"",,,,"DiagnosticReport.conclusion",0,1,"ele-1
+","Summarising assessment by the laboratory as free text. For serological reports this is the key element, because there the diagnosis only emerges from the synopsis of several individual results.","Klinische Schlussfolgerung/Interpretation der Testergebnisse","Note that FHIR strings SHALL NOT exceed 1MB in size","Need to be able to provide a conclusion that is not lost among the basic result data.","","","","","","","",,,,,"",,,,"DiagnosticReport.conclusion",0,1,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "DiagnosticReport.conclusionCode","DiagnosticReport.conclusionCode","","","",0,*,"","","","CodeableConcept {[]} {[]}

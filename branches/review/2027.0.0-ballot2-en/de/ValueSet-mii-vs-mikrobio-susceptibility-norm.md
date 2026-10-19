@@ -12,7 +12,7 @@
 | Active Stand: 2026-10-19 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Susceptibility_NORM |
 
  
-Norm ValueSet for susceptibility testing: the norm system on whose breakpoints a category is based. Bound to the extension MII_EX_Mikrobio_Empfindlichkeit_Norm. 
+Norm ValueSet for susceptibility testing: the interpretive standard (e.g. EUCAST, CLSI) on whose breakpoints a category is based. Bound to the extension MII_EX_Mikrobio_Empfindlichkeit_Norm. 
 
  **References** 
 
@@ -42,7 +42,7 @@ Norm ValueSet for susceptibility testing: the norm system on whose breakpoints a
   "title" : "MII VS Microbiology Susceptibility Norm",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T01:04:27+00:00",
+  "date" : "2026-10-19T02:33:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -64,7 +64,7 @@ Norm ValueSet for susceptibility testing: the norm system on whose breakpoints a
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Norm ValueSet for susceptibility testing: the norm system on whose breakpoints a category is based. Bound to the extension MII_EX_Mikrobio_Empfindlichkeit_Norm.",
+  "description" : "Norm ValueSet for susceptibility testing: the interpretive standard (e.g. EUCAST, CLSI) on whose breakpoints a category is based. Bound to the extension MII_EX_Mikrobio_Empfindlichkeit_Norm.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

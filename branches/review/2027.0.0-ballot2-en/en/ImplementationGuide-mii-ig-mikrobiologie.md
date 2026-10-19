@@ -1483,7 +1483,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "reference" : {
         "reference" : "CapabilityStatement/mii-cps-mikrobio-metadata"
       },
-      "name" : "MII CPS Mikrobio Metadata",
+      "name" : "MII CPS Microbiology Metadata",
       "description" : "CapabilityStatement for the MII Microbiology module 2027.",
       "exampleBoolean" : false
     },
@@ -1756,7 +1756,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-mikroskopie-gram-kokken-wenig"
       },
       "name" : "MII EXA Microbiology General Microscopy Few Gram-Positive Cocci",
-      "description" : "Gram preparation with few Gram-positive cocci: the morphology as the result, the semiquantitative quantity as a component.",
+      "description" : "Gram-stained smear with few Gram-positive cocci: the morphology as the result, the semiquantitative quantity as a component.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"
     },
     {
@@ -1772,7 +1772,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Organization/mii-exa-mikrobio-labor"
       },
       "name" : "MII EXA Microbiology Laboratory",
-      "description" : "Performing microbiology laboratory of the examples of this module.",
+      "description" : "The microbiology laboratory that performs the tests in this module's examples.",
       "exampleBoolean" : true
     },
     {
@@ -1868,7 +1868,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit"
       },
       "name" : "MII EXA Microbiology Predicted Susceptibility",
-      "description" : "Expected susceptibility to rifampicin derived from the genotype.",
+      "description" : "Predicted susceptibility to rifampicin derived from the genotype.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"
     },
     {
@@ -1948,7 +1948,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ"
       },
       "name" : "MII EXA Microbiology Specific Culture VRE Negative",
-      "description" : "Negative VRE detection by pathogen-specific culture.",
+      "description" : "Negative VRE test by pathogen-specific culture.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
     },
     {
@@ -1964,7 +1964,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-spezifische-bestimmung"
       },
       "name" : "MII EXA Microbiology Specific Determination",
-      "description" : "Targeted molecular pathogen detection with a negative result.",
+      "description" : "Targeted molecular pathogen test with a negative result.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
     },
     {
@@ -1996,7 +1996,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ"
       },
       "name" : "MII EXA Microbiology Specific Determination VRE Negative",
-      "description" : "Negative VRE detection: the test for vancomycin-resistant enterococci is negative.",
+      "description" : "Negative VRE test: the test for vancomycin-resistant enterococci is negative.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
     },
     {
@@ -2012,7 +2012,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ"
       },
       "name" : "MII EXA Microbiology Specific Microscopy Auramine Negative",
-      "description" : "Auramine stain without detection of acid-fast rods: the negative case of specific microscopy.",
+      "description" : "Auramine stain without detection of acid-fast bacilli: the negative case of specific microscopy.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
     },
     {
@@ -2028,7 +2028,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus"
       },
       "name" : "MII EXA Microbiology Specific Microscopy Kinyoun Two Plus",
-      "description" : "Kinyoun stain with detection of acid-fast rods, with grade two of three as the quantity component — corresponding to 1–10 per field of view.",
+      "description" : "Kinyoun stain with detection of acid-fast bacilli, with grade two of three as the quantity component — corresponding to 1–10 per field of view.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
     },
     {
@@ -2044,7 +2044,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld"
       },
       "name" : "MII EXA Microbiology Specific Microscopy Leukocytes per Field of View",
-      "description" : "Leukocytes detected in the Gram preparation, with the quantity as a count per field of view — 10 to 25 — instead of a semiquantitative grade.",
+      "description" : "Leukocytes detected in the Gram-stained smear, with the quantity as a count per high-power field — 10 to 25 — instead of a semiquantitative grade.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
     },
     {
@@ -2140,7 +2140,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "Observation/mii-exa-mikrobio-virulenzfaktor"
       },
       "name" : "MII EXA Microbiology Virulence Factor",
-      "description" : "Detection of a virulence factor gene with a negative result.",
+      "description" : "Test for a virulence factor gene with a negative result.",
       "exampleCanonical" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor"
     },
     {
@@ -2492,7 +2492,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
       },
       "name" : "MII PR Microbiology Specific Determination",
-      "description" : "Specific determination describes the qualitative detection of a predefined microbial target in a specimen by direct molecular, immunological or biochemical detection methods and by method-neutrally coded detection tests. Culture-based targeted detection also belongs here; the procedure is stated in the investigation code and in Observation.method.",
+      "description" : "Specific determination describes the qualitative detection of a predefined microbial target in a specimen by direct molecular, immunological or biochemical detection methods and by detection tests with method-neutral codes. Culture-based targeted detection also belongs here; the procedure is stated in the investigation code and in Observation.method.",
       "exampleBoolean" : false
     },
     {
@@ -2508,7 +2508,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
       },
       "name" : "MII PR Microbiology Specific Microscopy",
-      "description" : "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast rods or leukocytes — with the semiquantitative grade as the result.",
+      "description" : "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast bacilli or leukocytes — with the semiquantitative grade as the result.",
       "exampleBoolean" : false
     },
     {
@@ -2540,7 +2540,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
       },
       "name" : "MII PR Microbiology Susceptibility",
-      "description" : "Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to a norm system.",
+      "description" : "Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to an interpretive standard (e.g. EUCAST, CLSI).",
       "exampleBoolean" : false
     },
     {
@@ -2587,7 +2587,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
       "reference" : {
         "reference" : "ValueSet/mii-vs-labor-laborergebnis-semiquantitativ"
       },
-      "name" : "MII VS Laboratory Lab Result Semiquantitative",
+      "name" : "MII VS Laboratory Result Semiquantitative",
       "description" : "Coding for semi-quantitative laboratory results",
       "exampleBoolean" : false
     },
@@ -3036,7 +3036,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit"
       },
       "name" : "MII VS Microbiology Predicted Susceptibility",
-      "description" : "Result ValueSet for predicted susceptibility: the expected category susceptible, intermediate or resistant derived from genotypic detections.",
+      "description" : "Result ValueSet for predicted susceptibility: the predicted category susceptible, intermediate or resistant derived from genotypic detections.",
       "exampleBoolean" : false
     },
     {
@@ -3212,7 +3212,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-susceptibility"
       },
       "name" : "MII VS Microbiology Susceptibility",
-      "description" : "Assessment ValueSet for phenotypic susceptibility testing: the categories susceptible, intermediate, susceptible at increased exposure, resistant and non-susceptible.",
+      "description" : "Assessment ValueSet for phenotypic susceptibility testing: the categories susceptible, intermediate, susceptible, increased exposure, resistant and non-susceptible.",
       "exampleBoolean" : false
     },
     {
@@ -3228,7 +3228,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"
       },
       "name" : "MII VS Microbiology Susceptibility Genotype [LOINC]",
-      "description" : "Test ValueSet for predicted susceptibility: LOINC codes for the expected efficacy of an antimicrobial substance derived from the genotype.",
+      "description" : "Test ValueSet for predicted susceptibility: LOINC codes for the predicted efficacy of an antimicrobial substance derived from the genotype.",
       "exampleBoolean" : false
     },
     {
@@ -3260,7 +3260,7 @@ Expansion parameters are query parameters that can be passed to a `ValueSet` `$e
         "reference" : "ValueSet/mii-vs-mikrobio-susceptibility-norm"
       },
       "name" : "MII VS Microbiology Susceptibility Norm",
-      "description" : "Norm ValueSet for susceptibility testing: the norm system on whose breakpoints a category is based. Bound to the extension MII_EX_Mikrobio_Empfindlichkeit_Norm.",
+      "description" : "Norm ValueSet for susceptibility testing: the interpretive standard (e.g. EUCAST, CLSI) on whose breakpoints a category is based. Bound to the extension MII_EX_Mikrobio_Empfindlichkeit_Norm.",
       "exampleBoolean" : false
     },
     {

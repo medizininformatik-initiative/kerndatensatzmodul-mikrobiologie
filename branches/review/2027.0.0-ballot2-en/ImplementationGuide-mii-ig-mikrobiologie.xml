@@ -1053,7 +1053,7 @@
       <reference>
         <reference value="CapabilityStatement/mii-cps-mikrobio-metadata"/>
       </reference>
-      <name value="MII CPS Mikrobio Metadata"/>
+      <name value="MII CPS Microbiology Metadata"/>
       <description value="CapabilityStatement for the MII Microbiology module 2027."/>
       <exampleBoolean value="false"/>
     </resource>
@@ -1241,7 +1241,7 @@
         <reference value="Observation/mii-exa-mikrobio-mikroskopie-gram-kokken-wenig"/>
       </reference>
       <name value="MII EXA Microbiology General Microscopy Few Gram-Positive Cocci"/>
-      <description value="Gram preparation with few Gram-positive cocci: the morphology as the result, the semiquantitative quantity as a component."/>
+      <description value="Gram-stained smear with few Gram-positive cocci: the morphology as the result, the semiquantitative quantity as a component."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mikroskopie"/>
     </resource>
     <resource>
@@ -1252,7 +1252,7 @@
         <reference value="Organization/mii-exa-mikrobio-labor"/>
       </reference>
       <name value="MII EXA Microbiology Laboratory"/>
-      <description value="Performing microbiology laboratory of the examples of this module."/>
+      <description value="The microbiology laboratory that performs the tests in this module's examples."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -1318,7 +1318,7 @@
         <reference value="Observation/mii-exa-mikrobio-voraussichtliche-empfindlichkeit"/>
       </reference>
       <name value="MII EXA Microbiology Predicted Susceptibility"/>
-      <description value="Expected susceptibility to rifampicin derived from the genotype."/>
+      <description value="Predicted susceptibility to rifampicin derived from the genotype."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"/>
     </resource>
     <resource>
@@ -1373,7 +1373,7 @@
         <reference value="Observation/mii-exa-mikrobio-spezifische-kultur-vre-negativ"/>
       </reference>
       <name value="MII EXA Microbiology Specific Culture VRE Negative"/>
-      <description value="Negative VRE detection by pathogen-specific culture."/>
+      <description value="Negative VRE test by pathogen-specific culture."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
     </resource>
     <resource>
@@ -1384,7 +1384,7 @@
         <reference value="Observation/mii-exa-mikrobio-spezifische-bestimmung"/>
       </reference>
       <name value="MII EXA Microbiology Specific Determination"/>
-      <description value="Targeted molecular pathogen detection with a negative result."/>
+      <description value="Targeted molecular pathogen test with a negative result."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
     </resource>
     <resource>
@@ -1406,7 +1406,7 @@
         <reference value="Observation/mii-exa-mikrobio-spezifische-bestimmung-vre-negativ"/>
       </reference>
       <name value="MII EXA Microbiology Specific Determination VRE Negative"/>
-      <description value="Negative VRE detection: the test for vancomycin-resistant enterococci is negative."/>
+      <description value="Negative VRE test: the test for vancomycin-resistant enterococci is negative."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
     </resource>
     <resource>
@@ -1417,7 +1417,7 @@
         <reference value="Observation/mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ"/>
       </reference>
       <name value="MII EXA Microbiology Specific Microscopy Auramine Negative"/>
-      <description value="Auramine stain without detection of acid-fast rods: the negative case of specific microscopy."/>
+      <description value="Auramine stain without detection of acid-fast bacilli: the negative case of specific microscopy."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"/>
     </resource>
     <resource>
@@ -1428,7 +1428,7 @@
         <reference value="Observation/mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus"/>
       </reference>
       <name value="MII EXA Microbiology Specific Microscopy Kinyoun Two Plus"/>
-      <description value="Kinyoun stain with detection of acid-fast rods, with grade two of three as the quantity component — corresponding to 1–10 per field of view."/>
+      <description value="Kinyoun stain with detection of acid-fast bacilli, with grade two of three as the quantity component — corresponding to 1–10 per field of view."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"/>
     </resource>
     <resource>
@@ -1439,7 +1439,7 @@
         <reference value="Observation/mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld"/>
       </reference>
       <name value="MII EXA Microbiology Specific Microscopy Leukocytes per Field of View"/>
-      <description value="Leukocytes detected in the Gram preparation, with the quantity as a count per field of view — 10 to 25 — instead of a semiquantitative grade."/>
+      <description value="Leukocytes detected in the Gram-stained smear, with the quantity as a count per high-power field — 10 to 25 — instead of a semiquantitative grade."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"/>
     </resource>
     <resource>
@@ -1505,7 +1505,7 @@
         <reference value="Observation/mii-exa-mikrobio-virulenzfaktor"/>
       </reference>
       <name value="MII EXA Microbiology Virulence Factor"/>
-      <description value="Detection of a virulence factor gene with a negative result."/>
+      <description value="Test for a virulence factor gene with a negative result."/>
       <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-virulenzfaktor"/>
     </resource>
     <resource>
@@ -1747,7 +1747,7 @@
         <reference value="StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"/>
       </reference>
       <name value="MII PR Microbiology Specific Determination"/>
-      <description value="Specific determination describes the qualitative detection of a predefined microbial target in a specimen by direct molecular, immunological or biochemical detection methods and by method-neutrally coded detection tests. Culture-based targeted detection also belongs here; the procedure is stated in the investigation code and in Observation.method."/>
+      <description value="Specific determination describes the qualitative detection of a predefined microbial target in a specimen by direct molecular, immunological or biochemical detection methods and by detection tests with method-neutral codes. Culture-based targeted detection also belongs here; the procedure is stated in the investigation code and in Observation.method."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1758,7 +1758,7 @@
         <reference value="StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"/>
       </reference>
       <name value="MII PR Microbiology Specific Microscopy"/>
-      <description value="Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast rods or leukocytes — with the semiquantitative grade as the result."/>
+      <description value="Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast bacilli or leukocytes — with the semiquantitative grade as the result."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1780,7 +1780,7 @@
         <reference value="StructureDefinition/mii-pr-mikrobio-empfindlichkeit"/>
       </reference>
       <name value="MII PR Microbiology Susceptibility"/>
-      <description value="Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to a norm system."/>
+      <description value="Susceptibility describes the result of phenotypic resistance testing of a pathogen against antimicrobial substances with reference to an interpretive standard (e.g. EUCAST, CLSI)."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -1812,7 +1812,7 @@
       <reference>
         <reference value="ValueSet/mii-vs-labor-laborergebnis-semiquantitativ"/>
       </reference>
-      <name value="MII VS Laboratory Lab Result Semiquantitative"/>
+      <name value="MII VS Laboratory Result Semiquantitative"/>
       <description value="Coding for semi-quantitative laboratory results"/>
       <exampleBoolean value="false"/>
     </resource>
@@ -2121,7 +2121,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-voraussichtliche-empfindlichkeit"/>
       </reference>
       <name value="MII VS Microbiology Predicted Susceptibility"/>
-      <description value="Result ValueSet for predicted susceptibility: the expected category susceptible, intermediate or resistant derived from genotypic detections."/>
+      <description value="Result ValueSet for predicted susceptibility: the predicted category susceptible, intermediate or resistant derived from genotypic detections."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2242,7 +2242,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-susceptibility"/>
       </reference>
       <name value="MII VS Microbiology Susceptibility"/>
-      <description value="Assessment ValueSet for phenotypic susceptibility testing: the categories susceptible, intermediate, susceptible at increased exposure, resistant and non-susceptible."/>
+      <description value="Assessment ValueSet for phenotypic susceptibility testing: the categories susceptible, intermediate, susceptible, increased exposure, resistant and non-susceptible."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2253,7 +2253,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc"/>
       </reference>
       <name value="MII VS Microbiology Susceptibility Genotype [LOINC]"/>
-      <description value="Test ValueSet for predicted susceptibility: LOINC codes for the expected efficacy of an antimicrobial substance derived from the genotype."/>
+      <description value="Test ValueSet for predicted susceptibility: LOINC codes for the predicted efficacy of an antimicrobial substance derived from the genotype."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -2275,7 +2275,7 @@
         <reference value="ValueSet/mii-vs-mikrobio-susceptibility-norm"/>
       </reference>
       <name value="MII VS Microbiology Susceptibility Norm"/>
-      <description value="Norm ValueSet for susceptibility testing: the norm system on whose breakpoints a category is based. Bound to the extension MII_EX_Mikrobio_Empfindlichkeit_Norm."/>
+      <description value="Norm ValueSet for susceptibility testing: the interpretive standard (e.g. EUCAST, CLSI) on whose breakpoints a category is based. Bound to the extension MII_EX_Mikrobio_Empfindlichkeit_Norm."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

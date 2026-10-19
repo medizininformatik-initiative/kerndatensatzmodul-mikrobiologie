@@ -95,7 +95,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
   "title" : "MII LM Microbiology Investigation",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T01:04:27+00:00",
+  "date" : "2026-10-19T02:33:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -175,8 +175,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
     {
       "id" : "mii-lm-mikrobio-untersuchung.Probenmaterial",
       "path" : "mii-lm-mikrobio-untersuchung.Probenmaterial",
-      "short" : "Specimen material",
-      "definition" : "Examined specimen material. The specimen type is represented via the specimen material and not via pre-coordinated investigation codes.",
+      "short" : "Specimen",
+      "definition" : "Specimen examined. The specimen type is represented via the specimen and not via pre-coordinated investigation codes.",
       "min" : 1,
       "max" : "1",
       "type" : [{

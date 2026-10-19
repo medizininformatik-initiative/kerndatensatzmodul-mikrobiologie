@@ -90,7 +90,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
   "title" : "MII LM Microbiology Report",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T01:04:27+00:00",
+  "date" : "2026-10-19T02:33:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -226,7 +226,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
     {
       "id" : "mii-lm-mikrobio-logical-model-de.Befundinterpret",
       "path" : "mii-lm-mikrobio-logical-model-de.Befundinterpret",
-      "short" : "Report interpreter",
+      "short" : "Results interpreter",
       "definition" : "Person who clinically assesses and is responsible for the report.",
       "min" : 0,
       "max" : "*",
@@ -238,8 +238,8 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
     {
       "id" : "mii-lm-mikrobio-logical-model-de.Probenmaterial",
       "path" : "mii-lm-mikrobio-logical-model-de.Probenmaterial",
-      "short" : "Specimen material",
-      "definition" : "Specimen materials on which the report is based.",
+      "short" : "Specimen",
+      "definition" : "Specimens on which the report is based.",
       "min" : 0,
       "max" : "*",
       "type" : [{

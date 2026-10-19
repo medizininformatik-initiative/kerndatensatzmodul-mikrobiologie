@@ -12,7 +12,7 @@
 | Active as of 2026-10-19 | *Computable Name*:MII_PR_Mikrobio_Spezifische_Mikroskopie |
 
  
-Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast rods or leukocytes — with the semiquantitative grade as the result. 
+Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast bacilli or leukocytes — with the semiquantitative grade as the result. 
 
 Specific microscopy describes the microscopic detection of an object named in the test code — acid-fast bacilli, leukocytes, clue cells. The result is whether it was detected; how much of it was seen is stated alongside, in a component.
 
@@ -56,7 +56,7 @@ Acid-fast bacilli detected, at grade two of three:
 
 * Refer to this Profile: [MII PR Microbiology Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
 * Examples for this Profile: [Observation/mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ](Observation-mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ.md), [Observation/mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus](Observation-mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus.md) and [Observation/mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld](Observation-mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld.md)
-* CapabilityStatements using this Profile: [MII CPS Mikrobio Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
+* CapabilityStatements using this Profile: [MII CPS Microbiology Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.json)
 
@@ -209,7 +209,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Microbiology Specific Microscopy",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T01:04:27+00:00",
+  "date" : "2026-10-19T02:33:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -231,7 +231,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast rods or leukocytes — with the semiquantitative grade as the result.",
+  "description" : "Specific microscopy describes the microscopic detection of an object named in the investigation code — such as acid-fast bacilli or leukocytes — with the semiquantitative grade as the result.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -372,7 +372,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
           "type" : "pattern",
           "path" : "$this.code"
         }],
-        "description" : "Slicing nach dem Komponenten-Code.",
+        "description" : "Slicing by the component code.",
         "rules" : "open"
       }
     },
@@ -436,7 +436,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "id" : "Observation.component:menge.value[x]:valueQuantity",
       "path" : "Observation.component.value[x]",
       "sliceName" : "valueQuantity",
-      "short" : "Count per field of view, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10.",
+      "short" : "Count per high-power field, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -455,7 +455,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "id" : "Observation.component:menge.value[x]:valueRange",
       "path" : "Observation.component.value[x]",
       "sliceName" : "valueRange",
-      "short" : "Count per field of view as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25.",
+      "short" : "Count per high-power field as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25.",
       "min" : 0,
       "max" : "1",
       "type" : [{

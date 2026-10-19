@@ -17,7 +17,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "mii-lm-mikrobio-untersuchung.Patient","mii-lm-mikrobio-untersuchung.Patient","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
 ","Patient","Patient from whom the examined specimen material originates.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-untersuchung.Patient",1,1,"",""
 "mii-lm-mikrobio-untersuchung.Probenmaterial","mii-lm-mikrobio-untersuchung.Probenmaterial","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Specimen]]}
-","Specimen material","Examined specimen material. The specimen type is represented via the specimen material and not via pre-coordinated investigation codes.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-untersuchung.Probenmaterial",1,1,"",""
+","Specimen","Specimen examined. The specimen type is represented via the specimen and not via pre-coordinated investigation codes.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-untersuchung.Probenmaterial",1,1,"",""
 "mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt","mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt","","","",1,1,"","","","dateTime {[]} {[]}
 ","Investigation time","Clinically relevant time of the investigation.","","","","","","","","","",,,,,"",,,,"mii-lm-mikrobio-untersuchung.Untersuchungszeitpunkt",1,1,"",""
 "mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt","mii-lm-mikrobio-untersuchung.QuelleUntersuchungszeitpunkt","","","",0,1,"","","","Coding {[]} {[]}

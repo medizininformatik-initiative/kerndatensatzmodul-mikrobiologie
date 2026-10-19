@@ -12,7 +12,7 @@
 | Active Stand: 2023-03-02 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Susceptibility |
 
  
-Assessment ValueSet for phenotypic susceptibility testing: the categories susceptible, intermediate, susceptible at increased exposure, resistant and non-susceptible. 
+Assessment ValueSet for phenotypic susceptibility testing: the categories susceptible, intermediate, susceptible, increased exposure, resistant and non-susceptible. 
 
  **References** 
 
@@ -64,7 +64,7 @@ Assessment ValueSet for phenotypic susceptibility testing: the categories suscep
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Assessment ValueSet for phenotypic susceptibility testing: the categories susceptible, intermediate, susceptible at increased exposure, resistant and non-susceptible.",
+  "description" : "Assessment ValueSet for phenotypic susceptibility testing: the categories susceptible, intermediate, susceptible, increased exposure, resistant and non-susceptible.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -46,7 +46,7 @@ Example (minimal):
 
 * Refer to this Profile: [MII PR Microbiology Diagnostic Report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md)
 * Examples for this Profile: [Observation/mii-exa-mikrobio-mikroskopie-gram-kokken-wenig](Observation-mii-exa-mikrobio-mikroskopie-gram-kokken-wenig.md) and [Observation/mii-exa-mikrobio-mikroskopie](Observation-mii-exa-mikrobio-mikroskopie.md)
-* CapabilityStatements using this Profile: [MII CPS Mikrobio Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
+* CapabilityStatements using this Profile: [MII CPS Microbiology Metadata](CapabilityStatement-mii-cps-mikrobio-metadata.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-pr-mikrobio-mikroskopie.json)
 
@@ -199,7 +199,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
   "title" : "MII PR Microbiology General Microscopy",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T01:04:27+00:00",
+  "date" : "2026-10-19T02:33:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -362,7 +362,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
           "type" : "pattern",
           "path" : "$this.code"
         }],
-        "description" : "Slicing nach dem Komponenten-Code.",
+        "description" : "Slicing by the component code.",
         "rules" : "open"
       }
     },
@@ -426,7 +426,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
       "id" : "Observation.component:menge.value[x]:valueQuantity",
       "path" : "Observation.component.value[x]",
       "sliceName" : "valueQuantity",
-      "short" : "Count per field of view, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10.",
+      "short" : "Count per high-power field, UCUM unit /[HPF]. For open bounds Quantity.comparator is used, e.g. '<10/HPF' as comparator = '<', value = 10.",
       "min" : 0,
       "max" : "1",
       "type" : [{
@@ -445,7 +445,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
       "id" : "Observation.component:menge.value[x]:valueRange",
       "path" : "Observation.component.value[x]",
       "sliceName" : "valueRange",
-      "short" : "Count per field of view as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25.",
+      "short" : "Count per high-power field as an interval, UCUM unit /[HPF] — e.g. '10-25/HPF' as low = 10, high = 25.",
       "min" : 0,
       "max" : "1",
       "type" : [{

@@ -1,10 +1,10 @@
-# MII VS Laboratory Lab Result Semiquantitative - MII Implementation Guide Microbiology v2027.0.0-ballot2
+# MII VS Laboratory Result Semiquantitative - MII Implementation Guide Microbiology v2027.0.0-ballot2
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
-* **MII VS Laboratory Lab Result Semiquantitative**
+* **MII VS Laboratory Result Semiquantitative**
 
-## ValueSet: MII VS Laboratory Lab Result Semiquantitative 
+## ValueSet: MII VS Laboratory Result Semiquantitative 
 
 | | |
 | :--- | :--- |
@@ -39,10 +39,10 @@ Coding for semi-quantitative laboratory results
   "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-labor-laborergebnis-semiquantitativ",
   "version" : "2027.0.0-ballot2",
   "name" : "MII_VS_Labor_Laborergebnis_Semiquantitativ",
-  "title" : "MII VS Laboratory Lab Result Semiquantitative",
+  "title" : "MII VS Laboratory Result Semiquantitative",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-10-19T01:04:27+00:00",
+  "date" : "2026-10-19T02:33:36+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

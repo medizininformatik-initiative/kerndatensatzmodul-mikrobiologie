@@ -12,7 +12,7 @@
 | Active as of 2023-03-02 | *Computable Name*:MII_VS_Mikrobio_Voraussichtliche_Empfindlichkeit |
 
  
-Result ValueSet for predicted susceptibility: the expected category susceptible, intermediate or resistant derived from genotypic detections. 
+Result ValueSet for predicted susceptibility: the predicted category susceptible, intermediate or resistant derived from genotypic detections. 
 
  **References** 
 
@@ -64,7 +64,7 @@ Result ValueSet for predicted susceptibility: the expected category susceptible,
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Result ValueSet for predicted susceptibility: the expected category susceptible, intermediate or resistant derived from genotypic detections.",
+  "description" : "Result ValueSet for predicted susceptibility: the predicted category susceptible, intermediate or resistant derived from genotypic detections.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

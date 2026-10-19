@@ -12,7 +12,7 @@
 | Active as of 2023-03-02 | *Computable Name*:MII_VS_Mikrobio_Empfaenglichkeit_Genotyp_LOINC |
 
  
-Test ValueSet for predicted susceptibility: LOINC codes for the expected efficacy of an antimicrobial substance derived from the genotype. 
+Test ValueSet for predicted susceptibility: LOINC codes for the predicted efficacy of an antimicrobial substance derived from the genotype. 
 
  **References** 
 
@@ -64,7 +64,7 @@ Test ValueSet for predicted susceptibility: LOINC codes for the expected efficac
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Test ValueSet for predicted susceptibility: LOINC codes for the expected efficacy of an antimicrobial substance derived from the genotype.",
+  "description" : "Test ValueSet for predicted susceptibility: LOINC codes for the predicted efficacy of an antimicrobial substance derived from the genotype.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
