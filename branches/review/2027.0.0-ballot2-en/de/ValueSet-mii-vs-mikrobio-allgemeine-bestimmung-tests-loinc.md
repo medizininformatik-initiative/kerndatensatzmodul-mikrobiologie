@@ -1,0 +1,107 @@
+# MII VS Microbiology General Determination Tests [LOINC] - MII Implementation Guide Microbiology v2027.0.0-ballot2
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII VS Microbiology General Determination Tests [LOINC]**
+
+## ValueSet: MII VS Microbiology General Determination Tests [LOINC] 
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc | *Version*:2027.0.0-ballot2 |
+| Active Stand: 2026-10-19 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_Allgemeine_Bestimmung_Tests_LOINC |
+
+ 
+Test ValueSet for general determination: LOINC codes for the untargeted identification of a microorganism. 41852-5 is preferred; the remaining codes are equally permitted where the laboratory names the pathogen group or the sequencing target in the code. 
+
+ **References** 
+
+* [MII PR Microbiology General Determination (Identification)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+-------
+
+ [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-tests-loinc",
+  "version" : "2027.0.0-ballot2",
+  "name" : "MII_VS_Mikrobio_Allgemeine_Bestimmung_Tests_LOINC",
+  "title" : "MII VS Microbiology General Determination Tests [LOINC]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-19T01:04:27+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Test ValueSet for general determination: LOINC codes for the untargeted identification of a microorganism. 41852-5 is preferred; the remaining codes are equally permitted where the laboratory names the pathogen group or the sequencing target in the code.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.82",
+      "concept" : [{
+        "code" : "41852-5",
+        "display" : "Microorganism or agent identified in Specimen"
+      },
+      {
+        "code" : "23667-9",
+        "display" : "Bacteria identified in Specimen"
+      },
+      {
+        "code" : "42805-2",
+        "display" : "Fungus identified in Specimen"
+      },
+      {
+        "code" : "41461-5",
+        "display" : "Virus identified in Specimen"
+      },
+      {
+        "code" : "66885-5",
+        "display" : "Bacteria identified based on 16S rRNA gene [Identifier] in Specimen by Sequencing"
+      },
+      {
+        "code" : "101534-6",
+        "display" : "Fungal 18s rRNA gene [Identifier] in Specimen by Sequencing"
+      }]
+    }]
+  }
+}
+
+```

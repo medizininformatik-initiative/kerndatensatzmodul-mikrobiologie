@@ -1,0 +1,90 @@
+# MII VS Microbiology General Determination Result [SNOMED] - MII Implementation Guide Microbiology v2027.0.0-ballot2
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII VS Microbiology General Determination Result [SNOMED]**
+
+## ValueSet: MII VS Microbiology General Determination Result [SNOMED] 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed | *Version*:2027.0.0-ballot2 |
+| Active as of 2026-10-19 | *Computable Name*:MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED |
+
+ 
+Result ValueSet for general determination: the identified microorganism, or the negative result if no pathogen was identified. 
+
+ **References** 
+
+* [MII PR Microbiology General Determination (Identification)](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+-------
+
+ [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed",
+  "version" : "2027.0.0-ballot2",
+  "name" : "MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED",
+  "title" : "MII VS Microbiology General Determination Result [SNOMED]",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-19T01:04:27+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Result ValueSet for general determination: the identified microorganism, or the negative result if no pathogen was identified.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-organismen-snomedct"]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
+      "concept" : [{
+        "code" : "260415000",
+        "display" : "Not detected (qualifier value)"
+      }]
+    }]
+  }
+}
+
+```

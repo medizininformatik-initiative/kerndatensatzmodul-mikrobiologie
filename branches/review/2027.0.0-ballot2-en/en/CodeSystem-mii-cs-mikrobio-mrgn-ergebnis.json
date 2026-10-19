@@ -1,0 +1,40 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "mii-cs-mikrobio-mrgn-ergebnis",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem mii-cs-mikrobio-mrgn-ergebnis</b></p><a name=\"mii-cs-mikrobio-mrgn-ergebnis\"> </a><a name=\"hcmii-cs-mikrobio-mrgn-ergebnis\"> </a><p>This case-sensitive code system <code>https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">keine-mrgn-klasse<a name=\"mii-cs-mikrobio-mrgn-ergebnis-keine-mrgn-klasse\"> </a></td><td>Keine MRGN-Klasse</td><td>The identified Gram-negative isolate was assessed on the basis of the available susceptibility results and cannot be assigned to any MRGN class (2MRGN, 3MRGN, 4MRGN). To be distinguished from the negative result of a targeted pathogen detection, which is represented by MII_PR_Mikrobio_Spezifische_Bestimmung or MII_PR_Mikrobio_Spezifische_Kultur.</td></tr></table></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/CodeSystem/mii-cs-mikrobio-mrgn-ergebnis",
+  "version" : "2027.0.0-ballot2",
+  "name" : "MII_CS_Mikrobio_MRGN_Ergebnis",
+  "title" : "MII CS Microbiology MRGN Result",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-19T01:04:27+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "CodeSystem for results of the MRGN classification that cannot be represented with LOINC. The LOINC answer list LL6195-3 for 99780-9 contains only 2MRGN, 3MRGN and 4MRGN and therefore no negative value.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 1,
+  "concept" : [{
+    "code" : "keine-mrgn-klasse",
+    "display" : "Keine MRGN-Klasse",
+    "definition" : "The identified Gram-negative isolate was assessed on the basis of the available susceptibility results and cannot be assigned to any MRGN class (2MRGN, 3MRGN, 4MRGN). To be distinguished from the negative result of a targeted pathogen detection, which is represented by MII_PR_Mikrobio_Spezifische_Bestimmung or MII_PR_Mikrobio_Spezifische_Kultur."
+  }]
+}

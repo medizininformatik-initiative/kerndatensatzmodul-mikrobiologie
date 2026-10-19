@@ -1,0 +1,1083 @@
+# MII LM Microbiology Investigation Types - MII Implementation Guide Microbiology v2027.0.0-ballot2
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII LM Microbiology Investigation Types**
+
+## Logisches Modell: MII LM Microbiology Investigation Types 
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchungsarten | *Version*:2027.0.0-ballot2 |
+| Active Stand: 2026-10-19 | *Maschinenlesbarer Name*:MII_LM_Mikrobio_Untersuchungsarten |
+
+ 
+Specialisations of the microbiological investigation for the graphical representation of the 2027 microbiology data model 
+
+**Usages:**
+
+* This Logical Model is not used by any profiles in this Specification
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.medizininformatikinitiative.kerndatensatz.mikrobiologie|current/StructureDefinition/StructureDefinition-mii-lm-mikrobio-untersuchungsarten.json)
+
+### Formale Ansichten des Profilinhalts
+
+ [Beschreibung von Profilen, Differentials, Snapshots und deren Repräsentationen](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+*  [Schlüsselelemente-Tabelle](#tabs-key) 
+*  [Differential-Tabelle](#tabs-diff) 
+*  [Snapshot-Tabelle](#tabs-snap) 
+*  [Statistiken/Referenzen](#tabs-summ) 
+*  [Alle](#tabs-all) 
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [MII_LM_Mikrobio_Untersuchung](StructureDefinition-mii-lm-mikrobio-untersuchung.md) 
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [MII_LM_Mikrobio_Untersuchung](StructureDefinition-mii-lm-mikrobio-untersuchung.md) 
+
+** Summary **
+
+Mandatory: 0 element(21 nested mandatory elements)
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII LM Microbiology Investigation (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung)](StructureDefinition-mii-lm-mikrobio-untersuchung.md)
+
+ **Schlüsselelemente-Ansicht** 
+
+#### Constraints
+
+ **Differential-Ansicht** 
+
+Diese Struktur ist abgeleitet von [MII_LM_Mikrobio_Untersuchung](StructureDefinition-mii-lm-mikrobio-untersuchung.md) 
+
+ **Snapshot-AnsichtView** 
+
+#### Constraints
+
+Diese Struktur ist abgeleitet von [MII_LM_Mikrobio_Untersuchung](StructureDefinition-mii-lm-mikrobio-untersuchung.md) 
+
+** Summary **
+
+Mandatory: 0 element(21 nested mandatory elements)
+
+**Structures**
+
+This structure refers to these other structures:
+
+* [MII LM Microbiology Investigation (https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung)](StructureDefinition-mii-lm-mikrobio-untersuchung.md)
+
+ 
+
+Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikrobio-untersuchungsarten.csv), [Excel](../StructureDefinition-mii-lm-mikrobio-untersuchungsarten.xlsx) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "mii-lm-mikrobio-untersuchungsarten",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics",
+    "valueCode" : "can-be-target"
+  }],
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchungsarten",
+  "version" : "2027.0.0-ballot2",
+  "name" : "MII_LM_Mikrobio_Untersuchungsarten",
+  "title" : "MII LM Microbiology Investigation Types",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-10-19T01:04:27+00:00",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Specialisations of the microbiological investigation for the graphical representation of the 2027 microbiology data model",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "fhirVersion" : "4.0.1",
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchungsarten",
+  "baseDefinition" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung",
+  "derivation" : "specialization",
+  "differential" : {
+    "element" : [{
+      "id" : "mii-lm-mikrobio-untersuchungsarten",
+      "path" : "mii-lm-mikrobio-untersuchungsarten",
+      "short" : "Microbiological investigation types",
+      "definition" : "The specialisations of a microbiological investigation. Each specialisation adds its specific attributes to the common information inherited from MII_LM_Mikrobio_Untersuchung."
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur",
+      "short" : "Culture",
+      "definition" : "Culture-based and microscopic investigations and the subsequent susceptibility testing.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur",
+      "short" : "General culture",
+      "definition" : "Result of an untargeted microbiological culture that checks whether any microorganism grows in the specimen.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the investigation; fixed here: detection of a microorganism by culture (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur.Ergebnis",
+      "short" : "Result",
+      "definition" : "Growth or no growth in the specimen (SNOMED CT). An indeterminable result is represented not here but via the data absent reason.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Culture procedure used (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie",
+      "short" : "General microscopy",
+      "definition" : "Morphological observation of microorganisms by microscopic examination. The result is a morphological group, not a species.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the investigation; microscopic observation (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Ergebnis",
+      "short" : "Result",
+      "definition" : "Observed morphology (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Menge[x]",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Menge[x]",
+      "short" : "Quantity",
+      "definition" : "How much of the reported finding was seen: as a semiquantitative grade (SNOMED CT) or as a count per field of view (UCUM).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      },
+      {
+        "code" : "Quantity"
+      },
+      {
+        "code" : "Range"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Microscopic procedure used (SNOMED CT). The staining technique is stated alongside.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie",
+      "short" : "Specific microscopy",
+      "definition" : "Microscopic detection of an object named in the investigation code; the quantity seen is stated alongside.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the object sought and the staining technique (LOINC, ordinal scale).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Ergebnis",
+      "short" : "Result",
+      "definition" : "Detection or exclusion of the object sought (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Menge[x]",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Menge[x]",
+      "short" : "Quantity",
+      "definition" : "How much of the detected object was seen: as a semiquantitative grade (SNOMED CT) or as a count per field of view (UCUM).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      },
+      {
+        "code" : "Quantity"
+      },
+      {
+        "code" : "Range"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Microscopic procedure used (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore",
+      "short" : "Bartlett Score",
+      "definition" : "Qualitative microscopic assessment of the suitability of sputum specimens for culture based on the ratio of inflammatory to epithelial cells.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the investigation; fixed here: Bartlett score (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Ergebnis",
+      "short" : "Result",
+      "definition" : "Score category and the specimen suitability derived from it (LOINC).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.BartlettScore.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Procedure used; fixed here: microscopy (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.NugentScore",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.NugentScore",
+      "short" : "Nugent Score",
+      "definition" : "Gram-stain-based semiquantitative scoring system for assessing vaginal microbiota patterns in bacterial vaginosis.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.NugentScore.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.NugentScore.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the investigation; fixed here: Nugent score (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.NugentScore.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.NugentScore.Ergebnis",
+      "short" : "Result",
+      "definition" : "Score value of the Nugent score (dimensionless).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.NugentScore.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.NugentScore.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Procedure used; fixed here: microscopy (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl",
+      "short" : "Colony count",
+      "definition" : "Quantitative determination of viable microorganisms in a specimen as colony-forming units per volume or mass.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the colony count (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Ergebnis",
+      "short" : "Result",
+      "definition" : "Measured colony count with unit, e.g. CFU/mL (UCUM).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Bewertung",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Bewertung",
+      "short" : "Assessment",
+      "definition" : "Semiquantitative classification of the measured value, e.g. scant / moderate / abundant growth.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Procedure used; fixed here: counting (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit",
+      "short" : "Susceptibility",
+      "definition" : "Result of phenotypic resistance testing of a pathogen against an antimicrobial substance with reference to a norm system.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Antimicrobial substance tested and test procedure (LOINC). Codes without a pre-coordinated specimen type are preferred.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Ergebnis[x]",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Ergebnis[x]",
+      "short" : "Result",
+      "definition" : "Measured value of the susceptibility test, e.g. minimum inhibitory concentration in mg/L or inhibition zone diameter in mm (UCUM) — or, if nothing was measured, the susceptibility category.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      },
+      {
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Bewertung",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Bewertung",
+      "short" : "Assessment",
+      "definition" : "Categorical assessment of the measured value (susceptible / intermediate / resistant).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Bewertung.Kategorie",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Bewertung.Kategorie",
+      "short" : "Category",
+      "definition" : "Susceptibility category of the pathogen tested.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Bewertung.Norm",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Bewertung.Norm",
+      "short" : "Norm",
+      "definition" : "Norm system including version on whose breakpoints the category is based, e.g. EUCAST or CLSI.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung",
+      "short" : "Determination",
+      "definition" : "Identification or detection of a microorganism or infectious agent in a specimen.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung",
+      "short" : "General determination",
+      "definition" : "Identification of a microorganism or infectious agent without restriction to a predefined target.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the investigation; fixed here: detection of a microorganism or agent in the specimen (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Ergebnis",
+      "short" : "Result",
+      "definition" : "Identified microorganism or agent (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Detection or identification procedure used (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung",
+      "short" : "Specific determination",
+      "definition" : "Qualitative detection of a predefined microbial target, culture-based or by molecular, immunological or biochemical procedures. The procedure used is in the investigation code and in the method, not in the result.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the target sought and the test procedure (LOINC). Codes without a pre-coordinated specimen type are preferred.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Ergebnis",
+      "short" : "Result",
+      "definition" : "Detection result for the target sought (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Detection procedure used (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.CtWert",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.CtWert",
+      "short" : "Ct value",
+      "definition" : "Cycle threshold in nucleic acid detection, e.g. real-time PCR.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.CtWert.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.CtWert.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the Ct value for the respective target (LOINC). Codes without a pre-coordinated specimen type are preferred.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.CtWert.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.CtWert.Ergebnis",
+      "short" : "Result",
+      "definition" : "Cycle threshold (dimensionless).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.CtWert.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.CtWert.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Procedure used; fixed here: real-time PCR (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.CtWert.AbgeleitetAus",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.CtWert.AbgeleitetAus",
+      "short" : "Derived from",
+      "definition" : "Investigation from which the Ct value originated, usually the associated specific determination.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung"]
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften",
+      "short" : "Further properties",
+      "definition" : "Additional properties of a detected pathogen, in particular regarding virulence and resistance.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Virulenzfaktor",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Virulenzfaktor",
+      "short" : "Virulence factor",
+      "definition" : "Qualitative detection or exclusion of virulence determinants in a specimen.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Virulenzfaktor.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Virulenzfaktor.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the virulence determinant investigated (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Virulenzfaktor.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Virulenzfaktor.Ergebnis",
+      "short" : "Result",
+      "definition" : "Detected or not detected (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten",
+      "short" : "Resistance mechanism",
+      "definition" : "Detection of resistance genes or resistance mutations as an indication of a specific resistance mechanism.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the resistance gene or resistance mechanism investigated (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten.Ergebnis",
+      "short" : "Result",
+      "definition" : "Detected or not detected (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Detection procedure used (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MRGNKlasse",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MRGNKlasse",
+      "short" : "MRGN class",
+      "definition" : "Classification of multidrug-resistant Gram-negative pathogens according to the RKI categorisation.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MRGNKlasse.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MRGNKlasse.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the investigation; fixed here: MRGN classification (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MRGNKlasse.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MRGNKlasse.Ergebnis",
+      "short" : "Result",
+      "definition" : "MRGN class, e.g. 3MRGN or 4MRGN (LOINC).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
+      "short" : "Predicted susceptibility",
+      "definition" : "Expected susceptibility or resistance to antimicrobial substances derived from genotypic detections.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Antimicrobial substance or substance class concerned (LOINC, genotypic).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit.Ergebnis",
+      "short" : "Result",
+      "definition" : "Expected susceptibility or resistance.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus",
+      "short" : "Resistance category status",
+      "definition" : "Assessment of a pathogen with regard to a defined resistance category, e.g. MRSA, VRE, LRE or LVRE, derived from the available microbiological investigations.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Assessed resistance category (MII CodeSystem).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Ergebnis",
+      "short" : "Result",
+      "definition" : "Positive or Negative with regard to the category named in the investigation code (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Grundlage",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzkategorieStatus.Grundlage",
+      "short" : "Basis",
+      "definition" : "Investigations from which the assessment was derived: identification, susceptibility and resistance mechanisms.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Aviditaet",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Aviditaet",
+      "short" : "Avidity",
+      "definition" : "Assessment of the binding strength of antibodies to a specific antigen, typically to distinguish recent from past infections.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Aviditaet.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Aviditaet.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the avidity test including target antigen (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Aviditaet.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Aviditaet.Ergebnis",
+      "short" : "Result",
+      "definition" : "Avidity index in percent.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Aviditaet.Bewertung",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Aviditaet.Bewertung",
+      "short" : "Assessment",
+      "definition" : "Categorical classification of avidity, e.g. low or high.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Aviditaet.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Aviditaet.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Immunological procedure used (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests",
+      "short" : "Quantitative Tests",
+      "definition" : "Quantitative measurements of pathogen-specific analytes.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.AntigenAntikoerperQuantitativ",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.AntigenAntikoerperQuantitativ",
+      "short" : "Antigen antibody tests",
+      "definition" : "Quantitative measurement of pathogen-specific antigens or antibodies by immunological procedures.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.AntigenAntikoerperQuantitativ.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.AntigenAntikoerperQuantitativ.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the antigen or antibody measured (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.AntigenAntikoerperQuantitativ.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.AntigenAntikoerperQuantitativ.Ergebnis",
+      "short" : "Result",
+      "definition" : "Measured concentration or activity with unit (UCUM).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.AntigenAntikoerperQuantitativ.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.AntigenAntikoerperQuantitativ.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Immunological procedure used (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.Titer",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.Titer",
+      "short" : "Titre",
+      "definition" : "Semiquantitative measurement from serial dilution series, reported as a ratio, e.g. 1:160.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.Titer.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.Titer.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the titre test (LOINC).",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.Titer.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.Titer.Ergebnis",
+      "short" : "Result",
+      "definition" : "Titre as a ratio; the numerator is always 1, the denominator gives the highest still reactive dilution step.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Ratio"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.Titer.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.Titer.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Dilution series procedure used (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.MolekularePathogenlast",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.MolekularePathogenlast",
+      "short" : "Molecular pathogen load",
+      "definition" : "Quantitative measurement of the nucleic acid concentration of a pathogen, typically as a concentration per volume.",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "BackboneElement"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.MolekularePathogenlast.Untersuchungscode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.MolekularePathogenlast.Untersuchungscode",
+      "short" : "Investigation code",
+      "definition" : "Coding of the measured pathogen load including target (LOINC). Codes without a pre-coordinated specimen type are preferred.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.MolekularePathogenlast.Ergebnis",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.MolekularePathogenlast.Ergebnis",
+      "short" : "Result",
+      "definition" : "Measured pathogen load with unit, e.g. copies/mL (UCUM).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "Quantity"
+      }]
+    },
+    {
+      "id" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.MolekularePathogenlast.Untersuchungsmethode",
+      "path" : "mii-lm-mikrobio-untersuchungsarten.QuantitativeTests.MolekularePathogenlast.Untersuchungsmethode",
+      "short" : "Method",
+      "definition" : "Molecular procedure used (SNOMED CT).",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "CodeableConcept"
+      }]
+    }]
+  }
+}
+
+```
