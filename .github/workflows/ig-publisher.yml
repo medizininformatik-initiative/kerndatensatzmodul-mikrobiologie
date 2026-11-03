@@ -517,6 +517,15 @@ jobs:
             # Marker consumed by cleanup-gh-pages.yml to detect deleted branches.
             echo "${BRANCH}" > "${branch_dir}/.branch-name"
           fi
+          # GitHub rejects any file above 100 MB on push (GH001, no LFS on gh-pages). The
+          # terminology QA page (qa-tx.html) and full-ig.zip cross that line on branches with
+          # very large ValueSets: one error per enumerated code from the terminology server
+          # blows qa-tx.html up to >130 MB. Drop such files from the preview instead of
+          # failing the publish; qa.html keeps the summary and the counts.
+          while IFS= read -r -d '' big; do
+            echo "::warning::dropping ${big#gh-pages/} from the preview: $(du -h "${big}" | cut -f1) exceeds GitHub's 100 MB file limit"
+            rm -f -- "${big}"
+          done < <(find gh-pages -path gh-pages/.git -prune -o -type f -size +99M -print0)
           # TEMPLATE REPOSITORY ONLY: (re)generate the root index — a plain
           # autoindex-style listing of branches/dev/ + the latest demo/<tag>/ —
           # so it heals on every preview deploy. A created module's site root
