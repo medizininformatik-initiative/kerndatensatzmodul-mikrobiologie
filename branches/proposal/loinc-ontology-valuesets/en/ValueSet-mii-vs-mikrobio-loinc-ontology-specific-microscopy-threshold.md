@@ -1,0 +1,1090 @@
+# MII VS Microbiology LOINC Ontology Specific Microscopy Threshold - MII Implementation Guide Microbiology v2027.0.0-ballot2
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **MII VS Microbiology LOINC Ontology Specific Microscopy Threshold**
+
+## ValueSet: MII VS Microbiology LOINC Ontology Specific Microscopy Threshold (Experimental) 
+
+| | |
+| :--- | :--- |
+| *Official URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-specific-microscopy-threshold | *Version*:2027.0.0-ballot2 |
+| Draft as of 2026-11-03 | *Computable Name*:MII_VS_Mikrobio_LOINC_Ontology_Specific_Microscopy_Threshold |
+| **Copyright/Legal**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
+
+ 
+Proposal: LOINC codes of the microbiology request 'Microscopy: Specific microscopy — ordinal threshold presence by microscopy or staining technique', computed by ECL over the LOINC Ontology 2026-10-21. Object sought and stain named in the code, result is the detection (LOINC PrThr + Ord + stain). Host cells (leukocytes, erythrocytes, epithelia) are included because the technique, not a class, selects. Parts: LOINC enumeration (331, LOINC 2.83), LOINC Ontology observables without LOINC code (0), and the ECL as an intensional include. ECL: `<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118589004 |Threshold (property) (qualifier value)| OR 705057003 |Presence (property) (qualifier value)|), 370132008 |Scale type (attribute)| = 117363000 |Ordinal value (qualifier value)|, 246501002 |Technique (attribute)| = (<< 278289002 |Microscopy technique (qualifier value)| OR << 703857004 |Staining technique (qualifier value)|)` 
+
+ **References** 
+
+* [MII PR Microbiology LOINC Ontology Specific microscopy](StructureDefinition-mii-pr-mikrobio-loinc-ontology-spezifische-mikroskopie.md)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+No Expansion for this valueset (Unsupported Code System Version)
+
+-------
+
+ [Description of the above table(s)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-loinc-ontology-specific-microscopy-threshold",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-specific-microscopy-threshold",
+  "version" : "2027.0.0-ballot2",
+  "name" : "MII_VS_Mikrobio_LOINC_Ontology_Specific_Microscopy_Threshold",
+  "title" : "MII VS Microbiology LOINC Ontology Specific Microscopy Threshold",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-11-03",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Proposal: LOINC codes of the microbiology request 'Microscopy: Specific microscopy — ordinal threshold presence by microscopy or staining technique', computed by ECL over the LOINC Ontology 2026-10-21. Object sought and stain named in the code, result is the detection (LOINC PrThr + Ord + stain). Host cells (leukocytes, erythrocytes, epithelia) are included because the technique, not a class, selects. Parts: LOINC enumeration (331, LOINC 2.83), LOINC Ontology observables without LOINC code (0), and the ECL as an intensional include. ECL: `<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118589004 |Threshold (property) (qualifier value)| OR 705057003 |Presence (property) (qualifier value)|), 370132008 |Scale type (attribute)| = 117363000 |Ordinal value (qualifier value)|, 246501002 |Technique (attribute)| = (<< 278289002 |Microscopy technique (qualifier value)| OR << 703857004 |Staining technique (qualifier value)|)`",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Guidance for binding Observation.code of the MII microbiology request profiles to a computably defined LOINC set; accompanies ballot comments on 2027.0.0-ballot2. Generated, not hand-curated.",
+  "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.83",
+      "concept" : [{
+        "code" : "100915-8"
+      },
+      {
+        "code" : "101225-1"
+      },
+      {
+        "code" : "101339-0"
+      },
+      {
+        "code" : "101376-2"
+      },
+      {
+        "code" : "10371-3"
+      },
+      {
+        "code" : "10372-1"
+      },
+      {
+        "code" : "10374-7"
+      },
+      {
+        "code" : "10375-4"
+      },
+      {
+        "code" : "10376-2"
+      },
+      {
+        "code" : "10377-0"
+      },
+      {
+        "code" : "10378-8"
+      },
+      {
+        "code" : "10379-6"
+      },
+      {
+        "code" : "10380-4"
+      },
+      {
+        "code" : "10381-2"
+      },
+      {
+        "code" : "104348-8"
+      },
+      {
+        "code" : "104350-4"
+      },
+      {
+        "code" : "105052-5"
+      },
+      {
+        "code" : "105053-3"
+      },
+      {
+        "code" : "106049-0"
+      },
+      {
+        "code" : "10675-7"
+      },
+      {
+        "code" : "106775-0"
+      },
+      {
+        "code" : "106776-8"
+      },
+      {
+        "code" : "106778-4"
+      },
+      {
+        "code" : "107167-9"
+      },
+      {
+        "code" : "10726-8"
+      },
+      {
+        "code" : "107465-7"
+      },
+      {
+        "code" : "107466-5"
+      },
+      {
+        "code" : "107468-1"
+      },
+      {
+        "code" : "107469-9"
+      },
+      {
+        "code" : "107470-7"
+      },
+      {
+        "code" : "107471-5"
+      },
+      {
+        "code" : "107472-3"
+      },
+      {
+        "code" : "107475-6"
+      },
+      {
+        "code" : "107476-4"
+      },
+      {
+        "code" : "107477-2"
+      },
+      {
+        "code" : "107478-0"
+      },
+      {
+        "code" : "107483-0"
+      },
+      {
+        "code" : "107484-8"
+      },
+      {
+        "code" : "107485-5"
+      },
+      {
+        "code" : "107497-0"
+      },
+      {
+        "code" : "107498-8"
+      },
+      {
+        "code" : "107526-6"
+      },
+      {
+        "code" : "107528-2"
+      },
+      {
+        "code" : "111555-9"
+      },
+      {
+        "code" : "112407-2"
+      },
+      {
+        "code" : "11274-8"
+      },
+      {
+        "code" : "11280-5"
+      },
+      {
+        "code" : "11281-3"
+      },
+      {
+        "code" : "113024-4"
+      },
+      {
+        "code" : "113028-5"
+      },
+      {
+        "code" : "113032-7"
+      },
+      {
+        "code" : "113042-6"
+      },
+      {
+        "code" : "113045-9"
+      },
+      {
+        "code" : "113053-3"
+      },
+      {
+        "code" : "113058-2"
+      },
+      {
+        "code" : "113059-0"
+      },
+      {
+        "code" : "113060-8"
+      },
+      {
+        "code" : "113064-0"
+      },
+      {
+        "code" : "113071-5"
+      },
+      {
+        "code" : "113075-6"
+      },
+      {
+        "code" : "113081-4"
+      },
+      {
+        "code" : "113082-2"
+      },
+      {
+        "code" : "113089-7"
+      },
+      {
+        "code" : "12248-1"
+      },
+      {
+        "code" : "12258-0"
+      },
+      {
+        "code" : "12452-9"
+      },
+      {
+        "code" : "12454-5"
+      },
+      {
+        "code" : "12512-0"
+      },
+      {
+        "code" : "13048-4"
+      },
+      {
+        "code" : "13330-6"
+      },
+      {
+        "code" : "13596-2"
+      },
+      {
+        "code" : "13627-5"
+      },
+      {
+        "code" : "13655-6"
+      },
+      {
+        "code" : "13942-8"
+      },
+      {
+        "code" : "14103-6"
+      },
+      {
+        "code" : "14105-1"
+      },
+      {
+        "code" : "14124-2"
+      },
+      {
+        "code" : "14125-9"
+      },
+      {
+        "code" : "14327-1"
+      },
+      {
+        "code" : "14328-9"
+      },
+      {
+        "code" : "14329-7"
+      },
+      {
+        "code" : "16614-0"
+      },
+      {
+        "code" : "16822-9"
+      },
+      {
+        "code" : "17257-7"
+      },
+      {
+        "code" : "17773-3"
+      },
+      {
+        "code" : "17783-2"
+      },
+      {
+        "code" : "18192-5"
+      },
+      {
+        "code" : "18311-1"
+      },
+      {
+        "code" : "18312-9"
+      },
+      {
+        "code" : "18319-4"
+      },
+      {
+        "code" : "18422-6"
+      },
+      {
+        "code" : "20453-7"
+      },
+      {
+        "code" : "20455-2"
+      },
+      {
+        "code" : "20457-8"
+      },
+      {
+        "code" : "20472-7"
+      },
+      {
+        "code" : "20473-5"
+      },
+      {
+        "code" : "20780-3"
+      },
+      {
+        "code" : "20781-1"
+      },
+      {
+        "code" : "20949-4"
+      },
+      {
+        "code" : "21384-3"
+      },
+      {
+        "code" : "21550-9"
+      },
+      {
+        "code" : "22992-2"
+      },
+      {
+        "code" : "22993-0"
+      },
+      {
+        "code" : "23016-9"
+      },
+      {
+        "code" : "23025-0"
+      },
+      {
+        "code" : "23388-2"
+      },
+      {
+        "code" : "23499-7"
+      },
+      {
+        "code" : "23595-2"
+      },
+      {
+        "code" : "23596-0"
+      },
+      {
+        "code" : "23597-8"
+      },
+      {
+        "code" : "23897-2"
+      },
+      {
+        "code" : "23898-0"
+      },
+      {
+        "code" : "24124-0"
+      },
+      {
+        "code" : "24408-7"
+      },
+      {
+        "code" : "24413-7"
+      },
+      {
+        "code" : "24421-0"
+      },
+      {
+        "code" : "25145-4"
+      },
+      {
+        "code" : "25156-1"
+      },
+      {
+        "code" : "25157-9"
+      },
+      {
+        "code" : "25158-7"
+      },
+      {
+        "code" : "25159-5"
+      },
+      {
+        "code" : "25160-3"
+      },
+      {
+        "code" : "25162-9"
+      },
+      {
+        "code" : "29990-9"
+      },
+      {
+        "code" : "29992-5"
+      },
+      {
+        "code" : "29993-3"
+      },
+      {
+        "code" : "32034-1"
+      },
+      {
+        "code" : "32035-8"
+      },
+      {
+        "code" : "32036-6"
+      },
+      {
+        "code" : "32037-4"
+      },
+      {
+        "code" : "32038-2"
+      },
+      {
+        "code" : "32039-0"
+      },
+      {
+        "code" : "32142-2"
+      },
+      {
+        "code" : "32146-3"
+      },
+      {
+        "code" : "32158-8"
+      },
+      {
+        "code" : "32173-7"
+      },
+      {
+        "code" : "32175-2"
+      },
+      {
+        "code" : "32176-0"
+      },
+      {
+        "code" : "32208-1"
+      },
+      {
+        "code" : "32356-8"
+      },
+      {
+        "code" : "32724-7"
+      },
+      {
+        "code" : "32776-7"
+      },
+      {
+        "code" : "32778-3"
+      },
+      {
+        "code" : "33044-9"
+      },
+      {
+        "code" : "33056-3"
+      },
+      {
+        "code" : "33215-5"
+      },
+      {
+        "code" : "33216-3"
+      },
+      {
+        "code" : "33249-4"
+      },
+      {
+        "code" : "33784-0"
+      },
+      {
+        "code" : "33804-6"
+      },
+      {
+        "code" : "33825-1"
+      },
+      {
+        "code" : "33862-4"
+      },
+      {
+        "code" : "34174-3"
+      },
+      {
+        "code" : "34469-7"
+      },
+      {
+        "code" : "34471-3"
+      },
+      {
+        "code" : "34472-1"
+      },
+      {
+        "code" : "34702-1"
+      },
+      {
+        "code" : "35436-5"
+      },
+      {
+        "code" : "38458-6"
+      },
+      {
+        "code" : "38903-1"
+      },
+      {
+        "code" : "38994-0"
+      },
+      {
+        "code" : "38996-5"
+      },
+      {
+        "code" : "40630-6"
+      },
+      {
+        "code" : "40654-6"
+      },
+      {
+        "code" : "40682-7"
+      },
+      {
+        "code" : "40688-4"
+      },
+      {
+        "code" : "40716-3"
+      },
+      {
+        "code" : "40743-7"
+      },
+      {
+        "code" : "41222-1"
+      },
+      {
+        "code" : "41242-9"
+      },
+      {
+        "code" : "41488-8"
+      },
+      {
+        "code" : "41598-4"
+      },
+      {
+        "code" : "41599-2"
+      },
+      {
+        "code" : "41600-8"
+      },
+      {
+        "code" : "41601-6"
+      },
+      {
+        "code" : "41602-4"
+      },
+      {
+        "code" : "41603-2"
+      },
+      {
+        "code" : "42327-7"
+      },
+      {
+        "code" : "42524-9"
+      },
+      {
+        "code" : "43154-4"
+      },
+      {
+        "code" : "43400-1"
+      },
+      {
+        "code" : "44017-2"
+      },
+      {
+        "code" : "44018-0"
+      },
+      {
+        "code" : "44039-6"
+      },
+      {
+        "code" : "44040-4"
+      },
+      {
+        "code" : "44041-2"
+      },
+      {
+        "code" : "44042-0"
+      },
+      {
+        "code" : "44043-8"
+      },
+      {
+        "code" : "44044-6"
+      },
+      {
+        "code" : "44048-7"
+      },
+      {
+        "code" : "44275-6"
+      },
+      {
+        "code" : "44721-9"
+      },
+      {
+        "code" : "44722-7"
+      },
+      {
+        "code" : "44723-5"
+      },
+      {
+        "code" : "45379-5"
+      },
+      {
+        "code" : "45380-3"
+      },
+      {
+        "code" : "45381-1"
+      },
+      {
+        "code" : "48048-3"
+      },
+      {
+        "code" : "48049-1"
+      },
+      {
+        "code" : "48050-9"
+      },
+      {
+        "code" : "48055-8"
+      },
+      {
+        "code" : "48069-9"
+      },
+      {
+        "code" : "48707-4"
+      },
+      {
+        "code" : "48710-8"
+      },
+      {
+        "code" : "48973-2"
+      },
+      {
+        "code" : "48981-5"
+      },
+      {
+        "code" : "48982-3"
+      },
+      {
+        "code" : "49755-2"
+      },
+      {
+        "code" : "49839-4"
+      },
+      {
+        "code" : "49967-3"
+      },
+      {
+        "code" : "50260-9"
+      },
+      {
+        "code" : "50340-9"
+      },
+      {
+        "code" : "50341-7"
+      },
+      {
+        "code" : "50672-5"
+      },
+      {
+        "code" : "50674-1"
+      },
+      {
+        "code" : "51582-5"
+      },
+      {
+        "code" : "51587-4"
+      },
+      {
+        "code" : "51645-0"
+      },
+      {
+        "code" : "53541-9"
+      },
+      {
+        "code" : "53788-6"
+      },
+      {
+        "code" : "53969-2"
+      },
+      {
+        "code" : "53970-0"
+      },
+      {
+        "code" : "53971-8"
+      },
+      {
+        "code" : "53972-6"
+      },
+      {
+        "code" : "53978-3"
+      },
+      {
+        "code" : "55178-8"
+      },
+      {
+        "code" : "55179-6"
+      },
+      {
+        "code" : "55303-2"
+      },
+      {
+        "code" : "55304-0"
+      },
+      {
+        "code" : "55305-7"
+      },
+      {
+        "code" : "55306-5"
+      },
+      {
+        "code" : "55307-3"
+      },
+      {
+        "code" : "55313-1"
+      },
+      {
+        "code" : "55314-9"
+      },
+      {
+        "code" : "55315-6"
+      },
+      {
+        "code" : "55316-4"
+      },
+      {
+        "code" : "55317-2"
+      },
+      {
+        "code" : "55318-0"
+      },
+      {
+        "code" : "55320-6"
+      },
+      {
+        "code" : "55835-3"
+      },
+      {
+        "code" : "5766-1"
+      },
+      {
+        "code" : "5771-1"
+      },
+      {
+        "code" : "5772-9"
+      },
+      {
+        "code" : "5773-7"
+      },
+      {
+        "code" : "5774-5"
+      },
+      {
+        "code" : "5775-2"
+      },
+      {
+        "code" : "5776-0"
+      },
+      {
+        "code" : "5777-8"
+      },
+      {
+        "code" : "5784-4"
+      },
+      {
+        "code" : "5795-0"
+      },
+      {
+        "code" : "5798-4"
+      },
+      {
+        "code" : "5812-3"
+      },
+      {
+        "code" : "5813-1"
+      },
+      {
+        "code" : "5814-9"
+      },
+      {
+        "code" : "5815-6"
+      },
+      {
+        "code" : "5816-4"
+      },
+      {
+        "code" : "5817-2"
+      },
+      {
+        "code" : "58456-5"
+      },
+      {
+        "code" : "5908-9"
+      },
+      {
+        "code" : "59839-1"
+      },
+      {
+        "code" : "60520-4"
+      },
+      {
+        "code" : "67848-2"
+      },
+      {
+        "code" : "702-1"
+      },
+      {
+        "code" : "703-9"
+      },
+      {
+        "code" : "716-1"
+      },
+      {
+        "code" : "72161-3"
+      },
+      {
+        "code" : "72162-1"
+      },
+      {
+        "code" : "72163-9"
+      },
+      {
+        "code" : "72277-7"
+      },
+      {
+        "code" : "72338-7"
+      },
+      {
+        "code" : "72339-5"
+      },
+      {
+        "code" : "72340-3"
+      },
+      {
+        "code" : "72357-7"
+      },
+      {
+        "code" : "728-6"
+      },
+      {
+        "code" : "733-6"
+      },
+      {
+        "code" : "738-5"
+      },
+      {
+        "code" : "741-9"
+      },
+      {
+        "code" : "74750-1"
+      },
+      {
+        "code" : "74759-2"
+      },
+      {
+        "code" : "74783-2"
+      },
+      {
+        "code" : "76083-5"
+      },
+      {
+        "code" : "765-8"
+      },
+      {
+        "code" : "76705-3"
+      },
+      {
+        "code" : "774-0"
+      },
+      {
+        "code" : "7789-1"
+      },
+      {
+        "code" : "779-9"
+      },
+      {
+        "code" : "7790-9"
+      },
+      {
+        "code" : "7791-7"
+      },
+      {
+        "code" : "7792-5"
+      },
+      {
+        "code" : "7793-3"
+      },
+      {
+        "code" : "7795-8"
+      },
+      {
+        "code" : "7796-6"
+      },
+      {
+        "code" : "7797-4"
+      },
+      {
+        "code" : "7798-2"
+      },
+      {
+        "code" : "7809-7"
+      },
+      {
+        "code" : "7973-1"
+      },
+      {
+        "code" : "800-3"
+      },
+      {
+        "code" : "801-1"
+      },
+      {
+        "code" : "8011-9"
+      },
+      {
+        "code" : "802-9"
+      },
+      {
+        "code" : "803-7"
+      },
+      {
+        "code" : "80725-5"
+      },
+      {
+        "code" : "8246-1"
+      },
+      {
+        "code" : "8247-9"
+      },
+      {
+        "code" : "8248-7"
+      },
+      {
+        "code" : "8249-5"
+      },
+      {
+        "code" : "85338-2"
+      },
+      {
+        "code" : "87243-2"
+      },
+      {
+        "code" : "88113-6"
+      },
+      {
+        "code" : "88114-4"
+      },
+      {
+        "code" : "88171-4"
+      },
+      {
+        "code" : "88172-2"
+      },
+      {
+        "code" : "88173-0"
+      },
+      {
+        "code" : "88234-0"
+      },
+      {
+        "code" : "88340-5"
+      },
+      {
+        "code" : "88343-9"
+      },
+      {
+        "code" : "88366-0"
+      },
+      {
+        "code" : "88631-7"
+      },
+      {
+        "code" : "88689-5"
+      },
+      {
+        "code" : "90286-6"
+      },
+      {
+        "code" : "90303-9"
+      },
+      {
+        "code" : "91135-4"
+      },
+      {
+        "code" : "91845-8"
+      },
+      {
+        "code" : "9317-9"
+      },
+      {
+        "code" : "94856-2"
+      },
+      {
+        "code" : "94857-0"
+      },
+      {
+        "code" : "95074-1"
+      },
+      {
+        "code" : "96733-1"
+      },
+      {
+        "code" : "98027-6"
+      },
+      {
+        "code" : "99052-3"
+      },
+      {
+        "code" : "99394-9"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/11010000107/version/20261021",
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118589004 |Threshold (property) (qualifier value)| OR 705057003 |Presence (property) (qualifier value)|), 370132008 |Scale type (attribute)| = 117363000 |Ordinal value (qualifier value)|, 246501002 |Technique (attribute)| = (<< 278289002 |Microscopy technique (qualifier value)| OR << 703857004 |Staining technique (qualifier value)|)"
+      }]
+    }]
+  }
+}
+
+```

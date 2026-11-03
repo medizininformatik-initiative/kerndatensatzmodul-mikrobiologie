@@ -1,0 +1,361 @@
+# MII VS Microbiology LOINC Ontology Organism Identity No Technique - MII Implementation Guide Microbiology v2027.0.0-ballot2
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII VS Microbiology LOINC Ontology Organism Identity No Technique**
+
+## ValueSet: MII VS Microbiology LOINC Ontology Organism Identity No Technique (Experimentell) 
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-organism-identity-no-technique | *Version*:2027.0.0-ballot2 |
+| Draft Stand: 2026-11-03 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_LOINC_Ontology_Organism_Identity_No_Technique |
+| **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
+
+ 
+Proposal: LOINC codes of the microbiology request 'General determination: General determination — method-neutral identity codes', computed by ECL over the LOINC Ontology 2026-10-21. The technique-free identity observables ('Presence or identity of virus in specimen'); the method-neutral request codes live here. Parts: LOINC enumeration (88, LOINC 2.83), LOINC Ontology observables without LOINC code (0), and the ECL as an intensional include. ECL: `<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = 118584009 |Presence or identity (property) (qualifier value)|, 704319004 |Inheres in (attribute)| = << 410607006 |Organism (organism)|, [0..0] 246501002 |Technique (attribute)| = *` 
+
+ **References** 
+
+This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+No Expansion for this valueset (Unsupported Code System Version)
+
+-------
+
+ [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-loinc-ontology-organism-identity-no-technique",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-organism-identity-no-technique",
+  "version" : "2027.0.0-ballot2",
+  "name" : "MII_VS_Mikrobio_LOINC_Ontology_Organism_Identity_No_Technique",
+  "title" : "MII VS Microbiology LOINC Ontology Organism Identity No Technique",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-11-03",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Proposal: LOINC codes of the microbiology request 'General determination: General determination — method-neutral identity codes', computed by ECL over the LOINC Ontology 2026-10-21. The technique-free identity observables ('Presence or identity of virus in specimen'); the method-neutral request codes live here. Parts: LOINC enumeration (88, LOINC 2.83), LOINC Ontology observables without LOINC code (0), and the ECL as an intensional include. ECL: `<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = 118584009 |Presence or identity (property) (qualifier value)|, 704319004 |Inheres in (attribute)| = << 410607006 |Organism (organism)|, [0..0] 246501002 |Technique (attribute)| = *`",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Guidance for binding Observation.code of the MII microbiology request profiles to a computably defined LOINC set; accompanies ballot comments on 2027.0.0-ballot2. Generated, not hand-curated.",
+  "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.83",
+      "concept" : [{
+        "code" : "105064-0"
+      },
+      {
+        "code" : "10644-3"
+      },
+      {
+        "code" : "10647-6"
+      },
+      {
+        "code" : "10648-4"
+      },
+      {
+        "code" : "10667-4"
+      },
+      {
+        "code" : "10668-2"
+      },
+      {
+        "code" : "10669-0"
+      },
+      {
+        "code" : "10690-6"
+      },
+      {
+        "code" : "10710-2"
+      },
+      {
+        "code" : "10712-8"
+      },
+      {
+        "code" : "10727-6"
+      },
+      {
+        "code" : "10731-8"
+      },
+      {
+        "code" : "10732-6"
+      },
+      {
+        "code" : "11083-3"
+      },
+      {
+        "code" : "11481-9"
+      },
+      {
+        "code" : "13314-0"
+      },
+      {
+        "code" : "14325-5"
+      },
+      {
+        "code" : "14787-6"
+      },
+      {
+        "code" : "17280-9"
+      },
+      {
+        "code" : "17942-4"
+      },
+      {
+        "code" : "17943-2"
+      },
+      {
+        "code" : "17944-0"
+      },
+      {
+        "code" : "17945-7"
+      },
+      {
+        "code" : "17946-5"
+      },
+      {
+        "code" : "19127-0"
+      },
+      {
+        "code" : "20474-3"
+      },
+      {
+        "code" : "20877-7"
+      },
+      {
+        "code" : "21020-3"
+      },
+      {
+        "code" : "22799-1"
+      },
+      {
+        "code" : "22800-7"
+      },
+      {
+        "code" : "22826-2"
+      },
+      {
+        "code" : "22832-0"
+      },
+      {
+        "code" : "23162-1"
+      },
+      {
+        "code" : "23232-2"
+      },
+      {
+        "code" : "23233-0"
+      },
+      {
+        "code" : "23536-6"
+      },
+      {
+        "code" : "23667-9"
+      },
+      {
+        "code" : "23752-9"
+      },
+      {
+        "code" : "32355-0"
+      },
+      {
+        "code" : "32701-5"
+      },
+      {
+        "code" : "32810-4"
+      },
+      {
+        "code" : "40698-3"
+      },
+      {
+        "code" : "40699-1"
+      },
+      {
+        "code" : "40958-1"
+      },
+      {
+        "code" : "41454-0"
+      },
+      {
+        "code" : "41461-5"
+      },
+      {
+        "code" : "42661-9"
+      },
+      {
+        "code" : "42803-7"
+      },
+      {
+        "code" : "42804-5"
+      },
+      {
+        "code" : "42805-2"
+      },
+      {
+        "code" : "42808-6"
+      },
+      {
+        "code" : "43390-4"
+      },
+      {
+        "code" : "43693-1"
+      },
+      {
+        "code" : "43696-4"
+      },
+      {
+        "code" : "43697-2"
+      },
+      {
+        "code" : "43698-0"
+      },
+      {
+        "code" : "43699-8"
+      },
+      {
+        "code" : "45275-5"
+      },
+      {
+        "code" : "45276-3"
+      },
+      {
+        "code" : "48561-5"
+      },
+      {
+        "code" : "48562-3"
+      },
+      {
+        "code" : "48563-1"
+      },
+      {
+        "code" : "48564-9"
+      },
+      {
+        "code" : "48565-6"
+      },
+      {
+        "code" : "48566-4"
+      },
+      {
+        "code" : "49538-2"
+      },
+      {
+        "code" : "50024-9"
+      },
+      {
+        "code" : "53625-0"
+      },
+      {
+        "code" : "54242-3"
+      },
+      {
+        "code" : "54244-9"
+      },
+      {
+        "code" : "55096-2"
+      },
+      {
+        "code" : "616-3"
+      },
+      {
+        "code" : "623-9"
+      },
+      {
+        "code" : "624-7"
+      },
+      {
+        "code" : "636-1"
+      },
+      {
+        "code" : "637-9"
+      },
+      {
+        "code" : "67867-2"
+      },
+      {
+        "code" : "74816-0"
+      },
+      {
+        "code" : "75269-1"
+      },
+      {
+        "code" : "75357-4"
+      },
+      {
+        "code" : "75358-2"
+      },
+      {
+        "code" : "75359-0"
+      },
+      {
+        "code" : "79425-5"
+      },
+      {
+        "code" : "86337-3"
+      },
+      {
+        "code" : "88717-4"
+      },
+      {
+        "code" : "89655-5"
+      },
+      {
+        "code" : "9825-1"
+      },
+      {
+        "code" : "98411-2"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/11010000107/version/20261021",
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = 118584009 |Presence or identity (property) (qualifier value)|, 704319004 |Inheres in (attribute)| = << 410607006 |Organism (organism)|, [0..0] 246501002 |Technique (attribute)| = *"
+      }]
+    }]
+  }
+}
+
+```

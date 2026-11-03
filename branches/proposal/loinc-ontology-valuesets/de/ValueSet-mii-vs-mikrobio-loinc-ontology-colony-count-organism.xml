@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-loinc-ontology-colony-count-organism"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-loinc-ontology-colony-count-organism</b></p><a name="de-mii-vs-mikrobio-loinc-ontology-colony-count-organism"> </a><a name="de-hcmii-vs-mikrobio-loinc-ontology-colony-count-organism"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.83"> version &#x1F4CD;2.83</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/100906-7/">100906-7</a></td><td/></tr><tr><td><a href="https://loinc.org/105610-0/">105610-0</a></td><td/></tr><tr><td><a href="https://loinc.org/105907-0/">105907-0</a></td><td/></tr><tr><td><a href="https://loinc.org/106018-5/">106018-5</a></td><td/></tr><tr><td><a href="https://loinc.org/20695-3/">20695-3</a></td><td/></tr><tr><td><a href="https://loinc.org/20696-1/">20696-1</a></td><td/></tr><tr><td><a href="https://loinc.org/20769-6/">20769-6</a></td><td/></tr><tr><td><a href="https://loinc.org/20770-4/">20770-4</a></td><td/></tr><tr><td><a href="https://loinc.org/34890-4/">34890-4</a></td><td/></tr><tr><td><a href="https://loinc.org/43161-9/">43161-9</a></td><td/></tr><tr><td><a href="https://loinc.org/51480-2/">51480-2</a></td><td/></tr><tr><td><a href="https://loinc.org/51481-0/">51481-0</a></td><td/></tr><tr><td><a href="https://loinc.org/53266-3/">53266-3</a></td><td/></tr><tr><td><a href="https://loinc.org/53355-4/">53355-4</a></td><td/></tr><tr><td><a href="https://loinc.org/87317-4/">87317-4</a></td><td/></tr><tr><td><a href="https://loinc.org/99923-5/">99923-5</a></td><td/></tr></table></li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is explicitly stated to be http://snomed.info/sct/11010000107/version/20261021"> version &#x1F4CD;http://snomed.info/sct/11010000107/version/20261021</span> where constraint  = &lt;&lt; 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118550005 |Number concentration (property) (qualifier value)| OR 705056007 |Logarithmic number concentration (property) (qualifier value)|), (246093002 |Component (attribute)| = &lt;&lt; 410607006 |Organism (organism)| OR 704319004 |Inheres in (attribute)| = &lt;&lt; 410607006 |Organism (organism)|)</li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-colony-count-organism"/>
+  <version value="2027.0.0-ballot2"/>
+  <name value="MII_VS_Mikrobio_LOINC_Ontology_Colony_Count_Organism"/>
+  <title value="MII VS Microbiology LOINC Ontology Colony Count Organism"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-11-03"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Proposal: LOINC codes of the microbiology request 'Colony count: Colony count — number concentration of an organism', computed by ECL over the LOINC Ontology 2026-10-21. Number concentration or logarithmic number concentration where the counted entity is an organism (Component or Inheres in). Parts: LOINC enumeration (16, LOINC 2.83), LOINC Ontology observables without LOINC code (0), and the ECL as an intensional include. ECL: `&lt;&lt; 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118550005 |Number concentration (property) (qualifier value)| OR 705056007 |Logarithmic number concentration (property) (qualifier value)|), (246093002 |Component (attribute)| = &lt;&lt; 410607006 |Organism (organism)| OR 704319004 |Inheres in (attribute)| = &lt;&lt; 410607006 |Organism (organism)|)`"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Guidance for binding Observation.code of the MII microbiology request profiles to a computably defined LOINC set; accompanies ballot comments on 2027.0.0-ballot2. Generated, not hand-curated."/>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <version value="2.83"/>
+      <concept>
+        <code value="100906-7"/>
+      </concept>
+      <concept>
+        <code value="105610-0"/>
+      </concept>
+      <concept>
+        <code value="105907-0"/>
+      </concept>
+      <concept>
+        <code value="106018-5"/>
+      </concept>
+      <concept>
+        <code value="20695-3"/>
+      </concept>
+      <concept>
+        <code value="20696-1"/>
+      </concept>
+      <concept>
+        <code value="20769-6"/>
+      </concept>
+      <concept>
+        <code value="20770-4"/>
+      </concept>
+      <concept>
+        <code value="34890-4"/>
+      </concept>
+      <concept>
+        <code value="43161-9"/>
+      </concept>
+      <concept>
+        <code value="51480-2"/>
+      </concept>
+      <concept>
+        <code value="51481-0"/>
+      </concept>
+      <concept>
+        <code value="53266-3"/>
+      </concept>
+      <concept>
+        <code value="53355-4"/>
+      </concept>
+      <concept>
+        <code value="87317-4"/>
+      </concept>
+      <concept>
+        <code value="99923-5"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/11010000107/version/20261021"/>
+      <filter>
+        <property value="constraint"/>
+        <op value="="/>
+        <value value="&lt;&lt; 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118550005 |Number concentration (property) (qualifier value)| OR 705056007 |Logarithmic number concentration (property) (qualifier value)|), (246093002 |Component (attribute)| = &lt;&lt; 410607006 |Organism (organism)| OR 704319004 |Inheres in (attribute)| = &lt;&lt; 410607006 |Organism (organism)|)"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

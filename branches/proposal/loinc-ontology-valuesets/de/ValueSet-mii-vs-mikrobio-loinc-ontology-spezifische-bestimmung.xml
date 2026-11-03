@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-loinc-ontology-spezifische-bestimmung"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-loinc-ontology-spezifische-bestimmung</b></p><a name="de-mii-vs-mikrobio-loinc-ontology-spezifische-bestimmung"> </a><a name="de-hcmii-vs-mikrobio-loinc-ontology-spezifische-bestimmung"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="ValueSet-mii-vs-mikrobio-loinc-ontology-naa-detection-any-technique.html">MII VS Microbiology LOINC Ontology NAA Detection Any Technique</a></li><li>Import all the codes that are contained in <a href="ValueSet-mii-vs-mikrobio-loinc-ontology-specific-culture-detection.html">MII VS Microbiology LOINC Ontology Organism Specific Culture Detection</a></li><li>Import all the codes that are contained in <a href="ValueSet-mii-vs-mikrobio-loinc-ontology-antigen-detection-threshold.html">MII VS Microbiology LOINC Ontology Antigen Detection Threshold</a></li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-spezifische-bestimmung"/>
+  <version value="2027.0.0-ballot2"/>
+  <name value="MII_VS_Mikrobio_LOINC_Ontology_Spezifische_Bestimmung"/>
+  <title value="MII VS Microbiology LOINC Ontology Specific determination"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-11-03"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Proposal: union of the request ValueSets that together cover the module profile MII_PR_Mikrobio_Spezifische_Bestimmung (Specific determination), each computed by ECL over the LOINC Ontology 2026-10-21: MII_VS_Mikrobio_LOINC_Ontology_NAA_Detection_Any_Technique, MII_VS_Mikrobio_LOINC_Ontology_Organism_Specific_Culture_Detection, MII_VS_Mikrobio_LOINC_Ontology_Antigen_Detection_Threshold."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Binding ValueSet for the derived profile MII_PR_Mikrobio_LOINC_Ontology_Spezifische_Bestimmung; accompanies ballot comments on 2027.0.0-ballot2. Generated, not hand-curated."/>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <compose>
+    <include>
+      <valueSet value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-naa-detection-any-technique"/>
+    </include>
+    <include>
+      <valueSet value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-specific-culture-detection"/>
+    </include>
+    <include>
+      <valueSet value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-antigen-detection-threshold"/>
+    </include>
+  </compose>
+</ValueSet>

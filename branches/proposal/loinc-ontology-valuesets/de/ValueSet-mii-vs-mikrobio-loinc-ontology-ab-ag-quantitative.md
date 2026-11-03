@@ -1,0 +1,5536 @@
+# MII VS Microbiology LOINC Ontology Ab Ag Quantitative - MII Implementation Guide Microbiology v2027.0.0-ballot2
+
+* [**Inhaltsverzeichnis**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **MII VS Microbiology LOINC Ontology Ab Ag Quantitative**
+
+## ValueSet: MII VS Microbiology LOINC Ontology Ab Ag Quantitative (Experimentell) 
+
+| | |
+| :--- | :--- |
+| *Offizielle URL*:https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-ab-ag-quantitative | *Version*:2027.0.0-ballot2 |
+| Draft Stand: 2026-11-03 | *Maschinenlesbarer Name*:MII_VS_Mikrobio_LOINC_Ontology_Ab_Ag_Quantitative |
+| **Copyright/Rechtliches**: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. | |
+
+ 
+Proposal: LOINC codes of the microbiology request 'Quantitative antigen and antibody tests: Serology quantitative — concentration of a pathogen antibody or antigen', computed by ECL over the LOINC Ontology 2026-10-21. Quantitative antibody/antigen observables, any technique or none. Parts: LOINC enumeration (1813, LOINC 2.83), LOINC Ontology observables without LOINC code (0), and the ECL as an intensional include. ECL: `<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118569000 |Arbitrary concentration (property) (qualifier value)| OR 118539007 |Mass concentration (property) (qualifier value)| OR 118556004 |Substance concentration (property) (qualifier value)| OR 118550005 |Number concentration (property) (qualifier value)|), 246093002 |Component (attribute)| = (<< 312301006 |Infective organism antibody (substance)| OR << 116633006 |Microbial antigen (substance)|)` 
+
+ **References** 
+
+* [MII PR Microbiology LOINC Ontology Quantitative antigen and antibody tests](StructureDefinition-mii-pr-mikrobio-loinc-ontology-antigen-antikoerper-quantitativ.md)
+
+### Logical Definition (CLD)
+
+ 
+
+### Expansion
+
+No Expansion for this valueset (Unsupported Code System Version)
+
+-------
+
+ [Beschreibung der obigen Tabelle(n)](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#terminology). 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-loinc-ontology-ab-ag-quantitative",
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-ab-ag-quantitative",
+  "version" : "2027.0.0-ballot2",
+  "name" : "MII_VS_Mikrobio_LOINC_Ontology_Ab_Ag_Quantitative",
+  "title" : "MII VS Microbiology LOINC Ontology Ab Ag Quantitative",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-11-03",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Proposal: LOINC codes of the microbiology request 'Quantitative antigen and antibody tests: Serology quantitative — concentration of a pathogen antibody or antigen', computed by ECL over the LOINC Ontology 2026-10-21. Quantitative antibody/antigen observables, any technique or none. Parts: LOINC enumeration (1813, LOINC 2.83), LOINC Ontology observables without LOINC code (0), and the ECL as an intensional include. ECL: `<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118569000 |Arbitrary concentration (property) (qualifier value)| OR 118539007 |Mass concentration (property) (qualifier value)| OR 118556004 |Substance concentration (property) (qualifier value)| OR 118550005 |Number concentration (property) (qualifier value)|), 246093002 |Component (attribute)| = (<< 312301006 |Infective organism antibody (substance)| OR << 116633006 |Microbial antigen (substance)|)`",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Guidance for binding Observation.code of the MII microbiology request profiles to a computably defined LOINC set; accompanies ballot comments on 2027.0.0-ballot2. Generated, not hand-curated.",
+  "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.83",
+      "concept" : [{
+        "code" : "100091-8"
+      },
+      {
+        "code" : "100108-0"
+      },
+      {
+        "code" : "101205-3"
+      },
+      {
+        "code" : "10349-9"
+      },
+      {
+        "code" : "104431-2"
+      },
+      {
+        "code" : "104785-1"
+      },
+      {
+        "code" : "105910-4"
+      },
+      {
+        "code" : "106841-0"
+      },
+      {
+        "code" : "106938-4"
+      },
+      {
+        "code" : "10709-4"
+      },
+      {
+        "code" : "10711-0"
+      },
+      {
+        "code" : "10717-7"
+      },
+      {
+        "code" : "10718-5"
+      },
+      {
+        "code" : "10719-3"
+      },
+      {
+        "code" : "10723-5"
+      },
+      {
+        "code" : "10724-3"
+      },
+      {
+        "code" : "108119-9"
+      },
+      {
+        "code" : "11007-2"
+      },
+      {
+        "code" : "11256-5"
+      },
+      {
+        "code" : "11257-3"
+      },
+      {
+        "code" : "112632-5"
+      },
+      {
+        "code" : "11467-8"
+      },
+      {
+        "code" : "11468-6"
+      },
+      {
+        "code" : "11581-6"
+      },
+      {
+        "code" : "11582-4"
+      },
+      {
+        "code" : "11585-7"
+      },
+      {
+        "code" : "11586-5"
+      },
+      {
+        "code" : "11587-3"
+      },
+      {
+        "code" : "11588-1"
+      },
+      {
+        "code" : "11589-9"
+      },
+      {
+        "code" : "11590-7"
+      },
+      {
+        "code" : "11591-5"
+      },
+      {
+        "code" : "11593-1"
+      },
+      {
+        "code" : "11594-9"
+      },
+      {
+        "code" : "11595-6"
+      },
+      {
+        "code" : "11596-4"
+      },
+      {
+        "code" : "11597-2"
+      },
+      {
+        "code" : "11598-0"
+      },
+      {
+        "code" : "11599-8"
+      },
+      {
+        "code" : "11600-4"
+      },
+      {
+        "code" : "11601-2"
+      },
+      {
+        "code" : "11602-0"
+      },
+      {
+        "code" : "11603-8"
+      },
+      {
+        "code" : "11604-6"
+      },
+      {
+        "code" : "11605-3"
+      },
+      {
+        "code" : "11606-1"
+      },
+      {
+        "code" : "11607-9"
+      },
+      {
+        "code" : "11608-7"
+      },
+      {
+        "code" : "11609-5"
+      },
+      {
+        "code" : "11611-1"
+      },
+      {
+        "code" : "13133-4"
+      },
+      {
+        "code" : "13136-7"
+      },
+      {
+        "code" : "13145-8"
+      },
+      {
+        "code" : "13146-6"
+      },
+      {
+        "code" : "13147-4"
+      },
+      {
+        "code" : "13148-2"
+      },
+      {
+        "code" : "13157-3"
+      },
+      {
+        "code" : "13158-1"
+      },
+      {
+        "code" : "13167-2"
+      },
+      {
+        "code" : "13192-0"
+      },
+      {
+        "code" : "13193-8"
+      },
+      {
+        "code" : "13194-6"
+      },
+      {
+        "code" : "13195-3"
+      },
+      {
+        "code" : "13198-7"
+      },
+      {
+        "code" : "13199-5"
+      },
+      {
+        "code" : "13200-1"
+      },
+      {
+        "code" : "13201-9"
+      },
+      {
+        "code" : "13204-3"
+      },
+      {
+        "code" : "13205-0"
+      },
+      {
+        "code" : "13208-4"
+      },
+      {
+        "code" : "13209-2"
+      },
+      {
+        "code" : "13210-0"
+      },
+      {
+        "code" : "13211-8"
+      },
+      {
+        "code" : "13212-6"
+      },
+      {
+        "code" : "13213-4"
+      },
+      {
+        "code" : "13214-2"
+      },
+      {
+        "code" : "13215-9"
+      },
+      {
+        "code" : "13217-5"
+      },
+      {
+        "code" : "13218-3"
+      },
+      {
+        "code" : "13220-9"
+      },
+      {
+        "code" : "13225-8"
+      },
+      {
+        "code" : "13226-6"
+      },
+      {
+        "code" : "13227-4"
+      },
+      {
+        "code" : "13228-2"
+      },
+      {
+        "code" : "13229-0"
+      },
+      {
+        "code" : "13230-8"
+      },
+      {
+        "code" : "13231-6"
+      },
+      {
+        "code" : "13232-4"
+      },
+      {
+        "code" : "13233-2"
+      },
+      {
+        "code" : "13234-0"
+      },
+      {
+        "code" : "13235-7"
+      },
+      {
+        "code" : "13238-1"
+      },
+      {
+        "code" : "13241-5"
+      },
+      {
+        "code" : "13242-3"
+      },
+      {
+        "code" : "13243-1"
+      },
+      {
+        "code" : "13244-9"
+      },
+      {
+        "code" : "13245-6"
+      },
+      {
+        "code" : "13246-4"
+      },
+      {
+        "code" : "13251-4"
+      },
+      {
+        "code" : "13252-2"
+      },
+      {
+        "code" : "13256-3"
+      },
+      {
+        "code" : "13257-1"
+      },
+      {
+        "code" : "13258-9"
+      },
+      {
+        "code" : "13259-7"
+      },
+      {
+        "code" : "13260-5"
+      },
+      {
+        "code" : "13261-3"
+      },
+      {
+        "code" : "13262-1"
+      },
+      {
+        "code" : "13263-9"
+      },
+      {
+        "code" : "13266-2"
+      },
+      {
+        "code" : "13267-0"
+      },
+      {
+        "code" : "13268-8"
+      },
+      {
+        "code" : "13269-6"
+      },
+      {
+        "code" : "13270-4"
+      },
+      {
+        "code" : "13271-2"
+      },
+      {
+        "code" : "13272-0"
+      },
+      {
+        "code" : "13274-6"
+      },
+      {
+        "code" : "13275-3"
+      },
+      {
+        "code" : "13276-1"
+      },
+      {
+        "code" : "13277-9"
+      },
+      {
+        "code" : "13278-7"
+      },
+      {
+        "code" : "13279-5"
+      },
+      {
+        "code" : "13280-3"
+      },
+      {
+        "code" : "13281-1"
+      },
+      {
+        "code" : "13282-9"
+      },
+      {
+        "code" : "13283-7"
+      },
+      {
+        "code" : "13286-0"
+      },
+      {
+        "code" : "13287-8"
+      },
+      {
+        "code" : "13288-6"
+      },
+      {
+        "code" : "13289-4"
+      },
+      {
+        "code" : "13290-2"
+      },
+      {
+        "code" : "13291-0"
+      },
+      {
+        "code" : "13292-8"
+      },
+      {
+        "code" : "13293-6"
+      },
+      {
+        "code" : "13295-1"
+      },
+      {
+        "code" : "13297-7"
+      },
+      {
+        "code" : "13323-1"
+      },
+      {
+        "code" : "13324-9"
+      },
+      {
+        "code" : "13914-7"
+      },
+      {
+        "code" : "13919-6"
+      },
+      {
+        "code" : "13971-7"
+      },
+      {
+        "code" : "14077-2"
+      },
+      {
+        "code" : "14078-0"
+      },
+      {
+        "code" : "14082-2"
+      },
+      {
+        "code" : "14208-3"
+      },
+      {
+        "code" : "14304-0"
+      },
+      {
+        "code" : "14305-7"
+      },
+      {
+        "code" : "14306-5"
+      },
+      {
+        "code" : "14307-3"
+      },
+      {
+        "code" : "14923-7"
+      },
+      {
+        "code" : "16176-0"
+      },
+      {
+        "code" : "16177-8"
+      },
+      {
+        "code" : "16284-2"
+      },
+      {
+        "code" : "16416-0"
+      },
+      {
+        "code" : "16425-1"
+      },
+      {
+        "code" : "16471-5"
+      },
+      {
+        "code" : "16473-1"
+      },
+      {
+        "code" : "16474-9"
+      },
+      {
+        "code" : "16481-4"
+      },
+      {
+        "code" : "16482-2"
+      },
+      {
+        "code" : "16487-1"
+      },
+      {
+        "code" : "16488-9"
+      },
+      {
+        "code" : "16489-7"
+      },
+      {
+        "code" : "16490-5"
+      },
+      {
+        "code" : "16537-3"
+      },
+      {
+        "code" : "16538-1"
+      },
+      {
+        "code" : "16588-6"
+      },
+      {
+        "code" : "16589-4"
+      },
+      {
+        "code" : "16590-2"
+      },
+      {
+        "code" : "16591-0"
+      },
+      {
+        "code" : "16592-8"
+      },
+      {
+        "code" : "16595-1"
+      },
+      {
+        "code" : "16596-9"
+      },
+      {
+        "code" : "16597-7"
+      },
+      {
+        "code" : "16598-5"
+      },
+      {
+        "code" : "16626-4"
+      },
+      {
+        "code" : "16627-2"
+      },
+      {
+        "code" : "16634-8"
+      },
+      {
+        "code" : "16635-5"
+      },
+      {
+        "code" : "16636-3"
+      },
+      {
+        "code" : "16638-9"
+      },
+      {
+        "code" : "16639-7"
+      },
+      {
+        "code" : "16677-7"
+      },
+      {
+        "code" : "16678-5"
+      },
+      {
+        "code" : "16679-3"
+      },
+      {
+        "code" : "16680-1"
+      },
+      {
+        "code" : "16681-9"
+      },
+      {
+        "code" : "16684-3"
+      },
+      {
+        "code" : "16685-0"
+      },
+      {
+        "code" : "16686-8"
+      },
+      {
+        "code" : "16706-4"
+      },
+      {
+        "code" : "16707-2"
+      },
+      {
+        "code" : "16708-0"
+      },
+      {
+        "code" : "16712-2"
+      },
+      {
+        "code" : "16713-0"
+      },
+      {
+        "code" : "16714-8"
+      },
+      {
+        "code" : "16715-5"
+      },
+      {
+        "code" : "16716-3"
+      },
+      {
+        "code" : "16794-0"
+      },
+      {
+        "code" : "16795-7"
+      },
+      {
+        "code" : "16796-5"
+      },
+      {
+        "code" : "16797-3"
+      },
+      {
+        "code" : "16798-1"
+      },
+      {
+        "code" : "16800-5"
+      },
+      {
+        "code" : "16801-3"
+      },
+      {
+        "code" : "16802-1"
+      },
+      {
+        "code" : "16803-9"
+      },
+      {
+        "code" : "16804-7"
+      },
+      {
+        "code" : "16805-4"
+      },
+      {
+        "code" : "16807-0"
+      },
+      {
+        "code" : "16808-8"
+      },
+      {
+        "code" : "16809-6"
+      },
+      {
+        "code" : "16818-7"
+      },
+      {
+        "code" : "16819-5"
+      },
+      {
+        "code" : "16820-3"
+      },
+      {
+        "code" : "16823-7"
+      },
+      {
+        "code" : "16826-0"
+      },
+      {
+        "code" : "16878-1"
+      },
+      {
+        "code" : "16924-3"
+      },
+      {
+        "code" : "16927-6"
+      },
+      {
+        "code" : "16929-2"
+      },
+      {
+        "code" : "16935-9"
+      },
+      {
+        "code" : "16936-7"
+      },
+      {
+        "code" : "16943-3"
+      },
+      {
+        "code" : "16944-1"
+      },
+      {
+        "code" : "16948-2"
+      },
+      {
+        "code" : "16949-0"
+      },
+      {
+        "code" : "16950-8"
+      },
+      {
+        "code" : "16956-5"
+      },
+      {
+        "code" : "16957-3"
+      },
+      {
+        "code" : "16958-1"
+      },
+      {
+        "code" : "16976-3"
+      },
+      {
+        "code" : "16978-9"
+      },
+      {
+        "code" : "16979-7"
+      },
+      {
+        "code" : "17012-6"
+      },
+      {
+        "code" : "17014-2"
+      },
+      {
+        "code" : "17015-9"
+      },
+      {
+        "code" : "17016-7"
+      },
+      {
+        "code" : "17061-3"
+      },
+      {
+        "code" : "17063-9"
+      },
+      {
+        "code" : "17065-4"
+      },
+      {
+        "code" : "17067-0"
+      },
+      {
+        "code" : "17069-6"
+      },
+      {
+        "code" : "17292-4"
+      },
+      {
+        "code" : "17303-9"
+      },
+      {
+        "code" : "17324-5"
+      },
+      {
+        "code" : "17327-8"
+      },
+      {
+        "code" : "17331-0"
+      },
+      {
+        "code" : "17413-6"
+      },
+      {
+        "code" : "17427-6"
+      },
+      {
+        "code" : "17445-8"
+      },
+      {
+        "code" : "17502-6"
+      },
+      {
+        "code" : "17539-8"
+      },
+      {
+        "code" : "17540-6"
+      },
+      {
+        "code" : "17549-7"
+      },
+      {
+        "code" : "17550-5"
+      },
+      {
+        "code" : "17551-3"
+      },
+      {
+        "code" : "17553-9"
+      },
+      {
+        "code" : "17554-7"
+      },
+      {
+        "code" : "17555-4"
+      },
+      {
+        "code" : "17556-2"
+      },
+      {
+        "code" : "17557-0"
+      },
+      {
+        "code" : "17558-8"
+      },
+      {
+        "code" : "17635-4"
+      },
+      {
+        "code" : "17638-8"
+      },
+      {
+        "code" : "17639-6"
+      },
+      {
+        "code" : "17647-9"
+      },
+      {
+        "code" : "17648-7"
+      },
+      {
+        "code" : "17650-3"
+      },
+      {
+        "code" : "17651-1"
+      },
+      {
+        "code" : "17657-8"
+      },
+      {
+        "code" : "17715-4"
+      },
+      {
+        "code" : "17716-2"
+      },
+      {
+        "code" : "17724-6"
+      },
+      {
+        "code" : "17725-3"
+      },
+      {
+        "code" : "17727-9"
+      },
+      {
+        "code" : "17728-7"
+      },
+      {
+        "code" : "17734-5"
+      },
+      {
+        "code" : "17763-4"
+      },
+      {
+        "code" : "17764-2"
+      },
+      {
+        "code" : "17765-9"
+      },
+      {
+        "code" : "17766-7"
+      },
+      {
+        "code" : "17775-8"
+      },
+      {
+        "code" : "17776-6"
+      },
+      {
+        "code" : "17777-4"
+      },
+      {
+        "code" : "18243-6"
+      },
+      {
+        "code" : "18333-5"
+      },
+      {
+        "code" : "18348-3"
+      },
+      {
+        "code" : "18409-3"
+      },
+      {
+        "code" : "18410-1"
+      },
+      {
+        "code" : "18411-9"
+      },
+      {
+        "code" : "18412-7"
+      },
+      {
+        "code" : "18416-8"
+      },
+      {
+        "code" : "18420-0"
+      },
+      {
+        "code" : "18421-8"
+      },
+      {
+        "code" : "18429-1"
+      },
+      {
+        "code" : "18430-9"
+      },
+      {
+        "code" : "19107-2"
+      },
+      {
+        "code" : "19243-5"
+      },
+      {
+        "code" : "20486-7"
+      },
+      {
+        "code" : "20497-4"
+      },
+      {
+        "code" : "20498-2"
+      },
+      {
+        "code" : "21005-4"
+      },
+      {
+        "code" : "21006-2"
+      },
+      {
+        "code" : "22108-5"
+      },
+      {
+        "code" : "22109-3"
+      },
+      {
+        "code" : "22119-2"
+      },
+      {
+        "code" : "22120-0"
+      },
+      {
+        "code" : "22121-8"
+      },
+      {
+        "code" : "22126-7"
+      },
+      {
+        "code" : "22127-5"
+      },
+      {
+        "code" : "22133-3"
+      },
+      {
+        "code" : "22134-1"
+      },
+      {
+        "code" : "22151-5"
+      },
+      {
+        "code" : "22153-1"
+      },
+      {
+        "code" : "22155-6"
+      },
+      {
+        "code" : "22163-0"
+      },
+      {
+        "code" : "22183-8"
+      },
+      {
+        "code" : "22185-3"
+      },
+      {
+        "code" : "22190-3"
+      },
+      {
+        "code" : "22192-9"
+      },
+      {
+        "code" : "22203-4"
+      },
+      {
+        "code" : "22206-7"
+      },
+      {
+        "code" : "22223-2"
+      },
+      {
+        "code" : "22224-0"
+      },
+      {
+        "code" : "22243-0"
+      },
+      {
+        "code" : "22247-1"
+      },
+      {
+        "code" : "22265-3"
+      },
+      {
+        "code" : "22284-4"
+      },
+      {
+        "code" : "22287-7"
+      },
+      {
+        "code" : "22288-5"
+      },
+      {
+        "code" : "22289-3"
+      },
+      {
+        "code" : "22293-5"
+      },
+      {
+        "code" : "22312-3"
+      },
+      {
+        "code" : "22313-1"
+      },
+      {
+        "code" : "22315-6"
+      },
+      {
+        "code" : "22316-4"
+      },
+      {
+        "code" : "22317-2"
+      },
+      {
+        "code" : "22318-0"
+      },
+      {
+        "code" : "22319-8"
+      },
+      {
+        "code" : "22321-4"
+      },
+      {
+        "code" : "22323-0"
+      },
+      {
+        "code" : "22327-1"
+      },
+      {
+        "code" : "22330-5"
+      },
+      {
+        "code" : "22349-5"
+      },
+      {
+        "code" : "22351-1"
+      },
+      {
+        "code" : "22353-7"
+      },
+      {
+        "code" : "22354-5"
+      },
+      {
+        "code" : "22355-2"
+      },
+      {
+        "code" : "22356-0"
+      },
+      {
+        "code" : "22358-6"
+      },
+      {
+        "code" : "22458-4"
+      },
+      {
+        "code" : "22486-5"
+      },
+      {
+        "code" : "22487-3"
+      },
+      {
+        "code" : "22500-3"
+      },
+      {
+        "code" : "22503-7"
+      },
+      {
+        "code" : "22504-5"
+      },
+      {
+        "code" : "22552-4"
+      },
+      {
+        "code" : "22562-3"
+      },
+      {
+        "code" : "22564-9"
+      },
+      {
+        "code" : "22575-5"
+      },
+      {
+        "code" : "22578-9"
+      },
+      {
+        "code" : "22585-4"
+      },
+      {
+        "code" : "22592-0"
+      },
+      {
+        "code" : "22594-6"
+      },
+      {
+        "code" : "22603-5"
+      },
+      {
+        "code" : "22604-3"
+      },
+      {
+        "code" : "22619-1"
+      },
+      {
+        "code" : "22620-9"
+      },
+      {
+        "code" : "22621-7"
+      },
+      {
+        "code" : "22755-3"
+      },
+      {
+        "code" : "22921-1"
+      },
+      {
+        "code" : "22934-4"
+      },
+      {
+        "code" : "22937-7"
+      },
+      {
+        "code" : "22939-3"
+      },
+      {
+        "code" : "22953-4"
+      },
+      {
+        "code" : "23756-0"
+      },
+      {
+        "code" : "23827-9"
+      },
+      {
+        "code" : "23828-7"
+      },
+      {
+        "code" : "23829-5"
+      },
+      {
+        "code" : "23830-3"
+      },
+      {
+        "code" : "23831-1"
+      },
+      {
+        "code" : "23832-9"
+      },
+      {
+        "code" : "23958-2"
+      },
+      {
+        "code" : "23968-1"
+      },
+      {
+        "code" : "23991-3"
+      },
+      {
+        "code" : "23992-1"
+      },
+      {
+        "code" : "24007-7"
+      },
+      {
+        "code" : "24033-3"
+      },
+      {
+        "code" : "24034-1"
+      },
+      {
+        "code" : "24035-8"
+      },
+      {
+        "code" : "24127-3"
+      },
+      {
+        "code" : "24128-1"
+      },
+      {
+        "code" : "24129-9"
+      },
+      {
+        "code" : "24234-7"
+      },
+      {
+        "code" : "24235-4"
+      },
+      {
+        "code" : "24238-8"
+      },
+      {
+        "code" : "24239-6"
+      },
+      {
+        "code" : "24240-4"
+      },
+      {
+        "code" : "24241-2"
+      },
+      {
+        "code" : "24242-0"
+      },
+      {
+        "code" : "24517-5"
+      },
+      {
+        "code" : "25279-1"
+      },
+      {
+        "code" : "25289-0"
+      },
+      {
+        "code" : "25295-7"
+      },
+      {
+        "code" : "25296-5"
+      },
+      {
+        "code" : "25337-7"
+      },
+      {
+        "code" : "25343-5"
+      },
+      {
+        "code" : "25369-0"
+      },
+      {
+        "code" : "25389-8"
+      },
+      {
+        "code" : "25398-9"
+      },
+      {
+        "code" : "25407-8"
+      },
+      {
+        "code" : "25410-2"
+      },
+      {
+        "code" : "25418-5"
+      },
+      {
+        "code" : "25419-3"
+      },
+      {
+        "code" : "25421-9"
+      },
+      {
+        "code" : "25423-5"
+      },
+      {
+        "code" : "25424-3"
+      },
+      {
+        "code" : "25432-6"
+      },
+      {
+        "code" : "25479-7"
+      },
+      {
+        "code" : "25531-5"
+      },
+      {
+        "code" : "25538-0"
+      },
+      {
+        "code" : "25599-2"
+      },
+      {
+        "code" : "25600-8"
+      },
+      {
+        "code" : "25754-3"
+      },
+      {
+        "code" : "25756-8"
+      },
+      {
+        "code" : "25757-6"
+      },
+      {
+        "code" : "25779-0"
+      },
+      {
+        "code" : "25788-1"
+      },
+      {
+        "code" : "26413-5"
+      },
+      {
+        "code" : "26694-0"
+      },
+      {
+        "code" : "26697-3"
+      },
+      {
+        "code" : "26698-1"
+      },
+      {
+        "code" : "26702-1"
+      },
+      {
+        "code" : "26715-3"
+      },
+      {
+        "code" : "26754-2"
+      },
+      {
+        "code" : "26755-9"
+      },
+      {
+        "code" : "26767-4"
+      },
+      {
+        "code" : "26768-2"
+      },
+      {
+        "code" : "26789-8"
+      },
+      {
+        "code" : "26800-3"
+      },
+      {
+        "code" : "26818-5"
+      },
+      {
+        "code" : "26820-1"
+      },
+      {
+        "code" : "26864-9"
+      },
+      {
+        "code" : "26948-0"
+      },
+      {
+        "code" : "26949-8"
+      },
+      {
+        "code" : "26952-2"
+      },
+      {
+        "code" : "26955-5"
+      },
+      {
+        "code" : "26957-1"
+      },
+      {
+        "code" : "26984-5"
+      },
+      {
+        "code" : "27009-0"
+      },
+      {
+        "code" : "27087-6"
+      },
+      {
+        "code" : "27093-4"
+      },
+      {
+        "code" : "27118-9"
+      },
+      {
+        "code" : "27120-5"
+      },
+      {
+        "code" : "27121-3"
+      },
+      {
+        "code" : "27150-2"
+      },
+      {
+        "code" : "27151-0"
+      },
+      {
+        "code" : "27260-9"
+      },
+      {
+        "code" : "27384-7"
+      },
+      {
+        "code" : "27391-2"
+      },
+      {
+        "code" : "27395-3"
+      },
+      {
+        "code" : "27417-5"
+      },
+      {
+        "code" : "27426-6"
+      },
+      {
+        "code" : "27427-4"
+      },
+      {
+        "code" : "27433-2"
+      },
+      {
+        "code" : "27440-7"
+      },
+      {
+        "code" : "27900-0"
+      },
+      {
+        "code" : "27901-8"
+      },
+      {
+        "code" : "28546-0"
+      },
+      {
+        "code" : "28547-8"
+      },
+      {
+        "code" : "29208-6"
+      },
+      {
+        "code" : "29236-7"
+      },
+      {
+        "code" : "29237-5"
+      },
+      {
+        "code" : "29241-7"
+      },
+      {
+        "code" : "29242-5"
+      },
+      {
+        "code" : "29249-0"
+      },
+      {
+        "code" : "29343-1"
+      },
+      {
+        "code" : "29535-2"
+      },
+      {
+        "code" : "29536-0"
+      },
+      {
+        "code" : "29537-8"
+      },
+      {
+        "code" : "29538-6"
+      },
+      {
+        "code" : "29786-1"
+      },
+      {
+        "code" : "29788-7"
+      },
+      {
+        "code" : "29799-4"
+      },
+      {
+        "code" : "29801-8"
+      },
+      {
+        "code" : "29812-5"
+      },
+      {
+        "code" : "29814-1"
+      },
+      {
+        "code" : "29825-7"
+      },
+      {
+        "code" : "29827-3"
+      },
+      {
+        "code" : "29837-2"
+      },
+      {
+        "code" : "29839-8"
+      },
+      {
+        "code" : "29849-7"
+      },
+      {
+        "code" : "29851-3"
+      },
+      {
+        "code" : "29952-9"
+      },
+      {
+        "code" : "29955-2"
+      },
+      {
+        "code" : "30022-8"
+      },
+      {
+        "code" : "30032-7"
+      },
+      {
+        "code" : "30038-4"
+      },
+      {
+        "code" : "30040-0"
+      },
+      {
+        "code" : "30046-7"
+      },
+      {
+        "code" : "30071-5"
+      },
+      {
+        "code" : "30083-0"
+      },
+      {
+        "code" : "30085-5"
+      },
+      {
+        "code" : "30128-3"
+      },
+      {
+        "code" : "30149-9"
+      },
+      {
+        "code" : "30150-7"
+      },
+      {
+        "code" : "30153-1"
+      },
+      {
+        "code" : "30490-7"
+      },
+      {
+        "code" : "30491-5"
+      },
+      {
+        "code" : "30498-0"
+      },
+      {
+        "code" : "30499-8"
+      },
+      {
+        "code" : "30501-1"
+      },
+      {
+        "code" : "30502-9"
+      },
+      {
+        "code" : "31014-4"
+      },
+      {
+        "code" : "31018-5"
+      },
+      {
+        "code" : "31047-4"
+      },
+      {
+        "code" : "31066-4"
+      },
+      {
+        "code" : "31067-2"
+      },
+      {
+        "code" : "31068-0"
+      },
+      {
+        "code" : "31155-5"
+      },
+      {
+        "code" : "31178-7"
+      },
+      {
+        "code" : "31216-5"
+      },
+      {
+        "code" : "31217-3"
+      },
+      {
+        "code" : "31218-1"
+      },
+      {
+        "code" : "31219-9"
+      },
+      {
+        "code" : "31223-1"
+      },
+      {
+        "code" : "31224-9"
+      },
+      {
+        "code" : "31230-6"
+      },
+      {
+        "code" : "31233-0"
+      },
+      {
+        "code" : "31235-5"
+      },
+      {
+        "code" : "31242-1"
+      },
+      {
+        "code" : "31244-7"
+      },
+      {
+        "code" : "31245-4"
+      },
+      {
+        "code" : "31246-2"
+      },
+      {
+        "code" : "31249-6"
+      },
+      {
+        "code" : "31250-4"
+      },
+      {
+        "code" : "31251-2"
+      },
+      {
+        "code" : "31266-0"
+      },
+      {
+        "code" : "31276-9"
+      },
+      {
+        "code" : "31277-7"
+      },
+      {
+        "code" : "31278-5"
+      },
+      {
+        "code" : "31279-3"
+      },
+      {
+        "code" : "31292-6"
+      },
+      {
+        "code" : "31293-4"
+      },
+      {
+        "code" : "31294-2"
+      },
+      {
+        "code" : "31295-9"
+      },
+      {
+        "code" : "31301-5"
+      },
+      {
+        "code" : "31302-3"
+      },
+      {
+        "code" : "31303-1"
+      },
+      {
+        "code" : "31304-9"
+      },
+      {
+        "code" : "31305-6"
+      },
+      {
+        "code" : "31306-4"
+      },
+      {
+        "code" : "31307-2"
+      },
+      {
+        "code" : "31308-0"
+      },
+      {
+        "code" : "31311-4"
+      },
+      {
+        "code" : "31312-2"
+      },
+      {
+        "code" : "31313-0"
+      },
+      {
+        "code" : "31316-3"
+      },
+      {
+        "code" : "31317-1"
+      },
+      {
+        "code" : "31318-9"
+      },
+      {
+        "code" : "31319-7"
+      },
+      {
+        "code" : "31320-5"
+      },
+      {
+        "code" : "31321-3"
+      },
+      {
+        "code" : "31322-1"
+      },
+      {
+        "code" : "31323-9"
+      },
+      {
+        "code" : "31324-7"
+      },
+      {
+        "code" : "31325-4"
+      },
+      {
+        "code" : "31326-2"
+      },
+      {
+        "code" : "31327-0"
+      },
+      {
+        "code" : "31328-8"
+      },
+      {
+        "code" : "31329-6"
+      },
+      {
+        "code" : "31330-4"
+      },
+      {
+        "code" : "31331-2"
+      },
+      {
+        "code" : "31332-0"
+      },
+      {
+        "code" : "31333-8"
+      },
+      {
+        "code" : "31334-6"
+      },
+      {
+        "code" : "31335-3"
+      },
+      {
+        "code" : "31338-7"
+      },
+      {
+        "code" : "31339-5"
+      },
+      {
+        "code" : "31340-3"
+      },
+      {
+        "code" : "31341-1"
+      },
+      {
+        "code" : "31342-9"
+      },
+      {
+        "code" : "31351-0"
+      },
+      {
+        "code" : "31352-8"
+      },
+      {
+        "code" : "31354-4"
+      },
+      {
+        "code" : "31355-1"
+      },
+      {
+        "code" : "31358-5"
+      },
+      {
+        "code" : "31359-3"
+      },
+      {
+        "code" : "31361-9"
+      },
+      {
+        "code" : "31362-7"
+      },
+      {
+        "code" : "31363-5"
+      },
+      {
+        "code" : "31364-3"
+      },
+      {
+        "code" : "31367-6"
+      },
+      {
+        "code" : "31369-2"
+      },
+      {
+        "code" : "31370-0"
+      },
+      {
+        "code" : "31371-8"
+      },
+      {
+        "code" : "31372-6"
+      },
+      {
+        "code" : "31373-4"
+      },
+      {
+        "code" : "31374-2"
+      },
+      {
+        "code" : "31375-9"
+      },
+      {
+        "code" : "31381-7"
+      },
+      {
+        "code" : "31382-5"
+      },
+      {
+        "code" : "31383-3"
+      },
+      {
+        "code" : "31395-7"
+      },
+      {
+        "code" : "31396-5"
+      },
+      {
+        "code" : "31408-8"
+      },
+      {
+        "code" : "31409-6"
+      },
+      {
+        "code" : "31410-4"
+      },
+      {
+        "code" : "31412-0"
+      },
+      {
+        "code" : "31413-8"
+      },
+      {
+        "code" : "31414-6"
+      },
+      {
+        "code" : "31415-3"
+      },
+      {
+        "code" : "31416-1"
+      },
+      {
+        "code" : "31417-9"
+      },
+      {
+        "code" : "31420-3"
+      },
+      {
+        "code" : "31421-1"
+      },
+      {
+        "code" : "31422-9"
+      },
+      {
+        "code" : "31425-2"
+      },
+      {
+        "code" : "31426-0"
+      },
+      {
+        "code" : "31427-8"
+      },
+      {
+        "code" : "31428-6"
+      },
+      {
+        "code" : "31437-7"
+      },
+      {
+        "code" : "31438-5"
+      },
+      {
+        "code" : "31446-8"
+      },
+      {
+        "code" : "31448-4"
+      },
+      {
+        "code" : "31450-0"
+      },
+      {
+        "code" : "31451-8"
+      },
+      {
+        "code" : "31452-6"
+      },
+      {
+        "code" : "31453-4"
+      },
+      {
+        "code" : "31454-2"
+      },
+      {
+        "code" : "31455-9"
+      },
+      {
+        "code" : "31456-7"
+      },
+      {
+        "code" : "31457-5"
+      },
+      {
+        "code" : "31458-3"
+      },
+      {
+        "code" : "31459-1"
+      },
+      {
+        "code" : "31460-9"
+      },
+      {
+        "code" : "31461-7"
+      },
+      {
+        "code" : "31462-5"
+      },
+      {
+        "code" : "31463-3"
+      },
+      {
+        "code" : "31464-1"
+      },
+      {
+        "code" : "31465-8"
+      },
+      {
+        "code" : "31466-6"
+      },
+      {
+        "code" : "31467-4"
+      },
+      {
+        "code" : "31468-2"
+      },
+      {
+        "code" : "31469-0"
+      },
+      {
+        "code" : "31470-8"
+      },
+      {
+        "code" : "31471-6"
+      },
+      {
+        "code" : "31472-4"
+      },
+      {
+        "code" : "31474-0"
+      },
+      {
+        "code" : "31475-7"
+      },
+      {
+        "code" : "31476-5"
+      },
+      {
+        "code" : "31477-3"
+      },
+      {
+        "code" : "31478-1"
+      },
+      {
+        "code" : "31479-9"
+      },
+      {
+        "code" : "31480-7"
+      },
+      {
+        "code" : "31481-5"
+      },
+      {
+        "code" : "31482-3"
+      },
+      {
+        "code" : "31483-1"
+      },
+      {
+        "code" : "31484-9"
+      },
+      {
+        "code" : "31485-6"
+      },
+      {
+        "code" : "31486-4"
+      },
+      {
+        "code" : "31487-2"
+      },
+      {
+        "code" : "31488-0"
+      },
+      {
+        "code" : "31491-4"
+      },
+      {
+        "code" : "31492-2"
+      },
+      {
+        "code" : "31493-0"
+      },
+      {
+        "code" : "31494-8"
+      },
+      {
+        "code" : "31495-5"
+      },
+      {
+        "code" : "31504-4"
+      },
+      {
+        "code" : "31505-1"
+      },
+      {
+        "code" : "31506-9"
+      },
+      {
+        "code" : "31507-7"
+      },
+      {
+        "code" : "31512-7"
+      },
+      {
+        "code" : "31516-8"
+      },
+      {
+        "code" : "31517-6"
+      },
+      {
+        "code" : "31525-9"
+      },
+      {
+        "code" : "31526-7"
+      },
+      {
+        "code" : "31527-5"
+      },
+      {
+        "code" : "31528-3"
+      },
+      {
+        "code" : "31529-1"
+      },
+      {
+        "code" : "31548-1"
+      },
+      {
+        "code" : "31549-9"
+      },
+      {
+        "code" : "31550-7"
+      },
+      {
+        "code" : "31551-5"
+      },
+      {
+        "code" : "31552-3"
+      },
+      {
+        "code" : "31553-1"
+      },
+      {
+        "code" : "31554-9"
+      },
+      {
+        "code" : "31555-6"
+      },
+      {
+        "code" : "31557-2"
+      },
+      {
+        "code" : "31558-0"
+      },
+      {
+        "code" : "31559-8"
+      },
+      {
+        "code" : "31564-8"
+      },
+      {
+        "code" : "31565-5"
+      },
+      {
+        "code" : "31566-3"
+      },
+      {
+        "code" : "31567-1"
+      },
+      {
+        "code" : "31568-9"
+      },
+      {
+        "code" : "31569-7"
+      },
+      {
+        "code" : "31573-9"
+      },
+      {
+        "code" : "31574-7"
+      },
+      {
+        "code" : "31575-4"
+      },
+      {
+        "code" : "31576-2"
+      },
+      {
+        "code" : "31581-2"
+      },
+      {
+        "code" : "31582-0"
+      },
+      {
+        "code" : "31583-8"
+      },
+      {
+        "code" : "31586-1"
+      },
+      {
+        "code" : "31593-7"
+      },
+      {
+        "code" : "31594-5"
+      },
+      {
+        "code" : "31595-2"
+      },
+      {
+        "code" : "31596-0"
+      },
+      {
+        "code" : "31597-8"
+      },
+      {
+        "code" : "31598-6"
+      },
+      {
+        "code" : "31599-4"
+      },
+      {
+        "code" : "31600-0"
+      },
+      {
+        "code" : "31601-8"
+      },
+      {
+        "code" : "31602-6"
+      },
+      {
+        "code" : "31603-4"
+      },
+      {
+        "code" : "31605-9"
+      },
+      {
+        "code" : "31606-7"
+      },
+      {
+        "code" : "31607-5"
+      },
+      {
+        "code" : "31608-3"
+      },
+      {
+        "code" : "31609-1"
+      },
+      {
+        "code" : "31610-9"
+      },
+      {
+        "code" : "31611-7"
+      },
+      {
+        "code" : "31612-5"
+      },
+      {
+        "code" : "31617-4"
+      },
+      {
+        "code" : "31618-2"
+      },
+      {
+        "code" : "31619-0"
+      },
+      {
+        "code" : "31621-6"
+      },
+      {
+        "code" : "31622-4"
+      },
+      {
+        "code" : "31623-2"
+      },
+      {
+        "code" : "31624-0"
+      },
+      {
+        "code" : "31633-1"
+      },
+      {
+        "code" : "31634-9"
+      },
+      {
+        "code" : "31639-8"
+      },
+      {
+        "code" : "31645-5"
+      },
+      {
+        "code" : "31646-3"
+      },
+      {
+        "code" : "31647-1"
+      },
+      {
+        "code" : "31650-5"
+      },
+      {
+        "code" : "31658-8"
+      },
+      {
+        "code" : "31673-7"
+      },
+      {
+        "code" : "31683-6"
+      },
+      {
+        "code" : "31687-7"
+      },
+      {
+        "code" : "31688-5"
+      },
+      {
+        "code" : "31689-3"
+      },
+      {
+        "code" : "31690-1"
+      },
+      {
+        "code" : "31691-9"
+      },
+      {
+        "code" : "31694-3"
+      },
+      {
+        "code" : "31695-0"
+      },
+      {
+        "code" : "31696-8"
+      },
+      {
+        "code" : "31697-6"
+      },
+      {
+        "code" : "31698-4"
+      },
+      {
+        "code" : "31700-8"
+      },
+      {
+        "code" : "31705-7"
+      },
+      {
+        "code" : "31706-5"
+      },
+      {
+        "code" : "31707-3"
+      },
+      {
+        "code" : "31708-1"
+      },
+      {
+        "code" : "31724-8"
+      },
+      {
+        "code" : "31759-4"
+      },
+      {
+        "code" : "31760-2"
+      },
+      {
+        "code" : "31789-1"
+      },
+      {
+        "code" : "31791-7"
+      },
+      {
+        "code" : "31792-5"
+      },
+      {
+        "code" : "31793-3"
+      },
+      {
+        "code" : "31810-5"
+      },
+      {
+        "code" : "31811-3"
+      },
+      {
+        "code" : "31812-1"
+      },
+      {
+        "code" : "31845-1"
+      },
+      {
+        "code" : "31855-0"
+      },
+      {
+        "code" : "31856-8"
+      },
+      {
+        "code" : "31911-1"
+      },
+      {
+        "code" : "31930-1"
+      },
+      {
+        "code" : "31931-9"
+      },
+      {
+        "code" : "31948-3"
+      },
+      {
+        "code" : "32180-2"
+      },
+      {
+        "code" : "32181-0"
+      },
+      {
+        "code" : "32569-6"
+      },
+      {
+        "code" : "32723-9"
+      },
+      {
+        "code" : "32768-4"
+      },
+      {
+        "code" : "32775-9"
+      },
+      {
+        "code" : "32792-4"
+      },
+      {
+        "code" : "32794-0"
+      },
+      {
+        "code" : "32795-7"
+      },
+      {
+        "code" : "32826-0"
+      },
+      {
+        "code" : "32828-6"
+      },
+      {
+        "code" : "32829-4"
+      },
+      {
+        "code" : "32836-9"
+      },
+      {
+        "code" : "32837-7"
+      },
+      {
+        "code" : "32839-3"
+      },
+      {
+        "code" : "32843-5"
+      },
+      {
+        "code" : "32844-3"
+      },
+      {
+        "code" : "33265-0"
+      },
+      {
+        "code" : "33268-4"
+      },
+      {
+        "code" : "33285-8"
+      },
+      {
+        "code" : "33320-3"
+      },
+      {
+        "code" : "33321-1"
+      },
+      {
+        "code" : "33381-5"
+      },
+      {
+        "code" : "33391-4"
+      },
+      {
+        "code" : "33406-0"
+      },
+      {
+        "code" : "33410-2"
+      },
+      {
+        "code" : "33587-7"
+      },
+      {
+        "code" : "33969-7"
+      },
+      {
+        "code" : "33973-9"
+      },
+      {
+        "code" : "34153-7"
+      },
+      {
+        "code" : "34154-5"
+      },
+      {
+        "code" : "34158-6"
+      },
+      {
+        "code" : "34171-9"
+      },
+      {
+        "code" : "34172-7"
+      },
+      {
+        "code" : "34190-9"
+      },
+      {
+        "code" : "34376-4"
+      },
+      {
+        "code" : "34625-4"
+      },
+      {
+        "code" : "34956-3"
+      },
+      {
+        "code" : "35100-7"
+      },
+      {
+        "code" : "35391-2"
+      },
+      {
+        "code" : "35392-0"
+      },
+      {
+        "code" : "35393-8"
+      },
+      {
+        "code" : "35438-1"
+      },
+      {
+        "code" : "35530-5"
+      },
+      {
+        "code" : "35548-7"
+      },
+      {
+        "code" : "35549-5"
+      },
+      {
+        "code" : "35551-1"
+      },
+      {
+        "code" : "35552-9"
+      },
+      {
+        "code" : "35553-7"
+      },
+      {
+        "code" : "35555-2"
+      },
+      {
+        "code" : "35876-2"
+      },
+      {
+        "code" : "35877-0"
+      },
+      {
+        "code" : "38166-5"
+      },
+      {
+        "code" : "38173-1"
+      },
+      {
+        "code" : "38174-9"
+      },
+      {
+        "code" : "38182-2"
+      },
+      {
+        "code" : "38183-0"
+      },
+      {
+        "code" : "38273-9"
+      },
+      {
+        "code" : "38763-9"
+      },
+      {
+        "code" : "38764-7"
+      },
+      {
+        "code" : "38997-3"
+      },
+      {
+        "code" : "39015-3"
+      },
+      {
+        "code" : "39536-8"
+      },
+      {
+        "code" : "39537-6"
+      },
+      {
+        "code" : "39555-8"
+      },
+      {
+        "code" : "39569-9"
+      },
+      {
+        "code" : "39570-7"
+      },
+      {
+        "code" : "39572-3"
+      },
+      {
+        "code" : "39573-1"
+      },
+      {
+        "code" : "39578-0"
+      },
+      {
+        "code" : "39579-8"
+      },
+      {
+        "code" : "39589-7"
+      },
+      {
+        "code" : "39610-1"
+      },
+      {
+        "code" : "39618-4"
+      },
+      {
+        "code" : "40607-4"
+      },
+      {
+        "code" : "40608-2"
+      },
+      {
+        "code" : "40649-6"
+      },
+      {
+        "code" : "40709-8"
+      },
+      {
+        "code" : "40711-4"
+      },
+      {
+        "code" : "40753-6"
+      },
+      {
+        "code" : "40830-2"
+      },
+      {
+        "code" : "40852-6"
+      },
+      {
+        "code" : "40853-4"
+      },
+      {
+        "code" : "40905-2"
+      },
+      {
+        "code" : "40906-0"
+      },
+      {
+        "code" : "40907-8"
+      },
+      {
+        "code" : "40911-0"
+      },
+      {
+        "code" : "40912-8"
+      },
+      {
+        "code" : "40913-6"
+      },
+      {
+        "code" : "40914-4"
+      },
+      {
+        "code" : "40915-1"
+      },
+      {
+        "code" : "40916-9"
+      },
+      {
+        "code" : "40917-7"
+      },
+      {
+        "code" : "40918-5"
+      },
+      {
+        "code" : "40919-3"
+      },
+      {
+        "code" : "40926-8"
+      },
+      {
+        "code" : "40938-3"
+      },
+      {
+        "code" : "40939-1"
+      },
+      {
+        "code" : "40969-8"
+      },
+      {
+        "code" : "40973-0"
+      },
+      {
+        "code" : "40974-8"
+      },
+      {
+        "code" : "41033-2"
+      },
+      {
+        "code" : "41034-0"
+      },
+      {
+        "code" : "41122-3"
+      },
+      {
+        "code" : "41125-6"
+      },
+      {
+        "code" : "41129-8"
+      },
+      {
+        "code" : "41143-9"
+      },
+      {
+        "code" : "41155-3"
+      },
+      {
+        "code" : "41160-3"
+      },
+      {
+        "code" : "41161-1"
+      },
+      {
+        "code" : "41194-2"
+      },
+      {
+        "code" : "41206-4"
+      },
+      {
+        "code" : "41405-2"
+      },
+      {
+        "code" : "41417-7"
+      },
+      {
+        "code" : "41426-8"
+      },
+      {
+        "code" : "41483-9"
+      },
+      {
+        "code" : "42176-8"
+      },
+      {
+        "code" : "42328-5"
+      },
+      {
+        "code" : "42329-3"
+      },
+      {
+        "code" : "42330-1"
+      },
+      {
+        "code" : "42337-6"
+      },
+      {
+        "code" : "42338-4"
+      },
+      {
+        "code" : "42339-2"
+      },
+      {
+        "code" : "42508-2"
+      },
+      {
+        "code" : "42579-3"
+      },
+      {
+        "code" : "42591-8"
+      },
+      {
+        "code" : "42816-9"
+      },
+      {
+        "code" : "42897-9"
+      },
+      {
+        "code" : "42904-3"
+      },
+      {
+        "code" : "42907-6"
+      },
+      {
+        "code" : "42916-7"
+      },
+      {
+        "code" : "42985-2"
+      },
+      {
+        "code" : "42986-0"
+      },
+      {
+        "code" : "43021-5"
+      },
+      {
+        "code" : "43074-4"
+      },
+      {
+        "code" : "43075-1"
+      },
+      {
+        "code" : "43077-7"
+      },
+      {
+        "code" : "43132-0"
+      },
+      {
+        "code" : "43204-7"
+      },
+      {
+        "code" : "43224-5"
+      },
+      {
+        "code" : "43225-2"
+      },
+      {
+        "code" : "43236-9"
+      },
+      {
+        "code" : "43280-7"
+      },
+      {
+        "code" : "43281-5"
+      },
+      {
+        "code" : "43380-5"
+      },
+      {
+        "code" : "43573-5"
+      },
+      {
+        "code" : "43590-9"
+      },
+      {
+        "code" : "43599-0"
+      },
+      {
+        "code" : "43602-2"
+      },
+      {
+        "code" : "43843-2"
+      },
+      {
+        "code" : "44289-7"
+      },
+      {
+        "code" : "44435-6"
+      },
+      {
+        "code" : "44436-4"
+      },
+      {
+        "code" : "44437-2"
+      },
+      {
+        "code" : "44438-0"
+      },
+      {
+        "code" : "44439-8"
+      },
+      {
+        "code" : "44440-6"
+      },
+      {
+        "code" : "44441-4"
+      },
+      {
+        "code" : "44442-2"
+      },
+      {
+        "code" : "44443-0"
+      },
+      {
+        "code" : "44444-8"
+      },
+      {
+        "code" : "44451-3"
+      },
+      {
+        "code" : "44452-1"
+      },
+      {
+        "code" : "44453-9"
+      },
+      {
+        "code" : "44454-7"
+      },
+      {
+        "code" : "44455-4"
+      },
+      {
+        "code" : "44456-2"
+      },
+      {
+        "code" : "44457-0"
+      },
+      {
+        "code" : "44746-6"
+      },
+      {
+        "code" : "44748-2"
+      },
+      {
+        "code" : "44755-7"
+      },
+      {
+        "code" : "44804-3"
+      },
+      {
+        "code" : "44815-9"
+      },
+      {
+        "code" : "44817-5"
+      },
+      {
+        "code" : "44818-3"
+      },
+      {
+        "code" : "44823-3"
+      },
+      {
+        "code" : "44826-6"
+      },
+      {
+        "code" : "44997-5"
+      },
+      {
+        "code" : "45001-5"
+      },
+      {
+        "code" : "45006-4"
+      },
+      {
+        "code" : "45007-2"
+      },
+      {
+        "code" : "45011-4"
+      },
+      {
+        "code" : "45165-8"
+      },
+      {
+        "code" : "45228-4"
+      },
+      {
+        "code" : "46155-8"
+      },
+      {
+        "code" : "46156-6"
+      },
+      {
+        "code" : "46158-2"
+      },
+      {
+        "code" : "46159-0"
+      },
+      {
+        "code" : "46174-9"
+      },
+      {
+        "code" : "46184-8"
+      },
+      {
+        "code" : "46205-1"
+      },
+      {
+        "code" : "46253-1"
+      },
+      {
+        "code" : "46254-9"
+      },
+      {
+        "code" : "47051-8"
+      },
+      {
+        "code" : "47052-6"
+      },
+      {
+        "code" : "47063-3"
+      },
+      {
+        "code" : "47297-7"
+      },
+      {
+        "code" : "47308-2"
+      },
+      {
+        "code" : "47310-8"
+      },
+      {
+        "code" : "47311-6"
+      },
+      {
+        "code" : "47312-4"
+      },
+      {
+        "code" : "47313-2"
+      },
+      {
+        "code" : "47314-0"
+      },
+      {
+        "code" : "47315-7"
+      },
+      {
+        "code" : "47346-2"
+      },
+      {
+        "code" : "47349-6"
+      },
+      {
+        "code" : "47351-2"
+      },
+      {
+        "code" : "47352-0"
+      },
+      {
+        "code" : "47356-1"
+      },
+      {
+        "code" : "47357-9"
+      },
+      {
+        "code" : "47390-0"
+      },
+      {
+        "code" : "47412-2"
+      },
+      {
+        "code" : "47419-7"
+      },
+      {
+        "code" : "47429-6"
+      },
+      {
+        "code" : "47431-2"
+      },
+      {
+        "code" : "47439-5"
+      },
+      {
+        "code" : "47501-2"
+      },
+      {
+        "code" : "47502-0"
+      },
+      {
+        "code" : "47503-8"
+      },
+      {
+        "code" : "47504-6"
+      },
+      {
+        "code" : "47506-1"
+      },
+      {
+        "code" : "47507-9"
+      },
+      {
+        "code" : "47509-5"
+      },
+      {
+        "code" : "47510-3"
+      },
+      {
+        "code" : "47511-1"
+      },
+      {
+        "code" : "47512-9"
+      },
+      {
+        "code" : "47514-5"
+      },
+      {
+        "code" : "48393-3"
+      },
+      {
+        "code" : "48399-0"
+      },
+      {
+        "code" : "48401-4"
+      },
+      {
+        "code" : "48417-0"
+      },
+      {
+        "code" : "48652-2"
+      },
+      {
+        "code" : "48653-0"
+      },
+      {
+        "code" : "48654-8"
+      },
+      {
+        "code" : "48655-5"
+      },
+      {
+        "code" : "48713-2"
+      },
+      {
+        "code" : "48714-0"
+      },
+      {
+        "code" : "48715-7"
+      },
+      {
+        "code" : "48716-5"
+      },
+      {
+        "code" : "48717-3"
+      },
+      {
+        "code" : "48718-1"
+      },
+      {
+        "code" : "48721-5"
+      },
+      {
+        "code" : "48952-6"
+      },
+      {
+        "code" : "49073-0"
+      },
+      {
+        "code" : "49074-8"
+      },
+      {
+        "code" : "49075-5"
+      },
+      {
+        "code" : "49076-3"
+      },
+      {
+        "code" : "49077-1"
+      },
+      {
+        "code" : "49078-9"
+      },
+      {
+        "code" : "49109-2"
+      },
+      {
+        "code" : "49112-6"
+      },
+      {
+        "code" : "49188-6"
+      },
+      {
+        "code" : "49189-4"
+      },
+      {
+        "code" : "49191-0"
+      },
+      {
+        "code" : "49192-8"
+      },
+      {
+        "code" : "49195-1"
+      },
+      {
+        "code" : "49687-7"
+      },
+      {
+        "code" : "49769-3"
+      },
+      {
+        "code" : "49771-9"
+      },
+      {
+        "code" : "49775-0"
+      },
+      {
+        "code" : "49776-8"
+      },
+      {
+        "code" : "49777-6"
+      },
+      {
+        "code" : "49784-2"
+      },
+      {
+        "code" : "49798-2"
+      },
+      {
+        "code" : "49800-6"
+      },
+      {
+        "code" : "49861-8"
+      },
+      {
+        "code" : "5042-7"
+      },
+      {
+        "code" : "5045-0"
+      },
+      {
+        "code" : "5046-8"
+      },
+      {
+        "code" : "5049-2"
+      },
+      {
+        "code" : "5050-0"
+      },
+      {
+        "code" : "5051-8"
+      },
+      {
+        "code" : "5055-9"
+      },
+      {
+        "code" : "5059-1"
+      },
+      {
+        "code" : "5060-9"
+      },
+      {
+        "code" : "5062-5"
+      },
+      {
+        "code" : "5064-1"
+      },
+      {
+        "code" : "5070-8"
+      },
+      {
+        "code" : "5073-2"
+      },
+      {
+        "code" : "5078-1"
+      },
+      {
+        "code" : "5080-7"
+      },
+      {
+        "code" : "5081-5"
+      },
+      {
+        "code" : "5082-3"
+      },
+      {
+        "code" : "5085-6"
+      },
+      {
+        "code" : "5086-4"
+      },
+      {
+        "code" : "5089-8"
+      },
+      {
+        "code" : "5090-6"
+      },
+      {
+        "code" : "5092-2"
+      },
+      {
+        "code" : "5094-8"
+      },
+      {
+        "code" : "50969-5"
+      },
+      {
+        "code" : "5099-7"
+      },
+      {
+        "code" : "5115-1"
+      },
+      {
+        "code" : "5116-9"
+      },
+      {
+        "code" : "5120-1"
+      },
+      {
+        "code" : "5122-7"
+      },
+      {
+        "code" : "5124-3"
+      },
+      {
+        "code" : "5126-8"
+      },
+      {
+        "code" : "5133-4"
+      },
+      {
+        "code" : "5134-2"
+      },
+      {
+        "code" : "5135-9"
+      },
+      {
+        "code" : "51407-5"
+      },
+      {
+        "code" : "51451-3"
+      },
+      {
+        "code" : "51458-8"
+      },
+      {
+        "code" : "51459-6"
+      },
+      {
+        "code" : "51472-9"
+      },
+      {
+        "code" : "51474-5"
+      },
+      {
+        "code" : "5150-8"
+      },
+      {
+        "code" : "5151-6"
+      },
+      {
+        "code" : "5157-3"
+      },
+      {
+        "code" : "5159-9"
+      },
+      {
+        "code" : "5162-3"
+      },
+      {
+        "code" : "5163-1"
+      },
+      {
+        "code" : "5165-6"
+      },
+      {
+        "code" : "5169-8"
+      },
+      {
+        "code" : "51704-5"
+      },
+      {
+        "code" : "5174-8"
+      },
+      {
+        "code" : "51744-1"
+      },
+      {
+        "code" : "51753-2"
+      },
+      {
+        "code" : "51754-0"
+      },
+      {
+        "code" : "5176-3"
+      },
+      {
+        "code" : "5177-1"
+      },
+      {
+        "code" : "5178-9"
+      },
+      {
+        "code" : "5179-7"
+      },
+      {
+        "code" : "51798-7"
+      },
+      {
+        "code" : "5180-5"
+      },
+      {
+        "code" : "51804-3"
+      },
+      {
+        "code" : "51805-0"
+      },
+      {
+        "code" : "51806-8"
+      },
+      {
+        "code" : "51807-6"
+      },
+      {
+        "code" : "51808-4"
+      },
+      {
+        "code" : "51809-2"
+      },
+      {
+        "code" : "5181-3"
+      },
+      {
+        "code" : "51810-0"
+      },
+      {
+        "code" : "51811-8"
+      },
+      {
+        "code" : "51812-6"
+      },
+      {
+        "code" : "51813-4"
+      },
+      {
+        "code" : "51814-2"
+      },
+      {
+        "code" : "51815-9"
+      },
+      {
+        "code" : "51816-7"
+      },
+      {
+        "code" : "51817-5"
+      },
+      {
+        "code" : "51818-3"
+      },
+      {
+        "code" : "51819-1"
+      },
+      {
+        "code" : "5182-1"
+      },
+      {
+        "code" : "51820-9"
+      },
+      {
+        "code" : "51821-7"
+      },
+      {
+        "code" : "51822-5"
+      },
+      {
+        "code" : "51823-3"
+      },
+      {
+        "code" : "51824-1"
+      },
+      {
+        "code" : "51825-8"
+      },
+      {
+        "code" : "51826-6"
+      },
+      {
+        "code" : "51827-4"
+      },
+      {
+        "code" : "5183-9"
+      },
+      {
+        "code" : "51838-1"
+      },
+      {
+        "code" : "51839-9"
+      },
+      {
+        "code" : "5184-7"
+      },
+      {
+        "code" : "5185-4"
+      },
+      {
+        "code" : "51856-3"
+      },
+      {
+        "code" : "5186-2"
+      },
+      {
+        "code" : "5188-8"
+      },
+      {
+        "code" : "5189-6"
+      },
+      {
+        "code" : "5190-4"
+      },
+      {
+        "code" : "5191-2"
+      },
+      {
+        "code" : "5193-8"
+      },
+      {
+        "code" : "51931-4"
+      },
+      {
+        "code" : "5194-6"
+      },
+      {
+        "code" : "5198-7"
+      },
+      {
+        "code" : "5200-1"
+      },
+      {
+        "code" : "5201-9"
+      },
+      {
+        "code" : "5202-7"
+      },
+      {
+        "code" : "5203-5"
+      },
+      {
+        "code" : "5205-0"
+      },
+      {
+        "code" : "5206-8"
+      },
+      {
+        "code" : "5207-6"
+      },
+      {
+        "code" : "5208-4"
+      },
+      {
+        "code" : "5209-2"
+      },
+      {
+        "code" : "5210-0"
+      },
+      {
+        "code" : "5211-8"
+      },
+      {
+        "code" : "5212-6"
+      },
+      {
+        "code" : "5220-9"
+      },
+      {
+        "code" : "5224-1"
+      },
+      {
+        "code" : "5238-1"
+      },
+      {
+        "code" : "5240-7"
+      },
+      {
+        "code" : "5242-3"
+      },
+      {
+        "code" : "5244-9"
+      },
+      {
+        "code" : "5246-4"
+      },
+      {
+        "code" : "5248-0"
+      },
+      {
+        "code" : "5252-2"
+      },
+      {
+        "code" : "5255-5"
+      },
+      {
+        "code" : "5256-3"
+      },
+      {
+        "code" : "5261-3"
+      },
+      {
+        "code" : "5263-9"
+      },
+      {
+        "code" : "5264-7"
+      },
+      {
+        "code" : "5272-0"
+      },
+      {
+        "code" : "5273-8"
+      },
+      {
+        "code" : "5274-6"
+      },
+      {
+        "code" : "5277-9"
+      },
+      {
+        "code" : "5278-7"
+      },
+      {
+        "code" : "5279-5"
+      },
+      {
+        "code" : "5280-3"
+      },
+      {
+        "code" : "5287-8"
+      },
+      {
+        "code" : "5288-6"
+      },
+      {
+        "code" : "5293-6"
+      },
+      {
+        "code" : "52974-3"
+      },
+      {
+        "code" : "52975-0"
+      },
+      {
+        "code" : "52976-8"
+      },
+      {
+        "code" : "52977-6"
+      },
+      {
+        "code" : "52978-4"
+      },
+      {
+        "code" : "52981-8"
+      },
+      {
+        "code" : "52987-5"
+      },
+      {
+        "code" : "5309-0"
+      },
+      {
+        "code" : "5312-4"
+      },
+      {
+        "code" : "5314-0"
+      },
+      {
+        "code" : "5319-9"
+      },
+      {
+        "code" : "5321-5"
+      },
+      {
+        "code" : "5326-4"
+      },
+      {
+        "code" : "5327-2"
+      },
+      {
+        "code" : "5328-0"
+      },
+      {
+        "code" : "5329-8"
+      },
+      {
+        "code" : "5330-6"
+      },
+      {
+        "code" : "5334-8"
+      },
+      {
+        "code" : "5335-5"
+      },
+      {
+        "code" : "5336-3"
+      },
+      {
+        "code" : "53362-0"
+      },
+      {
+        "code" : "53376-0"
+      },
+      {
+        "code" : "53378-6"
+      },
+      {
+        "code" : "53386-9"
+      },
+      {
+        "code" : "5347-0"
+      },
+      {
+        "code" : "5350-4"
+      },
+      {
+        "code" : "53560-9"
+      },
+      {
+        "code" : "53582-3"
+      },
+      {
+        "code" : "53585-6"
+      },
+      {
+        "code" : "53594-8"
+      },
+      {
+        "code" : "53601-1"
+      },
+      {
+        "code" : "53602-9"
+      },
+      {
+        "code" : "5363-7"
+      },
+      {
+        "code" : "5364-5"
+      },
+      {
+        "code" : "5365-2"
+      },
+      {
+        "code" : "5366-0"
+      },
+      {
+        "code" : "5367-8"
+      },
+      {
+        "code" : "5368-6"
+      },
+      {
+        "code" : "5369-4"
+      },
+      {
+        "code" : "5370-2"
+      },
+      {
+        "code" : "5373-6"
+      },
+      {
+        "code" : "5374-4"
+      },
+      {
+        "code" : "5375-1"
+      },
+      {
+        "code" : "5376-9"
+      },
+      {
+        "code" : "5378-5"
+      },
+      {
+        "code" : "5386-8"
+      },
+      {
+        "code" : "5388-4"
+      },
+      {
+        "code" : "53885-0"
+      },
+      {
+        "code" : "53886-8"
+      },
+      {
+        "code" : "5390-0"
+      },
+      {
+        "code" : "5392-6"
+      },
+      {
+        "code" : "53930-4"
+      },
+      {
+        "code" : "53931-2"
+      },
+      {
+        "code" : "53935-3"
+      },
+      {
+        "code" : "5397-5"
+      },
+      {
+        "code" : "5399-1"
+      },
+      {
+        "code" : "5400-7"
+      },
+      {
+        "code" : "5403-1"
+      },
+      {
+        "code" : "5404-9"
+      },
+      {
+        "code" : "5405-6"
+      },
+      {
+        "code" : "5406-4"
+      },
+      {
+        "code" : "5407-2"
+      },
+      {
+        "code" : "5408-0"
+      },
+      {
+        "code" : "5409-8"
+      },
+      {
+        "code" : "5410-6"
+      },
+      {
+        "code" : "5411-4"
+      },
+      {
+        "code" : "54146-6"
+      },
+      {
+        "code" : "54455-1"
+      },
+      {
+        "code" : "54914-7"
+      },
+      {
+        "code" : "56150-6"
+      },
+      {
+        "code" : "56151-4"
+      },
+      {
+        "code" : "56181-1"
+      },
+      {
+        "code" : "56204-1"
+      },
+      {
+        "code" : "56355-1"
+      },
+      {
+        "code" : "56486-4"
+      },
+      {
+        "code" : "56513-5"
+      },
+      {
+        "code" : "56598-6"
+      },
+      {
+        "code" : "56599-4"
+      },
+      {
+        "code" : "56630-7"
+      },
+      {
+        "code" : "56631-5"
+      },
+      {
+        "code" : "56785-9"
+      },
+      {
+        "code" : "56910-3"
+      },
+      {
+        "code" : "56911-1"
+      },
+      {
+        "code" : "56916-0"
+      },
+      {
+        "code" : "56958-2"
+      },
+      {
+        "code" : "57001-0"
+      },
+      {
+        "code" : "57006-9"
+      },
+      {
+        "code" : "57009-3"
+      },
+      {
+        "code" : "57321-2"
+      },
+      {
+        "code" : "57322-0"
+      },
+      {
+        "code" : "57323-8"
+      },
+      {
+        "code" : "57324-6"
+      },
+      {
+        "code" : "57325-3"
+      },
+      {
+        "code" : "57326-1"
+      },
+      {
+        "code" : "57327-9"
+      },
+      {
+        "code" : "57328-7"
+      },
+      {
+        "code" : "57329-5"
+      },
+      {
+        "code" : "57455-8"
+      },
+      {
+        "code" : "57670-2"
+      },
+      {
+        "code" : "57671-0"
+      },
+      {
+        "code" : "57766-8"
+      },
+      {
+        "code" : "58023-3"
+      },
+      {
+        "code" : "58452-4"
+      },
+      {
+        "code" : "58755-0"
+      },
+      {
+        "code" : "58756-8"
+      },
+      {
+        "code" : "58757-6"
+      },
+      {
+        "code" : "58758-4"
+      },
+      {
+        "code" : "58760-0"
+      },
+      {
+        "code" : "58762-6"
+      },
+      {
+        "code" : "58770-9"
+      },
+      {
+        "code" : "58782-4"
+      },
+      {
+        "code" : "58783-2"
+      },
+      {
+        "code" : "58784-0"
+      },
+      {
+        "code" : "58785-7"
+      },
+      {
+        "code" : "58786-5"
+      },
+      {
+        "code" : "58787-3"
+      },
+      {
+        "code" : "58798-0"
+      },
+      {
+        "code" : "58799-8"
+      },
+      {
+        "code" : "58914-3"
+      },
+      {
+        "code" : "58958-0"
+      },
+      {
+        "code" : "59382-2"
+      },
+      {
+        "code" : "59387-1"
+      },
+      {
+        "code" : "60465-2"
+      },
+      {
+        "code" : "60466-0"
+      },
+      {
+        "code" : "60470-2"
+      },
+      {
+        "code" : "6212-5"
+      },
+      {
+        "code" : "62468-4"
+      },
+      {
+        "code" : "6305-7"
+      },
+      {
+        "code" : "6311-5"
+      },
+      {
+        "code" : "6312-3"
+      },
+      {
+        "code" : "63162-2"
+      },
+      {
+        "code" : "63163-0"
+      },
+      {
+        "code" : "63164-8"
+      },
+      {
+        "code" : "63165-5"
+      },
+      {
+        "code" : "63166-3"
+      },
+      {
+        "code" : "63168-9"
+      },
+      {
+        "code" : "63169-7"
+      },
+      {
+        "code" : "63170-5"
+      },
+      {
+        "code" : "63171-3"
+      },
+      {
+        "code" : "63172-1"
+      },
+      {
+        "code" : "63173-9"
+      },
+      {
+        "code" : "63174-7"
+      },
+      {
+        "code" : "63175-4"
+      },
+      {
+        "code" : "63178-8"
+      },
+      {
+        "code" : "6318-0"
+      },
+      {
+        "code" : "6319-8"
+      },
+      {
+        "code" : "6322-2"
+      },
+      {
+        "code" : "6326-3"
+      },
+      {
+        "code" : "6327-1"
+      },
+      {
+        "code" : "63464-2"
+      },
+      {
+        "code" : "63557-3"
+      },
+      {
+        "code" : "6367-7"
+      },
+      {
+        "code" : "6390-9"
+      },
+      {
+        "code" : "6391-7"
+      },
+      {
+        "code" : "6397-4"
+      },
+      {
+        "code" : "6398-2"
+      },
+      {
+        "code" : "6399-0"
+      },
+      {
+        "code" : "6420-4"
+      },
+      {
+        "code" : "6426-1"
+      },
+      {
+        "code" : "6428-7"
+      },
+      {
+        "code" : "6522-7"
+      },
+      {
+        "code" : "6526-8"
+      },
+      {
+        "code" : "6529-2"
+      },
+      {
+        "code" : "6533-4"
+      },
+      {
+        "code" : "6542-5"
+      },
+      {
+        "code" : "6549-0"
+      },
+      {
+        "code" : "6550-8"
+      },
+      {
+        "code" : "6560-7"
+      },
+      {
+        "code" : "6571-4"
+      },
+      {
+        "code" : "6588-8"
+      },
+      {
+        "code" : "6592-0"
+      },
+      {
+        "code" : "6593-8"
+      },
+      {
+        "code" : "6634-0"
+      },
+      {
+        "code" : "6635-7"
+      },
+      {
+        "code" : "6636-5"
+      },
+      {
+        "code" : "6637-3"
+      },
+      {
+        "code" : "6638-1"
+      },
+      {
+        "code" : "6639-9"
+      },
+      {
+        "code" : "6641-5"
+      },
+      {
+        "code" : "6642-3"
+      },
+      {
+        "code" : "66482-1"
+      },
+      {
+        "code" : "66493-8"
+      },
+      {
+        "code" : "67815-1"
+      },
+      {
+        "code" : "68936-4"
+      },
+      {
+        "code" : "6910-4"
+      },
+      {
+        "code" : "6911-2"
+      },
+      {
+        "code" : "6921-1"
+      },
+      {
+        "code" : "6964-1"
+      },
+      {
+        "code" : "6965-8"
+      },
+      {
+        "code" : "6966-6"
+      },
+      {
+        "code" : "70121-9"
+      },
+      {
+        "code" : "7075-5"
+      },
+      {
+        "code" : "70856-0"
+      },
+      {
+        "code" : "70860-2"
+      },
+      {
+        "code" : "7107-6"
+      },
+      {
+        "code" : "71704-1"
+      },
+      {
+        "code" : "71705-8"
+      },
+      {
+        "code" : "7172-0"
+      },
+      {
+        "code" : "7174-6"
+      },
+      {
+        "code" : "72265-2"
+      },
+      {
+        "code" : "72266-0"
+      },
+      {
+        "code" : "7325-4"
+      },
+      {
+        "code" : "7396-5"
+      },
+      {
+        "code" : "74414-4"
+      },
+      {
+        "code" : "74416-9"
+      },
+      {
+        "code" : "74418-5"
+      },
+      {
+        "code" : "74421-9"
+      },
+      {
+        "code" : "7507-7"
+      },
+      {
+        "code" : "7584-6"
+      },
+      {
+        "code" : "7638-0"
+      },
+      {
+        "code" : "7804-8"
+      },
+      {
+        "code" : "7805-5"
+      },
+      {
+        "code" : "7806-3"
+      },
+      {
+        "code" : "7807-1"
+      },
+      {
+        "code" : "7812-1"
+      },
+      {
+        "code" : "7813-9"
+      },
+      {
+        "code" : "7814-7"
+      },
+      {
+        "code" : "7815-4"
+      },
+      {
+        "code" : "7817-0"
+      },
+      {
+        "code" : "7818-8"
+      },
+      {
+        "code" : "7822-0"
+      },
+      {
+        "code" : "7823-8"
+      },
+      {
+        "code" : "7824-6"
+      },
+      {
+        "code" : "7826-1"
+      },
+      {
+        "code" : "7827-9"
+      },
+      {
+        "code" : "7828-7"
+      },
+      {
+        "code" : "7829-5"
+      },
+      {
+        "code" : "7830-3"
+      },
+      {
+        "code" : "7831-1"
+      },
+      {
+        "code" : "7832-9"
+      },
+      {
+        "code" : "7833-7"
+      },
+      {
+        "code" : "7834-5"
+      },
+      {
+        "code" : "7835-2"
+      },
+      {
+        "code" : "7836-0"
+      },
+      {
+        "code" : "7837-8"
+      },
+      {
+        "code" : "7838-6"
+      },
+      {
+        "code" : "7839-4"
+      },
+      {
+        "code" : "7840-2"
+      },
+      {
+        "code" : "7841-0"
+      },
+      {
+        "code" : "7842-8"
+      },
+      {
+        "code" : "7850-1"
+      },
+      {
+        "code" : "7851-9"
+      },
+      {
+        "code" : "7852-7"
+      },
+      {
+        "code" : "7853-5"
+      },
+      {
+        "code" : "7859-2"
+      },
+      {
+        "code" : "7860-0"
+      },
+      {
+        "code" : "7861-8"
+      },
+      {
+        "code" : "7863-4"
+      },
+      {
+        "code" : "7864-2"
+      },
+      {
+        "code" : "7865-9"
+      },
+      {
+        "code" : "7866-7"
+      },
+      {
+        "code" : "7867-5"
+      },
+      {
+        "code" : "7869-1"
+      },
+      {
+        "code" : "7871-7"
+      },
+      {
+        "code" : "7872-5"
+      },
+      {
+        "code" : "7875-8"
+      },
+      {
+        "code" : "7880-8"
+      },
+      {
+        "code" : "7885-7"
+      },
+      {
+        "code" : "7886-5"
+      },
+      {
+        "code" : "7887-3"
+      },
+      {
+        "code" : "7891-5"
+      },
+      {
+        "code" : "7892-3"
+      },
+      {
+        "code" : "7894-9"
+      },
+      {
+        "code" : "7895-6"
+      },
+      {
+        "code" : "7896-4"
+      },
+      {
+        "code" : "7897-2"
+      },
+      {
+        "code" : "7898-0"
+      },
+      {
+        "code" : "7900-4"
+      },
+      {
+        "code" : "7901-2"
+      },
+      {
+        "code" : "7902-0"
+      },
+      {
+        "code" : "7903-8"
+      },
+      {
+        "code" : "7907-9"
+      },
+      {
+        "code" : "7908-7"
+      },
+      {
+        "code" : "7909-5"
+      },
+      {
+        "code" : "7910-3"
+      },
+      {
+        "code" : "7911-1"
+      },
+      {
+        "code" : "7912-9"
+      },
+      {
+        "code" : "7913-7"
+      },
+      {
+        "code" : "7916-0"
+      },
+      {
+        "code" : "7920-2"
+      },
+      {
+        "code" : "7921-0"
+      },
+      {
+        "code" : "7922-8"
+      },
+      {
+        "code" : "7923-6"
+      },
+      {
+        "code" : "7924-4"
+      },
+      {
+        "code" : "7925-1"
+      },
+      {
+        "code" : "7927-7"
+      },
+      {
+        "code" : "7928-5"
+      },
+      {
+        "code" : "7929-3"
+      },
+      {
+        "code" : "7931-9"
+      },
+      {
+        "code" : "7932-7"
+      },
+      {
+        "code" : "7935-0"
+      },
+      {
+        "code" : "7940-0"
+      },
+      {
+        "code" : "7941-8"
+      },
+      {
+        "code" : "7957-4"
+      },
+      {
+        "code" : "7960-8"
+      },
+      {
+        "code" : "7961-6"
+      },
+      {
+        "code" : "7962-4"
+      },
+      {
+        "code" : "7963-2"
+      },
+      {
+        "code" : "7965-7"
+      },
+      {
+        "code" : "7966-5"
+      },
+      {
+        "code" : "7967-3"
+      },
+      {
+        "code" : "7969-9"
+      },
+      {
+        "code" : "7970-7"
+      },
+      {
+        "code" : "7976-4"
+      },
+      {
+        "code" : "7977-2"
+      },
+      {
+        "code" : "7978-0"
+      },
+      {
+        "code" : "7979-8"
+      },
+      {
+        "code" : "7980-6"
+      },
+      {
+        "code" : "7982-2"
+      },
+      {
+        "code" : "7983-0"
+      },
+      {
+        "code" : "7984-8"
+      },
+      {
+        "code" : "7985-5"
+      },
+      {
+        "code" : "7986-3"
+      },
+      {
+        "code" : "7987-1"
+      },
+      {
+        "code" : "7988-9"
+      },
+      {
+        "code" : "7989-7"
+      },
+      {
+        "code" : "7990-5"
+      },
+      {
+        "code" : "7991-3"
+      },
+      {
+        "code" : "7992-1"
+      },
+      {
+        "code" : "7994-7"
+      },
+      {
+        "code" : "7995-4"
+      },
+      {
+        "code" : "7997-0"
+      },
+      {
+        "code" : "7998-8"
+      },
+      {
+        "code" : "7999-6"
+      },
+      {
+        "code" : "8000-2"
+      },
+      {
+        "code" : "8001-0"
+      },
+      {
+        "code" : "8002-8"
+      },
+      {
+        "code" : "8003-6"
+      },
+      {
+        "code" : "8004-4"
+      },
+      {
+        "code" : "8006-9"
+      },
+      {
+        "code" : "8007-7"
+      },
+      {
+        "code" : "8008-5"
+      },
+      {
+        "code" : "8009-3"
+      },
+      {
+        "code" : "8010-1"
+      },
+      {
+        "code" : "8013-5"
+      },
+      {
+        "code" : "8014-3"
+      },
+      {
+        "code" : "8015-0"
+      },
+      {
+        "code" : "8016-8"
+      },
+      {
+        "code" : "8017-6"
+      },
+      {
+        "code" : "8018-4"
+      },
+      {
+        "code" : "8019-2"
+      },
+      {
+        "code" : "8022-6"
+      },
+      {
+        "code" : "8028-3"
+      },
+      {
+        "code" : "8031-7"
+      },
+      {
+        "code" : "8032-5"
+      },
+      {
+        "code" : "8034-1"
+      },
+      {
+        "code" : "8036-6"
+      },
+      {
+        "code" : "8037-4"
+      },
+      {
+        "code" : "8038-2"
+      },
+      {
+        "code" : "8039-0"
+      },
+      {
+        "code" : "8040-8"
+      },
+      {
+        "code" : "8042-4"
+      },
+      {
+        "code" : "8045-7"
+      },
+      {
+        "code" : "8046-5"
+      },
+      {
+        "code" : "8047-3"
+      },
+      {
+        "code" : "8048-1"
+      },
+      {
+        "code" : "8050-7"
+      },
+      {
+        "code" : "8051-5"
+      },
+      {
+        "code" : "8052-3"
+      },
+      {
+        "code" : "8053-1"
+      },
+      {
+        "code" : "8054-9"
+      },
+      {
+        "code" : "8055-6"
+      },
+      {
+        "code" : "8056-4"
+      },
+      {
+        "code" : "80618-2"
+      },
+      {
+        "code" : "80619-0"
+      },
+      {
+        "code" : "8078-8"
+      },
+      {
+        "code" : "85952-0"
+      },
+      {
+        "code" : "85953-8"
+      },
+      {
+        "code" : "85954-6"
+      },
+      {
+        "code" : "85955-3"
+      },
+      {
+        "code" : "85956-1"
+      },
+      {
+        "code" : "85957-9"
+      },
+      {
+        "code" : "85958-7"
+      },
+      {
+        "code" : "85959-5"
+      },
+      {
+        "code" : "85960-3"
+      },
+      {
+        "code" : "85961-1"
+      },
+      {
+        "code" : "85962-9"
+      },
+      {
+        "code" : "85963-7"
+      },
+      {
+        "code" : "85965-2"
+      },
+      {
+        "code" : "85966-0"
+      },
+      {
+        "code" : "85967-8"
+      },
+      {
+        "code" : "85968-6"
+      },
+      {
+        "code" : "85969-4"
+      },
+      {
+        "code" : "85970-2"
+      },
+      {
+        "code" : "85971-0"
+      },
+      {
+        "code" : "85972-8"
+      },
+      {
+        "code" : "85974-4"
+      },
+      {
+        "code" : "85975-1"
+      },
+      {
+        "code" : "85976-9"
+      },
+      {
+        "code" : "85977-7"
+      },
+      {
+        "code" : "85978-5"
+      },
+      {
+        "code" : "85979-3"
+      },
+      {
+        "code" : "85980-1"
+      },
+      {
+        "code" : "85981-9"
+      },
+      {
+        "code" : "85982-7"
+      },
+      {
+        "code" : "85983-5"
+      },
+      {
+        "code" : "85984-3"
+      },
+      {
+        "code" : "85985-0"
+      },
+      {
+        "code" : "85986-8"
+      },
+      {
+        "code" : "85987-6"
+      },
+      {
+        "code" : "85989-2"
+      },
+      {
+        "code" : "85990-0"
+      },
+      {
+        "code" : "85991-8"
+      },
+      {
+        "code" : "85992-6"
+      },
+      {
+        "code" : "85993-4"
+      },
+      {
+        "code" : "85994-2"
+      },
+      {
+        "code" : "85995-9"
+      },
+      {
+        "code" : "85996-7"
+      },
+      {
+        "code" : "85997-5"
+      },
+      {
+        "code" : "85998-3"
+      },
+      {
+        "code" : "85999-1"
+      },
+      {
+        "code" : "86000-7"
+      },
+      {
+        "code" : "86001-5"
+      },
+      {
+        "code" : "86002-3"
+      },
+      {
+        "code" : "86003-1"
+      },
+      {
+        "code" : "86004-9"
+      },
+      {
+        "code" : "86005-6"
+      },
+      {
+        "code" : "86006-4"
+      },
+      {
+        "code" : "86009-8"
+      },
+      {
+        "code" : "86010-6"
+      },
+      {
+        "code" : "86011-4"
+      },
+      {
+        "code" : "86012-2"
+      },
+      {
+        "code" : "86013-0"
+      },
+      {
+        "code" : "86014-8"
+      },
+      {
+        "code" : "86016-3"
+      },
+      {
+        "code" : "86017-1"
+      },
+      {
+        "code" : "86018-9"
+      },
+      {
+        "code" : "86019-7"
+      },
+      {
+        "code" : "86020-5"
+      },
+      {
+        "code" : "86021-3"
+      },
+      {
+        "code" : "86022-1"
+      },
+      {
+        "code" : "86023-9"
+      },
+      {
+        "code" : "86024-7"
+      },
+      {
+        "code" : "86025-4"
+      },
+      {
+        "code" : "86026-2"
+      },
+      {
+        "code" : "86027-0"
+      },
+      {
+        "code" : "86028-8"
+      },
+      {
+        "code" : "86029-6"
+      },
+      {
+        "code" : "86030-4"
+      },
+      {
+        "code" : "86032-0"
+      },
+      {
+        "code" : "86033-8"
+      },
+      {
+        "code" : "86034-6"
+      },
+      {
+        "code" : "86035-3"
+      },
+      {
+        "code" : "86036-1"
+      },
+      {
+        "code" : "86037-9"
+      },
+      {
+        "code" : "86038-7"
+      },
+      {
+        "code" : "86039-5"
+      },
+      {
+        "code" : "86040-3"
+      },
+      {
+        "code" : "86041-1"
+      },
+      {
+        "code" : "86042-9"
+      },
+      {
+        "code" : "86043-7"
+      },
+      {
+        "code" : "86045-2"
+      },
+      {
+        "code" : "86046-0"
+      },
+      {
+        "code" : "86047-8"
+      },
+      {
+        "code" : "86048-6"
+      },
+      {
+        "code" : "86049-4"
+      },
+      {
+        "code" : "86050-2"
+      },
+      {
+        "code" : "86052-8"
+      },
+      {
+        "code" : "86053-6"
+      },
+      {
+        "code" : "86054-4"
+      },
+      {
+        "code" : "86055-1"
+      },
+      {
+        "code" : "86056-9"
+      },
+      {
+        "code" : "86057-7"
+      },
+      {
+        "code" : "86059-3"
+      },
+      {
+        "code" : "86060-1"
+      },
+      {
+        "code" : "86061-9"
+      },
+      {
+        "code" : "86062-7"
+      },
+      {
+        "code" : "86063-5"
+      },
+      {
+        "code" : "86064-3"
+      },
+      {
+        "code" : "86065-0"
+      },
+      {
+        "code" : "86066-8"
+      },
+      {
+        "code" : "86067-6"
+      },
+      {
+        "code" : "86068-4"
+      },
+      {
+        "code" : "86069-2"
+      },
+      {
+        "code" : "86070-0"
+      },
+      {
+        "code" : "86072-6"
+      },
+      {
+        "code" : "86073-4"
+      },
+      {
+        "code" : "86074-2"
+      },
+      {
+        "code" : "86075-9"
+      },
+      {
+        "code" : "86076-7"
+      },
+      {
+        "code" : "86077-5"
+      },
+      {
+        "code" : "86078-3"
+      },
+      {
+        "code" : "86079-1"
+      },
+      {
+        "code" : "86080-9"
+      },
+      {
+        "code" : "86081-7"
+      },
+      {
+        "code" : "86082-5"
+      },
+      {
+        "code" : "86083-3"
+      },
+      {
+        "code" : "86084-1"
+      },
+      {
+        "code" : "86085-8"
+      },
+      {
+        "code" : "86086-6"
+      },
+      {
+        "code" : "86087-4"
+      },
+      {
+        "code" : "86088-2"
+      },
+      {
+        "code" : "86089-0"
+      },
+      {
+        "code" : "86091-6"
+      },
+      {
+        "code" : "86092-4"
+      },
+      {
+        "code" : "86093-2"
+      },
+      {
+        "code" : "86094-0"
+      },
+      {
+        "code" : "86095-7"
+      },
+      {
+        "code" : "86096-5"
+      },
+      {
+        "code" : "86098-1"
+      },
+      {
+        "code" : "86099-9"
+      },
+      {
+        "code" : "86100-5"
+      },
+      {
+        "code" : "86101-3"
+      },
+      {
+        "code" : "86102-1"
+      },
+      {
+        "code" : "86103-9"
+      },
+      {
+        "code" : "86105-4"
+      },
+      {
+        "code" : "86106-2"
+      },
+      {
+        "code" : "86107-0"
+      },
+      {
+        "code" : "86108-8"
+      },
+      {
+        "code" : "86109-6"
+      },
+      {
+        "code" : "86110-4"
+      },
+      {
+        "code" : "86111-2"
+      },
+      {
+        "code" : "86112-0"
+      },
+      {
+        "code" : "86113-8"
+      },
+      {
+        "code" : "86114-6"
+      },
+      {
+        "code" : "86115-3"
+      },
+      {
+        "code" : "86116-1"
+      },
+      {
+        "code" : "86118-7"
+      },
+      {
+        "code" : "86119-5"
+      },
+      {
+        "code" : "86120-3"
+      },
+      {
+        "code" : "86121-1"
+      },
+      {
+        "code" : "86122-9"
+      },
+      {
+        "code" : "86123-7"
+      },
+      {
+        "code" : "86124-5"
+      },
+      {
+        "code" : "86125-2"
+      },
+      {
+        "code" : "86126-0"
+      },
+      {
+        "code" : "86127-8"
+      },
+      {
+        "code" : "86129-4"
+      },
+      {
+        "code" : "86130-2"
+      },
+      {
+        "code" : "86131-0"
+      },
+      {
+        "code" : "86132-8"
+      },
+      {
+        "code" : "86133-6"
+      },
+      {
+        "code" : "86134-4"
+      },
+      {
+        "code" : "86136-9"
+      },
+      {
+        "code" : "86137-7"
+      },
+      {
+        "code" : "86138-5"
+      },
+      {
+        "code" : "86139-3"
+      },
+      {
+        "code" : "86140-1"
+      },
+      {
+        "code" : "86141-9"
+      },
+      {
+        "code" : "86142-7"
+      },
+      {
+        "code" : "86145-0"
+      },
+      {
+        "code" : "86146-8"
+      },
+      {
+        "code" : "86147-6"
+      },
+      {
+        "code" : "86148-4"
+      },
+      {
+        "code" : "86149-2"
+      },
+      {
+        "code" : "86150-0"
+      },
+      {
+        "code" : "86151-8"
+      },
+      {
+        "code" : "86152-6"
+      },
+      {
+        "code" : "86153-4"
+      },
+      {
+        "code" : "86154-2"
+      },
+      {
+        "code" : "86155-9"
+      },
+      {
+        "code" : "86156-7"
+      },
+      {
+        "code" : "86158-3"
+      },
+      {
+        "code" : "86159-1"
+      },
+      {
+        "code" : "86160-9"
+      },
+      {
+        "code" : "86161-7"
+      },
+      {
+        "code" : "86163-3"
+      },
+      {
+        "code" : "86164-1"
+      },
+      {
+        "code" : "86166-6"
+      },
+      {
+        "code" : "86167-4"
+      },
+      {
+        "code" : "86168-2"
+      },
+      {
+        "code" : "86169-0"
+      },
+      {
+        "code" : "86170-8"
+      },
+      {
+        "code" : "86171-6"
+      },
+      {
+        "code" : "86172-4"
+      },
+      {
+        "code" : "86173-2"
+      },
+      {
+        "code" : "86174-0"
+      },
+      {
+        "code" : "86175-7"
+      },
+      {
+        "code" : "86177-3"
+      },
+      {
+        "code" : "86178-1"
+      },
+      {
+        "code" : "86179-9"
+      },
+      {
+        "code" : "86182-3"
+      },
+      {
+        "code" : "86183-1"
+      },
+      {
+        "code" : "86184-9"
+      },
+      {
+        "code" : "88923-8"
+      },
+      {
+        "code" : "90448-2"
+      },
+      {
+        "code" : "91667-6"
+      },
+      {
+        "code" : "9362-5"
+      },
+      {
+        "code" : "9363-3"
+      },
+      {
+        "code" : "9364-1"
+      },
+      {
+        "code" : "93834-0"
+      },
+      {
+        "code" : "93835-7"
+      },
+      {
+        "code" : "93836-5"
+      },
+      {
+        "code" : "93837-3"
+      },
+      {
+        "code" : "93838-1"
+      },
+      {
+        "code" : "93839-9"
+      },
+      {
+        "code" : "93860-5"
+      },
+      {
+        "code" : "9421-9"
+      },
+      {
+        "code" : "9422-7"
+      },
+      {
+        "code" : "94505-5"
+      },
+      {
+        "code" : "9491-2"
+      },
+      {
+        "code" : "9492-0"
+      },
+      {
+        "code" : "9494-6"
+      },
+      {
+        "code" : "9495-3"
+      },
+      {
+        "code" : "9496-1"
+      },
+      {
+        "code" : "9498-7"
+      },
+      {
+        "code" : "9500-0"
+      },
+      {
+        "code" : "95072-5"
+      },
+      {
+        "code" : "95073-3"
+      },
+      {
+        "code" : "9521-6"
+      },
+      {
+        "code" : "9522-4"
+      },
+      {
+        "code" : "9523-2"
+      },
+      {
+        "code" : "9525-7"
+      },
+      {
+        "code" : "9528-1"
+      },
+      {
+        "code" : "9529-9"
+      },
+      {
+        "code" : "9530-7"
+      },
+      {
+        "code" : "9566-1"
+      },
+      {
+        "code" : "9569-5"
+      },
+      {
+        "code" : "95714-2"
+      },
+      {
+        "code" : "9576-0"
+      },
+      {
+        "code" : "9611-5"
+      },
+      {
+        "code" : "9656-0"
+      },
+      {
+        "code" : "9657-8"
+      },
+      {
+        "code" : "9658-6"
+      },
+      {
+        "code" : "9659-4"
+      },
+      {
+        "code" : "9665-1"
+      },
+      {
+        "code" : "9670-1"
+      },
+      {
+        "code" : "9671-9"
+      },
+      {
+        "code" : "9672-7"
+      },
+      {
+        "code" : "9673-5"
+      },
+      {
+        "code" : "9674-3"
+      },
+      {
+        "code" : "96742-2"
+      },
+      {
+        "code" : "9705-5"
+      },
+      {
+        "code" : "9717-0"
+      },
+      {
+        "code" : "9718-8"
+      },
+      {
+        "code" : "9719-6"
+      },
+      {
+        "code" : "9741-0"
+      },
+      {
+        "code" : "97866-8"
+      },
+      {
+        "code" : "97867-6"
+      },
+      {
+        "code" : "97991-4"
+      },
+      {
+        "code" : "98216-5"
+      },
+      {
+        "code" : "98956-6"
+      },
+      {
+        "code" : "98957-4"
+      },
+      {
+        "code" : "99084-6"
+      },
+      {
+        "code" : "99097-8"
+      },
+      {
+        "code" : "99098-6"
+      },
+      {
+        "code" : "99454-1"
+      },
+      {
+        "code" : "99476-4"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/11010000107/version/20261021",
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118569000 |Arbitrary concentration (property) (qualifier value)| OR 118539007 |Mass concentration (property) (qualifier value)| OR 118556004 |Substance concentration (property) (qualifier value)| OR 118550005 |Number concentration (property) (qualifier value)|), 246093002 |Component (attribute)| = (<< 312301006 |Infective organism antibody (substance)| OR << 116633006 |Microbial antigen (substance)|)"
+      }]
+    }]
+  }
+}
+
+```

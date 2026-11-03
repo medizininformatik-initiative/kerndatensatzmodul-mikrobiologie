@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="mii-vs-mikrobio-loinc-ontology-organism-type"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" lang="de"><hr/><p><b>German</b></p><hr/><p class="res-header-id"><b>Generated Narrative: ValueSet mii-vs-mikrobio-loinc-ontology-organism-type</b></p><a name="de-mii-vs-mikrobio-loinc-ontology-organism-type"> </a><a name="de-hcmii-vs-mikrobio-loinc-ontology-organism-type"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://loinc.org"><code>http://loinc.org</code></a><span title="Version is explicitly stated to be 2.83"> version &#x1F4CD;2.83</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="https://loinc.org/59846-6/">59846-6</a></td><td/></tr><tr><td><a href="https://loinc.org/60528-7/">60528-7</a></td><td/></tr><tr><td><a href="https://loinc.org/60546-9/">60546-9</a></td><td/></tr><tr><td><a href="https://loinc.org/61112-9/">61112-9</a></td><td/></tr><tr><td><a href="https://loinc.org/65756-9/">65756-9</a></td><td/></tr><tr><td><a href="https://loinc.org/72412-0/">72412-0</a></td><td/></tr><tr><td><a href="https://loinc.org/72413-8/">72413-8</a></td><td/></tr><tr><td><a href="https://loinc.org/72482-3/">72482-3</a></td><td/></tr><tr><td><a href="https://loinc.org/72483-1/">72483-1</a></td><td/></tr><tr><td><a href="https://loinc.org/72484-9/">72484-9</a></td><td/></tr><tr><td><a href="https://loinc.org/73658-7/">73658-7</a></td><td/></tr><tr><td><a href="https://loinc.org/73659-5/">73659-5</a></td><td/></tr><tr><td><a href="https://loinc.org/73666-0/">73666-0</a></td><td/></tr><tr><td><a href="https://loinc.org/73671-0/">73671-0</a></td><td/></tr><tr><td><a href="https://loinc.org/73672-8/">73672-8</a></td><td/></tr><tr><td><a href="https://loinc.org/73673-6/">73673-6</a></td><td/></tr><tr><td><a href="https://loinc.org/73702-3/">73702-3</a></td><td/></tr><tr><td><a href="https://loinc.org/73733-8/">73733-8</a></td><td/></tr><tr><td><a href="https://loinc.org/82512-5/">82512-5</a></td><td/></tr><tr><td><a href="https://loinc.org/86732-5/">86732-5</a></td><td/></tr><tr><td><a href="https://loinc.org/87962-7/">87962-7</a></td><td/></tr></table></li><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is explicitly stated to be http://snomed.info/sct/11010000107/version/20261021"> version &#x1F4CD;http://snomed.info/sct/11010000107/version/20261021</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/1285113001">1285113001</a></td><td>Type of antimicrobial resistant organism (observable entity)</td></tr></table></li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is explicitly stated to be http://snomed.info/sct/11010000107/version/20261021"> version &#x1F4CD;http://snomed.info/sct/11010000107/version/20261021</span> where constraint  = &lt;&lt; 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = 410656007 |Type (property) (qualifier value)|, 704319004 |Inheres in (attribute)| = &lt;&lt; 410607006 |Organism (organism)|</li></ul></div>
+  </text>
+  <url value="https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-organism-type"/>
+  <version value="2027.0.0-ballot2"/>
+  <name value="MII_VS_Mikrobio_LOINC_Ontology_Organism_Type"/>
+  <title value="MII VS Microbiology LOINC Ontology Organism Type"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2026-11-03"/>
+  <publisher value="Medizininformatik Initiative"/>
+  <contact>
+    <name value="Medizininformatik Initiative"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.medizininformatik-initiative.de"/>
+    </telecom>
+  </contact>
+  <description value="Proposal: LOINC codes of the microbiology request 'General determination: Typing — type of an organism (serotype, genotype, biotype)', computed by ECL over the LOINC Ontology 2026-10-21. Property = Type with an organism in 'Inheres in': serotyping, HBV/HCV genotype, biotype of an isolate. Sits between determination and susceptibility in the 2027 module (no own profile). Parts: LOINC enumeration (21, LOINC 2.83), LOINC Ontology observables without LOINC code (1), and the ECL as an intensional include. ECL: `&lt;&lt; 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = 410656007 |Type (property) (qualifier value)|, 704319004 |Inheres in (attribute)| = &lt;&lt; 410607006 |Organism (organism)|`"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Guidance for binding Observation.code of the MII microbiology request profiles to a computably defined LOINC set; accompanies ballot comments on 2027.0.0-ballot2. Generated, not hand-curated."/>
+  <copyright value="This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license."/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <version value="2.83"/>
+      <concept>
+        <code value="59846-6"/>
+      </concept>
+      <concept>
+        <code value="60528-7"/>
+      </concept>
+      <concept>
+        <code value="60546-9"/>
+      </concept>
+      <concept>
+        <code value="61112-9"/>
+      </concept>
+      <concept>
+        <code value="65756-9"/>
+      </concept>
+      <concept>
+        <code value="72412-0"/>
+      </concept>
+      <concept>
+        <code value="72413-8"/>
+      </concept>
+      <concept>
+        <code value="72482-3"/>
+      </concept>
+      <concept>
+        <code value="72483-1"/>
+      </concept>
+      <concept>
+        <code value="72484-9"/>
+      </concept>
+      <concept>
+        <code value="73658-7"/>
+      </concept>
+      <concept>
+        <code value="73659-5"/>
+      </concept>
+      <concept>
+        <code value="73666-0"/>
+      </concept>
+      <concept>
+        <code value="73671-0"/>
+      </concept>
+      <concept>
+        <code value="73672-8"/>
+      </concept>
+      <concept>
+        <code value="73673-6"/>
+      </concept>
+      <concept>
+        <code value="73702-3"/>
+      </concept>
+      <concept>
+        <code value="73733-8"/>
+      </concept>
+      <concept>
+        <code value="82512-5"/>
+      </concept>
+      <concept>
+        <code value="86732-5"/>
+      </concept>
+      <concept>
+        <code value="87962-7"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/11010000107/version/20261021"/>
+      <concept>
+        <code value="1285113001"/>
+        <display value="Type of antimicrobial resistant organism (observable entity)"/>
+      </concept>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <version value="http://snomed.info/sct/11010000107/version/20261021"/>
+      <filter>
+        <property value="constraint"/>
+        <op value="="/>
+        <value value="&lt;&lt; 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = 410656007 |Type (property) (qualifier value)|, 704319004 |Inheres in (attribute)| = &lt;&lt; 410607006 |Organism (organism)|"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

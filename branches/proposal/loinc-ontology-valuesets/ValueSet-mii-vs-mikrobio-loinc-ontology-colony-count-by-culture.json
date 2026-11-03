@@ -1,0 +1,73 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-loinc-ontology-colony-count-by-culture",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-loinc-ontology-colony-count-by-culture</b></p><a name=\"mii-vs-mikrobio-loinc-ontology-colony-count-by-culture\"> </a><a name=\"hcmii-vs-mikrobio-loinc-ontology-colony-count-by-culture\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.83\"> version &#x1F4CD;2.83</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/100906-7/\">100906-7</a></td><td style=\"color: #cccccc\">Bacteria [#/volume] in Urine by Culture</td></tr><tr><td><a href=\"https://loinc.org/105610-0/\">105610-0</a></td><td style=\"color: #cccccc\">Bacteria [#/volume] in Bronchoalveolar lavage by Culture</td></tr><tr><td><a href=\"https://loinc.org/106018-5/\">106018-5</a></td><td style=\"color: #cccccc\">Bacteria [#/volume] in Semen by Culture</td></tr><tr><td><a href=\"https://loinc.org/20696-1/\">20696-1</a></td><td style=\"color: #cccccc\">Bifidobacterium sp [#/volume] in Milk by Organism specific culture</td></tr></table></li><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/11010000107/version/20261021\"> version &#x1F4CD;http://snomed.info/sct/11010000107/version/20261021</span> where constraint  = &lt;&lt; 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118550005 |Number concentration (property) (qualifier value)| OR 705056007 |Logarithmic number concentration (property) (qualifier value)|), (246093002 |Component (attribute)| = &lt;&lt; 410607006 |Organism (organism)| OR 704319004 |Inheres in (attribute)| = &lt;&lt; 410607006 |Organism (organism)|), 246501002 |Technique (attribute)| = &lt;&lt; 703725008 |Culture technique (qualifier value)|</li></ul></div><div xml:lang=\"de\" lang=\"de\"><hr/><p><b>German</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-loinc-ontology-colony-count-by-culture</b></p><a name=\"de-mii-vs-mikrobio-loinc-ontology-colony-count-by-culture\"> </a><a name=\"de-hcmii-vs-mikrobio-loinc-ontology-colony-count-by-culture\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.83\"> version &#x1F4CD;2.83</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/100906-7/\">100906-7</a></td><td/></tr><tr><td><a href=\"https://loinc.org/105610-0/\">105610-0</a></td><td/></tr><tr><td><a href=\"https://loinc.org/106018-5/\">106018-5</a></td><td/></tr><tr><td><a href=\"https://loinc.org/20696-1/\">20696-1</a></td><td/></tr></table></li><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/11010000107/version/20261021\"> version &#x1F4CD;http://snomed.info/sct/11010000107/version/20261021</span> where constraint  = &lt;&lt; 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118550005 |Number concentration (property) (qualifier value)| OR 705056007 |Logarithmic number concentration (property) (qualifier value)|), (246093002 |Component (attribute)| = &lt;&lt; 410607006 |Organism (organism)| OR 704319004 |Inheres in (attribute)| = &lt;&lt; 410607006 |Organism (organism)|), 246501002 |Technique (attribute)| = &lt;&lt; 703725008 |Culture technique (qualifier value)|</li></ul></div></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-colony-count-by-culture",
+  "version" : "2027.0.0-ballot2",
+  "name" : "MII_VS_Mikrobio_LOINC_Ontology_Colony_Count_By_Culture",
+  "title" : "MII VS Microbiology LOINC Ontology Colony Count By Culture",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-11-03",
+  "publisher" : "Medizininformatik Initiative",
+  "_publisher" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "lang",
+        "valueCode" : "de"
+      },
+      {
+        "url" : "content",
+        "valueString" : "Medizininformatik Initiative"
+      }],
+      "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+    }]
+  },
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Proposal: LOINC codes of the microbiology request 'Colony count: Colony count — with culture technique asserted', computed by ECL over the LOINC Ontology 2026-10-21. Same, restricted to observables that assert a culture technique (viable counts). Zero on 2026-10-21: counts are modelled without technique. Parts: LOINC enumeration (4, LOINC 2.83), LOINC Ontology observables without LOINC code (0), and the ECL as an intensional include. ECL: `<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118550005 |Number concentration (property) (qualifier value)| OR 705056007 |Logarithmic number concentration (property) (qualifier value)|), (246093002 |Component (attribute)| = << 410607006 |Organism (organism)| OR 704319004 |Inheres in (attribute)| = << 410607006 |Organism (organism)|), 246501002 |Technique (attribute)| = << 703725008 |Culture technique (qualifier value)|`",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Guidance for binding Observation.code of the MII microbiology request profiles to a computably defined LOINC set; accompanies ballot comments on 2027.0.0-ballot2. Generated, not hand-curated.",
+  "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.83",
+      "concept" : [{
+        "code" : "100906-7"
+      },
+      {
+        "code" : "105610-0"
+      },
+      {
+        "code" : "106018-5"
+      },
+      {
+        "code" : "20696-1"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/11010000107/version/20261021",
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118550005 |Number concentration (property) (qualifier value)| OR 705056007 |Logarithmic number concentration (property) (qualifier value)|), (246093002 |Component (attribute)| = << 410607006 |Organism (organism)| OR 704319004 |Inheres in (attribute)| = << 410607006 |Organism (organism)|), 246501002 |Technique (attribute)| = << 703725008 |Culture technique (qualifier value)|"
+      }]
+    }]
+  }
+}

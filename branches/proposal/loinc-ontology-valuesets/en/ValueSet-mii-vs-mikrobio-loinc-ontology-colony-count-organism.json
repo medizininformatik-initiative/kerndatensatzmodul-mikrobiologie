@@ -1,0 +1,97 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "mii-vs-mikrobio-loinc-ontology-colony-count-organism",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mii-vs-mikrobio-loinc-ontology-colony-count-organism</b></p><a name=\"mii-vs-mikrobio-loinc-ontology-colony-count-organism\"> </a><a name=\"hcmii-vs-mikrobio-loinc-ontology-colony-count-organism\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a><span title=\"Version is explicitly stated to be 2.83\"> version &#x1F4CD;2.83</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/100906-7/\">100906-7</a></td><td style=\"color: #cccccc\">Bacteria [#/volume] in Urine by Culture</td></tr><tr><td><a href=\"https://loinc.org/105610-0/\">105610-0</a></td><td style=\"color: #cccccc\">Bacteria [#/volume] in Bronchoalveolar lavage by Culture</td></tr><tr><td><a href=\"https://loinc.org/105907-0/\">105907-0</a></td><td style=\"color: #cccccc\">Bacteria [#/volume] in Urine</td></tr><tr><td><a href=\"https://loinc.org/106018-5/\">106018-5</a></td><td style=\"color: #cccccc\">Bacteria [#/volume] in Semen by Culture</td></tr><tr><td><a href=\"https://loinc.org/20695-3/\">20695-3</a></td><td style=\"color: #cccccc\">Bacteria [#/volume] in Mother's milk</td></tr><tr><td><a href=\"https://loinc.org/20696-1/\">20696-1</a></td><td style=\"color: #cccccc\">Bifidobacterium sp [#/volume] in Milk by Organism specific culture</td></tr><tr><td><a href=\"https://loinc.org/20769-6/\">20769-6</a></td><td style=\"color: #cccccc\">Coliform bacteria [#/volume] in Water by Viability count</td></tr><tr><td><a href=\"https://loinc.org/20770-4/\">20770-4</a></td><td style=\"color: #cccccc\">Coliform bacteria [#/volume] by Viability count</td></tr><tr><td><a href=\"https://loinc.org/34890-4/\">34890-4</a></td><td style=\"color: #cccccc\">Coliform bacteria [#/volume] in Specimen by Viability count</td></tr><tr><td><a href=\"https://loinc.org/43161-9/\">43161-9</a></td><td style=\"color: #cccccc\">Microorganism [#/volume] in Specimen by Viability count</td></tr><tr><td><a href=\"https://loinc.org/51480-2/\">51480-2</a></td><td style=\"color: #cccccc\">Bacteria [#/volume] in Urine by Automated count</td></tr><tr><td><a href=\"https://loinc.org/51481-0/\">51481-0</a></td><td style=\"color: #cccccc\">Yeast [#/volume] in Urine by Automated count</td></tr><tr><td><a href=\"https://loinc.org/53266-3/\">53266-3</a></td><td style=\"color: #cccccc\">Yeast.budding [#/volume] in Urine by Computer assisted method</td></tr><tr><td><a href=\"https://loinc.org/53355-4/\">53355-4</a></td><td style=\"color: #cccccc\">Trichomonas sp [#/volume] in Urine by Computer assisted method</td></tr><tr><td><a href=\"https://loinc.org/87317-4/\">87317-4</a></td><td style=\"color: #cccccc\">Escherichia coli [#/volume] in Water by Viability count</td></tr><tr><td><a href=\"https://loinc.org/99923-5/\">99923-5</a></td><td style=\"color: #cccccc\">Schistosoma haematobium [#/volume] in Urine sediment by Computer assisted method</td></tr></table></li><li>Include codes from<a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is explicitly stated to be http://snomed.info/sct/11010000107/version/20261021\"> version &#x1F4CD;http://snomed.info/sct/11010000107/version/20261021</span> where constraint  = &lt;&lt; 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118550005 |Number concentration (property) (qualifier value)| OR 705056007 |Logarithmic number concentration (property) (qualifier value)|), (246093002 |Component (attribute)| = &lt;&lt; 410607006 |Organism (organism)| OR 704319004 |Inheres in (attribute)| = &lt;&lt; 410607006 |Organism (organism)|)</li></ul></div>"
+  },
+  "url" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-colony-count-organism",
+  "version" : "2027.0.0-ballot2",
+  "name" : "MII_VS_Mikrobio_LOINC_Ontology_Colony_Count_Organism",
+  "title" : "MII VS Microbiology LOINC Ontology Colony Count Organism",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-11-03",
+  "publisher" : "Medizininformatik Initiative",
+  "contact" : [{
+    "name" : "Medizininformatik Initiative",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.medizininformatik-initiative.de"
+    }]
+  }],
+  "description" : "Proposal: LOINC codes of the microbiology request 'Colony count: Colony count — number concentration of an organism', computed by ECL over the LOINC Ontology 2026-10-21. Number concentration or logarithmic number concentration where the counted entity is an organism (Component or Inheres in). Parts: LOINC enumeration (16, LOINC 2.83), LOINC Ontology observables without LOINC code (0), and the ECL as an intensional include. ECL: `<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118550005 |Number concentration (property) (qualifier value)| OR 705056007 |Logarithmic number concentration (property) (qualifier value)|), (246093002 |Component (attribute)| = << 410607006 |Organism (organism)| OR 704319004 |Inheres in (attribute)| = << 410607006 |Organism (organism)|)`",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "purpose" : "Guidance for binding Observation.code of the MII microbiology request profiles to a computably defined LOINC set; accompanies ballot comments on 2027.0.0-ballot2. Generated, not hand-curated.",
+  "copyright" : "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.83",
+      "concept" : [{
+        "code" : "100906-7"
+      },
+      {
+        "code" : "105610-0"
+      },
+      {
+        "code" : "105907-0"
+      },
+      {
+        "code" : "106018-5"
+      },
+      {
+        "code" : "20695-3"
+      },
+      {
+        "code" : "20696-1"
+      },
+      {
+        "code" : "20769-6"
+      },
+      {
+        "code" : "20770-4"
+      },
+      {
+        "code" : "34890-4"
+      },
+      {
+        "code" : "43161-9"
+      },
+      {
+        "code" : "51480-2"
+      },
+      {
+        "code" : "51481-0"
+      },
+      {
+        "code" : "53266-3"
+      },
+      {
+        "code" : "53355-4"
+      },
+      {
+        "code" : "87317-4"
+      },
+      {
+        "code" : "99923-5"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/11010000107/version/20261021",
+      "filter" : [{
+        "property" : "constraint",
+        "op" : "=",
+        "value" : "<< 363787002 |Observable entity (observable entity)| : 370130000 |Property (attribute)| = (118550005 |Number concentration (property) (qualifier value)| OR 705056007 |Logarithmic number concentration (property) (qualifier value)|), (246093002 |Component (attribute)| = << 410607006 |Organism (organism)| OR 704319004 |Inheres in (attribute)| = << 410607006 |Organism (organism)|)"
+      }]
+    }]
+  }
+}
