@@ -30,7 +30,9 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).
 | ValueSet | Zweck |
 |---|---|
 {%- for r in site.data.resources %}
-{%- if r[0] contains 'ValueSet/mii-vs-' %}
+{%- if r[0] contains 'ValueSet/mii-vs-' and r[0] contains 'loinc-ontology' == false %}
 | [{{ r[1].title | replace: '[', '' | replace: ']', '' }}]({{ r[1].path }}) | {{ r[1].description | default: '&mdash;' }} |
 {%- endif %}
 {%- endfor %}
+
+Die ValueSets unter [LOINC-Ontology-ValueSets (Vorschlag)](loinc-ontology-valuesets.html) sind ein generierter Vorschlag zu den Ballot-Kommentaren, kein normativer Inhalt des Moduls; sie sind dort aufgeführt, nicht in der Tabelle oben.

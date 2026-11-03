@@ -1,0 +1,94 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Mikrobio_LOINC_Ontology_Resistant_Organism_Any_Property",
+  "id": "mii-vs-mikrobio-loinc-ontology-resistant-organism-any-property",
+  "title": "MII VS Microbiology LOINC Ontology Resistant Organism Any Property",
+  "description": "Proposal: LOINC codes of the microbiology request 'Resistant organisms and resistance mechanisms: Resistant organism — any observable about a resistant organism (upper bound)', computed by ECL over the LOINC Ontology 2026-10-21. Every observable whose Component or Inheres in is an antimicrobial resistant organism, any property (identity, threshold, counts, type). Parts: LOINC enumeration (16, LOINC 2.83), LOINC Ontology observables without LOINC code (0), and the ECL as an intensional include. ECL: `<< 363787002 |Observable entity (observable entity)| : (246093002 |Component (attribute)| = << 409793007 |Antimicrobial resistant bacteria (organism)| OR 704319004 |Inheres in (attribute)| = << 409793007 |Antimicrobial resistant bacteria (organism)|)`",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-resistant-organism-any-property",
+  "version": "2027.0.0-ballot2",
+  "experimental": true,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "date": "2026-11-03",
+  "purpose": "Guidance for binding Observation.code of the MII microbiology request profiles to a computably defined LOINC set; accompanies ballot comments on 2027.0.0-ballot2. Generated, not hand-curated.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.83",
+        "concept": [
+          {
+            "code": "100907-5"
+          },
+          {
+            "code": "105904-7"
+          },
+          {
+            "code": "106044-1"
+          },
+          {
+            "code": "106046-6"
+          },
+          {
+            "code": "13316-5"
+          },
+          {
+            "code": "13317-3"
+          },
+          {
+            "code": "52969-3"
+          },
+          {
+            "code": "53572-4"
+          },
+          {
+            "code": "59150-3"
+          },
+          {
+            "code": "59151-1"
+          },
+          {
+            "code": "63480-8"
+          },
+          {
+            "code": "73834-4"
+          },
+          {
+            "code": "73836-9"
+          },
+          {
+            "code": "76081-9"
+          },
+          {
+            "code": "77924-9"
+          },
+          {
+            "code": "94151-8"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/11010000107/version/20261021",
+        "filter": [
+          {
+            "property": "constraint",
+            "op": "=",
+            "value": "<< 363787002 |Observable entity (observable entity)| : (246093002 |Component (attribute)| = << 409793007 |Antimicrobial resistant bacteria (organism)| OR 704319004 |Inheres in (attribute)| = << 409793007 |Antimicrobial resistant bacteria (organism)|)"
+          }
+        ]
+      }
+    ]
+  }
+}

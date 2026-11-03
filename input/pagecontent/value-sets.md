@@ -31,7 +31,9 @@ ValueSets may not expand completely).
 | ValueSet | Purpose |
 |---|---|
 {%- for r in site.data.resources %}
-{%- if r[0] contains 'ValueSet/mii-vs-' %}
+{%- if r[0] contains 'ValueSet/mii-vs-' and r[0] contains 'loinc-ontology' == false %}
 | [{{ r[1].title | replace: '[', '' | replace: ']', '' }}]({{ r[1].path }}) | {{ r[1].description | default: '&mdash;' }} |
 {%- endif %}
 {%- endfor %}
+
+The ValueSets under [LOINC Ontology ValueSets (Proposal)](loinc-ontology-valuesets.html) are a generated proposal accompanying the ballot comments, not part of the module's normative content; they are listed there, not in the table above.

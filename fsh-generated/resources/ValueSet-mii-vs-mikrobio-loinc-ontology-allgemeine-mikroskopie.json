@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "MII_VS_Mikrobio_LOINC_Ontology_Allgemeine_Mikroskopie",
+  "id": "mii-vs-mikrobio-loinc-ontology-allgemeine-mikroskopie",
+  "title": "MII VS Microbiology LOINC Ontology General microscopy",
+  "description": "Proposal: union of the request ValueSets that together cover the module profile MII_PR_Mikrobio_Allgemeine_Mikroskopie (General microscopy), each computed by ECL over the LOINC Ontology 2026-10-21: MII_VS_Mikrobio_LOINC_Ontology_General_Microscopy_By_Technique, MII_VS_Mikrobio_LOINC_Ontology_General_Microscopy_Finding_In_Specimen.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-allgemeine-mikroskopie",
+  "version": "2027.0.0-ballot2",
+  "experimental": true,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "copyright": "This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license.",
+  "date": "2026-11-03",
+  "purpose": "Binding ValueSet for the derived profile MII_PR_Mikrobio_LOINC_Ontology_Allgemeine_Mikroskopie; accompanies ballot comments on 2027.0.0-ballot2. Generated, not hand-curated.",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-general-microscopy-by-technique"
+        ]
+      },
+      {
+        "valueSet": [
+          "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-loinc-ontology-general-microscopy-in-specimen"
+        ]
+      }
+    ]
+  }
+}
