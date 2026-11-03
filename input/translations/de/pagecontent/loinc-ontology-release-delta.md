@@ -42,9 +42,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 
 ### Konzepte je Regel
 
-### Allgemeine Kultur — Allgemeine Kultur — Erregeridentität durch Kulturtechnik
+### Allgemeine Kultur — Erregeridentität durch Kulturtechnik
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-general-culture-identity.html)
+[Allgemeine Kultur](loinc-ontology-request-allgemeine-kultur.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-general-culture-identity.html)
 
 **Neu in 2026-10-21** (15)
 
@@ -66,9 +66,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 87986-6 | 903351010000109 | Presence or identity of Leishmania in bone marrow at point in time by organism specific culture (observable entity) |
 | 87987-4 | 903361010000106 | Presence or identity of Leishmania in blood at point in time by organism specific culture (observable entity) |
 
-### Allgemeine Kultur — Gezielte Kultur — Threshold-Presence eines benannten Erregers durch Kulturtechnik
+### Gezielte Kultur — Threshold-Presence eines benannten Erregers durch Kulturtechnik
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-specific-culture-threshold.html)
+[Allgemeine Kultur](loinc-ontology-request-allgemeine-kultur.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-specific-culture-threshold.html)
 
 **Neu in 2026-10-21** (1)
 
@@ -76,9 +76,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 |---|---|---|
 | 112888-3 | 884821010000102 | Threshold presence of Neisseria gonorrhoeae in penis at point in time by organism specific culture (observable entity) |
 
-### Allgemeine Kultur — Alles durch Kulturtechnik (Obergrenze)
+### Alles durch Kulturtechnik (Obergrenze)
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-culture-any-property.html)
+[Allgemeine Kultur](loinc-ontology-request-allgemeine-kultur.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-culture-any-property.html)
 
 **Neu in 2026-10-21** (16)
 
@@ -101,9 +101,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 87986-6 | 903351010000109 | Presence or identity of Leishmania in bone marrow at point in time by organism specific culture (observable entity) |
 | 87987-4 | 903361010000106 | Presence or identity of Leishmania in blood at point in time by organism specific culture (observable entity) |
 
-### Allgemeine Bestimmung — Allgemeine Bestimmung — Erregeridentität, beliebige Technik
+### Allgemeine Bestimmung — Erregeridentität, beliebige Technik
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-organism-identity-any-technique.html)
+[Allgemeine Bestimmung](loinc-ontology-request-allgemeine-bestimmung.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-organism-identity-any-technique.html)
 
 **Neu in 2026-10-21** (24)
 
@@ -134,9 +134,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 87986-6 | 903351010000109 | Presence or identity of Leishmania in bone marrow at point in time by organism specific culture (observable entity) |
 | 87987-4 | 903361010000106 | Presence or identity of Leishmania in blood at point in time by organism specific culture (observable entity) |
 
-### Allgemeine Bestimmung — Allgemeine Bestimmung — methodenneutrale Identitätscodes
+### Allgemeine Bestimmung — methodenneutrale Identitätscodes
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-organism-identity-no-technique.html)
+[Allgemeine Bestimmung](loinc-ontology-request-allgemeine-bestimmung.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-organism-identity-no-technique.html)
 
 **Neu in 2026-10-21** (2)
 
@@ -145,9 +145,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 23162-1 | 902181010000106 | Presence or identity of Leishmania in tissue at point in time by PAGE (observable entity) |
 | 53625-0 | 902971010000106 | Presence or identity of Leishmania in tissue at point in time (observable entity) |
 
-### Spezifische Bestimmung — Nukleinsäurenachweis — beliebige oder keine Technik
+### Nukleinsäurenachweis — beliebige oder keine Technik
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-naa-detection-any-technique.html)
+[Spezifische Bestimmung](loinc-ontology-request-spezifische-bestimmung.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-naa-detection-any-technique.html)
 
 **Neu in 2026-10-21** (586)
 
@@ -746,9 +746,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 |---|---|---|
 | 105085-5 | 484201010000101 | Presence of Neisseria gonorrhoeae rRNA in specimen at point in time (observable entity) |
 
-### Spezifische Bestimmung — Nukleinsäurenachweis — Amplifikationstechnik ausgewiesen
+### Nukleinsäurenachweis — Amplifikationstechnik ausgewiesen
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-naa-detection-amplification.html)
+[Spezifische Bestimmung](loinc-ontology-request-spezifische-bestimmung.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-naa-detection-amplification.html)
 
 **Neu in 2026-10-21** (38)
 
@@ -793,9 +793,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 115796-5 | 901621010000105 | Threshold presence of Human papillomavirus 18 DNA in vagina at point in time by probe with target amplification (observable entity) |
 | 115798-1 | 901641010000100 | Threshold presence of Human papillomavirus 16 DNA in vagina at point in time by probe with target amplification (observable entity) |
 
-### Spezifische Bestimmung — Nukleinsäurenachweis — keine Technik modelliert
+### Nukleinsäurenachweis — keine Technik modelliert
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-naa-detection-no-technique.html)
+[Spezifische Bestimmung](loinc-ontology-request-spezifische-bestimmung.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-naa-detection-no-technique.html)
 
 **Neu in 2026-10-21** (19)
 
@@ -845,9 +845,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 105898-1 | 485801010000103 | Presence of Human polyomavirus 1 DNA in specimen at point in time (observable entity) |
 | 105909-6 | 485881010000105 | Presence of severe acute respiratory syndrome coronavirus 2 RNA in specimen at point in time (observable entity) |
 
-### Spezifische Bestimmung — Gezielter Kulturnachweis — erregerspezifische Kulturtechnik
+### Gezielter Kulturnachweis — erregerspezifische Kulturtechnik
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-specific-culture-detection.html)
+[Spezifische Bestimmung](loinc-ontology-request-spezifische-bestimmung.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-specific-culture-detection.html)
 
 **Neu in 2026-10-21** (1)
 
@@ -855,9 +855,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 |---|---|---|
 | 112888-3 | 884821010000102 | Threshold presence of Neisseria gonorrhoeae in penis at point in time by organism specific culture (observable entity) |
 
-### Spezifische Bestimmung — Antigennachweis — Threshold-Presence eines mikrobiellen Antigens
+### Antigennachweis — Threshold-Presence eines mikrobiellen Antigens
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-antigen-detection-threshold.html)
+[Spezifische Bestimmung](loinc-ontology-request-spezifische-bestimmung.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-antigen-detection-threshold.html)
 
 **Neu in 2026-10-21** (1)
 
@@ -865,9 +865,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 |---|---|---|
 | 115347-7 | 900621010000103 | Threshold presence of Orthobornavirus bornaense antigen in specimen at point in time by molecular genetics (observable entity) |
 
-### Mikroskopie — Allgemeine Mikroskopie — nominaler Befund durch Mikroskopie- oder Färbetechnik
+### Allgemeine Mikroskopie — nominaler Befund durch Mikroskopie- oder Färbetechnik
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-general-microscopy-by-technique.html)
+[Mikroskopie](loinc-ontology-request-mikroskopie.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-general-microscopy-by-technique.html)
 
 **Neu in 2026-10-21** (7)
 
@@ -881,9 +881,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 113056-6 | 885181010000109 | Presence or identity of Gram-positive bacteria in peritoneal fluid at point in time by Gram stain (observable entity) |
 | 51709-4 | 902951010000103 | Presence or identity of Leishmania in specimen at point in time by Giemsa stain (observable entity) |
 
-### Mikroskopie — Allgemeine Mikroskopie — methodenneutrales Muster „Befund im Material“
+### Allgemeine Mikroskopie — methodenneutrales Muster „Befund im Material“
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-general-microscopy-in-specimen.html)
+[Mikroskopie](loinc-ontology-request-mikroskopie.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-general-microscopy-in-specimen.html)
 
 **Neu in 2026-10-21** (2)
 
@@ -892,9 +892,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 112887-5 | 884811010000108 | Microscopic observation of finding in specimen from penis at point in time by Gram stain (observable entity) |
 | 113008-7 | 885021010000109 | Microscopic observation of finding in drain device submitted as specimen at point in time by Gram stain (observable entity) |
 
-### Mikroskopie — Spezifische Mikroskopie — ordinale Threshold-Presence durch Mikroskopie- oder Färbetechnik
+### Spezifische Mikroskopie — ordinale Threshold-Presence durch Mikroskopie- oder Färbetechnik
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-specific-microscopy-threshold.html)
+[Mikroskopie](loinc-ontology-request-mikroskopie.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-specific-microscopy-threshold.html)
 
 **Neu in 2026-10-21** (16)
 
@@ -923,9 +923,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 |---|---|---|
 | 107527-4 | 710541010000101 | Presence of clue cell in vagina at point in time by Gram stain (observable entity) |
 
-### Empfindlichkeit — Phänotypische Empfindlichkeit — Isolat, keine Genotypisierung
+### Phänotypische Empfindlichkeit — Isolat, keine Genotypisierung
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-susceptibility-phenotype.html)
+[Empfindlichkeit](loinc-ontology-request-empfindlichkeit.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-susceptibility-phenotype.html)
 
 **Neu in 2026-10-21** (3)
 
@@ -935,9 +935,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 58085-2 | 903161010000108 | Susceptibility to penicillin in microbial isolate at point in time by parenteral (observable entity) |
 | 77960-3 | 903311010000108 | Susceptibility to penicillin in microbial isolate at point in time by agar diffusion.Parenteral (observable entity) |
 
-### Empfindlichkeit — Alle Empfindlichkeits-Observables (Obergrenze)
+### Alle Empfindlichkeits-Observables (Obergrenze)
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-susceptibility-all.html)
+[Empfindlichkeit](loinc-ontology-request-empfindlichkeit.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-susceptibility-all.html)
 
 **Neu in 2026-10-21** (5)
 
@@ -949,9 +949,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 58085-2 | 903161010000108 | Susceptibility to penicillin in microbial isolate at point in time by parenteral (observable entity) |
 | 77960-3 | 903311010000108 | Susceptibility to penicillin in microbial isolate at point in time by agar diffusion.Parenteral (observable entity) |
 
-### Ct-Wert — Ct-Wert — alle Threshold-number-Observables (Obergrenze)
+### Ct-Wert — alle Threshold-number-Observables (Obergrenze)
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-ct-value-any.html)
+[Ct-Wert](loinc-ontology-request-ct-wert.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-ct-value-any.html)
 
 **Neu in 2026-10-21** (1)
 
@@ -959,22 +959,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 |---|---|---|
 | 92002-5 | 903401010000103 | Threshold number of SMN1 gene in dried blood spot at point in time by probe with target amplification (observable entity) |
 
-### Molekulare Pathogenlast — Pathogenlast — quantitative mikrobielle Nukleinsäure, beliebige Technik
+### Pathogenlast — quantitative mikrobielle Nukleinsäure, beliebige Technik
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-pathogen-load-any-technique.html)
-
-**Neu in 2026-10-21** (4)
-
-| LOINC | SCTID | FSN |
-|---|---|---|
-| 112751-3 | 884481010000100 | Number concentration of West Nile virus RNA in plasma at point in time by probe with target amplification (observable entity) |
-| 112752-1 | 884491010000102 | Number concentration of West Nile virus RNA in specimen at point in time by probe with target amplification (observable entity) |
-| 112753-9 | 884501010000108 | Arbitrary concentration of Cytomegalovirus DNA in amniotic fluid at point in time by probe with target amplification (observable entity) |
-| 115802-1 | 901651010000103 | Logarithmic arbitrary concentration of Human immunodeficiency virus 1 RNA in serum or plasma at point in time by probe with target amplification (observable entity) |
-
-### Molekulare Pathogenlast — Pathogenlast — Amplifikationstechnik ausgewiesen
-
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-pathogen-load-amplification.html)
+[Molekulare Pathogenlast](loinc-ontology-request-molekulare-pathogenlast.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-pathogen-load-any-technique.html)
 
 **Neu in 2026-10-21** (4)
 
@@ -985,9 +972,22 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 112753-9 | 884501010000108 | Arbitrary concentration of Cytomegalovirus DNA in amniotic fluid at point in time by probe with target amplification (observable entity) |
 | 115802-1 | 901651010000103 | Logarithmic arbitrary concentration of Human immunodeficiency virus 1 RNA in serum or plasma at point in time by probe with target amplification (observable entity) |
 
-### Antigen/Antikörper quantitativ — Serologie quantitativ — Konzentration eines Erreger-Antikörpers oder -Antigens
+### Pathogenlast — Amplifikationstechnik ausgewiesen
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-ab-ag-quantitative.html)
+[Molekulare Pathogenlast](loinc-ontology-request-molekulare-pathogenlast.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-pathogen-load-amplification.html)
+
+**Neu in 2026-10-21** (4)
+
+| LOINC | SCTID | FSN |
+|---|---|---|
+| 112751-3 | 884481010000100 | Number concentration of West Nile virus RNA in plasma at point in time by probe with target amplification (observable entity) |
+| 112752-1 | 884491010000102 | Number concentration of West Nile virus RNA in specimen at point in time by probe with target amplification (observable entity) |
+| 112753-9 | 884501010000108 | Arbitrary concentration of Cytomegalovirus DNA in amniotic fluid at point in time by probe with target amplification (observable entity) |
+| 115802-1 | 901651010000103 | Logarithmic arbitrary concentration of Human immunodeficiency virus 1 RNA in serum or plasma at point in time by probe with target amplification (observable entity) |
+
+### Serologie quantitativ — Konzentration eines Erreger-Antikörpers oder -Antigens
+
+[Antigen/Antikörper quantitativ](loinc-ontology-request-antigen-antikoerper-quantitativ.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-ab-ag-quantitative.html)
 
 **Neu in 2026-10-21** (43)
 
@@ -1037,9 +1037,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 7507-7 | 755751010000108 | Arbitrary concentration of Mucor racemosus IgG in serum at point in time (observable entity) |
 | 7638-0 | 756331010000105 | Arbitrary concentration of Pullularia IgG in serum at point in time (observable entity) |
 
-### Antigen/Antikörper quantitativ — Serologie qualitativ — Threshold-Presence eines Erreger-Antikörpers oder -Antigens
+### Serologie qualitativ — Threshold-Presence eines Erreger-Antikörpers oder -Antigens
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-ab-ag-threshold.html)
+[Antigen/Antikörper quantitativ](loinc-ontology-request-antigen-antikoerper-quantitativ.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-ab-ag-threshold.html)
 
 **Neu in 2026-10-21** (27)
 
@@ -1073,9 +1073,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 95543-5 | 762721010000104 | Threshold presence of Aspergillus terreus IgG in serum at point in time (observable entity) |
 | 96507-9 | 763061010000103 | Threshold presence of California encephalitis virus IgG in specimen at point in time by immunoassay (observable entity) |
 
-### Titer — Titer — Erreger-Antikörpertiter
+### Titer — Erreger-Antikörpertiter
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-titer-infective-antibody.html)
+[Titer](loinc-ontology-request-titer.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-titer-infective-antibody.html)
 
 **Neu in 2026-10-21** (4)
 
@@ -1086,9 +1086,9 @@ Diese Seite zeigt, was das Release **2026-10-21** der LOINC Ontology für jede R
 | 49140-7 | 743291010000106 | Titer of California encephalitis virus IgG in serum at point in time by immunofluorescence (observable entity) |
 | 49194-4 | 743301010000107 | Titer of California encephalitis virus IgG in cerebrospinal fluid at point in time (observable entity) |
 
-### Titer — Titer — alle Titer-Observables (Obergrenze)
+### Titer — alle Titer-Observables (Obergrenze)
 
-[ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-titer-any.html)
+[Titer](loinc-ontology-request-titer.html) · [ValueSet](ValueSet-mii-vs-mikrobio-loinc-ontology-titer-any.html)
 
 **Neu in 2026-10-21** (2)
 
