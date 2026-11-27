@@ -7,11 +7,13 @@ Die Beispielinstanzen dieses Moduls, nach Profil gruppiert.
 
 - [mii-exa-mikrobio-allgemeine-bestimmung](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html)
 - [mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html)
+- [mii-exa-mikrobio-workflow-urin-02-identifikation](Observation-mii-exa-mikrobio-workflow-urin-02-identifikation.html)
 
 **[Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html)**
 
 - [mii-exa-mikrobio-allgemeine-kultur](Observation-mii-exa-mikrobio-allgemeine-kultur.html)
 - [mii-exa-mikrobio-allgemeine-kultur-methodenneutral](Observation-mii-exa-mikrobio-allgemeine-kultur-methodenneutral.html)
+- [mii-exa-mikrobio-workflow-urin-01-kultur](Observation-mii-exa-mikrobio-workflow-urin-01-kultur.html)
 
 **[Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html)**
 
@@ -43,17 +45,23 @@ Die Beispielinstanzen dieses Moduls, nach Profil gruppiert.
 - [mii-exa-mikrobio-empfindlichkeit](Observation-mii-exa-mikrobio-empfindlichkeit.html)
 - [mii-exa-mikrobio-empfindlichkeit-nur-kategorie](Observation-mii-exa-mikrobio-empfindlichkeit-nur-kategorie.html)
 - [mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html)
+- [mii-exa-mikrobio-workflow-urin-04-piperacillin](Observation-mii-exa-mikrobio-workflow-urin-04-piperacillin.html)
+- [mii-exa-mikrobio-workflow-urin-04-cefotaxim](Observation-mii-exa-mikrobio-workflow-urin-04-cefotaxim.html)
+- [mii-exa-mikrobio-workflow-urin-04-ciprofloxacin](Observation-mii-exa-mikrobio-workflow-urin-04-ciprofloxacin.html)
+- [mii-exa-mikrobio-workflow-urin-04-meropenem](Observation-mii-exa-mikrobio-workflow-urin-04-meropenem.html)
 
 **[Keimzahl](StructureDefinition-mii-pr-mikrobio-keimzahl.html)**
 
 - [mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.html)
 - [mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html)
 - [mii-exa-mikrobio-keimzahl-semiquantitativ](Observation-mii-exa-mikrobio-keimzahl-semiquantitativ.html)
+- [mii-exa-mikrobio-workflow-urin-03-keimzahl](Observation-mii-exa-mikrobio-workflow-urin-03-keimzahl.html)
 
 **[MRGN Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html)**
 
 - [mii-exa-mikrobio-mrgn-klasse](Observation-mii-exa-mikrobio-mrgn-klasse.html)
 - [mii-exa-mikrobio-mrgn-klasse-negativ](Observation-mii-exa-mikrobio-mrgn-klasse-negativ.html)
+- [mii-exa-mikrobio-workflow-urin-05-mrgn-klasse](Observation-mii-exa-mikrobio-workflow-urin-05-mrgn-klasse.html)
 
 **[Molekulare Pathogenlast](StructureDefinition-mii-pr-mikrobio-molekulare-pathogenlast.html)**
 
@@ -104,3 +112,5 @@ Die Beispielinstanzen dieses Moduls, nach Profil gruppiert.
 - [mii-exa-mikrobio-patient](Patient-mii-exa-mikrobio-patient.html)
 - [mii-exa-mikrobio-probe](Specimen-mii-exa-mikrobio-probe.html)
 - [mii-exa-mikrobio-probe-katheterspitze](Specimen-mii-exa-mikrobio-probe-katheterspitze.html)
+- [mii-exa-mikrobio-probe-urin](Specimen-mii-exa-mikrobio-probe-urin.html)
+- [mii-exa-mikrobio-probe-urin-isolat](Specimen-mii-exa-mikrobio-probe-urin-isolat.html)

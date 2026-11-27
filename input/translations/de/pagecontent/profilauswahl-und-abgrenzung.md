@@ -398,3 +398,43 @@ Beispielkette, kultureller Nachweis:
 2. [mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html) — Identifizierung des Isolats
 3. [mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html) — Empfindlichkeit
 4. [mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html) — VRE-Status
+
+### Diagnostische Kette bei allgemeiner Kultur
+
+<a id="chain-general-culture"></a>
+
+Der häufigste Ablauf: Die Kultur zeigt Wachstum, die Identifizierung benennt den
+Erreger, Keimzahl und Empfindlichkeit beziehen sich auf ihn.
+
+```
+Allgemeine Kultur
+  z. B. 11475-1: Organism growth
+        │
+        │ triggeredBy (reflex)
+        ▼
+Identifizierung des gewachsenen Isolats (Allgemeine Bestimmung)
+  z. B. Escherichia coli, MALDI-TOF
+        │
+        ├── hasMember: Keimzahl, z. B. 10⁵ [CFU]/mL
+        │
+        │ triggeredBy (reflex)
+        ▼
+Empfindlichkeit, je Substanz eine Observation
+        │
+        │ derivedFrom (Identifizierung und Empfindlichkeiten)
+        ▼
+MRGN-Klasse
+  z. B. 3MRGN
+```
+
+Für die Zuordnung zum Erreger gelten die Regeln aus dem vorigen Abschnitt.
+
+Beispielkette, Urinkultur mit *Escherichia coli*:
+
+- Proben: [Urin](Specimen-mii-exa-mikrobio-probe-urin.html), [Isolat](Specimen-mii-exa-mikrobio-probe-urin-isolat.html)
+
+1. [Kultur](Observation-mii-exa-mikrobio-workflow-urin-01-kultur.html)
+2. [Identifizierung](Observation-mii-exa-mikrobio-workflow-urin-02-identifikation.html)
+3. [Keimzahl](Observation-mii-exa-mikrobio-workflow-urin-03-keimzahl.html)
+4. Empfindlichkeit: [Piperacillin](Observation-mii-exa-mikrobio-workflow-urin-04-piperacillin.html), [Cefotaxim](Observation-mii-exa-mikrobio-workflow-urin-04-cefotaxim.html), [Ciprofloxacin](Observation-mii-exa-mikrobio-workflow-urin-04-ciprofloxacin.html), [Meropenem](Observation-mii-exa-mikrobio-workflow-urin-04-meropenem.html)
+5. [MRGN-Klasse](Observation-mii-exa-mikrobio-workflow-urin-05-mrgn-klasse.html)

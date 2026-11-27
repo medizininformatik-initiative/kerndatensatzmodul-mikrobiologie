@@ -28,6 +28,8 @@
 [mii-exa-mikrobio-patient]: Patient-mii-exa-mikrobio-patient.html
 [mii-exa-mikrobio-probe]: Specimen-mii-exa-mikrobio-probe.html
 [mii-exa-mikrobio-probe-katheterspitze]: Specimen-mii-exa-mikrobio-probe-katheterspitze.html
+[mii-exa-mikrobio-probe-urin]: Specimen-mii-exa-mikrobio-probe-urin.html
+[mii-exa-mikrobio-probe-urin-isolat]: Specimen-mii-exa-mikrobio-probe-urin-isolat.html
 [mii-exa-mikrobio-resistenzkategorie-vre-negativ]: Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html
 [mii-exa-mikrobio-resistenzkategorie-vre-positiv]: Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html
 [mii-exa-mikrobio-resistenzmechanismen-determinanten]: Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html
@@ -42,6 +44,14 @@
 [mii-exa-mikrobio-titer]: Observation-mii-exa-mikrobio-titer.html
 [mii-exa-mikrobio-virulenzfaktor]: Observation-mii-exa-mikrobio-virulenzfaktor.html
 [mii-exa-mikrobio-voraussichtliche-empfindlichkeit]: Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html
+[mii-exa-mikrobio-workflow-urin-01-kultur]: Observation-mii-exa-mikrobio-workflow-urin-01-kultur.html
+[mii-exa-mikrobio-workflow-urin-02-identifikation]: Observation-mii-exa-mikrobio-workflow-urin-02-identifikation.html
+[mii-exa-mikrobio-workflow-urin-03-keimzahl]: Observation-mii-exa-mikrobio-workflow-urin-03-keimzahl.html
+[mii-exa-mikrobio-workflow-urin-04-cefotaxim]: Observation-mii-exa-mikrobio-workflow-urin-04-cefotaxim.html
+[mii-exa-mikrobio-workflow-urin-04-ciprofloxacin]: Observation-mii-exa-mikrobio-workflow-urin-04-ciprofloxacin.html
+[mii-exa-mikrobio-workflow-urin-04-meropenem]: Observation-mii-exa-mikrobio-workflow-urin-04-meropenem.html
+[mii-exa-mikrobio-workflow-urin-04-piperacillin]: Observation-mii-exa-mikrobio-workflow-urin-04-piperacillin.html
+[mii-exa-mikrobio-workflow-urin-05-mrgn-klasse]: Observation-mii-exa-mikrobio-workflow-urin-05-mrgn-klasse.html
 [mii-exa-mikrobio-workflow-vre-01-kultur]: Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html
 [mii-exa-mikrobio-workflow-vre-02-identifikation]: Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html
 [mii-exa-mikrobio-workflow-vre-03-empfindlichkeit]: Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html

@@ -14,8 +14,9 @@ Untersuchung —
 —, die über die `triggeredBy`-Extension mit `type = reflex` auf diese Kultur
 zurückverweist. Die Kultur selbst trägt keinen Verweis auf das, was ihr folgt;
 die Beziehung wird immer an der späteren Untersuchung angegeben.
-[Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html) zeigt die Kette
-im Ganzen.
+[Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html#chain-general-culture)
+zeigt die Kette im Ganzen, mit einem vollständigen Beispiel von der Urinkultur bis
+zur MRGN-Klasse.
 
 ### Beispiele
 

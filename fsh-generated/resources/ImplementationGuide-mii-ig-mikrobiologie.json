@@ -504,6 +504,22 @@
       },
       {
         "reference": {
+          "reference": "Specimen/mii-exa-mikrobio-probe-urin"
+        },
+        "name": "MII EXA Mikrobio Probe Urin",
+        "description": "Mittelstrahlurin, Probe der Workflow-Kette allgemeine Kultur.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-mikrobio-probe-urin-isolat"
+        },
+        "name": "MII EXA Mikrobio Probe Urin Isolat",
+        "description": "Isolat des Escherichia coli aus der Urinkultur, parent: Urinprobe.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-mikrobio-resistenzkategorie-vre-negativ"
         },
         "name": "MII EXA Mikrobio Resistenzkategorie VRE negativ",
@@ -613,6 +629,70 @@
         "name": "MII EXA Mikrobio Voraussichtliche Empfindlichkeit",
         "description": "Aus dem Genotyp abgeleitete erwartete Empfindlichkeit gegenüber Rifampicin.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-01-kultur"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 1 Kultur",
+        "description": "Workflow Urin, Schritt 1: aerobe Urinkultur mit Wachstum.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-02-identifikation"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 2 Identifikation",
+        "description": "Workflow Urin, Schritt 2: Escherichia coli per MALDI-TOF; führt die Keimzahl über hasMember.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-03-keimzahl"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 3 Keimzahl",
+        "description": "Workflow Urin, Schritt 3: Keimzahl des Escherichia coli, 10⁵ [CFU]/mL.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-04-cefotaxim"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 4 Cefotaxim",
+        "description": "Workflow Urin, Schritt 4: Cefotaxim-Empfindlichkeit des Escherichia coli, MHK 32 mg/L, R nach EUCAST.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-04-ciprofloxacin"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 4 Ciprofloxacin",
+        "description": "Workflow Urin, Schritt 4: Ciprofloxacin-Empfindlichkeit des Escherichia coli, MHK 4 mg/L, R nach EUCAST.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-04-meropenem"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 4 Meropenem",
+        "description": "Workflow Urin, Schritt 4: Meropenem-Empfindlichkeit des Escherichia coli, MHK ≤ 0,125 mg/L, S nach EUCAST.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-04-piperacillin"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 4 Piperacillin",
+        "description": "Workflow Urin, Schritt 4: Piperacillin-Empfindlichkeit des Escherichia coli, MHK > 64 mg/L, R nach EUCAST.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-05-mrgn-klasse"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 5 MRGN-Klasse",
+        "description": "Workflow Urin, Schritt 5: 3MRGN, abgeleitet aus Identifizierung und Empfindlichkeit.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
       },
       {
         "reference": {

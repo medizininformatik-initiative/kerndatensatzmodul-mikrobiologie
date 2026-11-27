@@ -1,0 +1,90 @@
+{
+  "resourceType": "Observation",
+  "id": "mii-exa-mikrobio-workflow-urin-03-keimzahl",
+  "meta": {
+    "profile": [
+      "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "OBI"
+          }
+        ]
+      },
+      "system": "https://example.org/fhir/sid/test-lab-results",
+      "value": "wf-urin-3",
+      "assigner": {
+        "reference": "Organization/mii-exa-mikrobio-labor"
+      }
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "laboratory",
+          "display": "Laboratory"
+        },
+        {
+          "code": "26436-6",
+          "system": "http://loinc.org",
+          "version": "2.83",
+          "display": "Laboratory studies (set)"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "code": "MB",
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074"
+        }
+      ]
+    }
+  ],
+  "performer": [
+    {
+      "reference": "Organization/mii-exa-mikrobio-labor"
+    }
+  ],
+  "valueQuantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 100000,
+    "code": "[CFU]/mL",
+    "unit": "[CFU]/mL"
+  },
+  "method": {
+    "coding": [
+      {
+        "code": "410681005",
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20260701",
+        "display": "Count of entities"
+      }
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "49223-1",
+        "system": "http://loinc.org",
+        "version": "2.83",
+        "display": "Colony count [#/volume] in Specimen by Visual count"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/mii-exa-mikrobio-patient"
+  },
+  "effectiveDateTime": "2026-05-05T08:00:00+01:00",
+  "specimen": {
+    "reference": "Specimen/mii-exa-mikrobio-probe-urin"
+  }
+}
