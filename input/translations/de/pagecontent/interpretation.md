@@ -19,16 +19,11 @@ Messwert fällt, zusammen mit der Norm, aus der sie abgeleitet wurde.
 Nicht jedes Labor misst. Liegt nur die Kategorie vor, wird sie als
 `CodeableConcept` in `value[x]` angegeben — das europäische Datenmodell legt das
 ausdrücklich so fest, und eine Observation ganz ohne Wert wäre die unüblichere
-Gestalt. Zwei Invarianten halten das eindeutig:
-
-- `empfindlichkeit-kategorie-braucht-interpretation` — eine Kategorie in
-  `value[x]` verlangt eine `interpretation`, weil die Norm dort hängt und eine
-  Kategorie ohne ihre Norm nichts aussagt.
-- `empfindlichkeit-kategorie-stimmt-mit-interpretation` — sind beide angegeben,
-  muss jeder Code des Werts auch unter den Interpretations-Codes vorkommen.
-
-Ein Konsument liest die Kategorie damit in jedem Fall aus `interpretation`, und
-`value[x]` sagt ihm, ob ein Messwert dahintersteht.
+Gestalt. Die Norm hängt dann am Wert selbst
+(`valueCodeableConcept.extension[Norm]`, verpflichtend), denn eine Kategorie ohne
+ihre Norm sagt nichts aus. Sind Wert und `interpretation` beide angegeben, nennen
+sie dieselbe Kategorie. Ein Konsument liest die Kategorie deshalb aus `value[x]`,
+wenn dort ein CodeableConcept steht, sonst aus `interpretation`.
 
 Der umgekehrte Fall — ein Messwert ohne Kategorie — wird von
 `empfindlichkeit-messwert-sollte-bewertet-sein` als **Warnung** gemeldet und
@@ -39,17 +34,24 @@ keine Kategorie, die man angeben könnte.
 
 ### Die Kategorien
 
-| Code | Bedeutung |
-|---|---|
-| `S` | sensibel |
-| `I` | intermediär |
-| `SDD` | sensibel, dosisabhängig |
-| `R` | resistent |
-| `NS` | nicht sensibel |
+In Deutschland wird überwiegend nach EUCAST bewertet.
 
-EUCAST hat `I` im Jahr 2019 neu definiert als *sensibel bei erhöhter Exposition*.
-Wo diese Lesart gemeint ist, drückt SNOMED CT `1306583007` sie ausdrücklich aus,
-statt `I` mehrdeutig zu lassen.
+| Code | Bedeutung nach EUCAST |
+|---|---|
+| `S` (v3) | sensibel bei Standardexposition |
+| `1306583007` (SNOMED CT) | sensibel bei erhöhter Exposition; das EUCAST-`I` seit 2019 |
+| `R` (v3) | resistent |
+
+EUCAST hat `I` 2019 neu definiert. Der v3-Code `I` kann das nicht ausdrücken,
+`1306583007` kann es.
+
+Wird nach CLSI bewertet, sind zusätzlich zulässig:
+
+| Code | Bedeutung nach CLSI |
+|---|---|
+| `I` (v3) | intermediär |
+| `SDD` (v3) | sensibel, dosisabhängig |
+| `NS` (v3) | nicht sensibel |
 
 ### Die Norm, auf der die Bewertung beruht
 
@@ -58,7 +60,7 @@ MHK ist unter der einen Norm sensibel und unter der anderen resistent, und
 Grenzwerte ändern sich von Jahr zu Jahr.
 
 Die Norm hängt deshalb an der **Bewertung**, nicht an der Observation —
-`Observation.interpretation.extension`, verpflichtend. Da `interpretation`
+`Observation.interpretation.extension`, verpflichtend, bzw. am Wert, wenn die Kategorie dort steht. Da `interpretation`
 `0..*` ist, kann eine einzige gemessene MHK eine EUCAST- und eine CLSI-Kategorie
 nebeneinander tragen, jede mit ihrer eigenen Norm. An der Observation hängend
 wäre das nicht möglich.
