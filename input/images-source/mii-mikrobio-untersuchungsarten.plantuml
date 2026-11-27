@@ -105,8 +105,8 @@ package "Bestimmung" {
   class "Spezifische Bestimmung" as SpezifischeBestimmung {
     Code: Spezifische_Bestimmung_Tests_LOINC
     Ergebnis: CodeableConcept — Spezifische_Bestimmung_Ergebnis_SNOMED
-    Menge: semiquantitativer Wert — MII Labor Laborergebnis_Semiquantitativ,
-           z. B. + für schwach positiv
+    Menge: semiquantitativer Wert — Nachweis_Menge_SNOMED,
+           gering / mäßig / hoch
     Methode: Spezifische_Bestimmung_Methode_SNOMED
   }
   class "Ct-Wert" as CtWert {

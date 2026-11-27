@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED
 Id: mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed
 Title: "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]"
-Description: "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit einem semiquantitativen Wert in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet."
+Description: "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit dem semiquantitativen Wert gering in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

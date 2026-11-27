@@ -1184,6 +1184,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-nachweis-menge-snomed"
+        },
+        "name": "MII VS Mikrobio Nachweis Menge [SNOMED]",
+        "description": "Semiquantitativer Wert eines Nachweises als geordnete Skala: gering, mäßig, hoch. Schwach positiv ist gering.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-organismen-snomedct"
         },
         "name": "MII VS Mikrobio Organismen [SNOMED CT]",
@@ -1227,7 +1235,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed"
         },
         "name": "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
-        "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit einem semiquantitativen Wert in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
+        "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit dem semiquantitativen Wert gering in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
         "exampleBoolean": false
       },
       {

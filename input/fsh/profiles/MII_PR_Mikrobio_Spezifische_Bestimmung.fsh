@@ -56,15 +56,17 @@ Description: "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines 
 // Gleicher Komponentencode wie MIKRO_MENGE_KOMPONENTE, aber kein insert: Die
 // Zaehlbegriffe der Mikroskopie (Few, Many) und die Zaehlung je Gesichtsfeld
 // passen hier nicht, und eine echte Quantifizierung ist eine Molekulare
-// Pathogenlast. Deshalb nur CodeableConcept und das ValueSet der Keimzahl
-// (+ bis ++++). Kein Display und keine Version im Pattern, siehe aliases.fsh.
+// Pathogenlast. Deshalb nur CodeableConcept und die geordnete Dreier-Skala
+// gering/maessig/hoch, die die fachliche Leitung am 2026-11-27 festgelegt hat
+// (MII_VS_Mikrobio_Nachweis_Menge_SNOMED, auch Teil des Mikroskopie-ValueSets).
+// Kein Display und keine Version im Pattern, siehe aliases.fsh.
 * component ^slicing.discriminator[0].type = #pattern
 * component ^slicing.discriminator[0].path = "$this.code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Slicing nach dem Komponenten-Code."
 * component contains menge 0..1 MS
-* component[menge] ^short = "Semiquantitativer Wert des Nachweises, z. B. 260347006 (+) für schwach positiv"
+* component[menge] ^short = "Semiquantitativer Wert des Nachweises: gering, mäßig oder hoch; schwach positiv ist 441614007."
 * component[menge] ^definition = "Wie viel des Ziels nachgewiesen wurde, als semiquantitativer Wert, wenn nicht quantifiziert wurde. Der Wert der Observation ist dann Detected."
 * component[menge].code = $sct-no-ver#103392008
 * component[menge].value[x] only CodeableConcept
-* component[menge].valueCodeableConcept from MII_VS_Labor_Laborergebnis_Semiquantitativ (extensible)
+* component[menge].valueCodeableConcept from MII_VS_Mikrobio_Nachweis_Menge_SNOMED (extensible)

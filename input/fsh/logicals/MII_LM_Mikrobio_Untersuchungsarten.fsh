@@ -61,7 +61,7 @@ Description: "Fachliche Ausprägungen der mikrobiologischen Untersuchung für di
   * SpezifischeBestimmung 0..* BackboneElement "Spezifische Bestimmung" "Qualitativer Nachweis eines vordefinierten mikrobiellen Ziels, kulturbasiert oder mittels molekularer, immunologischer oder biochemischer Verfahren. Das eingesetzte Verfahren steht im Untersuchungscode und in der Untersuchungsmethode, nicht im Ergebnis."
     * Untersuchungscode 1..1 CodeableConcept "Untersuchungscode" "Kodierung des gesuchten Ziels und des Testverfahrens (LOINC). Es werden bevorzugt Codes ohne präkoordinierte Probenart verwendet."
     * Ergebnis 0..1 CodeableConcept "Ergebnis" "Nachweisergebnis für das gesuchte Ziel (SNOMED CT)."
-    * Menge 0..1 CodeableConcept "Menge" "Semiquantitativer Wert eines Nachweises, z. B. + für schwach positiv (SNOMED CT)."
+    * Menge 0..1 CodeableConcept "Menge" "Semiquantitativer Wert eines Nachweises: gering, mäßig oder hoch (SNOMED CT); schwach positiv ist gering."
     * Untersuchungsmethode 0..1 CodeableConcept "Untersuchungsmethode" "Eingesetztes Nachweisverfahren (SNOMED CT)."
   * CtWert 0..* BackboneElement "Ct-Wert" "Zyklusschwellenwert bei Nukleinsäurenachweisen, z. B. Echtzeit-PCR."
     * Untersuchungscode 1..1 CodeableConcept "Untersuchungscode" "Kodierung des Ct-Werts für das jeweilige Ziel (LOINC). Es werden bevorzugt Codes ohne präkoordinierte Probenart verwendet."

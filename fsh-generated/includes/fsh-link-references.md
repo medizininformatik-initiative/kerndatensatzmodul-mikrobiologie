@@ -113,6 +113,7 @@
 [MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED]: ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html
 [MII_VS_Mikrobio_Morphologie_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html
 [MII_VS_Mikrobio_MRGN_Klasse_LOINC]: ValueSet-mii-vs-mikrobio-mrgn-klasse-loinc.html
+[MII_VS_Mikrobio_Nachweis_Menge_SNOMED]: ValueSet-mii-vs-mikrobio-nachweis-menge-snomed.html
 [MII_VS_Mikrobio_Organismen_SNOMEDCT]: ValueSet-mii-vs-mikrobio-organismen-snomedct.html
 [MII_VS_Mikrobio_Resistenzkategorie_Status]: ValueSet-mii-vs-mikrobio-resistenzkategorie-status.html
 [MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis]: ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html
