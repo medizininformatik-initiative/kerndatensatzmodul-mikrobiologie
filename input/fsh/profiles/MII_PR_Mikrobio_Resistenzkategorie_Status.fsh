@@ -15,7 +15,11 @@ Description: "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definie
 * code from MII_VS_Mikrobio_Resistenzkategorie_Status (required)
 * code ^short = "Bewertete Resistenzkategorie, z. B. MRSA-Status. Es werden ausschließlich Kategorien dokumentiert, die für den vorliegenden Erreger fachlich anwendbar sind; für einen Enterococcus wird kein MRSA-Status erzeugt."
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..1 MS
+// 0..1 statt 1..1 (HDB-968, 2026-11-26): dataAbsentReason ist Must Support aus
+// dem Labor-Parent, obs-6 verbietet es neben einem Wert; mit 1..1 war es nicht
+// konform befuellbar. Keine eigene Invariante: mii-lab-2 im Parent verlangt
+// schon Wert, dataAbsentReason oder hasMember.
+* valueCodeableConcept 0..1 MS
 * valueCodeableConcept from MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis (required)
 * valueCodeableConcept ^short = "Positive: Der Erreger erfüllt die Kriterien der in code angegebenen Kategorie. Negative: Der Erreger wurde anhand der relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. Kann die Kategorie nicht ausreichend bewertet werden, wird nicht Negative angegeben, sondern dataAbsentReason gesetzt oder keine Status-Observation erzeugt."
 // Die Kategorienbewertung ist eine abgeleitete fachliche Aussage: Sie entsteht durch
