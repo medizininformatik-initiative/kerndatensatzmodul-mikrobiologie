@@ -1,7 +1,7 @@
 // Workflow-Beispiel allgemeine Kultur 3/5: die Keimzahl des E. coli.
 //
 // Die Keimzahl traegt selbst keinen Verweis; die Identifizierung (Schritt 2)
-// referenziert sie ueber hasMember (Review 2026-11-26). Begruendung dort und auf
+// referenziert sie ueber hasMember (Entscheidung 2026-11-26). Begruendung dort und auf
 // der Abgrenzungsseite, "Mehrere Ergebnisse zusammenfassen". specimen bleibt der
 // Urin, weil die Zahl je Milliliter Urin gilt.
 Instance: mii-exa-mikrobio-workflow-urin-03-keimzahl

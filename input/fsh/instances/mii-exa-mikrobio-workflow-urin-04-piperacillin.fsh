@@ -3,8 +3,8 @@
 // meropenem). Die vier Substanzen decken die Gruppen ab, nach denen die
 // MRGN-Klasse in Schritt 5 eingestuft wird. Jede Empfindlichkeit verweist mit
 // triggeredBy auf die Identifizierung: Das ist die Zuordnung zum Erreger, die
-// bei mehreren Erregern aus einer Probe Pflicht ist. Kein Organizer (Review
-// 2026-11-26).
+// bei mehreren Erregern aus einer Probe Pflicht ist. Kein Organizer: Die
+// Empfindlichkeiten stehen einzeln, wie in den uebrigen Beispielen.
 //
 // comparator: Eine MHK ausserhalb des getesteten Bereichs liest sich ohne ihn
 // als exakter Wert (so auch das EU-IG).
