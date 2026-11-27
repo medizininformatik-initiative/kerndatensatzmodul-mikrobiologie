@@ -121,7 +121,8 @@ Description: "Tests-ValueSet für die spezifische Bestimmung. Codes mit den Plat
 // steht dabei im Code selbst — jeder dieser ~68 Codes traegt METHOD_TYP
 // "Organism specific culture" —, es muss also nicht im Ergebnis wiederholt
 // werden. Die Abweichung von der getrennten Fuehrung der HL7 EU Lab Semantic
-// Workgroup steht als Ballotfrage 6 im Profil-Intro.
+// Workgroup war Ballotfrage 6; entschieden 2026-11-27: bleibt, die EU
+// antwortet bei der Kultur inzwischen ebenfalls Detected / Not detected.
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP6429-7" and

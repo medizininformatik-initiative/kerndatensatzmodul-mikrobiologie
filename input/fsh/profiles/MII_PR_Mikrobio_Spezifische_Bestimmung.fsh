@@ -29,8 +29,9 @@
 //      erzeugt, ohne eine Aussage zu gewinnen.
 //
 // Die HL7 EU Lab Semantic Workgroup fuehrt die zielgerichtete Kultur getrennt
-// und bindet dort Wachstum. Diese Abweichung ist NICHT verschwiegen: Sie steht
-// als Ballotfrage 6 im Intro dieses Profils. Die allgemeine Kultur bleibt
+// und bindet dort Wachstum. Diese Abweichung war Ballotfrage 6; entschieden
+// 2026-11-27: bleibt, die EU antwortet bei der Kultur inzwischen ebenfalls
+// Detected / Not detected. Die allgemeine Kultur bleibt
 // unberuehrt — dort IST Wachstum die Antwort auf die Frage "waechst etwas?".
 Profile: MII_PR_Mikrobio_Spezifische_Bestimmung
 Parent: MII_PR_Labor_Laboruntersuchung
@@ -44,7 +45,7 @@ Description: "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines 
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED (extensible)
-* valueCodeableConcept ^short = "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 6). 'Schwach positiv' ist ein Nachweis mit geringer Menge: Wert 'Detected', die Menge in component[menge]; 'Weakly positive' ist abgekündigt. Ein nicht eindeutiger Befund wird als 'Equivocal result' berichtet. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet."
+* valueCodeableConcept ^short = "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht. 'Schwach positiv' ist ein Nachweis mit geringer Menge: Wert 'Detected', die Menge in component[menge]; 'Weakly positive' ist abgekündigt. Ein nicht eindeutiger Befund wird als 'Equivocal result' berichtet. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet."
 * method from MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED (extensible)
 // MENGE (Ballotkommentierung, Issue #61, 2026-11-26/27): "Schwach positiv" ist
 // ein gewerteter Nachweis mit geringer Last ohne echte Quantifizierung, kein

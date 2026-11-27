@@ -14,7 +14,7 @@ test code already names it: it is then readable in one place, whichever code a
 laboratory chooses. `Observation.method` carries the microscopy technique only,
 which for native microscopy without a stain is the one statement to be made.
 
-<a id="ballot-question-2"></a>
+<a id="staining"></a>
 
 ### Staining on the Observation
 
@@ -37,18 +37,6 @@ Semantic Workgroup proposes for this component. A LOINC code has been requested
 for the same purpose and will take its place once it exists. Besides the
 semi-quantitative value the component takes a count per high power field, as a
 `Quantity` or as a `Range`.
-
-<a id="ballot-question-4"></a>
-
-{:.bg-warning}
-**Ballot question 4 — can you process a component for the amount?**
-Both microscopy profiles carry the amount in `component[menge]`, following the
-HL7 EU Lab Semantic Workgroup, which uses a component for the amount of a single
-finding and `hasMember` to group several findings of one examination.
-
-The component reverses a decision of this release cycle: `2027.0.0-alpha.1`
-removed components from this very profile and moved them into standalone
-Observations.
 
 ### Examples
 

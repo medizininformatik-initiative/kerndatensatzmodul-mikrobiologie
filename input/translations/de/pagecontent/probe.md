@@ -1,21 +1,6 @@
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md  -->
 ### Befund - Probe
 
-<a id="ballot-question-1"></a>
-
-{:.bg-warning}
-**Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?**
-Jedes Untersuchungsprofil dieses Moduls verlangt `Observation.specimen`, wie die
-HL7 EU Lab Semantic Workgroup es auch tut — sie verlangt eine ausdrückliche
-Specimen-Ressource selbst dann, wenn der LOINC-Code das Material bereits trägt.
-
-Aus der deutschen Laborpraxis kommt die Rückmeldung, dass eine
-Specimen-Ressource häufig nicht erzeugt wird. Trifft das breit zu, weisen die
-beiden Auswege in entgegengesetzte Richtungen: `Observation.specimen` auf `0..1`
-lockern und präkoordinierte LOINC-Codes das Material tragen lassen, oder die
-Pflicht beibehalten und hinnehmen, dass manche Sender nicht konform sein
-können.
-
 Proben werden über [Probe](StructureDefinition-mii-pr-mikrobio-probe.html)
 abgebildet, das von
 [MII_PR_Biobank_Specimen_Bioprobe_Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core)
@@ -70,34 +55,19 @@ zeigt es.
 
 ### `Specimen.processing`: Färbung
 
-Bis `2027.0.0-ballot.rc2` verlangte das Bioproben-Basisprofil die Extension
-`temperaturbedingungen` an jedem `Specimen.processing`-Element — eine Pflicht aus
-der Lagerung von Bioproben, ohne Aussage für die Aufarbeitung im Labor, und eine,
-die ein abgeleitetes Profil nicht lockern konnte. Dieser Leitfaden hat sie als
-Ballotfrage aufgeworfen; das Basisprofil hat sie in seinem `2027.0.0-ballot`, von
-dem dieses Modul jetzt abhängt, auf `0..1` gelockert, und damit ist die Frage
-erledigt.
-
-Die Färbetechnik wird dennoch **nicht** unter
+Die Färbetechnik wird **nicht** unter
 `Specimen.processing.procedure` angegeben, wie die HL7 EU Lab Semantic Workgroup
 es vorschlägt, sondern in einer Extension an der Observation,
 [`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.html), mit
 denselben Codes — siehe
-[Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2):
+[Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#staining):
 Eine Probe wird oft mehrfach gefärbt, ohne dass das Labor Unterproben anlegt,
 und nur an der Observation bleibt erkennbar, welche Färbung zu welchem Befund
 gehört.
 
 ### Bebrütungsdauer und -temperatur
 
-<a id="ballot-question-3"></a>
-
-{:.bg-warning}
-**Ballotfrage 3 — ist die Bebrütung über `Specimen.processing` darstellbar?**
-FHIR sieht sie dort vor und die MII hat die Bausteine, die Modellierung ist also
-geklärt. Wir fragen, ob sie an Ihrem Standort umsetzbar ist.
-
-Die Elemente, gemessen an R4 Core und am Biobank-Modul am 2026-09-10:
+Beide sind optional. Liefert ein Standort sie, stehen sie in `Specimen.processing`:
 
 - **Dauer** — `Specimen.processing.time[x]` als `Period`. `Specimen.processing`
   hat kein eigenes `Duration`-Element (`Specimen.collection.duration` meint die
@@ -109,9 +79,3 @@ Die Elemente, gemessen an R4 Core und am Biobank-Modul am 2026-09-10:
   Context `Specimen.processing` ist und deren Wert ein `Range` ist. Das richtige
   Element und der richtige Datentyp für „35–37 °C", und seit dem
   `2027.0.0-ballot` des Basisprofils optional.
-
-Wird keine Specimen-Ressource
-erzeugt (Ballotfrage 1), ist `Specimen.processing` unerreichbar, und die
-Alternative wären Extensions auf `Observation.method`, die das Verfahren in der
-Ressource qualifizieren, die das Ergebnis berichtet. Dieses Modul bildet die
-Bebrütung nicht ab, solange die Antwort fehlt.

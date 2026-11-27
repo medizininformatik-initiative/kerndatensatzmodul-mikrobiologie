@@ -34,8 +34,7 @@ Description: "Allgemeine Mikroskopie beschreibt die morphologische Beobachtung v
 // Befunde einer Untersuchung. Zugleich dreht er eine Entscheidung dieses
 // Zyklus zurueck: 2027.0.0-alpha.1 hat die Komponenten aus genau diesem Profil
 // entfernt und in eigenstaendige Observations ueberfuehrt (changes.md,
-// Abschnitt 2027.0.0-alpha.1). Deshalb fragt Ballotfrage 4, ob Standorte die
-// Komponente verarbeiten koennen.
+// Abschnitt 2027.0.0-alpha.1). Das war Ballotfrage 4; die Komponente bleibt.
 //
 // Definition in MIKRO_MENGE_KOMPONENTE, gemeinsam mit der Spezifischen
 // Mikroskopie — dort steht auch die Begruendung fuer Code und Antwortformate.

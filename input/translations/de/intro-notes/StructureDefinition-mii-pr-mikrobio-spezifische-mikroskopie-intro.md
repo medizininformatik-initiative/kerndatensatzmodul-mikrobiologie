@@ -35,7 +35,7 @@ in `extension[faerbung]` angegeben — dort liest sie ein Verarbeitender,
 unabhängig davon, welchen Code das Labor gewählt hat, und dort steht die konkrete
 Variante, wo der Code nur die Klasse nennt („Acid fast stain" gegenüber Kinyoun).
 Warum sie an der Observation steht und nicht an der Probe, erklärt die
-[Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2).
+[Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#staining).
 
 ### Die Menge
 
@@ -49,9 +49,7 @@ Die Komponente nimmt drei Antwortformate, weil ein Labor dasselbe Analyt in zwei
 davon berichtet: den semiquantitativen Wert, eine Zählung je Gesichtsfeld als
 `Quantity` und eine solche Zählung als Intervall in einer `Range`. Code und
 Antwortliste teilt sie mit der
-[Allgemeinen Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html),
-wo [Ballotfrage 4](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-4)
-fragt, ob Standorte sie verarbeiten können.
+[Allgemeinen Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html).
 
 Die semiquantitativen Werte stammen aus dem realen Ergebniskatalog eines deutschen Labors und
 liegen auf zwei SNOMED-Achsen: `441614007` / `441517005` / `441521003` sind

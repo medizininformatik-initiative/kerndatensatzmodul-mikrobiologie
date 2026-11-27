@@ -129,8 +129,7 @@ und die **serologische Anwendung** der
 — jenes Profil bedient auch die molekulare Bank, wo die Konvention weiter gilt,
 die Ausnahme hängt dort also an der Anwendung und nicht am Profil.
 
-Eine Specimen-Ressource wird trotzdem in jedem Fall erwartet; Ballotfrage 1 bleibt
-davon unberührt. Die Ausnahme erlaubt einen Untersuchungscode, der Serum benennt
+Eine Specimen-Ressource ist trotzdem in jedem Fall Pflicht. Die Ausnahme erlaubt einen Untersuchungscode, der Serum benennt
 — sie erlaubt nicht, `Observation.specimen` leer zu lassen.
 
 Eine weitere Eigenheit der serologischen Befundung ist zu kennen: Die Diagnose
@@ -160,18 +159,6 @@ Dieser Leitfaden hält das als **Empfehlung** fest, nicht als Pflicht.
 modulweite Pflicht würde heute konforme Daten ungültig machen. Erzwungen wird sie
 an der einen Stelle, an der die Aussage sonst mehrdeutig ist: bei der Allgemeinen
 Kultur mit dem methodenneutralen Code `41852-5`.
-
-<a id="ballot-question-5"></a>
-
-{:.bg-warning}
-**Ballotfrage 5 — können Sie zu jedem Befund `Observation.method` liefern?**
-Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt
-es nur. Wäre eine Pflicht an Ihrem Standort erfüllbar?
-
-Aus einem Ja folgt zweierlei. Eine spätere Version kann `Observation.method` auf
-`1..1` heben, und das Sonderinvariant der Allgemeinen Kultur wird überflüssig —
-`41852-5` samt Methode ist dann überall eindeutig, und die Empfehlung, den
-methodentragenden `11475-1` zu bevorzugen, entfällt weitgehend.
 
 ### Zwei Granularitätsstufen auf derselben Achse
 

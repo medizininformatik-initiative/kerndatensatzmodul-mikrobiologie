@@ -126,8 +126,7 @@ and the **serological use** of
 continues to apply, so the exemption there attaches to the use and not to the
 profile.
 
-A Specimen resource is still expected in every case: ballot question 1 is
-unaffected. What the exemption permits is a test code that names serum; it does
+A Specimen resource is still required in every case. What the exemption permits is a test code that names serum; it does
 not permit leaving `Observation.specimen` empty.
 
 One further trait of serological reporting is worth knowing: the diagnosis often
@@ -158,18 +157,6 @@ making it mandatory across every investigation profile would invalidate
 conformant data that exists today. The one place it is enforced is where the
 statement is otherwise ambiguous: General culture with the method-neutral code
 `41852-5`.
-
-<a id="ballot-question-5"></a>
-
-{:.bg-warning}
-**Ballot question 5 — can you supply `Observation.method` for every result?**
-The HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends
-it. Would making it mandatory be deliverable at your site?
-
-Two things follow from a yes. A later version can raise `Observation.method` to
-`1..1`, and the special-case invariant on General culture becomes unnecessary —
-`41852-5` plus a method is then unambiguous everywhere, so the recommendation to
-prefer the method-bearing `11475-1` largely falls away.
 
 ### Two granularities on the same axis
 
