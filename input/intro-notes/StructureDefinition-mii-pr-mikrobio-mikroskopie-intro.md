@@ -35,7 +35,7 @@ microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html).
 Its code is `103392008 |Semi-quantitative value|`, the concept the HL7 EU Lab
 Semantic Workgroup proposes for this component. A LOINC code has been requested
 for the same purpose and will take its place once it exists. Besides the
-semiquantitative grade the component takes a count per high power field, as a
+semi-quantitative value the component takes a count per high power field, as a
 `Quantity` or as a `Range`.
 
 <a id="ballot-question-4"></a>

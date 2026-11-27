@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED
 Id: mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed
 Title: "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]"
-Description: "Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in der ein mikroskopischer Befund gesehen wurde."
+Description: "Mengen-ValueSet der Mikroskopie: der semiquantitative Wert, mit dem ein mikroskopischer Befund gesehen wurde."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

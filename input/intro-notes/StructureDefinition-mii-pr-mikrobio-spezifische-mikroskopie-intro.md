@@ -38,19 +38,19 @@ under [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#
 
 The amount goes into `component[menge]`, not into `value[x]`: the test code asks
 whether the object is there — `72357-7` and `87243-2` are `PrThr` codes,
-"presence or threshold" — and the grade qualifies that answer rather than
+"presence or threshold" — and the semi-quantitative value qualifies that answer rather than
 replacing it. It is not an `Observation.interpretation` either, which carries a
 clinical assessment and not a quantity.
 
 The component takes three answer forms, because a laboratory reports the same
-analyte in two of them: the semiquantitative grade, a count per high power field
+analyte in two of them: the semi-quantitative value, a count per high power field
 as `Quantity`, and such a count as an interval in a `Range`. Its code and its
 value set are shared with [General
 microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html), where [ballot
-question 5](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-4)
+question 4](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-4)
 asks whether sites can process it.
 
-The grades come from a German laboratory's real result catalogue and span two
+The semi-quantitative values come from a German laboratory's real result catalogue and span two
 SNOMED axes: `441614007` / `441517005` / `441521003` are presence findings below
 `52101004 |Present|`, while `Few`, `Moderate number`, `Numerous` and `Scanty` are
 degree and number descriptors. Which of the two families should be preferred is
@@ -62,6 +62,6 @@ Acid-fast bacilli not detected:
 
 [mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ](Observation-mii-exa-mikrobio-spezifische-mikroskopie-auramin-negativ.html)
 
-Acid-fast bacilli detected, at grade two of three:
+Acid-fast bacilli detected, ++ of +++:
 
 [mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus](Observation-mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus.html)

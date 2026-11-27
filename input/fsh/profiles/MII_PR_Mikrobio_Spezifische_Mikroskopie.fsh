@@ -16,7 +16,7 @@ Profile: MII_PR_Mikrobio_Spezifische_Mikroskopie
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-spezifische-mikroskopie
 Title: "MII PR Mikrobio Spezifische Mikroskopie"
-Description: "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis."
+Description: "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit dem Nachweis als Ergebnis und der Menge als semiquantitativem Wert."
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "Dieses Profil beschreibt die zielgerichtete Mikroskopie, bei der das gesuchte Objekt im Untersuchungscode steht und das Ergebnis der Nachweis oder Ausschluss dieses Objekts ist; wie viel davon gesehen wurde, steht in der Mengenkomponente."
 * code from MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC (extensible)

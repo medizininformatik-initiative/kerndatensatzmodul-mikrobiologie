@@ -33,7 +33,7 @@ RuleSet: MIKRO_MENGE_KOMPONENTE
 * component ^slicing.description = "Slicing nach dem Komponenten-Code."
 * component contains menge 0..1 MS
 * component[menge] ^short = "Semiquantitative Menge oder Zaehlung des berichteten Befunds"
-* component[menge] ^definition = "Wie viel des Befunds gesehen wurde: als semiquantitative Stufe, als Zaehlung je Gesichtsfeld oder als Intervall einer solchen Zaehlung."
+* component[menge] ^definition = "Wie viel des Befunds gesehen wurde: als semiquantitativer Wert, als Zaehlung je Gesichtsfeld oder als Intervall einer solchen Zaehlung."
 // KEIN Display und KEINE Version im Pattern: Ein Pattern verlangt
 // Uebereinstimmung in jedem gesetzten Feld, ein Labor mit anderem Display oder
 // ohne Coding.version waere also nicht konform. Deshalb $sct-no-ver und nur der
@@ -42,7 +42,7 @@ RuleSet: MIKRO_MENGE_KOMPONENTE
 * component[menge].code = $sct-no-ver#103392008
 * component[menge].value[x] only CodeableConcept or Quantity or Range
 * component[menge].valueCodeableConcept from MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED (extensible)
-* component[menge].valueCodeableConcept ^short = "Semiquantitative Stufe, z. B. 'Few' oder 'Present two plus out of three plus'."
+* component[menge].valueCodeableConcept ^short = "Semiquantitativer Wert, z. B. 'Few' oder 'Present two plus out of three plus'."
 * component[menge].valueQuantity ^short = "Zaehlung je Gesichtsfeld, UCUM-Einheit /[HPF]. Fuer offene Grenzen wird Quantity.comparator verwendet, z. B. '<10/GF' als comparator = '<', value = 10."
 * component[menge].valueQuantity.code from MII_VS_Mikrobio_Mikroskopie_Gesichtsfeld_Einheiten_UCUM (extensible)
 * component[menge].valueRange ^short = "Zaehlung je Gesichtsfeld als Intervall, UCUM-Einheit /[HPF] — z. B. '10-25/GF' als low = 10, high = 25."

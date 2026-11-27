@@ -38,7 +38,7 @@ Code und denselben Antworten, trägt die Menge in der
 Ihr Code ist `103392008 |Semi-quantitative value|`, das Konzept, das die HL7 EU
 Lab Semantic Workgroup für diese Komponente vorschlägt. Für denselben Zweck ist
 ein LOINC-Code angefordert; er tritt an diese Stelle, sobald er existiert. Neben
-der semiquantitativen Stufe nimmt die Komponente eine Zählung je Gesichtsfeld,
+dem semiquantitativen Wert nimmt die Komponente eine Zählung je Gesichtsfeld,
 als `Quantity` oder als `Range`.
 
 <a id="ballot-question-4"></a>
