@@ -432,6 +432,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-mikrobio-keimzahl-semiquantitativ"
+        },
+        "name": "MII EXA Mikrobio Keimzahl semiquantitativ",
+        "description": "Semiquantitative Keimzahl ohne Zählung: ++ beim Ausstrich.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+      },
+      {
+        "reference": {
           "reference": "Organization/mii-exa-mikrobio-labor"
         },
         "name": "MII EXA Mikrobio Labor",
@@ -731,7 +739,7 @@
           "reference": "StructureDefinition/mii-pr-mikrobio-keimzahl"
         },
         "name": "MII PR Mikrobio Keimzahl",
-        "description": "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.",
+        "description": "Keimzahl beschreibt die Bestimmung lebensfähiger Mikroorganismen in einer Probe: quantitativ als koloniebildende Einheiten je Volumen, je Masse oder je Probe, oder semiquantitativ (+ bis ++++), etwa beim Ausstrich.",
         "exampleBoolean": false
       },
       {

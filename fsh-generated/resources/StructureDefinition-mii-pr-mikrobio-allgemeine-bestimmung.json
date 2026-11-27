@@ -272,6 +272,12 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "short": "Keimzahl des identifizierten Erregers",
+        "comment": "Die Keimzahl ist eine eigene Observation (MII_PR_Mikrobio_Keimzahl) und keine Komponente: Sie hat eine eigene Methode und oft einen eigenen Zeitpunkt. Die Identifizierung verweist mit hasMember auf sie; bei mehreren Erregern aus einer Probe ist das die Zuordnung der Zahl zu ihrem Erreger und Pflicht."
       }
     ]
   }

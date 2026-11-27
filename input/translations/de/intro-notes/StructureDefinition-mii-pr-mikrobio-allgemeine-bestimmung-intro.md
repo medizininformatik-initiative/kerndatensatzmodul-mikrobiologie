@@ -26,7 +26,8 @@ benennt, und verweist über die `triggeredBy`-Extension mit `type = reflex` auf
 sie zurück; das
 [Beispiel](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html) zeigt das.
 Die Empfindlichkeitstestung folgt ihrerseits der Identifizierung und verweist
-auf dieselbe Weise hierher zurück.
+auf dieselbe Weise hierher zurück. Die Keimzahl des Erregers führt die
+Identifizierung über `hasMember`.
 [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html) zeigt die Kette
 im Ganzen.
 

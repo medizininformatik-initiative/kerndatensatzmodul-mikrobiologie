@@ -48,6 +48,7 @@ Die Beispielinstanzen dieses Moduls, nach Profil gruppiert.
 
 - [mii-exa-mikrobio-keimzahl](Observation-mii-exa-mikrobio-keimzahl.html)
 - [mii-exa-mikrobio-keimzahl-katheterspitze](Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html)
+- [mii-exa-mikrobio-keimzahl-semiquantitativ](Observation-mii-exa-mikrobio-keimzahl-semiquantitativ.html)
 
 **[MRGN Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html)**
 

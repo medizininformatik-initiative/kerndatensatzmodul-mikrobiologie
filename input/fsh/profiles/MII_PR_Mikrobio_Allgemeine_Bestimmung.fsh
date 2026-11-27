@@ -11,3 +11,10 @@ Description: "Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorg
 * valueCodeableConcept from MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED (extensible)
 * valueCodeableConcept ^short = "Identifizierter Mikroorganismus oder 'Not detected', wenn kein Erreger identifiziert wurde. Ein unbestimmbares Ergebnis wird ueber dataAbsentReason abgebildet."
 * method from MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED (extensible)
+// KEIMZAHL DES ERREGERS (Ballotkommentierung, 2026-11-26): Die Identifizierung
+// referenziert sie ueber hasMember. Keine Komponente, weil Zaehlung und
+// Identifizierung zwei Schritte mit eigener Methode sind; nicht triggeredBy,
+// weil nicht wegen der Identifizierung gezaehlt wird. Keine Typeinschraenkung und
+// kein Must Support: hasMember bleibt fuer weitere zusammengehoerige Befunde offen.
+* hasMember ^short = "Keimzahl des identifizierten Erregers"
+* hasMember ^comment = "Die Keimzahl ist eine eigene Observation (MII_PR_Mikrobio_Keimzahl) und keine Komponente: Sie hat eine eigene Methode und oft einen eigenen Zeitpunkt. Die Identifizierung verweist mit hasMember auf sie; bei mehreren Erregern aus einer Probe ist das die Zuordnung der Zahl zu ihrem Erreger und Pflicht."

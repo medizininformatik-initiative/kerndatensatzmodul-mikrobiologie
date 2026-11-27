@@ -33,3 +33,8 @@ Description: "Tests-ValueSet für die Keimzahlbestimmung: LOINC-Codes für die q
 * $loinc#564-5  "Colony count [#] in Specimen by Visual count"
 * $loinc#38436-2  "Colony count [#/mass] in Specimen by Visual count"
 * $loinc#699-9  "Organism count [#/volume] in Specimen by Microscopic count"
+// Ordinaler Code fuer den semiquantitativen Wert (+ bis ++++), wenn nicht gezaehlt
+// wurde (Ballotkommentierung, 2026-11-26). Die vier Codes oben haben die
+// LOINC-Skala Qn und verlangen eine Zahl; 565-2 ist ihr ordinales Gegenstueck
+// ohne praekoordinierte Probenart.
+* $loinc#565-2 "Colony count [#] in Specimen Qualitative by Visual count"
