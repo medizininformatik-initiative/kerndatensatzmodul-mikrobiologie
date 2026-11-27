@@ -92,7 +92,7 @@ The argument against pre-coordination is code explosion — a culture code multi
 
 The exemption covers [Titre](StructureDefinition-mii-pr-mikrobio-titer.md), [Avidity](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [Antigen/antibody quantitative](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md) and the **serological use** of [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md) — that last profile serves the molecular bench as well, where the convention continues to apply, so the exemption there attaches to the use and not to the profile.
 
-A Specimen resource is still expected in every case: ballot question 1 is unaffected. What the exemption permits is a test code that names serum; it does not permit leaving `Observation.specimen` empty.
+A Specimen resource is still required in every case. What the exemption permits is a test code that names serum; it does not permit leaving `Observation.specimen` empty.
 
 One further trait of serological reporting is worth knowing: the diagnosis often follows from several results read together rather than from any one of them. That statement belongs in `DiagnosticReport.conclusion` — see [Diagnostic report](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md).
 
@@ -105,10 +105,6 @@ The HL7 EU Lab Semantic Workgroup puts this as a core principle and states it mo
 So the method is to be given even where the test code already carries it — a culture reported under `11475-1 |… by Culture|` should still name whether it was aerobic or anaerobic. In microscopy the stain is not part of the method: it is given in [`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.md), also where the test code names it, and `Observation.method` keeps the microscopy technique.
 
 This guide states that as a **recommendation**, not as a requirement. `Observation.method` is `0..1` Must Support in the laboratory base profile, and making it mandatory across every investigation profile would invalidate conformant data that exists today. The one place it is enforced is where the statement is otherwise ambiguous: General culture with the method-neutral code `41852-5`.
-
-**Ballot question 5 — can you supply `Observation.method` for every result?** The HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends it. Would making it mandatory be deliverable at your site?
-
-Two things follow from a yes. A later version can raise `Observation.method` to `1..1`, and the special-case invariant on General culture becomes unnecessary — `41852-5` plus a method is then unambiguous everywhere, so the recommendation to prefer the method-bearing `11475-1` largely falls away.
 
 ### Two granularities on the same axis
 

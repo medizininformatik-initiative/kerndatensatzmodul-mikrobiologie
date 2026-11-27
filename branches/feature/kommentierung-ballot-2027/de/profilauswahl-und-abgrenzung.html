@@ -508,8 +508,7 @@ und die <strong>serologische Anwendung</strong> der
 — jenes Profil bedient auch die molekulare Bank, wo die Konvention weiter gilt,
 die Ausnahme hängt dort also an der Anwendung und nicht am Profil.</p>
 
-<p>Eine Specimen-Ressource wird trotzdem in jedem Fall erwartet; Ballotfrage 1 bleibt
-davon unberührt. Die Ausnahme erlaubt einen Untersuchungscode, der Serum benennt
+<p>Eine Specimen-Ressource ist trotzdem in jedem Fall Pflicht. Die Ausnahme erlaubt einen Untersuchungscode, der Serum benennt
 — sie erlaubt nicht, <code class="language-plaintext highlighter-rouge">Observation.specimen</code> leer zu lassen.</p>
 
 <p>Eine weitere Eigenheit der serologischen Befundung ist zu kennen: Die Diagnose
@@ -541,17 +540,6 @@ Mikroskopieverfahren.</p>
 modulweite Pflicht würde heute konforme Daten ungültig machen. Erzwungen wird sie
 an der einen Stelle, an der die Aussage sonst mehrdeutig ist: bei der Allgemeinen
 Kultur mit dem methodenneutralen Code <code class="language-plaintext highlighter-rouge">41852-5</code>.</p>
-
-<p><a id="ballot-question-5"></a></p>
-
-<p class="bg-warning"><strong>Ballotfrage 5 — können Sie zu jedem Befund <code class="language-plaintext highlighter-rouge">Observation.method</code> liefern?</strong>
-Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt
-es nur. Wäre eine Pflicht an Ihrem Standort erfüllbar?</p>
-
-<p>Aus einem Ja folgt zweierlei. Eine spätere Version kann <code class="language-plaintext highlighter-rouge">Observation.method</code> auf
-<code class="language-plaintext highlighter-rouge">1..1</code> heben, und das Sonderinvariant der Allgemeinen Kultur wird überflüssig —
-<code class="language-plaintext highlighter-rouge">41852-5</code> samt Methode ist dann überall eindeutig, und die Empfehlung, den
-methodentragenden <code class="language-plaintext highlighter-rouge">11475-1</code> zu bevorzugen, entfällt weitgehend.</p>
 
 <h3 id="zwei-granularitätsstufen-auf-derselben-achse">Zwei Granularitätsstufen auf derselben Achse</h3>
 
@@ -1032,7 +1020,7 @@ MRGN-Klasse
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Nov 27, 2026 14:29+0000">2026-11-27</span>
+          Erstellt <span title="Fri, Nov 27, 2026 14:44+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

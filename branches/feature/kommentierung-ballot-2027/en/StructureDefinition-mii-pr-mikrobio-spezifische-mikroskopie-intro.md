@@ -32,7 +32,7 @@ The codes of this profile usually name the stain themselves, and it is given in
 `extension[faerbung]` all the same — that is where a consumer reads it, whichever
 code the laboratory chose, and where the concrete variant appears when the code
 names only the class ("Acid fast stain" against Kinyoun). Why it sits on the Observation and not on the specimen is explained
-under [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2).
+under [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#staining).
 
 ### The amount
 
@@ -46,9 +46,7 @@ The component takes three answer forms, because a laboratory reports the same
 analyte in two of them: the semi-quantitative value, a count per high power field
 as `Quantity`, and such a count as an interval in a `Range`. Its code and its
 value set are shared with [General
-microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html), where [ballot
-question 4](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-4)
-asks whether sites can process it.
+microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html).
 
 The semi-quantitative values come from a German laboratory's real result catalogue and span two
 SNOMED axes: `441614007` / `441517005` / `441521003` are presence findings below

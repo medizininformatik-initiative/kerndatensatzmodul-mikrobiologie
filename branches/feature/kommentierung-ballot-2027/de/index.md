@@ -22,7 +22,7 @@ Das Modul beschreibt die Untersuchungen, die in Laboratorien zum Nachweis, zur I
 
 **Hinweis zum Stand des zugrunde liegenden Modells.** Im Rahmen eines Harmonisierungsprozesses zwischen dem RKI, MIO42 und der MII wurde das Mikrobiologie-Datenmodell grundlegend überarbeitet; die Abstimmungen wurden auf den europäischen Kontext (EHDS) ausgeweitet.
 
-Dieses europäische Modell ist **noch nicht final**. Der vorliegende Release bildet seinen aktuellen Stand so genau ab, wie es eine implementierbare Spezifikation zulässt: Wo die zugrunde liegenden Abstimmungen eine Frage offen lassen, benennt dieser Leitfaden die getroffene Entscheidung und ihre Begründung. Bewusst offen gelassene Punkte stehen unter [Ballotfragen](#ballotfragen), zu denen wir um Rückmeldung bitten. Implementierende sollten in den betroffenen Bereichen mit Änderungen rechnen.
+Dieses europäische Modell ist **noch nicht final**. Der vorliegende Release bildet seinen aktuellen Stand so genau ab, wie es eine implementierbare Spezifikation zulässt: Wo die zugrunde liegenden Abstimmungen eine Frage offen lassen, benennt dieser Leitfaden die getroffene Entscheidung und ihre Begründung.
 
 ### Zielgruppe
 
@@ -59,17 +59,6 @@ Komponenten aus Observationen wurden in dieser Version fachlich in separate Prof
 | Version | 2027.0.0-ballot2 (CalVer`JJJJ.n.n`) |
 | Status | active |
 | Realm | DE |
-
-### Ballotfragen
-
-Dies ist ein Ballot-Kandidat. Die folgenden Punkte sind bewusst offen gelassen; wir bitten während des Ballots um Rückmeldung dazu. Jeder ist auf der Seite vollständig dargestellt, zu der er gehört.
-
-1. **[Entsteht immer eine Specimen-Ressource?](probe.md#ballot-question-1)**— jedes Untersuchungsprofil dieses Moduls verlangt`Observation.specimen`.
-1. **[Wohin gehört die Färbetechnik?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-2)**— dieses Modul führt sie in einer Extension und weicht damit von der europäischen Abstimmung ab, die sie an die Probe legt.
-1. **[Sind Bebrütungsdauer und -temperatur über `Specimen.processing` darstellbar?](probe.md#ballot-question-3)**— FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie befüllen können.
-1. **[Können Sie eine Komponente für eine semiquantitative Menge verarbeiten?](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-4)**— das Modul folgt hier der europäischen Abstimmung, und die Komponente dreht eine Entscheidung dieses Zyklus zurück.
-1. **[Können Sie zu jedem Befund `Observation.method` liefern?](profilauswahl-und-abgrenzung.md#ballot-question-5)**— die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre Antwort entscheidet mehr als eine Frage.
-1. **[Genügt `Detected` / `Not detected` für eine zielgerichtete Kultur?](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md#ballot-question-6)**— ein Profil deckt jetzt den zielgerichteten Nachweis unabhängig vom Verfahren ab; die europäische Abstimmung bindet für die Kultur Wachstumscodes, dieser Leitfaden weicht davon ab.
 
 ### Inhalt dieses Leitfadens
 

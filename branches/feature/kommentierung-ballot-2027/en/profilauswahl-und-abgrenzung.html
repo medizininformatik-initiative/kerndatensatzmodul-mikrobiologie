@@ -531,8 +531,7 @@ and the <strong>serological use</strong> of
 continues to apply, so the exemption there attaches to the use and not to the
 profile.</p>
 
-<p>A Specimen resource is still expected in every case: ballot question 1 is
-unaffected. What the exemption permits is a test code that names serum; it does
+<p>A Specimen resource is still required in every case. What the exemption permits is a test code that names serum; it does
 not permit leaving <code class="language-plaintext highlighter-rouge">Observation.specimen</code> empty.</p>
 
 <p>One further trait of serological reporting is worth knowing: the diagnosis often
@@ -565,17 +564,6 @@ making it mandatory across every investigation profile would invalidate
 conformant data that exists today. The one place it is enforced is where the
 statement is otherwise ambiguous: General culture with the method-neutral code
 <code class="language-plaintext highlighter-rouge">41852-5</code>.</p>
-
-<p><a id="ballot-question-5"></a></p>
-
-<p class="bg-warning"><strong>Ballot question 5 — can you supply <code class="language-plaintext highlighter-rouge">Observation.method</code> for every result?</strong>
-The HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends
-it. Would making it mandatory be deliverable at your site?</p>
-
-<p>Two things follow from a yes. A later version can raise <code class="language-plaintext highlighter-rouge">Observation.method</code> to
-<code class="language-plaintext highlighter-rouge">1..1</code>, and the special-case invariant on General culture becomes unnecessary —
-<code class="language-plaintext highlighter-rouge">41852-5</code> plus a method is then unambiguous everywhere, so the recommendation to
-prefer the method-bearing <code class="language-plaintext highlighter-rouge">11475-1</code> largely falls away.</p>
 
 <h3 id="two-granularities-on-the-same-axis">Two granularities on the same axis</h3>
 
@@ -1052,7 +1040,7 @@ MRGN class
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Nov 27, 2026 14:29+0000">2026-11-27</span>
+          Generated <span title="Fri, Nov 27, 2026 14:44+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

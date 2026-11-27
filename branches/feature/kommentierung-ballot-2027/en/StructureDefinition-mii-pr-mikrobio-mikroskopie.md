@@ -32,10 +32,6 @@ The most common Gram finding needs two statements at once — **few** Gram-posit
 
 Its code is `103392008 |Semi-quantitative value|`, the concept the HL7 EU Lab Semantic Workgroup proposes for this component. A LOINC code has been requested for the same purpose and will take its place once it exists. Besides the semi-quantitative value the component takes a count per high power field, as a `Quantity` or as a `Range`.
 
-**Ballot question 4 — can you process a component for the amount?** Both microscopy profiles carry the amount in `component[menge]`, following the HL7 EU Lab Semantic Workgroup, which uses a component for the amount of a single finding and `hasMember` to group several findings of one examination.
-
-The component reverses a decision of this release cycle: `2027.0.0-alpha.1` removed components from this very profile and moved them into standalone Observations.
-
 ### Examples
 
 Example (minimal):
@@ -199,7 +195,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-m
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T14:29:27+00:00",
+  "date" : "2026-11-27T14:44:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

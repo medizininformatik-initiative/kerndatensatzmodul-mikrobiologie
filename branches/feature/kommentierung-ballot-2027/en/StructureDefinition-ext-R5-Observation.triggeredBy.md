@@ -51,7 +51,7 @@ Other representations of profile: [CSV](../StructureDefinition-ext-R5-Observatio
   "title" : "R5: Triggering observation(s) (new)",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T14:29:27+00:00",
+  "date" : "2026-11-27T14:44:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

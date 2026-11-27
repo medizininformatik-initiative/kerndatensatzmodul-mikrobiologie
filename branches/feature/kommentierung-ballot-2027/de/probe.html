@@ -328,20 +328,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Technische-Implementierung/FHIR-Profile/Probe.page.md  -->
 <h3 id="befund---probe">Befund - Probe</h3>
 
-<p><a id="ballot-question-1"></a></p>
-
-<p class="bg-warning"><strong>Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?</strong>
-Jedes Untersuchungsprofil dieses Moduls verlangt <code class="language-plaintext highlighter-rouge">Observation.specimen</code>, wie die
-HL7 EU Lab Semantic Workgroup es auch tut — sie verlangt eine ausdrückliche
-Specimen-Ressource selbst dann, wenn der LOINC-Code das Material bereits trägt.</p>
-
-<p>Aus der deutschen Laborpraxis kommt die Rückmeldung, dass eine
-Specimen-Ressource häufig nicht erzeugt wird. Trifft das breit zu, weisen die
-beiden Auswege in entgegengesetzte Richtungen: <code class="language-plaintext highlighter-rouge">Observation.specimen</code> auf <code class="language-plaintext highlighter-rouge">0..1</code>
-lockern und präkoordinierte LOINC-Codes das Material tragen lassen, oder die
-Pflicht beibehalten und hinnehmen, dass manche Sender nicht konform sein
-können.</p>
-
 <p>Proben werden über <a href="StructureDefinition-mii-pr-mikrobio-probe.html">Probe</a>
 abgebildet, das von
 <a href="https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core">MII_PR_Biobank_Specimen_Bioprobe_Core</a>
@@ -405,33 +391,19 @@ zeigt es.</p>
 
 <h3 id="specimenprocessing-färbung"><code class="language-plaintext highlighter-rouge">Specimen.processing</code>: Färbung</h3>
 
-<p>Bis <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code> verlangte das Bioproben-Basisprofil die Extension
-<code class="language-plaintext highlighter-rouge">temperaturbedingungen</code> an jedem <code class="language-plaintext highlighter-rouge">Specimen.processing</code>-Element — eine Pflicht aus
-der Lagerung von Bioproben, ohne Aussage für die Aufarbeitung im Labor, und eine,
-die ein abgeleitetes Profil nicht lockern konnte. Dieser Leitfaden hat sie als
-Ballotfrage aufgeworfen; das Basisprofil hat sie in seinem <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code>, von
-dem dieses Modul jetzt abhängt, auf <code class="language-plaintext highlighter-rouge">0..1</code> gelockert, und damit ist die Frage
-erledigt.</p>
-
-<p>Die Färbetechnik wird dennoch <strong>nicht</strong> unter
+<p>Die Färbetechnik wird <strong>nicht</strong> unter
 <code class="language-plaintext highlighter-rouge">Specimen.processing.procedure</code> angegeben, wie die HL7 EU Lab Semantic Workgroup
 es vorschlägt, sondern in einer Extension an der Observation,
 <a href="StructureDefinition-mii-ex-mikrobio-faerbung.html"><code class="language-plaintext highlighter-rouge">extension[faerbung]</code></a>, mit
 denselben Codes — siehe
-<a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2">Mikroskopie</a>:
+<a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#staining">Mikroskopie</a>:
 Eine Probe wird oft mehrfach gefärbt, ohne dass das Labor Unterproben anlegt,
 und nur an der Observation bleibt erkennbar, welche Färbung zu welchem Befund
 gehört.</p>
 
 <h3 id="bebrütungsdauer-und--temperatur">Bebrütungsdauer und -temperatur</h3>
 
-<p><a id="ballot-question-3"></a></p>
-
-<p class="bg-warning"><strong>Ballotfrage 3 — ist die Bebrütung über <code class="language-plaintext highlighter-rouge">Specimen.processing</code> darstellbar?</strong>
-FHIR sieht sie dort vor und die MII hat die Bausteine, die Modellierung ist also
-geklärt. Wir fragen, ob sie an Ihrem Standort umsetzbar ist.</p>
-
-<p>Die Elemente, gemessen an R4 Core und am Biobank-Modul am 2026-09-10:</p>
+<p>Beide sind optional. Liefert ein Standort sie, stehen sie in <code class="language-plaintext highlighter-rouge">Specimen.processing</code>:</p>
 
 <ul>
   <li><strong>Dauer</strong> — <code class="language-plaintext highlighter-rouge">Specimen.processing.time[x]</code> als <code class="language-plaintext highlighter-rouge">Period</code>. <code class="language-plaintext highlighter-rouge">Specimen.processing</code>
@@ -445,12 +417,6 @@ Context <code class="language-plaintext highlighter-rouge">Specimen.processing</
 Element und der richtige Datentyp für „35–37 °C", und seit dem
 <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code> des Basisprofils optional.</li>
 </ul>
-
-<p>Wird keine Specimen-Ressource
-erzeugt (Ballotfrage 1), ist <code class="language-plaintext highlighter-rouge">Specimen.processing</code> unerreichbar, und die
-Alternative wären Extensions auf <code class="language-plaintext highlighter-rouge">Observation.method</code>, die das Verfahren in der
-Ressource qualifizieren, die das Ergebnis berichtet. Dieses Modul bildet die
-Bebrütung nicht ab, solange die Antwort fehlt.</p>
 
 
 
@@ -477,7 +443,7 @@ Bebrütung nicht ab, solange die Antwort fehlt.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Nov 27, 2026 14:29+0000">2026-11-27</span>
+          Erstellt <span title="Fri, Nov 27, 2026 14:44+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

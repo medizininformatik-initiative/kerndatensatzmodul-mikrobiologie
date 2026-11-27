@@ -16,8 +16,6 @@ Probe beschreibt das mikrobiologisch untersuchte Material. Das Profil leitet vom
 
 Specimen describes the material examined microbiologically. The profile derives from [MII_PR_Biobank_Specimen_Bioprobe_Core](https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core), a base profile written so that modules derive from it rather than implement it directly. `Observation.specimen` of every investigation profile in this module references it.
 
-**Ballot question 1 — can you supply a Specimen resource for every result?** Every investigation profile here requires `Observation.specimen`. The HL7 EU Lab Semantic Workgroup states that the specimen shall always be represented explicitly in a Specimen resource, even where the LOINC code already carries it, so the question is deliverability rather than principle. Feedback from German laboratory practice is that one is frequently not produced. Full statement of the question on [Specimen](probe.md).
-
 ### Specimen type
 
 `Specimen.type.coding:sct` keeps the inherited binding to the biobank specimen type set. It is `descendent-of 123038009 |Specimen|` and therefore covers the microbiological specimen types; an own value set would be a subset without additional meaning. One gap: the root code `123038009` itself is excluded, so "specimen, unspecified" cannot be expressed. The binding is extensible, so the case remains a warning rather than an error.
@@ -87,7 +85,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-p
   "title" : "MII PR Mikrobio Probe",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T14:29:27+00:00",
+  "date" : "2026-11-27T14:44:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

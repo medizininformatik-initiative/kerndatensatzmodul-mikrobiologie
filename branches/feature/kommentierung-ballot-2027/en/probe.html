@@ -353,19 +353,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="report---specimen">Report - Specimen</h3>
 
-<p><a id="ballot-question-1"></a></p>
-
-<p class="bg-warning"><strong>Ballot question 1 — can you supply a Specimen resource for every result?</strong>
-Every investigation profile in this module requires <code class="language-plaintext highlighter-rouge">Observation.specimen</code>, as
-the HL7 EU Lab Semantic Workgroup does — it asks for an explicit Specimen even
-where the LOINC code already carries the material.</p>
-
-<p>German laboratory practice reports that a Specimen resource is frequently not
-produced. If that holds widely, the two ways out point in opposite directions:
-relax <code class="language-plaintext highlighter-rouge">Observation.specimen</code> to <code class="language-plaintext highlighter-rouge">0..1</code> and let pre-coordinated LOINC codes carry
-the material, or keep the requirement and accept that some senders cannot
-conform.</p>
-
 <p>Specimens are represented by <a href="StructureDefinition-mii-pr-mikrobio-probe.html">Specimen</a>,
 which derives from
 <a href="https://simplifier.net/medizininformatikinitiative-modulbiobank/mii_pr_biobank_specimen_bioprobe_core">MII_PR_Biobank_Specimen_Bioprobe_Core</a>
@@ -424,32 +411,19 @@ shows it.</p>
 
 <h3 id="specimenprocessing-staining"><code class="language-plaintext highlighter-rouge">Specimen.processing</code>: staining</h3>
 
-<p>Up to <code class="language-plaintext highlighter-rouge">2027.0.0-ballot.rc2</code> the biobank base profile required the extension
-<code class="language-plaintext highlighter-rouge">temperaturbedingungen</code> on every <code class="language-plaintext highlighter-rouge">Specimen.processing</code> element — a requirement
-from the storage of biosamples, without meaning for laboratory processing, and
-one a derived profile could not relax. This guide raised it as a ballot question;
-the base profile relaxed it to <code class="language-plaintext highlighter-rouge">0..1</code> in its <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code>, which this module
-now depends on, and the question is settled.</p>
-
-<p>The staining technique is nevertheless <strong>not</strong> given under
+<p>The staining technique is <strong>not</strong> given under
 <code class="language-plaintext highlighter-rouge">Specimen.processing.procedure</code>, as the HL7 EU Lab Semantic Workgroup proposes,
 but in an extension on the Observation,
 <a href="StructureDefinition-mii-ex-mikrobio-faerbung.html"><code class="language-plaintext highlighter-rouge">extension[faerbung]</code></a>, with
 the same codes — see
-<a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2">Microscopy</a>:
+<a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#staining">Microscopy</a>:
 one specimen is often stained several times without the laboratory creating
 sub-specimens, and only on the Observation does it remain clear which stain
 belongs to which finding.</p>
 
 <h3 id="incubation-duration-and-temperature">Incubation duration and temperature</h3>
 
-<p><a id="ballot-question-3"></a></p>
-
-<p class="bg-warning"><strong>Ballot question 3 — is incubation representable via <code class="language-plaintext highlighter-rouge">Specimen.processing</code>?</strong>
-FHIR provides for it there and the MII has the pieces, so the modelling is
-settled. We ask whether it is implementable at your site.</p>
-
-<p>The elements, measured against R4 core and the biobank module on 2026-09-10:</p>
+<p>Both are optional. Where a site supplies them, they go into <code class="language-plaintext highlighter-rouge">Specimen.processing</code>:</p>
 
 <ul>
   <li><strong>Duration</strong> — <code class="language-plaintext highlighter-rouge">Specimen.processing.time[x]</code> as a <code class="language-plaintext highlighter-rouge">Period</code>. <code class="language-plaintext highlighter-rouge">Specimen.processing</code>
@@ -463,11 +437,6 @@ context is <code class="language-plaintext highlighter-rouge">Specimen.processin
 and the right datatype for "35-37 degrees C", and optional since the base
 profile's <code class="language-plaintext highlighter-rouge">2027.0.0-ballot</code>.</li>
 </ul>
-
-<p>If no Specimen resource is produced (ballot question 1), <code class="language-plaintext highlighter-rouge">Specimen.processing</code> is
-out of reach, and the alternative would be extensions on <code class="language-plaintext highlighter-rouge">Observation.method</code>,
-which qualify the technique in the resource that reports the result. This module
-does not represent incubation until the answer is in.</p>
 
 
 
@@ -494,7 +463,7 @@ does not represent incubation until the answer is in.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Nov 27, 2026 14:29+0000">2026-11-27</span>
+          Generated <span title="Fri, Nov 27, 2026 14:44+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -355,7 +355,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#einleitung" id="markdown-toc-einleitung">Einleitung</a></li>
   <li><a href="#zielgruppe" id="markdown-toc-zielgruppe">Zielgruppe</a></li>
-  <li><a href="#ballotfragen" id="markdown-toc-ballotfragen">Ballotfragen</a></li>
   <li><a href="#inhalt-dieses-leitfadens" id="markdown-toc-inhalt-dieses-leitfadens">Inhalt dieses Leitfadens</a></li>
   <li><a href="#verwandte-leitfäden" id="markdown-toc-verwandte-leitfäden">Verwandte Leitfäden</a></li>
   <li><a href="#impressum" id="markdown-toc-impressum">Impressum</a></li>
@@ -404,10 +403,7 @@ den europäischen Kontext (EHDS) ausgeweitet.</p>
   <p>Dieses europäische Modell ist <strong>noch nicht final</strong>. Der vorliegende Release bildet
 seinen aktuellen Stand so genau ab, wie es eine implementierbare Spezifikation
 zulässt: Wo die zugrunde liegenden Abstimmungen eine Frage offen lassen, benennt
-dieser Leitfaden die getroffene Entscheidung und ihre Begründung. Bewusst offen
-gelassene Punkte stehen unter <a href="#ballotfragen">Ballotfragen</a>, zu denen wir um
-Rückmeldung bitten. Implementierende sollten in den betroffenen Bereichen mit
-Änderungen rechnen.</p>
+dieser Leitfaden die getroffene Entscheidung und ihre Begründung.</p>
 </div>
 
 <!-- MIGRATED verbatim from Simplifier page: MIIIGModulMikrobiologie/Beschreibung-Modul-Mikrobiologie.page.md  -->
@@ -476,33 +472,6 @@ Profile überführt.</p>
     </tr>
   </tbody>
 </table>
-
-<h3 id="ballotfragen">Ballotfragen</h3>
-
-<p>Dies ist ein Ballot-Kandidat. Die folgenden Punkte sind bewusst offen gelassen;
-wir bitten während des Ballots um Rückmeldung dazu. Jeder ist auf der Seite
-vollständig dargestellt, zu der er gehört.</p>
-
-<ol>
-  <li><strong><a href="probe.html#ballot-question-1">Entsteht immer eine Specimen-Ressource?</a></strong> — jedes
-Untersuchungsprofil dieses Moduls verlangt <code class="language-plaintext highlighter-rouge">Observation.specimen</code>.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2">Wohin gehört die Färbetechnik?</a></strong>
-— dieses Modul führt sie in einer Extension und weicht damit von der
-europäischen Abstimmung ab, die sie an die Probe legt.</li>
-  <li><strong><a href="probe.html#ballot-question-3">Sind Bebrütungsdauer und -temperatur über <code class="language-plaintext highlighter-rouge">Specimen.processing</code> darstellbar?</a></strong>
-— FHIR und die MII liefern die Bausteine; die Frage ist, ob Standorte sie
-befüllen können.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-4">Können Sie eine Komponente für eine semiquantitative Menge verarbeiten?</a></strong>
-— das Modul folgt hier der europäischen Abstimmung, und die Komponente dreht
-eine Entscheidung dieses Zyklus zurück.</li>
-  <li><strong><a href="profilauswahl-und-abgrenzung.html#ballot-question-5">Können Sie zu jedem Befund <code class="language-plaintext highlighter-rouge">Observation.method</code> liefern?</a></strong>
-— die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur, und Ihre
-Antwort entscheidet mehr als eine Frage.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html#ballot-question-6">Genügt <code class="language-plaintext highlighter-rouge">Detected</code> / <code class="language-plaintext highlighter-rouge">Not detected</code> für eine zielgerichtete Kultur?</a></strong>
-— ein Profil deckt jetzt den zielgerichteten Nachweis unabhängig vom Verfahren
-ab; die europäische Abstimmung bindet für die Kultur Wachstumscodes, dieser
-Leitfaden weicht davon ab.</li>
-</ol>
 
 <h3 id="inhalt-dieses-leitfadens">Inhalt dieses Leitfadens</h3>
 
@@ -625,7 +594,7 @@ aus dem Inhalt dieser Spezifikation entstehen könnten.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Nov 27, 2026 14:29+0000">2026-11-27</span>
+          Erstellt <span title="Fri, Nov 27, 2026 14:44+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

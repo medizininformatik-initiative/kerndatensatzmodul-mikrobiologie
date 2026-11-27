@@ -24,12 +24,6 @@ Zur Abgrenzung gegenüber Empfindlichkeitstestung und Klassifikation sowie zur C
 
 Untersuchungen ohne vordefiniertes Ziel, bei denen das Ergebnis die Nennung des identifizierten Erregers ist, werden über [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.md) abgebildet.
 
-### Ein Profil oder zwei?
-
-**Ballotfrage 6 — genügt `Detected` / `Not detected` für eine zielgerichtete Kultur, oder brauchen Sie `Organism growth` / `No growth`?** Dieses Modul weicht von der HL7 EU Lab Semantic Workgroup ab, die die zielgerichtete Kultur getrennt führt und dort Wachstumscodes bindet: Ein Profil deckt den zielgerichteten Nachweis unabhängig vom Verfahren ab, weil die Kultur bereits im Untersuchungscode steht, dessen Methodenachse `Organism specific culture` trägt.
-
-Brauchen Sie die Wachstumscodes, kommt die Bindung zurück. Wir bitten um Rückmeldung im Ballot.
-
 ### Stellung in der diagnostischen Kette
 
 Identifizierung und Empfindlichkeit verweisen über `triggeredBy` hierher, abgeleitete Bewertungen über `derivedFrom`. Beim direkten Nachweis liegt das Ergebnis zuerst vor; bei der zielgerichteten Kultur steht `Detected` erst nach Identifizierung und Testung fest.
@@ -289,7 +283,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Spezifische Bestimmung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T14:29:27+00:00",
+  "date" : "2026-11-27T14:44:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -396,7 +390,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "id" : "Observation.value[x]:valueCodeableConcept",
       "path" : "Observation.value[x]",
       "sliceName" : "valueCodeableConcept",
-      "short" : "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 6). 'Schwach positiv' ist ein Nachweis mit geringer Menge: Wert 'Detected', die Menge in component[menge]; 'Weakly positive' ist abgekündigt. Ein nicht eindeutiger Befund wird als 'Equivocal result' berichtet. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet.",
+      "short" : "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht. 'Schwach positiv' ist ein Nachweis mit geringer Menge: Wert 'Detected', die Menge in component[menge]; 'Weakly positive' ist abgekündigt. Ein nicht eindeutiger Befund wird als 'Equivocal result' berichtet. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet.",
       "type" : [{
         "code" : "CodeableConcept"
       }],

@@ -94,7 +94,7 @@ Das Argument gegen Präkoordination ist die Codeexplosion — ein Kulturcode mul
 
 Die Ausnahme gilt für [Titer](StructureDefinition-mii-pr-mikrobio-titer.md), [Avidität](StructureDefinition-mii-pr-mikrobio-aviditaet.md), [Antigen/Antikörper quantitativ](StructureDefinition-mii-pr-mikrobio-antigen-antikoerper-quantitativ.md) und die **serologische Anwendung** der [Spezifischen Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.md) — jenes Profil bedient auch die molekulare Bank, wo die Konvention weiter gilt, die Ausnahme hängt dort also an der Anwendung und nicht am Profil.
 
-Eine Specimen-Ressource wird trotzdem in jedem Fall erwartet; Ballotfrage 1 bleibt davon unberührt. Die Ausnahme erlaubt einen Untersuchungscode, der Serum benennt — sie erlaubt nicht, `Observation.specimen` leer zu lassen.
+Eine Specimen-Ressource ist trotzdem in jedem Fall Pflicht. Die Ausnahme erlaubt einen Untersuchungscode, der Serum benennt — sie erlaubt nicht, `Observation.specimen` leer zu lassen.
 
 Eine weitere Eigenheit der serologischen Befundung ist zu kennen: Die Diagnose ergibt sich häufig erst aus mehreren Ergebnissen zusammen und nicht aus einem einzelnen. Diese Aussage gehört in `DiagnosticReport.conclusion` — siehe [Befundbericht](StructureDefinition-mii-pr-mikrobio-diagnostic-report.md).
 
@@ -107,10 +107,6 @@ Die HL7 EU Lab Semantic Workgroup führt das als Grundsatz und formuliert es sch
 Die Methode ist also auch dann anzugeben, wenn der Untersuchungscode sie bereits trägt — eine Kultur unter `11475-1 |… by Culture|` soll trotzdem sagen, ob aerob oder anaerob bebrütet wurde. In der Mikroskopie ist die Färbung nicht Teil der Methode: Sie steht in [`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.md), auch wenn der Untersuchungscode sie nennt, und `Observation.method` trägt das Mikroskopieverfahren.
 
 Dieser Leitfaden hält das als **Empfehlung** fest, nicht als Pflicht. `Observation.method` ist im Labor-Basisprofil `0..1` Must Support, und eine modulweite Pflicht würde heute konforme Daten ungültig machen. Erzwungen wird sie an der einen Stelle, an der die Aussage sonst mehrdeutig ist: bei der Allgemeinen Kultur mit dem methodenneutralen Code `41852-5`.
-
-**Ballotfrage 5 — können Sie zu jedem Befund `Observation.method` liefern?** Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt es nur. Wäre eine Pflicht an Ihrem Standort erfüllbar?
-
-Aus einem Ja folgt zweierlei. Eine spätere Version kann `Observation.method` auf `1..1` heben, und das Sonderinvariant der Allgemeinen Kultur wird überflüssig — `41852-5` samt Methode ist dann überall eindeutig, und die Empfehlung, den methodentragenden `11475-1` zu bevorzugen, entfällt weitgehend.
 
 ### Zwei Granularitätsstufen auf derselben Achse
 

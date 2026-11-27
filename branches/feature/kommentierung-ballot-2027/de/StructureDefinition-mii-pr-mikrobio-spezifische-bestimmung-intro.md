@@ -9,22 +9,6 @@ Zur Abgrenzung gegenüber Empfindlichkeitstestung und Klassifikation sowie zur C
 
 Untersuchungen ohne vordefiniertes Ziel, bei denen das Ergebnis die Nennung des identifizierten Erregers ist, werden über [Allgemeine Bestimmung](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html) abgebildet.
 
-### Ein Profil oder zwei?
-
-<a id="ballot-question-6"></a>
-
-{:.bg-warning}
-**Ballotfrage 6 — genügt `Detected` / `Not detected` für eine zielgerichtete
-Kultur, oder brauchen Sie `Organism growth` / `No growth`?** Dieses Modul weicht
-von der HL7 EU Lab Semantic Workgroup ab, die die zielgerichtete Kultur getrennt
-führt und dort Wachstumscodes bindet: Ein Profil deckt den zielgerichteten
-Nachweis unabhängig vom Verfahren ab, weil die Kultur bereits im
-Untersuchungscode steht, dessen Methodenachse `Organism specific culture`
-trägt.
-
-Brauchen Sie die Wachstumscodes, kommt die Bindung zurück. Wir bitten um
-Rückmeldung im Ballot.
-
 ### Stellung in der diagnostischen Kette
 
 Identifizierung und Empfindlichkeit verweisen über `triggeredBy` hierher,

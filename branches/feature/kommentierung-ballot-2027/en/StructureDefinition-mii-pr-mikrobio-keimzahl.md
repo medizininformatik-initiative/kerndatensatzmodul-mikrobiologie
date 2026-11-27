@@ -191,7 +191,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-k
   "title" : "MII PR Mikrobio Keimzahl",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T14:29:27+00:00",
+  "date" : "2026-11-27T14:44:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

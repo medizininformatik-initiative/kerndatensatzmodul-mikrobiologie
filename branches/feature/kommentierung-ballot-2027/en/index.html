@@ -387,7 +387,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#target-audience" id="markdown-toc-target-audience">Target audience</a></li>
-  <li><a href="#ballot-questions" id="markdown-toc-ballot-questions">Ballot questions</a></li>
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
   <li><a href="#related-guides" id="markdown-toc-related-guides">Related guides</a></li>
   <li><a href="#imprint" id="markdown-toc-imprint">Imprint</a></li>
@@ -421,9 +420,7 @@ were extended to the European context (EHDS).</p>
 
   <p>That European model is <strong>not yet final</strong>. This release represents its current state as faithfully as
 an implementable specification allows: where the underlying agreements leave a question open, this
-guide states the decision it took and why. Points deliberately left open are listed under
-<a href="#ballot-questions">Ballot questions</a>, and we ask for comment on them. Implementers should expect
-changes in the areas concerned.</p>
+guide states the decision it took and why.</p>
 </div>
 
 <h3 id="target-audience">Target audience</h3>
@@ -489,32 +486,6 @@ category status, avidity)</li>
     </tr>
   </tbody>
 </table>
-
-<h3 id="ballot-questions">Ballot questions</h3>
-
-<p>This is a ballot candidate. The points below are deliberately left open, and we
-ask for comment on them during the ballot. Each is stated in full on the page it
-belongs to.</p>
-
-<ol>
-  <li><strong><a href="probe.html#ballot-question-1">Is a Specimen resource always available?</a></strong> — every
-investigation profile in this module requires <code class="language-plaintext highlighter-rouge">Observation.specimen</code>.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2">Where does the staining technique belong?</a></strong>
-— this module carries it in an extension and deviates from the European
-coordination, which places it on the Specimen.</li>
-  <li><strong><a href="probe.html#ballot-question-3">Is incubation duration and temperature representable via <code class="language-plaintext highlighter-rouge">Specimen.processing</code>?</a></strong>
-— FHIR and the MII provide the pieces; the question is whether sites can supply
-them.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-4">Can you process a component for a semiquantitative amount?</a></strong>
-— the module follows the European coordination here, and the component
-reverses a decision of this release cycle.</li>
-  <li><strong><a href="profilauswahl-und-abgrenzung.html#ballot-question-5">Can you supply <code class="language-plaintext highlighter-rouge">Observation.method</code> for every result?</a></strong>
-— the HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends it, and your
-answer decides more than one question.</li>
-  <li><strong><a href="StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html#ballot-question-6">Is <code class="language-plaintext highlighter-rouge">Detected</code> / <code class="language-plaintext highlighter-rouge">Not detected</code> enough for a targeted culture?</a></strong>
-— one profile now covers targeted detection whatever the technique; the
-European coordination binds growth codes for culture and this guide deviates.</li>
-</ol>
 
 <h3 id="contents">Contents</h3>
 
@@ -634,7 +605,7 @@ the content of this specification.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Nov 27, 2026 14:29+0000">2026-11-27</span>
+          Generated <span title="Fri, Nov 27, 2026 14:44+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

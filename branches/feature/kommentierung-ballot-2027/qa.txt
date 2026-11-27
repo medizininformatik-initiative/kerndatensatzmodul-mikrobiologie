@@ -3,7 +3,7 @@ MII_IG_Mikrobiologie : Validation Results
 
 err = 3618, warn = 193, info = 192
 IG Publisher Version: 2.3.2 Out of date - current version is 3.0.8
-Generated Fri Nov 27 14:41:25 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 (canonical = https://www.medizininformatik-initiative.de/fhir/modul-mikrobio)
+Generated Fri Nov 27 14:56:32 UTC 2026. FHIR version 4.0.1 for de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 (canonical = https://www.medizininformatik-initiative.de/fhir/modul-mikrobio)
  Build Errors : 0 / 1 / 0
  /home/runner/work/kerndatensatzmodul-mikrobiologie/kerndatensatzmodul-mikrobiologie/fsh-generated/resources/CapabilityStatement-mii-cps-mikrobio-metadata : 6 / 2 / 61
  /home/runner/work/kerndatensatzmodul-mikrobiologie/kerndatensatzmodul-mikrobiologie/fsh-generated/resources/CodeSystem-mii-cs-mikrobio-mrgn-ergebnis : 2 / 2 / 1
@@ -4106,7 +4106,7 @@ ERROR: ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum: 
 WARNING: ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 INFORMATION: ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because the code system 'http://unitsofmeasure.org' is not known, and no terminology service supports it
 WARNING: ValueSet.where(id = 'mii-vs-mikrobio-antigen-antikoerper-quantitativ-einheiten-ucum'): Error from http://127.0.0.1:8090/fhir: Error: A definition for CodeSystem 'http://unitsofmeasure.org' version '3.0.1' could not be found, so the value set cannot be expanded. No versions of this code system are known
-Information: X-Request-Id: a6f85e3d-4700-433e-8dd8-17252376823f
+Information: X-Request-Id: a6d31e08-3482-411c-b99e-8022bbb80e95
 == fsh-generated/resources/ValueSet-mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc.json ==
 ERROR: ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc: ValueSet.publisher.extension[0].extension[0].value.ofType(code): The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
 ERROR: ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc: ValueSet.publisher.extension[0].extension[0].value.ofType(code): The value provided ('de') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
@@ -4149,7 +4149,7 @@ ERROR: ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum: ValueSet.publish
 WARNING: ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 INFORMATION: ValueSet/mii-vs-mikrobio-empfindlichkeit-einheiten-ucum: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because the code system 'http://unitsofmeasure.org' is not known, and no terminology service supports it
 WARNING: ValueSet.where(id = 'mii-vs-mikrobio-empfindlichkeit-einheiten-ucum'): Error from http://127.0.0.1:8090/fhir: Error: A definition for CodeSystem 'http://unitsofmeasure.org' version '3.0.1' could not be found, so the value set cannot be expanded. No versions of this code system are known
-Information: X-Request-Id: f5a15f78-1ca2-4956-a7b3-7c19888d56bb
+Information: X-Request-Id: 830d93c1-bdc5-47c1-b7c0-8cfe96dc7840
 == fsh-generated/resources/ValueSet-mii-vs-mikrobio-empfindlichkeit-genotyp-loinc.json ==
 ERROR: ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc: ValueSet.publisher.extension[0].extension[0].value.ofType(code): The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
 ERROR: ValueSet/mii-vs-mikrobio-empfindlichkeit-genotyp-loinc: ValueSet.publisher.extension[0].extension[0].value.ofType(code): The value provided ('de') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
@@ -4172,7 +4172,7 @@ ERROR: ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum: ValueSet.publisher.exte
 WARNING: ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 INFORMATION: ValueSet/mii-vs-mikrobio-keimzahl-einheiten-ucum: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because the code system 'http://unitsofmeasure.org' is not known, and no terminology service supports it
 WARNING: ValueSet.where(id = 'mii-vs-mikrobio-keimzahl-einheiten-ucum'): Error from http://127.0.0.1:8090/fhir: Error: A definition for CodeSystem 'http://unitsofmeasure.org' version '3.0.1' could not be found, so the value set cannot be expanded. No versions of this code system are known
-Information: X-Request-Id: 87019d3a-bd9b-4cb1-8f05-f361fedc020e
+Information: X-Request-Id: 4774cedc-e89f-48d4-907f-0ee70e11ab01
 == fsh-generated/resources/ValueSet-mii-vs-mikrobio-keimzahl-loinc.json ==
 ERROR: ValueSet/mii-vs-mikrobio-keimzahl-loinc: ValueSet.publisher.extension[0].extension[0].value.ofType(code): The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
 ERROR: ValueSet/mii-vs-mikrobio-keimzahl-loinc: ValueSet.publisher.extension[0].extension[0].value.ofType(code): The value provided ('de') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
@@ -4188,7 +4188,7 @@ ERROR: ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum: ValueSe
 WARNING: ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 INFORMATION: ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because the code system 'http://unitsofmeasure.org' is not known, and no terminology service supports it
 WARNING: ValueSet.where(id = 'mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum'): Error from http://127.0.0.1:8090/fhir: Error: A definition for CodeSystem 'http://unitsofmeasure.org' version '3.0.1' could not be found, so the value set cannot be expanded. No versions of this code system are known
-Information: X-Request-Id: e893f13d-48d8-4b1e-afd6-bf1ac83fa788
+Information: X-Request-Id: 4c7acdf6-fed5-46e2-8cde-76a82b9a61b6
 == fsh-generated/resources/ValueSet-mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed.json ==
 ERROR: ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed: ValueSet.publisher.extension[0].extension[0].value.ofType(code): The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
 ERROR: ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed: ValueSet.publisher.extension[0].extension[0].value.ofType(code): The value provided ('de') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')
@@ -4199,7 +4199,7 @@ ERROR: ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum: ValueSet.p
 WARNING: ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum: ValueSet.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 INFORMATION: ValueSet/mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum: ValueSet.compose.include[0]: The concepts in the value set include have not been validated because the code system 'http://unitsofmeasure.org' is not known, and no terminology service supports it
 WARNING: ValueSet.where(id = 'mii-vs-mikrobio-molekulare-diagnostik-einheiten-ucum'): Error from http://127.0.0.1:8090/fhir: Error: A definition for CodeSystem 'http://unitsofmeasure.org' version '3.0.1' could not be found, so the value set cannot be expanded. No versions of this code system are known
-Information: X-Request-Id: b8db008d-7643-4d25-b2c8-70159f354aa0
+Information: X-Request-Id: 8047fda2-952b-46ae-a46c-9f527570e360
 == fsh-generated/resources/ValueSet-mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed.json ==
 ERROR: ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed: ValueSet.publisher.extension[0].extension[0].value.ofType(code): The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'
 ERROR: ValueSet/mii-vs-mikrobio-molekulare-pathogenlast-methode-snomed: ValueSet.publisher.extension[0].extension[0].value.ofType(code): The value provided ('de') was not found in the value set 'All Languages' (http://hl7.org/fhir/ValueSet/all-languages|4.0.1), and a code is required from this value set  (error message = The System URI could not be determined for the code 'de' in the ValueSet 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1'; The provided code '#de' was not found in the value set 'http://hl7.org/fhir/ValueSet/all-languages|4.0.1')

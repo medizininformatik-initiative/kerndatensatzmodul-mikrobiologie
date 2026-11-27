@@ -32,10 +32,6 @@ Der häufigste Grambefund braucht zwei Aussagen auf einmal — **wenig** grampos
 
 Ihr Code ist `103392008 |Semi-quantitative value|`, das Konzept, das die HL7 EU Lab Semantic Workgroup für diese Komponente vorschlägt. Für denselben Zweck ist ein LOINC-Code angefordert; er tritt an diese Stelle, sobald er existiert. Neben dem semiquantitativen Wert nimmt die Komponente eine Zählung je Gesichtsfeld, als `Quantity` oder als `Range`.
 
-**Ballotfrage 4 — können Sie eine Komponente für die Menge verarbeiten?** Beide Mikroskopieprofile führen die Menge in `component[menge]` und folgen damit der HL7 EU Lab Semantic Workgroup, die die Menge eines einzelnen Befunds in einer Komponente führt und mehrere Befunde einer Untersuchung mit `hasMember` gruppiert.
-
-Die Komponente dreht eine Entscheidung dieses Zyklus zurück: `2027.0.0-alpha.1` hat die Komponenten aus genau diesem Profil entfernt und in eigenständige Observations überführt.
-
 ### Beispiele
 
 Beispiel (minimal):
@@ -289,7 +285,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Allgemeine Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T14:29:27+00:00",
+  "date" : "2026-11-27T14:44:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

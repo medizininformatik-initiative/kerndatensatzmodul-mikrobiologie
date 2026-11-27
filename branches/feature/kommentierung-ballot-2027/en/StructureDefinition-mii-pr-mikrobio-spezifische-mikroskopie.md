@@ -32,13 +32,13 @@ Both profiles answer `Detected` / `Not detected`, and they stay apart for the su
 
 ### Staining
 
-The codes of this profile usually name the stain themselves, and it is given in `extension[faerbung]` all the same — that is where a consumer reads it, whichever code the laboratory chose, and where the concrete variant appears when the code names only the class ("Acid fast stain" against Kinyoun). Why it sits on the Observation and not on the specimen is explained under [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-2).
+The codes of this profile usually name the stain themselves, and it is given in `extension[faerbung]` all the same — that is where a consumer reads it, whichever code the laboratory chose, and where the concrete variant appears when the code names only the class ("Acid fast stain" against Kinyoun). Why it sits on the Observation and not on the specimen is explained under [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#staining).
 
 ### The amount
 
 The amount goes into `component[menge]`, not into `value[x]`: the test code asks whether the object is there — `72357-7` and `87243-2` are `PrThr` codes, "presence or threshold" — and the semi-quantitative value qualifies that answer rather than replacing it. It is not an `Observation.interpretation` either, which carries a clinical assessment and not a quantity.
 
-The component takes three answer forms, because a laboratory reports the same analyte in two of them: the semi-quantitative value, a count per high power field as `Quantity`, and such a count as an interval in a `Range`. Its code and its value set are shared with [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.md), where [ballot question 4](StructureDefinition-mii-pr-mikrobio-mikroskopie.md#ballot-question-4) asks whether sites can process it.
+The component takes three answer forms, because a laboratory reports the same analyte in two of them: the semi-quantitative value, a count per high power field as `Quantity`, and such a count as an interval in a `Range`. Its code and its value set are shared with [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.md).
 
 The semi-quantitative values come from a German laboratory's real result catalogue and span two SNOMED axes: `441614007` / `441517005` / `441521003` are presence findings below `52101004 |Present|`, while `Few`, `Moderate number`, `Numerous` and `Scanty` are degree and number descriptors. Which of the two families should be preferred is still open with the European working group.
 
@@ -209,7 +209,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Mikroskopie",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T14:29:27+00:00",
+  "date" : "2026-11-27T14:44:11+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{

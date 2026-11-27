@@ -8,21 +8,6 @@ For the delimitation against susceptibility testing and classification, and for 
 
 Investigations without a predefined target, where the result is the naming of the identified pathogen, are represented via [General determination](StructureDefinition-mii-pr-mikrobio-allgemeine-bestimmung.html).
 
-### One profile or two?
-
-<a id="ballot-question-6"></a>
-
-{:.bg-warning}
-**Ballot question 6 — is `Detected` / `Not detected` enough for a targeted
-culture, or do you need `Organism growth` / `No growth`?** This module deviates
-from the HL7 EU Lab Semantic Workgroup, which keeps targeted culture separate and
-binds growth codes there: one profile covers targeted detection whatever the
-technique, because the culture is already stated by the test code, whose method
-axis carries `Organism specific culture`.
-
-If you need the growth codes, the binding comes back. Please comment during the
-ballot.
-
 ### Position in the diagnostic chain
 
 Identification and susceptibility point back here through `triggeredBy`,
