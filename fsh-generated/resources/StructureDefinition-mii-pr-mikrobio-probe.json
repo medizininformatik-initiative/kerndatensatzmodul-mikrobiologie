@@ -75,7 +75,7 @@
       {
         "id": "Specimen.type",
         "path": "Specimen.type",
-        "short": "Probenart. Auch dann anzugeben, wenn das Material im verwendeten LOINC-Code bereits praekoordiniert ist — nur so steht die Probenart strukturiert und unabhaengig vom Untersuchungscode zur Verfuegung."
+        "short": "Probenart. Auch dann anzugeben, wenn das Material im verwendeten LOINC-Code bereits praekoordiniert ist — nur so steht die Probenart strukturiert und unabhaengig vom Untersuchungscode zur Verfuegung. Fuer ein Isolat 119303007 'Microbial isolate', mit parent auf die Probe, aus der es gewonnen wurde."
       },
       {
         "id": "Specimen.parent",
@@ -85,7 +85,7 @@
       {
         "id": "Specimen.collection.collected[x]",
         "path": "Specimen.collection.collected[x]",
-        "short": "Entnahmezeitpunkt. Ist er nicht bekannt, kann stattdessen Specimen.receivedTime dokumentiert werden; der Parent verlangt collected[x] jedoch verpflichtend."
+        "short": "Entnahmezeitpunkt. Ist er nicht bekannt, kann stattdessen Specimen.receivedTime dokumentiert werden; der Parent verlangt collected[x] jedoch verpflichtend. Bei einem Isolat der Entnahmezeitpunkt der Probe, aus der es gewonnen wurde."
       },
       {
         "id": "Specimen.processing",

@@ -44,6 +44,25 @@ folgende Elemente relevant:
     Specimen abgeleitet oder entnommen wurde, z. B. bei
     weiterverarbeiteten oder aus Primärproben gewonnenen Materialien.
 
+### Isolat als eigene Probe
+
+<a id="isolate-specimen"></a>
+
+Ein Isolat kann als eigene Probe abgebildet werden, wie im Modell der HL7 EU Lab
+Semantic Workgroup. Das ist optional.
+
+- `type`: `119303007 |Microbial isolate|`
+- `parent`: die Probe, aus der es gewonnen wurde
+- `collection.collected[x]`: deren Entnahmezeitpunkt
+
+Die Untersuchungen eines Erregers — Identifizierung, Empfindlichkeit,
+MRGN-Klasse, Resistenzkategorie-Status, Voraussichtliche Empfindlichkeit, am
+Isolat bestimmte Resistenzmechanismen und Virulenzfaktoren — referenzieren dann
+das Isolat. Kultur und Keimzahl bleiben an der Ursprungsprobe. So ist die
+Zuordnung zum Erreger auch ohne Verweise eindeutig; das
+[Urin-Beispiel](profilauswahl-und-abgrenzung.html#chain-general-culture)
+zeigt es.
+
 ### `Specimen.processing`: Färbung
 
 Bis `2027.0.0-ballot.rc2` verlangte das Bioproben-Basisprofil die Extension

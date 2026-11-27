@@ -37,6 +37,25 @@ The following elements are particularly relevant for the microbiological use cas
     Represents the relationship to the specimen from which another specimen was derived or taken,
     e.g. for further-processed materials or materials obtained from primary specimens.
 
+### Isolate as a specimen of its own
+
+<a id="isolate-specimen"></a>
+
+An isolate may be represented as a specimen of its own, as in the model of the
+HL7 EU Lab Semantic Workgroup. This is optional.
+
+- `type`: `119303007 |Microbial isolate|`
+- `parent`: the specimen it was obtained from
+- `collection.collected[x]`: that specimen's collection time
+
+The investigations of one organism — identification, susceptibility, MRGN
+class, resistance category status, predicted susceptibility, and resistance
+mechanisms and virulence factors determined on the isolate — then reference the
+isolate. Culture and colony count stay with the original specimen. This makes
+the link to the organism unambiguous even without references; the
+[urine example](profilauswahl-und-abgrenzung.html#chain-general-culture)
+shows it.
+
 ### `Specimen.processing`: staining
 
 Up to `2027.0.0-ballot.rc2` the biobank base profile required the extension
