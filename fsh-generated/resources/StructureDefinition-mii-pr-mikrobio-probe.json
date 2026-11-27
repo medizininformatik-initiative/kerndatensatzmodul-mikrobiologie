@@ -90,7 +90,7 @@
       {
         "id": "Specimen.processing",
         "path": "Specimen.processing",
-        "comment": "Bis 2027.0.0-ballot.rc2 verlangte der Parent hier verpflichtend die Extension 'temperaturbedingungen', eine Pflicht aus der Lagerung von Bioproben ohne Aussage fuer die mikrobiologische Aufarbeitung. Seit 2027.0.0-ballot ist sie 0..1 und auf den Lagerprozess-Slice begrenzt. Die Faerbetechnik wird trotzdem nicht hier, sondern in Observation.extension[faerbung] angegeben, solange offen ist, ob ueberhaupt eine Specimen-Ressource entsteht."
+        "comment": "Bis 2027.0.0-ballot.rc2 verlangte der Parent hier verpflichtend die Extension 'temperaturbedingungen', eine Pflicht aus der Lagerung von Bioproben ohne Aussage fuer die mikrobiologische Aufarbeitung. Seit 2027.0.0-ballot ist sie 0..1 und auf den Lagerprozess-Slice begrenzt. Die Faerbetechnik wird trotzdem nicht hier, sondern in Observation.extension[faerbung] angegeben: Eine Probe wird oft mehrfach gefaerbt, ohne dass das Labor Unterproben anlegt, und nur an der Observation bleibt erkennbar, welche Faerbung zu welchem Befund gehoert."
       }
     ]
   }

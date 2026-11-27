@@ -31,8 +31,8 @@ a morphological form, a parasite — and carries the amount in which it was seen
 The codes of this profile usually name the stain themselves, and it is given in
 `extension[faerbung]` all the same — that is where a consumer reads it, whichever
 code the laboratory chose, and where the concrete variant appears when the code
-names only the class ("Acid fast stain" against Kinyoun). Where it belongs is
-[ballot question 2](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2).
+names only the class ("Acid fast stain" against Kinyoun). Why it sits on the Observation and not on the specimen is explained
+under [General microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2).
 
 ### The amount
 

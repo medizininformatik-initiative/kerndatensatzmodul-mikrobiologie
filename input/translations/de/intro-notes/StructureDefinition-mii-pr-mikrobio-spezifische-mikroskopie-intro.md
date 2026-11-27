@@ -34,8 +34,8 @@ Die Codes dieses Profils nennen die Färbung meist selbst, und sie wird trotzdem
 in `extension[faerbung]` angegeben — dort liest sie ein Verarbeitender,
 unabhängig davon, welchen Code das Labor gewählt hat, und dort steht die konkrete
 Variante, wo der Code nur die Klasse nennt („Acid fast stain" gegenüber Kinyoun).
-Wohin sie gehört, ist
-[Ballotfrage 2](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2).
+Warum sie an der Observation steht und nicht an der Probe, erklärt die
+[Allgemeine Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2).
 
 ### Die Menge
 

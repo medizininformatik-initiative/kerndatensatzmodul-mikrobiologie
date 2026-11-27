@@ -19,19 +19,15 @@ Mikroskopie ohne Färbung die einzige Angabe, die zu machen ist.
 
 <a id="ballot-question-2"></a>
 
-{:.bg-warning}
-**Ballotfrage 2 — wohin gehört die Färbetechnik?**
-Dieses Modul weicht von dem Modell ab, das in der HL7 EU Lab Semantic Workgroup
-diskutiert wird: Es führt die Färbung in `extension[faerbung]` an der
-Observation, nicht in `Specimen.processing.procedure`. Die Codes sind dieselben.
-Können Sie die Färbung an der Probe liefern, oder brauchen Sie die Extension?
+### Färbung an der Observation
 
-Gegen `Specimen` als einzigen Ort spricht, dass er eine Specimen-Ressource
-voraussetzt, und die stellt Ballotfrage 1 in Zweifel. Weil die Terminologie auf
-beiden Wegen dieselbe ist, ändert ein späterer Umzug das Element und nichts
-weiter.
+Die Färbung steht in `extension[faerbung]`, nicht wie bei der HL7 EU Lab
+Semantic Workgroup in `Specimen.processing`; die Codes sind dieselben. Grund: Eine
+Probe wird oft mehrfach gefärbt, ohne dass das LIS Unterproben anlegt. Nur an der
+Observation bleibt erkennbar, welche Färbung zu welchem Befund gehört. Für das
+EU-Modell wird je Färbung eine abgeleitete Probe angelegt.
 
-## Morphologie zusammen mit ihrer Menge
+### Morphologie zusammen mit ihrer Menge
 
 Der häufigste Grambefund braucht zwei Aussagen auf einmal — *wenig* grampositive
 Kokken —, und `value[x]` kann nur eine davon tragen. Die Morphologie ist der Wert,

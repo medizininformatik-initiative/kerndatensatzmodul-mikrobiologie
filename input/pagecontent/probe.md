@@ -70,8 +70,10 @@ The staining technique is nevertheless **not** given under
 but in an extension on the Observation,
 [`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.html), with
 the same codes — see
-[Microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html), where ballot
-question 2 sets out the reasoning.
+[Microscopy](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2):
+one specimen is often stained several times without the laboratory creating
+sub-specimens, and only on the Observation does it remain clear which stain
+belongs to which finding.
 
 ### Incubation duration and temperature
 

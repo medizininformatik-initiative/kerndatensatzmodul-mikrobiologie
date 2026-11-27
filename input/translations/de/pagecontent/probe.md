@@ -78,8 +78,10 @@ Die Färbetechnik wird dennoch **nicht** unter
 es vorschlägt, sondern in einer Extension an der Observation,
 [`extension[faerbung]`](StructureDefinition-mii-ex-mikrobio-faerbung.html), mit
 denselben Codes — siehe
-[Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html), wo
-Ballotfrage 2 die Begründung enthält.
+[Mikroskopie](StructureDefinition-mii-pr-mikrobio-mikroskopie.html#ballot-question-2):
+Eine Probe wird oft mehrfach gefärbt, ohne dass das Labor Unterproben anlegt,
+und nur an der Observation bleibt erkennbar, welche Färbung zu welchem Befund
+gehört.
 
 ### Bebrütungsdauer und -temperatur
 

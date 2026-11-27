@@ -16,16 +16,13 @@ which for native microscopy without a stain is the one statement to be made.
 
 <a id="ballot-question-2"></a>
 
-{:.bg-warning}
-**Ballot question 2 — where does the staining technique belong?**
-This module deviates from the model under discussion in the HL7 EU Lab Semantic
-Workgroup: it carries the stain in `extension[faerbung]` on the Observation, not
-in `Specimen.processing.procedure`. The codes are the same. Can your site supply
-the stain on the Specimen, or do you need the extension?
+### Staining on the Observation
 
-What keeps this module from relying on the Specimen is that it presupposes a
-Specimen resource, which ballot question 1 puts in doubt. Because the terminology
-is the same on either route, a later move changes the element and nothing else.
+The stain is carried in `extension[faerbung]`, not in `Specimen.processing` as in
+the model of the HL7 EU Lab Semantic Workgroup; the codes are the same. The
+reason: a specimen is often stained several times without the LIS creating
+sub-specimens. Only on the Observation does it stay clear which stain belongs to
+which finding. For the EU model, one derived specimen is created per stain.
 
 ### Morphology together with its amount
 
