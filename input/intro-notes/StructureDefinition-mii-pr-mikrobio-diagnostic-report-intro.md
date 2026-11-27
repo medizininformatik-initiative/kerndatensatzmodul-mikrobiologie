@@ -9,7 +9,7 @@ Microbiological diagnostic report for summarising and contextualising related mi
 | `mibi-category` | 1..1 | Marks the report as microbiological: `v2-0074#MB \|Microbiology\|`, mandatory, plus optionally `18725-2 \|Microbiology studies\|` |
 | `mibi-sub-category` | 0..* | Clinical report type from `mii-vs-mikrobio-befundtyp-loinc`, e.g. `92894-5 \|Microbiology - bacterial studies\|` |
 
-The report type is optional. A report that cannot be assigned to any of the study types, or that is to be classified only generally, is represented via `mibi-category` alone - a general report-type code is not needed for that and does not exist in this LOINC family either.
+The report type is optional. A report that cannot be assigned to any of the study types, or that is to be classified only generally, is represented via `mibi-category` alone - a general report-type code is not needed for that and does not exist in this LOINC family either. The same applies where the study type cannot be read from the source data.
 
 If a report covers several study types, for instance detection of bacteria **and** fungi, several sub-types are given:
 
