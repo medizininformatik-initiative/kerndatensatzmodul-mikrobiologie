@@ -18,25 +18,25 @@ Description: "Tests-ValueSet für die molekulare Pathogenlast: quantitative LOIN
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6464-4" and
-      CLASS = "MICRO" and
+      CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6404-0" and
-      CLASS = "MICRO" and
+      CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6462-8" and
-      CLASS = "MICRO" and
+      CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6463-6" and
-      CLASS = "MICRO" and
+      CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP208998-7" and
-      CLASS = "MICRO" and
+      CLASS = "LP7819-8" and
       STATUS = "ACTIVE"

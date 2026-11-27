@@ -64,7 +64,7 @@ Description: "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Co
 // Pathologie- und Haematologiecodes (gegen LOINC 2.83: 12 statt 5 Codes).
 // Ergebnis am 2026-11-26: 104348-8, 104350-4, 104404-9, 104405-6, 105052-5.
 * include codes from system $loinc
-    where CLASS = "MICRO" and
+    where CLASS = "LP7819-8" and
       PROPERTY = "LP217195-9" and
       SCALE_TYP = "LP7751-3" and
       METHOD_TYP = "LP6393-5" and

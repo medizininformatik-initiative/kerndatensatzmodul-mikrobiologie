@@ -26,6 +26,13 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 //
 // Beide Versionen muessen mit input/resources/Parameters-expansion-manifest.json
 // uebereinstimmen; scripts/terminology-pins.test.mjs prueft das.
+// LOINC-Filter auf CLASS (und die uebrigen Part-Properties) mit dem PART-CODE,
+// z. B. CLASS = "LP7819-8", nicht mit dem Klassennamen "MICRO". Gemessen am
+// 2026-11-27: Der Validator (IG Publisher 2.3.2, LOINC 2.83) meldet einen
+// Klassennamen als Fehler ("must be a valid code"), und der MII-Ontoserver
+// 6.32.1 expandiert beide Formen gleich. Ein Ballotkommentar (HDB-1050) hatte
+// die Klassennamen vorgeschlagen, weil eine aeltere Ontoserver-Version mit dem
+// Part-Code leer expandierte.
 Alias: $loinc = http://loinc.org|2.83
 Alias: $loinc-no-ver = http://loinc.org
 Alias: $ucum = http://unitsofmeasure.org

@@ -7,5 +7,5 @@ Description: "Tests-ValueSet für die Titerbestimmung: LOINC-Codes für semiquan
 * ^status = #active
 * include codes from system $loinc
     where PROPERTY = "LP6881-9" and
-      CLASS = "MICRO" and
+      CLASS = "LP7819-8" and
       STATUS = "ACTIVE"

@@ -7,5 +7,5 @@ Description: "Tests-ValueSet für den Ct-Wert: LOINC-Codes mit der Eigenschaft Z
 * ^status = #active
 * include codes from system $loinc
     where PROPERTY = "LP188772-0" and
-      CLASS = "MICRO" and
+      CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
