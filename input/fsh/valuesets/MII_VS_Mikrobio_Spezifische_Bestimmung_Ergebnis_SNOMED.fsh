@@ -5,7 +5,7 @@ Description: "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder A
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
-* include codes from valueset MII_VS_Mikrobio_Detected_Not_Detected_SNOMED
+* include codes from valueset MII_VS_Mikrobio_Detected_Not_Detected_Equivocal_SNOMED
 // Graubereich zwischen Nachweis und Ausschluss, ergänzt auf Vorschlag der
 // europäischen Arbeitsgruppe. Ein Code für "borderline" liess sich in SNOMED
 // nicht finden; "Equivocal result" deckt ihn ab.
@@ -20,4 +20,4 @@ Description: "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder A
 //                 Labor berichtet sie, üblicherweise mit der Bitte um eine
 //                 Folgeprobe.                           -> value[x]
 * $sct#260408008 "Weakly positive"
-* $sct#280414007 "Equivocal result"
+// "Equivocal result" kommt seit 2026-11-26 ueber das inkludierte ValueSet.

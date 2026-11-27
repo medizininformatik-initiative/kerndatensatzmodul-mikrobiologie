@@ -14,6 +14,16 @@ Description: "Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasi
 // identification"). Ohne diesen Code waere sequenzierungsbasierte
 // Identifizierung nicht kodierbar.
 * $sct#1304162005 "Nucleic acid sequencing technique (qualifier value)"
+// Automatisierte biochemische Identifizierung (VITEK, Phoenix, MicroScan).
+// Unter den Techniken (Qualifier Values), aus denen dieses ValueSet sonst
+// kodiert, gibt es keinen Code; die HL7 EU Lab Semantic Workgroup hat einen
+// angefordert (s. unten). Bis dahin die Prozedur unter 386053000 |Evaluation
+// procedure|, die das FHIR-Kern-ValueSet observation-methods einschliesst; das
+// EU-IG verwendet denselben Code. NICHT 264788002 |Biotyping|
+// (Ballotvorschlag): liegt unter |Typings| und meint die Typisierung unterhalb
+// der Art. Kandidat fuer manuelle Kits (API), sobald ein Labor sie belegt:
+// 108264004 |Microbial identification kit method|.
+* $sct#53465007 "Microbial identification, automated and semiautomated methods (procedure)"
 
 // FEHLT IN SNOMED, im Datenmodell angefordert: "Targeted rapid biochemical
 // microbial detection technique" fuer die manuelle biochemische Identifizierung
@@ -22,4 +32,5 @@ Description: "Methoden-ValueSet für die allgemeine Bestimmung: nicht kulturbasi
 // dieses ValueSet, nicht in das der Spezifischen Bestimmung. Naechstliegender
 // vorhandener Code ist 23093004 "Microbial identification, Minitek biochemical
 // differentiation disk method", der aber ein einzelnes Testsystem benennt.
+// Bis der angeforderte Code existiert: 53465007 (oben).
 

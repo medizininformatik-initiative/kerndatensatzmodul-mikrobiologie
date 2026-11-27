@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC
 Id: mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc
 Title: "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]"
-Description: "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente."
+Description: "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik oder die Mikroskopie als Verfahren im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
@@ -56,6 +56,18 @@ Description: "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Co
     where PROPERTY = "LP217195-9" and
       SCALE_TYP = "LP7751-3" and
       METHOD_TYP = "LP262570-7" and
+      STATUS = "ACTIVE"
+// 2026-11-26 ergaenzt: Praesenzcodes, deren METHOD_TYP die Mikroskopie selbst
+// ist und keine Faerbung. Anlass war 104405-6 (Giardia lamblia trophozoites
+// [Presence] in Stool by Microscopy) aus einer Laborrueckfrage (#130).
+// ZUSAETZLICH auf CLASS = MICRO beschraenkt: ohne das faengt der Filter
+// Pathologie- und Haematologiecodes (gegen LOINC 2.83: 12 statt 5 Codes).
+// Ergebnis am 2026-11-26: 104348-8, 104350-4, 104404-9, 104405-6, 105052-5.
+* include codes from system $loinc
+    where CLASS = "MICRO" and
+      PROPERTY = "LP217195-9" and
+      SCALE_TYP = "LP7751-3" and
+      METHOD_TYP = "LP6393-5" and
       STATUS = "ACTIVE"
 // Unter LOINC 2.83 traegt 107527-4 keine Methode mehr (bis 2.82: Gram stain) und
 // faellt damit aus den Filtern oben. Einzeln aufgenommen (HDB-1051).

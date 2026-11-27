@@ -4,7 +4,7 @@
   "name": "MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC",
   "id": "mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc",
   "title": "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]",
-  "description": "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei.",
+  "description": "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Empfohlen ist 105059-0, weil er methodenneutral ist. Codes mit einer Färbung im Namen (Gram, säurefest, Rhodamin-Auramin, Methylenblau nach Löffler) sind ebenfalls zulässig; die Färbung wird dann trotzdem in extension[faerbung] angegeben.",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc",
   "version": "2027.0.0-ballot2",
   "experimental": false,
@@ -40,6 +40,10 @@
           {
             "code": "676-7",
             "display": "Microscopic observation [Identifier] in Specimen by Rhodamine-auramine fluorochrome stain"
+          },
+          {
+            "code": "671-8",
+            "display": "Microscopic observation [Identifier] in Specimen by Methylene blue stain.Loeffler"
           }
         ]
       }

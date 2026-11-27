@@ -84,6 +84,7 @@
 [MII_VS_Mikrobio_Befundtyp_LOINC]: ValueSet-mii-vs-mikrobio-befundtyp-loinc.html
 [MII_VS_Mikrobio_CT_Wert_LOINC]: ValueSet-mii-vs-mikrobio-ct-wert-loinc.html
 [MII_VS_Mikrobio_Data_Absent_Reason]: ValueSet-mii-vs-mikrobio-data-absent-reason.html
+[MII_VS_Mikrobio_Detected_Not_Detected_Equivocal_SNOMED]: ValueSet-mii-vs-mikrobio-detected-not-detected-equivocal-snomed.html
 [MII_VS_Mikrobio_Detected_Not_Detected_SNOMED]: ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html
 [MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM]: ValueSet-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum.html
 [MII_VS_Mikrobio_Empfindlichkeit_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-empfindlichkeit-methode-snomed.html

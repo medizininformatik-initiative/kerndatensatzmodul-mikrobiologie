@@ -875,7 +875,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc"
         },
         "name": "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]",
-        "description": "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei.",
+        "description": "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Empfohlen ist 105059-0, weil er methodenneutral ist. Codes mit einer Färbung im Namen (Gram, säurefest, Rhodamin-Auramin, Methylenblau nach Löffler) sind ebenfalls zulässig; die Färbung wird dann trotzdem in extension[faerbung] angegeben.",
         "exampleBoolean": false
       },
       {
@@ -948,6 +948,14 @@
         },
         "name": "MII VS Mikrobio Data Absent Reason",
         "description": "Gruende fuer ein fehlendes Untersuchungsergebnis. Ergaenzt die FHIR-Basiscodes um das unbestimmbare Ergebnis, das zuvor ueber value[x] kodiert wurde.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-detected-not-detected-equivocal-snomed"
+        },
+        "name": "MII VS Mikrobio Detected Not Detected Equivocal [SNOMED]",
+        "description": "Ergebnis-ValueSet für qualitative Nachweise von Virulenzfaktoren und Resistenzmechanismen/Determinanten: nachgewiesen, nicht nachgewiesen oder nicht eindeutig. Ein unbestimmbares Ergebnis wird über Observation.dataAbsentReason abgebildet.",
         "exampleBoolean": false
       },
       {
@@ -1155,7 +1163,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"
         },
         "name": "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]",
-        "description": "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente.",
+        "description": "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik oder die Mikroskopie als Verfahren im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente.",
         "exampleBoolean": false
       },
       {
