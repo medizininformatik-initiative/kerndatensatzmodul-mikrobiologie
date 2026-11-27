@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC
 Id: mii-vs-mikrobio-spezifische-bestimmung-tests-loinc
 Title: "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]"
-Description: "Tests-ValueSet fuer die spezifische Bestimmung."
+Description: "Tests-ValueSet für die spezifische Bestimmung. Codes mit den Platzhaltern {Specimen} und {Molgen} (ab LOINC 2.83) werden postkoordiniert: das Material über Observation.specimen, die Methode über Observation.method."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
@@ -58,6 +58,20 @@ Description: "Tests-ValueSet fuer die spezifische Bestimmung."
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP6404-0" and
+      CLASS = "MICRO" and
+      STATUS = "ACTIVE"
+// LOINC 2.83 fuehrt fuer den methodenneutralen molekularen Nachweis einen neuen
+// Part {Molgen} (LP452305-8) ein, mit SYSTEM {Specimen}: 955 neue Codes, und 24
+// bisher ueber LP6404-0 erfasste Codes wurden darauf umgestellt. Ohne diese
+// Includes fielen sie aus dem ValueSet (HDB-1051). Unter 2.82 sind sie leer.
+* include codes from system $loinc
+    where PROPERTY = "LP6850-4" and
+      METHOD_TYP = "LP452305-8" and
+      CLASS = "MICRO" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where PROPERTY = "LP217195-9" and
+      METHOD_TYP = "LP452305-8" and
       CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc

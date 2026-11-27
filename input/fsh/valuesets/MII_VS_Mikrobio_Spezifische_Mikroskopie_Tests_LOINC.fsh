@@ -57,3 +57,6 @@ Description: "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Co
       SCALE_TYP = "LP7751-3" and
       METHOD_TYP = "LP262570-7" and
       STATUS = "ACTIVE"
+// Unter LOINC 2.83 traegt 107527-4 keine Methode mehr (bis 2.82: Gram stain) und
+// faellt damit aus den Filtern oben. Einzeln aufgenommen (HDB-1051).
+* $loinc#107527-4 "Clue cells [Presence] in Vaginal fluid"

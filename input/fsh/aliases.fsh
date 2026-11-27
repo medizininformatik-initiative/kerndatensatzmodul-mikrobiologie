@@ -26,7 +26,7 @@ Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 //
 // Beide Versionen muessen mit input/resources/Parameters-expansion-manifest.json
 // uebereinstimmen; scripts/terminology-pins.test.mjs prueft das.
-Alias: $loinc = http://loinc.org|2.82
+Alias: $loinc = http://loinc.org|2.83
 Alias: $loinc-no-ver = http://loinc.org
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category

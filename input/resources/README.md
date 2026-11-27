@@ -37,9 +37,9 @@ The full set of pins, all matching the Labor base module:
 
 | Pin | Why |
 |---|---|
-| `force-system-version` LOINC `2.82` | `force-` also overrides resources that name another LOINC version |
+| `force-system-version` LOINC `2.83` | `force-` also overrides resources that name another LOINC version |
 | `system-version` SNOMED CT `…/20260701` | the release bound to the `v2027.*` line |
-| `system-version` LOINC `2.82` | |
+| `system-version` LOINC `2.83` | |
 | `system-version` `v3-ObservationInterpretation|4.0.0` | the code system arrives in THREE versions — 6.2.0 via IPS→IPA, 7.1.0 from our own pin, 7.2.0 via meta→CRMI. Without this entry the publisher picks one itself |
 | `system-version` `artifact-version-policy-codes|3.0.0` | the code system behind the CRMI version-policy extension `input/fsh/rulesets/crmi.fsh` puts on every artifact |
 

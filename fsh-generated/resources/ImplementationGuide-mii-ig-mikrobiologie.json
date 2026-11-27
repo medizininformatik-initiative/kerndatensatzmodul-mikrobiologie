@@ -1147,7 +1147,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc"
         },
         "name": "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]",
-        "description": "Tests-ValueSet fuer die spezifische Bestimmung.",
+        "description": "Tests-ValueSet für die spezifische Bestimmung. Codes mit den Platzhaltern {Specimen} und {Molgen} (ab LOINC 2.83) werden postkoordiniert: das Material über Observation.specimen, die Methode über Observation.method.",
         "exampleBoolean": false
       },
       {
