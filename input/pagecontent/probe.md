@@ -29,6 +29,11 @@ The following elements are particularly relevant for the microbiological use cas
     pre-coordinated in the LOINC code used, so that the specimen type is available in a structured
     form and independently of the Observation code.
 
+-   **`Specimen.container.type`**\
+    Populated where the bottle or medium is known, e.g. `767385003 |Aerobic blood culture bottle|`.
+    `Specimen.type` may be pre-coordinated, such as `866033003 |Blood specimen in aerobic blood
+    culture bottle|`, but must then agree with `container.type`.
+
 -   **`Specimen.collection.collected[x]`**\
     Gives the time of specimen collection. If that is not known, the time of specimen receipt may
     be documented instead.
