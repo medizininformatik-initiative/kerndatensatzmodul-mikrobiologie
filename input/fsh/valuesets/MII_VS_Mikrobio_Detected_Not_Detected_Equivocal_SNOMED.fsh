@@ -7,7 +7,8 @@
 //
 // Geschachtelt: MII_VS_Mikrobio_Detected_Not_Detected_SNOMED (auch von der
 // Spezifischen Mikroskopie gebunden) <- dieses ValueSet <- das Ergebnis-ValueSet
-// der Spezifischen Bestimmung, das zusaetzlich "Weakly positive" fuehrt.
+// der Spezifischen Bestimmung, das zusaetzlich das abgekuendigte "Weakly
+// positive" fuehrt.
 ValueSet: MII_VS_Mikrobio_Detected_Not_Detected_Equivocal_SNOMED
 Id: mii-vs-mikrobio-detected-not-detected-equivocal-snomed
 Title: "MII VS Mikrobio Detected Not Detected Equivocal [SNOMED]"

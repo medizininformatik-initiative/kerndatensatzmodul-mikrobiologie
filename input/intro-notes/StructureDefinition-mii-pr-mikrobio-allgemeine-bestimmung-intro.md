@@ -25,7 +25,8 @@ points back at it through the `triggeredBy` extension with `type = reflex`; the
 [example](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html) shows this.
 Susceptibility testing in turn follows the identification and points back here in
 the same way. The identification carries the colony count of its organism through
-`hasMember`.
+`hasMember`. With a microscopic identification the amount seen is given in
+`component[menge]`, as in microscopy.
 [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) shows the
 chain as a whole.
 

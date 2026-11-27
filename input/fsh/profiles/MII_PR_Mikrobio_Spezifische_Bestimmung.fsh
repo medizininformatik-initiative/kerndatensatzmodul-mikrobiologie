@@ -44,5 +44,27 @@ Description: "Spezifische Bestimmung beschreibt den qualitativen Nachweis eines 
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED (extensible)
-* valueCodeableConcept ^short = "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 6). Ein grenzwertiger Befund wird als 'Weakly positive' oder 'Equivocal result' berichtet — das ist eine Aussage und gehört deshalb hierher. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet."
+* valueCodeableConcept ^short = "Nachweis oder Ausschluss des im Code benannten Ziels — auch dann, wenn er kulturell erfolgte: Eine zielgerichtete Kultur berichtet 'Detected' oder 'Not detected' und nicht 'Organism growth', weil die Kultur schon im Untersuchungscode steht (Ballotfrage 6). 'Schwach positiv' ist ein Nachweis mit geringer Menge: Wert 'Detected', die Menge in component[menge]; 'Weakly positive' ist abgekündigt. Ein nicht eindeutiger Befund wird als 'Equivocal result' berichtet. Ein unbestimmbares Ergebnis, bei dem die Untersuchung gar keine verwertbare Aussage liefert (z. B. inhibierte PCR), wird dagegen über dataAbsentReason abgebildet."
 * method from MII_VS_Mikrobio_Spezifische_Bestimmung_Methode_SNOMED (extensible)
+// MENGE (Ballotkommentierung, Issue #61, 2026-11-26/27): "Schwach positiv" ist
+// ein gewerteter Nachweis mit geringer Last ohne echte Quantifizierung, kein
+// Graubereich und keine Bewertung. Deshalb Detected im Wert und die Menge in
+// einer Komponente, wie bei der Spezifischen Mikroskopie; nicht interpretation,
+// die eine Bewertung traegt. Damit ist der Wert bei jedem Nachweis Detected, und
+// eine Abfrage auf Detected verliert den schwachen Befund nicht mehr.
+//
+// Gleicher Komponentencode wie MIKRO_MENGE_KOMPONENTE, aber kein insert: Die
+// Zaehlbegriffe der Mikroskopie (Few, Many) und die Zaehlung je Gesichtsfeld
+// passen hier nicht, und eine echte Quantifizierung ist eine Molekulare
+// Pathogenlast. Deshalb nur CodeableConcept und das ValueSet der Keimzahl
+// (+ bis ++++). Kein Display und keine Version im Pattern, siehe aliases.fsh.
+* component ^slicing.discriminator[0].type = #pattern
+* component ^slicing.discriminator[0].path = "$this.code"
+* component ^slicing.rules = #open
+* component ^slicing.description = "Slicing nach dem Komponenten-Code."
+* component contains menge 0..1 MS
+* component[menge] ^short = "Semiquantitativer Wert des Nachweises, z. B. 260347006 (+) für schwach positiv"
+* component[menge] ^definition = "Wie viel des Ziels nachgewiesen wurde, als semiquantitativer Wert, wenn nicht quantifiziert wurde. Der Wert der Observation ist dann Detected."
+* component[menge].code = $sct-no-ver#103392008
+* component[menge].value[x] only CodeableConcept
+* component[menge].valueCodeableConcept from MII_VS_Labor_Laborergebnis_Semiquantitativ (extensible)

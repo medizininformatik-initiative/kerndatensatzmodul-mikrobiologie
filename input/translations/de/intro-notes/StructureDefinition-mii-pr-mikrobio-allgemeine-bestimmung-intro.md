@@ -27,7 +27,8 @@ sie zurück; das
 [Beispiel](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html) zeigt das.
 Die Empfindlichkeitstestung folgt ihrerseits der Identifizierung und verweist
 auf dieselbe Weise hierher zurück. Die Keimzahl des Erregers führt die
-Identifizierung über `hasMember`.
+Identifizierung über `hasMember`. Bei mikroskopischer Identifizierung steht die
+gesehene Menge in `component[menge]`, wie bei der Mikroskopie.
 [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html) zeigt die Kette
 im Ganzen.
 

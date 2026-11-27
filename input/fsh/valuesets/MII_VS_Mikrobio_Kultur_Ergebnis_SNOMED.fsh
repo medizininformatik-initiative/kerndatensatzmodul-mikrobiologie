@@ -19,7 +19,8 @@ Description: "Ergebnis-ValueSet fuer die allgemeine und die spezifische Kultur: 
 // |Positive| und damit unter |Presence findings| liegt. Nachgemessen: unter
 // 365698005 liegen 62 Codes, "Weakly positive" ist keiner davon. Bei der
 // Spezifischen Bestimmung dagegen sind "Weakly positive" und "Detected"
-// Geschwister unter |Presence findings| — dort steht es deshalb auch.
+// Geschwister unter |Presence findings| — dort stand es deshalb; seit
+// 2026-11-27 ist es dort abgekuendigt (Detected + component[menge]).
 //
 // 263866000 "Scanty growth" ist ebenfalls kein Ersatz: Es hängt unter 272520006
 // |Degree findings|, also auf der Mengenachse, und die delegiert dieses Modul an

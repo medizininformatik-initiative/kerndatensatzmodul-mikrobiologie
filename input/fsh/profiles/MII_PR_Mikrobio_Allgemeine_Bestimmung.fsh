@@ -18,3 +18,10 @@ Description: "Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorg
 // kein Must Support: hasMember bleibt fuer weitere zusammengehoerige Befunde offen.
 * hasMember ^short = "Keimzahl des identifizierten Erregers"
 * hasMember ^comment = "Die Keimzahl ist eine eigene Observation (MII_PR_Mikrobio_Keimzahl) und keine Komponente: Sie hat eine eigene Methode und oft einen eigenen Zeitpunkt. Die Identifizierung verweist mit hasMember auf sie; bei mehreren Erregern aus einer Probe ist das die Zuordnung der Zahl zu ihrem Erreger und Pflicht."
+// MENGE BEI MIKROSKOPISCHER IDENTIFIZIERUNG (Ballotkommentierung, 2026-11-26):
+// Eine am Mikroskop erkannte Spezies ist eine Allgemeine Bestimmung (method <
+// 278289002); ihre Menge stammt aus demselben Praeparat und demselben Schritt,
+// deshalb eine Komponente wie bei der Mikroskopie (Komponente bei gleichem
+// Schritt, hasMember bei eigenem Schritt). Must Support kommt aus dem RuleSet.
+* insert MIKRO_MENGE_KOMPONENTE
+* component[menge] ^short = "Nur bei mikroskopischer Identifizierung: wie viel des Erregers gesehen wurde, z. B. 441517005 'Present two plus out of three plus'."
