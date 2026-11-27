@@ -7,7 +7,7 @@ Description: "Tests-ValueSet für Resistenzmechanismen und Determinanten: LOINC-
 * ^status = #active
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
-      CLASS = "LP7755-4" and
+      CLASS = "ABXBACT" and
       STATUS = "ACTIVE"
 
 // Die Carbapenemase-Schnelltests des EU-Datenmodells liegen ueberwiegend in der

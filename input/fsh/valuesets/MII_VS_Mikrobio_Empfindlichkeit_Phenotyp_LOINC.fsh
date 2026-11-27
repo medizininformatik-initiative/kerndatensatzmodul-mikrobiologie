@@ -35,7 +35,7 @@ Description: "Tests-ValueSet für die phänotypische Empfindlichkeitstestung: LO
 // Unabhaengig davon entfallen ist ORDER_OBS = "Observation"; dem Genotyp-VS
 // fehlt STATUS = "ACTIVE".
 * include codes from system $loinc
-    where CLASS = "LP7755-4" and
+    where CLASS = "ABXBACT" and
     PROPERTY = "LP6870-2" and
     STATUS = "ACTIVE"
 

@@ -13,92 +13,92 @@ Description: "Tests-ValueSet fuer die spezifische Bestimmung."
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP6462-8" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP6462-8" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP6464-4" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP6464-4" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP6463-6" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP6463-6" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP208998-7" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP208998-7" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP6404-0" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP6404-0" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP150045-5" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP150045-5" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP6323-2" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP6323-2" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP217197-5" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP217197-5" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP6106-1" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP6106-1" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 // ERREGERSPEZIFISCHE KULTUR, am 2026-09-11 hierher zurueckgeholt. Bis dahin lag
 // METHOD_TYP LP6429-7 in einem eigenen ValueSet fuer ein eigenes Profil. Die
@@ -111,12 +111,12 @@ Description: "Tests-ValueSet fuer die spezifische Bestimmung."
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP6429-7" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP217195-9" and
       METHOD_TYP = "LP6429-7" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 
 // AUSSCHLUeSSE aus der erregerspezifischen Kultur. Die HL7 EU Lab Semantic

@@ -8,45 +8,45 @@ Description: "Tests-ValueSet für quantitative Antigen- und Antikörpertests: LO
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP217197-5" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6106-1" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6274-7" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP28800-8" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6304-2" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6320-8" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6323-2" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6360-4" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"
 * include codes from system $loinc
     where SCALE_TYP = "LP7753-9" and
       METHOD_TYP = "LP6416-4" and
-      CLASS = "LP7819-8" and
+      CLASS = "MICRO" and
       STATUS = "ACTIVE"

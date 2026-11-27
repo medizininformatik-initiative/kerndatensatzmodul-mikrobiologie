@@ -32,6 +32,6 @@ Description: "Tests-ValueSet für die voraussichtliche Empfindlichkeit: LOINC-Co
 // genau. (Eine Umbenennung waere ohnehin folgenlos gewesen — die Canonical haengt
 // an der Id, nicht am Namen.)
 * include codes from system $loinc
-    where CLASS = "LP7755-4" and
+    where CLASS = "ABXBACT" and
     PROPERTY = "LP6870-2" and
     METHOD_TYP = "LP28723-2"
