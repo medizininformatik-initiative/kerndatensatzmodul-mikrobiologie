@@ -7,13 +7,13 @@ Bevorzugt wird `41852-5 |Microorganism or agent identified in Specimen|`. Dersel
 
 ### Ergebnis
 
-Das Ergebnis ist der identifizierte Mikroorganismus aus `mii-vs-mikrobio-organismen-snomedct`. Wurde untersucht, aber kein Erreger identifiziert, wird `260415000 |Not detected|` angegeben — nicht das Weglassen der Observation.
+Das Ergebnis ist der identifizierte Mikroorganismus aus `mii-vs-mikrobio-organismen-snomedct`. Ergab die Identifizierung keinen Erreger, wird `260415000 |Not detected|` angegeben. Wächst in der Kultur nichts, wird nicht identifiziert; das negative Ergebnis ist dann `No growth` in der Allgemeinen Kultur.
 
 Abzugrenzen von den benachbarten Negativfällen:
 
 | Aussage | Profil | Wert |
 |---|---|---|
-| Kein Erreger identifiziert | Allgemeine Bestimmung | `260415000 \|Not detected\|` |
+| Identifizierung ergab keinen Erreger | Allgemeine Bestimmung | `260415000 \|Not detected\|` |
 | Kein Wachstum in der Kultur | [Allgemeine Kultur](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html) | `264868006 \|No growth\|` |
 | Ein bestimmter Erreger wurde gesucht und nicht gefunden | [Spezifische Bestimmung](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) | `260415000 \|Not detected\|` |
 
@@ -26,7 +26,9 @@ benennt, und verweist über die `triggeredBy`-Extension mit `type = reflex` auf
 sie zurück; das
 [Beispiel](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html) zeigt das.
 Die Empfindlichkeitstestung folgt ihrerseits der Identifizierung und verweist
-auf dieselbe Weise hierher zurück.
+auf dieselbe Weise hierher zurück. Die Keimzahl des Erregers führt die
+Identifizierung über `hasMember`. Bei mikroskopischer Identifizierung steht die
+gesehene Menge in `component[menge]`, wie bei der Mikroskopie.
 [Profilauswahl und Abgrenzung](profilauswahl-und-abgrenzung.html) zeigt die Kette
 im Ganzen.
 

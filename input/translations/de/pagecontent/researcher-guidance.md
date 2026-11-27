@@ -85,3 +85,11 @@ Organismen wurden identifiziert" muss deshalb über Profil oder Untersuchungscod
 filtern und nicht über `value[x]` allein, sonst zählt sie morphologische Gruppen
 als Spezies. Die Untersuchungscodes selbst sind disjunkt; mit dem richtigen
 Filter bleibt also keine Mehrdeutigkeit.
+
+Eine zweite Falle betrifft Resistenzkategorien wie VRE oder MRSA. Ein
+kulturell nachgewiesener VRE kann zweimal vorliegen: als Spezifische Bestimmung
+(z. B. `13316-5` = Detected) und als Resistenzkategorie-Status (`vre-status` =
+Positive). Beides ist zulässig, weil Laborsysteme den Kulturbefund und die
+MRE-Einstufung des Isolats getrennt führen. Wer Fälle zählt, fragt beide Profile
+ab und zählt je Patient und Probe einmal; ein Isolat wird dabei über
+`Specimen.parent` seiner Ursprungsprobe zugeordnet.

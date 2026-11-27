@@ -14,18 +14,15 @@ test code already names it: it is then readable in one place, whichever code a
 laboratory chooses. `Observation.method` carries the microscopy technique only,
 which for native microscopy without a stain is the one statement to be made.
 
-<a id="ballot-question-2"></a>
+<a id="staining"></a>
 
-{:.bg-warning}
-**Ballot question 2 — where does the staining technique belong?**
-This module deviates from the model under discussion in the HL7 EU Lab Semantic
-Workgroup: it carries the stain in `extension[faerbung]` on the Observation, not
-in `Specimen.processing.procedure`. The codes are the same. Can your site supply
-the stain on the Specimen, or do you need the extension?
+### Staining on the Observation
 
-What keeps this module from relying on the Specimen is that it presupposes a
-Specimen resource, which ballot question 1 puts in doubt. Because the terminology
-is the same on either route, a later move changes the element and nothing else.
+The stain is carried in `extension[faerbung]`, not in `Specimen.processing` as in
+the model of the HL7 EU Lab Semantic Workgroup; the codes are the same. The
+reason: a specimen is often stained several times without the LIS creating
+sub-specimens. Only on the Observation does it stay clear which stain belongs to
+which finding. For the EU model, one derived specimen is created per stain.
 
 ### Morphology together with its amount
 
@@ -38,20 +35,8 @@ microscopy](StructureDefinition-mii-pr-mikrobio-spezifische-mikroskopie.html).
 Its code is `103392008 |Semi-quantitative value|`, the concept the HL7 EU Lab
 Semantic Workgroup proposes for this component. A LOINC code has been requested
 for the same purpose and will take its place once it exists. Besides the
-semiquantitative grade the component takes a count per high power field, as a
+semi-quantitative value the component takes a count per high power field, as a
 `Quantity` or as a `Range`.
-
-<a id="ballot-question-4"></a>
-
-{:.bg-warning}
-**Ballot question 4 — can you process a component for the amount?**
-Both microscopy profiles carry the amount in `component[menge]`, following the
-HL7 EU Lab Semantic Workgroup, which uses a component for the amount of a single
-finding and `hasMember` to group several findings of one examination.
-
-The component reverses a decision of this release cycle: `2027.0.0-alpha.1`
-removed components from this very profile and moved them into standalone
-Observations.
 
 ### Examples
 

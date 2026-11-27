@@ -1,0 +1,44 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "MII_VS_Mikrobio_Nachweis_Menge_SNOMED",
+  "id": "mii-vs-mikrobio-nachweis-menge-snomed",
+  "title": "MII VS Mikrobio Nachweis Menge [SNOMED]",
+  "description": "Semiquantitativer Wert eines Nachweises als geordnete Skala: gering, mäßig, hoch. Schwach positiv ist gering.",
+  "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-nachweis-menge-snomed",
+  "version": "2027.0.0-ballot2",
+  "experimental": false,
+  "publisher": "Medizininformatik Initiative",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.medizininformatik-initiative.de"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/900000000000207008/version/20260701",
+        "concept": [
+          {
+            "code": "441614007",
+            "display": "Present one plus out of three plus"
+          },
+          {
+            "code": "441517005",
+            "display": "Present two plus out of three plus"
+          },
+          {
+            "code": "441521003",
+            "display": "Present three plus out of three plus"
+          }
+        ]
+      }
+    ]
+  }
+}

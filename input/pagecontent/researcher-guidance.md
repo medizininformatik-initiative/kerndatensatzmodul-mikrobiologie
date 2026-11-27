@@ -84,3 +84,11 @@ used for identification. A query asking "which organisms were identified" must
 filter by profile or test code rather than by `value[x]` alone, or it will count
 morphological groups as species. The test codes themselves are disjoint, so no
 ambiguity remains once the filter is right.
+
+A second pitfall concerns resistance categories such as VRE or MRSA. A VRE
+detected by culture may appear twice: as a specific determination (e.g.
+`13316-5` = Detected) and as a resistance category status (`vre-status` =
+Positive). Both are allowed, because laboratory systems keep the culture result
+and the MRE classification of the isolate separately. To count cases, query both
+profiles and count once per patient and specimen, linking an isolate to its
+original specimen through `Specimen.parent`.

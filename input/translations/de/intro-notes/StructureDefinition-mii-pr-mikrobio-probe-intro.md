@@ -4,15 +4,6 @@ ab, einem Basisprofil, das dafür geschrieben ist, dass Module davon ableiten
 statt es direkt zu implementieren. `Observation.specimen` jedes
 Untersuchungsprofils dieses Moduls verweist darauf.
 
-{:.bg-warning}
-**Ballotfrage 1 — können Sie zu jedem Befund eine Specimen-Ressource liefern?**
-Jedes Untersuchungsprofil hier verlangt `Observation.specimen`. Die HL7 EU Lab
-Semantic Workgroup hält fest, dass die Probe immer ausdrücklich in einer
-Specimen-Ressource abzubilden ist, auch wenn der LOINC-Code sie bereits trägt —
-die Frage ist also die Erfüllbarkeit, nicht der Grundsatz. Aus der deutschen
-Laborpraxis kommt die Rückmeldung, dass sie häufig nicht erzeugt wird. Die Frage
-steht vollständig auf [Probe](probe.html).
-
 ### Probenart
 
 `Specimen.type.coding:sct` behält die geerbte Bindung an das Probenart-ValueSet

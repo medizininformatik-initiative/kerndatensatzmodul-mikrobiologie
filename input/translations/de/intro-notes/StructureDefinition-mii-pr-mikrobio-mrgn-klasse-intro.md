@@ -9,10 +9,10 @@ Der [Resistenzkategorie-Status](StructureDefinition-mii-pr-mikrobio-resistenzkat
 
 ### Stellung in der diagnostischen Kette
 
-Die MRGN-Einstufung steht am Ende der Kette und ist eine abgeleitete Aussage: Die
-Empfindlichkeitsbefunde, aus denen eingestuft wurde, werden über
-`Observation.derivedFrom` referenziert und sollten angegeben werden, damit die
-Grundlage der Einstufung nachvollziehbar bleibt. `triggeredBy` wird dafür
+Die MRGN-Einstufung steht am Ende der Kette und ist eine abgeleitete Aussage.
+Die Grundlagen werden über `derivedFrom` referenziert; bei mehreren Erregern aus
+einer Probe ist das Pflicht, sofern nicht dieselbe Isolat-Probe referenziert
+wird. `triggeredBy` wird dafür
 **nicht** verwendet — die Einstufung entsteht durch fachliche Ableitung und nicht
 als ausgelöste Folgediagnostik. Dasselbe gilt für den
 [Resistenzkategorie-Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html).

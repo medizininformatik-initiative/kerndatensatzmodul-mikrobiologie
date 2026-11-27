@@ -4,7 +4,7 @@
   "name": "MII_VS_Mikrobio_Spezifische_Mikroskopie_Tests_LOINC",
   "id": "mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc",
   "title": "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]",
-  "description": "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente.",
+  "description": "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik oder die Mikroskopie als Verfahren im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente.",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc",
   "version": "2027.0.0-ballot2",
   "experimental": false,
@@ -23,7 +23,7 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -49,7 +49,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -75,7 +75,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -96,6 +96,47 @@
             "property": "STATUS",
             "op": "=",
             "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.83",
+        "filter": [
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "LP7819-8"
+          },
+          {
+            "property": "PROPERTY",
+            "op": "=",
+            "value": "LP217195-9"
+          },
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "LP7751-3"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP6393-5"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.83",
+        "concept": [
+          {
+            "code": "107527-4",
+            "display": "Clue cells [Presence] in Vaginal fluid"
           }
         ]
       }

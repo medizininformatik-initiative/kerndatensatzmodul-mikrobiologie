@@ -6,13 +6,13 @@ Preferred is `41852-5 |Microorganism or agent identified in Specimen|`. The same
 
 ### Result
 
-The result is the identified microorganism from `mii-vs-mikrobio-organismen-snomedct`. If the specimen was examined but no pathogen was identified, `260415000 |Not detected|` is given - not the omission of the Observation.
+The result is the identified microorganism from `mii-vs-mikrobio-organismen-snomedct`. Where the identification found no pathogen, `260415000 |Not detected|` is given. Where nothing grows in culture, no identification takes place; the negative result is then `No growth` in general culture.
 
 To be distinguished from the neighbouring negative cases:
 
 | Statement | Profile | Value |
 |---|---|---|
-| No pathogen identified | General determination | `260415000 \|Not detected\|` |
+| Identification found no pathogen | General determination | `260415000 \|Not detected\|` |
 | No growth in culture | [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html) | `264868006 \|No growth\|` |
 | A specific pathogen was sought and not found | [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) | `260415000 \|Not detected\|` |
 
@@ -24,7 +24,9 @@ The general determination normally follows a culture whose growth it names, and
 points back at it through the `triggeredBy` extension with `type = reflex`; the
 [example](Observation-mii-exa-mikrobio-allgemeine-bestimmung.html) shows this.
 Susceptibility testing in turn follows the identification and points back here in
-the same way.
+the same way. The identification carries the colony count of its organism through
+`hasMember`. With a microscopic identification the amount seen is given in
+`component[menge]`, as in microscopy.
 [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) shows the
 chain as a whole.
 

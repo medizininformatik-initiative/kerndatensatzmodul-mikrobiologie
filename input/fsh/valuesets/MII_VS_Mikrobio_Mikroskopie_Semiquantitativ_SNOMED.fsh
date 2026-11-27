@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Mikroskopie_Semiquantitativ_SNOMED
 Id: mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed
 Title: "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]"
-Description: "Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in der ein mikroskopischer Befund gesehen wurde."
+Description: "Mengen-ValueSet der Mikroskopie: der semiquantitative Wert, mit dem ein mikroskopischer Befund gesehen wurde."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
@@ -22,10 +22,10 @@ Description: "Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in de
 // Nachgemessen am 2026-09-10; es gibt keinen Teilbaum, der die Wunschliste
 // liefert, die Liste ist daher aufgezaehlt.
 
-// Praesenzachse — unter 52101004 |Present|, die Plus-Stufen des Katalogs.
-* $sct#441614007 "Present one plus out of three plus"
-* $sct#441517005 "Present two plus out of three plus"
-* $sct#441521003 "Present three plus out of three plus"
+// Praesenzachse — unter 52101004 |Present|, die Plus-Werte des Katalogs. Seit
+// 2026-11-27 aus MII_VS_Mikrobio_Nachweis_Menge_SNOMED inkludiert, das die
+// Spezifische Bestimmung direkt bindet; der Inhalt ist unveraendert.
+* include codes from valueset MII_VS_Mikrobio_Nachweis_Menge_SNOMED
 
 // Mengenachse — Grad- und Zahl-Deskriptoren, verteilt auf drei Elternkonzepte
 // (106234000 |General adjectival modifier|, 277434004 |Numerical descriptors|,

@@ -8,5 +8,5 @@ Description: "Resistenzmechanismen/Determinanten beschreibt den Nachweis von Res
 * code from MII_VS_Mikrobio_Resistenzmechanismen_Determinanten_LOINC (extensible)
 * value[x] only CodeableConcept
 * valueCodeableConcept
-* valueCodeableConcept from MII_VS_Mikrobio_Detected_Not_Detected_SNOMED (required)
+* valueCodeableConcept from MII_VS_Mikrobio_Detected_Not_Detected_Equivocal_SNOMED (required)
 * method from MII_VS_Mikrobio_Resistenzmechanismen_Methode_SNOMED (extensible)

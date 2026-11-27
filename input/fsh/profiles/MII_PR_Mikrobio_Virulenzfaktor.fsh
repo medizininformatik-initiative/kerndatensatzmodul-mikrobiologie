@@ -8,4 +8,4 @@ Description: "Virulenzfaktor beschreibt den qualitativen Nachweis oder Ausschlus
 * code from MII_VS_Mikrobio_Virulenz_LOINC (extensible)
 * value[x] only CodeableConcept
 * valueCodeableConcept
-* valueCodeableConcept from MII_VS_Mikrobio_Detected_Not_Detected_SNOMED (required)
+* valueCodeableConcept from MII_VS_Mikrobio_Detected_Not_Detected_Equivocal_SNOMED (required)

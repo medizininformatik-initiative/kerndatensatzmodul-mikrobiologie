@@ -6,7 +6,7 @@ Description: "Allgemeine Mikroskopie beschreibt die morphologische Beobachtung v
 * insert MIKRO_OBSERVATION_COMMON
 * ^purpose = "Dieses Profil beschreibt mikroskopische Beobachtungen der Morphologie." 
 * code from MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC (extensible)
-* code ^short = "Bevorzugt 105059-0 'Microscopic observation [Identifier] in Specimen', weil es die Faerbung nicht in den Code zieht. 664-3 '... by Gram stain' ist gleichwertig zulaessig; die Faerbung wird in beiden Faellen zusaetzlich in extension[faerbung] angegeben, damit sie unabhaengig von der Codewahl an einer Stelle auswertbar ist."
+* code ^short = "Empfohlen: 105059-0 'Microscopic observation [Identifier] in Specimen', weil der Code die Faerbung nicht enthaelt. Zulaessig sind auch die Codes mit Faerbung im Namen, z. B. 664-3 '... by Gram stain'. Die Faerbung wird in jedem Fall in extension[faerbung] angegeben, damit sie unabhaengig von der Codewahl an einer Stelle auswertbar ist."
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED (extensible)
@@ -34,8 +34,7 @@ Description: "Allgemeine Mikroskopie beschreibt die morphologische Beobachtung v
 // Befunde einer Untersuchung. Zugleich dreht er eine Entscheidung dieses
 // Zyklus zurueck: 2027.0.0-alpha.1 hat die Komponenten aus genau diesem Profil
 // entfernt und in eigenstaendige Observations ueberfuehrt (changes.md,
-// Abschnitt 2027.0.0-alpha.1). Deshalb fragt Ballotfrage 4, ob Standorte die
-// Komponente verarbeiten koennen.
+// Abschnitt 2027.0.0-alpha.1). Das war Ballotfrage 4; die Komponente bleibt.
 //
 // Definition in MIKRO_MENGE_KOMPONENTE, gemeinsam mit der Spezifischen
 // Mikroskopie — dort steht auch die Begruendung fuer Code und Antwortformate.

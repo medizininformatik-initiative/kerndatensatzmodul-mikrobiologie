@@ -233,7 +233,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Identifizierter Mikroorganismus oder 'Not detected', wenn kein Erreger identifiziert wurde. Ein unbestimmbares Ergebnis wird ueber dataAbsentReason abgebildet.",
+        "short": "Identifizierter Mikroorganismus oder 'Not detected', wenn die Identifizierung keinen Erreger ergab. Waechst in der Kultur nichts, ist das 'No growth' in der Allgemeinen Kultur. Unbestimmbar: dataAbsentReason.",
         "type": [
           {
             "code": "CodeableConcept"
@@ -272,6 +272,140 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "short": "Keimzahl des identifizierten Erregers",
+        "comment": "Die Keimzahl ist eine eigene Observation (MII_PR_Mikrobio_Keimzahl) und keine Komponente: Sie hat eine eigene Methode und oft einen eigenen Zeitpunkt. Die Identifizierung verweist mit hasMember auf sie; bei mehreren Erregern aus einer Probe ist das die Zuordnung der Zahl zu ihrem Erreger und Pflicht."
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this.code"
+            }
+          ],
+          "rules": "open",
+          "description": "Slicing nach dem Komponenten-Code."
+        }
+      },
+      {
+        "id": "Observation.component:menge",
+        "path": "Observation.component",
+        "sliceName": "menge",
+        "short": "Nur bei mikroskopischer Identifizierung: wie viel des Erregers gesehen wurde, z. B. 441517005 'Present two plus out of three plus'.",
+        "definition": "Wie viel des Befunds gesehen wurde: als semiquantitativer Wert, als Zaehlung je Gesichtsfeld oder als Intervall einer solchen Zaehlung.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:menge.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "103392008",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:menge.value[x]",
+        "path": "Observation.component.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:menge.value[x]:valueCodeableConcept",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "short": "Semiquantitativer Wert, z. B. 'Few' oder 'Present two plus out of three plus'.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"
+        }
+      },
+      {
+        "id": "Observation.component:menge.value[x]:valueQuantity",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueQuantity",
+        "short": "Zaehlung je Gesichtsfeld, UCUM-Einheit /[HPF]. Fuer offene Grenzen wird Quantity.comparator verwendet, z. B. '<10/GF' als comparator = '<', value = 10.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:menge.value[x]:valueQuantity.code",
+        "path": "Observation.component.value[x].code",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum"
+        }
+      },
+      {
+        "id": "Observation.component:menge.value[x]:valueRange",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueRange",
+        "short": "Zaehlung je Gesichtsfeld als Intervall, UCUM-Einheit /[HPF] — z. B. '10-25/GF' als low = 10, high = 25.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:menge.value[x]:valueRange.low.code",
+        "path": "Observation.component.value[x].low.code",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum"
+        }
+      },
+      {
+        "id": "Observation.component:menge.value[x]:valueRange.high.code",
+        "path": "Observation.component.value[x].high.code",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mikroskopie-gesichtsfeld-einheiten-ucum"
+        }
       }
     ]
   }

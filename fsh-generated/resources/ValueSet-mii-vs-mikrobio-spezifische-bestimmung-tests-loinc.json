@@ -4,7 +4,7 @@
   "name": "MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC",
   "id": "mii-vs-mikrobio-spezifische-bestimmung-tests-loinc",
   "title": "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]",
-  "description": "Tests-ValueSet fuer die spezifische Bestimmung.",
+  "description": "Tests-ValueSet für die spezifische Bestimmung. Codes mit den Platzhaltern {Specimen} und {Molgen} (ab LOINC 2.83) werden postkoordiniert: das Material über Observation.specimen, die Methode über Observation.method.",
   "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc",
   "version": "2027.0.0-ballot2",
   "experimental": false,
@@ -23,7 +23,7 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -49,7 +49,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -75,7 +75,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -101,7 +101,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -127,7 +127,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -153,7 +153,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -179,7 +179,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -205,7 +205,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -231,7 +231,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -257,7 +257,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -283,7 +283,59 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
+        "filter": [
+          {
+            "property": "PROPERTY",
+            "op": "=",
+            "value": "LP6850-4"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP452305-8"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "LP7819-8"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.83",
+        "filter": [
+          {
+            "property": "PROPERTY",
+            "op": "=",
+            "value": "LP217195-9"
+          },
+          {
+            "property": "METHOD_TYP",
+            "op": "=",
+            "value": "LP452305-8"
+          },
+          {
+            "property": "CLASS",
+            "op": "=",
+            "value": "LP7819-8"
+          },
+          {
+            "property": "STATUS",
+            "op": "=",
+            "value": "ACTIVE"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -309,7 +361,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -335,7 +387,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -361,7 +413,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -387,7 +439,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -413,7 +465,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -439,7 +491,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -465,7 +517,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -491,7 +543,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -517,7 +569,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "filter": [
           {
             "property": "PROPERTY",
@@ -543,7 +595,7 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "concept": [
           {
             "code": "105904-7",
@@ -559,7 +611,7 @@
     "exclude": [
       {
         "system": "http://loinc.org",
-        "version": "2.82",
+        "version": "2.83",
         "concept": [
           {
             "code": "44851-4",

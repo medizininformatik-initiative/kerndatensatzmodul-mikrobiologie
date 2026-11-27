@@ -9,7 +9,7 @@ Instance: mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld
 InstanceOf: MII_PR_Mikrobio_Spezifische_Mikroskopie
 Usage: #example
 Title: "MII EXA Mikrobio Spezifische Mikroskopie Leukozyten je Gesichtsfeld"
-Description: "Leukozyten im Grampräparat nachgewiesen, mit der Menge als Zählung je Gesichtsfeld — 10 bis 25 — statt als semiquantitative Stufe."
+Description: "Leukozyten im Grampräparat nachgewiesen, mit der Menge als Zählung je Gesichtsfeld — 10 bis 25 — statt als semiquantitativer Wert."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "spez-mikroskopie-leuko-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

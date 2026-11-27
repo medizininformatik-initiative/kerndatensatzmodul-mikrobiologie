@@ -36,6 +36,9 @@ class Befund {
   Klinischer Bezugszeitpunkt: Zeitpunkt[1]
   Quelle Bezugszeitpunkt: Coding[0..1]
   Dokumentationszeitpunkt: Zeitpunkt[0..1]
+  Anforderung: Referenz[0..1]
+  Befundinterpret: Referenz[0..*]
+  Beurteilung: Text[0..1]
 }
 
 abstract class Untersuchung {
@@ -45,14 +48,14 @@ abstract class Untersuchung {
   Untersuchungszeitpunkt: Zeitpunkt[1]
   Quelle Untersuchungszeitpunkt: Coding[0..1]
   Dokumentationszeitpunkt: Zeitpunkt[0..1]
-  Untersuchungsmethode: CodeableConcept[0..1]
   Interpretationsbeeinflussende Eigenschaft: Coding[0..*]
   Hinweis: Text[0..*]
 }
 
 abstract class Kultur <<Untersuchungsarten>> {
   Allgemeine Kultur
-  Mikroskopie
+  Allgemeine Mikroskopie
+  Spezifische Mikroskopie
   Bartlett Score
   Nugent Score
   Keimzahl
@@ -90,7 +93,9 @@ Befund "0..*" -- "0..*" Probenmaterial
 
 Untersuchung "0..*" -- "1" Patient
 Untersuchung "0..*" -- "1" Probenmaterial
-Untersuchung "0..*" -- "0..*" Untersuchung : ausgelöst durch
+Untersuchung "0..*" -- "0..*" Untersuchung : ausgelöst durch (triggeredBy)
+Probenmaterial "0..*" -- "0..1" Probenmaterial : gewonnen aus (z. B. Isolat)
+Patient -[hidden]right--- Probenmaterial
 
 Untersuchung <|-- Kultur
 Untersuchung <|-- Bestimmung

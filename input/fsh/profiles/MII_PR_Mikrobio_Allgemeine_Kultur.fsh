@@ -27,13 +27,9 @@
 // auf Observation.method zu definieren, wäre danach eine Neuerfindung neben
 // einer vorhandenen Lösung gewesen.
 //
-// OFFEN bleibt die Implementierbarkeit, nicht die Modellierung: Wenn Labore
-// keine Specimen-Ressource erzeugen (Ballotfrage 1), ist Specimen.processing
-// unerreichbar, und dann bleibt nur eine Extension auf Observation.method.
-// Deshalb steht die Frage als Ballotfrage 3 im Leitfaden und wird der
-// europäischen Gruppe gespiegelt.
-//
-// Bis zur Antwort wird die Bebrütung nicht abgebildet.
+// ENTSCHIEDEN 2026-11-27 (ehemals Ballotfragen 1 und 3): Observation.specimen
+// bleibt Pflicht; Dauer und Temperatur der Bebrütung sind optional und stehen,
+// wo ein Standort sie liefert, in Specimen.processing (probe.md).
 Profile: MII_PR_Mikrobio_Allgemeine_Kultur
 Parent: MII_PR_Labor_Laboruntersuchung
 Id: mii-pr-mikrobio-allgemeine-kultur

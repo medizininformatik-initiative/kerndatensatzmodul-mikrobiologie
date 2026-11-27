@@ -15,9 +15,13 @@ Description: "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definie
 * code from MII_VS_Mikrobio_Resistenzkategorie_Status (required)
 * code ^short = "Bewertete Resistenzkategorie, z. B. MRSA-Status. Es werden ausschließlich Kategorien dokumentiert, die für den vorliegenden Erreger fachlich anwendbar sind; für einen Enterococcus wird kein MRSA-Status erzeugt."
 * value[x] only CodeableConcept
-* valueCodeableConcept 1..1 MS
+// 0..1 statt 1..1 (HDB-968, 2026-11-26): dataAbsentReason ist Must Support aus
+// dem Labor-Parent, obs-6 verbietet es neben einem Wert; mit 1..1 war es nicht
+// konform befuellbar. Keine eigene Invariante: mii-lab-2 im Parent verlangt
+// schon Wert, dataAbsentReason oder hasMember.
+* valueCodeableConcept 0..1 MS
 * valueCodeableConcept from MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis (required)
-* valueCodeableConcept ^short = "Positive: Der Erreger erfüllt die Kriterien der in code angegebenen Kategorie. Negative: Der Erreger wurde anhand der relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. Kann die Kategorie nicht ausreichend bewertet werden, wird nicht Negative angegeben, sondern dataAbsentReason gesetzt oder keine Status-Observation erzeugt."
+* valueCodeableConcept ^short = "Positive: Der Erreger erfüllt die Kriterien der in code angegebenen Kategorie. Negative: Der Erreger wurde anhand der relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. Kann die Kategorie nicht ausreichend bewertet werden, wird nicht Negative angegeben, sondern dataAbsentReason gesetzt oder keine Status-Observation erzeugt. Negative wird bevorzugt angegeben, ist aber keine Pflicht."
 // Die Kategorienbewertung ist eine abgeleitete fachliche Aussage: Sie entsteht durch
 // Bewertung mehrerer Untersuchungen, nicht durch eine ausgeloeste Folgeuntersuchung. Deshalb
 // derivedFrom und nicht die triggeredBy-Extension.
@@ -26,6 +30,10 @@ Description: "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definie
 // Laborbefund uebernommen, liegen die zugrunde liegenden Untersuchungen im sendenden
 // System ggf. nicht als eigene Observations vor. Die Angabe ist deshalb SHOULD und
 // nicht SHALL.
+// Ausnahme seit der Ballotkommentierung (2026-11-26): Wurden aus einer Probe
+// mehrere Erreger identifiziert, MUSS die Zuordnung erkennbar sein, ueber
+// derivedFrom oder eine gemeinsame Isolat-Probe. Keine Invariante: Ob eine Probe
+// mehrere Erreger ergab, ist an einer einzelnen Observation nicht pruefbar.
 * derivedFrom 0..* MS
-* derivedFrom ^short = "Untersuchungen, aus denen die Bewertung abgeleitet wurde: Erregeridentifikation, Empfindlichkeitstestung und Resistenzmechanismen/Determinanten. Diese Untersuchungen SOLLTEN angegeben werden, damit die Bewertungsgrundlage nachvollziehbar ist. Sie dürfen entfallen, wenn der Status unmittelbar aus einem bereits kategorisierten Laborbefund übernommen wird und die Einzeluntersuchungen nicht als eigene Observations vorliegen."
+* derivedFrom ^short = "Grundlagen der Bewertung: Identifizierung, Empfindlichkeit, ggf. Resistenzmechanismen/Determinanten. Bei mehreren Erregern aus der Probe Pflicht, sofern specimen nicht auf dieselbe Isolat-Probe zeigt; sonst SOLLTEN sie angegeben werden. Dürfen entfallen, wenn der Status aus einem bereits kategorisierten Befund übernommen wird."
 * extension[triggeredBy-r5] ^short = "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung der Kategorienbewertung wird nicht hierüber, sondern über derivedFrom abgebildet."

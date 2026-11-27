@@ -19,6 +19,7 @@
 [mii-exa-mikrobio-empfindlichkeit-nur-kategorie]: Observation-mii-exa-mikrobio-empfindlichkeit-nur-kategorie.html
 [mii-exa-mikrobio-keimzahl]: Observation-mii-exa-mikrobio-keimzahl.html
 [mii-exa-mikrobio-keimzahl-katheterspitze]: Observation-mii-exa-mikrobio-keimzahl-katheterspitze.html
+[mii-exa-mikrobio-keimzahl-semiquantitativ]: Observation-mii-exa-mikrobio-keimzahl-semiquantitativ.html
 [mii-exa-mikrobio-labor]: Organization-mii-exa-mikrobio-labor.html
 [mii-exa-mikrobio-molekulare-pathogenlast]: Observation-mii-exa-mikrobio-molekulare-pathogenlast.html
 [mii-exa-mikrobio-mrgn-klasse]: Observation-mii-exa-mikrobio-mrgn-klasse.html
@@ -27,6 +28,8 @@
 [mii-exa-mikrobio-patient]: Patient-mii-exa-mikrobio-patient.html
 [mii-exa-mikrobio-probe]: Specimen-mii-exa-mikrobio-probe.html
 [mii-exa-mikrobio-probe-katheterspitze]: Specimen-mii-exa-mikrobio-probe-katheterspitze.html
+[mii-exa-mikrobio-probe-urin]: Specimen-mii-exa-mikrobio-probe-urin.html
+[mii-exa-mikrobio-probe-urin-isolat]: Specimen-mii-exa-mikrobio-probe-urin-isolat.html
 [mii-exa-mikrobio-resistenzkategorie-vre-negativ]: Observation-mii-exa-mikrobio-resistenzkategorie-vre-negativ.html
 [mii-exa-mikrobio-resistenzkategorie-vre-positiv]: Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html
 [mii-exa-mikrobio-resistenzmechanismen-determinanten]: Observation-mii-exa-mikrobio-resistenzmechanismen-determinanten.html
@@ -41,6 +44,14 @@
 [mii-exa-mikrobio-titer]: Observation-mii-exa-mikrobio-titer.html
 [mii-exa-mikrobio-virulenzfaktor]: Observation-mii-exa-mikrobio-virulenzfaktor.html
 [mii-exa-mikrobio-voraussichtliche-empfindlichkeit]: Observation-mii-exa-mikrobio-voraussichtliche-empfindlichkeit.html
+[mii-exa-mikrobio-workflow-urin-01-kultur]: Observation-mii-exa-mikrobio-workflow-urin-01-kultur.html
+[mii-exa-mikrobio-workflow-urin-02-identifikation]: Observation-mii-exa-mikrobio-workflow-urin-02-identifikation.html
+[mii-exa-mikrobio-workflow-urin-03-keimzahl]: Observation-mii-exa-mikrobio-workflow-urin-03-keimzahl.html
+[mii-exa-mikrobio-workflow-urin-04-cefotaxim]: Observation-mii-exa-mikrobio-workflow-urin-04-cefotaxim.html
+[mii-exa-mikrobio-workflow-urin-04-ciprofloxacin]: Observation-mii-exa-mikrobio-workflow-urin-04-ciprofloxacin.html
+[mii-exa-mikrobio-workflow-urin-04-meropenem]: Observation-mii-exa-mikrobio-workflow-urin-04-meropenem.html
+[mii-exa-mikrobio-workflow-urin-04-piperacillin]: Observation-mii-exa-mikrobio-workflow-urin-04-piperacillin.html
+[mii-exa-mikrobio-workflow-urin-05-mrgn-klasse]: Observation-mii-exa-mikrobio-workflow-urin-05-mrgn-klasse.html
 [mii-exa-mikrobio-workflow-vre-01-kultur]: Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html
 [mii-exa-mikrobio-workflow-vre-02-identifikation]: Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html
 [mii-exa-mikrobio-workflow-vre-03-empfindlichkeit]: Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html
@@ -84,6 +95,7 @@
 [MII_VS_Mikrobio_Befundtyp_LOINC]: ValueSet-mii-vs-mikrobio-befundtyp-loinc.html
 [MII_VS_Mikrobio_CT_Wert_LOINC]: ValueSet-mii-vs-mikrobio-ct-wert-loinc.html
 [MII_VS_Mikrobio_Data_Absent_Reason]: ValueSet-mii-vs-mikrobio-data-absent-reason.html
+[MII_VS_Mikrobio_Detected_Not_Detected_Equivocal_SNOMED]: ValueSet-mii-vs-mikrobio-detected-not-detected-equivocal-snomed.html
 [MII_VS_Mikrobio_Detected_Not_Detected_SNOMED]: ValueSet-mii-vs-mikrobio-detected-not-detected-snomed.html
 [MII_VS_Mikrobio_Empfindlichkeit_Einheiten_UCUM]: ValueSet-mii-vs-mikrobio-empfindlichkeit-einheiten-ucum.html
 [MII_VS_Mikrobio_Empfindlichkeit_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-empfindlichkeit-methode-snomed.html
@@ -101,6 +113,7 @@
 [MII_VS_Mikrobio_Morphologie_Ergebnis_SNOMED]: ValueSet-mii-vs-mikrobio-morphologie-ergebnis-snomed.html
 [MII_VS_Mikrobio_Morphologie_Methode_SNOMED]: ValueSet-mii-vs-mikrobio-morphologie-methode-snomed.html
 [MII_VS_Mikrobio_MRGN_Klasse_LOINC]: ValueSet-mii-vs-mikrobio-mrgn-klasse-loinc.html
+[MII_VS_Mikrobio_Nachweis_Menge_SNOMED]: ValueSet-mii-vs-mikrobio-nachweis-menge-snomed.html
 [MII_VS_Mikrobio_Organismen_SNOMEDCT]: ValueSet-mii-vs-mikrobio-organismen-snomedct.html
 [MII_VS_Mikrobio_Resistenzkategorie_Status]: ValueSet-mii-vs-mikrobio-resistenzkategorie-status.html
 [MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis]: ValueSet-mii-vs-mikrobio-resistenzkategorie-status-ergebnis.html

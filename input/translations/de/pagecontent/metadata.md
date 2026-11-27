@@ -163,7 +163,7 @@ Dieses Modul pinnt seine Expansionsparameter. Das Manifest ist
 vom IG über `cqf-expansionParameters` referenziert und vom Publisher über
 `path-expansion-params` und `pin-manifest` gelesen. Es legt fünf Versionen fest:
 SNOMED CT (die dem `v2027`-CalVer-Strang zugeordnete internationale Ausgabe vom
-2026-07-01), LOINC 2.82 — zusätzlich als `force-system-version` —,
+2026-07-01), LOINC 2.83 — zusätzlich als `force-system-version` —,
 `v3-ObservationInterpretation` 4.0.0 und `artifact-version-policy-codes` 3.0.0.
 Die Begründung, und warum der SNOMED-Pin den öffentlichen Terminologieserver für
 diesen Leitfaden unbrauchbar macht, steht in

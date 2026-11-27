@@ -432,6 +432,14 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-mikrobio-keimzahl-semiquantitativ"
+        },
+        "name": "MII EXA Mikrobio Keimzahl semiquantitativ",
+        "description": "Semiquantitative Keimzahl ohne Zählung: ++ beim Ausstrich.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+      },
+      {
+        "reference": {
           "reference": "Organization/mii-exa-mikrobio-labor"
         },
         "name": "MII EXA Mikrobio Labor",
@@ -492,6 +500,22 @@
         },
         "name": "MII EXA Mikrobio Probe Katheterspitze",
         "description": "Katheterspitze als Probenmaterial. Sie hat weder Volumen noch Masse und ist damit selbst die Bezugsgröße der Keimzahl.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-mikrobio-probe-urin"
+        },
+        "name": "MII EXA Mikrobio Probe Urin",
+        "description": "Mittelstrahlurin, Probe der Workflow-Kette allgemeine Kultur.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
+      },
+      {
+        "reference": {
+          "reference": "Specimen/mii-exa-mikrobio-probe-urin-isolat"
+        },
+        "name": "MII EXA Mikrobio Probe Urin Isolat",
+        "description": "Isolat des Escherichia coli aus der Urinkultur, parent: Urinprobe.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-probe"
       },
       {
@@ -571,7 +595,7 @@
           "reference": "Observation/mii-exa-mikrobio-spezifische-mikroskopie-kinyoun-zweiplus"
         },
         "name": "MII EXA Mikrobio Spezifische Mikroskopie Kinyoun zwei plus",
-        "description": "Kinyounfärbung mit Nachweis säurefester Stäbchen, in der Stufe zwei von drei als Mengenkomponente — entsprechend 1–10 pro Gesichtsfeld.",
+        "description": "Kinyounfärbung mit Nachweis säurefester Stäbchen, semiquantitativ ++ von +++ als Mengenkomponente — entsprechend 1–10 pro Gesichtsfeld.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
       },
       {
@@ -579,7 +603,7 @@
           "reference": "Observation/mii-exa-mikrobio-spezifische-mikroskopie-leukozyten-gesichtsfeld"
         },
         "name": "MII EXA Mikrobio Spezifische Mikroskopie Leukozyten je Gesichtsfeld",
-        "description": "Leukozyten im Grampräparat nachgewiesen, mit der Menge als Zählung je Gesichtsfeld — 10 bis 25 — statt als semiquantitative Stufe.",
+        "description": "Leukozyten im Grampräparat nachgewiesen, mit der Menge als Zählung je Gesichtsfeld — 10 bis 25 — statt als semiquantitativer Wert.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
       },
       {
@@ -608,10 +632,74 @@
       },
       {
         "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-01-kultur"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 1 Kultur",
+        "description": "Workflow Urin, Schritt 1: aerobe Urinkultur mit Wachstum.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-kultur"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-02-identifikation"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 2 Identifikation",
+        "description": "Workflow Urin, Schritt 2: Escherichia coli per MALDI-TOF; führt die Keimzahl über hasMember.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-03-keimzahl"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 3 Keimzahl",
+        "description": "Workflow Urin, Schritt 3: Keimzahl des Escherichia coli, 10⁵ [CFU]/mL.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-keimzahl"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-04-cefotaxim"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 4 Cefotaxim",
+        "description": "Workflow Urin, Schritt 4: Cefotaxim-Empfindlichkeit des Escherichia coli, MHK 32 mg/L, R nach EUCAST.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-04-ciprofloxacin"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 4 Ciprofloxacin",
+        "description": "Workflow Urin, Schritt 4: Ciprofloxacin-Empfindlichkeit des Escherichia coli, MHK 4 mg/L, R nach EUCAST.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-04-meropenem"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 4 Meropenem",
+        "description": "Workflow Urin, Schritt 4: Meropenem-Empfindlichkeit des Escherichia coli, MHK ≤ 0,125 mg/L, S nach EUCAST.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-04-piperacillin"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 4 Piperacillin",
+        "description": "Workflow Urin, Schritt 4: Piperacillin-Empfindlichkeit des Escherichia coli, MHK > 64 mg/L, R nach EUCAST.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-empfindlichkeit"
+      },
+      {
+        "reference": {
+          "reference": "Observation/mii-exa-mikrobio-workflow-urin-05-mrgn-klasse"
+        },
+        "name": "MII EXA Mikrobio Workflow Urin 5 MRGN-Klasse",
+        "description": "Workflow Urin, Schritt 5: 3MRGN, abgeleitet aus Identifizierung und Empfindlichkeit.",
+        "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-mrgn-klasse"
+      },
+      {
+        "reference": {
           "reference": "Observation/mii-exa-mikrobio-workflow-vre-01-kultur"
         },
-        "name": "MII EXA Mikrobio Workflow VRE 1 Kultur positiv",
-        "description": "Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erregerspezifischer Kultur.",
+        "name": "MII EXA Mikrobio Workflow VRE 1 zielgerichtete Kultur",
+        "description": "Workflow VRE, Schritt 1: zielgerichtete VRE-Kultur; Detected steht nach Schritt 2 und 3 fest.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-spezifische-bestimmung"
       },
       {
@@ -619,7 +707,7 @@
           "reference": "Observation/mii-exa-mikrobio-workflow-vre-02-identifikation"
         },
         "name": "MII EXA Mikrobio Workflow VRE 2 Identifikation",
-        "description": "Workflow-Kette VRE, Schritt 2: weiterführende Identifikation des Isolats als Enterococcus faecium, ausgelöst durch den positiven Nachweis.",
+        "description": "Workflow VRE, Schritt 2: Identifizierung des gewachsenen Isolats als Enterococcus faecium.",
         "exampleCanonical": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-pr-mikrobio-allgemeine-bestimmung"
       },
       {
@@ -731,7 +819,7 @@
           "reference": "StructureDefinition/mii-pr-mikrobio-keimzahl"
         },
         "name": "MII PR Mikrobio Keimzahl",
-        "description": "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.",
+        "description": "Keimzahl beschreibt die Bestimmung lebensfähiger Mikroorganismen in einer Probe: quantitativ als koloniebildende Einheiten je Volumen, je Masse oder je Probe, oder semiquantitativ (+ bis ++++), etwa beim Ausstrich.",
         "exampleBoolean": false
       },
       {
@@ -795,7 +883,7 @@
           "reference": "StructureDefinition/mii-pr-mikrobio-spezifische-mikroskopie"
         },
         "name": "MII PR Mikrobio Spezifische Mikroskopie",
-        "description": "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit der semiquantitativen Stufe als Ergebnis.",
+        "description": "Spezifische Mikroskopie beschreibt den mikroskopischen Nachweis eines im Untersuchungscode benannten Objekts — etwa säurefester Stäbchen oder von Leukozyten — mit dem Nachweis als Ergebnis und der Menge als semiquantitativem Wert.",
         "exampleBoolean": false
       },
       {
@@ -819,7 +907,7 @@
           "reference": "StructureDefinition/mii-pr-mikrobio-voraussichtliche-empfindlichkeit"
         },
         "name": "MII PR Mikrobio Voraussichtliche Empfindlichkeit",
-        "description": "Voraussichtliche Empfindlichkeit beschreibt die aus genotypischen Resistenznachweisen abgeleitete erwartete Suszeptibilität oder Resistenz gegenüber antimikrobiellen Substanzen.",
+        "description": "Voraussichtliche Empfindlichkeit beschreibt die aus dem Nachweis von Resistenzmechanismen, Genen oder Proteinen abgeleitete erwartete Suszeptibilität oder Resistenz gegenüber antimikrobiellen Substanzen.",
         "exampleBoolean": false
       },
       {
@@ -875,7 +963,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc"
         },
         "name": "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]",
-        "description": "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei.",
+        "description": "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Empfohlen ist 105059-0, weil er methodenneutral ist. Codes mit einer Färbung im Namen (Gram, säurefest, Rhodamin-Auramin, Methylenblau nach Löffler) sind ebenfalls zulässig; die Färbung wird dann trotzdem in extension[faerbung] angegeben.",
         "exampleBoolean": false
       },
       {
@@ -948,6 +1036,14 @@
         },
         "name": "MII VS Mikrobio Data Absent Reason",
         "description": "Gruende fuer ein fehlendes Untersuchungsergebnis. Ergaenzt die FHIR-Basiscodes um das unbestimmbare Ergebnis, das zuvor ueber value[x] kodiert wurde.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-detected-not-detected-equivocal-snomed"
+        },
+        "name": "MII VS Mikrobio Detected Not Detected Equivocal [SNOMED]",
+        "description": "Ergebnis-ValueSet für qualitative Nachweise von Virulenzfaktoren und Resistenzmechanismen/Determinanten: nachgewiesen, nicht nachgewiesen oder nicht eindeutig. Ein unbestimmbares Ergebnis wird über Observation.dataAbsentReason abgebildet.",
         "exampleBoolean": false
       },
       {
@@ -1035,7 +1131,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-mikroskopie-semiquantitativ-snomed"
         },
         "name": "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]",
-        "description": "Mengen-ValueSet der Mikroskopie: die semiquantitative Stufe, in der ein mikroskopischer Befund gesehen wurde.",
+        "description": "Mengen-ValueSet der Mikroskopie: der semiquantitative Wert, mit dem ein mikroskopischer Befund gesehen wurde.",
         "exampleBoolean": false
       },
       {
@@ -1088,6 +1184,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/mii-vs-mikrobio-nachweis-menge-snomed"
+        },
+        "name": "MII VS Mikrobio Nachweis Menge [SNOMED]",
+        "description": "Semiquantitativer Wert eines Nachweises als geordnete Skala: gering, mäßig, hoch. Schwach positiv ist gering.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mii-vs-mikrobio-organismen-snomedct"
         },
         "name": "MII VS Mikrobio Organismen [SNOMED CT]",
@@ -1131,7 +1235,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed"
         },
         "name": "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
-        "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis oder Ausschluss des Ziels, das bereits im Untersuchungscode benannt ist, einschliesslich der Graubereichsbefunde schwach positiv und nicht eindeutig. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
+        "description": "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit dem semiquantitativen Wert gering in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
         "exampleBoolean": false
       },
       {
@@ -1147,7 +1251,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-spezifische-bestimmung-tests-loinc"
         },
         "name": "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]",
-        "description": "Tests-ValueSet fuer die spezifische Bestimmung.",
+        "description": "Tests-ValueSet für die spezifische Bestimmung. Codes mit den Platzhaltern {Specimen} und {Molgen} (ab LOINC 2.83) werden postkoordiniert: das Material über Observation.specimen, die Methode über Observation.method.",
         "exampleBoolean": false
       },
       {
@@ -1155,7 +1259,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-spezifische-mikroskopie-tests-loinc"
         },
         "name": "MII VS Mikrobio Spezifische Mikroskopie Tests [LOINC]",
-        "description": "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente.",
+        "description": "Tests-ValueSet für die spezifische Mikroskopie: ordinale LOINC-Codes, bei denen das gesuchte Objekt und die Färbetechnik oder die Mikroskopie als Verfahren im Code benannt sind; das Ergebnis ist der Nachweis, die Menge steht in der Mengenkomponente.",
         "exampleBoolean": false
       },
       {
@@ -1163,7 +1267,7 @@
           "reference": "ValueSet/mii-vs-mikrobio-susceptibility"
         },
         "name": "MII VS Mikrobio Susceptibility",
-        "description": "Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategorien sensibel, intermediär, sensibel bei erhöhter Exposition, resistent und nicht sensibel.",
+        "description": "Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die EUCAST-Kategorien sensibel, sensibel bei erhöhter Exposition und resistent sowie die CLSI-Kategorien intermediär, sensibel dosisabhängig und nicht sensibel.",
         "exampleBoolean": false
       },
       {

@@ -16,5 +16,5 @@ Description: "Ungerichtete Erregeridentifizierung aus einer Probe, ausgewiesen a
 * extension[triggeredBy-r5].extension[observation].valueReference = Reference(mii-exa-mikrobio-allgemeine-kultur)
 * extension[triggeredBy-r5].extension[type].valueCode = #reflex
 * valueCodeableConcept = $sct#52499004 "Pseudomonas aeruginosa"
-* method = $sct#278289002 "Microscopy technique"
+* method = $sct#83581000052107 "Matrix assisted laser desorption ionization time of flight mass spectrometry technique (qualifier value)"
 * specimen = Reference(mii-exa-mikrobio-probe)

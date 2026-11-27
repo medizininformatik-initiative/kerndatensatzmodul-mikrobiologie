@@ -225,7 +225,6 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "min": 1,
         "type": [
           {
             "code": "CodeableConcept"
@@ -236,8 +235,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "Positive: Der Erreger erfüllt die Kriterien der in code angegebenen Kategorie. Negative: Der Erreger wurde anhand der relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. Kann die Kategorie nicht ausreichend bewertet werden, wird nicht Negative angegeben, sondern dataAbsentReason gesetzt oder keine Status-Observation erzeugt.",
-        "min": 1,
+        "short": "Positive: Der Erreger erfüllt die Kriterien der in code angegebenen Kategorie. Negative: Der Erreger wurde anhand der relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. Kann die Kategorie nicht ausreichend bewertet werden, wird nicht Negative angegeben, sondern dataAbsentReason gesetzt oder keine Status-Observation erzeugt. Negative wird bevorzugt angegeben, ist aber keine Pflicht.",
         "type": [
           {
             "code": "CodeableConcept"
@@ -272,7 +270,7 @@
       {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
-        "short": "Untersuchungen, aus denen die Bewertung abgeleitet wurde: Erregeridentifikation, Empfindlichkeitstestung und Resistenzmechanismen/Determinanten. Diese Untersuchungen SOLLTEN angegeben werden, damit die Bewertungsgrundlage nachvollziehbar ist. Sie dürfen entfallen, wenn der Status unmittelbar aus einem bereits kategorisierten Laborbefund übernommen wird und die Einzeluntersuchungen nicht als eigene Observations vorliegen.",
+        "short": "Grundlagen der Bewertung: Identifizierung, Empfindlichkeit, ggf. Resistenzmechanismen/Determinanten. Bei mehreren Erregern aus der Probe Pflicht, sofern specimen nicht auf dieselbe Isolat-Probe zeigt; sonst SOLLTEN sie angegeben werden. Dürfen entfallen, wenn der Status aus einem bereits kategorisierten Befund übernommen wird.",
         "mustSupport": true
       }
     ]

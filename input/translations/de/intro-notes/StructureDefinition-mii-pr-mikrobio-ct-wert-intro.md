@@ -3,11 +3,9 @@ CT-Wert beschreibt die Quantifizierung des Zyklusschwellenwerts bei Nukleinsäur
 
 ### Stellung in der diagnostischen Kette
 
-Der Ct-Wert ist eine unterstützende Messung und kein eigener Schritt, und die
-Beziehung zu dem qualitativen Ergebnis, das aus ihm abgelesen wurde, wird an
-diesem Ergebnis angegeben: Der Nachweis trägt `derivedFrom` auf den Ct-Wert,
-niemals der Ct-Wert auf den Nachweis. `A.derivedFrom = B` heißt „A entsteht aus
-B“, und es ist der Nachweis, der aus der Messung entsteht.
+Ein Ct-Wert ist ohne Test und Gerät nicht interpretierbar. Der Bezug zum
+Nachweis ist optional; wird er angegeben, trägt ihn der Nachweis:
+`derivedFrom` auf den Ct-Wert.
 
 `derivedFrom` ist an diesem Profil dennoch Must Support, für den Fall, dass ein
 Ct-Wert selbst aus einer vorangegangenen Untersuchung entsteht. Das Paar zeigt

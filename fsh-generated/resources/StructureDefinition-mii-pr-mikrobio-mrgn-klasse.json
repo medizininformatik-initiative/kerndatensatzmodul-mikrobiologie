@@ -238,7 +238,7 @@
         "id": "Observation.value[x]:valueCodeableConcept",
         "path": "Observation.value[x]",
         "sliceName": "valueCodeableConcept",
-        "short": "MRGN-Einstufung nach RKI. Wurde das identifizierte Isolat anhand der Empfindlichkeitsbefunde bewertet und ist keiner MRGN-Klasse zuzuordnen, wird 'Keine MRGN-Klasse' verwendet; dies ist vom negativen Ergebnis eines zielgerichteten Erregernachweises zu unterscheiden.",
+        "short": "MRGN-Einstufung nach RKI. Wurde das identifizierte Isolat anhand der Empfindlichkeitsbefunde bewertet und ist keiner MRGN-Klasse zuzuordnen, wird 'Keine MRGN-Klasse' verwendet; dies ist vom negativen Ergebnis eines zielgerichteten Erregernachweises zu unterscheiden. 'Keine MRGN-Klasse' wird bevorzugt angegeben, ist aber keine Pflicht.",
         "type": [
           {
             "code": "CodeableConcept"
@@ -273,7 +273,7 @@
       {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
-        "short": "Untersuchungen, aus denen die Einstufung abgeleitet wurde: die Empfindlichkeitsbefunde der bewerteten Substanzgruppen, gegebenenfalls zusammen mit der Erregeridentifikation. Diese Untersuchungen SOLLTEN angegeben werden, damit die Grundlage der Einstufung nachvollziehbar ist. Sie dürfen entfallen, wenn die Klasse unmittelbar aus einem bereits eingestuften Laborbefund übernommen wird.",
+        "short": "Grundlagen der Einstufung: Empfindlichkeitsbefunde, ggf. die Identifizierung. Bei mehreren Erregern aus der Probe Pflicht, sofern specimen nicht auf dieselbe Isolat-Probe zeigt; sonst SOLLTEN sie angegeben werden. Dürfen entfallen, wenn die Klasse aus einem bereits eingestuften Befund übernommen wird.",
         "mustSupport": true
       }
     ]

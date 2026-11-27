@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Allgemeine_Mikroskopie_Tests_LOINC
 Id: mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc
 Title: "MII VS Mikrobio Allgemeine Mikroskopie Tests [LOINC]"
-Description: "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Bevorzugt wird 105059-0, weil es methodenneutral ist; die Codes mit Färbung im Namen (Gram, säurefest, Rhodamin-Auramin) sind gleichwertig zulässig und halten dafür Observation.method frei."
+Description: "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Codes der mikroskopischen Beobachtung, deren Ergebnis die gesehene Morphologie ist. Empfohlen ist 105059-0, weil er methodenneutral ist. Codes mit einer Färbung im Namen (Gram, säurefest, Rhodamin-Auramin, Methylenblau nach Löffler) sind ebenfalls zulässig; die Färbung wird dann trotzdem in extension[faerbung] angegeben."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
@@ -32,3 +32,8 @@ Description: "Tests-ValueSet für die allgemeine Mikroskopie: nominale LOINC-Cod
 // Rhodamin-Auramin existiert in LOINC keine ordinale Form.
 * $loinc#11545-1 "Microscopic observation [Identifier] in Specimen by Acid fast stain"
 * $loinc#676-7 "Microscopic observation [Identifier] in Specimen by Rhodamine-auramine fluorochrome stain"
+// 2026-11-26 ergaenzt aus der Ballotkommentierung. Dieselbe Konstruktion wie
+// 664-3: Prid/Nom, die Faerbung steht im METHOD_TYP (LP6388-5). Die Faerbung
+// selbst, 117315003 |Loeffler methylene blue stain method|, liegt bereits im
+// Faerbungs-ValueSet.
+* $loinc#671-8 "Microscopic observation [Identifier] in Specimen by Methylene blue stain.Loeffler"

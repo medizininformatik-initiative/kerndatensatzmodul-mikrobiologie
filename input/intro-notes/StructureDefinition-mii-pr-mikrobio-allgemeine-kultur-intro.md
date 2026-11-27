@@ -12,8 +12,9 @@ grows, not what it is. Naming the organism is a separate investigation —
 which points back at this culture through the `triggeredBy` extension with
 `type = reflex`. The culture itself carries no reference to what follows it; the
 relationship is always recorded on the later investigation.
-[Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html) shows the
-chain as a whole.
+[Profile Selection and Delimitation](profilauswahl-und-abgrenzung.html#chain-general-culture)
+shows the chain as a whole, with a complete example from the urine culture to the
+MRGN class.
 
 ### Examples
 

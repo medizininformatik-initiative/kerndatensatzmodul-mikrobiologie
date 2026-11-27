@@ -2,11 +2,9 @@ Ct value describes the quantification of the cycle threshold in nucleic acid det
 
 ### Position in the diagnostic chain
 
-The Ct value is a supporting measurement, not a step of its own, and the
-relationship to the qualitative result read from it is recorded on that result:
-the detection carries `derivedFrom` pointing at the Ct value, never the Ct value
-at the detection. `A.derivedFrom = B` means "A arises from B“, and it is the
-detection that arises from the measurement.
+A Ct value cannot be interpreted without its test and instrument. The link
+to the detection is optional; where it is given, the detection carries it:
+`derivedFrom` pointing at the Ct value.
 
 `derivedFrom` is Must Support at this profile all the same, for the case where a
 Ct value itself arises from a preceding investigation. The pairing is shown by

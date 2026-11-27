@@ -129,8 +129,7 @@ und die **serologische Anwendung** der
 — jenes Profil bedient auch die molekulare Bank, wo die Konvention weiter gilt,
 die Ausnahme hängt dort also an der Anwendung und nicht am Profil.
 
-Eine Specimen-Ressource wird trotzdem in jedem Fall erwartet; Ballotfrage 1 bleibt
-davon unberührt. Die Ausnahme erlaubt einen Untersuchungscode, der Serum benennt
+Eine Specimen-Ressource ist trotzdem in jedem Fall Pflicht. Die Ausnahme erlaubt einen Untersuchungscode, der Serum benennt
 — sie erlaubt nicht, `Observation.specimen` leer zu lassen.
 
 Eine weitere Eigenheit der serologischen Befundung ist zu kennen: Die Diagnose
@@ -160,18 +159,6 @@ Dieser Leitfaden hält das als **Empfehlung** fest, nicht als Pflicht.
 modulweite Pflicht würde heute konforme Daten ungültig machen. Erzwungen wird sie
 an der einen Stelle, an der die Aussage sonst mehrdeutig ist: bei der Allgemeinen
 Kultur mit dem methodenneutralen Code `41852-5`.
-
-<a id="ballot-question-5"></a>
-
-{:.bg-warning}
-**Ballotfrage 5 — können Sie zu jedem Befund `Observation.method` liefern?**
-Die HL7 EU Lab Semantic Workgroup verlangt es immer, dieser Leitfaden empfiehlt
-es nur. Wäre eine Pflicht an Ihrem Standort erfüllbar?
-
-Aus einem Ja folgt zweierlei. Eine spätere Version kann `Observation.method` auf
-`1..1` heben, und das Sonderinvariant der Allgemeinen Kultur wird überflüssig —
-`41852-5` samt Methode ist dann überall eindeutig, und die Empfehlung, den
-methodentragenden `11475-1` zu bevorzugen, entfällt weitgehend.
 
 ### Zwei Granularitätsstufen auf derselben Achse
 
@@ -204,21 +191,41 @@ identifizierten Organismen, die nur den Wert filtert, bekommt auch
 Morphologiegruppen aus der Mikroskopie. Die Untersuchungscodes sind disjunkt — die Mikroskopiecodes gegen `41852-5` —, eine Mehrdeutigkeit entsteht also
 nicht; nur eine nachlässig geschriebene Abfrage bekommt mehr, als sie erfragt hat.
 
-Eine Speziesidentifizierung gehört nie in die Mikroskopie, auch wenn sie am
-Mikroskop gestellt wurde.
+Eine ungerichtete Speziesidentifizierung gehört nicht in die Allgemeine
+Mikroskopie, auch wenn sie am Mikroskop gestellt wurde: Sie ist eine Allgemeine
+Bestimmung mit Methode Mikroskopie, die Menge steht dort in `component[menge]`.
+Wurde gezielt gesucht und nennt der Code den Erreger, ist es Spezifische
+Mikroskopie.
+
+#### Mikroskopische Befunde zuordnen
+
+Über das Profil entscheidet die Fragestellung, nicht ob eine Menge vorliegt.
+
+| Befund | Profil | `code` | `value` | Menge |
+|---|---|---|---|---|
+| gramnegative Kokken | Allgemeine Mikroskopie | `105059-0` | `18383003 \|Gram-negative coccus\|` | – |
+| gramnegative Kokken, ++ von +++ | Allgemeine Mikroskopie | `105059-0` | `18383003 \|Gram-negative coccus\|` | `441517005 \|Present two plus out of three plus\|` |
+| Giardia, gezielt gesucht | Spezifische Mikroskopie | `104405-6` | `260373001 \|Detected\|` | optional |
+| Giardia, offene Untersuchung | Allgemeine Bestimmung | `41852-5` | `78181009 \|Giardia duodenalis\|`, Methode Mikroskopie | – |
+| *P. falciparum* im Blutausstrich, ++ | Allgemeine Bestimmung | `41852-5` | `30020004 \|Plasmodium falciparum\|`, Methode Mikroskopie | `441517005 \|Present two plus out of three plus\|` |
 
 ### Abgrenzung der drei Aussagetypen
 
 | Fragestellung | Profil | `Observation.code` | `Observation.value` |
 |---|---|---|---|
 | Ist ein vordefiniertes Ziel nachweisbar? (nicht kulturell) | Spezifische Bestimmung | LOINC-Nachweistest, z. B. `105904-7` | `Detected` / `Not detected` |
-| Ist ein vordefinierter Mikroorganismus da, kulturell gesucht? | Spezifische Bestimmung | LOINC-Kulturtest, z. B. `13316-5` | `Organism growth` / `No growth` |
+| Ist ein vordefinierter Mikroorganismus da, kulturell gesucht? | Spezifische Bestimmung | LOINC-Kulturtest, z. B. `13316-5` | `Detected` / `Not detected` |
 | Ist ein Resistenzgen nachweisbar? | Resistenzmechanismen / Determinanten | LOINC-Determinante, z. B. `48813-0` | `Detected` / `Not detected` |
 | Wie empfindlich ist ein identifiziertes Isolat gegen eine Substanz? | Empfindlichkeit | LOINC `[Susceptibility]`, z. B. `29258-1` | MHK als `Quantity`, Bewertung in `interpretation` (S / I / R) |
 | Welcher MRGN-Klasse ist ein identifiziertes gramnegatives Isolat zuzuordnen? | MRGN-Klasse | `99780-9` | Klassifikationswert, z. B. `3MRGN`, oder `keine-mrgn-klasse` |
 | Erfüllt ein nachgewiesener Erreger die Kriterien einer definierten Resistenzkategorie? | Resistenzkategorie-Status | `mrsa-status`, `vre-status`, `lre-status`, `lvre-status` (MII) | `Positive` / `Negative` |
 
 ### Negative Ergebnisse
+
+Negative Ergebnisse werden bevorzugt ausdrücklich berichtet, etwa als
+`Not detected` oder `No growth`. Eine fehlende Observation ist nicht eindeutig:
+Sie kann „negativ“ oder „nicht untersucht“ bedeuten. Verpflichtend ist das
+Berichten negativer Ergebnisse aber nicht.
 
 #### Negativer zielgerichteter Erregernachweis
 
@@ -258,6 +265,9 @@ Die drei Fälle im direkten Vergleich, jeweils für VRE:
 | VRE wurde gesucht und nicht gefunden (molekular) | Spezifische Bestimmung | `105904-7` | `Not detected` |
 | Ein vorliegender *Enterococcus* ist kein VRE | Resistenzkategorie-Status | `vre-status` | `Negative` |
 
+Auch „Keine MRGN-Klasse“ und Status `Negative` werden bevorzugt angegeben, sind
+aber keine Pflicht: Viele LIS führen sie nur für resistente Erreger.
+
 ### Resistenzkategorien
 
 Der Resistenzkategorie-Status bewertet immer **eine** benannte Kategorie. Die Aufnahme einer Kategorie ist fachlich zu begründen; nicht jede einzelne antimikrobielle Resistenz ist eine Resistenzkategorie. Insbesondere erfolgt keine implizite Ableitung aus dem SNOMED-Unterbaum „antimicrobial resistant organism".
@@ -288,12 +298,24 @@ Observation: Bacterial susceptibility panel (29576-6), ohne Wert
   hasMember   → Observation: Ciprofloxacin [Susceptibility], MHK 4 mg/L, R
 ```
 
+`hasMember` verbindet auch eine Identifizierung mit der Keimzahl ihres Erregers:
+
+```
+Erreger identifiziert (41852-5): Escherichia coli
+  hasMember → Keimzahl (49223-1): 10⁵ [CFU]/mL
+```
+
+Als Komponente der Identifizierung teilte die Keimzahl deren Methode und
+Zeitpunkt, ist aber ein eigener Schritt. Die Regel: Komponente, wenn die Menge im
+selben Schritt entsteht wie der Befund (Mikroskopie); eigene Observation mit
+`hasMember`, wenn nicht (Keimzahl).
+
 Die drei Mechanismen haben verschiedene Aufgaben und sind nicht gegeneinander
 austauschbar:
 
 | | Verwendung |
 |---|---|
-| `hasMember` | Gruppierung — ein Panel, das ein Organizer zusammenhält |
+| `hasMember` | Gruppierung zusammengehöriger Befunde: ein Panel unter einem Organizer oder eine Identifizierung mit ihrer Keimzahl |
 | `triggeredBy` | Reflex — die spätere Untersuchung verweist zurück auf ihren Auslöser |
 | `derivedFrom` | Ableitung — ein Ergebnis, das aus einem anderen berechnet oder interpretiert wurde |
 
@@ -303,22 +325,25 @@ qualitativer Nachweis trägt `derivedFrom` auf den
 [Ct-Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.html), aus dem er abgelesen
 wurde, niemals andersherum.
 
-Dieser Leitfaden beschreibt das Muster, profiliert es aber nicht.
+Dieser Leitfaden beschreibt den Organizer, profiliert ihn aber nicht.
 `Observation.hasMember` steht unbeschränkt aus dem Labor-Basisprofil zur
 Verfügung, und ein Organizer-Profil erzeugte ein eigenes Canonical für etwas, das
 FHIR bereits regelt.
 
 ### Diagnostische Kette bei positivem Nachweis
 
-Ein positiver zielgerichteter Nachweis kann Folgediagnostik auslösen:
+Die Kette hängt vom Weg des Nachweises ab.
+
+**Direkter Nachweis** (molekular, Antigen): Das Ergebnis liegt zuerst vor und
+kann Folgediagnostik auslösen.
 
 ```
-Positiver zielgerichteter Nachweis
-(Spezifische Bestimmung, jedes Verfahren)
+Spezifische Bestimmung, direkter Nachweis
+  z. B. 105904-7, Real-time-PCR: Detected
         │
         │ triggeredBy (reflex)
         ▼
-ggf. weiterführende Identifikation
+ggf. Kultur und Identifizierung des Isolats
         │
         │ triggeredBy (reflex)
         ▼
@@ -333,24 +358,93 @@ Resistenzkategorie-Status
   Positive / Negative
 ```
 
-Bei einem bereits erregerspezifischen Nachweis ist das Ziel im Testcode definiert. Nach `MRSA detected` oder `VRE detected` muss keine separate Identifikation folgen. Entfällt sie, verweist die Empfindlichkeit direkt auf den Nachweis und der Resistenzkategorie-Status führt sie nicht in `derivedFrom`.
+Ist der Nachweis erregerspezifisch, etwa `MRSA detected` per PCR, kann die
+Identifizierung entfallen; die Empfindlichkeit verweist dann direkt auf den
+Nachweis.
 
-Für die auslösende Beziehung wird die R5-Backport-Extension `extension-Observation.triggeredBy` mit `type = reflex` verwendet, wie unter [FHIR-Profile](fhir-profile.html) beschrieben. Der letzte Schritt bildet die dort genannte Ausnahme: Der Resistenzkategorie-Status wird aus mehreren Untersuchungen **abgeleitet** und ist keine ausgelöste Folgeuntersuchung — hier trifft `derivedFrom` die Semantik. Diese Untersuchungen SOLLTEN angegeben werden, damit die Bewertungsgrundlage nachvollziehbar bleibt.
+**Kultureller Nachweis** (zielgerichtete Kultur): Die Folgeschritte verweisen
+auf die Kultur. Ihr `Detected` steht erst nach Identifizierung und Testung fest,
+als endgültige Version derselben Observation. Die Identifizierung ist hier nicht
+optional.
 
-Vollständiges Beispiel einer Kette:
+```
+Spezifische Bestimmung, zielgerichtete Kultur
+  z. B. 13316-5 VRE [Presence] … by Organism specific culture
+  endgültiges Ergebnis: Detected, nach den beiden folgenden Schritten
+        │
+        │ triggeredBy (reflex)
+        ▼
+Identifizierung des gewachsenen Isolats (Allgemeine Bestimmung)
+  z. B. Enterococcus faecium, MALDI-TOF
+        │
+        │ triggeredBy (reflex)
+        ▼
+Empfindlichkeit
+  z. B. Vancomycin R
+        │
+        ├── ggf. Resistenzmechanismen / Determinanten
+        │
+        │ derivedFrom
+        ▼
+Resistenzkategorie-Status
+  z. B. VRE-Status
+  Positive / Negative
+```
 
-Schritt 1 — positiver VRE-Nachweis mittels erregerspezifischer Kultur:
+Die Verknüpfung des Ablaufs ist optional. Wurden aus einer Probe mehrere Erreger
+identifiziert, MUSS aber erkennbar sein, zu welchem Erreger ein Ergebnis gehört:
+über eine gemeinsame [Isolat-Probe](probe.html#isolate-specimen) oder über
+den Verweis. Bei einem einzigen Erreger SOLLTE verwiesen werden.
 
-[mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html)
+| Ergebnis | Verweis auf den Erreger |
+|---|---|
+| Keimzahl | die Identifizierung führt sie über `hasMember` (nur so, nicht über die Isolat-Probe) |
+| Empfindlichkeit, Resistenzmechanismen/Determinanten | `triggeredBy` auf die Identifizierung |
+| MRGN-Klasse, Resistenzkategorie-Status | `derivedFrom` auf ihre Grundlagen; abgeleitet, nicht ausgelöst |
 
-Schritt 2 — weiterführende Identifikation des Isolats (optional):
+Beispielkette, kultureller Nachweis:
 
-[mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html)
+1. [mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html) — VRE-Kultur, endgültig Detected
+2. [mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html) — Identifizierung des Isolats
+3. [mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html) — Empfindlichkeit
+4. [mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html) — VRE-Status
 
-Schritt 3 — Empfindlichkeitstestung:
+### Diagnostische Kette bei allgemeiner Kultur
 
-[mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html)
+<a id="chain-general-culture"></a>
 
-Schritt 4 — abgeleiteter Resistenzkategorie-Status:
+Der häufigste Ablauf: Die Kultur zeigt Wachstum, die Identifizierung benennt den
+Erreger, Keimzahl und Empfindlichkeit beziehen sich auf ihn.
 
-[mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html)
+```
+Allgemeine Kultur
+  z. B. 11475-1: Organism growth
+        │
+        │ triggeredBy (reflex)
+        ▼
+Identifizierung des gewachsenen Isolats (Allgemeine Bestimmung)
+  z. B. Escherichia coli, MALDI-TOF
+        │
+        ├── hasMember: Keimzahl, z. B. 10⁵ [CFU]/mL
+        │
+        │ triggeredBy (reflex)
+        ▼
+Empfindlichkeit, je Substanz eine Observation
+        │
+        │ derivedFrom (Identifizierung und Empfindlichkeiten)
+        ▼
+MRGN-Klasse
+  z. B. 3MRGN
+```
+
+Für die Zuordnung zum Erreger gelten die Regeln aus dem vorigen Abschnitt.
+
+Beispielkette, Urinkultur mit *Escherichia coli*:
+
+- Proben: [Urin](Specimen-mii-exa-mikrobio-probe-urin.html), [Isolat](Specimen-mii-exa-mikrobio-probe-urin-isolat.html)
+
+1. [Kultur](Observation-mii-exa-mikrobio-workflow-urin-01-kultur.html)
+2. [Identifizierung](Observation-mii-exa-mikrobio-workflow-urin-02-identifikation.html)
+3. [Keimzahl](Observation-mii-exa-mikrobio-workflow-urin-03-keimzahl.html)
+4. Empfindlichkeit: [Piperacillin](Observation-mii-exa-mikrobio-workflow-urin-04-piperacillin.html), [Cefotaxim](Observation-mii-exa-mikrobio-workflow-urin-04-cefotaxim.html), [Ciprofloxacin](Observation-mii-exa-mikrobio-workflow-urin-04-ciprofloxacin.html), [Meropenem](Observation-mii-exa-mikrobio-workflow-urin-04-meropenem.html)
+5. [MRGN-Klasse](Observation-mii-exa-mikrobio-workflow-urin-05-mrgn-klasse.html)

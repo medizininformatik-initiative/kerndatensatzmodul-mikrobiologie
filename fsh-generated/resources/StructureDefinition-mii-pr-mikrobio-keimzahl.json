@@ -151,7 +151,7 @@
       ]
     }
   ],
-  "description": "Keimzahl beschreibt die quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten je Volumen, je Masse oder als Anzahl je Probe.",
+  "description": "Keimzahl beschreibt die Bestimmung lebensfähiger Mikroorganismen in einer Probe: quantitativ als koloniebildende Einheiten je Volumen, je Masse oder je Probe, oder semiquantitativ (+ bis ++++), etwa beim Ausstrich.",
   "purpose": "Dieses Profil beschreibt die Keimzahlbestimmung.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -226,6 +226,9 @@
         "type": [
           {
             "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
           }
         ]
       },
@@ -249,6 +252,21 @@
         }
       },
       {
+        "id": "Observation.value[x]:valueCodeableConcept",
+        "path": "Observation.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "short": "Semiquantitativer Wert, wenn nicht gezaehlt wurde, mit dem ordinalen Code 565-2. Die quantitativen Codes verlangen eine Zaehlung als Quantity.",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-labor-laborergebnis-semiquantitativ"
+        }
+      },
+      {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
         "binding": {
@@ -259,6 +277,7 @@
       {
         "id": "Observation.interpretation",
         "path": "Observation.interpretation",
+        "short": "Semiquantitative Einordnung einer Zaehlung. Sind value und interpretation beide semiquantitativ, nennen sie denselben Wert.",
         "binding": {
           "strength": "extensible",
           "valueSet": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-labor-laborergebnis-semiquantitativ"

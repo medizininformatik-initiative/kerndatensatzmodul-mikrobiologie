@@ -10,7 +10,7 @@ Mikrobiologischer Befundbericht zur Zusammenfassung und Kontextualisierung zugeh
 | `mibi-category` | 1..1 | Kennzeichnet den Befund als mikrobiologisch: `v2-0074#MB \|Microbiology\|`, verpflichtend, dazu optional `18725-2 \|Microbiology studies\|` |
 | `mibi-sub-category` | 0..* | Fachlicher Befundtyp aus `mii-vs-mikrobio-befundtyp-loinc`, z. B. `92894-5 \|Microbiology - bacterial studies\|` |
 
-Der Befundtyp ist optional. Ein Befund, der sich keinem der Studientypen zuordnen lässt oder nur allgemein eingeordnet werden soll, wird über `mibi-category` allein abgebildet — ein allgemeiner Befundtyp-Code ist dafür nicht nötig und existiert in dieser LOINC-Familie auch nicht.
+Der Befundtyp ist optional. Ein Befund, der sich keinem der Studientypen zuordnen lässt oder nur allgemein eingeordnet werden soll, wird über `mibi-category` allein abgebildet — ein allgemeiner Befundtyp-Code ist dafür nicht nötig und existiert in dieser LOINC-Familie auch nicht. Dasselbe gilt, wenn sich der Studientyp aus den Quelldaten nicht auslesen lässt.
 
 Umfasst ein Befund mehrere Studientypen, etwa den Nachweis von Bakterien **und** Pilzen, werden mehrere Subtypen angegeben:
 

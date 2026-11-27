@@ -126,8 +126,7 @@ and the **serological use** of
 continues to apply, so the exemption there attaches to the use and not to the
 profile.
 
-A Specimen resource is still expected in every case: ballot question 1 is
-unaffected. What the exemption permits is a test code that names serum; it does
+A Specimen resource is still required in every case. What the exemption permits is a test code that names serum; it does
 not permit leaving `Observation.specimen` empty.
 
 One further trait of serological reporting is worth knowing: the diagnosis often
@@ -159,18 +158,6 @@ conformant data that exists today. The one place it is enforced is where the
 statement is otherwise ambiguous: General culture with the method-neutral code
 `41852-5`.
 
-<a id="ballot-question-5"></a>
-
-{:.bg-warning}
-**Ballot question 5 — can you supply `Observation.method` for every result?**
-The HL7 EU Lab Semantic Workgroup asks for it always; this guide only recommends
-it. Would making it mandatory be deliverable at your site?
-
-Two things follow from a yes. A later version can raise `Observation.method` to
-`1..1`, and the special-case invariant on General culture becomes unnecessary —
-`41852-5` plus a method is then unambiguous everywhere, so the recommendation to
-prefer the method-bearing `11475-1` largely falls away.
-
 ### Two granularities on the same axis
 
 Microscopy and identification both answer "which organism", but they pin it down
@@ -201,8 +188,23 @@ that filters only on the value will also return morphological groups from
 microscopy. The test codes are disjoint — the microscopy codes against `41852-5` — so no ambiguity arises; only a query written carelessly gets more
 than it asked for.
 
-A species identification never belongs in microscopy, even when it was made down
-a microscope.
+An undirected species identification does not belong in general microscopy,
+even when it was made down a microscope: it is a general determination with the
+method microscopy, and the amount is given there in `component[menge]`. Where
+the search was targeted and the code names the organism, it is specific
+microscopy.
+
+#### Assigning microscopy findings
+
+The question decides the profile, not whether an amount is present.
+
+| Finding | Profile | `code` | `value` | Amount |
+|---|---|---|---|---|
+| Gram-negative cocci | General microscopy | `105059-0` | `18383003 \|Gram-negative coccus\|` | – |
+| Gram-negative cocci, ++ of +++ | General microscopy | `105059-0` | `18383003 \|Gram-negative coccus\|` | `441517005 \|Present two plus out of three plus\|` |
+| Giardia, sought specifically | Specific microscopy | `104405-6` | `260373001 \|Detected\|` | optional |
+| Giardia, open investigation | General determination | `41852-5` | `78181009 \|Giardia duodenalis\|`, method microscopy | – |
+| *P. falciparum* in a blood smear, ++ | General determination | `41852-5` | `30020004 \|Plasmodium falciparum\|`, method microscopy | `441517005 \|Present two plus out of three plus\|` |
 
 ### Delimitation of the three statement types
 
@@ -216,6 +218,11 @@ a microscope.
 | Does a detected pathogen meet the criteria of a defined resistance category? | Resistance category status | `mrsa-status`, `vre-status`, `lre-status`, `lvre-status` (MII) | `Positive` / `Negative` |
 
 ### Negative results
+
+Negative results are preferably reported explicitly, for example as
+`Not detected` or `No growth`. A missing Observation is ambiguous: it may mean
+"negative" or "not examined". Reporting negative results is not mandatory,
+however.
 
 #### Negative targeted pathogen detection
 
@@ -255,6 +262,9 @@ The three cases in direct comparison, each for VRE:
 | VRE was sought and not found (molecular) | Specific determination | `105904-7` | `Not detected` |
 | An *Enterococcus* present is not a VRE | Resistance category status | `vre-status` | `Negative` |
 
+"No MRGN class" and status `Negative` are likewise preferably reported but not
+mandatory: many LIS record them only for resistant organisms.
+
 ### Resistance categories
 
 The resistance category status always assesses **one** named category. Including a category must be justified on domain grounds; not every individual antimicrobial resistance is a resistance category. In particular, no implicit derivation from the SNOMED subtree "antimicrobial resistant organism" takes place.
@@ -285,12 +295,24 @@ Observation: Bacterial susceptibility panel (29576-6), no value
   hasMember   → Observation: Ciprofloxacin [Susceptibility], MIC 4 mg/L, R
 ```
 
+`hasMember` also links an identification to the colony count of its organism:
+
+```
+Organism identified (41852-5): Escherichia coli
+  hasMember → Colony count (49223-1): 10⁵ [CFU]/mL
+```
+
+As a component of the identification the colony count would share its method
+and time, but it is a step of its own. The rule: a component where the amount is
+produced in the same step as the finding (microscopy); an Observation of its own
+linked through `hasMember` where it is not (colony count).
+
 The three mechanisms have distinct jobs and should not be substituted for one
 another:
 
 | | Use |
 |---|---|
-| `hasMember` | grouping — a panel or battery held together by an organizer |
+| `hasMember` | grouping of findings that belong together: a panel under an organizer, or an identification with its colony count |
 | `triggeredBy` | reflex — the later investigation points back at what caused it |
 | `derivedFrom` | derivation — a result computed or interpreted from another result |
 
@@ -299,21 +321,24 @@ from the derived result to its basis, not the other way round: a qualitative
 detection carries `derivedFrom` pointing at the [Ct value](StructureDefinition-mii-pr-mikrobio-ct-wert.html)
 it was read from, never the reverse.
 
-This guide describes the pattern but does not profile it. `Observation.hasMember`
+This guide describes the organizer but does not profile it. `Observation.hasMember`
 is available unconstrained from the laboratory base profile, and an organizer
 profile would create a canonical of its own for something FHIR already settles.
 
 ### Diagnostic chain on positive detection
 
-A positive targeted detection can trigger follow-up diagnostics:
+The chain depends on how the target was detected.
+
+**Direct detection** (molecular, antigen): the result is there first and can
+trigger follow-up diagnostics.
 
 ```
-Positive targeted detection
-(Specific determination, any technique)
+Specific determination, direct detection
+  e.g. 105904-7, real-time PCR: Detected
         │
         │ triggeredBy (reflex)
         ▼
-possibly further identification
+possibly culture and identification of the isolate
         │
         │ triggeredBy (reflex)
         ▼
@@ -328,24 +353,92 @@ Resistance category status
   Positive / Negative
 ```
 
-Where the detection is already pathogen-specific, the target is defined in the test code. After `MRSA detected` or `VRE detected`, no separate identification need follow. If it is omitted, the susceptibility refers directly to the detection and the resistance category status does not list it in `derivedFrom`.
+Where the detection is pathogen-specific, such as `MRSA detected` by PCR, the
+identification may be omitted; the susceptibility then refers to the detection
+directly.
 
-For the triggering relationship, the R5 backport extension `extension-Observation.triggeredBy` with `type = reflex` is used, as described under [FHIR Profiles - Modelling Notes](fhir-profile.html). The last step is the exception named there: the resistance category status is **derived** from several investigations and is not a triggered follow-up investigation - here `derivedFrom` captures the semantics. Those investigations SHOULD be given so that the basis of the assessment remains traceable.
+**Detection by culture** (targeted culture): the follow-up steps refer to the
+culture. Its `Detected` is settled only after identification and testing, as the
+final version of the same Observation. Here the identification is not optional.
 
-Complete example of a chain:
+```
+Specific determination, targeted culture
+  e.g. 13316-5 VRE [Presence] … by Organism specific culture
+  final result: Detected, after the two following steps
+        │
+        │ triggeredBy (reflex)
+        ▼
+Identification of the isolate that grew (General determination)
+  e.g. Enterococcus faecium, MALDI-TOF
+        │
+        │ triggeredBy (reflex)
+        ▼
+Susceptibility
+  e.g. vancomycin R
+        │
+        ├── possibly resistance mechanisms / determinants
+        │
+        │ derivedFrom
+        ▼
+Resistance category status
+  e.g. VRE status
+  Positive / Negative
+```
 
-Step 1 - positive VRE detection by pathogen-specific culture:
+Linking the workflow is optional. Where more than one organism was identified
+from a specimen, however, it MUST be recognisable which organism a result belongs
+to: through a shared [isolate specimen](probe.html#isolate-specimen)
+or through the reference. With a single organism the reference SHOULD be given.
 
-[mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html)
+| Result | Reference to the organism |
+|---|---|
+| Colony count | the identification carries it through `hasMember` (only this way, not through the isolate specimen) |
+| Susceptibility, resistance mechanisms/determinants | `triggeredBy` to the identification |
+| MRGN class, resistance category status | `derivedFrom` to their basis; derived, not triggered |
 
-Step 2 - further identification of the isolate (optional):
+Example chain, detection by culture:
 
-[mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html)
+1. [mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html) — VRE culture, final result Detected
+2. [mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html) — identification of the isolate
+3. [mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html) — susceptibility
+4. [mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html) — VRE status
 
-Step 3 - susceptibility testing:
+### Diagnostic chain in general culture
 
-[mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html)
+<a id="chain-general-culture"></a>
 
-Step 4 - derived resistance category status:
+The most common workflow: the culture shows growth, the identification names the
+organism, and colony count and susceptibility refer to it.
 
-[mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html)
+```
+General culture
+  e.g. 11475-1: Organism growth
+        │
+        │ triggeredBy (reflex)
+        ▼
+Identification of the isolate that grew (General determination)
+  e.g. Escherichia coli, MALDI-TOF
+        │
+        ├── hasMember: colony count, e.g. 10⁵ [CFU]/mL
+        │
+        │ triggeredBy (reflex)
+        ▼
+Susceptibility, one Observation per antimicrobial
+        │
+        │ derivedFrom (identification and susceptibilities)
+        ▼
+MRGN class
+  e.g. 3MRGN
+```
+
+The rules of the previous section on the link to the organism apply.
+
+Example chain, urine culture with *Escherichia coli*:
+
+- Specimens: [urine](Specimen-mii-exa-mikrobio-probe-urin.html), [isolate](Specimen-mii-exa-mikrobio-probe-urin-isolat.html)
+
+1. [Culture](Observation-mii-exa-mikrobio-workflow-urin-01-kultur.html)
+2. [Identification](Observation-mii-exa-mikrobio-workflow-urin-02-identifikation.html)
+3. [Colony count](Observation-mii-exa-mikrobio-workflow-urin-03-keimzahl.html)
+4. Susceptibility: [piperacillin](Observation-mii-exa-mikrobio-workflow-urin-04-piperacillin.html), [cefotaxime](Observation-mii-exa-mikrobio-workflow-urin-04-cefotaxim.html), [ciprofloxacin](Observation-mii-exa-mikrobio-workflow-urin-04-ciprofloxacin.html), [meropenem](Observation-mii-exa-mikrobio-workflow-urin-04-meropenem.html)
+5. [MRGN class](Observation-mii-exa-mikrobio-workflow-urin-05-mrgn-klasse.html)

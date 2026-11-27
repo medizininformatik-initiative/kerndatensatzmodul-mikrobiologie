@@ -154,7 +154,7 @@ entry names the condition, how to check it, and what to do if it has changed.
 ### Terminology pins
 
 - **Condition:** SNOMED CT `http://snomed.info/sct/900000000000207008/version/20260701`
-  and LOINC `2.82`, pinned in `input/fsh/aliases.fsh` and
+  and LOINC `2.83`, pinned in `input/fsh/aliases.fsh` and
   `input/resources/Parameters-expansion-manifest.json`.
 - **How to check:** `node --test scripts/terminology-pins.test.mjs`, and a full
   build against the terminology server that actually holds those versions.

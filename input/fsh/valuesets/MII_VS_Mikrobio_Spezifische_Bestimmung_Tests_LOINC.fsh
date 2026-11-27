@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Spezifische_Bestimmung_Tests_LOINC
 Id: mii-vs-mikrobio-spezifische-bestimmung-tests-loinc
 Title: "MII VS Mikrobio Spezifische Bestimmung Tests [LOINC]"
-Description: "Tests-ValueSet fuer die spezifische Bestimmung."
+Description: "Tests-ValueSet für die spezifische Bestimmung. Codes mit den Platzhaltern {Specimen} und {Molgen} (ab LOINC 2.83) werden postkoordiniert: das Material über Observation.specimen, die Methode über Observation.method."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active
@@ -60,6 +60,20 @@ Description: "Tests-ValueSet fuer die spezifische Bestimmung."
       METHOD_TYP = "LP6404-0" and
       CLASS = "LP7819-8" and
       STATUS = "ACTIVE"
+// LOINC 2.83 fuehrt fuer den methodenneutralen molekularen Nachweis einen neuen
+// Part {Molgen} (LP452305-8) ein, mit SYSTEM {Specimen}: 955 neue Codes, und 24
+// bisher ueber LP6404-0 erfasste Codes wurden darauf umgestellt. Ohne diese
+// Includes fielen sie aus dem ValueSet (HDB-1051). Unter 2.82 sind sie leer.
+* include codes from system $loinc
+    where PROPERTY = "LP6850-4" and
+      METHOD_TYP = "LP452305-8" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
+* include codes from system $loinc
+    where PROPERTY = "LP217195-9" and
+      METHOD_TYP = "LP452305-8" and
+      CLASS = "LP7819-8" and
+      STATUS = "ACTIVE"
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP150045-5" and
@@ -107,7 +121,8 @@ Description: "Tests-ValueSet fuer die spezifische Bestimmung."
 // steht dabei im Code selbst — jeder dieser ~68 Codes traegt METHOD_TYP
 // "Organism specific culture" —, es muss also nicht im Ergebnis wiederholt
 // werden. Die Abweichung von der getrennten Fuehrung der HL7 EU Lab Semantic
-// Workgroup steht als Ballotfrage 6 im Profil-Intro.
+// Workgroup war Ballotfrage 6; entschieden 2026-11-27: bleibt, die EU
+// antwortet bei der Kultur inzwischen ebenfalls Detected / Not detected.
 * include codes from system $loinc
     where PROPERTY = "LP6850-4" and
       METHOD_TYP = "LP6429-7" and

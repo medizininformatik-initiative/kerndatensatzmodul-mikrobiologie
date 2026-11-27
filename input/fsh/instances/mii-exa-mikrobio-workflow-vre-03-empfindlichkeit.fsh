@@ -1,7 +1,8 @@
 // Workflow-Beispiel 3/4 - Empfindlichkeitstestung des identifizierten Isolats.
 //
-// triggeredBy verweist auf die Identifikation (Schritt 2). Entfaellt der optionale
-// Identifikationsschritt, verweist triggeredBy stattdessen direkt auf Schritt 1.
+// triggeredBy verweist auf die Identifikation (Schritt 2). Nur beim direkten,
+// erregerspezifischen Nachweis, wo die Identifizierung entfallen kann, verwiese
+// triggeredBy stattdessen auf den Nachweis.
 Instance: mii-exa-mikrobio-workflow-vre-03-empfindlichkeit
 InstanceOf: MII_PR_Mikrobio_Empfindlichkeit
 Usage: #example

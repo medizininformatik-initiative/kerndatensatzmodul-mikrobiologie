@@ -20,16 +20,11 @@ falls into, together with the norm it was derived from.
 Not every laboratory measures. Where only the category is available, it is given
 as a `CodeableConcept` in `value[x]` — the European data model settles this
 explicitly, and an Observation with no value at all would be the more unusual
-shape. Two invariants keep that from becoming ambiguous:
-
-- `empfindlichkeit-kategorie-braucht-interpretation` — a category in `value[x]`
-  requires an `interpretation`, because the norm hangs there and a category
-  without its norm says nothing.
-- `empfindlichkeit-kategorie-stimmt-mit-interpretation` — where both are given,
-  every code of the value must also appear among the interpretation codes.
-
-So a consumer reads the category from `interpretation` in every case, and
-`value[x]` tells it whether a measurement stands behind it.
+shape. The norm then hangs on the value itself
+(`valueCodeableConcept.extension[Norm]`, mandatory), because a category without
+its norm says nothing. Where value and `interpretation` are both given, they name
+the same category. A consumer therefore reads the category from `value[x]` where
+a CodeableConcept stands there, and otherwise from `interpretation`.
 
 The reverse — a measured value without a category — is flagged as a **warning**
 by `empfindlichkeit-messwert-sollte-bewertet-sein` rather than rejected. A bare
@@ -39,17 +34,24 @@ combinations no breakpoints are defined, and then there is no category to give.
 
 ### The categories
 
-| Code | Meaning |
-|---|---|
-| `S` | Susceptible |
-| `I` | Intermediate |
-| `SDD` | Susceptible-dose dependent |
-| `R` | Resistant |
-| `NS` | Non-susceptible |
+In Germany, assessment mostly follows EUCAST.
 
-EUCAST redefined `I` in 2019 as *susceptible, increased exposure*. Where that
-reading is meant, SNOMED CT `1306583007` states it explicitly rather than leaving
-`I` ambiguous.
+| Code | Meaning under EUCAST |
+|---|---|
+| `S` (v3) | susceptible, standard dosing regimen |
+| `1306583007` (SNOMED CT) | susceptible, increased exposure; the EUCAST `I` since 2019 |
+| `R` (v3) | resistant |
+
+EUCAST redefined `I` in 2019. The v3 code `I` cannot express that;
+`1306583007` can.
+
+Where assessment follows CLSI, these are also allowed:
+
+| Code | Meaning under CLSI |
+|---|---|
+| `I` (v3) | intermediate |
+| `SDD` (v3) | susceptible-dose dependent |
+| `NS` (v3) | non-susceptible |
 
 ### The norm the assessment rests on
 
@@ -58,7 +60,7 @@ MIC is susceptible under one norm and resistant under another, and breakpoints
 change from year to year.
 
 The norm therefore hangs on the **interpretation**, not on the Observation —
-`Observation.interpretation.extension`, mandatory. Because `interpretation` is
+`Observation.interpretation.extension`, mandatory, or on the value where the category stands there. Because `interpretation` is
 `0..*`, one measured MIC can carry a EUCAST and a CLSI category side by side,
 each with its own norm. Hanging the norm on the Observation would make that
 impossible.

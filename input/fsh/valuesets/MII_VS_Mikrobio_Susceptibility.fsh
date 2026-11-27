@@ -1,7 +1,7 @@
 ValueSet: MII_VS_Mikrobio_Susceptibility
 Id: mii-vs-mikrobio-susceptibility
 Title: "MII VS Mikrobio Susceptibility"
-Description: "Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die Kategorien sensibel, intermediär, sensibel bei erhöhter Exposition, resistent und nicht sensibel."
+Description: "Bewertungs-ValueSet für die phänotypische Empfindlichkeitstestung: die EUCAST-Kategorien sensibel, sensibel bei erhöhter Exposition und resistent sowie die CLSI-Kategorien intermediär, sensibel dosisabhängig und nicht sensibel."
 * insert PR_CS_VS_Version
 * insert Publisher
 * ^status = #active

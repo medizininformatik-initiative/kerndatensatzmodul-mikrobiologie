@@ -36,13 +36,23 @@ skinparam note {
 
 package "Kultur" {
   class "Allgemeine Kultur" as AllgemeineKultur {
-    Code: LOINC 11475-1
+    Code: Allgemeine_Kultur_Tests_LOINC, bevorzugt 11475-1
     Ergebnis: CodeableConcept — Kultur_Ergebnis_SNOMED
     Methode: Allgemeine_Kultur_Methode_SNOMED
   }
-  class Mikroskopie {
-    Code: LOINC 105059-0
+  class "Allgemeine Mikroskopie" as AllgemeineMikroskopie {
+    Code: Allgemeine_Mikroskopie_Tests_LOINC, bevorzugt 105059-0
     Ergebnis: CodeableConcept — Morphologie_Ergebnis_SNOMED
+    Menge: semiquantitativer Wert — Mikroskopie_Semiquantitativ_SNOMED,
+           oder Zählung — Mikroskopie_Gesichtsfeld_Einheiten_UCUM
+    Färbung: Faerbung_SNOMED
+    Methode: Morphologie_Methode_SNOMED
+  }
+  class "Spezifische Mikroskopie" as SpezifischeMikroskopie {
+    Code: Spezifische_Mikroskopie_Tests_LOINC
+    Ergebnis: CodeableConcept — Detected_Not_Detected_SNOMED
+    Menge: wie Allgemeine Mikroskopie
+    Färbung: Faerbung_SNOMED
     Methode: Morphologie_Methode_SNOMED
   }
   class "Bartlett Score" as BartlettScore {
@@ -57,34 +67,46 @@ package "Kultur" {
   }
   class Keimzahl {
     Code: Keimzahl_LOINC
-    Ergebnis: Messwert — Einheit: Keimzahl_Einheiten_UCUM
+    Ergebnis: Messwert — Einheit: Keimzahl_Einheiten_UCUM,
+              oder semiquantitativer Wert — MII Labor Laborergebnis_Semiquantitativ,
+              mit dem ordinalen Code 565-2
     Bewertung: MII Labor Laborergebnis_Semiquantitativ
     Methode: SNOMED 410681005 Auszählung
   }
   class Empfindlichkeit {
     Code: Empfindlichkeit_Phenotyp_LOINC
-    Ergebnis: Messwert — Einheit: Empfindlichkeit_Einheiten_UCUM
+    Ergebnis: Messwert — Einheit: Empfindlichkeit_Einheiten_UCUM,
+              oder Kategorie — Susceptibility
     Bewertung: Susceptibility
     Norm: Susceptibility_NORM
+    Methode: Empfindlichkeit_Methode_SNOMED
   }
   ' Zeilen
+  AllgemeineKultur -[hidden]right- AllgemeineMikroskopie
+  AllgemeineMikroskopie -[hidden]right- SpezifischeMikroskopie
   BartlettScore -[hidden]right- NugentScore
   NugentScore -[hidden]right- Keimzahl
   ' Spalten: je eine Kante pro Spalte, sonst wird die naechste Zeile zentriert
   AllgemeineKultur -[hidden]down- BartlettScore
-  Mikroskopie -[hidden]down- Keimzahl
+  AllgemeineMikroskopie -[hidden]down- NugentScore
+  SpezifischeMikroskopie -[hidden]down- Keimzahl
   BartlettScore -[hidden]down- Empfindlichkeit
 }
 
 package "Bestimmung" {
   class "Allgemeine Bestimmung" as AllgemeineBestimmung {
-    Code: LOINC 41852-5
-    Ergebnis: CodeableConcept — Organismen_SNOMEDCT
+    Code: Allgemeine_Bestimmung_Tests_LOINC, bevorzugt 41852-5
+    Ergebnis: CodeableConcept — Allgemeine_Bestimmung_Ergebnis_SNOMED,
+              Organismen oder Not detected
+    Menge: wie Allgemeine Mikroskopie, nur bei mikroskopischer Identifizierung
     Methode: Allgemeine_Bestimmung_Methode_SNOMED
+    Keimzahl: zugehörige Keimzahl des Erregers (hasMember)
   }
   class "Spezifische Bestimmung" as SpezifischeBestimmung {
     Code: Spezifische_Bestimmung_Tests_LOINC
     Ergebnis: CodeableConcept — Spezifische_Bestimmung_Ergebnis_SNOMED
+    Menge: semiquantitativer Wert — Nachweis_Menge_SNOMED,
+           gering / mäßig / hoch
     Methode: Spezifische_Bestimmung_Methode_SNOMED
   }
   class "Ct-Wert" as CtWert {
@@ -100,16 +122,17 @@ package "Bestimmung" {
 package "Weitere Eigenschaften" {
   class Virulenzfaktor {
     Code: Virulenz_LOINC
-    Ergebnis: CodeableConcept — Detected_Not_Detected_SNOMED
+    Ergebnis: CodeableConcept — Detected_Not_Detected_Equivocal_SNOMED
   }
   class "Resistenzmechanismen / Determinanten" as Resistenzmechanismen {
     Code: Resistenzmechanismen_Determinanten_LOINC
-    Ergebnis: CodeableConcept — Detected_Not_Detected_SNOMED
+    Ergebnis: CodeableConcept — Detected_Not_Detected_Equivocal_SNOMED
     Methode: Resistenzmechanismen_Methode_SNOMED
   }
   class "MRGN-Klasse" as MRGNKlasse {
     Code: LOINC 99780-9
     Ergebnis: CodeableConcept — MRGN_Klasse_LOINC
+    Grundlage: Untersuchungen, aus denen die Einstufung abgeleitet wurde
   }
   class "Resistenzkategorie-Status" as ResistenzkategorieStatus {
     Code: Resistenzkategorie_Status
@@ -169,6 +192,12 @@ note as N
   Alle Untersuchungsarten erben die gemeinsamen Angaben
   (Identifikation, Status, Zeitpunkte, Probenbezug, auslösende
   Untersuchung) von **Untersuchung**.
+
+  Keimzahl, Empfindlichkeit, Resistenzmechanismen, MRGN-Klasse
+  und Resistenzkategorie-Status beziehen sich auf einen Erreger
+  und sind seiner Identifizierung zugeordnet (hasMember bzw.
+  auslösende Untersuchung bzw. Grundlage) — Pflicht, wenn aus
+  der Probe mehrere Erreger identifiziert wurden.
 
   **ValueSet-Namen ohne das Präfix** //MII_VS_Mikrobio_//
 
