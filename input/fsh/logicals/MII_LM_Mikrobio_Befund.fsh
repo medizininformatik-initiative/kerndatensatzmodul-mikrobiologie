@@ -19,6 +19,7 @@ Description: "Logical Model des mikrobiologischen Befunds für die grafische Dar
 * KlinischerBezugszeitpunkt 1..1 dateTime "Klinischer Bezugszeitpunkt" "Zeitpunkt, auf den sich der Befund inhaltlich bezieht (in der Regel der Zeitpunkt der Probenentnahme)."
 * QuelleKlinischerBezugszeitpunkt 0..1 Coding "Quelle des klinischen Bezugszeitpunkts" "Gibt an, worauf sich der klinische Bezugszeitpunkt bezieht, z. B. Zeitpunkt der Probenentnahme oder Laboreingang."
 * Dokumentationszeitpunkt 0..1 dateTime "Dokumentationszeitpunkt" "Zeitpunkt, zu dem der Befund freigegeben bzw. verfügbar gemacht wurde."
+* Beurteilung 0..1 string "Beurteilung" "Zusammenfassende Beurteilung des Labors im Freitext, etwa wenn sich die Aussage erst aus mehreren Einzelergebnissen ergibt."
 * Anforderung 0..1 Reference(ServiceRequest) "Anforderung" "Zugrunde liegende Laboranforderung."
 * Befundinterpret 0..* Reference(Practitioner) "Befundinterpret" "Person, die den Befund fachlich beurteilt und verantwortet."
 * Probenmaterial 0..* Reference(Specimen) "Probenmaterial" "Probenmaterialien, auf denen der Befund beruht."

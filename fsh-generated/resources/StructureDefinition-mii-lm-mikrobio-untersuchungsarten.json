@@ -69,7 +69,7 @@
         "id": "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur.Untersuchungscode",
         "path": "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineKultur.Untersuchungscode",
         "short": "Untersuchungscode",
-        "definition": "Kodierung der Untersuchung; hier fest: Nachweis eines Mikroorganismus mittels Kultur (LOINC).",
+        "definition": "Kodierung der Untersuchung (LOINC), bevorzugt 11475-1.",
         "min": 1,
         "max": "1",
         "type": [
@@ -147,7 +147,7 @@
         "id": "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Menge[x]",
         "path": "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Menge[x]",
         "short": "Menge",
-        "definition": "Wie viel des berichteten Befunds gesehen wurde: als semiquantitative Stufe (SNOMED CT) oder als Zählung je Gesichtsfeld (UCUM).",
+        "definition": "Wie viel des berichteten Befunds gesehen wurde: als semiquantitativer Wert (SNOMED CT) oder als Zählung je Gesichtsfeld (UCUM).",
         "min": 0,
         "max": "1",
         "type": [
@@ -163,10 +163,23 @@
         ]
       },
       {
+        "id": "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Faerbung",
+        "path": "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Faerbung",
+        "short": "Färbung",
+        "definition": "Eingesetzte Färbetechnik (SNOMED CT), auch wenn der Untersuchungscode sie nennt.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
         "id": "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungsmethode",
         "path": "mii-lm-mikrobio-untersuchungsarten.Kultur.AllgemeineMikroskopie.Untersuchungsmethode",
         "short": "Untersuchungsmethode",
-        "definition": "Eingesetztes mikroskopisches Verfahren (SNOMED CT). Die Färbetechnik wird daneben angegeben.",
+        "definition": "Eingesetztes mikroskopisches Verfahren (SNOMED CT). Die Färbetechnik steht im Element Färbung.",
         "min": 0,
         "max": "1",
         "type": [
@@ -218,7 +231,7 @@
         "id": "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Menge[x]",
         "path": "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Menge[x]",
         "short": "Menge",
-        "definition": "Wie viel des nachgewiesenen Objekts gesehen wurde: als semiquantitative Stufe (SNOMED CT) oder als Zählung je Gesichtsfeld (UCUM).",
+        "definition": "Wie viel des nachgewiesenen Objekts gesehen wurde: als semiquantitativer Wert (SNOMED CT) oder als Zählung je Gesichtsfeld (UCUM).",
         "min": 0,
         "max": "1",
         "type": [
@@ -230,6 +243,19 @@
           },
           {
             "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Faerbung",
+        "path": "mii-lm-mikrobio-untersuchungsarten.Kultur.SpezifischeMikroskopie.Faerbung",
+        "short": "Färbung",
+        "definition": "Eingesetzte Färbetechnik (SNOMED CT), auch wenn der Untersuchungscode sie nennt.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
           }
         ]
       },
@@ -354,7 +380,7 @@
         "id": "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl",
         "path": "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl",
         "short": "Keimzahl",
-        "definition": "Quantitative Bestimmung lebensfähiger Mikroorganismen in einer Probe als koloniebildende Einheiten pro Volumen oder Masse.",
+        "definition": "Bestimmung lebensfähiger Mikroorganismen eines Erregers in einer Probe: gezählt als koloniebildende Einheiten je Volumen, je Masse oder je Probe, oder als semiquantitativer Wert.",
         "min": 0,
         "max": "*",
         "type": [
@@ -377,15 +403,18 @@
         ]
       },
       {
-        "id": "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Ergebnis",
-        "path": "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Ergebnis",
+        "id": "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Ergebnis[x]",
+        "path": "mii-lm-mikrobio-untersuchungsarten.Kultur.Keimzahl.Ergebnis[x]",
         "short": "Ergebnis",
-        "definition": "Gemessene Keimzahl mit Einheit, z. B. KBE/mL (UCUM).",
+        "definition": "Gezählte Keimzahl mit Einheit, z. B. KBE/mL (UCUM), oder der semiquantitative Wert, wenn nicht gezählt wurde (SNOMED CT).",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
           }
         ]
       },
@@ -497,6 +526,19 @@
         ]
       },
       {
+        "id": "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Untersuchungsmethode",
+        "path": "mii-lm-mikrobio-untersuchungsarten.Kultur.Empfindlichkeit.Untersuchungsmethode",
+        "short": "Untersuchungsmethode",
+        "definition": "Eingesetztes Testverfahren, z. B. Mikrodilution oder Agardiffusion (SNOMED CT).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
         "id": "mii-lm-mikrobio-untersuchungsarten.Bestimmung",
         "path": "mii-lm-mikrobio-untersuchungsarten.Bestimmung",
         "short": "Bestimmung",
@@ -526,7 +568,7 @@
         "id": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Untersuchungscode",
         "path": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Untersuchungscode",
         "short": "Untersuchungscode",
-        "definition": "Kodierung der Untersuchung; hier fest: Nachweis eines Mikroorganismus oder Agens in der Probe (LOINC).",
+        "definition": "Kodierung der Untersuchung (LOINC), bevorzugt 41852-5.",
         "min": 1,
         "max": "1",
         "type": [
@@ -539,7 +581,7 @@
         "id": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Ergebnis",
         "path": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Ergebnis",
         "short": "Ergebnis",
-        "definition": "Identifizierter Mikroorganismus bzw. identifiziertes Agens (SNOMED CT).",
+        "definition": "Identifizierter Mikroorganismus bzw. identifiziertes Agens, oder nicht nachgewiesen (SNOMED CT).",
         "min": 0,
         "max": "1",
         "type": [
@@ -558,6 +600,41 @@
         "type": [
           {
             "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Menge[x]",
+        "path": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.Menge[x]",
+        "short": "Menge",
+        "definition": "Nur bei mikroskopischer Identifizierung: wie viel des identifizierten Erregers gesehen wurde, als semiquantitativer Wert oder Zählung.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "Range"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.ZugehoerigeKeimzahl",
+        "path": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.AllgemeineBestimmung.ZugehoerigeKeimzahl",
+        "short": "Zugehörige Keimzahl",
+        "definition": "Keimzahl des identifizierten Erregers, als eigene Untersuchung geführt.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung"
+            ]
           }
         ]
       },
@@ -592,6 +669,19 @@
         "path": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Ergebnis",
         "short": "Ergebnis",
         "definition": "Nachweisergebnis für das gesuchte Ziel (SNOMED CT).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Menge",
+        "path": "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Menge",
+        "short": "Menge",
+        "definition": "Semiquantitativer Wert eines Nachweises, z. B. + für schwach positiv (SNOMED CT).",
         "min": 0,
         "max": "1",
         "type": [
@@ -724,7 +814,7 @@
         "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Virulenzfaktor.Ergebnis",
         "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.Virulenzfaktor.Ergebnis",
         "short": "Ergebnis",
-        "definition": "Nachgewiesen oder nicht nachgewiesen (SNOMED CT).",
+        "definition": "Nachgewiesen, nicht nachgewiesen oder nicht eindeutig (SNOMED CT).",
         "min": 0,
         "max": "1",
         "type": [
@@ -763,7 +853,7 @@
         "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten.Ergebnis",
         "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.ResistenzmechanismenDeterminanten.Ergebnis",
         "short": "Ergebnis",
-        "definition": "Nachgewiesen oder nicht nachgewiesen (SNOMED CT).",
+        "definition": "Nachgewiesen, nicht nachgewiesen oder nicht eindeutig (SNOMED CT).",
         "min": 0,
         "max": "1",
         "type": [
@@ -825,10 +915,26 @@
         ]
       },
       {
+        "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MRGNKlasse.Grundlage",
+        "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.MRGNKlasse.Grundlage",
+        "short": "Grundlage",
+        "definition": "Untersuchungen, aus denen die Einstufung abgeleitet wurde: Empfindlichkeit, ggf. Identifikation.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung"
+            ]
+          }
+        ]
+      },
+      {
         "id": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
         "path": "mii-lm-mikrobio-untersuchungsarten.WeitereEigenschaften.VoraussichtlicheEmpfindlichkeit",
         "short": "Voraussichtliche Empfindlichkeit",
-        "definition": "Aus genotypischen Nachweisen abgeleitete erwartete Empfindlichkeit oder Resistenz gegenüber antimikrobiellen Substanzen.",
+        "definition": "Aus dem Nachweis von Resistenzmechanismen, Genen oder Proteinen abgeleitete erwartete Empfindlichkeit oder Resistenz gegenüber antimikrobiellen Substanzen.",
         "min": 0,
         "max": "*",
         "type": [
@@ -911,7 +1017,10 @@
         "max": "*",
         "type": [
           {
-            "code": "BackboneElement"
+            "code": "Reference",
+            "targetProfile": [
+              "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/StructureDefinition/mii-lm-mikrobio-untersuchung"
+            ]
           }
         ]
       },
