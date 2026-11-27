@@ -1,0 +1,58 @@
+# Interpretation - MII Implementation Guide Microbiology v2027.0.0-ballot2
+
+* [**Table of Contents**](toc.md)
+* [**Guidance**](guidance.md)
+* **Interpretation**
+
+## Interpretation
+
+A susceptibility result carries two different statements: what was **measured**, and how that measurement is **assessed**. The module keeps them apart.
+
+### Measured value and assessment
+
+`Observation.value[x]` carries the measurement — a minimum inhibitory concentration in mg/L, or an inhibition zone diameter in mm.
+
+`Observation.interpretation` carries the assessment: the category the measurement falls into, together with the norm it was derived from.
+
+Not every laboratory measures. Where only the category is available, it is given as a `CodeableConcept` in `value[x]` — the European data model settles this explicitly, and an Observation with no value at all would be the more unusual shape. The norm then hangs on the value itself (`valueCodeableConcept.extension[Norm]`, mandatory), because a category without its norm says nothing. Where value and `interpretation` are both given, they name the same category. A consumer therefore reads the category from `value[x]` where a CodeableConcept stands there, and otherwise from `interpretation`.
+
+The reverse — a measured value without a category — is flagged as a **warning** by `empfindlichkeit-messwert-sollte-bewertet-sein` rather than rejected. A bare MIC leaves the assessment to the consumer, who would need the breakpoint tables for it. But a requirement would be wrong: for some organism and agent combinations no breakpoints are defined, and then there is no category to give.
+
+### The categories
+
+In Germany, assessment mostly follows EUCAST.
+
+| | |
+| :--- | :--- |
+| `S`(v3) | susceptible, standard dosing regimen |
+| `1306583007`(SNOMED CT) | susceptible, increased exposure; the EUCAST`I`since 2019 |
+| `R`(v3) | resistant |
+
+EUCAST redefined `I` in 2019. The v3 code `I` cannot express that; `1306583007` can.
+
+Where assessment follows CLSI, these are also allowed:
+
+| | |
+| :--- | :--- |
+| `I`(v3) | intermediate |
+| `SDD`(v3) | susceptible-dose dependent |
+| `NS`(v3) | non-susceptible |
+
+### The norm the assessment rests on
+
+A category is meaningless without the breakpoints it was derived from: the same MIC is susceptible under one norm and resistant under another, and breakpoints change from year to year.
+
+The norm therefore hangs on the **interpretation**, not on the Observation — `Observation.interpretation.extension`, mandatory, or on the value where the category stands there. Because `interpretation` is `0..*`, one measured MIC can carry a EUCAST and a CLSI category side by side, each with its own norm. Hanging the norm on the Observation would make that impossible.
+
+The norm is coded from the module's own CodeSystem: `EUCAST`, `CLSI`, `Andere`.
+
+### Predicted susceptibility is a different statement
+
+Susceptibility inferred from a resistance mechanism — a gene, a mutation or a protein found, therefore an expected resistance — is **not** this profile. It has no measured value and belongs to **Predicted Susceptibility**, whose result is the expected category itself. The inference is deliberately technology-open: a PBP2a protein detected by lateral flow supports it exactly as a `mecA` gene found by PCR does. See [Profile Selection and Delimitation](profilauswahl-und-abgrenzung.md).
+
+The same boundary applies to the targeted detection of a resistant organism: an MRSA or VRE detection states which organism was found, not how susceptible it is, and belongs to the determination or culture profiles.
+
+### Other assessments in this module
+
+`interpretation` is not limited to susceptibility. Colony counts carry a semiquantitative assessment of the measured value, and the avidity test carries low, equivocal or high — `L` and `H` from the value set the parent binds, and for the middle the same SNOMED code this guide uses for a borderline finding elsewhere. The pattern is the same in each case: the value stays measured, the assessment stays separate.
+
