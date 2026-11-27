@@ -9,7 +9,7 @@ Description: "Allgemeine Bestimmung beschreibt die Identifikation eines Mikroorg
 * value[x] only CodeableConcept
 * valueCodeableConcept
 * valueCodeableConcept from MII_VS_Mikrobio_Allgemeine_Bestimmung_Ergebnis_SNOMED (extensible)
-* valueCodeableConcept ^short = "Identifizierter Mikroorganismus oder 'Not detected', wenn kein Erreger identifiziert wurde. Ein unbestimmbares Ergebnis wird ueber dataAbsentReason abgebildet."
+* valueCodeableConcept ^short = "Identifizierter Mikroorganismus oder 'Not detected', wenn die Identifizierung keinen Erreger ergab. Waechst in der Kultur nichts, ist das 'No growth' in der Allgemeinen Kultur. Unbestimmbar: dataAbsentReason."
 * method from MII_VS_Mikrobio_Allgemeine_Bestimmung_Methode_SNOMED (extensible)
 // KEIMZAHL DES ERREGERS (Ballotkommentierung, 2026-11-26): Die Identifizierung
 // referenziert sie ueber hasMember. Keine Komponente, weil Zaehlung und

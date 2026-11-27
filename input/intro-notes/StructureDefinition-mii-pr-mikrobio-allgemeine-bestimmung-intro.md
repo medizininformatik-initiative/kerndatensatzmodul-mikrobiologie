@@ -6,13 +6,13 @@ Preferred is `41852-5 |Microorganism or agent identified in Specimen|`. The same
 
 ### Result
 
-The result is the identified microorganism from `mii-vs-mikrobio-organismen-snomedct`. If the specimen was examined but no pathogen was identified, `260415000 |Not detected|` is given - not the omission of the Observation.
+The result is the identified microorganism from `mii-vs-mikrobio-organismen-snomedct`. Where the identification found no pathogen, `260415000 |Not detected|` is given. Where nothing grows in culture, no identification takes place; the negative result is then `No growth` in general culture.
 
 To be distinguished from the neighbouring negative cases:
 
 | Statement | Profile | Value |
 |---|---|---|
-| No pathogen identified | General determination | `260415000 \|Not detected\|` |
+| Identification found no pathogen | General determination | `260415000 \|Not detected\|` |
 | No growth in culture | [General culture](StructureDefinition-mii-pr-mikrobio-allgemeine-kultur.html) | `264868006 \|No growth\|` |
 | A specific pathogen was sought and not found | [Specific determination](StructureDefinition-mii-pr-mikrobio-spezifische-bestimmung.html) | `260415000 \|Not detected\|` |
 

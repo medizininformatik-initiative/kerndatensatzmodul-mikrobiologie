@@ -21,7 +21,7 @@ Description: "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definie
 // schon Wert, dataAbsentReason oder hasMember.
 * valueCodeableConcept 0..1 MS
 * valueCodeableConcept from MII_VS_Mikrobio_Resistenzkategorie_Status_Ergebnis (required)
-* valueCodeableConcept ^short = "Positive: Der Erreger erfüllt die Kriterien der in code angegebenen Kategorie. Negative: Der Erreger wurde anhand der relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. Kann die Kategorie nicht ausreichend bewertet werden, wird nicht Negative angegeben, sondern dataAbsentReason gesetzt oder keine Status-Observation erzeugt."
+* valueCodeableConcept ^short = "Positive: Der Erreger erfüllt die Kriterien der in code angegebenen Kategorie. Negative: Der Erreger wurde anhand der relevanten Untersuchungen ausreichend bewertet und erfüllt die Kriterien nicht. Kann die Kategorie nicht ausreichend bewertet werden, wird nicht Negative angegeben, sondern dataAbsentReason gesetzt oder keine Status-Observation erzeugt. Negative wird bevorzugt angegeben, ist aber keine Pflicht."
 // Die Kategorienbewertung ist eine abgeleitete fachliche Aussage: Sie entsteht durch
 // Bewertung mehrerer Untersuchungen, nicht durch eine ausgeloeste Folgeuntersuchung. Deshalb
 // derivedFrom und nicht die triggeredBy-Extension.

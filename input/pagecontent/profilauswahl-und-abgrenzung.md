@@ -217,6 +217,11 @@ a microscope.
 
 ### Negative results
 
+Negative results are preferably reported explicitly, for example as
+`Not detected` or `No growth`. A missing Observation is ambiguous: it may mean
+"negative" or "not examined". Reporting negative results is not mandatory,
+however.
+
 #### Negative targeted pathogen detection
 
 The investigation delivers the negative result of the detection test actually performed.
@@ -254,6 +259,9 @@ The three cases in direct comparison, each for VRE:
 | VRE was sought by culture and not found | Specific determination | `13316-5` | `Not detected` |
 | VRE was sought and not found (molecular) | Specific determination | `105904-7` | `Not detected` |
 | An *Enterococcus* present is not a VRE | Resistance category status | `vre-status` | `Negative` |
+
+"No MRGN class" and status `Negative` are likewise preferably reported but not
+mandatory: many LIS record them only for resistant organisms.
 
 ### Resistance categories
 

@@ -220,6 +220,11 @@ Mikroskop gestellt wurde.
 
 ### Negative Ergebnisse
 
+Negative Ergebnisse werden bevorzugt ausdrücklich berichtet, etwa als
+`Not detected` oder `No growth`. Eine fehlende Observation ist nicht eindeutig:
+Sie kann „negativ“ oder „nicht untersucht“ bedeuten. Verpflichtend ist das
+Berichten negativer Ergebnisse aber nicht.
+
 #### Negativer zielgerichteter Erregernachweis
 
 Die Untersuchung liefert das negative Ergebnis des konkret durchgeführten Nachweistests.
@@ -257,6 +262,9 @@ Die drei Fälle im direkten Vergleich, jeweils für VRE:
 | VRE wurde kulturell gesucht und nicht gefunden | Spezifische Bestimmung | `13316-5` | `Not detected` |
 | VRE wurde gesucht und nicht gefunden (molekular) | Spezifische Bestimmung | `105904-7` | `Not detected` |
 | Ein vorliegender *Enterococcus* ist kein VRE | Resistenzkategorie-Status | `vre-status` | `Negative` |
+
+Auch „Keine MRGN-Klasse“ und Status `Negative` werden bevorzugt angegeben, sind
+aber keine Pflicht: Viele LIS führen sie nur für resistente Erreger.
 
 ### Resistenzkategorien
 
