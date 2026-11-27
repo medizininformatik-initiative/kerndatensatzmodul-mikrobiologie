@@ -16,7 +16,7 @@ Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten
 
 Spezifische Bestimmung beschreibt den gezielten qualitativen Nachweis eines vordefinierten mikrobiellen Ziels (z. B. Mikroorganismus, Nukleinsäure, Antigen, Antikörper oder biochemischer Marker) in einer Probe mittels direkter molekularer, immunologischer oder biochemischer Nachweismethoden sowie mittels methodenneutral kodierter Nachweistests. Der kulturbasierte zielgerichtete Nachweis liegt ebenfalls hier: Das Verfahren steht im Untersuchungscode und in `Observation.method`, nicht im Ergebnis.
 
-Das Ergebnis ist die Aussage über den Nachweis des im Code benannten Ziels (`Detected`, `Not detected` oder `Equivocal result`); ein unbestimmbares Ergebnis wird nicht über `value`, sondern über `dataAbsentReason` angegeben. Damit bildet dieses Profil auch das negative Ergebnis eines zielgerichteten Erregernachweises ab, etwa einen negativen VRE-Nachweis. Ein schwach positives Ergebnis ist `Detected` mit der Menge in `component[menge]`, z. B. `260347006` (+).
+Das Ergebnis ist die Aussage über den Nachweis des im Code benannten Ziels (`Detected`, `Not detected` oder `Equivocal result`); ein unbestimmbares Ergebnis wird nicht über `value`, sondern über `dataAbsentReason` angegeben. Damit bildet dieses Profil auch das negative Ergebnis eines zielgerichteten Erregernachweises ab, etwa einen negativen VRE-Nachweis. Ein schwach positives Ergebnis ist `Detected` mit der Menge in `component[menge]`, auf der Skala gering, mäßig, hoch: `441614007` (+ von +++).
 
 Die verwendete Methode soll grundsätzlich über `Observation.method` angegeben werden, sofern sie bekannt ist. Enthält der verwendete LOINC-Code bereits eine präkoordinierte Methode, kann `Observation.method` ergänzend befüllt werden. **Enthält der LOINC-Code keine Methodenangabe, MUSS `Observation.method` befüllt werden.**
 
@@ -289,7 +289,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
   "title" : "MII PR Mikrobio Spezifische Bestimmung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T13:19:39+00:00",
+  "date" : "2026-11-27T14:29:27+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -446,7 +446,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       "id" : "Observation.component:menge",
       "path" : "Observation.component",
       "sliceName" : "menge",
-      "short" : "Semiquantitativer Wert des Nachweises, z. B. 260347006 (+) für schwach positiv",
+      "short" : "Semiquantitativer Wert des Nachweises: gering, mäßig oder hoch; schwach positiv ist 441614007.",
       "definition" : "Wie viel des Ziels nachgewiesen wurde, als semiquantitativer Wert, wenn nicht quantifiziert wurde. Der Wert der Observation ist dann Detected.",
       "min" : 0,
       "max" : "1",
@@ -470,7 +470,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-pr-mikro
       }],
       "binding" : {
         "strength" : "extensible",
-        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-labor-laborergebnis-semiquantitativ"
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-nachweis-menge-snomed"
       }
     }]
   }

@@ -363,6 +363,12 @@ enthalten ist, um den Probentyp strukturiert und unabhängig vom
 Observation-Code verfügbar zu machen.</p>
   </li>
   <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">Specimen.container.type</code></strong><br />
+Wird befüllt, wenn Flasche oder Medium bekannt sind, z. B. <code class="language-plaintext highlighter-rouge">767385003 |Aerobic blood
+culture bottle|</code>. <code class="language-plaintext highlighter-rouge">Specimen.type</code> darf präkoordiniert sein, etwa <code class="language-plaintext highlighter-rouge">866033003 |Blood specimen
+in aerobic blood culture bottle|</code>, muss dann aber zu <code class="language-plaintext highlighter-rouge">container.type</code> passen.</p>
+  </li>
+  <li>
     <p><strong><code class="language-plaintext highlighter-rouge">Specimen.collection.collected[x]</code></strong><br />
 Gibt den Zeitpunkt der Probenentnahme an. Ist dieser nicht bekannt,
 kann ersatzweise der Zeitpunkt des Probeneingangs dokumentiert
@@ -471,7 +477,7 @@ Bebrütung nicht ab, solange die Antwort fehlt.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Nov 27, 2026 13:19+0000">2026-11-27</span>
+          Erstellt <span title="Fri, Nov 27, 2026 14:29+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

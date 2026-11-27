@@ -12,7 +12,7 @@
 | Active as of 2026-11-27 | *Computable Name*:MII_VS_Mikrobio_Spezifische_Bestimmung_Ergebnis_SNOMED |
 
  
-Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit einem semiquantitativen Wert in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet. 
+Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit dem semiquantitativen Wert gering in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet. 
 
  **References** 
 
@@ -42,7 +42,7 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nic
   "title" : "MII VS Mikrobio Spezifische Bestimmung Ergebnis [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T13:19:39+00:00",
+  "date" : "2026-11-27T14:29:27+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -64,7 +64,7 @@ Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nic
       "value" : "https://www.medizininformatik-initiative.de"
     }]
   }],
-  "description" : "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit einem semiquantitativen Wert in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
+  "description" : "Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit dem semiquantitativen Wert gering in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

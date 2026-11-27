@@ -492,6 +492,10 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
       <td>Ergebnis-ValueSet für die MRGN-Klassifikation: 2MRGN, 3MRGN und 4MRGN nach RKI-Kategorisierung. Die negative Einstufung steht im modul­eigenen CodeSystem, da die LOINC-AnswerList sie nicht führt.</td>
     </tr>
     <tr>
+      <td><a href="ValueSet-mii-vs-mikrobio-nachweis-menge-snomed.html">MII VS Mikrobio Nachweis Menge SNOMED</a></td>
+      <td>Semiquantitativer Wert eines Nachweises als geordnete Skala: gering, mäßig, hoch. Schwach positiv ist gering.</td>
+    </tr>
+    <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-organismen-snomedct.html">MII VS Mikrobio Organismen SNOMED CT</a></td>
       <td>Organismen-ValueSet: die SNOMED-CT-Hierarchien, aus denen ein identifizierter Erreger stammen kann. Wird nicht direkt gebunden, sondern in die Ergebnis-ValueSets der Bestimmung eingebunden.</td>
     </tr>
@@ -513,7 +517,7 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-ergebnis-snomed.html">MII VS Mikrobio Spezifische Bestimmung Ergebnis SNOMED</a></td>
-      <td>Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit einem semiquantitativen Wert in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</td>
+      <td>Ergebnis-ValueSet fuer die spezifische Bestimmung: Nachweis, Ausschluss oder nicht eindeutiger Befund für das Ziel, das bereits im Untersuchungscode benannt ist. Schwach positiv wird als Detected mit dem semiquantitativen Wert gering in component[menge] berichtet; 260408008 Weakly positive ist abgekündigt. Ein unbestimmbares Ergebnis wird nicht ueber value[x], sondern ueber Observation.dataAbsentReason abgebildet.</td>
     </tr>
     <tr>
       <td><a href="ValueSet-mii-vs-mikrobio-spezifische-bestimmung-methode-snomed.html">MII VS Mikrobio Spezifische Bestimmung Methode SNOMED</a></td>
@@ -579,7 +583,7 @@ KDS-spezifischen ValueSets möglicherweise unvollständig).</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Fri, Nov 27, 2026 13:19+0000">2026-11-27</span>
+          Erstellt <span title="Fri, Nov 27, 2026 14:29+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

@@ -87,7 +87,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-p
   "title" : "MII PR Mikrobio Probe",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T13:19:39+00:00",
+  "date" : "2026-11-27T14:29:27+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -158,6 +158,11 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-p
       "id" : "Specimen.processing",
       "path" : "Specimen.processing",
       "comment" : "Bis 2027.0.0-ballot.rc2 verlangte der Parent hier verpflichtend die Extension 'temperaturbedingungen', eine Pflicht aus der Lagerung von Bioproben ohne Aussage fuer die mikrobiologische Aufarbeitung. Seit 2027.0.0-ballot ist sie 0..1 und auf den Lagerprozess-Slice begrenzt. Die Faerbetechnik wird trotzdem nicht hier, sondern in Observation.extension[faerbung] angegeben: Eine Probe wird oft mehrfach gefaerbt, ohne dass das Labor Unterproben anlegt, und nur an der Observation bleibt erkennbar, welche Faerbung zu welchem Befund gehoert."
+    },
+    {
+      "id" : "Specimen.container.type",
+      "path" : "Specimen.container.type",
+      "short" : "Gefaess, z. B. Blutkulturflasche. Befuellen, wenn Flasche oder Medium bekannt sind; ein praekoordinierter Specimen.type muss dazu passen."
     }]
   }
 }

@@ -20,6 +20,8 @@ Für die mikrobiologischen Anwendungsfälle sind dabei insbesondere folgende Ele
 
 * **`Specimen.type[sct]`**
  Soll mit dem Probentyp befüllt werden. Dies gilt auch dann, wenn die Materialangabe bereits im verwendeten LOINC-Code präkoordiniert enthalten ist, um den Probentyp strukturiert und unabhängig vom Observation-Code verfügbar zu machen.
+* **`Specimen.container.type`**
+ Wird befüllt, wenn Flasche oder Medium bekannt sind, z. B. `767385003 |Aerobic blood culture bottle|`. `Specimen.type` darf präkoordiniert sein, etwa `866033003 |Blood specimen in aerobic blood culture bottle|`, muss dann aber zu `container.type` passen.
 * **`Specimen.collection.collected[x]`**
  Gibt den Zeitpunkt der Probenentnahme an. Ist dieser nicht bekannt, kann ersatzweise der Zeitpunkt des Probeneingangs dokumentiert werden.
 * **`Specimen.parent`**

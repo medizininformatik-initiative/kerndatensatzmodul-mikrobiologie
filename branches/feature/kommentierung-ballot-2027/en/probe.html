@@ -384,6 +384,12 @@ pre-coordinated in the LOINC code used, so that the specimen type is available i
 form and independently of the Observation code.</p>
   </li>
   <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">Specimen.container.type</code></strong><br />
+Populated where the bottle or medium is known, e.g. <code class="language-plaintext highlighter-rouge">767385003 |Aerobic blood culture bottle|</code>.
+<code class="language-plaintext highlighter-rouge">Specimen.type</code> may be pre-coordinated, such as <code class="language-plaintext highlighter-rouge">866033003 |Blood specimen in aerobic blood
+culture bottle|</code>, but must then agree with <code class="language-plaintext highlighter-rouge">container.type</code>.</p>
+  </li>
+  <li>
     <p><strong><code class="language-plaintext highlighter-rouge">Specimen.collection.collected[x]</code></strong><br />
 Gives the time of specimen collection. If that is not known, the time of specimen receipt may
 be documented instead.</p>
@@ -488,7 +494,7 @@ does not represent incubation until the answer is in.</p>
 
           IG © 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.medizininformatik-initiative.de">Medizininformatik Initiative</a>.  
           Package de.medizininformatikinitiative.kerndatensatz.mikrobiologie#2027.0.0-ballot2 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Generated <span title="Fri, Nov 27, 2026 13:19+0000">2026-11-27</span>
+          Generated <span title="Fri, Nov 27, 2026 14:29+0000">2026-11-27</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             <!-- Branding override for the fhir2.base.template footer fragment.

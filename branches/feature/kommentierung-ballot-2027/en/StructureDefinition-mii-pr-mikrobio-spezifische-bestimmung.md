@@ -16,7 +16,7 @@ Spezifische Bestimmung beschreibt den qualitativen Nachweis eines vordefinierten
 
 Specific determination describes the targeted qualitative detection of a predefined microbial target (e.g. microorganism, nucleic acid, antigen, antibody or biochemical marker) in a specimen by direct molecular, immunological or biochemical detection methods, as well as by method-neutrally coded detection tests. Culture-based targeted detection is represented here too: the technique is carried by the test code and by `Observation.method`, not by the result.
 
-The result is the statement about detection of the target named in the code (`Detected`, `Not detected` or `Equivocal result`); an indeterminate result is given not via `value` but via `dataAbsentReason`. This profile therefore also represents the negative result of a targeted pathogen detection, for example a negative VRE test. A weakly positive result is `Detected` with the amount in `component[menge]`, e.g. `260347006` (+).
+The result is the statement about detection of the target named in the code (`Detected`, `Not detected` or `Equivocal result`); an indeterminate result is given not via `value` but via `dataAbsentReason`. This profile therefore also represents the negative result of a targeted pathogen detection, for example a negative VRE test. A weakly positive result is `Detected` with the amount in `component[menge]`, on the scale low, moderate, high: `441614007` (+ of +++).
 
 The method used should generally be given via `Observation.method` where it is known. If the LOINC code used already carries a pre-coordinated method, `Observation.method` may be populated in addition. **If the LOINC code carries no method, `Observation.method` MUST be populated.**
 
@@ -203,7 +203,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
   "title" : "MII PR Mikrobio Spezifische Bestimmung",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T13:19:39+00:00",
+  "date" : "2026-11-27T14:29:27+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -360,7 +360,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       "id" : "Observation.component:menge",
       "path" : "Observation.component",
       "sliceName" : "menge",
-      "short" : "Semiquantitativer Wert des Nachweises, z. B. 260347006 (+) für schwach positiv",
+      "short" : "Semiquantitativer Wert des Nachweises: gering, mäßig oder hoch; schwach positiv ist 441614007.",
       "definition" : "Wie viel des Ziels nachgewiesen wurde, als semiquantitativer Wert, wenn nicht quantifiziert wurde. Der Wert der Observation ist dann Detected.",
       "min" : 0,
       "max" : "1",
@@ -384,7 +384,7 @@ Other representations of profile: [CSV](../StructureDefinition-mii-pr-mikrobio-s
       }],
       "binding" : {
         "strength" : "extensible",
-        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-labor-laborergebnis-semiquantitativ"
+        "valueSet" : "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-nachweis-menge-snomed"
       }
     }]
   }

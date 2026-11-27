@@ -94,7 +94,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
   "title" : "MII LM Mikrobio Untersuchungsarten",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T13:19:39+00:00",
+  "date" : "2026-11-27T14:29:27+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -683,7 +683,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-mii-lm-mikro
       "id" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Menge",
       "path" : "mii-lm-mikrobio-untersuchungsarten.Bestimmung.SpezifischeBestimmung.Menge",
       "short" : "Menge",
-      "definition" : "Semiquantitativer Wert eines Nachweises, z. B. + für schwach positiv (SNOMED CT).",
+      "definition" : "Semiquantitativer Wert eines Nachweises: gering, mäßig oder hoch (SNOMED CT); schwach positiv ist gering.",
       "min" : 0,
       "max" : "1",
       "type" : [{

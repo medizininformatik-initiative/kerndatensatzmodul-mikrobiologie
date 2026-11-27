@@ -44,7 +44,7 @@ Mengen-ValueSet der Mikroskopie: der semiquantitative Wert, mit dem ein mikrosko
   "title" : "MII VS Mikrobio Mikroskopie Semiquantitativ [SNOMED]",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-11-27T13:19:39+00:00",
+  "date" : "2026-11-27T14:29:27+00:00",
   "publisher" : "Medizininformatik Initiative",
   "_publisher" : {
     "extension" : [{
@@ -76,21 +76,12 @@ Mengen-ValueSet der Mikroskopie: der semiquantitative Wert, mit dem ein mikrosko
   }],
   "compose" : {
     "include" : [{
+      "valueSet" : ["https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-nachweis-menge-snomed"]
+    },
+    {
       "system" : "http://snomed.info/sct",
       "version" : "http://snomed.info/sct/900000000000207008/version/20260701",
       "concept" : [{
-        "code" : "441614007",
-        "display" : "Present one plus out of three plus"
-      },
-      {
-        "code" : "441517005",
-        "display" : "Present two plus out of three plus"
-      },
-      {
-        "code" : "441521003",
-        "display" : "Present three plus out of three plus"
-      },
-      {
         "code" : "57176003",
         "display" : "Few"
       },
