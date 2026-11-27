@@ -34,7 +34,7 @@ The categories are not mutually exclusive: a linezolid- and vancomycin-resistant
 
 ### Derivation
 
-The category assessment is a derived clinical statement. The underlying investigations are referenced via `Observation.derivedFrom`. Possible inputs are: pathogen identification, susceptibility testing, and resistance mechanisms or resistance determinants.
+The category assessment is a derived clinical statement. The underlying investigations are referenced via `Observation.derivedFrom`; where several organisms grew from one specimen this is required unless the same isolate specimen is referenced. Possible inputs are: pathogen identification, susceptibility testing, and resistance mechanisms or resistance determinants.
 
 These investigations **should** be given so that the basis of the assessment remains traceable.
 

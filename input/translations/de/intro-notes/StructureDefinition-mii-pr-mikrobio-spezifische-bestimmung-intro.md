@@ -27,10 +27,10 @@ Rückmeldung im Ballot.
 
 ### Stellung in der diagnostischen Kette
 
-Ein positiver zielgerichteter Nachweis kann eine Kette eröffnen: Identifizierung
-des Isolats, Empfindlichkeitstestung und abgeleitete Bewertungen können folgen
-und verweisen jeweils über die `triggeredBy`-Extension mit `type = reflex`
-hierher zurück.
+Identifizierung und Empfindlichkeit verweisen über `triggeredBy` hierher,
+abgeleitete Bewertungen über `derivedFrom`. Beim direkten Nachweis liegt das
+Ergebnis zuerst vor; bei der zielgerichteten Kultur steht `Detected` erst nach
+Identifizierung und Testung fest.
 
 Wird neben dem Nachweis ein Ct-Wert berichtet, läuft die Beziehung in die andere
 Richtung und über ein anderes Element: Dieser Nachweis trägt `derivedFrom` auf

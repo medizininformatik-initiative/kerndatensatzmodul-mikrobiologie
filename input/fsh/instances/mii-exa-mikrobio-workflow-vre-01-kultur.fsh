@@ -1,24 +1,27 @@
-// Workflow-Beispiel 1/4 - positiver zielgerichteter Nachweis.
+// Workflow-Beispiel 1/4 - zielgerichtete Kultur, kultureller Nachweis.
 //
-// Kette: Positiver zielgerichteter Nachweis (Spezifische Kultur oder Spezifische Bestimmung)
-//        -> ggf. weiterfuehrende Identifikation
-//        -> Empfindlichkeit
-//        -> Klassifikation
+// Kette (Abgrenzungsseite, "Diagnostische Kette bei positivem Nachweis"):
+//   zielgerichtete Kultur (Spezifische Bestimmung)
+//     <- Identifizierung des gewachsenen Isolats (triggeredBy)
+//     <- Empfindlichkeit (triggeredBy)
+//     <- Resistenzkategorie-Status (derivedFrom)
 //
-// "ggf." ist fachlich wichtig: Bei einem bereits erregerspezifischen Nachweis ist das Ziel
-// im Testcode definiert, eine separate Identifikation ist dann nicht zwingend. Sie wird hier
-// gezeigt, weil die Speziesdifferenzierung (E. faecium vs. E. faecalis) klinisch relevant
-// ist; entfaellt sie, verweist die Empfindlichkeit direkt auf diese Observation.
+// Auf dem kulturellen Weg steht Detected erst fest, wenn das gewachsene Isolat
+// identifiziert und getestet ist; die Identifizierung ist hier deshalb
+// Voraussetzung und nicht optional. Ein vorlaeufiges Ergebnis waere eine fruehere
+// Version DIESER Observation (status preliminary), keine eigene, verknuepfte.
+// Die Verweise laufen trotzdem von den Folgeschritten zur Kultur: Sie ist der
+// Untersuchungsschritt, aus dem das Isolat stammt (wie im EU-IG).
 //
-// Der nicht-kulturelle Weg ist identisch aufgebaut, nur mit
-// MII_PR_Mikrobio_Spezifische_Bestimmung, code 105904-7, value Detected und
-// method Real-time PCR - siehe mii-exa-mikrobio-spezifische-bestimmung-vre-negativ
-// fuer den Aufbau dieses Profils.
+// Der direkte Nachweis (molekular) ist anders aufgebaut: code 105904-7, value
+// Detected, method Real-time PCR; das Ergebnis liegt dort zuerst vor, und bei
+// einem erregerspezifischen Nachweis kann die Identifizierung entfallen. Siehe
+// mii-exa-mikrobio-spezifische-bestimmung-vre-negativ fuer den Aufbau.
 Instance: mii-exa-mikrobio-workflow-vre-01-kultur
 InstanceOf: MII_PR_Mikrobio_Spezifische_Bestimmung
 Usage: #example
-Title: "MII EXA Mikrobio Workflow VRE 1 Kultur positiv"
-Description: "Workflow-Kette VRE, Schritt 1: positiver VRE-Nachweis mittels erregerspezifischer Kultur."
+Title: "MII EXA Mikrobio Workflow VRE 1 zielgerichtete Kultur"
+Description: "Workflow VRE, Schritt 1: zielgerichtete VRE-Kultur; Detected steht nach Schritt 2 und 3 fest."
 * identifier[analyseBefundCode].system = "https://example.org/fhir/sid/test-lab-results"
 * identifier[analyseBefundCode].value = "wf-vre-1"
 * identifier[analyseBefundCode].assigner = Reference(mii-exa-mikrobio-labor)

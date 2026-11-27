@@ -285,12 +285,24 @@ Observation: Bacterial susceptibility panel (29576-6), no value
   hasMember   → Observation: Ciprofloxacin [Susceptibility], MIC 4 mg/L, R
 ```
 
+`hasMember` also links an identification to the colony count of its organism:
+
+```
+Organism identified (41852-5): Escherichia coli
+  hasMember → Colony count (49223-1): 10⁵ [CFU]/mL
+```
+
+As a component of the identification the colony count would share its method
+and time, but it is a step of its own. The rule: a component where the amount is
+produced in the same step as the finding (microscopy); an Observation of its own
+linked through `hasMember` where it is not (colony count).
+
 The three mechanisms have distinct jobs and should not be substituted for one
 another:
 
 | | Use |
 |---|---|
-| `hasMember` | grouping — a panel or battery held together by an organizer |
+| `hasMember` | grouping of findings that belong together: a panel under an organizer, or an identification with its colony count |
 | `triggeredBy` | reflex — the later investigation points back at what caused it |
 | `derivedFrom` | derivation — a result computed or interpreted from another result |
 
@@ -299,21 +311,24 @@ from the derived result to its basis, not the other way round: a qualitative
 detection carries `derivedFrom` pointing at the [Ct value](StructureDefinition-mii-pr-mikrobio-ct-wert.html)
 it was read from, never the reverse.
 
-This guide describes the pattern but does not profile it. `Observation.hasMember`
+This guide describes the organizer but does not profile it. `Observation.hasMember`
 is available unconstrained from the laboratory base profile, and an organizer
 profile would create a canonical of its own for something FHIR already settles.
 
 ### Diagnostic chain on positive detection
 
-A positive targeted detection can trigger follow-up diagnostics:
+The chain depends on how the target was detected.
+
+**Direct detection** (molecular, antigen): the result is there first and can
+trigger follow-up diagnostics.
 
 ```
-Positive targeted detection
-(Specific determination, any technique)
+Specific determination, direct detection
+  e.g. 105904-7, real-time PCR: Detected
         │
         │ triggeredBy (reflex)
         ▼
-possibly further identification
+possibly culture and identification of the isolate
         │
         │ triggeredBy (reflex)
         ▼
@@ -328,24 +343,52 @@ Resistance category status
   Positive / Negative
 ```
 
-Where the detection is already pathogen-specific, the target is defined in the test code. After `MRSA detected` or `VRE detected`, no separate identification need follow. If it is omitted, the susceptibility refers directly to the detection and the resistance category status does not list it in `derivedFrom`.
+Where the detection is pathogen-specific, such as `MRSA detected` by PCR, the
+identification may be omitted; the susceptibility then refers to the detection
+directly.
 
-For the triggering relationship, the R5 backport extension `extension-Observation.triggeredBy` with `type = reflex` is used, as described under [FHIR Profiles - Modelling Notes](fhir-profile.html). The last step is the exception named there: the resistance category status is **derived** from several investigations and is not a triggered follow-up investigation - here `derivedFrom` captures the semantics. Those investigations SHOULD be given so that the basis of the assessment remains traceable.
+**Detection by culture** (targeted culture): the follow-up steps refer to the
+culture. Its `Detected` is settled only after identification and testing, as the
+final version of the same Observation. Here the identification is not optional.
 
-Complete example of a chain:
+```
+Specific determination, targeted culture
+  e.g. 13316-5 VRE [Presence] … by Organism specific culture
+  final result: Detected, after the two following steps
+        │
+        │ triggeredBy (reflex)
+        ▼
+Identification of the isolate that grew (General determination)
+  e.g. Enterococcus faecium, MALDI-TOF
+        │
+        │ triggeredBy (reflex)
+        ▼
+Susceptibility
+  e.g. vancomycin R
+        │
+        ├── possibly resistance mechanisms / determinants
+        │
+        │ derivedFrom
+        ▼
+Resistance category status
+  e.g. VRE status
+  Positive / Negative
+```
 
-Step 1 - positive VRE detection by pathogen-specific culture:
+Linking the workflow is optional. Where more than one organism was identified
+from a specimen, however, it MUST be recognisable which organism a result belongs
+to: through a shared [isolate specimen](probe.html#isolate-specimen)
+or through the reference. With a single organism the reference SHOULD be given.
 
-[mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html)
+| Result | Reference to the organism |
+|---|---|
+| Colony count | the identification carries it through `hasMember` (only this way, not through the isolate specimen) |
+| Susceptibility, resistance mechanisms/determinants | `triggeredBy` to the identification |
+| MRGN class, resistance category status | `derivedFrom` to their basis; derived, not triggered |
 
-Step 2 - further identification of the isolate (optional):
+Example chain, detection by culture:
 
-[mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html)
-
-Step 3 - susceptibility testing:
-
-[mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html)
-
-Step 4 - derived resistance category status:
-
-[mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html)
+1. [mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html) — VRE culture, final result Detected
+2. [mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html) — identification of the isolate
+3. [mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html) — susceptibility
+4. [mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html) — VRE status

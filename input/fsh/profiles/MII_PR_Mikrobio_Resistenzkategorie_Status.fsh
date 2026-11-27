@@ -30,6 +30,10 @@ Description: "Bewertung eines nachgewiesenen Erregers hinsichtlich einer definie
 // Laborbefund uebernommen, liegen die zugrunde liegenden Untersuchungen im sendenden
 // System ggf. nicht als eigene Observations vor. Die Angabe ist deshalb SHOULD und
 // nicht SHALL.
+// Ausnahme seit der Ballotkommentierung (2026-11-26): Wurden aus einer Probe
+// mehrere Erreger identifiziert, MUSS die Zuordnung erkennbar sein, ueber
+// derivedFrom oder eine gemeinsame Isolat-Probe. Keine Invariante: Ob eine Probe
+// mehrere Erreger ergab, ist an einer einzelnen Observation nicht pruefbar.
 * derivedFrom 0..* MS
-* derivedFrom ^short = "Untersuchungen, aus denen die Bewertung abgeleitet wurde: Erregeridentifikation, Empfindlichkeitstestung und Resistenzmechanismen/Determinanten. Diese Untersuchungen SOLLTEN angegeben werden, damit die Bewertungsgrundlage nachvollziehbar ist. Sie dürfen entfallen, wenn der Status unmittelbar aus einem bereits kategorisierten Laborbefund übernommen wird und die Einzeluntersuchungen nicht als eigene Observations vorliegen."
+* derivedFrom ^short = "Grundlagen der Bewertung: Identifizierung, Empfindlichkeit, ggf. Resistenzmechanismen/Determinanten. Bei mehreren Erregern aus der Probe Pflicht, sofern specimen nicht auf dieselbe Isolat-Probe zeigt; sonst SOLLTEN sie angegeben werden. Dürfen entfallen, wenn der Status aus einem bereits kategorisierten Befund übernommen wird."
 * extension[triggeredBy-r5] ^short = "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung der Kategorienbewertung wird nicht hierüber, sondern über derivedFrom abgebildet."

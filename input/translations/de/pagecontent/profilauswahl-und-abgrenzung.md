@@ -288,12 +288,24 @@ Observation: Bacterial susceptibility panel (29576-6), ohne Wert
   hasMember   → Observation: Ciprofloxacin [Susceptibility], MHK 4 mg/L, R
 ```
 
+`hasMember` verbindet auch eine Identifizierung mit der Keimzahl ihres Erregers:
+
+```
+Erreger identifiziert (41852-5): Escherichia coli
+  hasMember → Keimzahl (49223-1): 10⁵ [CFU]/mL
+```
+
+Als Komponente der Identifizierung teilte die Keimzahl deren Methode und
+Zeitpunkt, ist aber ein eigener Schritt. Die Regel: Komponente, wenn die Menge im
+selben Schritt entsteht wie der Befund (Mikroskopie); eigene Observation mit
+`hasMember`, wenn nicht (Keimzahl).
+
 Die drei Mechanismen haben verschiedene Aufgaben und sind nicht gegeneinander
 austauschbar:
 
 | | Verwendung |
 |---|---|
-| `hasMember` | Gruppierung — ein Panel, das ein Organizer zusammenhält |
+| `hasMember` | Gruppierung zusammengehöriger Befunde: ein Panel unter einem Organizer oder eine Identifizierung mit ihrer Keimzahl |
 | `triggeredBy` | Reflex — die spätere Untersuchung verweist zurück auf ihren Auslöser |
 | `derivedFrom` | Ableitung — ein Ergebnis, das aus einem anderen berechnet oder interpretiert wurde |
 
@@ -303,22 +315,25 @@ qualitativer Nachweis trägt `derivedFrom` auf den
 [Ct-Wert](StructureDefinition-mii-pr-mikrobio-ct-wert.html), aus dem er abgelesen
 wurde, niemals andersherum.
 
-Dieser Leitfaden beschreibt das Muster, profiliert es aber nicht.
+Dieser Leitfaden beschreibt den Organizer, profiliert ihn aber nicht.
 `Observation.hasMember` steht unbeschränkt aus dem Labor-Basisprofil zur
 Verfügung, und ein Organizer-Profil erzeugte ein eigenes Canonical für etwas, das
 FHIR bereits regelt.
 
 ### Diagnostische Kette bei positivem Nachweis
 
-Ein positiver zielgerichteter Nachweis kann Folgediagnostik auslösen:
+Die Kette hängt vom Weg des Nachweises ab.
+
+**Direkter Nachweis** (molekular, Antigen): Das Ergebnis liegt zuerst vor und
+kann Folgediagnostik auslösen.
 
 ```
-Positiver zielgerichteter Nachweis
-(Spezifische Bestimmung, jedes Verfahren)
+Spezifische Bestimmung, direkter Nachweis
+  z. B. 105904-7, Real-time-PCR: Detected
         │
         │ triggeredBy (reflex)
         ▼
-ggf. weiterführende Identifikation
+ggf. Kultur und Identifizierung des Isolats
         │
         │ triggeredBy (reflex)
         ▼
@@ -333,24 +348,53 @@ Resistenzkategorie-Status
   Positive / Negative
 ```
 
-Bei einem bereits erregerspezifischen Nachweis ist das Ziel im Testcode definiert. Nach `MRSA detected` oder `VRE detected` muss keine separate Identifikation folgen. Entfällt sie, verweist die Empfindlichkeit direkt auf den Nachweis und der Resistenzkategorie-Status führt sie nicht in `derivedFrom`.
+Ist der Nachweis erregerspezifisch, etwa `MRSA detected` per PCR, kann die
+Identifizierung entfallen; die Empfindlichkeit verweist dann direkt auf den
+Nachweis.
 
-Für die auslösende Beziehung wird die R5-Backport-Extension `extension-Observation.triggeredBy` mit `type = reflex` verwendet, wie unter [FHIR-Profile](fhir-profile.html) beschrieben. Der letzte Schritt bildet die dort genannte Ausnahme: Der Resistenzkategorie-Status wird aus mehreren Untersuchungen **abgeleitet** und ist keine ausgelöste Folgeuntersuchung — hier trifft `derivedFrom` die Semantik. Diese Untersuchungen SOLLTEN angegeben werden, damit die Bewertungsgrundlage nachvollziehbar bleibt.
+**Kultureller Nachweis** (zielgerichtete Kultur): Die Folgeschritte verweisen
+auf die Kultur. Ihr `Detected` steht erst nach Identifizierung und Testung fest,
+als endgültige Version derselben Observation. Die Identifizierung ist hier nicht
+optional.
 
-Vollständiges Beispiel einer Kette:
+```
+Spezifische Bestimmung, zielgerichtete Kultur
+  z. B. 13316-5 VRE [Presence] … by Organism specific culture
+  endgültiges Ergebnis: Detected, nach den beiden folgenden Schritten
+        │
+        │ triggeredBy (reflex)
+        ▼
+Identifizierung des gewachsenen Isolats (Allgemeine Bestimmung)
+  z. B. Enterococcus faecium, MALDI-TOF
+        │
+        │ triggeredBy (reflex)
+        ▼
+Empfindlichkeit
+  z. B. Vancomycin R
+        │
+        ├── ggf. Resistenzmechanismen / Determinanten
+        │
+        │ derivedFrom
+        ▼
+Resistenzkategorie-Status
+  z. B. VRE-Status
+  Positive / Negative
+```
 
-Schritt 1 — positiver VRE-Nachweis mittels erregerspezifischer Kultur:
+Die Verknüpfung des Ablaufs ist optional. Wurden aus einer Probe mehrere Erreger
+identifiziert, MUSS aber erkennbar sein, zu welchem Erreger ein Ergebnis gehört:
+über eine gemeinsame [Isolat-Probe](probe.html#isolate-specimen) oder über
+den Verweis. Bei einem einzigen Erreger SOLLTE verwiesen werden.
 
-[mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html)
+| Ergebnis | Verweis auf den Erreger |
+|---|---|
+| Keimzahl | die Identifizierung führt sie über `hasMember` (nur so, nicht über die Isolat-Probe) |
+| Empfindlichkeit, Resistenzmechanismen/Determinanten | `triggeredBy` auf die Identifizierung |
+| MRGN-Klasse, Resistenzkategorie-Status | `derivedFrom` auf ihre Grundlagen; abgeleitet, nicht ausgelöst |
 
-Schritt 2 — weiterführende Identifikation des Isolats (optional):
+Beispielkette, kultureller Nachweis:
 
-[mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html)
-
-Schritt 3 — Empfindlichkeitstestung:
-
-[mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html)
-
-Schritt 4 — abgeleiteter Resistenzkategorie-Status:
-
-[mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html)
+1. [mii-exa-mikrobio-workflow-vre-01-kultur](Observation-mii-exa-mikrobio-workflow-vre-01-kultur.html) — VRE-Kultur, endgültig Detected
+2. [mii-exa-mikrobio-workflow-vre-02-identifikation](Observation-mii-exa-mikrobio-workflow-vre-02-identifikation.html) — Identifizierung des Isolats
+3. [mii-exa-mikrobio-workflow-vre-03-empfindlichkeit](Observation-mii-exa-mikrobio-workflow-vre-03-empfindlichkeit.html) — Empfindlichkeit
+4. [mii-exa-mikrobio-resistenzkategorie-vre-positiv](Observation-mii-exa-mikrobio-resistenzkategorie-vre-positiv.html) — VRE-Status

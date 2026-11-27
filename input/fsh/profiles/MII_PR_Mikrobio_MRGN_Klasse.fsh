@@ -19,6 +19,10 @@ Description: "MRGN-Klasse beschreibt die Einstufung multiresistenter gramnegativ
 // Laborbefund uebernommen, liegen die zugrunde liegenden Empfindlichkeitsbefunde im
 // sendenden System ggf. nicht als eigene Observations vor. Die Angabe ist deshalb SHOULD
 // und nicht SHALL.
+// Ausnahme seit der Ballotkommentierung (2026-11-26): Wurden aus einer Probe
+// mehrere Erreger identifiziert, MUSS die Zuordnung erkennbar sein, ueber
+// derivedFrom oder eine gemeinsame Isolat-Probe. Keine Invariante: Ob eine Probe
+// mehrere Erreger ergab, ist an einer einzelnen Observation nicht pruefbar.
 * derivedFrom 0..* MS
-* derivedFrom ^short = "Untersuchungen, aus denen die Einstufung abgeleitet wurde: die Empfindlichkeitsbefunde der bewerteten Substanzgruppen, gegebenenfalls zusammen mit der Erregeridentifikation. Diese Untersuchungen SOLLTEN angegeben werden, damit die Grundlage der Einstufung nachvollziehbar ist. Sie dürfen entfallen, wenn die Klasse unmittelbar aus einem bereits eingestuften Laborbefund übernommen wird."
+* derivedFrom ^short = "Grundlagen der Einstufung: Empfindlichkeitsbefunde, ggf. die Identifizierung. Bei mehreren Erregern aus der Probe Pflicht, sofern specimen nicht auf dieselbe Isolat-Probe zeigt; sonst SOLLTEN sie angegeben werden. Dürfen entfallen, wenn die Klasse aus einem bereits eingestuften Befund übernommen wird."
 * extension[triggeredBy-r5] ^short = "Nur für eine tatsächlich ausgelöste Folgediagnostik. Die fachliche Ableitung der MRGN-Einstufung wird nicht hierüber, sondern über derivedFrom abgebildet."

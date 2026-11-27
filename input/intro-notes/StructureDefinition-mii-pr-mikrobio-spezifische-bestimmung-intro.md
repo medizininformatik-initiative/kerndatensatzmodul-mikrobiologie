@@ -25,9 +25,10 @@ ballot.
 
 ### Position in the diagnostic chain
 
-A positive targeted detection can start a chain: identification of the isolate,
-susceptibility testing and derived assessments may follow, each pointing back
-here through the `triggeredBy` extension with `type = reflex`.
+Identification and susceptibility point back here through `triggeredBy`,
+derived assessments through `derivedFrom`. With a direct detection the result is
+there first; with a targeted culture `Detected` is settled only after
+identification and testing.
 
 Where a Ct value is reported alongside the detection, the relationship runs in
 the other direction and uses a different element: this detection carries

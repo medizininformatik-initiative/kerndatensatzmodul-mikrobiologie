@@ -26,7 +26,9 @@ no measurement was made.
 Susceptibility testing follows the identification of the pathogen it assesses and
 points back at it through the `triggeredBy` extension with `type = reflex`. Where
 no separate identification took place because the detection was already
-pathogen-specific, it points at that detection directly.
+pathogen-specific, it points at that detection directly. Where several
+organisms grew from one specimen this reference is required unless the same
+isolate specimen is referenced.
 
 [Resistance category status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html)
 and [MRGN class](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html) stand at

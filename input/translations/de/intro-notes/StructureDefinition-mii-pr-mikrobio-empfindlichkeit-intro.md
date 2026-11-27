@@ -28,7 +28,9 @@ kein Messwert vorliegt.
 Die Empfindlichkeitstestung folgt der Identifizierung des Erregers, den sie
 bewertet, und verweist über die `triggeredBy`-Extension mit `type = reflex` auf
 sie zurück. Fand keine eigene Identifizierung statt, weil der Nachweis bereits
-erregerspezifisch war, verweist sie unmittelbar auf diesen Nachweis.
+erregerspezifisch war, verweist sie unmittelbar auf diesen Nachweis. Bei
+mehreren Erregern aus einer Probe ist dieser Verweis Pflicht, sofern nicht
+dieselbe Isolat-Probe referenziert wird.
 
 [Resistenzkategorie-Status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html)
 und [MRGN-Klasse](StructureDefinition-mii-pr-mikrobio-mrgn-klasse.html) stehen am

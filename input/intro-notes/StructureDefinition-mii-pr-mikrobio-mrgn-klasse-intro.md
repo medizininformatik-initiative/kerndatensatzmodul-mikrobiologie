@@ -9,9 +9,9 @@ MRGN is a genuine classification with its own scheme: the value is the concrete 
 ### Position in the diagnostic chain
 
 The MRGN classification stands at the end of the chain and is a derived
-statement: the susceptibility findings it was classified from are referenced
-through `Observation.derivedFrom`, and they should be given so that the basis of
-the classification remains traceable. `triggeredBy` is **not** used for this —
+statement. The basis is referenced through `derivedFrom`; where several organisms
+grew from one specimen this is required unless the same isolate specimen is
+referenced. `triggeredBy` is **not** used for this —
 the classification arises by clinical derivation and not as a triggered follow-up
 investigation. The same applies to
 [Resistance category status](StructureDefinition-mii-pr-mikrobio-resistenzkategorie-status.html).
