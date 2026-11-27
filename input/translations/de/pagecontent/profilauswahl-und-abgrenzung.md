@@ -204,15 +204,30 @@ identifizierten Organismen, die nur den Wert filtert, bekommt auch
 Morphologiegruppen aus der Mikroskopie. Die Untersuchungscodes sind disjunkt — die Mikroskopiecodes gegen `41852-5` —, eine Mehrdeutigkeit entsteht also
 nicht; nur eine nachlässig geschriebene Abfrage bekommt mehr, als sie erfragt hat.
 
-Eine Speziesidentifizierung gehört nie in die Mikroskopie, auch wenn sie am
-Mikroskop gestellt wurde.
+Eine ungerichtete Speziesidentifizierung gehört nicht in die Allgemeine
+Mikroskopie, auch wenn sie am Mikroskop gestellt wurde: Sie ist eine Allgemeine
+Bestimmung mit Methode Mikroskopie, die Menge steht dort in `component[menge]`.
+Wurde gezielt gesucht und nennt der Code den Erreger, ist es Spezifische
+Mikroskopie.
+
+#### Mikroskopische Befunde zuordnen
+
+Über das Profil entscheidet die Fragestellung, nicht ob eine Menge vorliegt.
+
+| Befund | Profil | `code` | `value` | Menge |
+|---|---|---|---|---|
+| gramnegative Kokken | Allgemeine Mikroskopie | `105059-0` | `18383003 \|Gram-negative coccus\|` | – |
+| gramnegative Kokken, ++ von +++ | Allgemeine Mikroskopie | `105059-0` | `18383003 \|Gram-negative coccus\|` | `441517005 \|Present two plus out of three plus\|` |
+| Giardia, gezielt gesucht | Spezifische Mikroskopie | `104405-6` | `260373001 \|Detected\|` | optional |
+| Giardia, offene Untersuchung | Allgemeine Bestimmung | `41852-5` | `78181009 \|Giardia duodenalis\|`, Methode Mikroskopie | – |
+| *P. falciparum* im Blutausstrich, ++ | Allgemeine Bestimmung | `41852-5` | `30020004 \|Plasmodium falciparum\|`, Methode Mikroskopie | `441517005 \|Present two plus out of three plus\|` |
 
 ### Abgrenzung der drei Aussagetypen
 
 | Fragestellung | Profil | `Observation.code` | `Observation.value` |
 |---|---|---|---|
 | Ist ein vordefiniertes Ziel nachweisbar? (nicht kulturell) | Spezifische Bestimmung | LOINC-Nachweistest, z. B. `105904-7` | `Detected` / `Not detected` |
-| Ist ein vordefinierter Mikroorganismus da, kulturell gesucht? | Spezifische Bestimmung | LOINC-Kulturtest, z. B. `13316-5` | `Organism growth` / `No growth` |
+| Ist ein vordefinierter Mikroorganismus da, kulturell gesucht? | Spezifische Bestimmung | LOINC-Kulturtest, z. B. `13316-5` | `Detected` / `Not detected` |
 | Ist ein Resistenzgen nachweisbar? | Resistenzmechanismen / Determinanten | LOINC-Determinante, z. B. `48813-0` | `Detected` / `Not detected` |
 | Wie empfindlich ist ein identifiziertes Isolat gegen eine Substanz? | Empfindlichkeit | LOINC `[Susceptibility]`, z. B. `29258-1` | MHK als `Quantity`, Bewertung in `interpretation` (S / I / R) |
 | Welcher MRGN-Klasse ist ein identifiziertes gramnegatives Isolat zuzuordnen? | MRGN-Klasse | `99780-9` | Klassifikationswert, z. B. `3MRGN`, oder `keine-mrgn-klasse` |

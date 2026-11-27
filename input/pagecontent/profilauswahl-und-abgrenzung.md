@@ -201,8 +201,23 @@ that filters only on the value will also return morphological groups from
 microscopy. The test codes are disjoint — the microscopy codes against `41852-5` — so no ambiguity arises; only a query written carelessly gets more
 than it asked for.
 
-A species identification never belongs in microscopy, even when it was made down
-a microscope.
+An undirected species identification does not belong in general microscopy,
+even when it was made down a microscope: it is a general determination with the
+method microscopy, and the amount is given there in `component[menge]`. Where
+the search was targeted and the code names the organism, it is specific
+microscopy.
+
+#### Assigning microscopy findings
+
+The question decides the profile, not whether an amount is present.
+
+| Finding | Profile | `code` | `value` | Amount |
+|---|---|---|---|---|
+| Gram-negative cocci | General microscopy | `105059-0` | `18383003 \|Gram-negative coccus\|` | – |
+| Gram-negative cocci, ++ of +++ | General microscopy | `105059-0` | `18383003 \|Gram-negative coccus\|` | `441517005 \|Present two plus out of three plus\|` |
+| Giardia, sought specifically | Specific microscopy | `104405-6` | `260373001 \|Detected\|` | optional |
+| Giardia, open investigation | General determination | `41852-5` | `78181009 \|Giardia duodenalis\|`, method microscopy | – |
+| *P. falciparum* in a blood smear, ++ | General determination | `41852-5` | `30020004 \|Plasmodium falciparum\|`, method microscopy | `441517005 \|Present two plus out of three plus\|` |
 
 ### Delimitation of the three statement types
 
